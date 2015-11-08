@@ -1,0 +1,416 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 2, 
+        "defense": 5, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 51.64, 
+        "mpperlevel": 60.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 360.8, 
+        "armor": 19.134, 
+        "hp": 499.28, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 2.13, 
+        "attackrange": 550.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.44, 
+        "hpperlevel": 77.0
+    }, 
+    "name": "Zilean", 
+    "title": "the Chronokeeper", 
+    "tags": [
+        "Support", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Zilean_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 48
+        }, 
+        "sanitizedDescription": "Zilean and his nearby allied champions receive 8% additional experience.", 
+        "name": "Heightened Learning", 
+        "description": "Zilean and his nearby allied champions receive 8% additional experience."
+    }, 
+    "quotes": [
+        "\"I knew you would do that...\"", 
+        "\"Already there.\"", 
+        "\"Make haste!\"", 
+        "\"Time is wasting.\"", 
+        "\"All in good time.\"", 
+        "\"Inevitably.\"", 
+        "\"Yes?\"", 
+        "\"The way is always the same.\"", 
+        "Zilean was designed by Ezreal", 
+        "It is time."
+    ], 
+    "key": "Zilean", 
+    "lore": "In the wastelands of Urtistan, there was once a great city. It perished long ago in a terrible Rune War, like most of the lands below the Great Barrier. Nevertheless, one man survived: a sorcerer named Zilean. Being obsessed with time, it was only fitting that he dwelled in the city's Clock Tower. As the havoc of the war neared his home, Zilean experimented with powerful temporal magic to divine all possible futures, hoping to discover a peaceful solution. But Zilean's enchantments affected his perception of the passage of time, and he was in a contemplative stasis when Urtistan was set upon by an entire phalanx of dark summoner-knights of unknown affiliation. By the time he realized his error, Urtistan was nothing more than smoldering debris. The summoners who were responsible for its destruction had wisely left the Clock Tower unharmed, both to avoid drawing Zilean's attention and to torment him for his oversight.<br><br>Zilean barely had time to grieve the momentous loss before he learned that his dangerous research had a cruel side effect: chrono-displasia. This mystical disease granted him immortality, but detached his consciousness from its anchor in the present time. He now mentally drifts through time, from any point he has already lived to the present, unable to impact the events which unfold. The most torturous aspect of this curse is that Zilean sometimes experiences Urtistan as it once was and the rest of the time resides in its lonely ruins. Only the powerful summoning magic employed by members of the League of Legends has been able to treat this condition, and Zilean has joined in hopes of finding a cure, and thereafter a way to save his people.<br><br>''There is no greater grief than for a loss that is yet to come.''<br>-- Zilean", 
+    "id": 26, 
+    "spells": [
+        {
+            "cooldownBurn": "10/9.5/9/8.5/8", 
+            "key": "ZileanQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Stun Duration", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Tosses a bomb to target area that sticks to units that come near it (prioritizes Champions). It detonates after 3 seconds, dealing area of effect damage. If a Time Bomb is detonated early by another Time Bomb, it also stuns enemies.", 
+            "sanitizedDescription": "Tosses a bomb to target area that sticks to units that come near it (prioritizes Champions). It detonates after 3 seconds, dealing area of effect damage. If a Time Bomb is detonated early by another Time Bomb, it also stuns enemies.", 
+            "sanitizedTooltip": "Zilean tosses a time-delayed bomb to a location. The bomb sticks to the first unit which comes within a small area around it (prioritizes Champions). After {{ e2 }} seconds it detonates, dealing {{ e1 }} (+{{ a1 }}) magic damage to all surrounding enemies. Placing two bombs on a unit detonates the first bomb early, stunning all enemies in the blast for {{ e4 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    115.0, 
+                    165.0, 
+                    230.0, 
+                    300.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    7.0, 
+                    7.0, 
+                    7.0, 
+                    7.0, 
+                    7.0
+                ], 
+                [
+                    1.1, 
+                    1.2, 
+                    1.3, 
+                    1.4, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Zilean tosses a time-delayed bomb to a location. The bomb sticks to the first unit which comes within a small area around it (prioritizes Champions). After {{ e2 }} seconds it detonates, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all surrounding enemies. <br><br>Placing two bombs on a unit detonates the first bomb early, stunning all enemies in the blast for {{ e4 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "75/115/165/230/300", 
+                "3", 
+                "7", 
+                "1.1/1.2/1.3/1.4/1.5"
+            ], 
+            "image": {
+                "full": "ZileanQ.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 144
+            }, 
+            "cooldown": [
+                10.0, 
+                9.5, 
+                9.0, 
+                8.5, 
+                8.0
+            ], 
+            "name": "Time Bomb"
+        }, 
+        {
+            "cooldownBurn": "14/12/10/8/6", 
+            "key": "ZileanW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Zilean can prepare himself for future confrontations, reducing the cooldowns of his other basic abilities. ", 
+            "sanitizedDescription": "Zilean can prepare himself for future confrontations, reducing the cooldowns of his other basic abilities.", 
+            "sanitizedTooltip": "Reduces Zilean's other basic spell cooldowns by {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0
+                ]
+            ], 
+            "tooltip": "Reduces Zilean's other basic spell cooldowns by {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/30/40/50/60", 
+                "10", 
+                "35"
+            ], 
+            "image": {
+                "full": "ZileanW.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0, 
+                6.0
+            ], 
+            "name": "Rewind"
+        }, 
+        {
+            "cooldownBurn": "15", 
+            "key": "TimeWarp", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Speed"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Zilean bends time around any unit, decreasing an enemy's Movement Speed or increasing an ally's Movement Speed for a short time.", 
+            "sanitizedDescription": "Zilean bends time around any unit, decreasing an enemy's Movement Speed or increasing an ally's Movement Speed for a short time.", 
+            "sanitizedTooltip": "Zilean increases an allied champion's Movement Speed, or slows an enemy champion, by {{ e2 }}% for {{ e1 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    40.0, 
+                    55.0, 
+                    70.0, 
+                    85.0, 
+                    99.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0
+                ]
+            ], 
+            "tooltip": "Zilean increases an allied champion's Movement Speed, or slows an enemy champion, by {{ e2 }}% for {{ e1 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "2.5", 
+                "40/55/70/85/99", 
+                "1.5", 
+                "8"
+            ], 
+            "image": {
+                "full": "TimeWarp.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 240
+            }, 
+            "cooldown": [
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0
+            ], 
+            "name": "Time Warp"
+        }, 
+        {
+            "cooldownBurn": "120/90/60", 
+            "key": "ChronoShift", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Health Restored", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        2.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Zilean places a protective time rune on an allied champion, teleporting the champion back in time if they take lethal damage.", 
+            "sanitizedDescription": "Zilean places a protective time rune on an allied champion, teleporting the champion back in time if they take lethal damage.", 
+            "sanitizedTooltip": "Zilean marks himself or an allied champion with a protective time rune for {{ e2 }} seconds. If the target would take lethal damage, they are instead transported back in time, regaining {{ e1 }} (+{{ a1 }}) Health.", 
+            "effect": [
+                null, 
+                [
+                    600.0, 
+                    850.0, 
+                    1100.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Zilean marks himself or an allied champion with a protective time rune for {{ e2 }} seconds. If the target would take lethal damage, they are instead transported back in time, regaining {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Health.", 
+            "maxrank": 3, 
+            "costBurn": "125/150/175", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                125, 
+                150, 
+                175
+            ], 
+            "effectBurn": [
+                "", 
+                "600/850/1100", 
+                "5"
+            ], 
+            "image": {
+                "full": "ChronoShift.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 288
+            }, 
+            "cooldown": [
+                120.0, 
+                90.0, 
+                60.0
+            ], 
+            "name": "Chronoshift"
+        }
+    ]
+}

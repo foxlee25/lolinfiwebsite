@@ -1,0 +1,401 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 2, 
+        "defense": 2, 
+        "magic": 9
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 57.04, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 325.6, 
+        "armor": 21.88, 
+        "hp": 507.68, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.36, 
+        "attackrange": 550.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.6, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.005, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 76.0
+    }, 
+    "name": "Brand", 
+    "title": "the Burning Vengeance", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "BrandBlaze.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds.", 
+        "name": "Blaze", 
+        "description": "Brand's spells light his targets ablaze, dealing 8% of their maximum Health in magic damage over 4 seconds."
+    }, 
+    "quotes": [
+        "\"The inferno begins.\"", 
+        "\"The fires of vengeance.\"", 
+        "\"I purify this one!\"", 
+        "\"Forged in pain!\"", 
+        "\"Their scars will be warning.\"", 
+        "\"Going.\"", 
+        "\"I'm on a short fuse.\"", 
+        "\"Like wildfire.\"", 
+        "\"Yes...\"", 
+        "\"I will blaze a trail.\"", 
+        "\"After millennia, I am free!\"", 
+        "\"Is that fireproof?\"", 
+        "\"Burn! Hahaha!\"", 
+        "\"Burn! Hahaha!\"", 
+        "\"Mmm, flame broiled.\"", 
+        "\"Quit running, I'm hungry!\"", 
+        "\"Blood on my suit.\"", 
+        "\"Flames.\"", 
+        "\"Burning hunger...\"", 
+        "\"Dead man walking.\"", 
+        "\"Every day I'm shambling.\"", 
+        "\"Wait up!\""
+    ], 
+    "key": "Brand", 
+    "lore": "In a faraway place known as Lokfar there was a seafaring marauder called Kegan Rodhe. As was his people's way, Kegan sailed far and wide with his fellows, stealing treasures from those unlucky enough to catch their attention. To some, he was a monster; to others, just a man. One night, as they sailed through the arctic waters, strange lights danced over the frozen wastes. There was something hypnotic about them; it was something that drew them to it like moths to a flame. Trekking across the frozen waste, they came to a cave covered in ancient runes. The meaning of the runes long lost to them, Kegan led the way inside. There, inside a perfect cage of ice floated a dancing column of flame. There was no way such a thing should be burning, especially not in this place. However, its movement was as hypnotic as a siren's song, captivating and seductive. While the others stayed back, Kegan could not help but approach it while holding out his hand...<br><br>That is the last thing Kegan Rodhe remembers, for now his body belongs to Brand. It is a creature of olden times, perhaps even a casualty of the Rune Wars. It is known in ancient texts as the Burning Vengeance. It is a creature of pure fiery hate that exists for no other reason than to lay waste the world of men and yordles. No one is quite sure how Brand found his way to Valoran, but he began his predations at once. Overcome by Demacian forces, he was given a choice: fight within the confines of the League or die. Naturally, he chose to use his destructive powers in the League, for now...<br><br>''This place will burn, not by cinder flying or breath of wind, but by the vengeance of my hand.''<br>-- Brand", 
+    "id": 63, 
+    "spells": [
+        {
+            "cooldownBurn": "8/7.5/7/6.5/6", 
+            "key": "BrandBlaze", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.65
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target for 2 seconds.", 
+            "sanitizedDescription": "Brand launches a ball of fire forward that deals magic damage. If the target is ablaze, Sear will stun the target for 2 seconds.", 
+            "sanitizedTooltip": "Brand launches a ball of fire forward that deals {{ e1 }} (+{{ a1 }}) magic damage. Blaze: If the target is ablaze, Sear will stun the target for {{ f1 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ]
+            ], 
+            "tooltip": "Brand launches a ball of fire forward that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.<br><br><span class=\"colorDDDD77\">Blaze:</span> If the target is ablaze, Sear will stun the target for {{ f1 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "1050", 
+            "range": [
+                1050, 
+                1050, 
+                1050, 
+                1050, 
+                1050
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160/200/240"
+            ], 
+            "image": {
+                "full": "BrandBlaze.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 240
+            }, 
+            "cooldown": [
+                8.0, 
+                7.5, 
+                7.0, 
+                6.5, 
+                6.0
+            ], 
+            "name": "Sear"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "BrandFissure", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "After a short delay, Brand creates a pillar of flame at a target area, dealing magic damage to enemy units within the area. Units that are ablaze take an additional 25% damage.", 
+            "sanitizedDescription": "After a short delay, Brand creates a pillar of flame at a target area, dealing magic damage to enemy units within the area. Units that are ablaze take an additional 25% damage.", 
+            "sanitizedTooltip": "After a short delay, Brand creates a pillar of flame at a target area, dealing {{ e1 }} (+{{ a1 }}) magic damage to enemy units within the area. Blaze: Units that are ablaze take an additional 25% damage from Pillar of Flame.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    120.0, 
+                    165.0, 
+                    210.0, 
+                    255.0
+                ], 
+                [
+                    20.0, 
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0
+                ]
+            ], 
+            "tooltip": "After a short delay, Brand creates a pillar of flame at a target area, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemy units within the area.<br><br><span class=\"colorDDDD77\">Blaze:</span> Units that are ablaze take an additional 25% damage from Pillar of Flame.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "75/120/165/210/255", 
+                "20/40/60/80/100"
+            ], 
+            "image": {
+                "full": "BrandFissure.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 288
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Pillar of Flame"
+        }, 
+        {
+            "cooldownBurn": "12/11/10/9/8", 
+            "key": "BrandConflagration", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.55
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Brand conjures a powerful blast at his target, dealing magic damage to them. If the target is ablaze, Conflagration spreads to nearby enemies.", 
+            "sanitizedDescription": "Brand conjures a powerful blast at his target, dealing magic damage to them. If the target is ablaze, Conflagration spreads to nearby enemies.", 
+            "sanitizedTooltip": "Brand conjures a powerful blast at his target, dealing {{ e1 }} (+{{ a1 }}) magic damage. Blaze: If the target is ablaze, Conflagration spreads to nearby enemies.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    105.0, 
+                    140.0, 
+                    175.0, 
+                    210.0
+                ]
+            ], 
+            "tooltip": "Brand conjures a powerful blast at his target, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. <br><br><span class=\"colorDDDD77\">Blaze:</span> If the target is ablaze, Conflagration spreads to nearby enemies.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "70/105/140/175/210"
+            ], 
+            "image": {
+                "full": "BrandConflagration.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 336
+            }, 
+            "cooldown": [
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0
+            ], 
+            "name": "Conflagration"
+        }, 
+        {
+            "cooldownBurn": "105/90/75", 
+            "key": "BrandWildfire", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage per Bounce", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Brand unleashes a devastating torrent of fire, dealing magic damage each time it bounces. If a target is ablaze, Pyroclasm will priotize champions for the next bounce.", 
+            "sanitizedDescription": "Brand unleashes a devastating torrent of fire, dealing magic damage each time it bounces. If a target is ablaze, Pyroclasm will priotize champions for the next bounce.", 
+            "sanitizedTooltip": "Brand unleashes a devastating torrent of fire, dealing {{ e1 }} (+{{ a1 }}) magic damage each time it bounces up to 5 bounces. Blaze: If a target is ablaze, Pyroclasm will prioritize champions for the next bounce.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    5.0, 
+                    7.0, 
+                    9.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0
+                ]
+            ], 
+            "tooltip": "Brand unleashes a devastating torrent of fire, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage each time it bounces up to 5 bounces.<br><br><span class=\"colorDDDD77\">Blaze:</span> If a target is ablaze, Pyroclasm will prioritize champions for the next bounce.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "750", 
+            "range": [
+                750, 
+                750, 
+                750
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350", 
+                "5/7/9", 
+                "100"
+            ], 
+            "image": {
+                "full": "BrandWildfire.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 384
+            }, 
+            "cooldown": [
+                105.0, 
+                90.0, 
+                75.0
+            ], 
+            "name": "Pyroclasm"
+        }
+    ]
+}

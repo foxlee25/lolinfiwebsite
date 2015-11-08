@@ -1,0 +1,628 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 1, 
+        "defense": 7, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 53.544, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 374.0, 
+        "armor": 20.384, 
+        "hp": 522.44, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 2.3, 
+        "attackrange": 525.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.3, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.62, 
+        "hpperlevel": 83.0
+    }, 
+    "name": "Karma", 
+    "title": "the Enlightened One", 
+    "tags": [
+        "Mage", 
+        "Support"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Karma_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 48
+        }, 
+        "sanitizedDescription": "Reduces Mantra's cooldown each time Karma damages an enemy champion with one of her abilities (Half-effect for Karma's basic attacks)", 
+        "name": "Gathering Fire", 
+        "description": "Reduces Mantra's cooldown each time Karma damages an enemy champion with one of her abilities (Half-effect for Karma's basic attacks)"
+    }, 
+    "quotes": [
+        "\"Always trust your spirit.\"", 
+        "\"An enlightened decision.\"", 
+        "\"Now we prove our courage.\"", 
+        "\"There is wisdom in war.\"", 
+        "\"Ionia speaks through me.\"", 
+        "\"Indecision is failure.\"", 
+        "\"By force of will.\"", 
+        "\"Act with conviction.\"", 
+        "\"Peace, no matter the cost.\"", 
+        "\"Never again will I sit idle.\"", 
+        "\"Heart and mind as one.\"", 
+        "\"As Ionia changes, so must I.\"", 
+        "\"Challenge what you know.\"", 
+        "\"Never fear change.\"", 
+        "\"The answer lies within.\"", 
+        "\"Peace!\"", 
+        "\"Never falter.\"", 
+        "\"Focus!\"", 
+        "\"Negotiations have ended.\"", 
+        "\"No compromise.\"", 
+        "\"One by one, they will fall.\"", 
+        "\"How noble.\"", 
+        "\"Ionia shall prevail.\"", 
+        "\"Focus your wit and will.\"", 
+        "\"Victory is assured.\"", 
+        "\"Peace begins within.\"", 
+        "\"Hope is the greatest ally.\"", 
+        "\"Together, we shall triumph.\"", 
+        "\"Onward, always.\"", 
+        "Summoners!", 
+        "Conclusion", 
+        "Why isn't Karma fun?", 
+        "What did we like about Karma?", 
+        "Karma's new role", 
+        "The Enlightened One,", 
+        "Heavenly Wave", 
+        "Spirit Bond", 
+        "Soul Shield", 
+        "Mantra", 
+        "Mantra"
+    ], 
+    "key": "Karma", 
+    "lore": "Karma is a woman of indomitable will and unbound spiritual power. She is the soul of Ionia made manifest and an inspiring presence on the battlefield, shielding her allies and turning back her foes. A strong leader torn between tradition and revolution, Karma seeks to protect the peace of Ionia - by force if necessary.<br><br>Karma once lived a tranquil life in a small Ionian village. Led by elder monks, the villagers practiced a tradition of benevolent magic and pacifism. Known for her powerful connection to the spiritual realm and beloved as a just mediator amongst her people, Karma embraced these traditions as an essential aspect of the enlightenment sought by all Ionians. <br><br>Her inner peace was tested when the armies of Noxus invaded Ionia. While the village's elder monks insisted their peaceful ways would spare them from violence, Karma had heard enough tales of Noxian cruelty to openly question the elders' wisdom. Stern and unmoving, they told her to trust in tradition. When the invaders marched on the village, the elder monks rode out to negotiate a bloodless end to the battle. The Noxian general was offended by their show of weakness and slaughtered the monks himself as he ordered his soldiers to strike the village.<br><br>As the Noxians advanced, the villagers prepared to accept death, bound to their peaceful vows. But Karma would not accept death and instead saw another way: sacrificing a single life to spare many others. To save her people, she drew upon the power within and summoned the full force of her will. A burst of spirit fire emerged from her body and spiraled towards the Noxian general. The flame took the form of twin dragons, the symbol of Ionia itself. It was the first time Karma had ever used her powers to harm instead of protect, and neither she nor the villagers had ever seen anything like it. When the magic subsided, the general had fallen before her and his soldiers had scattered. The opposing forces surrendered to Karma's strength leaving her people, and their traditions, untouched. <br><br>While the war raged on, Karma became a formidable leader of the Ionian resistance, but the conflict did not end when Noxus's armies fled the Ionian shores. Ionia became divided between the resistance fighters who craved vengeance and the monks who demanded a return to spiritual tradition. Karma saw a third path, one that combined the strength Ionia found in war with the peaceful traditions the nation still held dear. She now seeks to return her ravaged land to an enduring peace.<br><br>''Your spirit is something no one can take from you. Use it wisely.'' <br>-- Karma", 
+    "id": 43, 
+    "spells": [
+        {
+            "cooldownBurn": "7/6.5/6/5.5/5", 
+            "key": "KarmaQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "ranksWith": "KarmaMantra", 
+                    "coeff": [
+                        25.0, 
+                        75.0, 
+                        125.0, 
+                        175.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "ranksWith": "KarmaMantra", 
+                    "coeff": [
+                        50.0, 
+                        150.0, 
+                        250.0, 
+                        350.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Karma sends forth a ball of spirit energy that explodes and deals damage upon hitting an enemy unit.<br><br>Mantra Bonus: In addition to the explosion, Mantra increases the destructive power of her Inner Flame, creating a cataclysm which deals damage after a short delay.", 
+            "sanitizedDescription": "Karma sends forth a ball of spirit energy that explodes and deals damage upon hitting an enemy unit. Mantra Bonus: In addition to the explosion, Mantra increases the destructive power of her Inner Flame, creating a cataclysm which deals damage after a short delay.", 
+            "sanitizedTooltip": "Fires a blast of energy that explodes upon enemy contact, dealing {{ e1 }} (+{{ a1 }}) magic damage to enemies in the area and slowing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds. Mantra Bonus - Soulflare: Deals {{ f1 }} (+{{ a2 }}) additional magic damage and leaves a circle of flame at the impact area or upon reaching maximum range, slowing enemies for {{ f3 }}%. After 1.5 seconds the circle erupts, dealing {{ f2 }} (+{{ a1 }}) magic damage to enemies in the area.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    125.0, 
+                    170.0, 
+                    215.0, 
+                    260.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Fires a blast of energy that explodes upon enemy contact, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the area and slowing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds. <br><br><span class=\"colorFF9900\">Mantra Bonus - Soulflare:</span> Deals {{ f1 }} <span class=\"color99FF99\">(+{{ a2 }})</span> additional magic damage and leaves a circle of flame at the impact area or upon reaching maximum range, slowing enemies for {{ f3 }}%. After 1.5 seconds the circle erupts, dealing {{ f2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the area.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "950", 
+            "range": [
+                950, 
+                950, 
+                950, 
+                950, 
+                950
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "altimages": [
+                {
+                    "full": "KarmaQ0.png", 
+                    "group": "spell", 
+                    "sprite": "spell13.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 96, 
+                    "x": 240
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "80/125/170/215/260", 
+                "25", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "KarmaQ.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                7.0, 
+                6.5, 
+                6.0, 
+                5.5, 
+                5.0
+            ], 
+            "name": "Inner Flame"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "KarmaSpiritBind", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Root Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "ranksWith": "KarmaMantra", 
+                    "coeff": [
+                        75.0, 
+                        150.0, 
+                        225.0, 
+                        300.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Karma creates a tether between herself and a targeted enemy, dealing damage over time and revealing them. If the tether is not broken, the enemy will be rooted.<br><br>Mantra Bonus: Karma strengthens the link, healing herself and extending the root duration.", 
+            "sanitizedDescription": "Karma creates a tether between herself and a targeted enemy, dealing damage over time and revealing them. If the tether is not broken, the enemy will be rooted. Mantra Bonus: Karma strengthens the link, healing herself and extending the root duration.", 
+            "sanitizedTooltip": "Links Karma to target enemy champion or monster, revealing them, and dealing {{ e1 }} (+{{ a1 }}) magic damage over {{ e3 }} seconds, rooting them in place for {{ e2 }} second(s) if the link is not broken. Mantra Bonus - Renewal: Karma is healed for {{ f1 }}% (+{{ f3 }}%) of her missing health. If the link is not broken, the root duration is increased by {{ f2 }} second(s) and Karma is healed for {{ f1 }}% (+{{ f3 }}%) of her missing health.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    110.0, 
+                    160.0, 
+                    210.0, 
+                    260.0
+                ], 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    825.0, 
+                    825.0, 
+                    825.0, 
+                    825.0, 
+                    825.0
+                ]
+            ], 
+            "tooltip": "Links Karma to target enemy champion or monster, revealing them, and dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }}) </span>magic damage over {{ e3 }} seconds, rooting them in place for {{ e2 }} second(s) if the link is not broken.<br><br><span class=\"colorFF9900\">Mantra Bonus - Renewal:</span> Karma is healed for {{ f1 }}% <span class=\"color99FF99\">(+{{ f3 }}%)</span> of her missing health. If the link is not broken, the root duration is increased by {{ f2 }} second(s) and Karma is healed for {{ f1 }}% <span class=\"color99FF99\">(+{{ f3 }}%)</span> of her missing health.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "675", 
+            "range": [
+                675, 
+                675, 
+                675, 
+                675, 
+                675
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "altimages": [
+                {
+                    "full": "KarmaSpiritBind0.png", 
+                    "group": "spell", 
+                    "sprite": "spell13.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 96, 
+                    "x": 336
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "60/110/160/210/260", 
+                "1/1.25/1.5/1.75/2", 
+                "2", 
+                "3", 
+                "825"
+            ], 
+            "image": {
+                "full": "KarmaSpiritBind.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 192
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Focused Resolve"
+        }, 
+        {
+            "cooldownBurn": "10/9.5/9/8.5/8", 
+            "key": "KarmaSolKimShield", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage Absorption", 
+                    "Movement Speed", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "ranksWith": "KarmaMantra", 
+                    "coeff": [
+                        60.0, 
+                        140.0, 
+                        220.0, 
+                        300.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Karma summons a protective shield that absorbs incoming damage and increases the Movement Speed of the protected ally.<br><br>Mantra Bonus: Energy radiates out from her target, strengthening the initial shield and applying Inspire to nearby allied champions.", 
+            "sanitizedDescription": "Karma summons a protective shield that absorbs incoming damage and increases the Movement Speed of the protected ally. Mantra Bonus: Energy radiates out from her target, strengthening the initial shield and applying Inspire to nearby allied champions.", 
+            "sanitizedTooltip": "Target ally gains a shield, granting {{ e3 }}% Movement Speed for {{ e2 }} seconds and absorbing {{ e1 }} (+{{ a1 }}) damage for {{ e4 }} seconds. Mantra Bonus - Defiance: The shield overflows with energy, absorbing an additional {{ f1 }} (+{{ a2 }}) for Karma's target. Allied champions around her target gain shields that absorb up to {{ f2 }}% as much as the initial target's shield. All champions shielded by Defiance gain {{ f3 }}% movement speed for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0, 
+                    200.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Target ally gains a shield, granting {{ e3 }}% Movement Speed for {{ e2 }} seconds and absorbing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> damage for {{ e4 }} seconds.<br><br><span class=\"colorFF9900\">Mantra Bonus - Defiance:</span> The shield overflows with energy, absorbing an additional {{ f1 }} <span class=\"color99FF99\">(+{{ a2 }})</span> for Karma's target. Allied champions around her target gain shields that absorb up to {{ f2 }}% as much as the initial target's shield. All champions shielded by Defiance gain {{ f3 }}% movement speed for {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "800", 
+            "range": [
+                800, 
+                800, 
+                800, 
+                800, 
+                800
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "altimages": [
+                {
+                    "full": "KarmaSolKimShield0.png", 
+                    "group": "spell", 
+                    "sprite": "spell13.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 96, 
+                    "x": 288
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "80/110/140/170/200", 
+                "1.5", 
+                "40/45/50/55/60", 
+                "4"
+            ], 
+            "image": {
+                "full": "KarmaSolKimShield.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 240
+            }, 
+            "cooldown": [
+                10.0, 
+                9.5, 
+                9.0, 
+                8.5, 
+                8.0
+            ], 
+            "name": "Inspire"
+        }, 
+        {
+            "cooldownBurn": "45/42/39/36", 
+            "key": "KarmaMantra", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e7 }} -> {{ e7NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Soulflare Impact", 
+                    "Soulflare Explosion", 
+                    "Renewal Root Extension", 
+                    "Defiance Shield", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Karma empowers her next ability to do an additional effect. Mantra is available at level 1 and does not require a skill point.", 
+            "sanitizedDescription": "Karma empowers her next ability to do an additional effect. Mantra is available at level 1 and does not require a skill point.", 
+            "sanitizedTooltip": "Karma empowers her next ability within 8 seconds for an additional effect. Soulflare: Deals bonus magic damage and leaves behind a circle of flame, heavily slowing enemies and dealing damage after a brief delay. Renewal: Karma heals for a portion of her missing health. If the target does not break the link, the root duration is extended and Karma is again healed for a portion of her missing health. Defiance: Karma's target receives an enhanced shield and allied champions around Karma's target become shielded and gain movement speed.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    75.0, 
+                    125.0, 
+                    175.0
+                ], 
+                [
+                    50.0, 
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    0.5, 
+                    0.75, 
+                    1.0, 
+                    1.25
+                ], 
+                [
+                    0.2, 
+                    0.2, 
+                    0.2, 
+                    0.2
+                ], 
+                [
+                    30.0, 
+                    90.0, 
+                    150.0, 
+                    210.0
+                ], 
+                [
+                    0.6, 
+                    0.6, 
+                    0.6, 
+                    0.6
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    0.01, 
+                    0.01, 
+                    0.01, 
+                    0.01
+                ]
+            ], 
+            "tooltip": "Karma empowers her next ability within 8 seconds for an additional effect. <br><br><span class=\"colorFF9900\">Soulflare: </span>Deals bonus magic damage and leaves behind a circle of flame, heavily slowing enemies and dealing damage after a brief delay. <br><br><span class=\"colorFF9900\">Renewal: </span>Karma heals for a portion of her missing health. If the target does not break the link, the root duration is extended and Karma is again healed for a portion of her missing health.<br><br><span class=\"colorFF9900\">Defiance: </span>Karma's target receives an enhanced shield and allied champions around Karma's target become shielded and gain movement speed.", 
+            "maxrank": 4, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "25/75/125/175", 
+                "50/150/250/350", 
+                "0.5", 
+                "1.5", 
+                "0.5/0.75/1/1.25", 
+                "0.2", 
+                "30/90/150/210", 
+                "0.6", 
+                "0.5", 
+                "0.01"
+            ], 
+            "image": {
+                "full": "KarmaMantra.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 288
+            }, 
+            "cooldown": [
+                45.0, 
+                42.0, 
+                39.0, 
+                36.0
+            ], 
+            "name": "Mantra"
+        }
+    ]
+}

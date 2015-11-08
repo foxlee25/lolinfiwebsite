@@ -1,0 +1,597 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 10, 
+        "defense": 4, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 60.0, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 300.0, 
+        "armor": 24.0, 
+        "hp": 550.0, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 3.2, 
+        "attackrange": 150.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.3, 
+        "mpregenperlevel": 0.7, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 8.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.25, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Fiora", 
+    "title": "the Grand Duelist", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Fiora_P.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 96
+        }, 
+        "sanitizedDescription": "Fiora challenges nearby enemy Champions to dodge her. She calls out a direction from which she will try to strike. If she can complete her own challenge, she receives a small bonus and calls out a new direction.", 
+        "name": "Duelist's Dance", 
+        "description": "Fiora challenges nearby enemy Champions to dodge her. She calls out a direction from which she will try to strike. If she can complete her own challenge, she receives a small bonus and calls out a new direction."
+    }, 
+    "quotes": [
+        "\"Insolent peasants!\"", 
+        "\"Run them through!\"", 
+        "\"Prepare to die.\"", 
+        "\"They dare not strike back.\"", 
+        "\"To the death.\"", 
+        "\"I never hold back.\"", 
+        "\"Precision and grace.\"", 
+        "\"I have no equal.\"", 
+        "\"Do not hesitate.\"", 
+        "\"Sharp blade, sharp mind.\"", 
+        "\"Others try. I succeed.\"", 
+        "\"At once.\"", 
+        "\"In the blink of an eye.\"", 
+        "\"Such unrefined style.\"", 
+        "\"En garde!\"", 
+        "\"Try me!\"", 
+        "\"Your move.\"", 
+        "\"Stand ready.\"", 
+        "\"One step ahead!\"", 
+        "\"Poor form!\"", 
+        "\"Too slow!\"", 
+        "\"Try again.\"", 
+        "\"Insolent peasants!\"", 
+        "\"Run them through!\"", 
+        "\"Prepare to die.\"", 
+        "\"They dare not strike back.\"", 
+        "\"To the death.\"", 
+        "\"I never hold back.\"", 
+        "\"Let them eat swords.\"", 
+        "\"Precision and grace.\"", 
+        "\"I have no equal.\"", 
+        "\"Do not hesitate.\"", 
+        "\"Sharp blade, sharp mind.\"", 
+        "\"Others try. I succeed.\"", 
+        "\"At once.\"", 
+        "\"In the blink of an eye.\"", 
+        "\"Such unrefined style.\"", 
+        "\"En garde!\"", 
+        "\"Try me!\"", 
+        "\"Your move.\"", 
+        "\"Stand ready.\"", 
+        "\"One step ahead!\"", 
+        "\"Poor form!\"", 
+        "\"Too slow!\"", 
+        "\"Try again.\"", 
+        "Fiora was designed by Volty.", 
+        "Fiora's level", 
+        "Lunge", 
+        "Lunge", 
+        "Lunge", 
+        "Riposte", 
+        "Burst of Speed", 
+        "Burst of Speed", 
+        "Blade Waltz's", 
+        "Blade Waltz", 
+        "Blade Waltz"
+    ], 
+    "key": "Fiora", 
+    "lore": "''I have come to kill you for the sake of honor. And though you possess none, you will die just the same.''<br>The most feared duelist in all of Valoran, Fiora is as renowned for her indomitable will and haughty pride as she is for her skill with the blade. She was born to Demacia's House Laurent, a once-proud family whose reputation was tarnished by the actions of her father. In an unprecedented move, Fiora challenged him to single combat and, upon winning, took control of House Laurent. Defying the Demacian establishment, she has set about restoring the reputation and pride of her family name, one duel at a time.", 
+    "id": 114, 
+    "spells": [
+        {
+            "cooldownBurn": "16/14/12/10/8", 
+            "key": "FioraQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}  -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Attack Damage Ratio", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Fiora lunges in a direction and slashes a nearby enemy, dealing physical damage and applying on-hit effects.", 
+            "sanitizedDescription": "Fiora lunges in a direction and slashes a nearby enemy, dealing physical damage and applying on-hit effects.", 
+            "sanitizedTooltip": "Fiora lunges in a direction and slashes a nearby enemy, dealing {{ e1 }} (+{{ f1 }}) physical damage and applying on-hit effects. This attack prioritizes Vitals and targets in kill range. If this ability hits an enemy, {{ e4 }}% of its cooldown is refunded.", 
+            "effect": [
+                null, 
+                [
+                    65.0, 
+                    75.0, 
+                    85.0, 
+                    95.0, 
+                    105.0
+                ], 
+                [
+                    0.55, 
+                    0.7, 
+                    0.85, 
+                    1.0, 
+                    1.15
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0, 
+                    210.0
+                ]
+            ], 
+            "tooltip": "Fiora lunges in a direction and slashes a nearby enemy, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and applying on-hit effects. This attack prioritizes <span class=\"colorD4BD22\">Vitals</span> and targets in kill range. <br><br>If this ability hits an enemy, {{ e4 }}% of its cooldown is refunded. ", 
+            "maxrank": 5, 
+            "costBurn": "20/25/30/35/40", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                20, 
+                25, 
+                30, 
+                35, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "65/75/85/95/105", 
+                "0.55/0.7/0.85/1/1.15", 
+                "50", 
+                "60", 
+                "2.5", 
+                "2", 
+                "90/120/150/180/210"
+            ], 
+            "image": {
+                "full": "FioraQ.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0
+            ], 
+            "name": "Lunge"
+        }, 
+        {
+            "cooldownBurn": "0", 
+            "key": "FioraW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ f2 }} -> {{ f3 }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Fiora parries all incoming damage and disables for a short time, then stabs in a direction. This stab slows the first enemy champion hit, or stuns them if Fiora blocked an immobilizing disable with this ability.", 
+            "sanitizedDescription": "Fiora parries all incoming damage and disables for a short time, then stabs in a direction. This stab slows the first enemy champion hit, or stuns them if Fiora blocked an immobilizing disable with this ability.", 
+            "sanitizedTooltip": "Fiora parries all incoming damage, debuffs, and disables for the next {{ e2 }} seconds and then stabs in the target direction. The stab deals {{ e1 }} (+{{ f1 }}) magic damage to the first enemy champion and slows their movement and attack speed by {{ e4 }}% for {{ e3 }} seconds. If Fiora parries an immobilizing disable, Riposte stuns instead of slowing.", 
+            "effect": [
+                null, 
+                [
+                    90.0, 
+                    130.0, 
+                    170.0, 
+                    210.0, 
+                    250.0
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    0.03, 
+                    0.03, 
+                    0.03, 
+                    0.03, 
+                    0.03
+                ], 
+                [
+                    0.15, 
+                    0.15, 
+                    0.15, 
+                    0.15, 
+                    0.25
+                ], 
+                [
+                    19.0, 
+                    18.0, 
+                    17.0, 
+                    16.0, 
+                    15.0
+                ]
+            ], 
+            "tooltip": "Fiora parries all incoming damage, debuffs, and disables for the next {{ e2 }} seconds and then stabs in the target direction.<br><br>The stab deals {{ e1 }} <span class=\"color99FF99\">(+{{ f1 }})</span> magic damage to the first enemy champion and slows  their movement and attack speed by {{ e4 }}% for {{ e3 }} seconds. <br><br>If Fiora parries an immobilizing disable, Riposte stuns instead of slowing.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "500", 
+            "range": [
+                500, 
+                500, 
+                500, 
+                500, 
+                500
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "90/130/170/210/250", 
+                "0.75", 
+                "1.5", 
+                "50", 
+                "0.03", 
+                "0.15/0.15/0.15/0.15/0.25", 
+                "19/18/17/16/15"
+            ], 
+            "image": {
+                "full": "FioraW.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Riposte"
+        }, 
+        {
+            "cooldownBurn": "15/13/11/9/7", 
+            "key": "FioraE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e3 }}%  -> {{ e3NL }}%", 
+                    "{{ f4 }}%  -> {{ f5 }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Slow", 
+                    "Critical Strike Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Fiora has increased attack speed for the next two attacks. The first attack slows the target, and the second attack will critically strike.", 
+            "sanitizedDescription": "Fiora has increased attack speed for the next two attacks. The first attack slows the target, and the second attack will critically strike.", 
+            "sanitizedTooltip": "Fiora gains {{ e4 }}% increased attack speed for the next two attacks. The first attack cannot critically strike, but applies a {{ e3 }}% slow for {{ e2 }} second. The second attack is guaranteed to critically strike for {{ f4 }}% damage ({{ f3 }}).", 
+            "effect": [
+                null, 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    140.0, 
+                    155.0, 
+                    170.0, 
+                    185.0, 
+                    200.0
+                ], 
+                [
+                    5.0, 
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    10.0, 
+                    12.5, 
+                    15.0, 
+                    17.5, 
+                    20.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Fiora gains {{ e4 }}% increased attack speed for the next two attacks. The first attack cannot critically strike, but applies a {{ e3 }}% slow for {{ e2 }} second. The second attack is guaranteed to critically strike for {{ f4 }}% damage <span class=\"colorFF8C00\">({{ f3 }})</span>.", 
+            "maxrank": 5, 
+            "costBurn": "40/45/50/55/60", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                45, 
+                50, 
+                55, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "3", 
+                "1", 
+                "40/45/50/55/60", 
+                "50", 
+                "100", 
+                "140/155/170/185/200", 
+                "5/10/15/20/25", 
+                "40/50/60/70/80", 
+                "10/12.5/15/17.5/20", 
+                "20"
+            ], 
+            "image": {
+                "full": "FioraE.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                15.0, 
+                13.0, 
+                11.0, 
+                9.0, 
+                7.0
+            ], 
+            "name": "Bladework"
+        }, 
+        {
+            "cooldownBurn": "110/90/70", 
+            "key": "FioraR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ e7 }} -> {{ e7NL }}"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Duelist Movement Speed", 
+                    "Heal Per Second"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Fiora reveals all four Vitals on the target champion and gains movement speed while near them. If Fiora hits all 4 Vitals or if the target dies after she has hit at least one, Fiora and her allies in the area are healed over the next few seconds.", 
+            "sanitizedDescription": "Fiora reveals all four Vitals on the target champion and gains movement speed while near them. If Fiora hits all 4 Vitals or if the target dies after she has hit at least one, Fiora and her allies in the area are healed over the next few seconds.", 
+            "sanitizedTooltip": "Fiora reveals all four Vitals on the target champion, for a potential {{ f8 }}% max health true damage. In addition, Fiora gains Duelist's Dance's movement speed bonus ({{ f6 }}%) while near the target. If Fiora hits all 4 Vitals in {{ e1 }} seconds or if the target dies after she has hit at least one, Fiora and her allies in the area are healed for {{ e7 }} (+{{ f9 }}) each second for {{ e6 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0
+                ], 
+                [
+                    30.0, 
+                    40.0, 
+                    50.0
+                ], 
+                null, 
+                [
+                    30.0, 
+                    45.0, 
+                    60.0
+                ], 
+                [
+                    500.0, 
+                    500.0, 
+                    500.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    80.0, 
+                    110.0, 
+                    140.0
+                ], 
+                [
+                    550.0, 
+                    550.0, 
+                    550.0
+                ]
+            ], 
+            "tooltip": "Fiora reveals all four <span class=\"colorD4BD22\">Vitals</span> on the target champion, for a potential <span class=\"colorFFFFFF\">{{ f8 }}%</span> max health true damage. In addition, Fiora gains Duelist's Dance's movement speed bonus <span class=\"colorFFFFFF\">({{ f6 }}%)</span> while near the target.<br><br>If Fiora hits all 4 <span class=\"colorD4BD22\">Vitals</span> in {{ e1 }} seconds or if the target dies after she has hit at least one, Fiora and her allies in the area are healed for {{ e7 }} <span class=\"colorFF8C00\">(+{{ f9 }})</span> each second for {{ e6 }} seconds.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "500", 
+            "range": [
+                500, 
+                500, 
+                500
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "8", 
+                "30/40/50", 
+                "", 
+                "30/45/60", 
+                "500", 
+                "5", 
+                "80/110/140", 
+                "550"
+            ], 
+            "image": {
+                "full": "FioraR.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                110.0, 
+                90.0, 
+                70.0
+            ], 
+            "name": "Grand Challenge"
+        }
+    ]
+}

@@ -1,0 +1,458 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 10, 
+        "defense": 5, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.1, 
+        "attackdamage": 61.376, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.0672, 
+        "mp": 100.0, 
+        "armor": 24.108, 
+        "hp": 625.64, 
+        "hpregenperlevel": 0.9, 
+        "attackspeedperlevel": 2.9, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.51, 
+        "hpperlevel": 98.0
+    }, 
+    "name": "Tryndamere", 
+    "title": "the Barbarian King", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Battlefury", 
+    "passive": {
+        "image": {
+            "full": "Tryndamere_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "Tryndamere gains Fury for each attack, critical strike, and killing blow he makes. Fury passively increases his Critical Strike Chance and can be consumed with his Bloodlust spell.", 
+        "name": "Battle Fury", 
+        "description": "Tryndamere gains Fury for each attack, critical strike, and killing blow he makes. Fury passively increases his Critical Strike Chance and can be consumed with his Bloodlust spell."
+    }, 
+    "quotes": [
+        "\"This'll be a slaughter.\"", 
+        "\"Now they die!\"", 
+        "\"I am your worst nightmare!\"", 
+        "\"This'll be a slaughter.\"", 
+        "\"As you wish.\"", 
+        "\"Into battle.\"", 
+        "\"Follow my blade!\"", 
+        "\"You never stood a chance.\"", 
+        "\"The thirst consumes me!\"", 
+        "\"Slaughter! Massacre...\"", 
+        "\"Claim them all.\"", 
+        "\"Devour their souls.\"", 
+        "\"They will serve us.\"", 
+        "\"No control! No... mercy.\"", 
+        "\"Rivers of blood.\"", 
+        "\"Must... go.\"", 
+        "\"Find fresh souls. Quickly.\"", 
+        "\"No salvation.\"", 
+        "\"I am your worst nightmare!\"", 
+        "\"All will be consumed.\"", 
+        "\"Soon all will join me.\"", 
+        "\"There is no going back.\"", 
+        "\"The power... is undeniable.\"", 
+        "\"We are one now.\"", 
+        "\"Who will be next?!\"", 
+        "Summoners!"
+    ], 
+    "key": "Tryndamere", 
+    "lore": "Fueled by his unbridled fury and rage, Tryndamere cuts his way through the tundra, mastering the art of battle by challenging the Freljord's greatest warriors. The wrathful barbarian seeks revenge on the one who decimated his clan and strikes down all those who stand between him and his final retribution.<br><br>Struggling to survive in the harsh, frostbitten Freljord, the young Tryndamere and his people warred with other tribes over the scarce resources of the land. One such battle changed his life forever. Raiders ambushed Tryndamere's clan in the dead of night, and though his warriors were able to push the first wave of attackers back, they weren't prepared for the dark figure that next stepped forth. He wielded a cruel, living sword, and inspired an unhinged bloodlust in the invaders with his unearthly magic. Tryndamere's tribe was overrun within moments. With no hope of defeating the enigmatic being, Tryndamere threw himself at certain death. The dark figure swatted him aside, mortally wounding the young barbarian.<br><br>Tryndamere saw death and destruction engulf his home as his life slipped away. No one was left standing - only the screams of the dying remained. Unable to surrender to death, Tryndamere gave in fully to his wrath. His blood boiled and his anger consumed him, banishing his mortality. He staggered to his feet - barely able to take hold of his sword - steeling himself for the decisive confrontation with the shadowy being. But the dark figure did not even lift his blade, and instead gave Tryndamere a knowing smile as he withdrew into the shadows. That was the last time the barbarian ever saw his nemesis.<br><br>A man robbed of his home and his people, Tryndamere wandered across the Freljord for years, vowing to forge himself into a brutal instrument of revenge. He visited all the tribes in the frozen wastes, besting each of their warriors until there were none left to challenge. In doing so, he mastered the barbarian ways of war and harnessed his anger as a force to be reckoned with. With sword in hand and rage in his heart, he is now on an undying quest for vengeance against the one who destroyed the life he once knew. <br><br>''Rage is my weapon.''<br> -- Tryndamere", 
+    "id": 23, 
+    "spells": [
+        {
+            "cooldownBurn": "12", 
+            "key": "Bloodlust", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}"
+                ], 
+                "label": [
+                    "Attack Damage", 
+                    "Attack Damage per Health % Missing", 
+                    "Heal", 
+                    "Heal Per Fury"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Tryndamere thrives on the thrills of combat, increasing his Attack Damage as he is more and more wounded. He can cast Bloodlust to consume his Fury and heal himself.", 
+            "sanitizedDescription": "Tryndamere thrives on the thrills of combat, increasing his Attack Damage as he is more and more wounded. He can cast Bloodlust to consume his Fury and heal himself.", 
+            "sanitizedTooltip": "Passive: Tryndamere thirsts for blood, gaining {{ e1 }} Attack Damage plus {{ e2 }} per 1% Health missing. Active: Tryndamere consumes his Fury, restoring {{ e3 }} (+{{ a1 }}) Health, plus {{ e4 }} (+{{ f2 }}) Health per Fury consumed.", 
+            "effect": [
+                null, 
+                [
+                    5.0, 
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0
+                ], 
+                [
+                    0.15, 
+                    0.2, 
+                    0.25, 
+                    0.3, 
+                    0.35
+                ], 
+                [
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0
+                ], 
+                [
+                    0.5, 
+                    0.95, 
+                    1.4, 
+                    1.85, 
+                    2.3
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Tryndamere thirsts for blood, gaining {{ e1 }} Attack Damage plus {{ e2 }} per 1% Health missing.<br><br><span class=\"colorFF9900\">Active: </span>Tryndamere consumes his Fury, restoring {{ e3 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Health, plus {{ e4 }} <span class=\"color99FF99\"> (+{{ f2 }}) </span>Health per Fury consumed.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "5/10/15/20/25", 
+                "0.15/0.2/0.25/0.3/0.35", 
+                "30/40/50/60/70", 
+                "0.5/0.95/1.4/1.85/2.3", 
+                "2"
+            ], 
+            "image": {
+                "full": "Bloodlust.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Bloodlust"
+        }, 
+        {
+            "cooldownBurn": "14", 
+            "key": "MockingShout", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Attack Damage Reduction", 
+                    "Movement Speed Reduction"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Tryndamere lets out an insulting cry, decreasing surrounding champions' Attack Damage. Enemies with their backs turned to Tryndamere also have their Movement Speed reduced.", 
+            "sanitizedDescription": "Tryndamere lets out an insulting cry, decreasing surrounding champions' Attack Damage. Enemies with their backs turned to Tryndamere also have their Movement Speed reduced.", 
+            "sanitizedTooltip": "Decreases surrounding champions' Attack Damage by {{ e1 }} for {{ e4 }} seconds, and enemies with their backs turned also have their Movement Speed reduced by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    35.0, 
+                    50.0, 
+                    65.0, 
+                    80.0
+                ], 
+                [
+                    30.0, 
+                    37.5, 
+                    45.0, 
+                    52.5, 
+                    60.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Decreases surrounding champions' Attack Damage by {{ e1 }} for {{ e4 }} seconds, and enemies with their backs turned also have their Movement Speed reduced by {{ e2 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/35/50/65/80", 
+                "30/37.5/45/52.5/60", 
+                "25", 
+                "4"
+            ], 
+            "image": {
+                "full": "MockingShout.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0
+            ], 
+            "name": "Mocking Shout"
+        }, 
+        {
+            "cooldownBurn": "13/12/11/10/9", 
+            "key": "slashCast", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Tryndamere slices toward a target unit, dealing damage to enemies in his path.", 
+            "sanitizedDescription": "Tryndamere slices toward a target unit, dealing damage to enemies in his path.", 
+            "sanitizedTooltip": "Tryndamere spins through his enemies, dealing {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) physical damage to enemies in his path and generating Fury. Spinning Slash's cooldown is reduced by 1 second whenever Tryndamere critically strikes. This effect is doubled against champions.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0, 
+                    190.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Tryndamere spins through his enemies, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> physical damage to enemies in his path and generating Fury.<br><br>Spinning Slash's cooldown is reduced by 1 second whenever Tryndamere critically strikes. This effect is doubled against champions.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "70/100/130/160/190", 
+                "40/50/60/70/80", 
+                "2"
+            ], 
+            "image": {
+                "full": "slashCast.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0
+            ], 
+            "name": "Spinning Slash"
+        }, 
+        {
+            "cooldownBurn": "110/100/90", 
+            "key": "UndyingRage", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Fury Gained", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.", 
+            "sanitizedDescription": "Tryndamere's lust for battle becomes so strong that he is unable to die, no matter how wounded he becomes.", 
+            "sanitizedTooltip": "Tryndamere becomes completely immune to death for {{ e3 }} seconds, refusing to be reduced below {{ e2 }} Health and instantly gaining {{ e1 }} Fury.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    75.0, 
+                    100.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Tryndamere becomes completely immune to death for {{ e3 }} seconds, refusing to be reduced below {{ e2 }} Health and instantly gaining {{ e1 }} Fury.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "50/75/100", 
+                "1", 
+                "5"
+            ], 
+            "image": {
+                "full": "UndyingRage.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                110.0, 
+                100.0, 
+                90.0
+            ], 
+            "name": "Undying Rage"
+        }
+    ]
+}

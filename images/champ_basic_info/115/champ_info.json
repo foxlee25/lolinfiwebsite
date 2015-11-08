@@ -1,0 +1,415 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 2, 
+        "defense": 4, 
+        "magic": 9
+    }, 
+    "stats": {
+        "armorperlevel": 3.3, 
+        "attackdamage": 54.208, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": -0.04734, 
+        "mp": 334.0, 
+        "armor": 21.544, 
+        "hp": 524.4, 
+        "hpregenperlevel": 0.6, 
+        "attackspeedperlevel": 2.0, 
+        "attackrange": 550.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 3.1, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 6.255, 
+        "hpperlevel": 80.0
+    }, 
+    "name": "Ziggs", 
+    "title": "the Hexplosives Expert", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "ZiggsPassiveReady.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "Every 12 seconds, Ziggs' next basic attack deals bonus magic damage. This cooldown is reduced whenever Ziggs uses an ability.", 
+        "name": "Short Fuse", 
+        "description": "Every 12 seconds, Ziggs' next basic attack deals bonus magic damage. This cooldown is reduced whenever Ziggs uses an ability."
+    }, 
+    "quotes": [
+        "\"This'll be a blast!\"", 
+        "\"Bombs away!\"", 
+        "\"Take cover!\"", 
+        "\"Fire in the hole!\"", 
+        "\"It's gonna blow!\"", 
+        "\"Lights out!\"", 
+        "\"Right-o.\"", 
+        "\"Anyone got a match?\"", 
+        "\"Come on, come on, come on!\"", 
+        "\"Let's blow this joint.\"", 
+        "\"Hey, where'd that bomb go?\"", 
+        "\"Don't worry, I got this.\"", 
+        "\"I'm going, I'm going.\"", 
+        "\"I'll bring the Big One!\"", 
+        "\"Yeee-Haaa!\"", 
+        "\"Incoming!\"", 
+        "\"Oh! Look out below!\"", 
+        "\"Come on!\""
+    ], 
+    "key": "Ziggs", 
+    "lore": "Ziggs was born with a talent for tinkering, but his chaotic, hyperactive nature was unusual among yordle scientists. Aspiring to be a revered inventor like Heimerdinger, he rattled through ambitious projects with manic zeal, emboldened by both his explosive failures and his unprecedented discoveries. Word of Ziggs' volatile experimentation reached the famed Yordle Academy in Piltover and its esteemed professors invited him to demonstrate his craft. His characteristic disregard for safety brought the presentation to an early conclusion, however, when the hextech engine Ziggs was demonstrating overheated and exploded, blowing a huge hole in the wall of the Academy. The professors dusted themselves off and sternly motioned for him to leave. Devastated, Ziggs prepared to return to Bandle City in shame. However, before he could leave, a group of Zaunite agents infiltrated the Academy and kidnapped the professors. The Piltover military tracked the captives to a Zaunite prison, but their weapons were incapable of destroying the fortified walls. Determined to outdo them, Ziggs began experimenting on a new kind of armament, and quickly realized that he could harness his accidental gift for demolition to save the captured yordles.<br><br>Before long, Ziggs had created a line of powerful bombs he lovingly dubbed ''hexplosives.'' With his new creations ready for their first trial, Ziggs traveled to Zaun and sneaked into the prison compound. He launched a gigantic bomb at the prison and watched with glee as the explosion tore through the reinforced wall. Once the smoke had cleared, Ziggs scuttled into the facility, sending guards running with a hail of bombs. He rushed to the cell, blew the door off its hinges, and led the captive yordles to freedom. Upon returning to the Academy, the humbled professors recognized Ziggs with an honorary title - Dean of Demolitions - and proposed that he demonstrate this new form of yordle ingenuity in the League of Legends. Vindicated at last, Ziggs accepted the proposal, eager to bring his ever-expanding range of hexplosives to the greatest testing grounds in the world: the Fields of Justice.<br><br>''Ziggs? Unpredictable, dangerous, yes yes. But quite brilliant!''<br>-- Heimerdinger", 
+    "id": 115, 
+    "spells": [
+        {
+            "cooldownBurn": "6/5.5/5/4.5/4", 
+            "key": "ZiggsQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.65
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ziggs throws a bouncing bomb that deals magic damage.", 
+            "sanitizedDescription": "Ziggs throws a bouncing bomb that deals magic damage.", 
+            "sanitizedTooltip": "Ziggs throws a bouncing bomb that deals {{ e1 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    120.0, 
+                    165.0, 
+                    210.0, 
+                    255.0
+                ]
+            ], 
+            "tooltip": "Ziggs throws a bouncing bomb that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "75/120/165/210/255"
+            ], 
+            "image": {
+                "full": "ZiggsQ.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                6.0, 
+                5.5, 
+                5.0, 
+                4.5, 
+                4.0
+            ], 
+            "name": "Bouncing Bomb"
+        }, 
+        {
+            "cooldownBurn": "26/24/22/20/18", 
+            "key": "ZiggsW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.35
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ziggs flings an explosive charge that detonates after 4 seconds, or when this ability is activated again. The explosion deals magic damage to enemies, knocking them away. Ziggs is also knocked away, but takes no damage.", 
+            "sanitizedDescription": "Ziggs flings an explosive charge that detonates after 4 seconds, or when this ability is activated again. The explosion deals magic damage to enemies, knocking them away. Ziggs is also knocked away, but takes no damage.", 
+            "sanitizedTooltip": "Ziggs flings an explosive charge that detonates after {{ e2 }} seconds, or when this ability is activated again. The explosion deals {{ e1 }} (+{{ a1 }}) magic damage to enemies, knocking them away. Ziggs is also knocked away, but takes no damage.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    105.0, 
+                    140.0, 
+                    175.0, 
+                    210.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Ziggs flings an explosive charge that detonates after {{ e2 }} seconds, or when this ability is activated again. The explosion deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies, knocking them away.<br><br>Ziggs is also knocked away, but takes no damage.", 
+            "maxrank": 5, 
+            "costBurn": "65", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                65, 
+                65, 
+                65, 
+                65, 
+                65
+            ], 
+            "effectBurn": [
+                "", 
+                "70/105/140/175/210", 
+                "4"
+            ], 
+            "image": {
+                "full": "ZiggsW.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                26.0, 
+                24.0, 
+                22.0, 
+                20.0, 
+                18.0
+            ], 
+            "name": "Satchel Charge"
+        }, 
+        {
+            "cooldownBurn": "16", 
+            "key": "ZiggsE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Mine Damage", 
+                    "Slow", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ziggs scatters proximity mines that detonate on enemy contact, dealing magic damage and slowing.", 
+            "sanitizedDescription": "Ziggs scatters proximity mines that detonate on enemy contact, dealing magic damage and slowing.", 
+            "sanitizedTooltip": "Ziggs scatters proximity mines that detonate on enemy contact, dealing {{ e1 }} (+{{ a1 }}) magic damage. Enemies hit are slowed by {{ e2 }}% for {{ e4 }} seconds. Enemies triggering a mine take 40% damage from additional mines. Mines disarm automatically after {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    65.0, 
+                    90.0, 
+                    115.0, 
+                    140.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Ziggs scatters proximity mines that detonate on enemy contact, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Enemies hit are slowed by {{ e2 }}% for {{ e4 }} seconds.<br><br>Enemies triggering a mine take 40% damage from additional mines. Mines disarm automatically after {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "40/65/90/115/140", 
+                "20/25/30/35/40", 
+                "10", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "ZiggsE.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                16.0, 
+                16.0, 
+                16.0, 
+                16.0, 
+                16.0
+            ], 
+            "name": "Hexplosive Minefield"
+        }, 
+        {
+            "cooldownBurn": "120", 
+            "key": "ZiggsR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ziggs deploys his ultimate creation, the Mega Inferno Bomb, hurling it an enormous distance. Enemies in the primary blast zone take more damage than those farther away. ", 
+            "sanitizedDescription": "Ziggs deploys his ultimate creation, the Mega Inferno Bomb, hurling it an enormous distance. Enemies in the primary blast zone take more damage than those farther away.", 
+            "sanitizedTooltip": "Ziggs deploys his ultimate creation, the Mega Inferno Bomb, hurling it an enormous distance. Enemies in the primary blast zone take {{ e1 }} (+{{ a1 }}) magic damage. Enemies farther away take {{ e2 }}% damage. Minions take double damage.", 
+            "effect": [
+                null, 
+                [
+                    250.0, 
+                    375.0, 
+                    500.0
+                ], 
+                [
+                    80.0, 
+                    80.0, 
+                    80.0
+                ]
+            ], 
+            "tooltip": "Ziggs deploys his ultimate creation, the Mega Inferno Bomb, hurling it an enormous distance. Enemies in the primary blast zone take {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Enemies farther away take {{ e2 }}% damage. Minions take double damage.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "5300", 
+            "range": [
+                5300, 
+                5300, 
+                5300
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "250/375/500", 
+                "80"
+            ], 
+            "image": {
+                "full": "ZiggsR.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                120.0, 
+                120.0, 
+                120.0
+            ], 
+            "name": "Mega Inferno Bomb"
+        }
+    ]
+}

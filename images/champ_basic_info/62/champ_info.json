@@ -1,0 +1,462 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 8, 
+        "defense": 5, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 59.876, 
+        "mpperlevel": 38.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 265.84, 
+        "armor": 24.88, 
+        "hp": 577.8, 
+        "hpregenperlevel": 0.65, 
+        "attackspeedperlevel": 3.0, 
+        "attackrange": 175.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.65, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 8.04, 
+        "spellblock": 32.1, 
+        "hpregen": 6.19, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Wukong", 
+    "title": "the Monkey King", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "MonkeyKingStoneSkin.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 48
+        }, 
+        "sanitizedDescription": "Increases Wukong's Armor and Magic Resistance for each nearby enemy champion.", 
+        "name": "Stone Skin", 
+        "description": "Increases Wukong's Armor and Magic Resistance for each nearby enemy champion."
+    }, 
+    "quotes": [
+        "Wukong,", 
+        "\"I will be the best.\"", 
+        "\"Wuju style.\"", 
+        "\"Put me to the test.\"", 
+        "\"I got this.\"", 
+        "\"Just try to stop me.\"", 
+        "\"Is that all they've got?\"", 
+        "\"Been waiting for this.\"", 
+        "\"You got it!\"", 
+        "\"Show me the path.\"", 
+        "\"My place is at the top.\"", 
+        "\"Adapt to all situations.\"", 
+        "\"Bring me a real challenge.\"", 
+        "\"Who questions my ability?\"", 
+        "\"Every mistake is a lesson.\"", 
+        "\"Never settle for second.\"", 
+        "\"My journey's only beginning.\"", 
+        "\"Wuju style.\"", 
+        "\"Put me to the test.\"", 
+        "\"I got this.\"", 
+        "\"Just try to stop me.\"", 
+        "\"Is that all they've got?\"", 
+        "\"Been waiting for this.\"", 
+        "\"You got it!\"", 
+        "\"Show me the path.\"", 
+        "\"My place is at the top.\"", 
+        "\"Adapt to all situations.\"", 
+        "\"Bring me a real challenge.\"", 
+        "\"Who questions my ability?\"", 
+        "\"Every mistake is a lesson.\"", 
+        "\"Never settle for second.\"", 
+        "\"My journey's only beginning.\""
+    ], 
+    "key": "MonkeyKing", 
+    "lore": "During the chaos of the Rune Wars, an enormous runestone was lost deep within the Plague Jungles. It remained there, untouched for centuries, emanating a potent magic which infused nearby wildlife with sentience and vitality. A group of monkeys who were particularly empowered by it came to worship the stone, and their leader - a wise sage - became convinced that he could harness its power to make the monkeys immortal. He performed an elaborate ritual, but things didn't go as he expected. The runestone was destroyed, and instead of granting immortality, it produced Kong, a monkey who carried in his heart the strength and power it had contained. Kong was driven by an unquenchable desire for greatness. He sought out every beast and monster the Plague Jungles could offer, eager to find a worthy opponent, but none offered the challenge he craved. He asked the sage for advice, and learned about a legend of hairless monkeys to the north who, with wits and might, had bent the world to their will.<br><br>Kong left, journeying north, determined to discover if the legend was true. He crossed the Southern Wastes and then the Great Barrier. On his way, he happened upon Master Yi, who was deep in meditation. Kong asked him who the strongest warrior in the north was, and Yi told him about the League of Legends. The tale intoxicated Kong, a place where he could battle the strongest fighters in the world was, to him, paradise. Kong asked Yi to introduce him to this League, and to teach him the ways of humans, so that he could be a fitting champion. In return, he would honor Yi by using Yi's Wuju style to become the greatest warrior Runeterra had ever seen. Admiring his passion, Yi agreed, but under the condition that Kong would one day teach the lessons of Wuju to a pupil of his own. In the spirit of this agreement, he renamed Kong ''Wukong,'' and gave him a weapon suited to his unusual nature - an enchanted staff that the young Doran had crafted. The weapon was an unrivalled masterpiece. Guided by Yi, Wukong joined the League of Legends to prove himself as the best, and to show the world the true power of Wuju.<br><br>''Only in combat do you learn who you truly are.''<br>-- Wukong", 
+    "id": 62, 
+    "spells": [
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "MonkeyKingDoubleAttack", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} ->{{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Armor Reduction", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.1
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Wukong's next attack deals additional physical damage, gains range, and reduces the enemy's Armor for a short duration.", 
+            "sanitizedDescription": "Wukong's next attack deals additional physical damage, gains range, and reduces the enemy's Armor for a short duration.", 
+            "sanitizedTooltip": "Wukong's next attack gains {{ e4 }} Attack Range, deals {{ e1 }} (+{{ f1 }}) physical damage and reduces the enemy's Armor by {{ e2 }}% for 3 seconds.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    30.0, 
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    125.0, 
+                    125.0, 
+                    125.0, 
+                    125.0, 
+                    125.0
+                ]
+            ], 
+            "tooltip": "Wukong's next attack gains {{ e4 }} Attack Range, deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and reduces the enemy's Armor by {{ e2 }}% for 3 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "30/60/90/120/150", 
+                "10/15/20/25/30", 
+                "30/20/25/30/35", 
+                "125"
+            ], 
+            "image": {
+                "full": "MonkeyKingDoubleAttack.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Crushing Blow"
+        }, 
+        {
+            "cooldownBurn": "18/16/14/12/10", 
+            "key": "MonkeyKingDecoy", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} ->{{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal Magic Damage to enemies near it after 1.5 seconds.", 
+            "sanitizedDescription": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal Magic Damage to enemies near it after 1.5 seconds.", 
+            "sanitizedTooltip": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal {{ e1 }} (+{{ a1 }}) Magic Damage to enemies near it after 1.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    115.0, 
+                    160.0, 
+                    205.0, 
+                    250.0
+                ], 
+                [
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "Wukong becomes invisible for 1.5 seconds. An uncontrollable decoy is left behind that will deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage to enemies near it after 1.5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "70/115/160/205/250", 
+                "15/20/25/30/35", 
+                "60"
+            ], 
+            "image": {
+                "full": "MonkeyKingDecoy.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                18.0, 
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0
+            ], 
+            "name": "Decoy"
+        }, 
+        {
+            "cooldownBurn": "8", 
+            "key": "MonkeyKingNimbus", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }} ->{{ costnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Attack Speed", 
+                    "Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing physical damage to each enemy struck.", 
+            "sanitizedDescription": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing physical damage to each enemy struck.", 
+            "sanitizedTooltip": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing {{ e1 }} (+{{ f1 }}) physical damage to each enemy struck. Upon hitting his target, Wukong gains {{ e2 }}% Attack Speed for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    105.0, 
+                    150.0, 
+                    195.0, 
+                    240.0
+                ], 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    0.0, 
+                    0.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "Wukong dashes toward a target enemy and sends out images to attack up to 2 additional enemies near his target, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to each enemy struck. Upon hitting his target, Wukong gains {{ e2 }}% Attack Speed for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "45/50/55/60/65", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                45, 
+                50, 
+                55, 
+                60, 
+                65
+            ], 
+            "effectBurn": [
+                "", 
+                "60/105/150/195/240", 
+                "30/35/40/45/50", 
+                "4", 
+                "3/3/3/0/0", 
+                "1"
+            ], 
+            "image": {
+                "full": "MonkeyKingNimbus.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Nimbus Strike"
+        }, 
+        {
+            "cooldownBurn": "120/105/90", 
+            "key": "MonkeyKingSpinToWin", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} ->{{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Wukong's staff grows outward and he spins it around, dealing damage and knocking up enemies. Wukong gains Movement Speed over the duration of the spell.", 
+            "sanitizedDescription": "Wukong's staff grows outward and he spins it around, dealing damage and knocking up enemies. Wukong gains Movement Speed over the duration of the spell.", 
+            "sanitizedTooltip": "Wukong's staff grows outward and he spins it around, dealing {{ e1 }} (+{{ f1 }}) physical damage per second and knocking up enemies he encounters. Wukong gains Movement Speed over the duration of the spell. Lasts 4 seconds.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    110.0, 
+                    200.0
+                ], 
+                [
+                    5.0, 
+                    6.0, 
+                    7.0
+                ]
+            ], 
+            "tooltip": "Wukong's staff grows outward and he spins it around, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage per second and knocking up enemies he encounters. Wukong gains Movement Speed over the duration of the spell. Lasts 4 seconds.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "315", 
+            "range": [
+                315, 
+                315, 
+                315
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "20/110/200", 
+                "5/6/7"
+            ], 
+            "image": {
+                "full": "MonkeyKingSpinToWin.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 240
+            }, 
+            "cooldown": [
+                120.0, 
+                105.0, 
+                90.0
+            ], 
+            "name": "Cyclone"
+        }
+    ]
+}

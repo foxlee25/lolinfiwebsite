@@ -1,0 +1,428 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 3, 
+        "defense": 7, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 61.156, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 272.2, 
+        "armor": 28.88, 
+        "hp": 574.4, 
+        "hpregenperlevel": 0.85, 
+        "attackspeedperlevel": 1.44, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 4.2, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.205, 
+        "spellblock": 32.1, 
+        "hpregen": 8.925, 
+        "hpperlevel": 80.0
+    }, 
+    "name": "Cho'Gath", 
+    "title": "the Terror of the Void", 
+    "tags": [
+        "Tank", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "GreenTerror_TailSpike.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Whenever Cho'Gath kills a unit, he recovers Health and Mana. The values restored increase with Cho'Gath's level.", 
+        "name": "Carnivore", 
+        "description": "Whenever Cho'Gath kills a unit, he recovers Health and Mana. The values restored increase with Cho'Gath's level."
+    }, 
+    "quotes": [
+        "\"Who will be eaten first?\"", 
+        "\"You shall not escape!\"", 
+        "\"The daylight! It burns!\"", 
+        "\"For the darkness!\"", 
+        "\"Afraid of the dark? Wise!\"", 
+        "\"I shall bring them terror!\"", 
+        "\"Nom nom nom nom nom nom nom!\"", 
+        "\"Nom nom nom nom nom nom nom!\"", 
+        "\"You cheeky little fellow!\"", 
+        "\"I challenge you to a duel!\"", 
+        "\"I'll bite your legs off!\"", 
+        "\"Cake or Death?\"", 
+        "\"Anyone for a spot of tea?\"", 
+        "\"Let us fight like gentlemen!\"", 
+        "\"Oh, bother!\"", 
+        "\"Pip-pip! Cheerio!\"", 
+        "\"What, what... What?!\"", 
+        "\"Nom nom nom nom nom!", 
+        "\"Ah-Ha!\"", 
+        "\"Ah-Haa!\"", 
+        "\"Ah-Haaa!\"", 
+        "\"Up you go!\"", 
+        "\"Quiet!\"", 
+        "\"Quuuuiet!\"", 
+        "\"Oh no.\"", 
+        "\"Initiating combat.\"", 
+        "\"Escalating aggression.\"", 
+        "\"Crush them underfoot.\"", 
+        "\"Uploading program: terror.\"", 
+        "\"Isolating weak points.\"", 
+        "\"Eliminate filthy organics.\"", 
+        "\"Humans are innately flawed.\"", 
+        "\"Obliterate all resistance.\"", 
+        "\"Humans!\"", 
+        "\"Bow down!\"", 
+        "\"Doom cannon, fire! Raaaaagh!\"", 
+        "Cho'Gath plays a beat.", 
+        "\"Silence!\"", 
+        "\"Jamming!\"", 
+        "\"Override!\"", 
+        "\"Rockets primed.\"", 
+        "\"Missile bays open.\"", 
+        "\"Employing collateral damage.\"", 
+        "\"OM nom nom nom nom nom.\"", 
+        "\"Nom nom nom nom nom nom nom.\"", 
+        "\"Arm nom nom nom.\"", 
+        "\"Mass increasing.\"", 
+        "\"Durability improved.\"", 
+        "\"Maximum Cho'Gath!\"", 
+        "\"Core reactor fully charged!\"", 
+        "\"Refueling required.\"", 
+        "\"Condensing for transport.\"", 
+        "\"Rebooting.\"", 
+        "\"Revenge profile uploaded.\"", 
+        "\"Resuming functionality.\"", 
+        "\"Blue screen resolved.\"", 
+        "\"I am power beyond measure!\"", 
+        "Play   ---"
+    ], 
+    "key": "Chogath", 
+    "lore": "There is a place between dimensions, between worlds. To some it is known as the Outside, to others it is the Unknown. To those that truly know, however, it is called the Void. Despite its name, the Void is not an empty place, but rather the home of unspeakable things - horrors not meant for minds of men.  Cho'Gath is a creature born of the Void, a thing whose true nature is so awful most will not speak its name. Its fellows have been poking at the walls that divide dimensions for a crack, a way into Runeterra, where they can visit their own personal paradise of horror upon the world. They are called the Voidborn, creatures so ancient and terrible that they have been removed from history altogether. It is rumored that the Voidborn command vast armies of unspeakable creatures on other worlds, that they were once driven from Runeterra by powerful magic lost to antiquity.<br><br>If such tales are true, then the rumors that follow must be equally true - that one day, the Voidborn will return. Even now, something dark stirs in Icathia, perverting the summoning rituals of the League to allow the presence of Cho'Gath. It is an alien creature of malice and violence, a thing that causes all but the most stalwart to cringe in fear. Cho'Gath even appears to feed on its predations, growing and swelling as it gorges itself. Worse yet, the creature is intelligent, perhaps greatly so, making most wonder how such a monster could be contained. Fortunately, the power of the League's summoning has confined Cho'Gath's presence exclusively to the League of Legends. It is here that summoners use Cho'Gath's Voidborn abilities to help decide the fate of Runeterra. The Terror of the Void knows what fate it would choose for Runeterra, given half the chance.<br><br>Woe betide the day when Cho'Gath grows weary of the League.", 
+    "id": 31, 
+    "spells": [
+        {
+            "cooldownBurn": "9", 
+            "key": "Rupture", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ruptures the ground at target location, popping enemy units into the air, dealing damage and slowing them.", 
+            "sanitizedDescription": "Ruptures the ground at target location, popping enemy units into the air, dealing damage and slowing them.", 
+            "sanitizedTooltip": "Ruptures the ground at target location. Enemies caught in the rupture are launched into the air for 1 second, take {{ e1 }} (+{{ a1 }}) magic damage, and are slowed by 60% for 1.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    135.0, 
+                    190.0, 
+                    245.0, 
+                    305.0
+                ]
+            ], 
+            "tooltip": "Ruptures the ground at target location. Enemies caught in the rupture are launched into the air for 1 second, take {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage, and are slowed by 60% for 1.5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "90", 
+            "rangeBurn": "950", 
+            "range": [
+                950, 
+                950, 
+                950, 
+                950, 
+                950
+            ], 
+            "cost": [
+                90, 
+                90, 
+                90, 
+                90, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "80/135/190/245/305"
+            ], 
+            "image": {
+                "full": "Rupture.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0
+            ], 
+            "name": "Rupture"
+        }, 
+        {
+            "cooldownBurn": "13", 
+            "key": "FeralScream", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Silence Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Cho'Gath unleashes a terrible scream at enemies in a cone, dealing magic damage and Silencing enemies for a few seconds.", 
+            "sanitizedDescription": "Cho'Gath unleashes a terrible scream at enemies in a cone, dealing magic damage and Silencing enemies for a few seconds.", 
+            "sanitizedTooltip": "Silences enemies in a cone for {{ e2 }} second(s) and deals {{ e1 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    125.0, 
+                    175.0, 
+                    225.0, 
+                    275.0
+                ], 
+                [
+                    1.5, 
+                    1.75, 
+                    2.0, 
+                    2.25, 
+                    2.5
+                ]
+            ], 
+            "tooltip": "Silences enemies in a cone for {{ e2 }} second(s) and deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "300", 
+            "range": [
+                300, 
+                300, 
+                300, 
+                300, 
+                300
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "75/125/175/225/275", 
+                "1.5/1.75/2/2.25/2.5"
+            ], 
+            "image": {
+                "full": "FeralScream.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0
+            ], 
+            "name": "Feral Scream"
+        }, 
+        {
+            "cooldownBurn": "0.5", 
+            "key": "VorpalSpikes", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Cho'Gath's attacks passively release deadly spikes, dealing damage to all enemy units in front of him.", 
+            "sanitizedDescription": "Cho'Gath's attacks passively release deadly spikes, dealing damage to all enemy units in front of him.", 
+            "sanitizedTooltip": "Toggle: Basic attacks launch spikes that deal {{ e1 }} (+{{ a1 }}) magic damage. Spikes grow wider as Cho'Gath gains Feast stacks.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    35.0, 
+                    50.0, 
+                    65.0, 
+                    80.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Basic attacks launch spikes that deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Spikes grow wider as Cho'Gath gains Feast stacks.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/35/50/65/80"
+            ], 
+            "image": {
+                "full": "VorpalSpikes.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "name": "Vorpal Spikes"
+        }, 
+        {
+            "cooldownBurn": "80", 
+            "key": "Feast", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Max Life Consume", 
+                    "Bonus Health per Growth"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Devours an enemy unit, dealing a high amount of true damage. If the target is killed, Cho'Gath grows, gaining maximum Health (maximum 6 stacks). Cho'Gath loses half of his stacks upon death. Half the cooldown and mana cost are refunded if a minion or monster is killed.", 
+            "sanitizedDescription": "Devours an enemy unit, dealing a high amount of true damage. If the target is killed, Cho'Gath grows, gaining maximum Health (maximum 6 stacks). Cho'Gath loses half of his stacks upon death. Half the cooldown and mana cost are refunded if a minion or monster is killed.", 
+            "sanitizedTooltip": "Hungrily devours an enemy dealing {{ e2 }} (+{{ a1 }}) true damage to Champions, or 1000 (+{{ a1 }}) true damage to minions and monsters. If Feast kills a minion or monster, 50% of its cooldown and mana cost are refunded. If the enemy is killed by Feast, Cho'Gath grows, gaining {{ e3 }} maximum Health (maximum 6 stacks). Loses half of his stacks on death.", 
+            "effect": [
+                null, 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    300.0, 
+                    475.0, 
+                    650.0
+                ], 
+                [
+                    90.0, 
+                    120.0, 
+                    150.0
+                ]
+            ], 
+            "tooltip": "Hungrily devours an enemy dealing {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> true damage to Champions, or 1000 <span class=\"color99FF99\">(+{{ a1 }})</span> true damage to minions and monsters. If Feast kills a minion or monster, 50% of its cooldown and mana cost are refunded.<br><br>If the enemy is killed by Feast, Cho'Gath grows, gaining {{ e3 }} maximum Health (maximum 6 stacks). Loses half of his stacks on death.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "175", 
+            "range": [
+                175, 
+                175, 
+                175
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "100", 
+                "300/475/650", 
+                "90/120/150"
+            ], 
+            "image": {
+                "full": "Feast.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 192
+            }, 
+            "cooldown": [
+                80.0, 
+                80.0, 
+                80.0
+            ], 
+            "name": "Feast"
+        }
+    ]
+}

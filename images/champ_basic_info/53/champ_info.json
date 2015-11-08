@@ -1,0 +1,383 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 4, 
+        "defense": 8, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 61.54, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 267.2, 
+        "armor": 24.38, 
+        "hp": 582.6, 
+        "hpregenperlevel": 0.75, 
+        "attackspeedperlevel": 1.13, 
+        "attackrange": 125.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.51, 
+        "hpperlevel": 95.0
+    }, 
+    "name": "Blitzcrank", 
+    "title": "the Great Steam Golem", 
+    "tags": [
+        "Tank", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Blitzcrank_ManaBarrier.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 432
+        }, 
+        "sanitizedDescription": "When Blitzcrank's life is brought below 20% health, he activates Mana Barrier. This creates a mana shield equal to 50% of his mana for 10 seconds. Mana Barrier can only occur once every 90 seconds.", 
+        "name": "Mana Barrier", 
+        "description": "When Blitzcrank's life is brought below 20% health, he activates Mana Barrier. This creates a mana shield equal to 50% of his mana for 10 seconds. Mana Barrier can only occur once every 90 seconds."
+    }, 
+    "quotes": [
+        "\"Fired up and ready to serve.\"", 
+        "\"Metal is harder than flesh.\"", 
+        "\"Bone is a poor alternative.\"", 
+        "\"Look. You're leaking.\"", 
+        "\"Your steam is escaping.\"", 
+        "\"Quake in fear, fleshling.\"", 
+        "\"Exterminate. Exterminate.\"", 
+        "\"Precisely.\"", 
+        "\"I remain focused.\"", 
+        "\"The magic calls to me.\"", 
+        "\"As long as it takes.\"", 
+        "Overdrive"
+    ], 
+    "key": "Blitzcrank", 
+    "lore": "The city of Zaun is a place where both magic and science have gone awry. The unchecked nature of experimentation has taken its toll on the city. However, Zaun's lenient restrictions allow their researchers and inventors the leeway to push the bounds of science at an accelerated rate, for better or worse. It was under these conditions that a team of doctoral students from Zaun's College of Techmaturgy made a breakthrough in the field of intelligent steam automation. Their creation, the steam golem Blitzcrank, was developed to exercise judgment on-the-fly in order to assist with Zaun's hazardous waste reclamation process, since so often the conditions did not allow for human supervision. However, he soon began exhibiting unforeseen behaviors.<br><br>Over time, the scientists were able to identify a demonstrated learning process, and Blitzcrank fast became a celebrity. As is sadly often the case though, credit for the golem's creation was scooped up by another - Professor Stanwick Pididly - though most now know the truth. In the wake of the ensuing legal maelstrom, it became evident that neither party truly had the steam golem's best interests at heart, and Blitzcrank humbly petitioned for personal autonomy. Backed by overwhelming support from the public, it took the liberal Council of Zaun only a few weeks to declare Blitzcrank a fully-independent, sentient entity. A unique being, the golem left Zaun, distressed by the controversy and feeling there was no place he could fit in. His travels led him to the one location in Valoran where unique beings have a place - the League of Legends. Fortunately, he was easily able to adapt his design to suit the rigors he would face on the Fields of Justice.<br><br>Though Blitzcrank may batter anything that stands in his way, he really has a heart of gold...encased in a framework of iron...in a carapace of steel.", 
+    "id": 53, 
+    "spells": [
+        {
+            "cooldownBurn": "20/19/18/17/16", 
+            "key": "RocketGrab", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Blitzcrank fires his right hand to grab an opponent on its path, dealing damage and dragging it back to him.", 
+            "sanitizedDescription": "Blitzcrank fires his right hand to grab an opponent on its path, dealing damage and dragging it back to him.", 
+            "sanitizedTooltip": "Blitzcrank fires his right hand, if it encounters an enemy unit it will stun them and deal {{ e1 }} (+{{ a1 }}) magic damage while he pulls them to himself.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    135.0, 
+                    190.0, 
+                    245.0, 
+                    300.0
+                ]
+            ], 
+            "tooltip": "Blitzcrank fires his right hand, if it encounters an enemy unit it will stun them and deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage while he pulls them to himself.", 
+            "maxrank": 5, 
+            "costBurn": "100", 
+            "rangeBurn": "925", 
+            "range": [
+                925, 
+                925, 
+                925, 
+                925, 
+                925
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "80/135/190/245/300"
+            ], 
+            "image": {
+                "full": "RocketGrab.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                20.0, 
+                19.0, 
+                18.0, 
+                17.0, 
+                16.0
+            ], 
+            "name": "Rocket Grab"
+        }, 
+        {
+            "cooldownBurn": "15", 
+            "key": "Overdrive", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Movement Speed %", 
+                    "Attack Speed %"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Blitzcrank super charges himself to get dramatically increased Movement and Attack Speed.", 
+            "sanitizedDescription": "Blitzcrank super charges himself to get dramatically increased Movement and Attack Speed.", 
+            "sanitizedTooltip": "Blitzcrank supercharges himself to increase Movement Speed by {{ e1 }}% and Attack Speed by {{ e2 }}% for {{ e4 }} seconds. The Movement Speed bonus decays over the duration. When Overdrive ends, Blitzcrank's Movement Speed is slowed by {{ e3 }}% for {{ e5 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    75.0, 
+                    80.0, 
+                    85.0, 
+                    90.0
+                ], 
+                [
+                    30.0, 
+                    38.0, 
+                    46.0, 
+                    54.0, 
+                    62.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Blitzcrank supercharges himself to increase Movement Speed by {{ e1 }}% and Attack Speed by {{ e2 }}% for {{ e4 }} seconds. The Movement Speed bonus decays over the duration. When Overdrive ends, Blitzcrank's Movement Speed is slowed by {{ e3 }}% for {{ e5 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "75", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                75, 
+                75, 
+                75, 
+                75, 
+                75
+            ], 
+            "effectBurn": [
+                "", 
+                "70/75/80/85/90", 
+                "30/38/46/54/62", 
+                "30", 
+                "5", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "Overdrive.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0
+            ], 
+            "name": "Overdrive"
+        }, 
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "PowerFist", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Blitzcrank charges up his fist to make his next attack deal double damage and pop his target up in the air.", 
+            "sanitizedDescription": "Blitzcrank charges up his fist to make his next attack deal double damage and pop his target up in the air.", 
+            "sanitizedTooltip": "Blitzcrank charges up his fist to make his next attack deal double his total attack damage as physical damage and pop his target up in the air.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "Blitzcrank charges up his fist to make his next attack deal double his total attack damage as physical damage and pop his target up in the air.", 
+            "maxrank": 5, 
+            "costBurn": "25", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                25, 
+                25, 
+                25, 
+                25, 
+                25
+            ], 
+            "effectBurn": [
+                "", 
+                "40/45/50/55/60"
+            ], 
+            "image": {
+                "full": "PowerFist.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 144
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Power Fist"
+        }, 
+        {
+            "cooldownBurn": "30", 
+            "key": "StaticField", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Lightning Damage", 
+                    "Activation Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again.", 
+            "sanitizedDescription": "Passively causes lightning bolts to damage a nearby enemy. Additionally, Blitzcrank can activate this ability to damage nearby enemies and silence them for 0.5 seconds, but doing so removes the passive lightning until Static Field becomes available again.", 
+            "sanitizedTooltip": "Passive: Lightning arcs off of Blitzcrank to hit a random nearby enemy for {{ e1 }} (+{{ a1 }}) magic damage every 2.5 seconds. Active: Deals {{ e2 }} (+{{ a2 }}) magic damage and silences surrounding enemy units for 0.5 seconds. The passive is not in effect during the cooldown.", 
+            "effect": [
+                null, 
+                [
+                    100.0, 
+                    200.0, 
+                    300.0
+                ], 
+                [
+                    250.0, 
+                    375.0, 
+                    500.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Lightning arcs off of Blitzcrank to hit a random nearby enemy for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage every 2.5 seconds.<br><br><span class=\"colorFF9900\">Active: </span>Deals {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage and silences surrounding enemy units for 0.5 seconds. The passive is not in effect during the cooldown.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "100/200/300", 
+                "250/375/500"
+            ], 
+            "image": {
+                "full": "StaticField.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 192
+            }, 
+            "cooldown": [
+                30.0, 
+                30.0, 
+                30.0
+            ], 
+            "name": "Static Field"
+        }
+    ]
+}

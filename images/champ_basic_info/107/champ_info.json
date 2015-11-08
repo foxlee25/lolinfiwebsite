@@ -1,0 +1,534 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 7, 
+        "defense": 4, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 60.04, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.08, 
+        "mp": 5.0, 
+        "armor": 25.88, 
+        "hp": 586.2, 
+        "hpregenperlevel": 0.4, 
+        "attackspeedperlevel": 2.85, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 4.27, 
+        "hpperlevel": 90.0
+    }, 
+    "name": "Rengar", 
+    "title": "the Pridestalker", 
+    "tags": [
+        "Assassin", 
+        "Fighter"
+    ], 
+    "partype": "Ferocity", 
+    "passive": {
+        "image": {
+            "full": "Rengar_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "While in brush or stealth Rengar will leap at the target when using his basic attack. Rengar builds 1 point of Ferocity with each ability he uses on enemies. When reaching 5 points of Ferocity, Rengar's next ability becomes empowered, granting it a bonus effect.", 
+        "name": "Unseen Predator", 
+        "description": "While in brush or stealth Rengar will leap at the target when using his basic attack.<br><br><span class=\"colorEDDA74\">Rengar builds 1 point of Ferocity with each ability he uses on enemies. When reaching 5 points of Ferocity, Rengar's next ability becomes empowered, granting it a bonus effect.</span>"
+    }, 
+    "quotes": [
+        "\"Tonight we hunt!\"", 
+        "\"Walk the killer's path.\"", 
+        "\"I seek only the strongest.\"", 
+        "\"Catch their trail.\"", 
+        "\"Comfort breeds weakness.\"", 
+        "\"A true hunter never rests.\"", 
+        "\"The scent of prey.\"", 
+        "\"Strike when ready.\"", 
+        "\"Whose head shall I take?\"", 
+        "\"A fitting prize.\"", 
+        "\"Nothing will escape.\"", 
+        "\"Carve off a souvenir.\"", 
+        "\"Lesser creature.\"", 
+        "\"Each trophy, a victory.\"", 
+        "\"Remember every kill.\"", 
+        "\"Spoils of the hunt.\"", 
+        "\"Never return empty-handed.\"", 
+        "\"A token of my conquests.\"", 
+        "\"I'm just getting started.\"", 
+        "\"A fine collection.\"", 
+        "\"More prey, more prizes.\"", 
+        "\"What a glorious hunt.\"", 
+        "\"Come on!\"", 
+        "\"Let's fight!\"", 
+        "\"Not so fast!\"", 
+        "\"Slow down!\"", 
+        "\"Don't trip.\"", 
+        "\"Easy prey.\"", 
+        "\"Listen.\"", 
+        "\"Focus.\"", 
+        "\"I've found you, beast!\""
+    ], 
+    "key": "Rengar", 
+    "lore": "On every wall of his den, the trophy hunter Rengar mounts the heads, horns, claws, and fangs of the most lethal creatures in Valoran. Though his collection is extensive, he remains unsatisfied, tirelessly seeking greater game. He takes time with every kill, studying his prey, learning, and preparing himself for the next encounter with the one monster he never managed to defeat.<br><br>Rengar never knew his real parents, but was raised by a human who was revered as a legendary hunter. He was an ideal pupil, intently absorbing the lessons of his father, and improving them with his uncanny feral instincts. Before his mane had fully grown, Rengar set off on his own and claimed a wide territory for himself. Along its perimeter, he mounted the skulls of his slain prey - a warning to would-be aggressors. He thought undisputed reign of a region would fulfill him, but instead, he grew restless. No beasts in his domain proved challenging prey, and without formidable adversaries to push his limits, Rengar's spirit waned. He feared that no worthwhile game remained, that he would never again feel the thrill of the hunt. Just when things seemed their bleakest, he encountered the monster. It was a disturbing, alien thing, distinctly out of place in his world. It bore huge scything claws and devoured any animal that strayed across its path. Overzealous at the prospect of a challenge, Rengar ambushed the monster in haste. It far outclassed anything he'd hunted before. Their fight was savage, and each suffered crippling wounds. Rengar lost an eye, but the most grievous blow was to his pride. He had never before failed to make the kill. Worse yet, the severity of his injuries forced him to retreat. Over the following days, he hovered on the threshold between life and death. He was wracked with pain, but beneath it, he felt a glimmer of joy. The hunt was on. If such powerful beings existed in the world, he would find them, and stack their heads high. The monster, however, was a kill he wanted to savor. On his den's largest wall, he reserves a space for the beast's head, a trophy he swears will one day be the centerpiece of his collection.<br><br>''Prey on the weak and you will survive, prey on the strong and you will live.''<br>-- Rengar", 
+    "id": 107, 
+    "spells": [
+        {
+            "cooldownBurn": "0.5", 
+            "key": "RengarQ", 
+            "resource": "Builds 1 Ferocity", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }}% -> {{ e4NL }}%", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ ammorechargetime }}->{{ ammorechargetimenNL }}"
+                ], 
+                "label": [
+                    "Percent of Attack", 
+                    "Bonus Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "@dynamic.attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Builds1Ferocity", 
+            "description": "Rengar's next basic attack deals bonus damage.<br>Ferocity effect: Rengar deals enhanced damage and grants him Attack Speed and Attack Damage.", 
+            "sanitizedDescription": "Rengar's next basic attack deals bonus damage. Ferocity effect: Rengar deals enhanced damage and grants him Attack Speed and Attack Damage.", 
+            "sanitizedTooltip": "The next basic attack within 3 seconds deals {{ e4 }}% ({{ f3 }}) of Rengar's Attack Damage plus {{ e1 }} physical damage. Ferocity effect: The next basic attack within 3 seconds deals 150% {{ f1 }} of Rengar's Attack Damage plus {{ f2 }} physical damage and grants {{ f4 }}% Attack Speed and {{ e6 }}% Attack Damage for {{ e3 }} seconds (Damage and Attack Speed scale with Rengar's level).", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    150.0, 
+                    150.0, 
+                    150.0, 
+                    150.0, 
+                    150.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    100.0, 
+                    105.0, 
+                    110.0, 
+                    115.0, 
+                    120.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ]
+            ], 
+            "tooltip": "The next basic attack within 3 seconds deals {{ e4 }}% <span class=\"colorF88017\">({{ f3 }})</span> of Rengar's Attack Damage plus {{ e1 }} physical damage.<br><br><span class=\"colorEDDA74\">Ferocity effect:</span> The next basic attack within 3 seconds deals 150% <span class=\"colorFF8C00\">{{ f1 }}</span> of Rengar's Attack Damage plus {{ f2 }} physical damage and grants {{ f4 }}% Attack Speed and {{ e6 }}% Attack Damage for {{ e3 }} seconds (Damage and Attack Speed scale with Rengar's level).</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "30/60/90/120/150", 
+                "150", 
+                "5", 
+                "100/105/110/115/120", 
+                "100", 
+                "10"
+            ], 
+            "image": {
+                "full": "RengarQ.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "name": "Savagery"
+        }, 
+        {
+            "cooldownBurn": "0.5", 
+            "key": "RengarW", 
+            "resource": "Builds 1 Ferocity", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Armor and Magic Resist"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Builds1Ferocity", 
+            "description": "Rengar lets out a battle roar, damaging enemies and gaining bonus Armor and Magic Resist for a short duration.<br>Ferocity effect: Rengar heals for a large amount.", 
+            "sanitizedDescription": "Rengar lets out a battle roar, damaging enemies and gaining bonus Armor and Magic Resist for a short duration. Ferocity effect: Rengar heals for a large amount.", 
+            "sanitizedTooltip": "Deals {{ e5 }} (+{{ a1 }}) magic damage to enemies in the area. Rengar's Armor and Magic Resist are increased by {{ e3 }} for {{ e6 }} seconds. The bonus Armor and Magic Resist is increased by {{ e7 }}% for each enemy Champion or large Monster hit. Ferocity effect: Deals {{ f2 }} (+{{ a1 }}) magic damage to enemies in the area, grants the defenses from the normal ability, and restores between {{ f1 }} and {{ f3 }} Health based on missing Health (healing and damage values scale with Rengar's level).", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    100.0, 
+                    150.0, 
+                    200.0, 
+                    250.0, 
+                    300.0
+                ], 
+                [
+                    50.0, 
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Deals {{ e5 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the area. Rengar's Armor and Magic Resist are increased by {{ e3 }} for {{ e6 }} seconds. The bonus Armor and Magic Resist is increased by {{ e7 }}% for each enemy Champion or large Monster hit.<br><br><span class=\"colorEDDA74\">Ferocity effect: </span>Deals {{ f2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the area, grants the defenses from the normal ability, and restores between {{ f1 }} and {{ f3 }} Health based on missing Health (healing and damage values scale with Rengar's level).", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "500", 
+            "range": [
+                500, 
+                500, 
+                500, 
+                500, 
+                500
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "25/30/35/40/45", 
+                "10/15/20/25/30", 
+                "10/15/20/25/30", 
+                "100/150/200/250/300", 
+                "50/80/110/140/170", 
+                "4", 
+                "50"
+            ], 
+            "image": {
+                "full": "RengarW.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "name": "Battle Roar"
+        }, 
+        {
+            "cooldownBurn": "0.5", 
+            "key": "RengarE", 
+            "resource": "Builds 1 Ferocity", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Builds1Ferocity", 
+            "description": "Rengar throws a bola, slowing the first target hit for a short duration.<br>Ferocity effect: Roots the target.", 
+            "sanitizedDescription": "Rengar throws a bola, slowing the first target hit for a short duration. Ferocity effect: Roots the target.", 
+            "sanitizedTooltip": "Throws a bola dealing {{ e1 }} (+{{ a1 }}) physical damage and slowing an enemy by {{ e3 }}% for 2.5 seconds. This slow diminishes over time. Ferocity effect: Deals {{ f1 }} (+{{ a1 }}) physical damage and roots the target for {{ e5 }} seconds on top of the normal slow (damage scales with Rengar's level).", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    100.0, 
+                    150.0, 
+                    200.0, 
+                    250.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    60.0, 
+                    65.0, 
+                    70.0, 
+                    75.0, 
+                    80.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    1.75, 
+                    1.75, 
+                    1.75, 
+                    1.75, 
+                    1.75
+                ]
+            ], 
+            "tooltip": "Throws a bola dealing {{ e1 }}<span class=\"colorF88017\"> (+{{ a1 }})</span> physical damage and slowing an enemy by {{ e3 }}% for 2.5 seconds. This slow diminishes over time.<br><br><span class=\"colorEDDA74\">Ferocity effect:</span> Deals {{ f1 }}<span class=\"colorF88017\"> (+{{ a1 }})</span> physical damage and roots the target for {{ e5 }} seconds on top of the normal slow (damage scales with Rengar's level).", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "50/100/150/200/250", 
+                "20", 
+                "60/65/70/75/80", 
+                "2.5", 
+                "1.75"
+            ], 
+            "image": {
+                "full": "RengarE.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "name": "Bola Strike"
+        }, 
+        {
+            "cooldownBurn": "150/110/70", 
+            "key": "RengarR", 
+            "resource": "Builds 5 Ferocity", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Movement Speed", 
+                    "Cooldown", 
+                    "Detection Range"
+                ]
+            }, 
+            "costType": "Builds5Ferocity", 
+            "description": "Rengar activates his predatory instincts, stealthing himself and revealing all enemy Champions in a large radius around him. While stealthed, he gains Movement Speed when he moves towards enemies and his next attack will cause him to leap. He gains Movement Speed and rapidly generates Ferocity after he breaks stealth.", 
+            "sanitizedDescription": "Rengar activates his predatory instincts, stealthing himself and revealing all enemy Champions in a large radius around him. While stealthed, he gains Movement Speed when he moves towards enemies and his next attack will cause him to leap. He gains Movement Speed and rapidly generates Ferocity after he breaks stealth.", 
+            "sanitizedTooltip": "Rengar stealths himself for {{ e5 }} seconds after a 1 second (delayed to 3 seconds if taking damage) delay and reveals enemy Champions within {{ e3 }} range. While stealthed, Rengar gains {{ e4 }}% Movement Speed when moving toward enemy champions and his next attack will cause him to leap. After breaking stealth, Rengar gains {{ e1 }}% Movement Speed and generates 5 Ferocity over {{ e7 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    2000.0, 
+                    3000.0, 
+                    4000.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    7.0, 
+                    7.0, 
+                    7.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Rengar stealths himself for {{ e5 }} seconds after a 1 second (delayed to 3 seconds if taking damage) delay and reveals enemy Champions within {{ e3 }} range. While stealthed, Rengar gains {{ e4 }}% Movement Speed when moving toward enemy champions and his next attack will cause him to leap.<br><br>After breaking stealth, Rengar gains {{ e1 }}% Movement Speed and generates 5 Ferocity over {{ e7 }} seconds.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "2000/3000/4000", 
+            "range": [
+                2000, 
+                3000, 
+                4000
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "25/35/45", 
+                "5", 
+                "2000/3000/4000", 
+                "15", 
+                "7", 
+                "3", 
+                "5"
+            ], 
+            "image": {
+                "full": "RengarR.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                150.0, 
+                110.0, 
+                70.0
+            ], 
+            "name": "Thrill of the Hunt"
+        }
+    ]
+}

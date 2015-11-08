@@ -1,0 +1,499 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 9, 
+        "defense": 3, 
+        "magic": 1
+    }, 
+    "stats": {
+        "armorperlevel": 3.3, 
+        "attackdamage": 50.38, 
+        "mpperlevel": 42.0, 
+        "attackspeedoffset": -0.08, 
+        "mp": 310.56, 
+        "armor": 25.544, 
+        "hp": 557.76, 
+        "hpregenperlevel": 0.7, 
+        "attackspeedperlevel": 2.7, 
+        "attackrange": 550.0, 
+        "movespeed": 330.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.65, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.04, 
+        "spellblock": 30.0, 
+        "hpregen": 6.175, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Draven", 
+    "title": "the Glorious Executioner", 
+    "tags": [
+        "Marksman"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Draven_passive.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "Draven gains his fans' Adoration when he catches a Spinning Axe or kills a minion, monster, or tower. Killing enemy champions grants Draven bonus gold based on how much Adoration he has.", 
+        "name": "League of Draven", 
+        "description": "Draven gains his fans' Adoration when he catches a Spinning Axe or kills a minion, monster, or tower. Killing enemy champions grants Draven bonus gold based on how much Adoration he has."
+    }, 
+    "quotes": [
+        "\"Stand back.\"", 
+        "\"Let's do this.\"", 
+        "\"Watch and learn.\"", 
+        "\"I have the best job.\"", 
+        "\"Hit 'em where it hurts.\"", 
+        "\"Something need killin'?\"", 
+        "\"This is where Draven shines.\"", 
+        "\"Hear that? Death's knocking.\"", 
+        "\"Smooth.\"", 
+        "\"Man, I'm good.\"", 
+        "\"Don't be jealous.\"", 
+        "\"I've got pain to serve.\"", 
+        "\"Perfection? I got that.\"", 
+        "\"Got axes, need victims.\"", 
+        "\"Now this is how to move.\"", 
+        "\"Places to go, me to see.\"", 
+        "\"Let's admire me for a bit.\"", 
+        "\"Subtle? I don't do subtle.\"", 
+        "\"Not Draven; Draaaaven.\"", 
+        "\"Come out and play. Heheheh.\"", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Yeah! Woo!\"", 
+        "\"Woo! Yeah! Yeah!\"", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Draven out!\"", 
+        "\"Draven's makin' an exit.\"", 
+        "\"Too easy.\"", 
+        "\"I'll take that.\"", 
+        "\"Here we go.\"", 
+        "\"Why, thank you!\"", 
+        "\"Yoink.\"", 
+        "\"Nice axe, I'll take it.\"", 
+        "\"Stand back.\"", 
+        "\"Let's do this.\"", 
+        "\"Watch and learn.\"", 
+        "\"I have the best job.\"", 
+        "\"Hit 'em where it hurts.\"", 
+        "\"Something need killin'?\"", 
+        "\"This is where Draven shines.\"", 
+        "\"Hear that? Death's knocking.\"", 
+        "\"Smooth.\"", 
+        "\"Man, I'm good.\"", 
+        "\"Don't be jealous.\"", 
+        "\"I've got pain to serve.\"", 
+        "\"Perfection? I got that.\"", 
+        "\"Got axes, need victims.\"", 
+        "\"Now this is how to move.\"", 
+        "\"Places to go, me to see.\"", 
+        "\"Let's admire me for a bit.\"", 
+        "\"Subtle? I don't do subtle.\"", 
+        "\"Not Draven; Draaaaven.\"", 
+        "\"Come out and play. Heheheh.\"", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Yeah! Woo!\"", 
+        "\"Woo! Yeah! Yeah!\"", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Draven out!\"", 
+        "\"Draven's makin' an exit.\"", 
+        "\"Too easy.\"", 
+        "\"I'll take that.\"", 
+        "\"Here we go.\"", 
+        "\"Why, thank you!\"", 
+        "\"Yoink.\"", 
+        "\"Nice axe, I'll take it.\"", 
+        "\"A very nice move by Draven.\"", 
+        "\"Meanwhile, Draven!\" (laughs)", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Yeah! Woo!\"", 
+        "\"Woo! Yeah! Yeah!\"", 
+        "\"Yeah, yeah! Yeah!\"", 
+        "\"Too easy.\"", 
+        "\"I'll take that.\"", 
+        "\"Here we go.\"", 
+        "\"Why, thank you!\"", 
+        "\"#DravenBigPlay!\"", 
+        "\"An ult from Draven!\" (laughs)", 
+        "\"Fantastic ward coverage.\"", 
+        "\"Draven warding out the map.\"", 
+        "\"More vision for Draven.\"", 
+        "\"Wow, that's tons o' damage!\"", 
+        "\"Worth!\" (laughs)"
+    ], 
+    "key": "Draven", 
+    "lore": "Unlike his brother Darius, victory in battle was never enough for Draven. He craved recognition, acclaim, and glory. He first sought greatness in the Noxian military, but his flair for the dramatic went severely underappreciated. Thirsting for a method to share ''Draven'' with the world, he turned his attention to the prison system. There he carved out the celebrity he desired by turning the tedious affair of executions into a premiere spectacle.<br><br>At Draven's first execution, he shocked onlookers when he ordered the doomed prisoner to run for dear life. Just before the man managed to flee from sight, Draven brought him down with a flawless throw of his axe. Soon, all Draven's executions became a gauntlet through which Noxian prisoners raced for a final chance at life. He used this trial as his own personal stage, and turned executions into a leading form of entertainment. He rallied onlookers into a frenzy, while desperate prisoners scrambled to evade him. They never succeeded. Rejecting the solemn, black uniforms of Noxian executioners Draven donned bright outfits and developed flashy signature moves to distinguish himself. Crowds flocked to see Draven in action, and tales of his performances spread quickly. As his popularity grew, so did his already-inflated ego. He belonged at the center of attention. Before long, the scope of his ambitions outgrew the population of Noxus. He decided that the glorious exploits of Draven should be put on display for the entire world.<br><br>'' 'The best' is wherever I decide to set the bar each day.''<br>-- Draven", 
+    "id": 119, 
+    "spells": [
+        {
+            "cooldownBurn": "12/11/10/9/8", 
+            "key": "DravenSpinning", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.45, 
+                        0.55, 
+                        0.65, 
+                        0.75, 
+                        0.85
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Draven's next attack will deal bonus physical damage. This axe will ricochet off the target high up into the air. If Draven catches it, he automatically readies another Spinning Axe. Draven can have two Spinning Axes at once.", 
+            "sanitizedDescription": "Draven's next attack will deal bonus physical damage. This axe will ricochet off the target high up into the air. If Draven catches it, he automatically readies another Spinning Axe. Draven can have two Spinning Axes at once.", 
+            "sanitizedTooltip": "Draven's next attack will deal {{ f1 }} bonus physical damage. The bonus is equal to {{ e2 }}% of his total Attack Damage. This axe will ricochet off the target high up into the air. If Draven catches it, he automatically readies another Spinning Axe. Draven can have two Spinning Axes at once.", 
+            "effect": [
+                null, 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    45.0, 
+                    55.0, 
+                    65.0, 
+                    75.0, 
+                    85.0
+                ], 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Draven's next attack will deal <span class=\"colorFF8C00\">{{ f1 }}</span> bonus physical damage. The bonus is equal to {{ e2 }}% of his total Attack Damage.<br><br>This axe will ricochet off the target high up into the air. If Draven catches it, he automatically readies another Spinning Axe.<br><br><span class=\"colorDDDD77\">Draven can have two Spinning Axes at once.</span>", 
+            "maxrank": 5, 
+            "costBurn": "45", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                45, 
+                45, 
+                45, 
+                45, 
+                45
+            ], 
+            "effectBurn": [
+                "", 
+                "100", 
+                "45/55/65/75/85", 
+                "30/35/40/45/50"
+            ], 
+            "image": {
+                "full": "DravenSpinning.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0
+            ], 
+            "name": "Spinning Axe"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "DravenFury", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }}% -> {{ e4NL }}%", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Attack Speed", 
+                    "Movement Speed"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Draven gains increased Movement Speed and Attack Speed. The Movement Speed bonus decreases rapidly over its duration. Catching a Spinning Axe will refresh the cooldown of Blood Rush.", 
+            "sanitizedDescription": "Draven gains increased Movement Speed and Attack Speed. The Movement Speed bonus decreases rapidly over its duration. Catching a Spinning Axe will refresh the cooldown of Blood Rush.", 
+            "sanitizedTooltip": "Draven gains {{ e2 }}% increased Movement Speed for {{ e3 }} seconds and {{ e4 }}% increased Attack Speed for {{ e5 }} seconds. The Movement Speed bonus decreases rapidly over its duration. Catching a Spinning Axe will refresh the cooldown of Blood Rush.", 
+            "effect": [
+                null, 
+                [
+                    4.0, 
+                    5.0, 
+                    6.0, 
+                    7.0, 
+                    8.0
+                ], 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Draven gains {{ e2 }}% increased Movement Speed for {{ e3 }} seconds and {{ e4 }}% increased Attack Speed for {{ e5 }} seconds. The Movement Speed bonus decreases rapidly over its duration.<br><br>Catching a Spinning Axe will refresh the cooldown of Blood Rush.<mainText>", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "4/5/6/7/8", 
+                "40/45/50/55/60", 
+                "1.5", 
+                "20/25/30/35/40", 
+                "3"
+            ], 
+            "image": {
+                "full": "DravenFury.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Blood Rush"
+        }, 
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "DravenDoubleShot", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow Amount", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Draven throws his axes, dealing physical damage to targets hit and knocking them aside. Targets hit are slowed.", 
+            "sanitizedDescription": "Draven throws his axes, dealing physical damage to targets hit and knocking them aside. Targets hit are slowed.", 
+            "sanitizedTooltip": "Draven throws his axes, dealing {{ e1 }} (+{{ f1 }}) physical damage to targets hit and knocking them aside. Targets hit are slowed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    105.0, 
+                    140.0, 
+                    175.0, 
+                    210.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Draven throws his axes, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to targets hit and knocking them aside. Targets hit are slowed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "70", 
+            "rangeBurn": "1050", 
+            "range": [
+                1050, 
+                1050, 
+                1050, 
+                1050, 
+                1050
+            ], 
+            "cost": [
+                70, 
+                70, 
+                70, 
+                70, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "70/105/140/175/210", 
+                "20/25/30/35/40", 
+                "2"
+            ], 
+            "image": {
+                "full": "DravenDoubleShot.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Stand Aside"
+        }, 
+        {
+            "cooldownBurn": "110/100/90", 
+            "key": "DravenRCast", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.1
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Draven hurls two massive axes to deal physical damage to each unit struck. Whirling Death slowly reverses direction and returns to Draven after striking an enemy champion. Draven may also activate this ability while the axes are in flight to cause it to return early. Deals less damage for each unit hit and resets when the axes reverse direction.", 
+            "sanitizedDescription": "Draven hurls two massive axes to deal physical damage to each unit struck. Whirling Death slowly reverses direction and returns to Draven after striking an enemy champion. Draven may also activate this ability while the axes are in flight to cause it to return early. Deals less damage for each unit hit and resets when the axes reverse direction.", 
+            "sanitizedTooltip": "Draven hurls two massive axes to deal {{ e1 }} (+{{ f1 }}) physical damage to each unit struck. Whirling Death slowly reverses direction and returns to Draven after striking an enemy champion. Draven may also activate this ability while the axes are in flight to cause it to return early. Deals 8% less damage for each unit hit (Minimum {{ e2 }}%) and resets when the axes reverse direction.", 
+            "effect": [
+                null, 
+                [
+                    175.0, 
+                    275.0, 
+                    375.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0
+                ]
+            ], 
+            "tooltip": "Draven hurls two massive axes to deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to each unit struck.<br><br>Whirling Death slowly reverses direction and returns to Draven after striking an enemy champion. Draven may also activate this ability while the axes are in flight to cause it to return early. Deals 8% less damage for each unit hit (Minimum {{ e2 }}%) and resets when the axes reverse direction.", 
+            "maxrank": 3, 
+            "costBurn": "120", 
+            "rangeBurn": "20000", 
+            "range": [
+                20000, 
+                20000, 
+                20000
+            ], 
+            "cost": [
+                120, 
+                120, 
+                120
+            ], 
+            "effectBurn": [
+                "", 
+                "175/275/375", 
+                "40", 
+                "100"
+            ], 
+            "image": {
+                "full": "DravenRCast.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                110.0, 
+                100.0, 
+                90.0
+            ], 
+            "name": "Whirling Death"
+        }
+    ]
+}

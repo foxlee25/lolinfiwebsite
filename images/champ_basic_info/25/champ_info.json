@@ -1,0 +1,433 @@
+{
+    "info": {
+        "difficulty": 1, 
+        "attack": 1, 
+        "defense": 6, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 55.46, 
+        "mpperlevel": 60.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 340.8, 
+        "armor": 25.384, 
+        "hp": 547.48, 
+        "hpregenperlevel": 0.6, 
+        "attackspeedperlevel": 1.53, 
+        "attackrange": 450.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.705, 
+        "hpperlevel": 86.0
+    }, 
+    "name": "Morgana", 
+    "title": "Fallen Angel", 
+    "tags": [
+        "Mage", 
+        "Support"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "FallenAngel_Empathize.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "Morgana has Spell Vamp, healing herself whenever she deals damage with her spells.", 
+        "name": "Soul Siphon", 
+        "description": "Morgana has Spell Vamp, healing herself whenever she deals damage with her spells."
+    }, 
+    "quotes": [
+        "\"We'll bring them pain.\"", 
+        "\"I'll have my revenge.\"", 
+        "\"They will suffer.\"", 
+        "\"Without mercy.\"", 
+        "\"Share in my torment!\"", 
+        "\"Do not dally!\"", 
+        "\"Feel my pain.\"", 
+        "\"You too will be judged.\"", 
+        "\"Not all angels are good.\"", 
+        "fallen"
+    ], 
+    "key": "Morgana", 
+    "lore": "There is a world far away populated by graceful and beautiful winged beings gifted with immortality, where an ancient conflict still rages. Like so many conflicts, this war split families. One side proclaimed themselves as beings of perfect order and justice, fighting to unite the world under their law and strong central governance. Those that fought against them saw their kin as tyrants, creatures incapable of seeing the larger view, who would sacrifice individuality and freedom for the illusion of efficiency and safety. Morgana was one who fought against what she perceived as the tyranny of her kind, and for that she was branded ''fallen.'' Morgana was not innocent, having plumbed forgotten ways to gather forbidden might to become a powerful mistress of the black arts. This goal was driven by her obsession to defeat the general of the opposition's army - her sister, Kayle.<br><br>While the two were in fact birth-sisters, Kayle struck the first blow by disowning any filial connection when Morgana refused to join her cause. Eventually, Morgana grew in power enough to not only reach, but challenge Kayle. As the time approached when the two would meet in what could be their final conflict, Morgana was suddenly summoned to Valoran. At first, Morgana made a deal with the League's summoners to fight in exchange for greater power. With the advent of Kayle into the League, Morgana now willingly fights in the League of Legends for the privilege of being able to destroy her sister again, and again, and again. She lies in wait for the day the bonds of the Institute of War no longer hold her, and on that day she plans to destroy Kayle once and for all and return home a hero.<br><br>''There is no rest while Kayle's brand of tyranny still exists.''<br>-- Morgana", 
+    "id": 25, 
+    "spells": [
+        {
+            "cooldownBurn": "11", 
+            "key": "DarkBindingMissile", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Root Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Morgana releases a sphere of dark magic. Upon contact with an enemy unit, the sphere will deal magic damage and force the unit to the ground for a period of time.", 
+            "sanitizedDescription": "Morgana releases a sphere of dark magic. Upon contact with an enemy unit, the sphere will deal magic damage and force the unit to the ground for a period of time.", 
+            "sanitizedTooltip": "Fires a bolt of dark energy, rooting the first enemy hit for {{ e2 }} seconds and dealing {{ e1 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    135.0, 
+                    190.0, 
+                    245.0, 
+                    300.0
+                ], 
+                [
+                    2.0, 
+                    2.25, 
+                    2.5, 
+                    2.75, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Fires a bolt of dark energy, rooting the first enemy hit for {{ e2 }} seconds and dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "1175", 
+            "range": [
+                1175, 
+                1175, 
+                1175, 
+                1175, 
+                1175
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "80/135/190/245/300", 
+                "2/2.25/2.5/2.75/3"
+            ], 
+            "image": {
+                "full": "DarkBindingMissile.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                11.0, 
+                11.0, 
+                11.0, 
+                11.0, 
+                11.0
+            ], 
+            "name": "Dark Binding"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "TormentedSoil", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} -> {{ e5NL }} ", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage ", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.22
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.33
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Infects an area with desecrated soil, causing enemy units who stand on the location to take continual damage.", 
+            "sanitizedDescription": "Infects an area with desecrated soil, causing enemy units who stand on the location to take continual damage.", 
+            "sanitizedTooltip": "Curses an area for 5 seconds. Enemies on the cursed ground are dealt from {{ e5 }} (+{{ a1 }}) to {{ e6 }} (+{{ a2 }}) magic damage every second based on the enemy's missing Health.", 
+            "effect": [
+                null, 
+                [
+                    8.0, 
+                    16.0, 
+                    24.0, 
+                    32.0, 
+                    40.0
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                null, 
+                null, 
+                [
+                    16.0, 
+                    32.0, 
+                    48.0, 
+                    64.0, 
+                    80.0
+                ], 
+                [
+                    24.0, 
+                    48.0, 
+                    72.0, 
+                    96.0, 
+                    120.0
+                ]
+            ], 
+            "tooltip": "Curses an area for 5 seconds. Enemies on the cursed ground are dealt<br>from {{ e5 }} <span class=\"color99FF99\">(+{{ a1 }})</span> to {{ e6 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage every second based on the enemy's missing Health.", 
+            "maxrank": 5, 
+            "costBurn": "70/85/100/115/130", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                70, 
+                85, 
+                100, 
+                115, 
+                130
+            ], 
+            "effectBurn": [
+                "", 
+                "8/16/24/32/40", 
+                "0.5", 
+                "", 
+                "", 
+                "16/32/48/64/80", 
+                "24/48/72/96/120"
+            ], 
+            "image": {
+                "full": "TormentedSoil.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Tormented Soil"
+        }, 
+        {
+            "cooldownBurn": "23/21/19/17/15", 
+            "key": "BlackShield", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Shield Health", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Places a protective barrier around an allied champion, absorbing magical damage and disables until penetrated or the shield dissipates.", 
+            "sanitizedDescription": "Places a protective barrier around an allied champion, absorbing magical damage and disables until penetrated or the shield dissipates.", 
+            "sanitizedTooltip": "Shields an allied Champion for {{ e2 }} seconds. The shield absorbs {{ e1 }} (+{{ a1 }}) magic damage and prevents disables until it breaks.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    140.0, 
+                    210.0, 
+                    280.0, 
+                    350.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Shields an allied Champion for {{ e2 }} seconds. The shield absorbs {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and prevents disables until it breaks.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "750", 
+            "range": [
+                750, 
+                750, 
+                750, 
+                750, 
+                750
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "70/140/210/280/350", 
+                "5"
+            ], 
+            "image": {
+                "full": "BlackShield.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                23.0, 
+                21.0, 
+                19.0, 
+                17.0, 
+                15.0
+            ], 
+            "name": "Black Shield"
+        }, 
+        {
+            "cooldownBurn": "120/110/100", 
+            "key": "SoulShackles", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana.", 
+            "sanitizedDescription": "Latches chains of energy onto nearby enemy champions, dealing initial damage to them and slowing their Movement Speed, and then echoing the pain a few seconds later and stunning them if they remain close to Morgana.", 
+            "sanitizedTooltip": "Dark chains latch onto nearby enemy Champions dealing {{ e1 }} (+{{ a1 }}) magic damage and slowing them by 20% for 3 seconds. After 3 seconds, they are dealt an additional {{ e1 }} (+{{ a1 }}) magic damage and are stunned for {{ e2 }} seconds. Enemy Champions can break the chains by moving away from Morgana.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    225.0, 
+                    300.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    100.0, 
+                    150.0, 
+                    200.0
+                ]
+            ], 
+            "tooltip": "Dark chains latch onto nearby enemy Champions dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and slowing them by 20% for 3 seconds. After 3 seconds, they are dealt an additional {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and are stunned for {{ e2 }} seconds.<br><br>Enemy Champions can break the chains by moving away from Morgana.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/225/300", 
+                "1.5", 
+                "100/150/200"
+            ], 
+            "image": {
+                "full": "SoulShackles.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 144
+            }, 
+            "cooldown": [
+                120.0, 
+                110.0, 
+                100.0
+            ], 
+            "name": "Soul Shackles"
+        }
+    ]
+}

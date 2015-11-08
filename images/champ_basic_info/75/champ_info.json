@@ -1,0 +1,497 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 7, 
+        "defense": 5, 
+        "magic": 6
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 59.18, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 275.6, 
+        "armor": 24.88, 
+        "hp": 561.2, 
+        "hpregenperlevel": 0.9, 
+        "attackspeedperlevel": 3.48, 
+        "attackrange": 125.0, 
+        "movespeed": 350.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.5, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.44, 
+        "spellblock": 32.1, 
+        "hpregen": 9.01, 
+        "hpperlevel": 90.0
+    }, 
+    "name": "Nasus", 
+    "title": "the Curator of the Sands", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Nasus_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "Nasus drains his foe's spiritual energy, giving him bonus Life Steal.", 
+        "name": "Soul Eater", 
+        "description": "Nasus drains his foe's spiritual energy, giving him bonus Life Steal."
+    }, 
+    "quotes": [
+        "Tomb of the Emperors", 
+        "\"There, for grace, I go.\"", 
+        "\"It is neverending.\"", 
+        "\"Their death, awaits.\"", 
+        "\"Do not try my patience.\"", 
+        "\"Eons... pass like days.\"", 
+        "\"I walk through the ages.\"", 
+        "\"Shurima is not of this time.\"", 
+        "\"I bring death.\"", 
+        "\"Soon, there will be nothing.\"", 
+        "\"Your soul will be measured.\"", 
+        "\"Death is a harsh mistress.\"", 
+        "\"Your spirit is hollow.\"", 
+        "\"Journey into the beyond.\"", 
+        "\"Return to the dust.\"", 
+        "\"This too must end.\"", 
+        "\"Wither.\"", 
+        "\"Become dust.\"", 
+        "\"Waste away.\"", 
+        "\"Perish.\"", 
+        "\"Redemption is a hollow wish.\"", 
+        "\"I am the final arbiter.\"", 
+        "\"I walk behind none.\"", 
+        "\"Do storms pity the drowned?\"", 
+        "\"Sink into darkness.\"", 
+        "\"Such hollow, empty minds.\"", 
+        "\"Only the guilty flee.\"", 
+        "\"Grace becomes fire.\"", 
+        "\"Join the lost.\"", 
+        "\"Ambition is a mirage.\"", 
+        "\"A fate, sealed in blood.\"", 
+        "\"Filth of the earth.\"", 
+        "\"I will bury you alive.\"", 
+        "Nasus plays a beatbox.", 
+        "\"Writhe.\"", 
+        "\"Shrivel.\"", 
+        "\"Squirm.\"", 
+        "\"Despair.\"", 
+        "\"Flee.\"", 
+        "\"By fire, be purged!\"", 
+        "\"Run, cowards!\"", 
+        "\"Scurry!\"", 
+        "\"More souls for the pyre.\"", 
+        "\"Power... forged in soulfire!\"", 
+        "\"Fodder for my wrath.\"", 
+        "\"Fuel my inferno.\"", 
+        "\"Every death feeds my fury.\"", 
+        "\"Doomed and devoured.\"", 
+        "\"I am death.\"", 
+        "\"I bring death.\"", 
+        "\"Your soul will be measured.\"", 
+        "\"There, for grace, I go.\"", 
+        "\"Where angels fear to tread.\"", 
+        "\"It is never ending.\"", 
+        "\"Their death awaits.\"", 
+        "\"If it is your wish.\"", 
+        "\"Yes... summoner.\"", 
+        "\"Do not try my patience.\"", 
+        "Nasus was designed by Ezreal.", 
+        "Total range 150"
+    ], 
+    "key": "Nasus", 
+    "lore": "To some, Nasus is a demigod who walks among the ruins of an ancient civilization; to others, he is nothing more than a myth. Legend speaks of his dominion over death and time. Millennia ago, he stood at the apex of Shuriman society as curator and guardian. He now roams the arid wastes, seeking to release his brother Renekton from the grip of madness.", 
+    "id": 75, 
+    "spells": [
+        {
+            "cooldownBurn": "8/7/6/5/4", 
+            "key": "NasusQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        3.0
+                    ], 
+                    "link": "@stacks", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Nasus strikes his foe, dealing damage and increasing the power of his future Siphoning Strikes if he slays his target.", 
+            "sanitizedDescription": "Nasus strikes his foe, dealing damage and increasing the power of his future Siphoning Strikes if he slays his target.", 
+            "sanitizedTooltip": "Active: Nasus's next basic attack has {{ e3 }} additional Attack Range (does not stack with range from Fury of the Sands) and will deal {{ e1 }} (+{{ a2 }}) (+{{ f1 }}) physical damage. Passive: Siphoning Strike permanently gains {{ e2 }} damage if it kills an enemy unit. This bonus is doubled against Champions, large minions and large monsters.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    50.0, 
+                    70.0, 
+                    90.0, 
+                    110.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Active:</span> Nasus's next basic attack has {{ e3 }} additional Attack Range (does not stack with range from Fury of the Sands) and will deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> <span class=\"color5555FF\">(+{{ f1 }})</span> physical damage.<br><br><span class=\"colorFF9900\">Passive:</span> Siphoning Strike permanently gains {{ e2 }} damage if it kills an enemy unit. This bonus is doubled against Champions, large minions and large monsters.", 
+            "maxrank": 5, 
+            "costBurn": "20", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                20, 
+                20, 
+                20, 
+                20, 
+                20
+            ], 
+            "effectBurn": [
+                "", 
+                "30/50/70/90/110", 
+                "3", 
+                "25"
+            ], 
+            "image": {
+                "full": "NasusQ.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 384
+            }, 
+            "cooldown": [
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0, 
+                4.0
+            ], 
+            "name": "Siphoning Strike"
+        }, 
+        {
+            "cooldownBurn": "15/14/13/12/11", 
+            "key": "NasusW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Max Slow", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Nasus ages an enemy champion, decelerating their Movement and Attack Speeds over time.", 
+            "sanitizedDescription": "Nasus ages an enemy champion, decelerating their Movement and Attack Speeds over time.", 
+            "sanitizedTooltip": "Nasus ages target champion over {{ e3 }} seconds, initially slowing their Movement Speed by {{ e2 }}% and increasing to {{ e1 }}% over the duration. The target's Attack Speed is reduced by half the amount.", 
+            "effect": [
+                null, 
+                [
+                    47.0, 
+                    59.0, 
+                    71.0, 
+                    83.0, 
+                    95.0
+                ], 
+                [
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Nasus ages target champion over {{ e3 }} seconds, initially slowing their Movement Speed by {{ e2 }}% and increasing to {{ e1 }}% over the duration. The target's Attack Speed is reduced by half the amount.", 
+            "maxrank": 5, 
+            "costBurn": "80", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                80, 
+                80, 
+                80, 
+                80, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "47/59/71/83/95", 
+                "35", 
+                "5"
+            ], 
+            "image": {
+                "full": "NasusW.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 432
+            }, 
+            "cooldown": [
+                15.0, 
+                14.0, 
+                13.0, 
+                12.0, 
+                11.0
+            ], 
+            "name": "Wither"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "NasusE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Initial Damage", 
+                    "Damage Per Second", 
+                    "Armor Reduction", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.12
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it.", 
+            "sanitizedDescription": "Nasus unleashes a spirit flame at a location, dealing damage and reducing the Armor of enemies who stand on it.", 
+            "sanitizedTooltip": "Nasus unleashes a spirit flame at a target location, dealing an initial {{ e4 }} (+{{ a2 }}) magic damage. For the next {{ e3 }} seconds, enemies in the area have their Armor reduced by {{ e2 }} and are dealt an additional {{ e1 }} (+{{ a1 }}) magic damage each second.", 
+            "effect": [
+                null, 
+                [
+                    11.0, 
+                    19.0, 
+                    27.0, 
+                    35.0, 
+                    43.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    55.0, 
+                    95.0, 
+                    135.0, 
+                    175.0, 
+                    215.0
+                ]
+            ], 
+            "tooltip": "Nasus unleashes a spirit flame at a target location, dealing an initial {{ e4 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage.<br><br>For the next {{ e3 }} seconds, enemies in the area have their Armor reduced by {{ e2 }} and are dealt an additional {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage each second.", 
+            "maxrank": 5, 
+            "costBurn": "70/85/100/115/130", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                70, 
+                85, 
+                100, 
+                115, 
+                130
+            ], 
+            "effectBurn": [
+                "", 
+                "11/19/27/35/43", 
+                "20/25/30/35/40", 
+                "5", 
+                "55/95/135/175/215"
+            ], 
+            "image": {
+                "full": "NasusE.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 0
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Spirit Fire"
+        }, 
+        {
+            "cooldownBurn": "120", 
+            "key": "NasusR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Bonus Health", 
+                    "Max Health %"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.01
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, and drains nearby enemies' max Health converting into bonus damage for the duration.", 
+            "sanitizedDescription": "Nasus unleashes a mighty sandstorm that batters nearby enemies. While the storm rages, he gains increased Health, Attack Range, and drains nearby enemies' max Health converting into bonus damage for the duration.", 
+            "sanitizedTooltip": "Nasus becomes empowered in the sandstorm for 15 seconds, increasing his maximum Health by {{ e1 }} and Attack Range by {{ e2 }}. While the storm rages, he deals {{ e3 }} (+{{ a1 }})% of nearby enemies' maximum Health each second ({{ e5 }} damage max per second) as magic damage and converts it into bonus Attack Damage.", 
+            "effect": [
+                null, 
+                [
+                    300.0, 
+                    450.0, 
+                    600.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    3.0, 
+                    4.0, 
+                    5.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    240.0, 
+                    240.0, 
+                    240.0
+                ]
+            ], 
+            "tooltip": "Nasus becomes empowered in the sandstorm for 15 seconds, increasing his maximum Health by {{ e1 }} and Attack Range by {{ e2 }}.<br><br>While the storm rages, he deals {{ e3 }} <span class=\"color99FF99\">(+{{ a1 }})</span>% of nearby enemies' maximum Health each second ({{ e5 }} damage max per second) as magic damage and converts it into bonus Attack Damage.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "300/450/600", 
+                "50", 
+                "3/4/5", 
+                "100", 
+                "240"
+            ], 
+            "image": {
+                "full": "NasusR.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 48
+            }, 
+            "cooldown": [
+                120.0, 
+                120.0, 
+                120.0
+            ], 
+            "name": "Fury of the Sands"
+        }
+    ]
+}

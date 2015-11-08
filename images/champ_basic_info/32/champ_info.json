@@ -1,0 +1,402 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 2, 
+        "defense": 6, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 53.384, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 287.2, 
+        "armor": 23.544, 
+        "hp": 613.12, 
+        "hpregenperlevel": 0.85, 
+        "attackspeedperlevel": 2.18, 
+        "attackrange": 125.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.8, 
+        "mpregenperlevel": 0.525, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.38, 
+        "spellblock": 32.1, 
+        "hpregen": 8.875, 
+        "hpperlevel": 84.0
+    }, 
+    "name": "Amumu", 
+    "title": "the Sad Mummy", 
+    "tags": [
+        "Tank", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "SadMummy_CorpseExplosion.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Amumu's attacks reduce the target's Magic Resistance for a short duration.", 
+        "name": "Cursed Touch", 
+        "description": "Amumu's attacks reduce the target's Magic Resistance for a short duration."
+    }, 
+    "quotes": [
+        "\"Amumu is real!\"", 
+        "\"He's a yordle!\"", 
+        "\"Grandfather,\"", 
+        "\"How did you lose your arm?\"", 
+        "\"Goodnight, little one,\"", 
+        "\"Okay.\"", 
+        "\"Aww.\"", 
+        "\"Where are we going?\"", 
+        "\"Hey, come back.\"", 
+        "\"Let's find some friends.\"", 
+        "\"Come play with me.\"", 
+        "\"Let me give you a hug.\"", 
+        "\"Let's be friends forever.\"", 
+        "\"Okay.\"", 
+        "\"Aww.\"", 
+        "\"Where are we going?\"", 
+        "\"Hey, come back.\"", 
+        "\"Let's find some friends.\"", 
+        "\"Come play with me.\"", 
+        "\"Let me give you a hug.\"", 
+        "\"Let's be friends forever.\"", 
+        "Amumu was designed by Ezreal."
+    ], 
+    "key": "Amumu", 
+    "lore": "Amumu is a diminutive, animated cadaver who wanders the world, trying to discover his true identity. He rose from an ancient Shuriman tomb bound in corpse wrappings with no knowledge of his past, consumed with an uncontrollable sadness.", 
+    "id": 32, 
+    "spells": [
+        {
+            "cooldownBurn": "16/14/12/10/8", 
+            "key": "BandageToss", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them.", 
+            "sanitizedDescription": "Amumu tosses a sticky bandage at a target, stunning and damaging the target while he pulls himself to them.", 
+            "sanitizedTooltip": "Throws a bandage to target location. If it hits an enemy unit, Amumu will pull himself to the enemy, stun them for 1 second, and deal {{ e1 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    130.0, 
+                    180.0, 
+                    230.0, 
+                    280.0
+                ]
+            ], 
+            "tooltip": "Throws a bandage to target location. If it hits an enemy unit, Amumu will pull himself to the enemy, stun them for 1 second, and deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. ", 
+            "maxrank": 5, 
+            "costBurn": "80/90/100/110/120", 
+            "rangeBurn": "1100", 
+            "range": [
+                1100, 
+                1100, 
+                1100, 
+                1100, 
+                1100
+            ], 
+            "cost": [
+                80, 
+                90, 
+                100, 
+                110, 
+                120
+            ], 
+            "effectBurn": [
+                "", 
+                "80/130/180/230/280"
+            ], 
+            "image": {
+                "full": "BandageToss.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0
+            ], 
+            "name": "Bandage Toss"
+        }, 
+        {
+            "cooldownBurn": "1", 
+            "key": "AuraofDespair", 
+            "resource": "{{ cost }} Mana per Second", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Percent Health Damaged", 
+                    "Base Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.01
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "ManaperSecond", 
+            "description": "Overcome by anguish, nearby enemies lose a percentage of their maximum Health each second.", 
+            "sanitizedDescription": "Overcome by anguish, nearby enemies lose a percentage of their maximum Health each second.", 
+            "sanitizedTooltip": "Toggle: Nearby enemies take {{ e2 }} magic damage plus {{ e1 }} (+{{ a1 }})% of their maximum Health each second.", 
+            "effect": [
+                null, 
+                [
+                    1.0, 
+                    1.5, 
+                    2.0, 
+                    2.5, 
+                    3.0
+                ], 
+                [
+                    8.0, 
+                    12.0, 
+                    16.0, 
+                    20.0, 
+                    24.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Nearby enemies take {{ e2 }} magic damage plus {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span>% of their maximum Health each second.", 
+            "maxrank": 5, 
+            "costBurn": "8", 
+            "rangeBurn": "300", 
+            "range": [
+                300, 
+                300, 
+                300, 
+                300, 
+                300
+            ], 
+            "cost": [
+                8, 
+                8, 
+                8, 
+                8, 
+                8
+            ], 
+            "effectBurn": [
+                "", 
+                "1/1.5/2/2.5/3", 
+                "8/12/16/20/24"
+            ], 
+            "image": {
+                "full": "AuraofDespair.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                1.0, 
+                1.0, 
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "name": "Despair"
+        }, 
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "Tantrum", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Damage Reduced", 
+                    "Cooldown", 
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds.", 
+            "sanitizedDescription": "Permanently reduces the physical damage Amumu would take. Amumu can unleash his rage, dealing damage to surrounding enemies. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds.", 
+            "sanitizedTooltip": "Passive: Amumu takes {{ e1 }} reduced damage from physical attacks. Active: Amumu deals {{ e2 }} (+{{ a1 }}) magic damage to surrounding units. Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    2.0, 
+                    4.0, 
+                    6.0, 
+                    8.0, 
+                    10.0
+                ], 
+                [
+                    75.0, 
+                    100.0, 
+                    125.0, 
+                    150.0, 
+                    175.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Amumu takes {{ e1 }} reduced damage from physical attacks.<br><br><span class=\"colorFF9900\">Active: </span>Amumu deals {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to surrounding units.  Each time Amumu is hit, the cooldown on Tantrum is reduced by 0.5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "35", 
+            "rangeBurn": "350", 
+            "range": [
+                350, 
+                350, 
+                350, 
+                350, 
+                350
+            ], 
+            "cost": [
+                35, 
+                35, 
+                35, 
+                35, 
+                35
+            ], 
+            "effectBurn": [
+                "", 
+                "2/4/6/8/10", 
+                "75/100/125/150/175"
+            ], 
+            "image": {
+                "full": "Tantrum.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Tantrum"
+        }, 
+        {
+            "cooldownBurn": "150/130/110", 
+            "key": "CurseoftheSadMummy", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cost }} -> {{ costnNL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage Dealt", 
+                    "Mana Cost", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Amumu entangles surrounding enemy units in bandages, damaging them and rendering them unable to attack or move.", 
+            "sanitizedDescription": "Amumu entangles surrounding enemy units in bandages, damaging them and rendering them unable to attack or move.", 
+            "sanitizedTooltip": "Amumu entangles surrounding enemy units, dealing {{ e1 }} (+{{ a1 }}) magic damage and preventing attacks and movement for 2 seconds.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ]
+            ], 
+            "tooltip": "Amumu entangles surrounding enemy units, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and preventing attacks and movement for 2 seconds.", 
+            "maxrank": 3, 
+            "costBurn": "100/150/200", 
+            "rangeBurn": "550", 
+            "range": [
+                550, 
+                550, 
+                550
+            ], 
+            "cost": [
+                100, 
+                150, 
+                200
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350"
+            ], 
+            "image": {
+                "full": "CurseoftheSadMummy.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                150.0, 
+                130.0, 
+                110.0
+            ], 
+            "name": "Curse of the Sad Mummy"
+        }
+    ]
+}

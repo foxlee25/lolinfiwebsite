@@ -1,0 +1,530 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 4, 
+        "defense": 8, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 3.7, 
+        "attackdamage": 57.88, 
+        "mpperlevel": 56.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 349.08, 
+        "armor": 25.876, 
+        "hp": 619.2, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 2.02, 
+        "attackrange": 125.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 32.1, 
+        "hpregen": 7.94, 
+        "hpperlevel": 90.0
+    }, 
+    "name": "Taric", 
+    "title": "the Gem Knight", 
+    "tags": [
+        "Support", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "GemKnight_Gemcraft.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "After casting a spell, Taric's next basic attack deals bonus magic damage based on his Armor and reduces his cooldowns.", 
+        "name": "Gemcraft", 
+        "description": "After casting a spell, Taric's next basic attack deals bonus magic damage based on his Armor and reduces his cooldowns."
+    }, 
+    "quotes": [
+        "\"You shall be crushed.\"", 
+        "\"I will weep for you.\"", 
+        "\"Magic has ruined this land.\"", 
+        "\"Gems hold their edge.\"", 
+        "\"You face unblemished power.\"", 
+        "\"From coals to diamonds.\"", 
+        "\"Functional and stylish.\"", 
+        "\"Emerald for insight.\"", 
+        "\"Opal for harmony.\"", 
+        "\"With clarity.\"", 
+        "\"Ruby for vigor.\"", 
+        "\"Brilliantly.\"", 
+        "\"Sapphire for divinity.\""
+    ], 
+    "key": "Taric", 
+    "lore": "There is a form of magic unknown to many Runeterrans and discredited by the few who are even aware of its existence. It is the magic of the earth, drawing power from the resonance of crystals and gems. Taric, the Gem Knight, is Runeterra's sole practitioner of this form of magic, having been erratically summoned to Runeterra from a faraway world. Back home, Taric's father was a distinguished healer in their home city. Taric was always interested in his father's pursuits, even from a young age. Despite his burgeoning understanding of herbs, plants, and animal medicines, it was the power of gems that most fascinated the growing boy. It wasn't long before Taric had exhausted his father's coveted library and set out on a path of his own. He wanted to help the people, but not by simply salving their wounds and curing their woes. He wasn't to be a healer, but a defender - one who used the power of earth to preserve and protect.<br><br>Taric became a wandering knight, renowned across his homeland as a guardian of the just until the day a spell of summoning grabbed him from his home and deposited him on Runeterra. Though disoriented and confused at first, he now feels that the continent of Valoran is in need of someone like him. Despite missing his homeland, Taric is happy to fight in the League, serving as a protector for all who seek one. His neat and stylish appearance combined with his shiny bejeweled armor and weapons have rapidly made him a celebrity champion of the League of Legends. Valoran's media, for some reason, has taken a great interest in his personal life. While open about his life as a champion and gracious in all things, Taric is tight-lipped about his life outside the League and prefers his privacy.<br><br>As Taric's father taught him, every stone has its meaning. For Taric's enemies, they all mean trouble.", 
+    "id": 44, 
+    "spells": [
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "Imbue", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Base Heal", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.42
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.07
+                    ], 
+                    "link": "bonushealth", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself.", 
+            "sanitizedDescription": "Taric brings forth earthen energy to heal an ally and himself. This heal is more potent when Taric heals only himself.", 
+            "sanitizedTooltip": "Taric brings forth earthen energy to heal a target ally and himself for {{ e1 }} (+{{ a1 }}) (+{{ f1 }}) ({{ e6 }}% of Taric's bonus health). If he targets himself, the heal increases by {{ e4 }}% restoring {{ e2 }} (+{{ a2 }}) (+{{ f2 }}) health.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    100.0, 
+                    140.0, 
+                    180.0, 
+                    220.0
+                ], 
+                [
+                    84.0, 
+                    140.0, 
+                    196.0, 
+                    252.0, 
+                    308.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Taric brings forth earthen energy to heal a target ally and himself for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> <span class=\"colorFF3300\">(+{{ f1 }})</span> ({{ e6 }}% of Taric's bonus health). If he targets himself, the heal increases by {{ e4 }}% restoring {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> <span class=\"colorFF3300\">(+{{ f2 }})</span> health.", 
+            "maxrank": 5, 
+            "costBurn": "60/70/80/90/100", 
+            "rangeBurn": "750", 
+            "range": [
+                750, 
+                750, 
+                750, 
+                750, 
+                750
+            ], 
+            "cost": [
+                60, 
+                70, 
+                80, 
+                90, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "60/100/140/180/220", 
+                "84/140/196/252/308", 
+                "3", 
+                "40", 
+                "1", 
+                "5"
+            ], 
+            "image": {
+                "full": "Imbue.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 432
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Imbue"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "Shatter", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Self Armor Bonus", 
+                    "Armor Reduction"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.12
+                    ], 
+                    "link": "armor", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "armor", 
+                    "key": "f2"
+                }, 
+                {
+                    "coeff": [
+                        0.05
+                    ], 
+                    "link": "armor", 
+                    "key": "f3"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time.", 
+            "sanitizedDescription": "Taric is protected by a hardening aura, increasing the Armor of himself and nearby allied champions. He may choose to splinter the enchanted rocks surrounding him to deal damage and decrease the Armor of nearby enemies at the cost of some Armor for a short time.", 
+            "sanitizedTooltip": "Passive: Taric's gemstones increase his Armor by {{ e3 }}. Additionally, nearby allied champions gain {{ f1 }} Armor ({{ e4 }}% of Taric's Armor). Active: Taric shatters his armor, dealing {{ e1 }} (+{{ f2 }}) magic damage to nearby enemies and reducing their Armor by {{ e2 }} (+{{ f3 }}) for {{ e5 }} seconds. Taric loses {{ e3 }} Armor while Shatter is on cooldown.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0
+                ], 
+                [
+                    5.0, 
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    12.0, 
+                    12.0, 
+                    12.0, 
+                    12.0, 
+                    12.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    0.05, 
+                    0.05, 
+                    0.05, 
+                    0.05, 
+                    0.05
+                ], 
+                [
+                    0.2, 
+                    0.2, 
+                    0.2, 
+                    0.2, 
+                    0.2
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Taric's gemstones increase his Armor by {{ e3 }}. Additionally, nearby allied champions gain <span class=\"colorFFFF00\">{{ f1 }}</span> Armor ({{ e4 }}% of Taric's Armor).<br><br><span class=\"colorFF9900\">Active: </span>Taric shatters his armor, dealing {{ e1 }} <span class=\"colorFFFF00\">(+{{ f2 }})</span> magic damage to nearby enemies and reducing their Armor by {{ e2 }} <span class=\"colorFFFF00\">(+{{ f3 }})</span> for {{ e5 }} seconds. Taric loses {{ e3 }} Armor while Shatter is on cooldown.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "40/80/120/160/200", 
+                "5/10/15/20/25", 
+                "10/15/20/25/30", 
+                "12", 
+                "4", 
+                "0.05", 
+                "0.2"
+            ], 
+            "image": {
+                "full": "Shatter.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Shatter"
+        }, 
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "Dazzle", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Stun Duration", 
+                    "Minimum Damage", 
+                    "Maximum Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them.", 
+            "sanitizedDescription": "Taric emits a brilliant ball of prismatic light from his gemmed shield, stunning his target and damaging them based on how close he is to them.", 
+            "sanitizedTooltip": "Taric fires a prismatic sphere at a target enemy, stunning them for {{ e2 }} seconds and dealing between {{ e1 }} (+{{ a1 }}) and {{ e3 }} (+{{ a2 }}) magic damage. Dazzle's damage increases the closer Taric is to the target.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0
+                ], 
+                [
+                    1.2, 
+                    1.3, 
+                    1.4, 
+                    1.5, 
+                    1.6
+                ], 
+                [
+                    80.0, 
+                    140.0, 
+                    200.0, 
+                    260.0, 
+                    320.0
+                ]
+            ], 
+            "tooltip": "Taric fires a prismatic sphere at a target enemy, stunning them for {{ e2 }} seconds and dealing between {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> and {{ e3 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage. Dazzle's damage increases the closer Taric is to the target.", 
+            "maxrank": 5, 
+            "costBurn": "75", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                75, 
+                75, 
+                75, 
+                75, 
+                75
+            ], 
+            "effectBurn": [
+                "", 
+                "40/70/100/130/160", 
+                "1.2/1.3/1.4/1.5/1.6", 
+                "80/140/200/260/320"
+            ], 
+            "image": {
+                "full": "Dazzle.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Dazzle"
+        }, 
+        {
+            "cooldownBurn": "75", 
+            "key": "TaricHammerSmash", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Attack Damage / Ability Power"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy, empowering Taric and his allies with bonus Attack Damage and Ability Power.", 
+            "sanitizedDescription": "Taric slams his hammer into the ground to deal damage to nearby enemies. For a time after, Taric's gems radiate energy, empowering Taric and his allies with bonus Attack Damage and Ability Power.", 
+            "sanitizedTooltip": "Taric slams his hammer into the ground, dealing {{ e1 }} (+{{ a1 }}) magic damage to nearby enemies. For the next {{ e2 }} seconds, Taric's gems radiate energy, granting him {{ e3 }} Attack Damage and Ability Power and his nearby allies half of the bonuses.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    30.0, 
+                    50.0, 
+                    70.0
+                ]
+            ], 
+            "tooltip": "Taric slams his hammer into the ground, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to nearby enemies.<br><br>For the next {{ e2 }} seconds, Taric's gems radiate energy, granting him {{ e3 }} Attack Damage and Ability Power and his nearby allies half of the bonuses.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350", 
+                "10", 
+                "30/50/70"
+            ], 
+            "image": {
+                "full": "TaricHammerSmash.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                75.0, 
+                75.0, 
+                75.0
+            ], 
+            "name": "Radiance"
+        }
+    ]
+}

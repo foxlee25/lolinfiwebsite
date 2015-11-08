@@ -1,0 +1,490 @@
+{
+    "info": {
+        "difficulty": 2, 
+        "attack": 7, 
+        "defense": 3, 
+        "magic": 4
+    }, 
+    "stats": {
+        "armorperlevel": 3.4, 
+        "attackdamage": 49.04, 
+        "mpperlevel": 36.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 310.48, 
+        "armor": 23.212, 
+        "hp": 537.76, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 3.0, 
+        "attackrange": 575.0, 
+        "movespeed": 330.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 7.34, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Varus", 
+    "title": "the Arrow of Retribution", 
+    "tags": [
+        "Marksman", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "VarusPassive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "On kill or assist, Varus temporarily gains Attack Speed. This bonus is larger if the enemy is a champion.", 
+        "name": "Living Vengeance", 
+        "description": "On kill or assist, Varus temporarily gains Attack Speed. This bonus is larger if the enemy is a champion."
+    }, 
+    "quotes": [
+        "\"The guilty will know agony.\"", 
+        "\"No forgiveness.\"", 
+        "\"They will know regret.\"", 
+        "\"No turning back.\"", 
+        "\"Face oblivion.\"", 
+        "\"Deliver them to their end.\"", 
+        "\"Pity those who cross me.\"", 
+        "\"My purpose is clear.\"", 
+        "\"My work is not done.\"", 
+        "\"I'm on borrowed time.\"", 
+        "\"Give me a target.\"", 
+        "\"I am forsaken.\"", 
+        "\"Bloodshed carries a price.\"", 
+        "\"There is no salvation.\"", 
+        "\"I do what I must.\"", 
+        "\"Pain is my gift to you.\"", 
+        "\"No forgiveness.\"", 
+        "\"They will know regret.\"", 
+        "\"No turning back.\"", 
+        "\"Face oblivion.\"", 
+        "\"Deliver them to their end.\"", 
+        "\"Pity those who cross me.\"", 
+        "\"My purpose is clear.\"", 
+        "\"My work is not done.\"", 
+        "\"I'm on borrowed time.\"", 
+        "\"Give me a target.\"", 
+        "\"I am forsaken.\"", 
+        "\"Bloodshed carries a price.\"", 
+        "\"There is no salvation.\"", 
+        "\"I do what I must.\"", 
+        "\"Pain is my gift to you.\"", 
+        "I am not broken,", 
+        "\"Summoners!"
+    ], 
+    "key": "Varus", 
+    "lore": "For his incomparable skill with the bow and his unquestioned sense of honor, Varus was chosen to be the warden of a sacred Ionian temple. The temple was built to contain an ancient pit of corruption so vile that Ionian Elders feared it could envelop the island in darkness. Varus prided himself on his position, as only the most exceptional Ionian warriors were selected for the role. He lived with his family in a nearby village and led a quiet life of disciplined routine until the day the forces of Noxus invaded Ionia. Their shock troops left nothing but death and desolation in their wake, and the temple lay in their path. Varus was forced to make a decision. He was bound by honor to stay and defend the temple, but without him the village's few inhabitants could offer little resistance against the oncoming war machine. Gravely, he chose to fulfill his duty as a warden. The corruption could not be allowed to escape.<br><br>His arrows sundered the troops who tried to wrest the temple from him that day. However, when he returned to the village, he found that it had been reduced to a smoldering graveyard. Remorse at the sight of his slain family gave way to overwhelming regret and then to seething hatred. He swore to slaughter every Noxian invader, but first he needed to become stronger. He turned to that which he had sacrificed everything to protect. The pit of corruption would consume him wholly, as a flame devours a wick, but its abominable power would burn within him until he was lost. This was a path from which there could be no return. With grim resolve, he condemned himself to the black flames, feeling malevolent energy bond to his skin...and with it, the promise of ruin. He left, seeking the blood of all Noxians involved with the invasion, a grisly task that eventually led him to the invasion's most infamous perpetrators in the League of Legends.<br><br>''The life of an arrow is fleeting, built of nothing but direction and intent.''<br>-- Varus", 
+    "id": 110, 
+    "spells": [
+        {
+            "cooldownBurn": "16/14/12/10/8", 
+            "key": "VarusQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Max Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.6
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Varus readies and then fires a powerful shot that gains extra range and damage the longer he spends preparing to fire.", 
+            "sanitizedDescription": "Varus readies and then fires a powerful shot that gains extra range and damage the longer he spends preparing to fire.", 
+            "sanitizedTooltip": "First Cast: Varus starts drawing back his next shot, gradually increasing its range and damage. Second Cast: Varus fires, dealing {{ e1 }} (+{{ f1 }}) to {{ e2 }} (+{{ f2 }}) physical damage, reduced by {{ e3 }}% per enemy hit (minimum 33%). While preparing to shoot Varus' Movement Speed is slowed by 20%. After 4 seconds, Piercing Arrow fails but refunds half its Mana cost.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    47.0, 
+                    83.0, 
+                    120.0, 
+                    157.0
+                ], 
+                [
+                    15.0, 
+                    70.0, 
+                    125.0, 
+                    180.0, 
+                    235.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">First Cast:</span> Varus starts drawing back his next shot, gradually increasing its range and damage.<br><br><span class=\"colorFF9900\">Second Cast:</span> Varus fires, dealing {{ e1 }}<span class=\"colorFF8C00\"> (+{{ f1 }})</span> to {{ e2 }}<span class=\"colorFF8C00\"> (+{{ f2 }})</span> physical damage, reduced by {{ e3 }}% per enemy hit (minimum 33%).<br><br>While preparing to shoot Varus' Movement Speed is slowed by 20%. After 4 seconds, Piercing Arrow fails but refunds half its Mana cost.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "925", 
+            "range": [
+                925, 
+                925, 
+                925, 
+                925, 
+                925
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "10/47/83/120/157", 
+                "15/70/125/180/235", 
+                "15", 
+                "50", 
+                "4"
+            ], 
+            "image": {
+                "full": "VarusQ.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 432
+            }, 
+            "cooldown": [
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0
+            ], 
+            "name": "Piercing Arrow"
+        }, 
+        {
+            "cooldownBurn": "6", 
+            "key": "VarusW", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Initial Damage", 
+                    "Max Health Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.25
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.02
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "none", 
+            "description": "Varus' basic attacks deal bonus magic damage and apply Blight. Varus' other abilities detonate Blight, dealing magic damage based on the target's maximum Health.", 
+            "sanitizedDescription": "Varus' basic attacks deal bonus magic damage and apply Blight. Varus' other abilities detonate Blight, dealing magic damage based on the target's maximum Health.", 
+            "sanitizedTooltip": "Passive: Varus' basic attacks deal {{ e1 }} (+{{ a1 }}) bonus magic damage and apply Blight for {{ e3 }} seconds (stacks {{ e4 }} times). Varus' other abilities detonate Blight, dealing magic damage equal to {{ e2 }}% (+{{ a2 }}%) of the target's maximum Health per stack (Max: 360 total damage vs Monsters).", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    14.0, 
+                    18.0, 
+                    22.0, 
+                    26.0
+                ], 
+                [
+                    2.0, 
+                    2.75, 
+                    3.5, 
+                    4.25, 
+                    5.0
+                ], 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    2.0, 
+                    2.5, 
+                    3.0, 
+                    3.5, 
+                    4.0
+                ]
+            ], 
+            "tooltip": " <span class=\"colorFF9900\">Passive: </span>Varus' basic attacks deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> bonus magic damage and apply Blight for {{ e3 }} seconds (stacks {{ e4 }} times). <br><br>Varus' other abilities detonate Blight, dealing magic damage equal to {{ e2 }}% <span class=\"color99FF99\">(+{{ a2 }}%)</span> of the target's maximum Health per stack (Max: 360 total damage vs Monsters).", 
+            "maxrank": 5, 
+            "costBurn": "55/60/65/70/75", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                55, 
+                60, 
+                65, 
+                70, 
+                75
+            ], 
+            "effectBurn": [
+                "", 
+                "10/14/18/22/26", 
+                "2/2.75/3.5/4.25/5", 
+                "6", 
+                "3", 
+                "2/2.5/3/3.5/4"
+            ], 
+            "image": {
+                "full": "VarusW.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                6.0, 
+                6.0, 
+                6.0, 
+                6.0, 
+                6.0
+            ], 
+            "name": "Blighted Quiver"
+        }, 
+        {
+            "cooldownBurn": "18/16/14/12/10", 
+            "key": "VarusE", 
+            "resource": "{{ cost }} Mana ", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Varus fires a hail of arrows that deal physical damage and desecrate the ground. Desecrated ground slows enemies' Movement Speed and reduces their healing and regeneration. ", 
+            "sanitizedDescription": "Varus fires a hail of arrows that deal physical damage and desecrate the ground. Desecrated ground slows enemies' Movement Speed and reduces their healing and regeneration.", 
+            "sanitizedTooltip": "Varus fires a hail of arrows that deals {{ e1 }} (+{{ f1 }}) physical damage and desecrates the ground for {{ e3 }} seconds. Desecrated Ground slows enemy Movement Speed by {{ e2 }}% and reduces healing effects by {{ e4 }}%.", 
+            "effect": [
+                null, 
+                [
+                    65.0, 
+                    100.0, 
+                    135.0, 
+                    170.0, 
+                    205.0
+                ], 
+                [
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": " Varus fires a hail of arrows that deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and desecrates the ground for {{ e3 }} seconds.<br><br>Desecrated Ground slows enemy Movement Speed by {{ e2 }}% and reduces healing effects by {{ e4 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "80", 
+            "rangeBurn": "925", 
+            "range": [
+                925, 
+                925, 
+                925, 
+                925, 
+                925
+            ], 
+            "cost": [
+                80, 
+                80, 
+                80, 
+                80, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "65/100/135/170/205", 
+                "25/30/35/40/45", 
+                "4", 
+                "50"
+            ], 
+            "image": {
+                "full": "VarusE.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                18.0, 
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0
+            ], 
+            "name": "Hail of Arrows"
+        }, 
+        {
+            "cooldownBurn": "110/90/70", 
+            "key": "VarusR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage ", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Varus flings out a damaging tendril of corruption that immobilizes the first enemy champion hit and then spreads towards nearby uninfected champions, immobilizing them too on contact. ", 
+            "sanitizedDescription": "Varus flings out a damaging tendril of corruption that immobilizes the first enemy champion hit and then spreads towards nearby uninfected champions, immobilizing them too on contact.", 
+            "sanitizedTooltip": "Varus flings out a tendril of corruption that deals {{ e1 }} (+{{ a1 }}) magic damage and immobilizes the first enemy champion hit for 2 seconds. The corruption then spreads towards nearby uninfected enemy champions, applying the same damage and immobilize if it reaches them.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ]
+            ], 
+            "tooltip": " Varus flings out a tendril of corruption that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and immobilizes the first enemy champion hit for 2 seconds.<br><br>The corruption then spreads towards nearby uninfected enemy champions, applying the same damage and immobilize if it reaches them.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1100", 
+            "range": [
+                1100, 
+                1100, 
+                1100
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350"
+            ], 
+            "image": {
+                "full": "VarusR.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                110.0, 
+                90.0, 
+                70.0
+            ], 
+            "name": "Chain of Corruption"
+        }
+    ]
+}

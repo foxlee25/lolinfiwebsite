@@ -1,0 +1,460 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 7, 
+        "defense": 2, 
+        "magic": 6
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 50.24, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 310.6, 
+        "armor": 21.88, 
+        "hp": 484.4, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 2.8, 
+        "attackrange": 550.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.65, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.09, 
+        "spellblock": 30.0, 
+        "hpregen": 6.42, 
+        "hpperlevel": 80.0
+    }, 
+    "name": "Ezreal", 
+    "title": "the Prodigal Explorer", 
+    "tags": [
+        "Marksman", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Ezreal_RisingSpellForce.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 96
+        }, 
+        "sanitizedDescription": "Hitting a target with any of Ezreal's abilities increases his Attack Speed by 10% for 6 seconds (effect stacks up to 5 times).", 
+        "name": "Rising Spell Force", 
+        "description": "Hitting a target with any of Ezreal's abilities increases his Attack Speed by 10% for 6 seconds (effect stacks up to 5 times)."
+    }, 
+    "quotes": [
+        "\"It's all skill!\"", 
+        "\"I'll handle it!\"", 
+        "\"No problem!\"", 
+        "\"Time to strike!\"", 
+        "\"Sounds dangerous... I'm in!\"", 
+        "\"Time to get our hands dirty.\"", 
+        "\"Over here!\"", 
+        "\"Let's go!\"", 
+        "\"Know your environment.\"", 
+        "\"This way!\"", 
+        "\"Careful!\"", 
+        "\"Got it!\"", 
+        "\"Agreed!\"", 
+        "\"No time to waste!\"", 
+        "\"Who needs a map?!\"", 
+        "\"You belong in a museum!\"", 
+        "\"Pulsefire systems online.\"", 
+        "\"Run a quick analysis for me.\"", 
+        "\"All systems operational.\"", 
+        "\"Hey PEARL, run a diagnostic.\"", 
+        "\"All systems operational.\"", 
+        "\"Pulsefire systems online.\"", 
+        "\"Let's do this.\"", 
+        "\"Target acquired.\"", 
+        "\"They're living in the past.\"", 
+        "\"Cannons primed.\"", 
+        "\"Can't fight the inevitable.\"", 
+        "\"Time's running out.\"", 
+        "\"All charged up.\"", 
+        "\"Weapons hot!\"", 
+        "\"No turning back now.\"", 
+        "\"All systems charged.\"", 
+        "\"Sounds apocalyptic, I'm in.\"", 
+        "\"I'm centuries ahead of them.\"", 
+        "\"What is their position?\"", 
+        "\"Give me the coordinates.\"", 
+        "\"I'll make my own future.\"", 
+        "\"No.\"", 
+        "\"Heh, I thought so.\"", 
+        "\"Systems offline. Recharging.\"", 
+        "\"Ahhh just a sec.. ehhh!\"", 
+        "\"There's no match for...\"", 
+        "\"Systems offline. Recharging.\"", 
+        "\"Hey. Wait. Don't..\"", 
+        "\"Daah!... Not cool.\"", 
+        "Ezreal plays a tune.", 
+        "\"Pulsefire back online.\"", 
+        "\"Leaving the grid.\"", 
+        "\"Withdrawing.\"", 
+        "\"Returning to base.\"", 
+        "\"Taking a break Ezreal?\"", 
+        "\"Warp Mode activated!\"", 
+        "\"Pulsefire Portal Opened\"", 
+        "\"Engage teleport.\"", 
+        "\"Coordinates locked.\"", 
+        "\"Drop point confirmed.\"", 
+        "\"Transport initiated.\"", 
+        "\"Teleporter activated.\"", 
+        "\"Systems upgraded.\" (level 6)", 
+        "\"Mystic Shot armed.\"", 
+        "\"Essence Flux primed.\"", 
+        "\"Arcane Shift enabled.\"", 
+        "\"Trueshot Barrage charged.\"", 
+        "Ezreal was designed by Ezreal", 
+        "Summoners!"
+    ], 
+    "key": "Ezreal", 
+    "lore": "The intrepid young adventurer Ezreal has explored some of the most remote and abandoned locations on Runeterra. During an expedition to the buried ruins of ancient Shurima, he recovered an amulet of incredible mystical power. Likely constructed to be worn by one of the Ascended, the enormous talisman nonetheless fit snugly upon his arm, amplifying his raw sorcerous skill to such an extent that he's gained the reputation of a hero, much to his embarrassment.", 
+    "id": 81, 
+    "spells": [
+        {
+            "cooldownBurn": "6/5.5/5/4.5/4", 
+            "key": "EzrealMysticShot", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns by 1 second if it strikes an enemy unit.", 
+            "sanitizedDescription": "Ezreal fires a damaging bolt of energy which reduces all of his cooldowns by 1 second if it strikes an enemy unit.", 
+            "sanitizedTooltip": "Ezreal fires a bolt of energy, dealing {{ e1 }} (+{{ f3 }}) (+{{ a2 }}) physical damage (applies on-hit effects). Ezreal's cooldowns are reduced by {{ e2 }} second if Mystic Shot hits a target.", 
+            "effect": [
+                null, 
+                [
+                    35.0, 
+                    55.0, 
+                    75.0, 
+                    95.0, 
+                    115.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "Ezreal fires a bolt of energy, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f3 }})</span> <span class=\"color99FF99\">(+{{ a2 }})</span> physical damage (applies on-hit effects). <br><br>Ezreal's cooldowns are reduced by {{ e2 }} second if Mystic Shot hits a target.", 
+            "maxrank": 5, 
+            "costBurn": "28/31/34/37/40", 
+            "rangeBurn": "1150", 
+            "range": [
+                1150, 
+                1150, 
+                1150, 
+                1150, 
+                1150
+            ], 
+            "cost": [
+                28, 
+                31, 
+                34, 
+                37, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "35/55/75/95/115", 
+                "1"
+            ], 
+            "image": {
+                "full": "EzrealMysticShot.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                6.0, 
+                5.5, 
+                5.0, 
+                4.5, 
+                4.0
+            ], 
+            "name": "Mystic Shot"
+        }, 
+        {
+            "cooldownBurn": "9", 
+            "key": "EzrealEssenceFlux", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ e2 }}% -> {{ e2NL }}%", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Attack Speed % Increase", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ezreal fires a fluctuating wave of energy, dealing magic damage to enemy champions, while increasing the Attack Speed of allied champions.", 
+            "sanitizedDescription": "Ezreal fires a fluctuating wave of energy, dealing magic damage to enemy champions, while increasing the Attack Speed of allied champions.", 
+            "sanitizedTooltip": "Ezreal fires a wave of energy that damages all enemy champions it passes through for {{ e1 }} (+{{ a1 }}) magic damage. If Ezreal or his Allied champions are hit by the wave, their Attack Speed is increased by {{ e2 }}% for 5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    115.0, 
+                    160.0, 
+                    205.0, 
+                    250.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "Ezreal fires a wave of energy that damages all enemy champions it passes through for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. If Ezreal or his Allied champions are hit by the wave, their Attack Speed is increased by {{ e2 }}% for 5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "50/60/70/80/90", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                50, 
+                60, 
+                70, 
+                80, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "70/115/160/205/250", 
+                "20/25/30/35/40"
+            ], 
+            "image": {
+                "full": "EzrealEssenceFlux.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0
+            ], 
+            "name": "Essence Flux"
+        }, 
+        {
+            "cooldownBurn": "19/17/15/13/11", 
+            "key": "EzrealArcaneShift", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.75
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit.", 
+            "sanitizedDescription": "Ezreal teleports to a target nearby location and fires a homing bolt which strikes the nearest enemy unit.", 
+            "sanitizedTooltip": "Ezreal teleports to a target nearby location and fires a homing bolt at the nearest enemy unit, dealing {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    125.0, 
+                    175.0, 
+                    225.0, 
+                    275.0
+                ]
+            ], 
+            "tooltip": "Ezreal teleports to a target nearby location and fires a homing bolt at the nearest enemy unit, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "90", 
+            "rangeBurn": "475", 
+            "range": [
+                475, 
+                475, 
+                475, 
+                475, 
+                475
+            ], 
+            "cost": [
+                90, 
+                90, 
+                90, 
+                90, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "75/125/175/225/275"
+            ], 
+            "image": {
+                "full": "EzrealArcaneShift.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                19.0, 
+                17.0, 
+                15.0, 
+                13.0, 
+                11.0
+            ], 
+            "name": "Arcane Shift"
+        }, 
+        {
+            "cooldownBurn": "80", 
+            "key": "EzrealTrueshotBarrage", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Ezreal winds up for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).", 
+            "sanitizedDescription": "Ezreal winds up for 1 second to fire a powerful barrage of energy missiles which do massive damage to each unit they pass through (deals 10% less damage to each unit it passes through).", 
+            "sanitizedTooltip": "Ezreal winds up for 1 second to fire a barrage of missiles dealing {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) magic damage to each unit it passes through. However, it deals {{ e2 }}% less damage for each unit it hits (minimum {{ e3 }}%).", 
+            "effect": [
+                null, 
+                [
+                    350.0, 
+                    500.0, 
+                    650.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "Ezreal winds up for 1 second to fire a barrage of missiles dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to each unit it passes through. However, it deals {{ e2 }}% less damage for each unit it hits (minimum {{ e3 }}%).", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "20000", 
+            "range": [
+                20000, 
+                20000, 
+                20000
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "350/500/650", 
+                "10", 
+                "30"
+            ], 
+            "image": {
+                "full": "EzrealTrueshotBarrage.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                80.0, 
+                80.0, 
+                80.0
+            ], 
+            "name": "Trueshot Barrage"
+        }
+    ]
+}

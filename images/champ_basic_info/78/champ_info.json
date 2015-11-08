@@ -1,0 +1,415 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 6, 
+        "defense": 6, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 61.97, 
+        "mpperlevel": 30.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 235.4, 
+        "armor": 28.72, 
+        "hp": 559.08, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 3.35, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.375, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 7.155, 
+        "spellblock": 30.0, 
+        "hpregen": 8.37, 
+        "hpperlevel": 81.0
+    }, 
+    "name": "Poppy", 
+    "title": "the Iron Ambassador", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Poppy_ValiantFighter.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "All physical and Magic Damage dealt to Poppy that exceeds 10% of her current Health is reduced by 50%. This does not reduce damage from structures.", 
+        "name": "Valiant Fighter", 
+        "description": "All physical and Magic Damage dealt to Poppy that exceeds 10% of her current Health is reduced by 50%. This does not reduce damage from structures."
+    }, 
+    "quotes": [
+        "\"Valoran will know harmony.\"", 
+        "\"I'll settle this issue!\"", 
+        "\"They'll beg for peace.\"", 
+        "\"If it is necessary.\"", 
+        "\"If it will bring peace.\"", 
+        "\"Valoran will know harmony.\"", 
+        "\"We are in accord, Summoner.\"", 
+        "\"Immediately!\"", 
+        "\"Agreed!\"", 
+        "Whomper"
+    ], 
+    "key": "Poppy", 
+    "lore": "While other young yordle girls played skip-step and braided wreathes out of posies, Poppy spent her youth earning calluses and grease stains in her father's armor shop. Blomgrun, her father, was Bandle City's finest smith. The only thing he loved as much as his work was his young daughter, Poppy - named for the sprightly sounds of the sparks that leapt from his ever-burning forge. He welled with pride the day she was first able to lift his trusty hammer, Whomper. Poppy immediately took to his art, demonstrating a natural gift for smithing, which Blomgrun honed with devoted instruction.<br><br>One day, a Demacian general named Florin Berell commissioned Blomgrun to craft a helm, glorious beyond comparison. Blomgrun toiled away on this project, determined to present Florin with his finest work. He let Poppy set the center jewel, entrusting her with the most important piece. When the pair finished, they departed for Demacia to deliver it in person. Word of the general's order, however, was leaked to the Noxian High Command, and two Noxian assassins were dispatched to intercept the delivery. Blomgrun was able to occupy the assassins long enough for Poppy to escape with the prized helm. She watched helplessly from the brush as her father was slain. Instead of fleeing home, she carried the helm the rest of the way to Demacia alone. She refused payment for it, saying that no amount would compensate for her father's life. Instead, she offered it as a gift, honoring her father's final intentions. Florin saw the grim determination behind the tears in her eyes, and requested that the leadership of Bandle City appoint Poppy as the yordle ambassador to Demacia. Soon after, seeking to crush Noxus with her father's hammer, Poppy volunteered for the League of Legends.<br><br>Poppy may be small, but Whomper - or her will - is not.", 
+    "id": 78, 
+    "spells": [
+        {
+            "cooldownBurn": "8/7/6/5/4", 
+            "key": "PoppyDevastatingBlow", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    " {{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Damage Cap", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Poppy crushes her opponent, dealing attack damage plus a flat amount and 8% of her target's max Health as bonus damage. The bonus damage cannot exceed a threshold based on rank.", 
+            "sanitizedDescription": "Poppy crushes her opponent, dealing attack damage plus a flat amount and 8% of her target's max Health as bonus damage. The bonus damage cannot exceed a threshold based on rank.", 
+            "sanitizedTooltip": "Poppy crushes her opponent, dealing {{ e2 }} (+{{ a2 }}) (+{{ a1 }}) plus 8% of her target's maximum Health as Magic Damage. The base plus percent Health bonus damage cannot exceed {{ e3 }}.", 
+            "effect": [
+                null, 
+                [
+                    8.0, 
+                    7.0, 
+                    6.0, 
+                    5.0, 
+                    4.0
+                ], 
+                [
+                    20.0, 
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0
+                ], 
+                [
+                    75.0, 
+                    150.0, 
+                    225.0, 
+                    300.0, 
+                    375.0
+                ]
+            ], 
+            "tooltip": "Poppy crushes her opponent, dealing {{ e2 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> plus 8% of her target's maximum Health as Magic Damage. The base plus percent Health bonus damage cannot exceed {{ e3 }}.", 
+            "maxrank": 5, 
+            "costBurn": "55", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                55, 
+                55, 
+                55, 
+                55, 
+                55
+            ], 
+            "effectBurn": [
+                "", 
+                "8/7/6/5/4", 
+                "20/40/60/80/100", 
+                "75/150/225/300/375"
+            ], 
+            "image": {
+                "full": "PoppyDevastatingBlow.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 336
+            }, 
+            "cooldown": [
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0, 
+                4.0
+            ], 
+            "name": "Devastating Blow"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "PoppyParagonOfDemacia", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% ->{{ e2NL }}%", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Armor and Damage per stack", 
+                    "Movement Speed", 
+                    "Mana cost"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Passive: Upon receiving damage from or dealing damage with a basic attack, Poppy's Armor and damage are increased for 5 seconds. This effect can stack 10 times. Active: Poppy gains max stacks of Paragon of Demacia and her Movement Speed is increased for 5 seconds.", 
+            "sanitizedDescription": "Passive: Upon receiving damage from or dealing damage with a basic attack, Poppy's Armor and damage are increased for 5 seconds. This effect can stack 10 times. Active: Poppy gains max stacks of Paragon of Demacia and her Movement Speed is increased for 5 seconds.", 
+            "sanitizedTooltip": "Passive: Upon receiving damage from or dealing damage with a basic attack, Poppy's Armor and damage are increased by {{ e1 }} for 5 seconds. This effect can stack 10 times. Active: Poppy gains max stacks of Paragon of Demacia and her Movement Speed is increased by {{ e2 }}% for 5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    1.5, 
+                    2.0, 
+                    2.5, 
+                    3.0, 
+                    3.5
+                ], 
+                [
+                    17.0, 
+                    19.0, 
+                    21.0, 
+                    23.0, 
+                    25.0
+                ], 
+                [
+                    17.0, 
+                    19.0, 
+                    21.0, 
+                    23.0, 
+                    25.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Upon receiving damage from or dealing damage with a basic attack, Poppy's Armor and damage are increased by {{ e1 }} for 5 seconds. This effect can stack 10 times.<br><br><span class=\"colorFF9900\">Active:</span> Poppy gains max stacks of Paragon of Demacia and her Movement Speed is increased by {{ e2 }}% for 5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "1.5/2/2.5/3/3.5", 
+                "17/19/21/23/25", 
+                "17/19/21/23/25"
+            ], 
+            "image": {
+                "full": "PoppyParagonOfDemacia.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 384
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Paragon of Demacia"
+        }, 
+        {
+            "cooldownBurn": "12/11/10/9/8", 
+            "key": "PoppyHeroicCharge", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Initial Damage", 
+                    "Collision Damage", 
+                    "Mana cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Poppy charges at an enemy and carries them further. The initial impact deals a small amount of damage, and if they collide with terrain, her target will take a high amount of damage and be stunned.", 
+            "sanitizedDescription": "Poppy charges at an enemy and carries them further. The initial impact deals a small amount of damage, and if they collide with terrain, her target will take a high amount of damage and be stunned.", 
+            "sanitizedTooltip": "Poppy charges at an enemy and carries them for a short distance. The initial impact deals {{ e1 }} (+{{ a1 }}) Magic Damage. If they collide with terrain, her target takes {{ e2 }} (+{{ a1 }}) Magic Damage and will be stunned for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    75.0, 
+                    100.0, 
+                    125.0, 
+                    150.0
+                ], 
+                [
+                    75.0, 
+                    125.0, 
+                    175.0, 
+                    225.0, 
+                    275.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Poppy charges at an enemy and carries them for a short distance. The initial impact deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage. If they collide with terrain, her target takes {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and will be stunned for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "525", 
+            "range": [
+                525, 
+                525, 
+                525, 
+                525, 
+                525
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "50/75/100/125/150", 
+                "75/125/175/225/275", 
+                "1.5", 
+                "2"
+            ], 
+            "image": {
+                "full": "PoppyHeroicCharge.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 432
+            }, 
+            "cooldown": [
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0
+            ], 
+            "name": "Heroic Charge"
+        }, 
+        {
+            "cooldownBurn": "140/120/100", 
+            "key": "PoppyDiplomaticImmunity", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Increased Damage", 
+                    "Cooldown", 
+                    "Duration"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Poppy focuses intently on a single enemy champion, dealing increased damage to them. Poppy is immune to any damage and abilities from enemies other than her target.", 
+            "sanitizedDescription": "Poppy focuses intently on a single enemy champion, dealing increased damage to them. Poppy is immune to any damage and abilities from enemies other than her target.", 
+            "sanitizedTooltip": "For {{ e1 }} seconds, Poppy is immune to any damage and abilities from enemies other than her target enemy champion. Poppy deals {{ e2 }}% increased damage to the marked target.", 
+            "effect": [
+                null, 
+                [
+                    6.0, 
+                    7.0, 
+                    8.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "For {{ e1 }} seconds, Poppy is immune to any damage and abilities from enemies other than her target enemy champion.<br>Poppy deals {{ e2 }}% increased damage to the marked target.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "6/7/8", 
+                "20/30/40"
+            ], 
+            "image": {
+                "full": "PoppyDiplomaticImmunity.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 0
+            }, 
+            "cooldown": [
+                140.0, 
+                120.0, 
+                100.0
+            ], 
+            "name": "Diplomatic Immunity"
+        }
+    ]
+}

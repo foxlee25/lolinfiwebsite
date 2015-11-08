@@ -1,0 +1,413 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 7, 
+        "defense": 4, 
+        "magic": 4
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 62.43, 
+        "mpperlevel": 30.0, 
+        "attackspeedoffset": -0.08, 
+        "mp": 240.4, 
+        "armor": 25.88, 
+        "hp": 592.64, 
+        "hpregenperlevel": 0.8, 
+        "attackspeedperlevel": 2.88, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.375, 
+        "mpregenperlevel": 0.6, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 8.105, 
+        "spellblock": 32.1, 
+        "hpregen": 8.39, 
+        "hpperlevel": 98.0
+    }, 
+    "name": "Warwick", 
+    "title": "the Blood Hunter", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Warwick_InnerHunger.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "Each of Warwick's attacks will heal him. Each successive attack against the same target will steal more and more Health.", 
+        "name": "Eternal Thirst", 
+        "description": "Each of Warwick's attacks will heal him. Each successive attack against the same target will steal more and more Health."
+    }, 
+    "quotes": [
+        "\"Let's make this fun.\"", 
+        "\"This ends... now.\"", 
+        "\"Yes...\"", 
+        "\"I hunger...\"", 
+        "\"It's only fun if they run.\"", 
+        "\"It's time to hunt.\"", 
+        "\"I'll feast on their bones.\"", 
+        "\"Mmm... Delicious.\"", 
+        "Blood Scent"
+    ], 
+    "key": "Warwick", 
+    "lore": "Warwick was once a man revered for his ability to track down human specimens for the darkest types of scientific research. When his ambitions exceeded his physical limits, he drank a dangerous elixir to transform himself into an unstoppable manhunter.  His newfound strength bore a heavy price.<br><br>Before his transformation, Warwick found his calling in Zaun as a ''procurer'' of human test subjects. Known for his crafty methods and ruthless determination, people regarded him with a cautious mixture of fear and respect. As his reputation grew, so did the demands placed upon him. His clients wanted more rare and dangerous specimens, and they wanted them sooner. To meet their demands, Warwick needed strength that transcended his limited human form. His longtime friend, Singed, devised a powerful formula. The recipe called for three critical components: silver from the Shadow Isles, the fang of a Balefire dire wolf, and the heart of a celestial being. Warwick tracked down the first two in short order, but the third proved a much greater challenge. He traveled to Ionia to trap Soraka, a creature believed to be a child of the stars, but she discovered his ploy and drove him away with powerful magic. Unable to tolerate his failure, Warwick returned to Singed disfigured and furious. He demanded the chemist's incomplete potion, but Singed warned him that the results would be unpredictable. Ignoring his friend's warning, Warwick drank the concoction. The brew transformed him into a creature both man and wolf, infusing him with raw strength and heightened senses. Exhilarated, he immediately began testing his newfound power. Each day his instincts became sharper, but his human half slipped further away. He could feel himself losing control: though he always got his prey, he often failed to bring them back alive. Now he seeks the heart of Soraka to stabilize his transformation before his mind gives way to the feral urges of the beast.<br><br>''Eventually the beast catches up with all of us.''<br>-- Warwick", 
+    "id": 19, 
+    "spells": [
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "HungeringStrike", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Max Health %", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Takes a bite out of an enemy unit and heals Warwick.", 
+            "sanitizedDescription": "Takes a bite out of an enemy unit and heals Warwick.", 
+            "sanitizedTooltip": "Strikes an enemy for the greater value between {{ e1 }} (+{{ a1 }}) and {{ e2 }}% (+{{ a1 }}) of the target's maximum Health as magic damage (can only do flat damage to monsters), and heals Warwick for {{ e3 }}% of the damage dealt.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    125.0, 
+                    175.0, 
+                    225.0, 
+                    275.0
+                ], 
+                [
+                    8.0, 
+                    10.0, 
+                    12.0, 
+                    14.0, 
+                    16.0
+                ], 
+                [
+                    80.0, 
+                    80.0, 
+                    80.0, 
+                    80.0, 
+                    80.0
+                ]
+            ], 
+            "tooltip": "Strikes an enemy for the greater value between {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> and {{ e2 }}% <span class=\"color99FF99\">(+{{ a1 }})</span> of the target's maximum Health as magic damage (can only do flat damage to monsters), and heals Warwick for {{ e3 }}% of the damage dealt.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "75/125/175/225/275", 
+                "8/10/12/14/16", 
+                "80"
+            ], 
+            "image": {
+                "full": "HungeringStrike.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 48
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Hungering Strike"
+        }, 
+        {
+            "cooldownBurn": "24/22/20/18/16", 
+            "key": "HuntersCall", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Attack Speed Boost"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Warwick lets out a howl, increasing all nearby friendly champions' Attack Speed for a short time.", 
+            "sanitizedDescription": "Warwick lets out a howl, increasing all nearby friendly champions' Attack Speed for a short time.", 
+            "sanitizedTooltip": "Warwick lets out a howl that inspires all nearby allied champions, increasing Warwick's Attack Speed by {{ e2 }}% and all nearby friendly champions' Attack Speed by half of that for 6 seconds.", 
+            "effect": [
+                null, 
+                [
+                    6.0, 
+                    9.0, 
+                    12.0, 
+                    15.0, 
+                    18.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ]
+            ], 
+            "tooltip": "Warwick lets out a howl that inspires all nearby allied champions, increasing Warwick's Attack Speed by {{ e2 }}% and all nearby friendly champions' Attack Speed by half of that for 6 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "35", 
+            "rangeBurn": "1250", 
+            "range": [
+                1250, 
+                1250, 
+                1250, 
+                1250, 
+                1250
+            ], 
+            "cost": [
+                35, 
+                35, 
+                35, 
+                35, 
+                35
+            ], 
+            "effectBurn": [
+                "", 
+                "6/9/12/15/18", 
+                "40/50/60/70/80", 
+                "10"
+            ], 
+            "image": {
+                "full": "HuntersCall.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 96
+            }, 
+            "cooldown": [
+                24.0, 
+                22.0, 
+                20.0, 
+                18.0, 
+                16.0
+            ], 
+            "name": "Hunters Call"
+        }, 
+        {
+            "cooldownBurn": "0.5", 
+            "key": "BloodScent", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Detection Distance", 
+                    "Movement Speed Bonus"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Warwick passively senses weakened enemy champions around him. The scent of blood sends him into a fury, causing him to move at incredible speeds.", 
+            "sanitizedDescription": "Warwick passively senses weakened enemy champions around him. The scent of blood sends him into a fury, causing him to move at incredible speeds.", 
+            "sanitizedTooltip": "Toggle: Warwick senses enemy champions under 50% Health within {{ e1 }} distance of him; while he detects a low-health enemy, he reveals them if they are not stealthed and gains {{ e2 }}% Movement Speed.", 
+            "effect": [
+                null, 
+                [
+                    1500.0, 
+                    2300.0, 
+                    3100.0, 
+                    3900.0, 
+                    4700.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Warwick senses enemy champions under 50% Health within {{ e1 }} distance of him; while he detects a low-health enemy, he reveals them if they are not stealthed and gains {{ e2 }}% Movement Speed.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "1600", 
+            "range": [
+                1600, 
+                1600, 
+                1600, 
+                1600, 
+                1600
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "1500/2300/3100/3900/4700", 
+                "20/25/30/35/40"
+            ], 
+            "image": {
+                "full": "BloodScent.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 144
+            }, 
+            "cooldown": [
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5, 
+                0.5
+            ], 
+            "name": "Blood Scent"
+        }, 
+        {
+            "cooldownBurn": "110/90/70", 
+            "key": "InfiniteDuress", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        2.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Warwick lunges at an enemy champion, suppressing his target and dealing magic damage for a few seconds.", 
+            "sanitizedDescription": "Warwick lunges at an enemy champion, suppressing his target and dealing magic damage for a few seconds.", 
+            "sanitizedTooltip": "Warwick lunges in front of an enemy champion and suppresses them for {{ e2 }} seconds. During this time, Warwick attacks his victim {{ e4 }} times, dealing a total of {{ e1 }} (+{{ f1 }}) magic damage (triggers on-hit effects {{ e4 }} times). Warwick gains {{ e3 }}% Life Steal for the duration.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    1.8, 
+                    1.8, 
+                    1.8
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Warwick lunges in front of an enemy champion and suppresses them for {{ e2 }} seconds. During this time, Warwick attacks his victim {{ e4 }} times, dealing a total of {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> magic damage (triggers on-hit effects {{ e4 }} times).<br><br>Warwick gains {{ e3 }}% Life Steal for the duration.", 
+            "maxrank": 3, 
+            "costBurn": "100/125/150", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                100, 
+                125, 
+                150
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350", 
+                "1.8", 
+                "30", 
+                "5"
+            ], 
+            "image": {
+                "full": "InfiniteDuress.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 192
+            }, 
+            "cooldown": [
+                110.0, 
+                90.0, 
+                70.0
+            ], 
+            "name": "Infinite Duress"
+        }
+    ]
+}

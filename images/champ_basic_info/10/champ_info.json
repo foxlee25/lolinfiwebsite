@@ -1,0 +1,461 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 6, 
+        "defense": 6, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 51.0, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 322.2, 
+        "armor": 26.88, 
+        "hp": 574.24, 
+        "hpregenperlevel": 0.75, 
+        "attackspeedperlevel": 2.2, 
+        "attackrange": 125.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 2.8, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 8.26, 
+        "hpperlevel": 93.0
+    }, 
+    "name": "Kayle", 
+    "title": "The Judicator", 
+    "tags": [
+        "Fighter", 
+        "Support"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Kayle_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "When Kayle attacks a champion, the target loses 3% Armor and Magic Resistance for 5 seconds. This effect stacks up to 5 times.", 
+        "name": "Holy Fervor", 
+        "description": "When Kayle attacks a champion, the target loses 3% Armor and Magic Resistance for 5 seconds. This effect stacks up to 5 times."
+    }, 
+    "quotes": [
+        "\"Into the fray!\"", 
+        "\"Lead me to battle.\"", 
+        "\"Into the fray!\"", 
+        "\"Who's next?\"", 
+        "\"Your time has come.\"", 
+        "\"An eye for an eye.\"", 
+        "\"Ugh, dust in the clockwork.\"", 
+        "\"Let my blade speak the law!\"", 
+        "\"Transcend imperfection.\"", 
+        "\"Faith and steel unbroken.\"", 
+        "\"There will be no compromise.\"", 
+        "\"By wing and blade.\"", 
+        "\"Everything in its place.\"", 
+        "\"I bring a vision of utopia.\"", 
+        "\"Perfection unto eternity.\"", 
+        "\"Trust in my vision.\"", 
+        "\"Nothing left in flux.\"", 
+        "\"Crafted in divine light.\"", 
+        "\"I see into infinity.\"", 
+        "\"Forward!\"", 
+        "\"Immortality!\"", 
+        "\"Arise!\"", 
+        "\"Undying!\"", 
+        "\"Light protect you!\""
+    ], 
+    "key": "Kayle", 
+    "lore": "In a world far away where an ancient war still rages, Kayle was a great hero - the strongest of an immortal race committed to destroying evil wherever it could be found. For ten thousand years, Kayle fought tirelessly for her people, wielding her flaming sword forged before time itself. She shielded her delicate features beneath her enchanted armor, the sole remaining masterpiece of an extinct race of craftsmen. Though a beautiful, striking creature, Kayle, now as then, avoids showing her face; war has taken a terrible toll upon her spirit. In her quest for victory, she sometimes would try to lift the wicked up from their morass of evil, but more than often she instead purged those she herself deemed beyond redemption. To Kayle, justice can so often be an ugly thing.<br><br>Ten years ago, Kayle's war against evil was nearly won... until her rebellious sister Morgana, a pariah amongst their people, suddenly gained powerful new allies: magicians of a hitherto unknown world called Runeterra. Morgana traded servitude to a number of the summoners in Runeterra's League of Legends for powerful new abilities that, if mastered, threatened to bring Kayle and her people to their knees. To save her world, Kayle had no choice but to make a pact with the League herself. She approached the leader of the League, High Counselor Reginald Ashram, with a deal of her own. In exchange for a thousand years of Kayle's service, Ashram halted all League interference on Kayle's world. With Ashram's disappearance five years ago, Kayle has new causes on Valoran: find out who or what caused Ashram to disappear, defeat her sister Morgana upon the Fields of Justice, and bring her own brand of justice to the League of Legends.<br><br>''In the League of Legends, Justice comes on swift wings.''", 
+    "id": 10, 
+    "spells": [
+        {
+            "cooldownBurn": "8", 
+            "key": "JudicatorReckoning", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }}  ->  {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow %", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Blasts an enemy unit with angelic force, dealing damage, slowing Movement Speed, and applying Holy Fervor.", 
+            "sanitizedDescription": "Blasts an enemy unit with angelic force, dealing damage, slowing Movement Speed, and applying Holy Fervor.", 
+            "sanitizedTooltip": "Blasts a target, dealing {{ e1 }} (+{{ a2 }}) (+{{ a1 }}) magic damage, slowing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds, and applying a stack of Holy Fervor.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    110.0, 
+                    160.0, 
+                    210.0, 
+                    260.0
+                ], 
+                [
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Blasts a target, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage, slowing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds, and applying a stack of Holy Fervor.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "60/110/160/210/260", 
+                "35/40/45/50/55", 
+                "3"
+            ], 
+            "image": {
+                "full": "JudicatorReckoning.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Reckoning"
+        }, 
+        {
+            "cooldownBurn": "15", 
+            "key": "JudicatorDivineBlessing", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Health Restoration", 
+                    "Movement Speed Bonus", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.07
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.45
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Blesses a target friendly champion, granting them increased Movement Speed and healing them.", 
+            "sanitizedDescription": "Blesses a target friendly champion, granting them increased Movement Speed and healing them.", 
+            "sanitizedTooltip": "Blesses an allied champion, increasing their Movement Speed by {{ e2 }}% (+{{ a2 }}%) for {{ e3 }} seconds and healing them for {{ e1 }} (+{{ a1 }}) Health.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    105.0, 
+                    150.0, 
+                    195.0, 
+                    240.0
+                ], 
+                [
+                    18.0, 
+                    21.0, 
+                    24.0, 
+                    27.0, 
+                    30.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Blesses an allied champion, increasing their Movement Speed by {{ e2 }}% <span class=\"color99FF99\">(+{{ a2 }}%)</span> for {{ e3 }} seconds and healing them for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Health.", 
+            "maxrank": 5, 
+            "costBurn": "60/70/80/90/100", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                60, 
+                70, 
+                80, 
+                90, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "60/105/150/195/240", 
+                "18/21/24/27/30", 
+                "3"
+            ], 
+            "image": {
+                "full": "JudicatorDivineBlessing.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0
+            ], 
+            "name": "Divine Blessing"
+        }, 
+        {
+            "cooldownBurn": "16", 
+            "key": "JudicatorRighteousFury", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Passive Damage", 
+                    "Active Damage", 
+                    "Splash Attack Damage Ratio "
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.15
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.2, 
+                        0.25, 
+                        0.3, 
+                        0.35, 
+                        0.4
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Passive: Grants Kayle on Hit magic Damage.  Activate: Ignite Kayle's sword with a holy flame, granting Kayle a ranged splash attack and bonus magic damage.", 
+            "sanitizedDescription": "Passive: Grants Kayle on Hit magic Damage. Activate: Ignite Kayle's sword with a holy flame, granting Kayle a ranged splash attack and bonus magic damage.", 
+            "sanitizedTooltip": "Passive: Kayle's Basic Attacks deal an additional {{ e4 }} (+{{ a2 }}) magic damage on hit. Active: Kayle increases her Attack Range by 400 for 10 seconds and the passive bonus is increased to {{ e1 }} (+{{ a1 }}) magic damage on hit. In addition, enemies near her target take {{ e1 }} (+{{ f2 }}) (+{{ a1 }}) magic damage on attack.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    0.2, 
+                    0.25, 
+                    0.3, 
+                    0.35, 
+                    0.4
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Kayle's Basic Attacks deal an additional {{ e4 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage on hit.<br><br><span class=\"colorFF9900\">Active: </span>Kayle increases her Attack Range by 400 for 10 seconds and the passive bonus is increased to {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage on hit.<br><br>In addition, enemies near her target take {{ e1 }} <span class=\"colorFF8C00\">(+{{ f2 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage on attack.", 
+            "maxrank": 5, 
+            "costBurn": "45", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                45, 
+                45, 
+                45, 
+                45, 
+                45
+            ], 
+            "effectBurn": [
+                "", 
+                "20/30/40/50/60", 
+                "20/25/30/35/40", 
+                "0.2/0.25/0.3/0.35/0.4", 
+                "10/15/20/25/30"
+            ], 
+            "image": {
+                "full": "JudicatorRighteousFury.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                16.0, 
+                16.0, 
+                16.0, 
+                16.0, 
+                16.0
+            ], 
+            "name": "Righteous Fury"
+        }, 
+        {
+            "cooldownBurn": "100/90/80", 
+            "key": "JudicatorIntervention", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Shields Kayle or an ally for a short time, causing them to be immune to damage.", 
+            "sanitizedDescription": "Shields Kayle or an ally for a short time, causing them to be immune to damage.", 
+            "sanitizedTooltip": "Bathes Kayle's target in a holy light, rendering them immune to all damage for {{ e1 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    2.0, 
+                    2.5, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Bathes Kayle's target in a holy light, rendering them immune to all damage for {{ e1 }} seconds.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "2/2.5/3"
+            ], 
+            "image": {
+                "full": "JudicatorIntervention.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                100.0, 
+                90.0, 
+                80.0
+            ], 
+            "name": "Intervention"
+        }
+    ]
+}

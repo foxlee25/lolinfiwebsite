@@ -1,0 +1,515 @@
+{
+    "info": {
+        "difficulty": 10, 
+        "attack": 8, 
+        "defense": 4, 
+        "magic": 4
+    }, 
+    "stats": {
+        "armorperlevel": 3.4, 
+        "attackdamage": 55.376, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 100.0, 
+        "armor": 24.712, 
+        "hp": 517.76, 
+        "hpregenperlevel": 0.9, 
+        "attackspeedperlevel": 3.2, 
+        "attackrange": 175.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 30.0, 
+        "hpregen": 6.51, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Yasuo", 
+    "title": "the Unforgiven", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Wind", 
+    "passive": {
+        "image": {
+            "full": "Yasuo_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 288
+        }, 
+        "sanitizedDescription": "Yasuo's Critical Strike Chance is doubled. Additionally, Yasuo builds toward a shield whenever he is moving. The shield triggers when he takes damage from a champion or monster.", 
+        "name": "Way of the Wanderer", 
+        "description": "Yasuo's Critical Strike Chance is doubled. Additionally, Yasuo builds toward a shield whenever he is moving. The shield triggers when he takes damage from a champion or monster."
+    }, 
+    "quotes": [
+        "\"No-one is promised tomorrow.\"", 
+        "\"Sleep is for the guiltless.\"", 
+        "\"I will not forget who I am.\"", 
+        "\"No cure for fools.\"", 
+        "\"Kill me? You can try.\"", 
+        "\"Make it quick.\"", 
+        "\"Some things never dull.\"", 
+        "\"I will not die dishonored.\"", 
+        "\"No more running.\"", 
+        "\"I alone decide my fate.\"", 
+        "\"One blade, one purpose.\"", 
+        "\"It is not yet time to die.\"", 
+        "\"Wuju? No, I wouldn't.\"", 
+        "\"Nice... sword... boots?\"", 
+        "\"Ninjas... I hate those guys.\"", 
+        "\"Broken sword. Broken spirit.\"", 
+        "Yasuo plays a flute.", 
+        "Yasuo plays a harmonica.", 
+        "Yasuo plays a harmonica.", 
+        "\"Face the wind!\"", 
+        "\"Wait, that technique... huh.\"", 
+        "\"Huh, three swift strikes...\"", 
+        "\"Another wind blade?\"", 
+        "\"Who taught you that?\"", 
+        "\"No-one is promised tomorrow.\"", 
+        "\"Sleep is for the guiltless.\"", 
+        "\"I will not forget who I am.\"", 
+        "\"No cure for fools.\"", 
+        "\"Kill me? You can try.\"", 
+        "\"Make it quick.\"", 
+        "\"Some things never dull.\"", 
+        "\"I will not die dishonored.\"", 
+        "\"No more running.\"", 
+        "\"I alone decide my fate.\"", 
+        "\"One blade, one purpose.\"", 
+        "\"It is not yet time to die.\"", 
+        "\"Wuju? No, I wouldn't.\"", 
+        "\"Nice... sword... boots?\"", 
+        "\"Ninjas... I hate those guys.\"", 
+        "\"Broken sword. Broken spirit.\"", 
+        "Yasuo plays a wind controller.", 
+        "\"Face the wind!\"", 
+        "\"Wait, that technique... huh.\"", 
+        "\"Huh, three swift strikes...\"", 
+        "\"Another wind blade?\"", 
+        "\"Who taught you that?\"", 
+        "Flow", 
+        "Flow"
+    ], 
+    "key": "Yasuo", 
+    "lore": "Yasuo is a man of resolve, an agile swordsman who wields the wind itself to cut down his foes. This once-proud warrior has been disgraced by a false accusation and forced into a desperate fight for survival. With the world turned against him, he will do everything in his power to bring the guilty to justice and restore his honor.<br><br>Formerly a brilliant pupil at a renowned Ionian sword school, Yasuo was the only student in a generation to master the legendary wind technique. Many believed he was destined to become a great hero. However, his fate was changed forever when Noxus invaded. Yasuo was charged with guarding an Ionian Elder, but, foolishly believing his blade alone could make the difference, he left his post to join the fray. By the time he returned, the Elder had been slain.<br><br>Disgraced, Yasuo willingly turned himself in, prepared to pay for his failure with his life. He was shocked, however, to find himself accused not just of dereliction, but of the murder itself. Though confused and racked with guilt, he knew the assassin would go unpunished if he did not act. Yasuo raised his sword against the school and fought his way free, knowing his treason would turn all of Ionia against him. Left truly alone for the first time in his life, he set out to find the Elder's real killer.<br><br>Yasuo spent the next several years wandering the land, seeking any clue that might lead him to the murderer. All the while, he was relentlessly hunted by his former allies, continually forced to fight or die. His mission drove him ever forward, until he was tracked down by the one foe he dreaded most - his own brother, Yone.<br><br>Bound by a common code of honor, the two warriors bowed and drew their swords. Silently they circled one another under the moonlight. When they finally charged forward, Yone was no match for Yasuo; with a single flash of steel he cut his brother down. Yasuo dropped his weapon and rushed to Yone's side.<br><br>Overcome with emotion, he demanded to know how his own kin could think him guilty. Yone spoke: ''The Elder was killed by a wind technique. Who else could it be?'' Understanding swept over Yasuo as he suddenly realized why he had been accused. He professed his innocence once more and begged his brother's forgiveness. Tears streamed down Yasuo's face as his brother passed in his arms.<br><br>Yasuo buried Yone under the rising sun, but could take no time to mourn. Others would be after him before long. His brother's revelation had given Yasuo newfound purpose; he now had the clue that would lead to the true killer. Swearing an oath, he gathered his belongings and, with one last look at Yone's grave, set out with the wind at his back.<br><br>''The story of a sword is inked in blood.''<br>-- Yasuo", 
+    "id": 157, 
+    "spells": [
+        {
+            "cooldownBurn": "6/5.5/5/4.5/4", 
+            "key": "YasuoQW", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "A skillshot basic attack. After two successful Steel Tempests, the next fires a tornado that knocks enemies Airborne.", 
+            "sanitizedDescription": "A skillshot basic attack. After two successful Steel Tempests, the next fires a tornado that knocks enemies Airborne.", 
+            "sanitizedTooltip": "Thrusts forward, dealing {{ e1 }} (+{{ a1 }}) physical damage. On hit, Steel Tempest grants a stack of Gathering Storm for 10 seconds. At 2 stacks, Steel Tempest fires a whirlwind that knocks Airborne. Steel Tempest is treated as a basic attack: It can critically strike, applies on-hit effects, and its cooldown and cast time are reduced by Attack Speed. If cast while dashing, Steel Tempest will strike as a circle.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    85.0, 
+                    95.0, 
+                    105.0, 
+                    115.0, 
+                    125.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Thrusts forward, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage.<br><br>On hit, Steel Tempest grants a stack of Gathering Storm for 10 seconds. At 2 stacks, Steel Tempest fires a whirlwind that knocks <span class=\"color6655CC\">Airborne</span>.<br><br>Steel Tempest is treated as a basic attack: It can critically strike, applies on-hit effects, and its cooldown and cast time are reduced by Attack Speed.<br><br><span class=\"color99FF99\">If cast while dashing, Steel Tempest will strike as a circle.</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "475", 
+            "range": [
+                475, 
+                475, 
+                475, 
+                475, 
+                475
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/40/60/80/100", 
+                "100", 
+                "85/95/105/115/125", 
+                "4"
+            ], 
+            "image": {
+                "full": "YasuoQW.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                6.0, 
+                5.5, 
+                5.0, 
+                4.5, 
+                4.0
+            ], 
+            "name": "Steel Tempest"
+        }, 
+        {
+            "cooldownBurn": "26/24/22/20/18", 
+            "key": "YasuoWMovingWall", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Wall Width", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Creates a moving wall that blocks enemy projectiles.", 
+            "sanitizedDescription": "Creates a moving wall that blocks enemy projectiles.", 
+            "sanitizedTooltip": "Creates a moving wall that blocks all enemy projectiles for 4 seconds.", 
+            "effect": [
+                null, 
+                [
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ], 
+                [
+                    3.0, 
+                    6.0, 
+                    9.0, 
+                    12.0, 
+                    15.0
+                ], 
+                [
+                    300.0, 
+                    350.0, 
+                    400.0, 
+                    450.0, 
+                    500.0
+                ]
+            ], 
+            "tooltip": "Creates a moving wall that blocks all enemy projectiles for 4 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "15/20/25/30/35", 
+                "60/90/120/150/180", 
+                "3/6/9/12/15", 
+                "300/350/400/450/500"
+            ], 
+            "image": {
+                "full": "YasuoWMovingWall.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 192
+            }, 
+            "cooldown": [
+                26.0, 
+                24.0, 
+                22.0, 
+                20.0, 
+                18.0
+            ], 
+            "name": "Wind Wall"
+        }, 
+        {
+            "cooldownBurn": "0", 
+            "key": "YasuoDashWrapper", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Recast Block", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Dashes through a unit, dealing escalating Magic Damage with each cast.", 
+            "sanitizedDescription": "Dashes through a unit, dealing escalating Magic Damage with each cast.", 
+            "sanitizedTooltip": "Dashes through target enemy, dealing {{ e1 }} (+{{ a1 }}) Magic Damage. Each cast increases your next dash's base Damage by 25%, up to {{ e6 }}%. Cannot be re-cast on the same enemy for {{ e2 }} seconds. If cast while dashing, Steel Tempest will strike as a circle.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    90.0, 
+                    110.0, 
+                    130.0, 
+                    150.0
+                ], 
+                [
+                    10.0, 
+                    9.0, 
+                    8.0, 
+                    7.0, 
+                    6.0
+                ], 
+                [
+                    0.5, 
+                    0.4, 
+                    0.3, 
+                    0.2, 
+                    0.1
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    15.0, 
+                    17.5, 
+                    20.0, 
+                    22.5, 
+                    25.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Dashes through target enemy, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage. Each cast increases your next dash's base Damage by 25%, up to {{ e6 }}%.<br><br>Cannot be re-cast on the same enemy for {{ e2 }} seconds.<br><br><span class=\"color99FF99\">If cast while dashing, Steel Tempest will strike as a circle.</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "475", 
+            "range": [
+                475, 
+                475, 
+                475, 
+                475, 
+                475
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "70/90/110/130/150", 
+                "10/9/8/7/6", 
+                "0.5/0.4/0.3/0.2/0.1", 
+                "1.5", 
+                "15/17.5/20/22.5/25", 
+                "50"
+            ], 
+            "image": {
+                "full": "YasuoDashWrapper.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 240
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Sweeping Blade"
+        }, 
+        {
+            "cooldownBurn": "0", 
+            "key": "YasuoRKnockUpComboW", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ f1 }} -> {{ f2 }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.5
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Moves to a unit and strikes them repeatedly for heavy damage. Can only be cast on Airborne targets.", 
+            "sanitizedDescription": "Moves to a unit and strikes them repeatedly for heavy damage. Can only be cast on Airborne targets.", 
+            "sanitizedTooltip": "Blinks to an Airborne enemy champion, dealing {{ e1 }} (+{{ a1 }}) physical damage and holding all Airborne enemies in the area in the air for an additional 1 second. Grants maximum Flow but resets all stacks of Gathering Storm. For 15 seconds, Yasuo gains {{ e5 }}% Bonus Armor Penetration - this affects Armor from items, buffs, runes and masteries.", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    300.0, 
+                    400.0
+                ], 
+                [
+                    33.0, 
+                    66.0, 
+                    100.0
+                ], 
+                [
+                    650.0, 
+                    750.0, 
+                    850.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    33.0, 
+                    66.0, 
+                    100.0
+                ]
+            ], 
+            "tooltip": "Blinks to an <span class=\"color6655CC\">Airborne</span> enemy champion, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage and holding all <span class=\"color6655CC\">Airborne</span> enemies in the area in the air for an additional 1 second. Grants maximum Flow but resets all stacks of Gathering Storm.<br><br>For 15 seconds, Yasuo gains {{ e5 }}% Bonus Armor Penetration - this affects Armor from items, buffs, runes and masteries.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "1200", 
+            "range": [
+                1200, 
+                1200, 
+                1200
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "200/300/400", 
+                "33/66/100", 
+                "650/750/850", 
+                "1.5", 
+                "50", 
+                "33/66/100"
+            ], 
+            "image": {
+                "full": "YasuoRKnockUpComboW.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 288
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Last Breath"
+        }
+    ]
+}

@@ -1,0 +1,441 @@
+{
+    "info": {
+        "difficulty": 2, 
+        "attack": 8, 
+        "defense": 6, 
+        "magic": 3
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 57.544, 
+        "mpperlevel": 35.0, 
+        "attackspeedoffset": -0.07, 
+        "mp": 273.8, 
+        "armor": 25.88, 
+        "hp": 591.16, 
+        "hpregenperlevel": 0.7, 
+        "attackspeedperlevel": 2.6, 
+        "attackrange": 175.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.3, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.255, 
+        "spellblock": 32.1, 
+        "hpregen": 8.175, 
+        "hpperlevel": 87.0
+    }, 
+    "name": "Xin Zhao", 
+    "title": "the Seneschal of Demacia", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "XinZhao_TirelessWarrior.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "Xin Zhao challenges his target with his basic attacks and Audacious Charge, reducing its Armor by 15% for 3 seconds.", 
+        "name": "Challenge", 
+        "description": "Xin Zhao challenges his target with his basic attacks and Audacious Charge, reducing its Armor by 15% for 3 seconds."
+    }, 
+    "quotes": [
+        "\"To the arena!\"", 
+        "\"Fate has made its choice.\"", 
+        "\"Do not bore me.\"", 
+        "\"Press the assault!\"", 
+        "\"Perish with honor.\"", 
+        "\"Their lives are forfeit.\"", 
+        "\"My king commands.\"", 
+        "\"It shall be done!\"", 
+        "\"To triumph!\"", 
+        "\"A Demacian does not retreat.\"", 
+        "\"Victory calls.\"", 
+        "\"Always forward.\"", 
+        "\"Sound the march!\"", 
+        "\"Only actions truly speak.\"", 
+        "Horrible beyond comparison."
+    ], 
+    "key": "XinZhao", 
+    "lore": "Whenever Jarvan III, the king of Demacia, delivers one of his rallying speeches from the glinting marble balcony atop the Royal Palace, Xin Zhao is at his side. Coined the Seneschal of Demacia, Xin Zhao is the personal steward of the Lightshield Dynasty. His enigmatic, silent vigil has led to an abundance of conjecture concerning his ''secret life'' and origins. Whether it's ''Zaun double-agent'' tendered at the dinner table or ''indebted rune mage'' mused in the editorials of the ''Demacian Constant'', Xin Zhao betrays no hints to sate the curiosity of the masses... for good reason.<br><br>Prior to the formation of the League, Noxus was renowned for a spectacle called The Fleshing. It was a gladiatorial event with a cruel twist: as a fighter won matches, his number of opponents (generally prisoners of war) fought simultaneously would increase. This meant eventual death for every contender, but with unparalleled glory. Xin Zhao, known then as Viscero, was slated to face 300 soldiers, nearly six times the previous record. This was clearly meant to be his final match. Jarvan II, hearing of this unprecedented feat, infiltrated the arena to offer him an alternative: serve Demacia and punish those who ultimately sentence him to death in exchange for his freedom. Xin Zhao accepted, astonished that a king would risk his own life on his behalf. Under the cover of a prearranged Demacian assault on Noxus, Jarvan liberated Xin Zhao and his 300 opponents. During their retreat, Xin Zhao took a poisoned dart meant for Jarvan. This act of loyalty, from a man who vowed no allegiance, earned Xin Zhao a spot at his side until the day the king died. Now in the service of his son, Jarvan III, Xin Zhao is stepping into a new ring - the Fields of Justice - to fight for his adopted country and to honor the legacy of the man who gave purpose to his life.<br><br>''Death is inevitable, one can only avoid defeat.''<br>      -  Demacian Manual of Arms", 
+    "id": 5, 
+    "spells": [
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "XenZhaoComboTarget", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.25
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Xin Zhao's next 3 standard attacks deal increased damage that reduce his other ability cooldowns, with the third attack knocking an opponent into the air.", 
+            "sanitizedDescription": "Xin Zhao's next 3 standard attacks deal increased damage that reduce his other ability cooldowns, with the third attack knocking an opponent into the air.", 
+            "sanitizedTooltip": "Xin Zhao's next 3 basic attacks deal {{ e1 }} (+{{ f1 }}) bonus physical damage and reduce his other abilities' cooldowns by 1 second. The final strike also knocks the target into the air.", 
+            "effect": [
+                null, 
+                [
+                    15.0, 
+                    30.0, 
+                    45.0, 
+                    60.0, 
+                    75.0
+                ], 
+                [
+                    10.0, 
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0
+                ], 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ]
+            ], 
+            "tooltip": "Xin Zhao's next 3 basic attacks deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> bonus physical damage and reduce his other abilities' cooldowns by 1 second. The final strike also knocks the target into the air.", 
+            "maxrank": 5, 
+            "costBurn": "30", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                30, 
+                30, 
+                30, 
+                30, 
+                30
+            ], 
+            "effectBurn": [
+                "", 
+                "15/30/45/60/75", 
+                "10/20/30/40/50", 
+                "30/60/90/120/150"
+            ], 
+            "image": {
+                "full": "XenZhaoComboTarget.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 432
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Three Talon Strike"
+        }, 
+        {
+            "cooldownBurn": "16/15/14/13/12", 
+            "key": "XenZhaoBattleCry", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Passive Heal", 
+                    "Active Attack Speed %", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Xin Zhao passively heals every 3 attacks and can activate this ability to attack faster.", 
+            "sanitizedDescription": "Xin Zhao passively heals every 3 attacks and can activate this ability to attack faster.", 
+            "sanitizedTooltip": "Passive: Xin Zhao heals himself for {{ e1 }} (+{{ a1 }}) every third basic attack. Active: Xin Zhao unleashes a battle cry, increasing his Attack Speed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Xin Zhao heals himself for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> every third basic attack.<br><br><span class=\"colorFF9900\">Active: </span>Xin Zhao unleashes a battle cry, increasing his Attack Speed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "30/35/40/45/50", 
+                "40/50/60/70/80", 
+                "5"
+            ], 
+            "image": {
+                "full": "XenZhaoBattleCry.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                16.0, 
+                15.0, 
+                14.0, 
+                13.0, 
+                12.0
+            ], 
+            "name": "Battle Cry"
+        }, 
+        {
+            "cooldownBurn": "14/13/12/11/10", 
+            "key": "XenZhaoSweep", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow %", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Xin Zhao charges an enemy, dealing damage and slowing all enemies in the area.", 
+            "sanitizedDescription": "Xin Zhao charges an enemy, dealing damage and slowing all enemies in the area.", 
+            "sanitizedTooltip": "Xin Zhao charges and challenges an enemy. The charge deals {{ e1 }} (+{{ a1 }}) magic damage to all nearby enemies and slows them by {{ e2 }}% for 2 seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    110.0, 
+                    150.0, 
+                    190.0, 
+                    230.0
+                ], 
+                [
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0
+                ], 
+                [
+                    650.0, 
+                    750.0, 
+                    850.0, 
+                    950.0, 
+                    1050.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Xin Zhao charges and challenges an enemy. The charge deals {{ e1 }}<span class=\"color99FF99\"> (+{{ a1 }})</span> magic damage to all nearby enemies and slows them by {{ e2 }}% for 2 seconds. ", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "70/110/150/190/230", 
+                "25/30/35/40/45", 
+                "650/750/850/950/1050", 
+                "2"
+            ], 
+            "image": {
+                "full": "XenZhaoSweep.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 48
+            }, 
+            "cooldown": [
+                14.0, 
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0
+            ], 
+            "name": "Audacious Charge"
+        }, 
+        {
+            "cooldownBurn": "120/110/100", 
+            "key": "XenZhaoParry", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Resistance Per Target", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Xin Zhao deals damage to nearby enemies based on their current Health and knocks non-challenged targets back. Xin Zhao gains bonus Armor and Magic Resist based on number of champions hit.", 
+            "sanitizedDescription": "Xin Zhao deals damage to nearby enemies based on their current Health and knocks non-challenged targets back. Xin Zhao gains bonus Armor and Magic Resist based on number of champions hit.", 
+            "sanitizedTooltip": "Xin Zhao unleashes a sweep around him that deals {{ e1 }} (+{{ f1 }}) plus 15% of target's current Health in physical damage and stuns enemies while knocking them back (max 600 vs minions and monsters). Xin Zhao gains {{ e3 }} Armor and Magic Resist for 6 seconds for each champion hit. Challenge: If a challenged target is hit by the sweep, it is unaffected by the knockback.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    175.0, 
+                    275.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    15.0, 
+                    20.0, 
+                    25.0
+                ], 
+                [
+                    7.0, 
+                    10.0, 
+                    13.0
+                ]
+            ], 
+            "tooltip": "Xin Zhao unleashes a sweep around him that deals {{ e1 }}<span class=\"colorFF8C00\"> (+{{ f1 }})</span> plus 15% of target's current Health in physical damage and stuns enemies while knocking them back (max 600 vs minions and monsters). Xin Zhao gains {{ e3 }} Armor and Magic Resist for 6 seconds for each champion hit.<br><br><span class=\"colorDDDD77\">Challenge:</span> If a challenged target is hit by the sweep, it is unaffected by the knockback.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "500", 
+            "range": [
+                500, 
+                500, 
+                500
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "75/175/275", 
+                "15", 
+                "15/20/25", 
+                "7/10/13"
+            ], 
+            "image": {
+                "full": "XenZhaoParry.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 96
+            }, 
+            "cooldown": [
+                120.0, 
+                110.0, 
+                100.0
+            ], 
+            "name": "Crescent Sweep"
+        }
+    ]
+}

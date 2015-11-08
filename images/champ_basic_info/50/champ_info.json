@@ -1,0 +1,431 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 2, 
+        "defense": 6, 
+        "magic": 9
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 52.04, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 324.0, 
+        "armor": 22.72, 
+        "hp": 516.04, 
+        "hpregenperlevel": 0.65, 
+        "attackspeedperlevel": 2.11, 
+        "attackrange": 500.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 7.84, 
+        "hpperlevel": 78.0
+    }, 
+    "name": "Swain", 
+    "title": "the Master Tactician", 
+    "tags": [
+        "Mage", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "SwainCarrionRenewal.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 96
+        }, 
+        "sanitizedDescription": "Swain regenerates Mana each time he kills a unit. This amount increases each level.", 
+        "name": "Carrion Renewal", 
+        "description": "Swain regenerates Mana each time he kills a unit. This amount increases each level."
+    }, 
+    "quotes": [
+        "\"A calculated risk.\"", 
+        "\"My bird is hungry.\"", 
+        "\"Impeccable decision.\"", 
+        "\"They dare oppose Noxus?\"", 
+        "\"My pleasure.\"", 
+        "\"Dispatch these worms.\"", 
+        "\"A Noxian does not dawdle.\"", 
+        "\"My destination is absolute.\"", 
+        "\"I'll give the orders.\"", 
+        "\"Victory awaits.\"", 
+        "\"I'm five steps ahead of you.\"", 
+        "\"If you insist.\"", 
+        "\"My thoughts exactly.\"", 
+        "\"How obvious.\"", 
+        "\"Efficient strategy.\""
+    ], 
+    "key": "Swain", 
+    "lore": "The earliest account of Swain's existence comes from a Noxian infirmary doctor's notes. According to them, Swain limped into the ward without cry or complaint; his right leg was snapped in half, with bone protruding from the skin. A small, scowling bird seemed affixed to his shoulder. The doctor gawked in horror as the young adolescent answered questions about his health and age with a calm, even stare. Even behind the echoing crack as the sand counterweights reset his tibia, Swain's measuring gaze never flickered, nor did his eyes twitch from the pop of his fibula. He refused the doctor's recommendation of magical treatment for the leg's inoperable damage, requesting only a spare crutch before shuffling away. He next surfaced in documents from the Noxian military, although it is evident that they are incomplete. Normally a crippled boy would be turned away in shame from Noxus' proud legion, but the records indicate his first designation was that of a ranking officer.<br><br>The men who've served under him (and survived) have remained in his charge with unshakable faith and loyalty. He leapt through the High Command's hierarchy, often ascending when superiors requested demotions to join his unit. A cunning strategist, Swain was decorated after every battle he fought, regularly hobbling in contemplation at the front of the assault. His rise to power seemed unceasing until he was suddenly relegated to inactive status prior to the Ionian Invasion - a bewildering decision which reeked of bureaucratic subversion. If Swain was upset by the events which unfolded, he never belied it. His face was so implacable that it was popularly rumored to be a mask, disguising something utterly inhuman beneath. More controversy surrounded the bird that never left his shoulder, whose name he whispered only to it. When Demacia escalated its presence in the League, Swain was immediately returned to active duty.<br><br>''If you haven't yet lost the ability to ask, you may not yet ask for relief.''<br>-Swain", 
+    "id": 50, 
+    "spells": [
+        {
+            "cooldownBurn": "8", 
+            "key": "SwainDecrepify", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Swain sets his raven to cripple an enemy. Over the next 3 seconds, the target is damaged and slowed.", 
+            "sanitizedDescription": "Swain sets his raven to cripple an enemy. Over the next 3 seconds, the target is damaged and slowed.", 
+            "sanitizedTooltip": "Swain sets his raven to cripple an enemy. Over the next 3 seconds, the target takes {{ e1 }} (+{{ a1 }}) magic damage per second and is slowed by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    40.0, 
+                    55.0, 
+                    70.0, 
+                    85.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "Swain sets his raven to cripple an enemy. Over the next 3 seconds, the target takes {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage per second and is slowed by {{ e2 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "60/70/80/90/100", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                60, 
+                70, 
+                80, 
+                90, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "25/40/55/70/85", 
+                "20/25/30/35/40"
+            ], 
+            "image": {
+                "full": "SwainDecrepify.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 336
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Decrepify"
+        }, 
+        {
+            "cooldownBurn": "18/16/14/12/10", 
+            "key": "SwainShadowGrasp", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Swain marks a target area. After a short delay, mighty talons grab hold of enemy units, dealing damage and rooting them.", 
+            "sanitizedDescription": "Swain marks a target area. After a short delay, mighty talons grab hold of enemy units, dealing damage and rooting them.", 
+            "sanitizedTooltip": "Swain marks a target area. After a short delay, talons grab hold of enemy units, dealing {{ e1 }} (+{{ a1 }}) magic damage and rooting them for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Swain marks a target area. After a short delay, talons grab hold of enemy units, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and rooting them for {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "80/90/100/110/120", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                80, 
+                90, 
+                100, 
+                110, 
+                120
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160/200/240", 
+                "2"
+            ], 
+            "image": {
+                "full": "SwainShadowGrasp.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 384
+            }, 
+            "cooldown": [
+                18.0, 
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0
+            ], 
+            "name": "Nevermove"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "SwainTorment", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Base Damage Over Time", 
+                    "Damage Amplification %", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Swain afflicts his target, dealing damage to them over time and causing them to take increased damage from Swain.", 
+            "sanitizedDescription": "Swain afflicts his target, dealing damage to them over time and causing them to take increased damage from Swain.", 
+            "sanitizedTooltip": "Swain afflicts his target for {{ e1 }} (+{{ a1 }}) magic damage over 4 seconds. Swain deals {{ e2 }}% increased damage to the afflicted target.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    115.0, 
+                    155.0, 
+                    195.0, 
+                    235.0
+                ], 
+                [
+                    8.0, 
+                    11.0, 
+                    14.0, 
+                    17.0, 
+                    20.0
+                ], 
+                [
+                    6.0, 
+                    7.0, 
+                    8.0, 
+                    9.0, 
+                    10.0
+                ]
+            ], 
+            "tooltip": "Swain afflicts his target for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage over 4 seconds. Swain deals {{ e2 }}% increased damage to the afflicted target.", 
+            "maxrank": 5, 
+            "costBurn": "65/70/75/80/85", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                65, 
+                70, 
+                75, 
+                80, 
+                85
+            ], 
+            "effectBurn": [
+                "", 
+                "75/115/155/195/235", 
+                "8/11/14/17/20", 
+                "6/7/8/9/10"
+            ], 
+            "image": {
+                "full": "SwainTorment.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 432
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Torment"
+        }, 
+        {
+            "cooldownBurn": "8", 
+            "key": "SwainMetamorphism", 
+            "resource": "{{ e2 }} Initial Mana Cost Per Second", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}"
+                ], 
+                "label": [
+                    "Damage Amount", 
+                    "Mana Cost Per Second"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "InitialManaCostPerSecond", 
+            "description": "Swain inspires dread in his enemies by temporarily taking the form of a raven. During this time ravens strike out at up to 3 nearby enemies. Each raven deals damage and heals Swain for half of the damage dealt.", 
+            "sanitizedDescription": "Swain inspires dread in his enemies by temporarily taking the form of a raven. During this time ravens strike out at up to 3 nearby enemies. Each raven deals damage and heals Swain for half of the damage dealt.", 
+            "sanitizedTooltip": "Toggle: Swain transforms into the form of a raven. During this time, up to 3 lesser ravens strike out at nearby enemies each second, prioritizing champions. Each raven deals {{ e1 }} (+{{ a1 }}) magic damage and heals Swain for {{ e3 }}% of the damage dealt against champions, and {{ e5 }}% against minions. The cost to sustain Ravenous Flock increases by {{ e4 }} Mana each second.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    70.0, 
+                    90.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    75.0, 
+                    75.0, 
+                    75.0
+                ], 
+                [
+                    5.0, 
+                    6.0, 
+                    7.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Swain transforms into the form of a raven. During this time, up to 3 lesser ravens strike out at nearby enemies each second, prioritizing champions. Each raven deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and heals Swain for {{ e3 }}% of the damage dealt against champions, and {{ e5 }}% against minions.<br><br>The cost to sustain Ravenous Flock increases by {{ e4 }} Mana each second.", 
+            "maxrank": 3, 
+            "costBurn": "25", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                25, 
+                25, 
+                25
+            ], 
+            "effectBurn": [
+                "", 
+                "50/70/90", 
+                "25", 
+                "75", 
+                "5/6/7", 
+                "25"
+            ], 
+            "image": {
+                "full": "SwainMetamorphism.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 0
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Ravenous Flock"
+        }
+    ]
+}

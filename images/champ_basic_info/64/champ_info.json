@@ -1,0 +1,492 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 8, 
+        "defense": 5, 
+        "magic": 3
+    }, 
+    "stats": {
+        "armorperlevel": 3.7, 
+        "attackdamage": 61.176, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.04, 
+        "mp": 200.0, 
+        "armor": 24.216, 
+        "hp": 570.8, 
+        "hpregenperlevel": 0.7, 
+        "attackspeedperlevel": 3.0, 
+        "attackrange": 125.0, 
+        "movespeed": 350.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 50.0, 
+        "spellblock": 32.1, 
+        "hpregen": 7.425, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Lee Sin", 
+    "title": "the Blind Monk", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Energy", 
+    "passive": {
+        "image": {
+            "full": "LeeSinPassive.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 20/10 Energy.", 
+        "name": "Flurry", 
+        "description": "After Lee Sin uses an ability, his next 2 basic attacks gain 40% Attack Speed and return 20/10 Energy."
+    }, 
+    "quotes": [
+        "\"Your will, my hands.\"", 
+        "\"Strike firmly!\"", 
+        "\"Their heartbeats quicken.\"", 
+        "\"Worry not.\"", 
+        "\"I'll see this through.\"", 
+        "\"Act free of doubt.\"", 
+        "\"Quiet steps.\"", 
+        "\"Extend your senses.\"", 
+        "\"Where am I needed?\"", 
+        "\"Find your center.\"", 
+        "\"I will atone.\"", 
+        "\"Waste not a minute!\"", 
+        "\"We do what we must.\"", 
+        "strongly"
+    ], 
+    "key": "LeeSin", 
+    "lore": "As a young teen, Lee Sin was intent on becoming a summoner. His will and dedication were unmatched by any of his peers, and his skill drew the attention of Reginald Ashram, the League's High Councilor at the time. While studying at the Arcanum Majoris, Lee Sin became frustrated with instruction paced for the other students. He spent his free time researching the nuances of summoning in hopes of graduating sooner. He made amazing advances in his arcane studies, surpassing all other students. By all indications, he would have become one of the League's greatest summoners were it not for one terrible mistake. Too impatient, he attempted to test his ability by summoning a beast from the Plague Jungles. What he summoned instead was a young boy, but not in one piece. He barely had time to look the boy in what was once his face before the jumbled human mass fell lifeless to the floor. A League investigation later revealed that the boy's entire village was obliterated by feedback from the ritual.<br><br>Lee Sin's talents were so promising that the League was willing to overlook the incident, but he could never forgive himself. He left the Institute and journeyed to the Shojin Monastery for eternal repentance, swearing never to practice magic again. Years later, hoping to atone for his crime with martyrdom, he set himself ablaze as a protest of the Noxian occupation of Ionia. He remained alive in this state, enduring searing agony for weeks. His actions paved the way for a League match wherein Ionia prevailed, but by the time he was doused, his eyes had been burned completely from their sockets. Hailed as a savior, he was reborn, and his will to act invigorated. He joined the League of Legends to continue his atonement with sweat and blood, a true monk's only possessions.<br><br>''The actions of one may sunder the world, but the efforts of many may rebuild it.''<br>- Lee Sin", 
+    "id": 64, 
+    "spells": [
+        {
+            "cooldownBurn": "11/10/9/8/7", 
+            "key": "BlindMonkQOne", 
+            "resource": "{{ cost }} Energy / {{ e4 }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Sonic Wave Damage", 
+                    "Resonating Strike Base Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Energy/@Effect4Amount@Energy", 
+            "description": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.<br>Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing Health.", 
+            "sanitizedDescription": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds. Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing physical damage plus 8% of their missing Health.", 
+            "sanitizedTooltip": "Sonic Wave: Lee Sin projects a discordant wave of sound to locate his enemies, dealing {{ e1 }} (+{{ f1 }}) physical damage to the first enemy it encounters. If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds. Resonating Strike: Lee Sin dashes to the enemy hit by Sonic Wave, dealing {{ e2 }} (+{{ f1 }}) physical damage plus 8% of their missing Health (Max: 400 Damage vs. Monsters).", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0
+                ], 
+                [
+                    50.0, 
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0
+                ], 
+                null, 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Sonic Wave: </span>Lee Sin projects a discordant wave of sound to locate his enemies, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to the first enemy it encounters. <span class=\"color99FF99\">If Sonic Wave hits, Lee Sin can cast Resonating Strike for the next 3 seconds.</span><br><br><span class=\"colorFF9900\">Resonating Strike: </span>Lee Sin dashes to the enemy hit by Sonic Wave, dealing {{ e2 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage plus 8% of their missing Health (Max: 400 Damage vs. Monsters).", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "altimages": [
+                {
+                    "full": "BlindMonkQOne0.png", 
+                    "group": "spell", 
+                    "sprite": "spell5.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 144, 
+                    "x": 336
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "50/80/110/140/170", 
+                "50/80/110/140/170", 
+                "", 
+                "30"
+            ], 
+            "image": {
+                "full": "BlindMonkQOne.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 288
+            }, 
+            "cooldown": [
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0
+            ], 
+            "name": "Sonic Wave / Resonating Strike"
+        }, 
+        {
+            "cooldownBurn": "14", 
+            "key": "BlindMonkWOne", 
+            "resource": "{{ cost }} Energy / {{ e4 }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Safeguard Shield Absorption", 
+                    "Iron Will Lifesteal / Spell Vamp %"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Energy/@Effect4Amount@Energy", 
+            "description": "Safeguard: Lee Sin rushes towards a target ally, shielding himself from damage. If the ally is a champion, they are also shielded. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.<br>Iron Will: Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains Life Steal and Spell Vamp.", 
+            "sanitizedDescription": "Safeguard: Lee Sin rushes towards a target ally, shielding himself from damage. If the ally is a champion, they are also shielded. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds. Iron Will: Lee Sin's intense training allows him to thrive in battle. For 5 seconds, Lee Sin gains Life Steal and Spell Vamp.", 
+            "sanitizedTooltip": "Safeguard: Lee Sin rushes towards a target ally. If the ally is a champion, Lee Sin shields the ally and himself for {{ e1 }} (+{{ a1 }}) damage for {{ e3 }} seconds and Safeguard's cooldown is reduced by {{ e6 }}%. After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds. Iron Will: Lee Sin's intense training allows him to thrive in battle. For 4 seconds, Lee Sin gains {{ e2 }}% Life Steal and Spell Vamp.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0
+                ], 
+                [
+                    5.0, 
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Safeguard: </span>Lee Sin rushes towards a target ally. If the ally is a champion, Lee Sin shields the ally and himself for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> damage for {{ e3 }} seconds and Safeguard's cooldown is reduced by {{ e6 }}%.<span class=\"color99FF99\"> After using Safeguard, Lee Sin can cast Iron Will for the next 3 seconds.</span><br><br><span class=\"colorFF9900\">Iron Will: </span>Lee Sin's intense training allows him to thrive in battle. For 4 seconds, Lee Sin gains {{ e2 }}% Life Steal and Spell Vamp.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "40/80/120/160/200", 
+                "5/10/15/20/25", 
+                "2", 
+                "30", 
+                "5", 
+                "50"
+            ], 
+            "image": {
+                "full": "BlindMonkWOne.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0
+            ], 
+            "name": "Safeguard / Iron Will"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "BlindMonkEOne", 
+            "resource": "{{ cost }} Energy / {{ e4 }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%"
+                ], 
+                "label": [
+                    "Tempest Damage", 
+                    "Cripple Movement Speed %"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Energy/@Effect4Amount@Energy", 
+            "description": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds.<br>Cripple: Lee Sin cripples nearby enemies revealed by Tempest, reducing their Movement Speed for 4 seconds. Movement Speed recovers gradually over the duration.", 
+            "sanitizedDescription": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals magic damage and reveals enemy units hit. If Tempest hits an enemy, Lee Sin can cast cripple for the next 3 seconds. Cripple: Lee Sin cripples nearby enemies revealed by Tempest, reducing their Movement Speed for 4 seconds. Movement Speed recovers gradually over the duration.", 
+            "sanitizedTooltip": "Tempest: Lee Sin smashes the ground, sending out a shockwave that deals {{ e1 }} (+{{ f1 }}) magic damage and reveals enemy units hit for 4 seconds. If Tempest hits an enemy, Lee Sin can cast Cripple for the next 3 seconds. Cripple: Lee Sin cripples nearby enemies revealed by Tempest for 4 seconds, reducing their Movement Speed by {{ e2 }}%. Movement Speed recovers gradually over the duration.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    95.0, 
+                    130.0, 
+                    165.0, 
+                    200.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    60.0, 
+                    95.0, 
+                    130.0, 
+                    165.0, 
+                    200.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Tempest: </span>Lee Sin smashes the ground, sending out a shockwave that deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> magic damage and reveals enemy units hit for 4 seconds.<span class=\"color99FF99\"> If Tempest hits an enemy, Lee Sin can cast Cripple for the next 3 seconds.</span><br><br><span class=\"colorFF9900\">Cripple: </span>Lee Sin cripples nearby enemies revealed by Tempest for 4 seconds, reducing their Movement Speed by {{ e2 }}%. Movement Speed recovers gradually over the duration.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "425", 
+            "range": [
+                425, 
+                425, 
+                425, 
+                425, 
+                425
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "altimages": [
+                {
+                    "full": "BlindMonkEOne0.png", 
+                    "group": "spell", 
+                    "sprite": "spell6.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 0, 
+                    "x": 0
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "60/95/130/165/200", 
+                "20/30/40/50/60", 
+                "60/95/130/165/200", 
+                "30"
+            ], 
+            "image": {
+                "full": "BlindMonkEOne.png", 
+                "group": "spell", 
+                "sprite": "spell5.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 432
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Tempest / Cripple"
+        }, 
+        {
+            "cooldownBurn": "90/75/60", 
+            "key": "BlindMonkRKick", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Bonus Health Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        2.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. This technique was taught to him by Jesse Perring, although Lee Sin does not kick players off the map.", 
+            "sanitizedDescription": "Lee Sin performs a powerful roundhouse kick launching his target back, dealing physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. This technique was taught to him by Jesse Perring, although Lee Sin does not kick players off the map.", 
+            "sanitizedTooltip": "Lee Sin performs a powerful roundhouse kick launching an enemy champion back, dealing {{ e1 }} (+{{ f1 }}) physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. Every time the target collides with an enemy champion, the target also deals {{ e3 }}% of their bonus health as physical damage.", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    400.0, 
+                    600.0
+                ], 
+                [
+                    75.0, 
+                    125.0, 
+                    175.0
+                ], 
+                [
+                    12.0, 
+                    15.0, 
+                    18.0
+                ]
+            ], 
+            "tooltip": "Lee Sin performs a powerful roundhouse kick launching an enemy champion back, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to the target and any enemies they collide with. Enemies the target collides with are knocked into the air for a short duration. Every time the target collides with an enemy champion, the target also deals {{ e3 }}% of their bonus health as physical damage.</span>", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "375", 
+            "range": [
+                375, 
+                375, 
+                375
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "200/400/600", 
+                "75/125/175", 
+                "12/15/18"
+            ], 
+            "image": {
+                "full": "BlindMonkRKick.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                90.0, 
+                75.0, 
+                60.0
+            ], 
+            "name": "Dragon's Rage"
+        }
+    ]
+}

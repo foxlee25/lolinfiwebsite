@@ -1,0 +1,444 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 5, 
+        "defense": 7, 
+        "magic": 6
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 61.27, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 0.0, 
+        "armor": 26.88, 
+        "hp": 582.52, 
+        "hpregenperlevel": 0.75, 
+        "attackspeedperlevel": 2.8, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 7.76, 
+        "hpperlevel": 89.0
+    }, 
+    "name": "Dr. Mundo", 
+    "title": "the Madman of Zaun", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "None", 
+    "passive": {
+        "image": {
+            "full": "DrMundo_AdrenalineRush2.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 432
+        }, 
+        "sanitizedDescription": "Dr. Mundo regenerates 0.3% of his maximum Health each second.", 
+        "name": "Adrenaline Rush", 
+        "description": "Dr. Mundo regenerates 0.3% of his maximum Health each second."
+    }, 
+    "quotes": [
+        "\"Mundo!\"", 
+        "\"Mundo... (slurp) smash!\"", 
+        "\"Mundo too strong for you!\"", 
+        "\"Rawr!\"", 
+        "\"Come to Mundo!\"", 
+        "\"Blah!\"", 
+        "\"Mundo go this way!\"", 
+        "\"Mundo...!\"", 
+        "\"Mundo smash like a boss!\"", 
+        "\"Time for Mundo to make cuts!\"", 
+        "\"Mundo outsource your FACE!\"", 
+        "\"Mundo never fly coach.\"", 
+        "\"Mundo check his schedule.\"", 
+        "\"Mundo say greed is good!\"", 
+        "\"Mundo upwardly mobile.\"", 
+        "\"Mundo do hostile takeover.\"", 
+        "\"Mundo eat TPS report.\"", 
+        "\"Mundo say 'you're fired'!\"", 
+        "\"Mundo sell!\"", 
+        "\"Mundo file!\"", 
+        "\"Mundo sell!\"", 
+        "\"Mundo file!\"", 
+        "\"Corporate Mundo!\"", 
+        "\"Corporate Mundo!\"", 
+        "\"Corporate Mundo!\"", 
+        "\"Rwaaargh! Corporate Mundo!\"", 
+        "\"Mundo...!\""
+    ], 
+    "key": "DrMundo", 
+    "lore": "It is said that the man now known as Dr. Mundo was born without any sort of conscience.  Instead, he had an unquenchable desire to inflict pain through experimentation. By the time he was five, most of the pets in the Zaun neighborhood where Mundo grew up had gone missing. By his teenage years, his parents were nowhere to be found. By the time he had legally acquired his license to practice medicine, he had been acquitted of thirty-eight separate charges of murder by the Zaun authorities; the lack of evidence made prosecution impossible.<br><br>Dr. Mundo has become equal parts serial killer and mad scientist, though no one is entirely sure how his butchery qualifies as science. However, he has made tremendous strides in mapping the pain response in the human brain and body, going so far as being able to suppress it, even in the most excruciating of circumstances. He has also tapped into the primal parts of the brain through chemistry, learning how to enhance aggression and adrenaline, as well as dulling conscience and the survival instinct. In short, Dr. Mundo's life's work has been how to create the perfect science-enhanced killer.  Unfortunately, the city-state of Noxus regards such behavior as a sign of initiative and ambition, rather than inhumanity. Originally fighting for Zaun, Dr. Mundo was recruited to also fight for Noxus in the League of Legends; the Madman dual faction status represents the fruits of a blossoming relationship between Zaun and Noxus. He continues his experiments to this day, even using himself as an experimental subject, as evidenced by his disfigured appearance and his... unique manner of speaking. There are rumors that the High Command in Noxus has given him free reign to pursue his life's work in his spare time.<br><br>Beware the Madman of Zaun. In his eyes, you are already dead.", 
+    "id": 36, 
+    "spells": [
+        {
+            "cooldownBurn": "4", 
+            "key": "InfectedCleaverMissileCast", 
+            "resource": "{{ e3 }} Health", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Minimum Damage", 
+                    "Damage Percent", 
+                    "Health Cost"
+                ]
+            }, 
+            "costType": "Health", 
+            "description": "Dr. Mundo hurls his cleaver, dealing damage equal to a portion of his target's current Health and slowing them for a short time. Dr. Mundo delights in the suffering of others, so he is returned half of the Health cost when he successfully lands a cleaver (increased to the full Health cost on killing blows).", 
+            "sanitizedDescription": "Dr. Mundo hurls his cleaver, dealing damage equal to a portion of his target's current Health and slowing them for a short time. Dr. Mundo delights in the suffering of others, so he is returned half of the Health cost when he successfully lands a cleaver (increased to the full Health cost on killing blows).", 
+            "sanitizedTooltip": "Dr. Mundo hurls his cleaver, dealing magic damage equal to {{ e2 }}% of the target's current Health ({{ e1 }} damage minimum) and slowing them by {{ e4 }}% for {{ e5 }} seconds. Half of the Health cost is refunded if the cleaver hits a target (increased to the full Health cost on killing blows).", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    130.0, 
+                    180.0, 
+                    230.0, 
+                    280.0
+                ], 
+                [
+                    15.0, 
+                    18.0, 
+                    21.0, 
+                    23.0, 
+                    25.0
+                ], 
+                [
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0, 
+                    90.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Dr. Mundo hurls his cleaver, dealing magic damage equal to {{ e2 }}% of the target's current Health ({{ e1 }} damage minimum) and slowing them by {{ e4 }}% for {{ e5 }} seconds.<br><br>Half of the Health cost is refunded if the cleaver hits a target (increased to the full Health cost on killing blows).", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "975", 
+            "range": [
+                975, 
+                975, 
+                975, 
+                975, 
+                975
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "80/130/180/230/280", 
+                "15/18/21/23/25", 
+                "50/60/70/80/90", 
+                "40", 
+                "2"
+            ], 
+            "image": {
+                "full": "InfectedCleaverMissileCast.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0
+            ], 
+            "name": "Infected Cleaver"
+        }, 
+        {
+            "cooldownBurn": "4", 
+            "key": "BurningAgony", 
+            "resource": "{{ e1 }} Health Per Sec", 
+            "leveltip": {
+                "effect": [
+                    " {{ e3 }} -> {{ e3NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage Per Second", 
+                    "Crowd Control Reduction", 
+                    "Health Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "HealthPerSec", 
+            "description": "Dr. Mundo drains his Health to reduce the duration of disables and deal continual damage to nearby enemies.", 
+            "sanitizedDescription": "Dr. Mundo drains his Health to reduce the duration of disables and deal continual damage to nearby enemies.", 
+            "sanitizedTooltip": "Toggle: Dr. Mundo deals {{ e3 }} (+{{ a1 }}) magic damage to nearby enemies, and reduces the duration of disables on Dr. Mundo by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    35.0, 
+                    50.0, 
+                    65.0, 
+                    80.0, 
+                    95.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Dr. Mundo deals {{ e3 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to nearby enemies, and reduces the duration of disables on Dr. Mundo by {{ e2 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "325", 
+            "range": [
+                325, 
+                325, 
+                325, 
+                325, 
+                325
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "10/15/20/25/30", 
+                "10/15/20/25/30", 
+                "35/50/65/80/95"
+            ], 
+            "image": {
+                "full": "BurningAgony.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0
+            ], 
+            "name": "Burning Agony"
+        }, 
+        {
+            "cooldownBurn": "7", 
+            "key": "Masochism", 
+            "resource": "{{ e2 }} Health", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Attack Damage Bonus", 
+                    "Bonus Factor", 
+                    "Health Cost"
+                ]
+            }, 
+            "costType": "Health", 
+            "description": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 seconds. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing.", 
+            "sanitizedDescription": "Masochism increases Dr. Mundo's Attack Damage by a flat amount for 5 seconds. In addition, Dr. Mundo also gains an additional amount of Attack Damage for each percentage of Health he is missing.", 
+            "sanitizedTooltip": "Increases Attack Damage by {{ e1 }} for {{ e4 }} seconds. Dr. Mundo gains an additional +{{ e3 }} Attack Damage for each percentage of Health he is missing.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    55.0, 
+                    70.0, 
+                    85.0, 
+                    100.0
+                ], 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0
+                ], 
+                [
+                    0.4, 
+                    0.55, 
+                    0.7, 
+                    0.85, 
+                    1.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Increases Attack Damage by {{ e1 }} for {{ e4 }} seconds. Dr. Mundo gains an additional +{{ e3 }} Attack Damage for each percentage of Health he is missing.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "40/55/70/85/100", 
+                "25/35/45/55/65", 
+                "0.4/0.55/0.7/0.85/1", 
+                "5"
+            ], 
+            "image": {
+                "full": "Masochism.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 144
+            }, 
+            "cooldown": [
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0
+            ], 
+            "name": "Masochism"
+        }, 
+        {
+            "cooldownBurn": "75", 
+            "key": "Sadism", 
+            "resource": "{{ e4 }}% of Current Health", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Heal Amount", 
+                    "Movement Speed Bonus"
+                ]
+            }, 
+            "costType": "pofCurrentHealth", 
+            "description": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration.", 
+            "sanitizedDescription": "Dr. Mundo sacrifices a portion of his Health for increased Movement Speed and drastically increased Health Regeneration.", 
+            "sanitizedTooltip": "Dr. Mundo regenerates {{ f1 }} health ({{ e1 }}% of max health) over {{ e2 }} seconds. Additionally, he gains {{ e3 }}% movement speed during this time.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    12.0, 
+                    12.0, 
+                    12.0
+                ], 
+                [
+                    15.0, 
+                    25.0, 
+                    35.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Dr. Mundo regenerates <span class=\"colorCC3300\">{{ f1 }}</span> health ({{ e1 }}% of max health) over {{ e2 }} seconds. Additionally, he gains {{ e3 }}% movement speed during this time.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "40/50/60", 
+                "12", 
+                "15/25/35", 
+                "20"
+            ], 
+            "image": {
+                "full": "Sadism.png", 
+                "group": "spell", 
+                "sprite": "spell2.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 192
+            }, 
+            "cooldown": [
+                75.0, 
+                75.0, 
+                75.0
+            ], 
+            "name": "Sadism"
+        }
+    ]
+}

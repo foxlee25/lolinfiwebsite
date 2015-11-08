@@ -1,0 +1,505 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 3, 
+        "defense": 9, 
+        "magic": 3
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 60.17, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.04, 
+        "mp": 200.0, 
+        "armor": 25.72, 
+        "hp": 570.8, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 3.4, 
+        "attackrange": 125.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.375, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 50.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.37, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Shen", 
+    "title": "Eye of Twilight", 
+    "tags": [
+        "Tank", 
+        "Fighter"
+    ], 
+    "partype": "Energy", 
+    "passive": {
+        "image": {
+            "full": "Shen_KiStrike.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Shen's next attack periodically deals bonus damage.", 
+        "name": "Ki Strike", 
+        "description": "Shen's next attack periodically deals bonus damage."
+    }, 
+    "quotes": [
+        "\"It must be done.\"", 
+        "\"Enforced equilibrium.\"", 
+        "\"I find them unworthy.\"", 
+        "\"Target marked.\"", 
+        "\"With honor.\"", 
+        "\"Understood.\"", 
+        "\"With balanced steps.\"", 
+        "\"Our wills align.\"", 
+        "\"Press on.\"", 
+        "\"From the shadows.\"", 
+        "\"So I go.\"", 
+        "\"Tread carefully.\"", 
+        "\"Without a sound.\"", 
+        "\"There is no dispute.\"", 
+        "\"Immediately.\"", 
+        "Shen was designed by Guinsoo"
+    ], 
+    "key": "Shen", 
+    "lore": "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness - all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou and it employs a triumvirate of shadow warriors to uphold its causes in the world. Shen is one of these shadow warriors, entrusted with the sacred duty of Watching the Stars - exercising judgment untainted by prejudice.<br><br>Born to a clan whose members have decorated the ranks of the Kinkou for generations, Shen was trained his entire life to become the Eye of Twilight, and thereupon to dispassionately determine what must be done in the interests of equilibrium. As his final trial to ascend to this position, he was made to attend the Takanu, a ceremony in which his father was tortured before his eyes to test his resolve. Any reaction whatsoever would have resulted in his immediate disqualification, but he never averted his gaze and never blinked, not once. As the Eye of Twilight, Shen must make decisions that would buckle the wills of ordinary men, removing all emotion from the equation. He now works with his fellows Akali and Kennen to enforce the balance of Valoran. This hallowed pursuit has unsurprisingly led the triumvirate to the Fields of Justice.<br><br>The Eye of Twilight sees not the despair of its victims, only the elegance of equilibrium.", 
+    "id": 98, 
+    "spells": [
+        {
+            "cooldownBurn": "6/5.5/5/4.5/4", 
+            "key": "ShenVorpalStar", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    " {{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Base Heal Amount", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        6.0, 
+                        10.0, 
+                        14.0, 
+                        18.0, 
+                        22.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.015
+                    ], 
+                    "link": "health", 
+                    "key": "f2"
+                }, 
+                {
+                    "coeff": [
+                        0.005
+                    ], 
+                    "link": "health", 
+                    "key": "f3"
+                }
+            ], 
+            "costType": "Energy", 
+            "description": "Damages and life taps a target unit, healing allies that attack the target.", 
+            "sanitizedDescription": "Damages and life taps a target unit, healing allies that attack the target.", 
+            "sanitizedTooltip": "Deals {{ e1 }} (+{{ a1 }}) magic damage to target unit and marks them for {{ e4 }} seconds. Allied spells and attacks against this target heal the attackers {{ f1 }} ({{ e2 }} + {{ f2 }} [{{ e3 }}% of Shen's max Health]) over {{ e5 }} seconds. Killing an enemy with Vorpal Blade restores {{ f3 }} Health instantly instead.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    100.0, 
+                    140.0, 
+                    180.0, 
+                    220.0
+                ], 
+                [
+                    3.0, 
+                    6.0, 
+                    9.0, 
+                    12.0, 
+                    15.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to target unit and marks them for {{ e4 }} seconds.<br><br>Allied spells and attacks against this target heal the attackers {{ f1 }} ({{ e2 }} <span class=\"colorCC3300\">+ {{ f2 }} [{{ e3 }}% of Shen's max Health]</span>) over {{ e5 }} seconds.<br><br>Killing an enemy with Vorpal Blade restores {{ f3 }} Health instantly instead.", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "475", 
+            "range": [
+                475, 
+                475, 
+                475, 
+                475, 
+                475
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "60/100/140/180/220", 
+                "3/6/9/12/15", 
+                "1.5", 
+                "5", 
+                "3"
+            ], 
+            "image": {
+                "full": "ShenVorpalStar.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 240
+            }, 
+            "cooldown": [
+                6.0, 
+                5.5, 
+                5.0, 
+                4.5, 
+                4.0
+            ], 
+            "name": "Vorpal Blade"
+        }, 
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "ShenFeint", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage Blocked", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Energy", 
+            "description": "Shen shields himself, absorbing incoming damage for a few seconds.", 
+            "sanitizedDescription": "Shen shields himself, absorbing incoming damage for a few seconds.", 
+            "sanitizedTooltip": "Shen shields himself, absorbing the next {{ e1 }} (+{{ a1 }}) damage. Lasts up to {{ e4 }} seconds. While Feint holds, his attacks reduce Ki Strike's cooldown by an additional {{ e5 }} second.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    100.0, 
+                    140.0, 
+                    180.0, 
+                    220.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "Shen shields himself, absorbing the next {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> damage. Lasts up to {{ e4 }} seconds.<br><br>While Feint holds, his attacks reduce Ki Strike's cooldown by an additional {{ e5 }} second.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "60/100/140/180/220", 
+                "20/25/30/35/40", 
+                "20", 
+                "3", 
+                "1"
+            ], 
+            "image": {
+                "full": "ShenFeint.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 288
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Feint"
+        }, 
+        {
+            "cooldownBurn": "16/14/12/10/8", 
+            "key": "ShenShadowDash", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Damage Dealt", 
+                    "Energy Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Energy", 
+            "description": "Shen dashes rapidly toward a target location, taunting enemy champions he encounters and dealing minor damage.", 
+            "sanitizedDescription": "Shen dashes rapidly toward a target location, taunting enemy champions he encounters and dealing minor damage.", 
+            "sanitizedTooltip": "Shen dashes in a direction, dealing {{ e4 }} (+{{ a1 }}) magic damage to champions and taunting champions he collides with for {{ e1 }} second(s). Taunted enemies are forced to attack Shen and their basic attacks deal {{ e3 }}% reduced damage. Restores {{ e2 }} Energy per champion affected.", 
+            "effect": [
+                null, 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    50.0, 
+                    85.0, 
+                    120.0, 
+                    155.0, 
+                    190.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Shen dashes in a direction, dealing {{ e4 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to champions and taunting champions he collides with for {{ e1 }} second(s).<br><br>Taunted enemies are forced to attack Shen and their basic attacks deal {{ e3 }}% reduced damage.<br><br>Restores {{ e2 }} Energy per champion affected.", 
+            "maxrank": 5, 
+            "costBurn": "100/95/90/85/80", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                100, 
+                95, 
+                90, 
+                85, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "1.5", 
+                "40", 
+                "50", 
+                "50/85/120/155/190", 
+                "50"
+            ], 
+            "image": {
+                "full": "ShenShadowDash.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 336
+            }, 
+            "cooldown": [
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0
+            ], 
+            "name": "Shadow Dash"
+        }, 
+        {
+            "cooldownBurn": "180/150/120", 
+            "key": "ShenStandUnited", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    " {{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Shield Health", 
+                    "Cooldown "
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.35
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Shen shields target allied champion from incoming damage, and soon after teleports to their location.", 
+            "sanitizedDescription": "Shen shields target allied champion from incoming damage, and soon after teleports to their location.", 
+            "sanitizedTooltip": "Places a shield on target allied champion, absorbing {{ e1 }} (+{{ a1 }}) damage for 5 seconds. After channeling for {{ e3 }} seconds, Shen teleports to the target's location.", 
+            "effect": [
+                null, 
+                [
+                    250.0, 
+                    550.0, 
+                    850.0
+                ], 
+                [
+                    200.0, 
+                    300.0, 
+                    400.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Places a shield on target allied champion, absorbing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> damage for 5 seconds. After channeling for {{ e3 }} seconds, Shen teleports to the target's location.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "25000", 
+            "range": [
+                25000, 
+                25000, 
+                25000
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "250/550/850", 
+                "200/300/400", 
+                "3"
+            ], 
+            "image": {
+                "full": "ShenStandUnited.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 384
+            }, 
+            "cooldown": [
+                180.0, 
+                150.0, 
+                120.0
+            ], 
+            "name": "Stand United"
+        }
+    ]
+}

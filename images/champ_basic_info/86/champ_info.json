@@ -1,0 +1,498 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 7, 
+        "defense": 7, 
+        "magic": 1
+    }, 
+    "stats": {
+        "armorperlevel": 3.0, 
+        "attackdamage": 57.88, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 0.0, 
+        "armor": 27.536, 
+        "hp": 616.28, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 2.9, 
+        "attackrange": 175.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 4.5, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 7.84, 
+        "hpperlevel": 84.25
+    }, 
+    "name": "Garen", 
+    "title": "The Might of Demacia", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "None", 
+    "passive": {
+        "image": {
+            "full": "Garen_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "If Garen has not recently been struck by damage or enemy abilities, he regenerates a percentage of his maximum health each second. Minion damage does not stop Perseverance.", 
+        "name": "Perseverance", 
+        "description": "If Garen has not recently been struck by damage or enemy abilities, he regenerates a percentage of his maximum health each second. Minion damage does not stop Perseverance."
+    }, 
+    "quotes": [
+        "\"Victory awaits!\"", 
+        "\"Accursed villains.\"", 
+        "\"Battle the infamy.\"", 
+        "\"I will lead the charge.\"", 
+        "\"Vile scourge.\"", 
+        "\"The scoundrels will pay!\"", 
+        "\"What we do is right!\"", 
+        "\"We are the vanguard.\"", 
+        "\"Forge onward!\"", 
+        "\"For Demacia.\"", 
+        "\"In the King's name.\"", 
+        "\"I bring justice.\"", 
+        "\"Fear not, I'm coming.\"", 
+        "\"To protect our land.\"", 
+        "\"I stand ready.\"", 
+        "\"This world needs hope.\"", 
+        "\"Never forget why we fight!\"", 
+        "\"Demacia marches as one.\"", 
+        "\"Our deeds shape the future.\"", 
+        "\"Keep faith in yourself.\"", 
+        "\"Be bold; be just!\"", 
+        "\"Demacia...\"", 
+        "\"Darius, eat your heart out.\"", 
+        "\"Charge!\"", 
+        "\"Forward!\"", 
+        "\"Stay resolute!\"", 
+        "\"Demacia!\"", 
+        "\"Hold fast!\"", 
+        "also upon killing ", 
+        "\"Break their ranks!\"", 
+        "\"I will not falter!\"", 
+        "\"Justice!\"", 
+        "\"For the cause!\"", 
+        "\"Demacia...\"", 
+        "Garen was designed by Geeves", 
+        "Perseverance", 
+        "Decisive Strike", 
+        "Decisive Strike", 
+        "Decisive Strike", 
+        "Decisive Strike's", 
+        "Decisive Strike", 
+        "Decisive Strike", 
+        "Decisive Strike's", 
+        "passive", 
+        "active", 
+        "Courage", 
+        "Courage's", 
+        "Courage's", 
+        "Courage's", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgment", 
+        "Judgement", 
+        "Total duration unchanged.", 
+        "Demacian Justice's", 
+        "Villains"
+    ], 
+    "key": "Garen", 
+    "lore": "Throughout Valoran, the resolve of Demacia's military is alternately celebrated or despised, but always respected. Their ''zero tolerance'' moral code is strictly upheld by civilians and soldiers alike. In combat, this means Demacian troops may not make excuses, flee, or surrender under any circumstance. These principles are espoused to their forces by unrivaled demagogues who lead by example. Garen, the valiant warrior who bears the title ''the Might of Demacia'', is the paradigm to which these leaders are compared. Thousands of great heroes have risen and fallen on the bloody battlefields between Demacia and its preeminent rival, Noxus. It was beneath their mighty banners of war that Garen first met steel with Katarina, the Sinister Blade. The infantrymen who beheld this event (and survived) commented that it seemed as though the two were locked in a mortal waltz against a symphony of clashing blades.<br><br>Garen, the pride of the Demacian military and leader of the Dauntless Vanguard, returned from this battle breathless for the first time in his career, though some speculate that this was due to reasons other than exhaustion. The plausibility of these rumors was bolstered when, in every instance thereafter, Garen seized the opportunity to encounter the Sinister Blade again. A paragon of Demacian ethic, Garen never entertained such allegations, for he knew others couldn't understand. Even simply the pursuit of a worthy opponent on the battlefield is, to a true warrior, the reason to rise each morning. The promise of one, particularly so beautifully and diametrically opposed, is the validation of his existence. <br><br>''The most effective way to kill an opponent is to slice through the man next to him.''<br>-- Garen, on front line strategy", 
+    "id": 86, 
+    "spells": [
+        {
+            "cooldownBurn": "8", 
+            "key": "GarenQ", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e5 }} -> {{ e5NL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Movement Speed Duration"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.4
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Garen gains a burst of movement speed, breaking free of all slows affecting him. His next attack strikes a vital area of his foe, dealing bonus damage and silencing them.", 
+            "sanitizedDescription": "Garen gains a burst of movement speed, breaking free of all slows affecting him. His next attack strikes a vital area of his foe, dealing bonus damage and silencing them.", 
+            "sanitizedTooltip": "Garen breaks free from all slows affecting him, and gains {{ e2 }}% movement speed for {{ e5 }} seconds. His next basic attack within {{ e6 }} seconds deals {{ e1 }} (+{{ a1 }}) physical damage and silences his target for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    55.0, 
+                    80.0, 
+                    105.0, 
+                    130.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    1.5, 
+                    2.0, 
+                    2.5, 
+                    3.0, 
+                    3.5
+                ], 
+                [
+                    4.5, 
+                    4.5, 
+                    4.5, 
+                    4.5, 
+                    4.5
+                ]
+            ], 
+            "tooltip": "Garen breaks free from all slows affecting him, and gains {{ e2 }}% movement speed for {{ e5 }} seconds.<br><br>His next basic attack within {{ e6 }} seconds deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage and silences his target for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "30/55/80/105/130", 
+                "30", 
+                "1.5", 
+                "1.5", 
+                "1.5/2/2.5/3/3.5", 
+                "4.5"
+            ], 
+            "image": {
+                "full": "GarenQ.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 192
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Decisive Strike"
+        }, 
+        {
+            "cooldownBurn": "24/23/22/21/20", 
+            "key": "GarenW", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Active Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Garen passively increases his armor and magic resist by killing enemies. He may also activate this ability to grant himself a shield that reduces incoming damage for a short time.", 
+            "sanitizedDescription": "Garen passively increases his armor and magic resist by killing enemies. He may also activate this ability to grant himself a shield that reduces incoming damage for a short time.", 
+            "sanitizedTooltip": "Passive: Killing units permanently grants {{ f2 }} armor and magic resist, up to a maximum of {{ e3 }}. Current Bonus: {{ f1 }} Active: Garen gains a defensive shield for {{ e4 }} seconds, reducing incoming damage by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    2.0, 
+                    3.0, 
+                    4.0, 
+                    5.0, 
+                    6.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Killing units permanently grants {{ f2 }} armor and magic resist, up to a maximum of {{ e3 }}. Current Bonus: <span class=\"colorFFFFFF\">{{ f1 }}</span><br><br><span class=\"colorFF9900\">Active: </span>Garen gains a defensive shield for {{ e4 }} seconds, reducing incoming damage by {{ e2 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "0.25", 
+                "30", 
+                "30", 
+                "2/3/4/5/6", 
+                "20", 
+                "1"
+            ], 
+            "image": {
+                "full": "GarenW.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 240
+            }, 
+            "cooldown": [
+                24.0, 
+                23.0, 
+                22.0, 
+                21.0, 
+                20.0
+            ], 
+            "name": "Courage"
+        }, 
+        {
+            "cooldownBurn": "9", 
+            "key": "GarenE", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Base Damage per Tick", 
+                    "Total Attack Damage Ratio per Tick"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Garen performs a dance of death with his sword, dealing damage around him for the duration.", 
+            "sanitizedDescription": "Garen performs a dance of death with his sword, dealing damage around him for the duration.", 
+            "sanitizedTooltip": "Garen rapidly spins his sword around his body for {{ e2 }} seconds, dealing {{ f3 }} physical damage to nearby enemies -- {{ e1 }} plus {{ e3 }}% of his attack damage (+{{ f1 }}), {{ f2 }} times (increased by 1 every 3 champion levels) -- over the duration. Judgment deals {{ e4 }}% increased damage when striking only one enemy. Cancelling Judgment returns cooldown equal to the remaining duration. Judgment can critically strike for bonus damage.", 
+            "effect": [
+                null, 
+                [
+                    14.0, 
+                    18.0, 
+                    22.0, 
+                    26.0, 
+                    30.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    34.0, 
+                    35.0, 
+                    36.0, 
+                    37.0, 
+                    38.0
+                ], 
+                [
+                    33.0, 
+                    33.0, 
+                    33.0, 
+                    33.0, 
+                    33.0
+                ]
+            ], 
+            "tooltip": "Garen rapidly spins his sword around his body for {{ e2 }} seconds, dealing {{ f3 }} physical damage to nearby enemies -- {{ e1 }} plus {{ e3 }}% of his attack damage <span class=\"colorFF8C00\">(+{{ f1 }})</span>, <span class=\"colorFFFFFF\">{{ f2 }}</span> times (increased by 1 every 3 champion levels) -- over the duration.<br><br><span class=\"color99FF99\">Judgment deals {{ e4 }}% increased damage when striking only one enemy.<br>Cancelling Judgment returns cooldown equal to the remaining duration.<br><span class=\"color99FF99\">Judgment can critically strike for bonus damage.</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "325", 
+            "range": [
+                325, 
+                325, 
+                325, 
+                325, 
+                325
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "14/18/22/26/30", 
+                "3", 
+                "34/35/36/37/38", 
+                "33"
+            ], 
+            "image": {
+                "full": "GarenE.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 288
+            }, 
+            "cooldown": [
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0
+            ], 
+            "name": "Judgment"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "GarenR", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Missing Health Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "The enemy champion with the most recent kills is the Villain. Garen's attacks deal additional true damage to that champion.<br><br>Garen can call upon the might of Demacia to deal a finishing blow to an enemy champion that deals damage based upon how much health his target has missing. This damage is true damage against the Villain.", 
+            "sanitizedDescription": "The enemy champion with the most recent kills is the Villain. Garen's attacks deal additional true damage to that champion. Garen can call upon the might of Demacia to deal a finishing blow to an enemy champion that deals damage based upon how much health his target has missing. This damage is true damage against the Villain.", 
+            "sanitizedTooltip": "Passive: The enemy champion with the most recent kills is the Villain. Judgment and basic attacks against it deal an additional {{ e3 }}% of its maximum health as true damage. Active: Garen calls upon the might of Demacia to attempt to execute an enemy champion, dealing {{ e1 }} magic damage plus {{ e2 }}% of the target's missing health. Deals true damage to the Villain.", 
+            "effect": [
+                null, 
+                [
+                    175.0, 
+                    350.0, 
+                    525.0
+                ], 
+                [
+                    28.0, 
+                    33.0, 
+                    40.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> The enemy champion with the most recent kills is the <span class=\"colorFFF673\">Villain</span>. Judgment and basic attacks against it deal an additional {{ e3 }}% of its maximum health as true damage.<br><br><span class=\"colorFF9900\">Active:</span> Garen calls upon the might of Demacia to attempt to execute an enemy champion, dealing {{ e1 }} magic damage plus {{ e2 }}% of the target's missing health. Deals true damage to the <span class=\"colorFFF673\">Villain</span>.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "175/350/525", 
+                "28/33/40", 
+                "1"
+            ], 
+            "image": {
+                "full": "GarenR.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 336
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "Demacian Justice"
+        }
+    ]
+}

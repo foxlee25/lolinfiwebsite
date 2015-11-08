@@ -1,0 +1,465 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 6, 
+        "defense": 6, 
+        "magic": 6
+    }, 
+    "stats": {
+        "armorperlevel": 3.6, 
+        "attackdamage": 57.58, 
+        "mpperlevel": 35.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 293.8, 
+        "armor": 25.048, 
+        "hp": 563.8, 
+        "hpregenperlevel": 0.7, 
+        "attackspeedperlevel": 3.0, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.5, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 6.755, 
+        "spellblock": 32.1, 
+        "hpregen": 8.175, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Yorick", 
+    "title": "the Gravedigger", 
+    "tags": [
+        "Fighter", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "YorickUnholyCovenant.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 336
+        }, 
+        "sanitizedDescription": "Yorick takes 5% reduced damage and his basic attacks deal 5% more damage for each summon that is active. Meanwhile, Yorick's ghouls have 35% of Yorick's Attack Damage and Health.", 
+        "name": "Unholy Covenant", 
+        "description": "Yorick takes 5% reduced damage and his basic attacks deal 5% more damage for each summon that is active. Meanwhile, Yorick's ghouls have 35% of Yorick's Attack Damage and Health."
+    }, 
+    "quotes": [
+        "\"Death is only the beginning.\"", 
+        "\"Death is the gift I offer.\"", 
+        "\"Life slips away.\"", 
+        "\"Embrace the inevitable.\"", 
+        "\"Who requires my services?\"", 
+        "\"The last breath is sweetest.\"", 
+        "\"Fill the ground with them.\"", 
+        "\"Join me in eternity.\"", 
+        "\"Do you hear the ghouls?\"", 
+        "\"I will bury you alive!\"", 
+        "\"Wither.\"", 
+        "\"Rot.\"", 
+        "\"Torment!\"", 
+        "\"Devour!\"", 
+        "\"Feast!\"", 
+        "\"Haunt!\"", 
+        "\"Alas, poor Yorick.\"", 
+        "\"Are you lonely, Yorick?\"", 
+        "\"As you wish, Gravedigger.\"", 
+        "\"Greeting Summoners!"
+    ], 
+    "key": "Yorick", 
+    "lore": "A terrifying and tragic figure, Yorick is a ghoulish being that exists on the edge of mortality. Some say he was the last of his family line, dying without an heir to continue its legacy, and that he was cursed to continue his family's duty even after death. Wielding the twisted shovel he bore in life, he continues his macabre work, endlessly digging and filling graves upon the haunted Shadow Isles.", 
+    "id": 83, 
+    "spells": [
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "YorickSpectral", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Spectral Attack Damage", 
+                    "Movement Speed", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Yorick's next attack will deal bonus physical damage and summon a Spectral Ghoul that deals additional damage and moves faster than Yorick's other ghouls. While the Spectral Ghoul is alive, Yorick moves faster as well.", 
+            "sanitizedDescription": "Yorick's next attack will deal bonus physical damage and summon a Spectral Ghoul that deals additional damage and moves faster than Yorick's other ghouls. While the Spectral Ghoul is alive, Yorick moves faster as well.", 
+            "sanitizedTooltip": "Yorick's next attack will deal {{ e1 }} (+{{ a1 }}) physical damage and summon a Spectral Ghoul for up to 5 seconds. The Spectral Ghoul deals {{ e2 }} additional damage per hit and moves {{ e3 }}% faster. While the ghoul is active, Yorick moves {{ e3 }}% faster as well.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    8.0, 
+                    16.0, 
+                    24.0, 
+                    32.0, 
+                    40.0
+                ], 
+                [
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    7.0, 
+                    6.5, 
+                    6.0, 
+                    5.5, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Yorick's next attack will deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage and summon a Spectral Ghoul for up to 5 seconds.<br><br>The Spectral Ghoul deals {{ e2 }} additional damage per hit and moves {{ e3 }}% faster. While the ghoul is active, Yorick moves {{ e3 }}% faster as well.</span>", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "30/60/90/120/150", 
+                "8/16/24/32/40", 
+                "15/20/25/30/35", 
+                "7/6.5/6/5.5/5"
+            ], 
+            "image": {
+                "full": "YorickSpectral.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 336
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Omen of War"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "YorickDecayed", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Initial Slow Percent", 
+                    "Persistent Slow Percent", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Yorick summons a Decaying Ghoul that arrives with a violent explosion, dealing damage and slowing nearby enemies. While the Decaying Ghoul remains alive, nearby enemies continue to be slowed.", 
+            "sanitizedDescription": "Yorick summons a Decaying Ghoul that arrives with a violent explosion, dealing damage and slowing nearby enemies. While the Decaying Ghoul remains alive, nearby enemies continue to be slowed.", 
+            "sanitizedTooltip": "Yorick summons a Decaying Ghoul that arrives with a violent explosion, dealing {{ e2 }} (+{{ a1 }}) magic damage and slowing nearby enemies by {{ e1 }}% for 1.5 seconds. While the Decaying Ghoul remains alive, nearby enemies continue to be slowed by {{ e3 }}% for up to 5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    60.0, 
+                    95.0, 
+                    130.0, 
+                    165.0, 
+                    200.0
+                ], 
+                [
+                    10.0, 
+                    12.5, 
+                    15.0, 
+                    17.5, 
+                    20.0
+                ], 
+                [
+                    7.0, 
+                    6.5, 
+                    6.0, 
+                    5.5, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Yorick summons a Decaying Ghoul that arrives with a violent explosion, dealing {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and slowing nearby enemies by {{ e1 }}% for 1.5 seconds. While the Decaying Ghoul remains alive, nearby enemies continue to be slowed by {{ e3 }}% for up to 5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "55/60/65/70/75", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                55, 
+                60, 
+                65, 
+                70, 
+                75
+            ], 
+            "effectBurn": [
+                "", 
+                "20/25/30/35/40", 
+                "60/95/130/165/200", 
+                "10/12.5/15/17.5/20", 
+                "7/6.5/6/5.5/5"
+            ], 
+            "image": {
+                "full": "YorickDecayed.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Omen of Pestilence"
+        }, 
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "YorickRavenous", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Yorick steals life from his target and summons a Ravenous Ghoul that heals Yorick for the damage it deals.", 
+            "sanitizedDescription": "Yorick steals life from his target and summons a Ravenous Ghoul that heals Yorick for the damage it deals.", 
+            "sanitizedTooltip": "Yorick deals {{ e1 }} (+{{ f1 }}) magic damage and heals for up to {{ e5 }}% of the damage dealt. A Ravenous Ghoul is summoned behind his target for up to 5 seconds, healing Yorick for the damage it deals (healing from ghoul damage halved against minions and monsters).", 
+            "effect": [
+                null, 
+                [
+                    55.0, 
+                    85.0, 
+                    115.0, 
+                    145.0, 
+                    175.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                null, 
+                [
+                    7.0, 
+                    6.5, 
+                    6.0, 
+                    5.5, 
+                    5.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "Yorick deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> magic damage and heals for up to {{ e5 }}% of the damage dealt. A Ravenous Ghoul is summoned behind his target for up to 5 seconds, healing Yorick for the damage it deals (healing from ghoul damage halved against minions and monsters).", 
+            "maxrank": 5, 
+            "costBurn": "55/60/65/70/75", 
+            "rangeBurn": "550", 
+            "range": [
+                550, 
+                550, 
+                550, 
+                550, 
+                550
+            ], 
+            "cost": [
+                55, 
+                60, 
+                65, 
+                70, 
+                75
+            ], 
+            "effectBurn": [
+                "", 
+                "55/85/115/145/175", 
+                "10/15/20/25/30", 
+                "", 
+                "7/6.5/6/5.5/5", 
+                "40"
+            ], 
+            "image": {
+                "full": "YorickRavenous.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 432
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Omen of Famine"
+        }, 
+        {
+            "cooldownBurn": "120/105/90", 
+            "key": "YorickReviveAlly", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage Percent", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Yorick conjures a revenant in the image of one of his allies. If his ally dies while its revenant is alive, the revenant sacrifices itself to reanimate them and give them time to enact vengeance.", 
+            "sanitizedDescription": "Yorick conjures a revenant in the image of one of his allies. If his ally dies while its revenant is alive, the revenant sacrifices itself to reanimate them and give them time to enact vengeance.", 
+            "sanitizedTooltip": "Yorick conjures a revenant in the image of a target allied champion. Revenants deal {{ e1 }}% of target ally's Attack Damage and last for {{ e4 }} seconds. If his ally dies while its revenant is alive, the revenant sacrifices itself to reanimate them for up to {{ e4 }} seconds. The revenant can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.", 
+            "effect": [
+                null, 
+                [
+                    45.0, 
+                    60.0, 
+                    75.0
+                ], 
+                [
+                    65.0, 
+                    75.0, 
+                    85.0
+                ], 
+                [
+                    75.0, 
+                    150.0, 
+                    225.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0
+                ]
+            ], 
+            "tooltip": "Yorick conjures a revenant in the image of a target allied champion. Revenants deal {{ e1 }}% of target ally's Attack Damage and last for {{ e4 }} seconds. If his ally dies while its revenant is alive, the revenant sacrifices itself to reanimate them for up to {{ e4 }} seconds.<br><br><span class=\"color99FF99\">The revenant can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.</span>", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "45/60/75", 
+                "65/75/85", 
+                "75/150/225", 
+                "10"
+            ], 
+            "image": {
+                "full": "YorickReviveAlly.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 0
+            }, 
+            "cooldown": [
+                120.0, 
+                105.0, 
+                90.0
+            ], 
+            "name": "Omen of Death"
+        }
+    ]
+}

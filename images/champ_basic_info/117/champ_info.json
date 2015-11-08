@@ -1,0 +1,518 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 4, 
+        "defense": 5, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.7, 
+        "attackdamage": 46.368, 
+        "mpperlevel": 55.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 292.4, 
+        "armor": 19.216, 
+        "hp": 552.76, 
+        "hpregenperlevel": 0.6, 
+        "attackspeedperlevel": 2.25, 
+        "attackrange": 550.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 2.6, 
+        "mpregenperlevel": 0.6, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.5, 
+        "spellblock": 30.0, 
+        "hpregen": 6.005, 
+        "hpperlevel": 74.0
+    }, 
+    "name": "Lulu", 
+    "title": "the Fae Sorceress", 
+    "tags": [
+        "Support", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Lulu_PixFaerieCompanion.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Pix is a wild Faerie that accompanies Lulu. Pix will fire a barrage of magical energy at targets that Lulu attacks.", 
+        "name": "Pix, Faerie Companion", 
+        "description": "Pix is a wild Faerie that accompanies Lulu. Pix will fire a barrage of magical energy at targets that Lulu attacks."
+    }, 
+    "quotes": [
+        "\"Pleased to meet you!\"", 
+        "\"They aren't gonna like this.\"", 
+        "\"Dust em, Pix!\"", 
+        "\"Let's use ALL the colors!\"", 
+        "\"Too tallmuch too tall.\"", 
+        "\"I recommend skipping.\"", 
+        "\"Just a pinch!\"", 
+        "\"Yup, that tasted purple.\"", 
+        "\"Whoa...dizzy.\"", 
+        "\"Nosey dewdrop...\"", 
+        "\"C'mon you, let's dance! Ha!\"", 
+        "\"Let's go around again! Ha!\"", 
+        "\"Adoribus!\"", 
+        "\"Fuzzy!\"", 
+        "\"Delightify!\"", 
+        "\"Transmogulate!\"", 
+        "\"Cuddly incoming!\"", 
+        "\"Zippy!\"", 
+        "\"Vroom vroom!\"", 
+        "\"Tut tut!\"", 
+        "\"Hot foot!\"", 
+        "\"Hugeify!\"", 
+        "\"Tremendo!\"", 
+        "\"Up we go!\"", 
+        "\"Enormibus!\""
+    ], 
+    "key": "Lulu", 
+    "lore": "Perhaps more than any other champion in the League, Lulu marches to the beat of her own drum. During her youth in Bandle City, she spent most of her time wandering alone in the forest or lost in a daydream. It wasn't that she was antisocial; the day-to-day bustle of Bandle City just couldn't compete with the vibrant world of her imagination. She saw wonder in places most people overlooked. This was how she found Pix, a fae spirit, pretending to be stuck in a birdhouse. Lulu's imagination distinguished her to Pix and he seized the opportunity to lure her into his world. He brought her to the Glade, the enchanted home of the fae, which lay nestled in a clearing in the woods. There the rigid properties of the outside world - things like size and color - changed as frequently and whimsically as the direction of the wind. Lulu felt at home in the Glade and she lingered there with Pix, fascinated by this secret place.<br><br>She quickly lost track of time. Her life in the Glade was comfortable and natural. She and Pix played fae games together, the sorts of games that she had been told were ''make believe''... and she got exceedingly good at them. It caught her by surprise when she suddenly remembered that she had left a life behind in Bandle City. The Glade had a way of making everything outside seem distant and surreal. Lulu decided to revisit her former home, to share some of the lovely things she'd learned, but when she and Pix returned the world had changed. Time, she discovered, was another property that behaved differently in the Glade, and centuries had passed while she was away. Lulu sought to reconnect to the residents of the outside world but her attempts had unfortunate results. She led all the children off to play hide and seek, temporarily changing them into flowers and animals to spice up the game, but their parents didn't appreciate her efforts. When the yordles insisted that she leave their land, she turned to a vibrant magical place where those with unusual gifts were not just accepted but adored: the League of Legends.<br><br>''The best path between two points is upside-down, between, then inside-out and round again.''<br>-- Lulu", 
+    "id": 117, 
+    "spells": [
+        {
+            "cooldownBurn": "7", 
+            "key": "LuluQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits. An enemy can only be damaged by one bolt.", 
+            "sanitizedDescription": "Pix and Lulu each fire a bolt of magical energy that heavily slows all enemies it hits. An enemy can only be damaged by one bolt.", 
+            "sanitizedTooltip": "Lulu and Pix each fire a piercing bolt dealing {{ e1 }} (+{{ a1 }}) magic damage, slowing enemies hit by {{ e2 }}% for {{ e3 }} second(s). This slow decays over time. An enemy can only be damaged by one bolt.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    125.0, 
+                    170.0, 
+                    215.0, 
+                    260.0
+                ], 
+                [
+                    80.0, 
+                    80.0, 
+                    80.0, 
+                    80.0, 
+                    80.0
+                ], 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "tooltip": "Lulu and Pix each fire a piercing bolt dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage, slowing enemies hit by {{ e2 }}% for {{ e3 }} second(s). This slow decays over time.<br><br>An enemy can only be damaged by one bolt.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "925", 
+            "range": [
+                925, 
+                925, 
+                925, 
+                925, 
+                925
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "80/125/170/215/260", 
+                "80", 
+                "1/1.25/1.5/1.75/2", 
+                "0.5"
+            ], 
+            "image": {
+                "full": "LuluQ.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 192
+            }, 
+            "cooldown": [
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0
+            ], 
+            "name": "Glitterlance"
+        }, 
+        {
+            "cooldownBurn": "18/16.5/15/13.5/12", 
+            "key": "LuluW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Movement Speed Duration", 
+                    "Polymorph Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.1
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "If cast on an ally, grants them Movement Speed for a short time. If cast on an enemy, turns them into an adorable critter that can't attack or cast spells.", 
+            "sanitizedDescription": "If cast on an ally, grants them Movement Speed for a short time. If cast on an enemy, turns them into an adorable critter that can't attack or cast spells.", 
+            "sanitizedTooltip": "On Ally Cast: Target ally gains {{ e1 }} (+{{ a2 }})% Movement Speed for {{ e5 }} seconds. On Enemy Cast: Polymorphs an enemy champion for {{ e3 }} seconds, disabling their ability to attack or cast spells and reducing their base Movement Speed by {{ e4 }}.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0, 
+                    2.25
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0
+                ], 
+                [
+                    3.0, 
+                    3.5, 
+                    4.0, 
+                    4.5, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorCCFF99\">On Ally Cast: </span>Target ally gains {{ e1 }} <span class=\"color99FF99\">(+{{ a2 }})</span>% Movement Speed for {{ e5 }} seconds.<br><br><span class=\"colorFF9999\">On Enemy Cast: </span>Polymorphs an enemy champion for {{ e3 }} seconds, disabling their ability to attack or cast spells and reducing their base Movement Speed by {{ e4 }}.", 
+            "maxrank": 5, 
+            "costBurn": "65", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                65, 
+                65, 
+                65, 
+                65, 
+                65
+            ], 
+            "effectBurn": [
+                "", 
+                "30", 
+                "20/30/40/50/60", 
+                "1.25/1.5/1.75/2/2.25", 
+                "60", 
+                "3/3.5/4/4.5/5"
+            ], 
+            "image": {
+                "full": "LuluW.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 240
+            }, 
+            "cooldown": [
+                18.0, 
+                16.5, 
+                15.0, 
+                13.5, 
+                12.0
+            ], 
+            "name": "Whimsy"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "LuluE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Shield Amount", 
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy.", 
+            "sanitizedDescription": "If cast on an ally, commands Pix to jump to an ally and shield them. He then follows them and aids their attacks. If cast on an enemy, commands Pix to jump to an enemy and damage them. He then follows them and grants you vision of that enemy.", 
+            "sanitizedTooltip": "On Ally Cast: Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for {{ e1 }} seconds. If the ally is a champion, Pix shields them from {{ e2 }} (+{{ a1 }}) damage for {{ e1 }} seconds. On Enemy Cast: Pix deals {{ e4 }} (+{{ a2 }}) magic damage to target enemy unit. Pix then follows and grants vision of them for {{ e6 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0, 
+                    200.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorCCFF99\">On Ally Cast: </span>Commands Pix to jump to an ally and then follow and aid their attacks instead of Lulu's for {{ e1 }} seconds. If the ally is a champion, Pix shields them from {{ e2 }}<span class=\"color99FF99\"> (+{{ a1 }})</span> damage for {{ e1 }} seconds.<br><br><span class=\"colorFF9999\">On Enemy Cast: </span>Pix deals {{ e4 }}<span class=\"color99FF99\"> (+{{ a2 }})</span> magic damage to target enemy unit. Pix then follows and grants vision of them for {{ e6 }} seconds.</span> ", 
+            "maxrank": 5, 
+            "costBurn": "60/70/80/90/100", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                60, 
+                70, 
+                80, 
+                90, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "6", 
+                "80/120/160/200/240", 
+                "50", 
+                "80/110/140/170/200", 
+                "25", 
+                "4"
+            ], 
+            "image": {
+                "full": "LuluE.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 288
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Help, Pix!"
+        }, 
+        {
+            "cooldownBurn": "110/95/80", 
+            "key": "LuluR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "bonus health", 
+                    "Slow Percent", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies.", 
+            "sanitizedDescription": "Lulu enlarges an ally, knocking nearby enemies into the air and granting the ally a large amount of bonus health. For the next few seconds, that ally gains an aura that slows nearby enemies.", 
+            "sanitizedTooltip": "Lulu enlarges her ally, knocking nearby enemies into the air. For {{ e4 }} seconds, her ally gains {{ e1 }} (+{{ a1 }}) bonus health and slows nearby enemies by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    300.0, 
+                    450.0, 
+                    600.0
+                ], 
+                [
+                    30.0, 
+                    45.0, 
+                    60.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    7.0, 
+                    7.0, 
+                    7.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Lulu enlarges her ally, knocking nearby enemies into the air. For {{ e4 }} seconds, her ally gains {{ e1 }}<span class=\"color99FF99\"> (+{{ a1 }})</span> bonus health and slows nearby enemies by {{ e2 }}%.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "300/450/600", 
+                "30/45/60", 
+                "1", 
+                "7", 
+                "50"
+            ], 
+            "image": {
+                "full": "LuluR.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 336
+            }, 
+            "cooldown": [
+                110.0, 
+                95.0, 
+                80.0
+            ], 
+            "name": "Wild Growth"
+        }
+    ]
+}

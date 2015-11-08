@@ -1,0 +1,536 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 2, 
+        "defense": 5, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 50.04, 
+        "mpperlevel": 60.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 350.8, 
+        "armor": 23.384, 
+        "hp": 529.04, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 2.14, 
+        "attackrange": 550.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.4, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 9.0, 
+        "spellblock": 30.0, 
+        "hpregen": 2.5, 
+        "hpperlevel": 78.0
+    }, 
+    "name": "Soraka", 
+    "title": "the Starchild", 
+    "tags": [
+        "Support", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Soraka_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 48
+        }, 
+        "sanitizedDescription": "Soraka runs faster towards nearby low health allies.", 
+        "name": "Salvation", 
+        "description": "Soraka runs faster towards nearby low health allies."
+    }, 
+    "quotes": [
+        "\"Let me guide you.\"", 
+        "\"By the power of the stars.\"", 
+        "\"They will know serenity.\"", 
+        "\"Be at peace.\"", 
+        "\"They will go no further.\"", 
+        "\"What must be done.\"", 
+        "\"Such hatred in their hearts.\"", 
+        "\"This is my path.\"", 
+        "\"For peace of mind.\"", 
+        "\"Gracefully.\"", 
+        "\"Where am I needed?\"", 
+        "\"I heed their call.\"", 
+        "\"Every step; a new journey.\"", 
+        "\"To heal and protect.\"", 
+        "\"Never waste a breath.\"", 
+        "\"The whole world in balance.\"", 
+        "\"I lend my aid.\"", 
+        "\"I will not save you.\"'", 
+        "\"Stars hear me!\"", 
+        "\"Live!\"", 
+        "\"For life!\"", 
+        "\"Have hope!\"", 
+        "\"By the power of the stars.\"", 
+        "\"They will know serenity.\"", 
+        "\"Be at peace.\"", 
+        "\"They will go no further.\"", 
+        "\"What must be done.\"", 
+        "\"Such hatred in their hearts.\"", 
+        "\"This is my path.\"", 
+        "\"For peace of mind.\"", 
+        "\"Gracefully.\"", 
+        "\"Where am I needed?\"", 
+        "\"I heed their call.\"", 
+        "\"Every step; a new journey.\"", 
+        "\"To heal and protect.\"", 
+        "\"Never waste a breath.\"", 
+        "\"The whole world in balance.\"", 
+        "\"I lend my aid.\"", 
+        "\"I will not save you.\"'", 
+        "\"Stars hear me!\"", 
+        "\"Live!\"", 
+        "\"For life!\"", 
+        "\"Have hope!\"", 
+        "\"Be free of your burdens.\"", 
+        "\"I heed their call.\"", 
+        "\"By the power of the stars.\"", 
+        "\"Gracefully.\"", 
+        "\"For peace of mind.\"", 
+        "\"My path is clear.\"", 
+        "\"My path is clear.\"", 
+        "\"For peace of mind.\"", 
+        "\"Gracefully.\"", 
+        "\"By the power of the stars.\"", 
+        "\"I heed their call.\"", 
+        "\"Let me guide you.\"", 
+        "Starcall", 
+        "Starcall", 
+        "Starcall", 
+        "Infuse", 
+        "Infuse", 
+        "Wish"
+    ], 
+    "key": "Soraka", 
+    "lore": "A healer gifted with the magic of the stars, Soraka holds all living creatures close to her heart. She was once a celestial being, but she sacrificed her immortality and entered the world of mortals. So long as evil threatens life in Valoran, Soraka will not allow herself peace.<br><br>Soraka lived for centuries in an enchanted grove. A being of the stars, she healed the wounded and sick that sought her out. One man called Warwick came to her grove and begged her to heal his wife, who lay lifeless in his arms. His despair touched Soraka's heart. Though it was too late to save his wife, she offered to help heal the pain of his loss. Unwilling to let go of his grief Warwick ran from the grove, but returned over the following days to hear Soraka's guidance. She began to grow attached to the grieving man. One day Warwick told her he had found the men who killed his wife. He believed revenge would heal his pain - and if he died fighting, he would at least find peace. Though she pleaded with him, Warwick ignored her and left the grove. The voices of the stars warned her not to follow him, but Soraka had to intervene.<br><br>She stepped into the mortal world for the first time, and soon found Warwick desperately fighting a group of men. She tried to heal him, but for every wound she closed, the men inflicted two more. Soraka realized that she would have to fight to save her friend. The stars screamed in her mind, telling her not to use her powers for harm. Ignoring their warning, she struck the attackers with a flash of brilliant light. Crying out in terror and shielding their eyes from her divine radiance, they fled. Soraka's celestial form faded and the stars fell silent - for her transgression, she became mortal. She still felt the power of the stars within her, but they no longer offered her guidance. She took comfort in Warwick's safety, gently healing his wounds, but the man she had called her friend slipped a dagger between her ribs. As her blood spilled, Soraka realized he had fooled her, and everything he had done was a complicated ruse. Feeling humiliated and betrayed she called once more on the power of the stars, searing his flesh and cursing his cruelty. He retreated with an agonized howl, leaving Soraka to reflect upon her fate. Though her life had changed, she felt empowered and renewed with a singular purpose. No longer bound to the grove, Soraka set out into the mortal world, vowing to heal the wounded and protect the helpless.<br><br>''The cruelty of one will not blind me to the suffering of many.''<br>-- Soraka", 
+    "id": 16, 
+    "spells": [
+        {
+            "cooldownBurn": "7/6.5/6/5.5/5", 
+            "key": "SorakaQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.35
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "A star falls from the sky at the target location dealing magic damage and slowing enemies in the center of effect.", 
+            "sanitizedDescription": "A star falls from the sky at the target location dealing magic damage and slowing enemies in the center of effect.", 
+            "sanitizedTooltip": "Calls down a star from Soraka to a target location. Enemies standing in the explosion radius take {{ e1 }} (+{{ a1 }}) magic damage. Enemies standing in the center take 150% damage and are slowed by {{ e3 }}% for 2 seconds.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    110.0, 
+                    150.0, 
+                    190.0, 
+                    230.0
+                ], 
+                [
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0, 
+                    120.0
+                ], 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Calls down a star from Soraka to a target location. Enemies standing in the explosion radius take {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. <br><br>Enemies standing in the center take 150% damage and are slowed by {{ e3 }}% for 2 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "970", 
+            "range": [
+                970, 
+                970, 
+                970, 
+                970, 
+                970
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "70/110/150/190/230", 
+                "40/60/80/100/120", 
+                "30/35/40/45/50"
+            ], 
+            "image": {
+                "full": "SorakaQ.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 144
+            }, 
+            "cooldown": [
+                7.0, 
+                6.5, 
+                6.0, 
+                5.5, 
+                5.0
+            ], 
+            "name": "Starcall"
+        }, 
+        {
+            "cooldownBurn": "4/3.5/3/2.5/2", 
+            "key": "SorakaW", 
+            "resource": "10% Max Health, {{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }}-{{ e2 }} -> {{ e3NL }}-{{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Health Restored to Ally", 
+                    "Health Restored by Starcall", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "10pMaxHealth,Mana", 
+            "description": "Soraka sacrifices a portion of her own Health to heal another friendly unit. Passively heals Soraka when she lands Starcall on an enemy Champion.", 
+            "sanitizedDescription": "Soraka sacrifices a portion of her own Health to heal another friendly unit. Passively heals Soraka when she lands Starcall on an enemy Champion.", 
+            "sanitizedTooltip": "Passive: Each enemy Champion hit by Starcall heals Soraka for {{ e3 }} (+{{ f1 }}) to {{ e2 }} (+{{ a2 }}), increasing based on how much Health Soraka is missing. Active: Restores {{ e1 }} (+{{ a1 }}) Health to her target ally. Cannot be cast if Soraka is below 5% Health.", 
+            "effect": [
+                null, 
+                [
+                    120.0, 
+                    150.0, 
+                    180.0, 
+                    210.0, 
+                    240.0
+                ], 
+                [
+                    50.0, 
+                    70.0, 
+                    90.0, 
+                    110.0, 
+                    130.0
+                ], 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0
+                ], 
+                [
+                    0.4, 
+                    0.4, 
+                    0.4, 
+                    0.4, 
+                    0.4
+                ], 
+                [
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0, 
+                    90.0
+                ]
+            ], 
+            "tooltip": "<span class=\"size18 colorFF9900\">Passive:</span> Each enemy Champion hit by Starcall heals Soraka for {{ e3 }} <span class=\"color99FF99\">(+{{ f1 }})</span> to {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span>, increasing based on how much Health Soraka is missing.<br><br><span class=\"size18 colorFF9900\">Active:</span> Restores {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Health to her target ally. Cannot be cast if Soraka is below 5% Health.", 
+            "maxrank": 5, 
+            "costBurn": "20/25/30/35/40", 
+            "rangeBurn": "550", 
+            "range": [
+                550, 
+                550, 
+                550, 
+                550, 
+                550
+            ], 
+            "cost": [
+                20, 
+                25, 
+                30, 
+                35, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "120/150/180/210/240", 
+                "50/70/90/110/130", 
+                "25/35/45/55/65", 
+                "0.4", 
+                "50/60/70/80/90"
+            ], 
+            "image": {
+                "full": "SorakaW.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 192
+            }, 
+            "cooldown": [
+                4.0, 
+                3.5, 
+                3.0, 
+                2.5, 
+                2.0
+            ], 
+            "name": "Astral Infusion"
+        }, 
+        {
+            "cooldownBurn": "24/22/20/18/16", 
+            "key": "SorakaE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Root Duration"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Creates a zone at a location that silences all enemies inside. When the zone expires, all enemies still inside are rooted.", 
+            "sanitizedDescription": "Creates a zone at a location that silences all enemies inside. When the zone expires, all enemies still inside are rooted.", 
+            "sanitizedTooltip": "Creates a zone at target location for 1.5 seconds, dealing {{ e2 }} (+{{ a1 }}) magic damage to enemy Champions in the cast radius. Enemy Champions standing in the zone are silenced until they leave. When the zone disappears, all enemy Champions still standing in the zone are rooted for {{ e1 }} second(s) and are dealt {{ e2 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ], 
+                [
+                    70.0, 
+                    110.0, 
+                    150.0, 
+                    190.0, 
+                    230.0
+                ], 
+                [
+                    40.0, 
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    20.0, 
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0
+                ], 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ]
+            ], 
+            "tooltip": "Creates a zone at target location for 1.5 seconds, dealing {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemy Champions in the cast radius. Enemy Champions standing in the zone are silenced until they leave. <br><br>When the zone disappears, all enemy Champions still standing in the zone are rooted for {{ e1 }} second(s) and are dealt {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }}) </span>magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "70", 
+            "rangeBurn": "925", 
+            "range": [
+                925, 
+                925, 
+                925, 
+                925, 
+                925
+            ], 
+            "cost": [
+                70, 
+                70, 
+                70, 
+                70, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "1/1.25/1.5/1.75/2", 
+                "70/110/150/190/230", 
+                "40/70/100/130/160", 
+                "5", 
+                "20/40/60/80/100", 
+                "60/90/120/150/180"
+            ], 
+            "image": {
+                "full": "SorakaE.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 240
+            }, 
+            "cooldown": [
+                24.0, 
+                22.0, 
+                20.0, 
+                18.0, 
+                16.0
+            ], 
+            "name": "Equinox"
+        }, 
+        {
+            "cooldownBurn": "160/145/130", 
+            "key": "SorakaR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Health Restored", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.55
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Soraka fills her allies with hope, instantly restoring health to herself and all friendly champions.", 
+            "sanitizedDescription": "Soraka fills her allies with hope, instantly restoring health to herself and all friendly champions.", 
+            "sanitizedTooltip": "Calls upon divine powers to restore {{ e1 }} (+{{ a1 }}) Health to all allied Champions, removing all instances of Grievous Wounds beforehand. Wish's power is increased by 50% on each Champion below 40% Health.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    120.0, 
+                    90.0, 
+                    60.0
+                ], 
+                [
+                    250.0, 
+                    350.0, 
+                    450.0
+                ]
+            ], 
+            "tooltip": "Calls upon divine powers to restore {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Health to all allied Champions, removing all instances of Grievous Wounds beforehand. Wish's power is increased by 50% on each Champion below 40% Health.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "25000", 
+            "range": [
+                25000, 
+                25000, 
+                25000
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350", 
+                "120/90/60", 
+                "250/350/450"
+            ], 
+            "image": {
+                "full": "SorakaR.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 288
+            }, 
+            "cooldown": [
+                160.0, 
+                145.0, 
+                130.0
+            ], 
+            "name": "Wish"
+        }
+    ]
+}

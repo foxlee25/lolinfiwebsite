@@ -1,0 +1,353 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 10, 2015, 5:09:58 PM
+    Author     : Pokey
+*/
+
+@font-face {
+    font-family: "Helvetica Neue";
+    src: url("../fonts/HelveticaNeue.ttf");
+}
+html{
+ 
+}
+body{
+    font-family: 'Helvetica Neue';
+    font-weight: normal;
+    font-style: normal;
+    display: block;
+    margin: 0px;
+}
+
+a{
+     font-family: "Helvetica Neue";
+}
+
+::-webkit-input-placeholder {
+    color:    white;
+}
+:-moz-placeholder {
+    color:    white;
+}
+::-moz-placeholder {
+    color:    white;
+}
+:-ms-input-placeholder {
+    color:    white;
+}
+
+.pageContentClass{
+    display:none;
+}
+
+.displaytext{
+    position: relative;
+    float: left;
+    color:white;
+    font-size:20px;
+    font-weight:bold;
+    
+}
+
+#content{
+    min-height: 100%;
+}
+
+
+.pageContainer{
+    position:absolute;
+    
+    width:100%;
+    height:100%;/*
+    max-width:100%;
+    max-height:100%;*/
+    min-height:680px;
+    min-width: 1250px;
+}
+.header{
+    /* position: relative; */
+    /* float: left; */
+    /* border:1px solid black; */
+    height:100px;
+    width:100%;
+}
+
+.pageLogoContainer{
+    position:relative;
+    float:left;
+    width: 300px;
+}
+
+.pageLogoPositioner{
+    padding: 30px;
+    /* padding-top: 20px; */
+}
+.pageLogo{
+    background: url("../images/webpageLogo.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 30px;
+    width: 111px;
+    z-index: 1;
+    margin: auto;
+}  
+.headerMenuPositioner{
+     padding: 25px;
+     position: relative;
+     width: 660px;
+     height: 100px;
+     margin: auto;
+}    
+
+
+.glide_background {
+    position: absolute;
+    height: 2px;
+    border-bottom: 2px solid #039be4;
+    top: 60px;
+}
+ .navTable {
+    /* margin: auto; */
+    padding:0px;
+    display:table;
+    /* width:1000px; */
+    border-collapse: collapse;
+}
+
+.navTable ul{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    
+}
+
+.navTable li{
+    padding: 10px 20px 10px 20px;
+    display:block;
+    text-decoration: none;
+    /* color: #C0C0CA; */
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+}
+.navTable li:first-child {
+    //border-left: none;
+}
+
+.navTable li {
+    //border-left: 1px solid #ebebeb;
+}
+.navTable li:hover{
+  color:#0F84CB;
+  transition: all .5s ease-in-out;
+}
+
+.navTable li {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  cursor: pointer;
+  display: table-cell;
+  position: relative;
+  z-index: 2;
+  letter-spacing: 1.25px;
+  height: 19px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.navTableSelected{
+    border: 0 solid #fff;
+    border-bottom-color: #97918D;
+    border-bottom-width: 0px;
+    height: 19px;
+    line-height: 19px;
+    padding-bottom: 3px;
+      color: #039be4;
+}
+.navTable{
+    color: #C0C0CA;
+}
+#homePageContent{
+    //margin-top: 13%;
+}
+#lolinfiBrandIcon{
+    background: url("../images/lolinfi_v2.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 100px;
+    width: 240px;
+    /* top: 20%; */
+    z-index: 1;
+    margin: auto;
+}
+
+/* search box style */
+
+#searchBox{
+    top: 40%;
+    height: 100px;
+    width: 200px;
+    z-index: 1;
+    margin: auto;
+}
+#searchBox {
+	width: 440px;
+	height: 40px;
+	margin: 0px auto 0;
+	position: relative;
+}
+
+/* Ok, HTML markup is complete */
+/* submit button will also be the same but with a different color. We'll style the label and the submit input */
+/* a faky 3D look */
+
+
+
+#searchBox .icon, #searchBox .submitSearch {
+	width: 40px;
+	height: 40px;
+	background: #d75813;
+	display: block;
+	position: absolute;
+	top: 0;
+	right: 0;
+	
+}
+
+#searchBox .submitSearch {
+	background: #009bff;
+	cursor: pointer;
+}
+
+#searchBox .submitSearch:hover{
+    background: #0079CA;
+    cursor: pointer;
+}
+
+/* Now, we'll create a search (magnifying glass) icon using pseudo elements */
+#searchBox .icon:after, #searchBox .submitSearch:after  {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border: 2px solid white;
+	border-radius: 50%;
+	left: 12px;
+	top: 12px;
+}
+
+#searchBox .icon:before, #searchBox .submitSearch:before {
+	content: '';
+	position: absolute;
+	height: 11px;
+	width: 2px;
+	background: white;
+	transform: rotate(-35deg);
+	top: 20px;
+	left: 22px;
+}
+
+/* Styling the input */
+#searchBox .searchInput {
+	-webkit-appearance: none;
+	height: 40px;
+	width: 400px;
+	position: absolute;
+	padding: 10px;
+	/* opacity: 0.7; */
+	border: none;
+	outline: none;
+	/* position: relative; */
+	right: 40px;
+	background-color: rgba(255,255,255,.3);
+	margin-left: auto ;
+	margin-right: auto ;
+}
+.searchInput{
+    margin-left:5px;
+    color: white;
+    font-weight: bold;
+}
+.searchInput:focus {
+    margin-left:5px;
+    color: white;
+}
+
+.masterHome{
+    display:none;
+    width:100%;
+    position:relative;
+    
+}
+
+.titleBgColor{
+    background-color:#0C2036;
+    text-align: center;
+    color:#C0C0CA;
+}
+
+.masterSearch{
+    display:block;
+    width:100%;
+    position:relative;
+    margin-top:13%;
+
+}
+
+
+.footer {
+   position: absolute;
+   bottom:0;
+   width:100%;
+   height: 60px;/* Height of the footer */
+   /* padding-bottom: 20px; */
+   /* opacity: 0.5; */
+   background-color: rgba(105,105,116,0.2);
+}
+
+.footer .menuItem{
+    padding: 10px 35px 10px 35px;
+    display:block;
+    text-decoration: none;
+    color: #C0C0CA;
+    text-align: center;
+    font-size:18px;
+    font-weight:bold;
+}
+.companyLogo{
+    background: url("../images/infi_on_dark.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 50px;
+    width: 50px;
+    z-index: 1;
+    margin: auto;
+    margin-top: 6px;
+}  
+
+.footerEle{
+    position: relative;
+    float:left;
+    /* height:100%; */
+    /* width:150px; */
+    padding-left: 20px;
+    padding-right:20px;
+}
+
+.footerPositioner{
+    width: 600px;
+    height: 50px;
+    margin: 0 auto;
+}
+.leftItem{
+    position:relative;
+    float:left;
+}
+
+.rightItem{
+    position:relative;
+    float:right;
+}

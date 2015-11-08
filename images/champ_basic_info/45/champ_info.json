@@ -1,0 +1,457 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 2, 
+        "defense": 2, 
+        "magic": 10
+    }, 
+    "stats": {
+        "armorperlevel": 3.75, 
+        "attackdamage": 50.71, 
+        "mpperlevel": 55.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 342.4, 
+        "armor": 22.55, 
+        "hp": 492.76, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 2.24, 
+        "attackrange": 525.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 2.625, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Veigar", 
+    "title": "the Tiny Master of Evil", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Veigar_Entropy.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 336
+        }, 
+        "sanitizedDescription": "Veigar's Mana Regen is increased by 1.5% for each 1% of Mana missing.", 
+        "name": "Equilibrium", 
+        "description": "Veigar's Mana Regen is increased by 1.5% for each 1% of Mana missing."
+    }, 
+    "quotes": [
+        "\"I will swallow your soul.\"", 
+        "\"Give up now!\"", 
+        "\"I am evil! Stop laughing!\"", 
+        "\"I smell death.\"", 
+        "\"Yes! (Laughs)\"", 
+        "\"Stalking prey again?\"", 
+        "\"Suffering awaits.\"", 
+        "\"The magic, it calls to me!\"", 
+        "\"Your commands tire me.\"", 
+        "\"Welcome to your doom!\"", 
+        "\"Champions! Welcome to die!\"", 
+        "\"I can't let you do that!\"", 
+        "\"Cocky little freaks!\"", 
+        "\"You! Curse you!\"", 
+        "\"I will show you true power!\"", 
+        "\"You dare defy me?!\"", 
+        "\"Playtime has ended!\"", 
+        "\"The end draws near.\"", 
+        "\"Suffer, like Vee did!\"", 
+        "\"Vengeance shall be mine!\"", 
+        "\"You are error!\"", 
+        "\"I... shall reign... supreme!\"", 
+        "\"The black wind howls.\"", 
+        "\"I hunger.\"", 
+        "\"Don't get mad, get sadistic!\"", 
+        "\"Join me... or die!\"", 
+        "\"All the cake is gone!\"", 
+        "\"Hey! Listen!\"", 
+        "\"The world is mine!\"", 
+        "\"My patience is wearing thin!\"", 
+        "\"I am all-powerful!\"", 
+        "\"Somebody set up us the bomb!\"", 
+        "\"I have fury!\"", 
+        "\"Would you kindly?\"", 
+        "\"My strength is unparalleled!\"", 
+        "\"Weak, pathetic fools!\"", 
+        "\"Yes...\"", 
+        "\"Arcane launch detected!\"", 
+        "\"Got a present for ya!\"", 
+        "\"Quad damage!\"", 
+        "\"Finish them!\"", 
+        "\"It's no use!\"", 
+        "\"Right where I want you!\"", 
+        "\"You fell right into my trap!\"", 
+        "\"Toasty!\"", 
+        "\"Super effective!\"", 
+        "\"Delete!\"", 
+        "\"Let's run it back!\"", 
+        "\"I am invincible!\"", 
+        "\"My power grows!\"", 
+        "\"I am stronger!\"", 
+        "\"No surprises!\"", 
+        "\"Watch them!\"", 
+        "\"They'll never reach me!\"", 
+        "\"This isn't over!\"", 
+        "\"What? Impossible...\"", 
+        "\"I'll... remember... this...\"", 
+        "\"I... ehh... urgh...\""
+    ], 
+    "key": "Veigar", 
+    "lore": "To most, thoughts of yordles do not conjure images to be feared. The easygoing half-pint race, though fierce, is often regarded with some degree of joviality. Their high-pitched voices and naturally cute forms inspire something of a protective instinct in the larger races, or at least bring to mind images of children playing at being adults. Every now and again, however, a yordle turns so bad that even at its small stature it strikes terror into the hearts of others. Veigar is one such twisted yordle. As a master of the magical black arts, as well as a corrupter of cosmic energy, he is one of the most powerful sorcerers on Valoran.<br><br>As a child, Veigar was a normal yordle with one small exception - he had a deep curiosity for the world beyond Bandle City. The young yordle spent much of his time studying the rest of Valoran, and he jumped at the chance to join a business that traded with other major city-states. Unfortunately for both him and the world, a deal with Noxian trader turned into shady business and went bad; Veigar and his companions were subsequently set up to take the fall. Arrested by the authorities, he was imprisoned within the walls of Noxus for years. Such isolation is very dangerous for yordles - undoubtedly why his cruel jailers did such a thing - and Veigar was slowly driven mad.<br><br>He eventually escaped, having become a twisted version of his former self. Instead of returning to his people and Bandle City, he sought tutelage from dark wizards across the land. With his demented will focused on one task, he quickly became a dangerous and powerful wizard in his own right. Now he seeks to end all conflict on Valoran by bringing all of the city-states to their knees, regardless of their affiliation. The League of Legends is the perfect tool to help him meet his ends - for now.<br><br>Who says evil needs to come in a fearsome-looking package?", 
+    "id": 45, 
+    "spells": [
+        {
+            "cooldownBurn": "7/6.5/6/5.5/5", 
+            "key": "VeigarBalefulStrike", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Champion Kill ability power gain", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "@stacks", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Veigar unleashes a bolt of dark energy that deals magic damage to the first two enemies hit. Units killed by this bolt grant Veigar some ability power permanently.", 
+            "sanitizedDescription": "Veigar unleashes a bolt of dark energy that deals magic damage to the first two enemies hit. Units killed by this bolt grant Veigar some ability power permanently.", 
+            "sanitizedTooltip": "Active: Unleashes a bolt of dark energy, dealing {{ e1 }} (+{{ a1 }}) magic damage to the first two enemies hit. For each target killed, Veigar gains 1 ability power. This bonus is doubled against Champions, large minions and large monsters. Passive: Veigar gains {{ e2 }} ability power on champion kills and assists. Ability power bonus: +{{ f1 }}", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    125.0, 
+                    170.0, 
+                    215.0, 
+                    260.0
+                ], 
+                [
+                    1.0, 
+                    2.0, 
+                    3.0, 
+                    4.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Active: </span>Unleashes a bolt of dark energy, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to the first two enemies hit. For each target killed, Veigar gains 1 ability power. This bonus is doubled against Champions, large minions and large monsters.<br><br><span class=\"colorFF9900\">Passive: </span>Veigar gains {{ e2 }} ability power on champion kills and assists.<br><br>Ability power bonus: <span class=\"color5555FF\">+{{ f1 }}</span>", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "80/125/170/215/260", 
+                "1/2/3/4/5"
+            ], 
+            "image": {
+                "full": "VeigarBalefulStrike.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 336
+            }, 
+            "cooldown": [
+                7.0, 
+                6.5, 
+                6.0, 
+                5.5, 
+                5.0
+            ], 
+            "name": "Baleful Strike"
+        }, 
+        {
+            "cooldownBurn": "10/9.5/9/8.5/8", 
+            "key": "VeigarDarkMatter", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands.", 
+            "sanitizedDescription": "Veigar calls a great mass of dark matter to fall from the sky to the target location, dealing magic damage when it lands.", 
+            "sanitizedTooltip": "After 1.2 seconds, dark matter falls from the sky to the target location, dealing {{ e1 }} (+{{ a1 }}) magic damage.", 
+            "effect": [
+                null, 
+                [
+                    120.0, 
+                    170.0, 
+                    220.0, 
+                    270.0, 
+                    320.0
+                ], 
+                [
+                    1.2, 
+                    1.2, 
+                    1.2, 
+                    1.2, 
+                    1.2
+                ]
+            ], 
+            "tooltip": "After 1.2 seconds, dark matter falls from the sky to the target location, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "120/170/220/270/320", 
+                "1.2"
+            ], 
+            "image": {
+                "full": "VeigarDarkMatter.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                10.0, 
+                9.5, 
+                9.0, 
+                8.5, 
+                8.0
+            ], 
+            "name": "Dark Matter"
+        }, 
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "VeigarEventHorizon", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Stun Duration", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "After a brief delay Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter.", 
+            "sanitizedDescription": "After a brief delay Veigar twists the edges of space around the target location for 3 seconds, stunning enemies who pass through the perimeter.", 
+            "sanitizedTooltip": "After a {{ e2 }} second delay, Veigar twists the edges of space around the target location for 3 seconds, forming a pentagon of walls. Enemies who attempt to pass through the perimeter are stopped and stunned for {{ e1 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    1.5, 
+                    1.75, 
+                    2.0, 
+                    2.25, 
+                    2.5
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "tooltip": "After a {{ e2 }} second delay, Veigar twists the edges of space around the target location for 3 seconds, forming a pentagon of walls. Enemies who attempt to pass through the perimeter are stopped and stunned for {{ e1 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "80/85/90/95/100", 
+            "rangeBurn": "725", 
+            "range": [
+                725, 
+                725, 
+                725, 
+                725, 
+                725
+            ], 
+            "cost": [
+                80, 
+                85, 
+                90, 
+                95, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "1.5/1.75/2/2.25/2.5", 
+                "0.5"
+            ], 
+            "image": {
+                "full": "VeigarEventHorizon.png", 
+                "group": "spell", 
+                "sprite": "spell11.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 432
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Event Horizon"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "VeigarPrimordialBurst", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Blasts target enemy champion, dealing a large base amount of magic damage plus 80% of his target's ability power.", 
+            "sanitizedDescription": "Blasts target enemy champion, dealing a large base amount of magic damage plus 80% of his target's ability power.", 
+            "sanitizedTooltip": "Blasts an enemy champion, dealing {{ e1 }} (+{{ a1 }}) plus 80% of his target's ability power in magic damage.", 
+            "effect": [
+                null, 
+                [
+                    250.0, 
+                    375.0, 
+                    500.0
+                ], 
+                [
+                    500.0, 
+                    1000.0, 
+                    1500.0
+                ], 
+                [
+                    75.0, 
+                    150.0, 
+                    225.0
+                ]
+            ], 
+            "tooltip": "Blasts an enemy champion, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> plus 80% of his target's ability power in magic damage.", 
+            "maxrank": 3, 
+            "costBurn": "125", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                125, 
+                125, 
+                125
+            ], 
+            "effectBurn": [
+                "", 
+                "250/375/500", 
+                "500/1000/1500", 
+                "75/150/225"
+            ], 
+            "image": {
+                "full": "VeigarPrimordialBurst.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 0
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "Primordial Burst"
+        }
+    ]
+}

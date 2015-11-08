@@ -1,0 +1,505 @@
+{
+    "info": {
+        "difficulty": 4, 
+        "attack": 9, 
+        "defense": 3, 
+        "magic": 1
+    }, 
+    "stats": {
+        "armorperlevel": 3.25, 
+        "attackdamage": 52.04, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 284.0, 
+        "armor": 22.21, 
+        "hp": 515.76, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.6, 
+        "attackrange": 500.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.9, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.01, 
+        "spellblock": 30.0, 
+        "hpregen": 5.17, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Sivir", 
+    "title": "the Battle Mistress", 
+    "tags": [
+        "Marksman"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Sivir_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "Sivir gains a short burst of Movement Speed when she attacks an enemy champion.", 
+        "name": "Fleet of Foot", 
+        "description": "Sivir gains a short burst of Movement Speed when she attacks an enemy champion."
+    }, 
+    "quotes": [
+        "\"Everyone has a price.\"", 
+        "\"Wealth is my kind of burden.\"", 
+        "\"I make my own fortune.\"", 
+        "\"You can't tame the desert.\"", 
+        "\"Heroes go hungry.\"", 
+        "\"Get paid, and get out.\"", 
+        "\"This one's on me.\"", 
+        "\"You die for free.\"", 
+        "\"Life's cheap. Death pays.\"", 
+        "\"I go where the trouble is.\"", 
+        "\"It's just business.\"", 
+        "\"Step light, strike hard.\"", 
+        "\"Here's where I get my cut.\"", 
+        "\"Easy pay.\"", 
+        "\"Crack 'em like a tomb.\"", 
+        "\"Another fight, another fee.\"", 
+        "\"You're worth my time - dead.\"", 
+        "\"Make me work for it.\"", 
+        "\"Feed the jackals.\"", 
+        "\"Catch!\"", 
+        "\"Take this!\"", 
+        "\"Better duck!\"", 
+        "\"Heads up!\"", 
+        "\"Back off.\"", 
+        "\"Nice try.\"", 
+        "\"You'll make a nice bag.\"", 
+        "\"This is my desert.\"", 
+        "\"Yeah. I am that good.\"", 
+        "\"I do my own dirty work.\"", 
+        "\"Take back what's ours.\"", 
+        "\"Business is good.\"", 
+        "\"Another contract completed.\"", 
+        "cribbage sheets", 
+        "Total duration unaffected."
+    ], 
+    "key": "Sivir", 
+    "lore": "Known as the Battle Mistress, Sivir is a mercenary with a ruthless reputation. Combining unflinching bravery with endless ambition, she has garnered great fame and fortune. Faced with the revelation of her mysterious heritage, Sivir must weigh her desire to continue on her own path, or accept the burden of a greater legacy.", 
+    "id": 15, 
+    "spells": [
+        {
+            "cooldownBurn": "9", 
+            "key": "SivirQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e5 }}% -> {{ e5NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Attack Damage Scaling", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7, 
+                        0.8, 
+                        0.9, 
+                        1.0, 
+                        1.1
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Sivir hurls her crossblade like a boomerang, dealing damage each way.", 
+            "sanitizedDescription": "Sivir hurls her crossblade like a boomerang, dealing damage each way.", 
+            "sanitizedTooltip": "Sivir hurls her crossblade like a boomerang, which deals {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) physical damage to the first target hit and {{ e2 }}% reduced damage to each subsequent target down to a minimum of {{ e3 }}%.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    45.0, 
+                    65.0, 
+                    85.0, 
+                    105.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    0.7, 
+                    0.8, 
+                    0.9, 
+                    1.0, 
+                    1.1
+                ], 
+                [
+                    70.0, 
+                    80.0, 
+                    90.0, 
+                    100.0, 
+                    110.0
+                ]
+            ], 
+            "tooltip": "Sivir hurls her crossblade like a boomerang, which deals {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> physical damage to the first target hit and {{ e2 }}% reduced damage to each subsequent target down to a minimum of {{ e3 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "1200", 
+            "range": [
+                1200, 
+                1200, 
+                1200, 
+                1200, 
+                1200
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "25/45/65/85/105", 
+                "15", 
+                "40", 
+                "0.7/0.8/0.9/1/1.1", 
+                "70/80/90/100/110"
+            ], 
+            "image": {
+                "full": "SivirQ.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0
+            ], 
+            "name": "Boomerang Blade"
+        }, 
+        {
+            "cooldownBurn": "9/8/7/6/5", 
+            "key": "SivirW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Bounce Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0, 
+                        1.0, 
+                        1.0, 
+                        1.0, 
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.5, 
+                        0.55, 
+                        0.6, 
+                        0.65, 
+                        0.7
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Sivir's next few basic attacks will bounce to nearby targets, dealing reduced damage to secondary targets.", 
+            "sanitizedDescription": "Sivir's next few basic attacks will bounce to nearby targets, dealing reduced damage to secondary targets.", 
+            "sanitizedTooltip": "Sivir's next {{ e4 }} basic attacks bounce to nearby targets, dealing {{ f1 }} physical damage to the first target and {{ f2 }} ({{ e3 }}% of total Attack Damage) physical damage to each subsequent target. Only the first target is affected by on-hit effects. Each target may only be hit once by each Ricochet.", 
+            "effect": [
+                null, 
+                [
+                    5.0, 
+                    6.0, 
+                    7.0, 
+                    8.0, 
+                    9.0
+                ], 
+                [
+                    10.0, 
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0
+                ], 
+                [
+                    50.0, 
+                    55.0, 
+                    60.0, 
+                    65.0, 
+                    70.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    60.0, 
+                    70.0, 
+                    80.0, 
+                    90.0, 
+                    100.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    0.5, 
+                    0.55, 
+                    0.6, 
+                    0.65, 
+                    0.7
+                ]
+            ], 
+            "tooltip": "Sivir's next {{ e4 }} basic attacks bounce to nearby targets, dealing <span class=\"colorFF8C00\">{{ f1 }}</span> physical damage to the first target and <span class=\"colorFF8C00\">{{ f2 }}</span> ({{ e3 }}% of total Attack Damage) physical damage to each subsequent target.<br><br>Only the first target is affected by on-hit effects. Each target may only be hit once by each Ricochet.", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "5/6/7/8/9", 
+                "10/20/30/40/50", 
+                "50/55/60/65/70", 
+                "3", 
+                "60/70/80/90/100", 
+                "1", 
+                "0.5/0.55/0.6/0.65/0.7"
+            ], 
+            "image": {
+                "full": "SivirW.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0, 
+                5.0
+            ], 
+            "name": "Ricochet"
+        }, 
+        {
+            "cooldownBurn": "22/19/16/13/10", 
+            "key": "SivirE", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Mana Gain"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Creates a magical barrier that blocks a single enemy ability cast on Sivir. She receives Mana back if a spell is blocked.", 
+            "sanitizedDescription": "Creates a magical barrier that blocks a single enemy ability cast on Sivir. She receives Mana back if a spell is blocked.", 
+            "sanitizedTooltip": "Sivir creates a magical barrier for {{ e1 }} seconds that blocks the next incoming enemy ability. If an ability is blocked by the shield, Sivir regains {{ e2 }} Mana.", 
+            "effect": [
+                null, 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    80.0, 
+                    95.0, 
+                    110.0, 
+                    125.0, 
+                    140.0
+                ]
+            ], 
+            "tooltip": "Sivir creates a magical barrier for {{ e1 }} seconds that blocks the next incoming enemy ability.<br><br>If an ability is blocked by the shield, Sivir regains {{ e2 }} Mana.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "1.5", 
+                "80/95/110/125/140"
+            ], 
+            "image": {
+                "full": "SivirE.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                22.0, 
+                19.0, 
+                16.0, 
+                13.0, 
+                10.0
+            ], 
+            "name": "Spell Shield"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "SivirR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e4 }}% -> {{ e4NL }}%", 
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Attack Speed", 
+                    "Enhanced Movement Speed Bonus", 
+                    "Enhanced Movement Speed Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Sivir leads her allies in battle, granting them a surge Movement Speed for a period of time. Additionally passively grants Sivir bonus Attack Speed while Ricochet is active.", 
+            "sanitizedDescription": "Sivir leads her allies in battle, granting them a surge Movement Speed for a period of time. Additionally passively grants Sivir bonus Attack Speed while Ricochet is active.", 
+            "sanitizedTooltip": "Passive: Sivir gains {{ e1 }}% Attack Speed while Ricochet is active. Active: Sivir rallies her allies for {{ e3 }} seconds, granting all nearby allies an initial {{ e4 }}% Movement Speed bonus that reduces to {{ e2 }}% after the first {{ e5 }} seconds of On The Hunt elapse.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    60.0, 
+                    80.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    2.0, 
+                    3.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Sivir gains {{ e1 }}% Attack Speed while Ricochet is active.<br><br><span class=\"colorFF9900\">Active: </span>Sivir rallies her allies for {{ e3 }} seconds, granting all nearby allies an initial {{ e4 }}% Movement Speed bonus that reduces to {{ e2 }}% after the first {{ e5 }} seconds of On The Hunt elapse.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "40/60/80", 
+                "20", 
+                "8", 
+                "40/50/60", 
+                "2/3/4"
+            ], 
+            "image": {
+                "full": "SivirR.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "On The Hunt"
+        }
+    ]
+}

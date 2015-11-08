@@ -1,0 +1,522 @@
+{
+    "info": {
+        "difficulty": 9, 
+        "attack": 4, 
+        "defense": 4, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 52.0, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 350.0, 
+        "armor": 25.0, 
+        "hp": 535.0, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 2.0, 
+        "attackrange": 500.0, 
+        "movespeed": 330.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.4, 
+        "hpperlevel": 89.0
+    }, 
+    "name": "Bard", 
+    "title": "the Wandering Caretaker", 
+    "tags": [
+        "Support", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Bard_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "Bard's presence causes magical chimes to appear, which grant Bard experience, mana, and a burst of speed. Additionally, lesser spirits follow Bard and aid in his attacks - collecting chimes causes these meeps to gain power over the course of the game.", 
+        "name": "Traveler's Call", 
+        "description": "Bard's presence causes magical chimes to appear, which grant Bard experience, mana, and a burst of speed. Additionally, lesser spirits follow Bard and aid in his attacks - collecting chimes causes these meeps to gain power over the course of the game."
+    }, 
+    "quotes": [
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard laughs.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "The meep chimes.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard sings.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Bard chimes.", 
+        "Ancient Chimes", 
+        "Ancient Chimes"
+    ], 
+    "key": "Bard", 
+    "lore": "Bard travels through realms beyond the imagination of mortal beings. Some of Valoran's greatest scholars have spent their lives trying to understand the mysteries he embodies. This enigmatic spirit has been given many names throughout the history of Valoran, but titles such as Cosmic Vagabond and Great Caretaker only capture a fleeting aspect of his true purpose. When the unknowable structure of the universe is threatened, Bard steers all existence away from utter annihilation.", 
+    "id": 432, 
+    "spells": [
+        {
+            "cooldownBurn": "11/10/9/8/7", 
+            "key": "BardQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow Duration", 
+                    "Stun Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.65
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Bard fires a missile which will slow the first enemy struck, and continue onward. If it strikes a wall, it will stun the initial target; if it strikes another enemy, it will stun them both.", 
+            "sanitizedDescription": "Bard fires a missile which will slow the first enemy struck, and continue onward. If it strikes a wall, it will stun the initial target; if it strikes another enemy, it will stun them both.", 
+            "sanitizedTooltip": "Bard fires an energy bolt, dealing {{ e1 }} (+{{ a1 }}) magic damage to one or two enemies. The first target hit will be slowed by {{ e3 }}% for {{ e2 }} second(s). If the bolt hits another enemy or a wall, any enemies hit are stunned for {{ e2 }} second(s).", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    125.0, 
+                    170.0, 
+                    215.0, 
+                    260.0
+                ], 
+                [
+                    1.0, 
+                    1.2, 
+                    1.4, 
+                    1.6, 
+                    1.8
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "Bard fires an energy bolt, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to one or two enemies. The first target hit will be slowed by {{ e3 }}% for {{ e2 }} second(s).<br><br>If the bolt hits another enemy or a wall, any enemies hit are stunned for {{ e2 }} second(s).<br>", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "25000", 
+            "range": [
+                25000, 
+                25000, 
+                25000, 
+                25000, 
+                25000
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "80/125/170/215/260", 
+                "1/1.2/1.4/1.6/1.8", 
+                "60"
+            ], 
+            "image": {
+                "full": "BardQ.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 48
+            }, 
+            "cooldown": [
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0
+            ], 
+            "name": "Cosmic Binding"
+        }, 
+        {
+            "cooldownBurn": "12", 
+            "key": "BardW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e6 }} -> {{ e6NL }}"
+                ], 
+                "label": [
+                    "Base Heal", 
+                    "Max Heal"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.45
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Reveals a healing shrine which powers up over a short time, disappearing after healing the first ally that touches it.", 
+            "sanitizedDescription": "Reveals a healing shrine which powers up over a short time, disappearing after healing the first ally that touches it.", 
+            "sanitizedTooltip": "Bard raises a health shrine that immediately offers {{ e5 }} (+{{ a1 }}) health, but restores up to {{ e6 }} (+{{ a2 }}) health as it gathers power for 10 seconds. The shrine's effect also grants {{ e1 }}% decaying movement speed for {{ e2 }} seconds. Bard can have up to 3 shrines active at once, which remain until visited by an ally champion or crushed by an enemy champion. Active Shrines: {{ f1 }} / {{ f2 }}", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                null, 
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    70.0, 
+                    110.0, 
+                    150.0, 
+                    190.0, 
+                    230.0
+                ], 
+                null, 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    90.0, 
+                    90.0, 
+                    90.0, 
+                    90.0, 
+                    90.0
+                ]
+            ], 
+            "tooltip": "Bard raises a health shrine that immediately offers {{ e5 }} <span class=\"color99FF99\">(+{{ a1 }})</span> health, but restores up to {{ e6 }} <span class=\"color99FF99\">(+{{ a2 }})</span> health as it gathers power for 10 seconds. The shrine's effect also grants {{ e1 }}% decaying movement speed for {{ e2 }} seconds. <br><br>Bard can have up to 3 shrines active at once, which remain until visited by an ally champion or crushed by an enemy champion.<br><br><span class=\"colorFFCC00\">Active Shrines: </span><span class=\"colorFFFFFF\">{{ f1 }}</span> / <span class=\"colorFFCC00\">{{ f2 }}</span>", 
+            "maxrank": 5, 
+            "costBurn": "90", 
+            "rangeBurn": "800", 
+            "range": [
+                800, 
+                800, 
+                800, 
+                800, 
+                800
+            ], 
+            "cost": [
+                90, 
+                90, 
+                90, 
+                90, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "50", 
+                "1.5", 
+                "", 
+                "", 
+                "30/60/90/120/150", 
+                "70/110/150/190/230", 
+                "", 
+                "10", 
+                "90"
+            ], 
+            "image": {
+                "full": "BardW.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 96
+            }, 
+            "cooldown": [
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0, 
+                12.0
+            ], 
+            "name": "Caretaker's Shrine"
+        }, 
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "BardE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e6 }}% -> {{ e6NL }}%"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Ally Travel Speed Bonus"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Bard opens a portal in nearby terrain. Allies and enemies alike can take a one-way trip through that terrain by moving into the portal.", 
+            "sanitizedDescription": "Bard opens a portal in nearby terrain. Allies and enemies alike can take a one-way trip through that terrain by moving into the portal.", 
+            "sanitizedTooltip": "Bard opens a one-way corridor through nearby terrain. Both allies and enemies can use the corridor by right-clicking on any part of it while near its entrance, with allies travelling {{ e6 }}% faster than enemies. The corridor disappears after {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    60.0, 
+                    70.0, 
+                    80.0, 
+                    90.0, 
+                    100.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    3.0, 
+                    3.0, 
+                    4.0
+                ], 
+                [
+                    10.0, 
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "Bard opens a one-way corridor through nearby terrain. Both allies and enemies can use the corridor by right-clicking on any part of it while near its entrance, with allies travelling {{ e6 }}% faster than enemies.<br><br>The corridor disappears after {{ e2 }} seconds.<br>", 
+            "maxrank": 5, 
+            "costBurn": "30", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                30, 
+                30, 
+                30, 
+                30, 
+                30
+            ], 
+            "effectBurn": [
+                "", 
+                "20", 
+                "10", 
+                "1", 
+                "60/70/80/90/100", 
+                "2/2/3/3/4", 
+                "10/20/30/40/50"
+            ], 
+            "image": {
+                "full": "BardE.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 144
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Magical Journey"
+        }, 
+        {
+            "cooldownBurn": "130/115/90", 
+            "key": "BardR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Bard sends spirit energy arcing to a location, putting all champions, minions, monsters, and turrets hit into stasis for a brief time.", 
+            "sanitizedDescription": "Bard sends spirit energy arcing to a location, putting all champions, minions, monsters, and turrets hit into stasis for a brief time.", 
+            "sanitizedTooltip": "Bard sends magical energy arcing to a target location. On impact, all champions, minions, monsters, and turrets in the target area are put in stasis, becoming invincible, untargetable, and unable to act for {{ e1 }} seconds. Epic monsters are also put into stasis, despite normally being immune to disables.", 
+            "effect": [
+                null, 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5
+                ]
+            ], 
+            "tooltip": "Bard sends magical energy arcing to a target location. On impact, all champions, minions, monsters, and turrets in the target area are put in stasis, becoming invincible, untargetable, and unable to act for {{ e1 }} seconds.<br><br>Epic monsters are also put into stasis, despite normally being immune to disables.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "3400", 
+            "range": [
+                3400, 
+                3400, 
+                3400
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "2.5"
+            ], 
+            "image": {
+                "full": "BardR.png", 
+                "group": "spell", 
+                "sprite": "spell13.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 192
+            }, 
+            "cooldown": [
+                130.0, 
+                115.0, 
+                90.0
+            ], 
+            "name": "Tempered Fate"
+        }
+    ]
+}

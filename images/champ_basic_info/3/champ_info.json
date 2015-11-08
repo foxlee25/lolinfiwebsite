@@ -1,0 +1,470 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 3, 
+        "defense": 7, 
+        "magic": 6
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 61.97, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 319.0, 
+        "armor": 26.88, 
+        "hp": 577.8, 
+        "hpregenperlevel": 0.75, 
+        "attackspeedperlevel": 1.2, 
+        "attackrange": 125.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.375, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.71, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Galio", 
+    "title": "the Sentinel's Sorrow", 
+    "tags": [
+        "Tank", 
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Galio_RunicSkin.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 288
+        }, 
+        "sanitizedDescription": "Galio converts 50% of his total Magic Resistance into Ability Power.", 
+        "name": "Runic Skin", 
+        "description": "Galio converts 50% of his total Magic Resistance into Ability Power."
+    }, 
+    "quotes": [
+        "\"Assault from above!\"", 
+        "\"The will of Demacia.\"", 
+        "\"Preemptive strike.\"", 
+        "\"With great force.\"", 
+        "\"Justice will be done.\"", 
+        "\"So be it.\"", 
+        "\"In flight.\"", 
+        "\"An honor to serve.\"", 
+        "\"I will protect..\"", 
+        "\"On the approach.\"", 
+        "\"Moving out.\"", 
+        "\"Remain alert.\"", 
+        "\"By your command.\"", 
+        "\"Without fear.\"", 
+        "\"I will not fail.\"", 
+        "\"Their time has come!\"", 
+        "\"The gate beckons.\"", 
+        "\"Inevitable demise.\"", 
+        "\"Death is no release.\"", 
+        "\"Join the hereafter.\"", 
+        "\"No escape.\"", 
+        "\"Fear my gaze.\"", 
+        "\"Eternal sleep... not quite.\"", 
+        "\"All have their place.\"", 
+        "\"Oblivion? No.\"", 
+        "\"To seal the beyond.\"", 
+        "\"Restless souls stir.\"", 
+        "\"I serve between worlds.\"", 
+        "\"A fateful journey.\"", 
+        "\"Do not trust the dead.\"", 
+        "I wish they killed me instead.", 
+        "Was this still the Judgment?", 
+        "Summoners!"
+    ], 
+    "key": "Galio", 
+    "lore": "Long before the League's regulation of such magic, mages experimented with the creation of artificial life. Now forbidden, instilling golems with reason was once not so uncommon a practice amongst the more expert of craftsmen. One such visionary was the Demacian artificer, Durand. Peerless at crafting sentient beings, Durand's constructs served as tireless guardians for the border towns of his beloved city-state, affording them protection from their Noxian neighbors. For his own defense, however, Durand kept his magnum opus: Galio. This mighty construct - forged in the image of a gargoyle - kept him safe on his journeys, allowing him to perform his important work without fear of reprisal from those hostile to his homeland. That is, until dealing with his taxing sentinels finally roused the ire of the Noxian High Command.<br><br>As Durand crossed the Howling Marsh with his masterwork in tow, he was set upon by Noxian assassins in force. Outnumbered and overwhelmed, Galio looked on in horror as the murderers cut down his charge, executing him swiftly before vanishing back into the mists. Stripped of his reason for being, Galio despaired. For years he remained in solitude, standing vigil over the bones of the master he had failed to protect... a literal monument to his own everlasting shame. Then, one nondescript day, a sad but determined yordle girl carrying a mighty Demacian crown stopped in the shadow of a great statue to rest. Hidden in plain sight from his unsuspecting visitor, Galio studied the forlorn yordle. She looked as though she too shouldered a tremendous burden. As quietly and as stoically as she had arrived, she departed in the direction of Demacia. This encounter lit a spark in Galio's eye. Remembering the cause that his master had died defending, Galio arose from his silent purgatory and followed in the wake of this brave creature. He had a new reason to live: to join the League of Legends and fight for the will of Demacia.<br><br>''There is no such thing as redemption. Only penance.''<br>-- Galio", 
+    "id": 3, 
+    "spells": [
+        {
+            "cooldownBurn": "7", 
+            "key": "GalioResoluteSmite", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow %", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Galio fires a concussive blast from his eyes, slowing and dealing damage to enemies caught near the impact point.", 
+            "sanitizedDescription": "Galio fires a concussive blast from his eyes, slowing and dealing damage to enemies caught near the impact point.", 
+            "sanitizedTooltip": "Galio fires a concussive blast from his eyes, dealing {{ e1 }} (+{{ a1 }}) magic damage to enemies near the impact location, and reducing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    135.0, 
+                    190.0, 
+                    245.0, 
+                    300.0
+                ], 
+                [
+                    24.0, 
+                    28.0, 
+                    32.0, 
+                    36.0, 
+                    40.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ]
+            ], 
+            "tooltip": "Galio fires a concussive blast from his eyes, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies near the impact location, and reducing their Movement Speed by {{ e2 }}% for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "940", 
+            "range": [
+                940, 
+                940, 
+                940, 
+                940, 
+                940
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "80/135/190/245/300", 
+                "24/28/32/36/40", 
+                "2.5"
+            ], 
+            "image": {
+                "full": "GalioResoluteSmite.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 288
+            }, 
+            "cooldown": [
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0
+            ], 
+            "name": "Resolute Smite"
+        }, 
+        {
+            "cooldownBurn": "13", 
+            "key": "GalioBulwark", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Armor / Magic Resistance", 
+                    "Base Heal"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Galio shields an ally Champion, increasing their Armor and Magic Resistance, and restoring Galio's Health each time that Champion suffers damage.", 
+            "sanitizedDescription": "Galio shields an ally Champion, increasing their Armor and Magic Resistance, and restoring Galio's Health each time that Champion suffers damage.", 
+            "sanitizedTooltip": "Galio shields a friendly champion for {{ e4 }} seconds, increasing their Armor and Magic Resistance by {{ e1 }}. Each time the unit suffers damage, Galio is healed for {{ e2 }} (+{{ a1 }}). (-20% healing for each consecutive hit)", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    45.0, 
+                    60.0, 
+                    75.0, 
+                    90.0
+                ], 
+                [
+                    25.0, 
+                    40.0, 
+                    55.0, 
+                    70.0, 
+                    85.0
+                ], 
+                null, 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Galio shields a friendly champion for {{ e4 }} seconds, increasing their Armor and Magic Resistance by {{ e1 }}. Each time the unit suffers damage, Galio is healed for {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span>. (-20% healing for each consecutive hit)", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "800", 
+            "range": [
+                800, 
+                800, 
+                800, 
+                800, 
+                800
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "30/45/60/75/90", 
+                "25/40/55/70/85", 
+                "", 
+                "4"
+            ], 
+            "image": {
+                "full": "GalioBulwark.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0
+            ], 
+            "name": "Bulwark"
+        }, 
+        {
+            "cooldownBurn": "13/12/11/10/9", 
+            "key": "GalioRighteousGust", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Speed %", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Galio claps his wings, unleashing a gust of concussive wind that damages enemies and leaves a directional draft in its wake that increases ally Movement Speed.", 
+            "sanitizedDescription": "Galio claps his wings, unleashing a gust of concussive wind that damages enemies and leaves a directional draft in its wake that increases ally Movement Speed.", 
+            "sanitizedTooltip": "Galio unleashes a gust of concussive wind that deals {{ e1 }} (+{{ a1 }}) magic damage to all enemies in its path. A directional draft remains for 5 seconds, increasing the Movement Speed of allies passing through it by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    105.0, 
+                    150.0, 
+                    195.0, 
+                    240.0
+                ], 
+                [
+                    20.0, 
+                    28.0, 
+                    36.0, 
+                    44.0, 
+                    52.0
+                ]
+            ], 
+            "tooltip": "Galio unleashes a gust of concussive wind that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all enemies in its path. A directional draft remains for 5 seconds, increasing the Movement Speed of allies passing through it by {{ e2 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "70/75/80/85/90", 
+            "rangeBurn": "1180", 
+            "range": [
+                1180, 
+                1180, 
+                1180, 
+                1180, 
+                1180
+            ], 
+            "cost": [
+                70, 
+                75, 
+                80, 
+                85, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "60/105/150/195/240", 
+                "20/28/36/44/52"
+            ], 
+            "image": {
+                "full": "GalioRighteousGust.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0
+            ], 
+            "name": "Righteous Gust"
+        }, 
+        {
+            "cooldownBurn": "150/135/120", 
+            "key": "GalioIdolOfDurand", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        1.08
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Galio assumes the form of a statue, taunting nearby enemies and storing concussive energy as they attack him. Galio then bursts from his statue shell, releasing the stored energy to damage surrounding foes.", 
+            "sanitizedDescription": "Galio assumes the form of a statue, taunting nearby enemies and storing concussive energy as they attack him. Galio then bursts from his statue shell, releasing the stored energy to damage surrounding foes.", 
+            "sanitizedTooltip": "Galio channels for 2 seconds, taunting nearby foes and blocking {{ e4 }}% of incoming damage. After channeling, Galio deals {{ e1 }} (+{{ a1 }}) magic damage to surrounding enemies, plus an additional {{ e2 }}% damage for each attack he suffered while channeling, up to a max of {{ e5 }} (+{{ a2 }}) damage ({{ e3 }}% bonus damage).", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    300.0, 
+                    400.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    80.0, 
+                    80.0, 
+                    80.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    360.0, 
+                    540.0, 
+                    720.0
+                ]
+            ], 
+            "tooltip": "Galio channels for 2 seconds, taunting nearby foes and blocking {{ e4 }}% of incoming damage.<br><br>After channeling, Galio deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to surrounding enemies, plus an additional {{ e2 }}% damage for each attack he suffered while channeling, up to a max of {{ e5 }} <span class=\"color99FF99\">(+{{ a2 }})</span> damage ({{ e3 }}% bonus damage).", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "560", 
+            "range": [
+                560, 
+                560, 
+                560
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "200/300/400", 
+                "10", 
+                "80", 
+                "50", 
+                "360/540/720"
+            ], 
+            "image": {
+                "full": "GalioIdolOfDurand.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                150.0, 
+                135.0, 
+                120.0
+            ], 
+            "name": "Idol of Durand"
+        }
+    ]
+}

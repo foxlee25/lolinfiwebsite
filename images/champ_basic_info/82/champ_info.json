@@ -1,0 +1,635 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 4, 
+        "defense": 6, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.75, 
+        "attackdamage": 61.0, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": 0.04, 
+        "mp": 0.0, 
+        "armor": 20.0, 
+        "hp": 525.0, 
+        "hpregenperlevel": 0.3, 
+        "attackspeedperlevel": 2.2, 
+        "attackrange": 200.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 5.0, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 4.0, 
+        "hpperlevel": 73.0
+    }, 
+    "name": "Mordekaiser", 
+    "title": "the Master of Metal", 
+    "tags": [
+        "Fighter", 
+        "Mage"
+    ], 
+    "partype": "None", 
+    "passive": {
+        "image": {
+            "full": "MordekaiserPassive.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "A percent of the damage dealt from abilities is converted into a temporary shield, absorbing incoming damage.", 
+        "name": "Iron Man", 
+        "description": "A percent of the damage dealt from abilities is converted into a temporary shield, absorbing incoming damage."
+    }, 
+    "quotes": [
+        "\"Time to shred.\"", 
+        "\"How delightfully painful.\"", 
+        "\"No pain, no drain.\"", 
+        "\"Carnage!\"", 
+        "\"Affliction... forever!\"", 
+        "\"Misery loves company.\"", 
+        "\"If I must.\"", 
+        "\"For great... torment!\"", 
+        "\"We shall see.\"", 
+        "\"Desolation is coming.\"", 
+        "\"So be it... summoner.\"", 
+        "\"No...\"", 
+        "30 Mordekaiser's level", 
+        "Iron Man", 
+        "Iron Man", 
+        "Iron Man", 
+        "Iron Man's", 
+        "Mace of Spades", 
+        "Mace of Spades'", 
+        "Mace of Spades'", 
+        "Mace of Spades's", 
+        "Creeping Death", 
+        "Creeping Death", 
+        "Creeping Death", 
+        "Creeping Death", 
+        "Children of the Grave", 
+        "Children of the Grave", 
+        "Children of the Grave", 
+        "Children of the Grave", 
+        "Children of the Grave's", 
+        "Mordekaiser's level", 
+        "Mordekaiser's level", 
+        "The damage areas DO stack.", 
+        "Curse", 
+        "Cursed", 
+        "Enslaved Soul", 
+        "Enslaved Soul", 
+        "Enslaved Soul", 
+        "Enslaved Souls", 
+        "Spoils of War"
+    ], 
+    "key": "Mordekaiser", 
+    "lore": "The vicious wraith Mordekaiser is among the most terrifying and hateful of spirits that haunt the Shadow Isles. Entombed in ancient armor, the Master of Metal is said to be the first of the unliving, a revenant who existed even before the Shadow Isles were wrought. His twisted soul thrives on his own suffering, as well as the anguish he inflicts upon others. Those who dare face Mordekaiser in battle risk a horrific curse: he enslaves his victims' souls to become instruments of destruction.", 
+    "id": 82, 
+    "spells": [
+        {
+            "cooldownBurn": "10/8.5/7/5.5/4", 
+            "key": "MordekaiserMaceOfSpades", 
+            "resource": "{{ e10 }} Health", 
+            "leveltip": {
+                "effect": [
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e9 }} -> {{ e9NL }}", 
+                    "{{ e7 }} -> {{ e7NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e10 }} -> {{ e10NL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Multiplier", 
+                    "Attack Damage Ratio", 
+                    "Cooldown", 
+                    "Health Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.65
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Health", 
+            "description": "Mordekaiser's next three attacks deal escalating bonus damage.", 
+            "sanitizedDescription": "Mordekaiser's next three attacks deal escalating bonus damage.", 
+            "sanitizedTooltip": "Mordekaiser's next three hits are empowered. The first deals {{ e3 }} (+{{ f1 }}) (+{{ f2 }}) bonus magic damage. Each extra strike deals {{ e9 }} times the bonus damage of the last, up to {{ f5 }} (+{{ f3 }}) (+{{ f4 }}).", 
+            "effect": [
+                null, 
+                [
+                    132.0, 
+                    181.5, 
+                    231.0, 
+                    280.5, 
+                    330.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    4.0, 
+                    8.0, 
+                    12.0, 
+                    16.0, 
+                    20.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    20.0, 
+                    225.0, 
+                    250.0, 
+                    275.0, 
+                    300.0
+                ], 
+                [
+                    0.25, 
+                    0.2625, 
+                    0.275, 
+                    0.2875, 
+                    0.3
+                ], 
+                [
+                    0.2, 
+                    0.2, 
+                    0.2, 
+                    0.2, 
+                    0.2
+                ], 
+                [
+                    2.0, 
+                    2.25, 
+                    2.5, 
+                    2.75, 
+                    3.0
+                ], 
+                [
+                    20.0, 
+                    23.0, 
+                    26.0, 
+                    29.0, 
+                    32.0
+                ]
+            ], 
+            "tooltip": "Mordekaiser's next three hits are empowered. The first deals {{ e3 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ f2 }})</span> bonus magic damage. Each extra strike deals {{ e9 }} times the bonus damage of the last, up to {{ f5 }} <span class=\"colorFF8C00\">(+{{ f3 }})</span> <span class=\"color99FF99\">(+{{ f4 }})</span>.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "132/181.5/231/280.5/330", 
+                "10/15/20/25/30", 
+                "4/8/12/16/20", 
+                "4", 
+                "30/60/90/120/150", 
+                "20/225/250/275/300", 
+                "0.25/0.2625/0.275/0.2875/0.3", 
+                "0.2", 
+                "2/2.25/2.5/2.75/3", 
+                "20/23/26/29/32"
+            ], 
+            "image": {
+                "full": "MordekaiserMaceOfSpades.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 288
+            }, 
+            "cooldown": [
+                10.0, 
+                8.5, 
+                7.0, 
+                5.5, 
+                4.0
+            ], 
+            "name": "Mace of Spades"
+        }, 
+        {
+            "cooldownBurn": "12/11/10/9/8", 
+            "key": "MordekaiserCreepingDeathCast", 
+            "resource": "{{ e3 }} Health", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e6 }} -> {{ e6NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Reactivation Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Health", 
+            "description": "Coats an ally in magnetic metal, increasing each champion's movement speed toward one another. While near to one another, the metal swirls violently dealing damage per second to enemies.", 
+            "sanitizedDescription": "Coats an ally in magnetic metal, increasing each champion's movement speed toward one another. While near to one another, the metal swirls violently dealing damage per second to enemies.", 
+            "sanitizedTooltip": "Passive: Even with allies present, Mordekaiser gains full experience toward levelling up from minions he kills. Experience Earned: {{ f3 }}. Active: Target an ally champion, linking them to Mordekaiser: Both gain up to {{ e5 }} movement speed toward one another. When they touch, they deal {{ e2 }} (+{{ a1 }}) magic damage over 4 seconds to nearby enemies. Reactivate to both instantly steal {{ e6 }} (+{{ a2 }}) health from nearby enemies ({{ e7 }}% heal on minions, max {{ e8 }} units; deals magic damage).", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    140.0, 
+                    180.0, 
+                    220.0, 
+                    260.0, 
+                    300.0
+                ], 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    75.0, 
+                    75.0, 
+                    75.0, 
+                    75.0, 
+                    75.0
+                ], 
+                [
+                    70.0, 
+                    95.0, 
+                    120.0, 
+                    145.0, 
+                    170.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "<span class=\"size18 colorFF9900\">Passive:</span> Even with allies present, Mordekaiser gains full experience toward levelling up from minions he kills. Experience Earned: <span class=\"colorFFFFFF\">{{ f3 }}</span>.<br><br><span class=\"size18 colorFF9900\">Active:</span> Target an ally champion, linking them to Mordekaiser:<font size = '4'><br><br></span><li>Both gain up to {{ e5 }} movement speed toward one another.<font size = '8'><br><br></span>When they touch, they deal {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage over 4 seconds to nearby enemies.<font size = '8'><br><br></span>Reactivate to both instantly steal {{ e6 }} <span class=\"color99FF99\">(+{{ a2 }})</span> health from nearby enemies ({{ e7 }}% heal on minions, max {{ e8 }} units; deals magic damage).", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/30/40/50/60", 
+                "140/180/220/260/300", 
+                "25/35/45/55/65", 
+                "1", 
+                "75", 
+                "70/95/120/145/170", 
+                "25", 
+                "2"
+            ], 
+            "image": {
+                "full": "MordekaiserCreepingDeathCast.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0
+            ], 
+            "name": "Harvesters of Sorrow"
+        }, 
+        {
+            "cooldownBurn": "6/5.75/5.5/5.25/5", 
+            "key": "MordekaiserSyphonOfDestruction", 
+            "resource": "{{ e1 }} Health", 
+            "leveltip": {
+                "effect": [
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Health Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Health", 
+            "description": "Mordekaiser deals damage to enemies in a cone in front of him. For each unit hit, Mordekaiser's shield absorbs energy.", 
+            "sanitizedDescription": "Mordekaiser deals damage to enemies in a cone in front of him. For each unit hit, Mordekaiser's shield absorbs energy.", 
+            "sanitizedTooltip": "Mordekaiser deals {{ e3 }} (+{{ a1 }}) (+{{ a1 }}) magic damage in a cone. For each Champion hit, he gains {{ e5 }}% maximum shield.", 
+            "effect": [
+                null, 
+                [
+                    24.0, 
+                    36.0, 
+                    48.0, 
+                    60.0, 
+                    72.0
+                ], 
+                [
+                    1.0, 
+                    2.0, 
+                    3.0, 
+                    4.0, 
+                    5.0
+                ], 
+                [
+                    35.0, 
+                    65.0, 
+                    95.0, 
+                    125.0, 
+                    155.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0
+                ]
+            ], 
+            "tooltip": "Mordekaiser deals {{ e3 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span><span class=\"color99FF99\"> (+{{ a1 }})</span> magic damage in a cone.<font size = '8'><br><br></span>For each Champion hit, he gains {{ e5 }}% maximum shield.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "24/36/48/60/72", 
+                "1/2/3/4/5", 
+                "35/65/95/125/155", 
+                "4", 
+                "15"
+            ], 
+            "image": {
+                "full": "MordekaiserSyphonOfDestruction.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                6.0, 
+                5.75, 
+                5.5, 
+                5.25, 
+                5.0
+            ], 
+            "name": "Siphon of Destruction"
+        }, 
+        {
+            "cooldownBurn": "120/105/90", 
+            "key": "MordekaiserChildrenOfTheGrave", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e6 }} -> {{ e6NL }}", 
+                    "{{ e9 }} -> {{ e9NL }}"
+                ], 
+                "label": [
+                    "Total Health Stolen", 
+                    "Cooldown", 
+                    "Ghost Bonus Attack Damage", 
+                    "Ghost Lifetime"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.04
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Mordekaiser curses an enemy champion or the Dragon, stealing a percent of their life initially and each second. If the target dies while the spell is active, their soul is enslaved and will follow Mordekaiser as a ghost.", 
+            "sanitizedDescription": "Mordekaiser curses an enemy champion or the Dragon, stealing a percent of their life initially and each second. If the target dies while the spell is active, their soul is enslaved and will follow Mordekaiser as a ghost.", 
+            "sanitizedTooltip": "Passive - Dragon Force: Damaging the Dragon will Curse it for 10 seconds. Active: Curse target Champion and steal {{ e1 }} (+{{ a1 }})% of their maximum health (half initially, half over 10 seconds; deals magic damage). Curse Effect: When killed by Mordekaiser's team, the Cursed unit's soul will follow Mordekaiser for {{ e9 }} seconds. Mordekaiser gains {{ e7 }}% of their ability power and {{ e8 }}% of their bonus health. The ghost gains {{ e6 }} attack damage and 15% of Mordekaiser's maximum health. The ghost can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    55.0, 
+                    65.0, 
+                    75.0
+                ], 
+                [
+                    75.0, 
+                    150.0, 
+                    225.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    10.0, 
+                    25.0, 
+                    50.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    45.0, 
+                    60.0, 
+                    75.0
+                ]
+            ], 
+            "tooltip": "<span class=\"size18 colorFF9900\">Passive - Dragon Force:</span> Damaging the Dragon will Curse it for 10 seconds.<br><br><span class=\"size18 colorFF9900\">Active:</span> Curse target Champion and steal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span>% of their maximum health (half initially, half over 10 seconds; deals magic damage).<br><br><span class=\"size18 colorFF9900\">Curse Effect:</span> When killed by Mordekaiser's team, the Cursed unit's soul will follow Mordekaiser for {{ e9 }} seconds.<font size = '3'><br><br></span>Mordekaiser gains {{ e7 }}% of their ability power and {{ e8 }}% of their bonus health.<font size = '3'><br><br></span>The ghost gains {{ e6 }} attack damage and 15% of Mordekaiser's maximum health.<br><br><span class=\"color99FF99\">The ghost can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.</span>", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "25/30/35", 
+                "55/65/75", 
+                "75/150/225", 
+                "2", 
+                "3", 
+                "10/25/50", 
+                "30", 
+                "25", 
+                "45/60/75"
+            ], 
+            "image": {
+                "full": "MordekaiserChildrenOfTheGrave.png", 
+                "group": "spell", 
+                "sprite": "spell7.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                120.0, 
+                105.0, 
+                90.0
+            ], 
+            "name": "Children of the Grave"
+        }
+    ]
+}

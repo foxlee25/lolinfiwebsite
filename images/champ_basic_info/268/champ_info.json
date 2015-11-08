@@ -1,0 +1,553 @@
+{
+    "info": {
+        "difficulty": 9, 
+        "attack": 6, 
+        "defense": 3, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.0, 
+        "attackdamage": 52.0, 
+        "mpperlevel": 42.0, 
+        "attackspeedoffset": -0.02, 
+        "mp": 350.56, 
+        "armor": 19.04, 
+        "hp": 524.4, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.5, 
+        "attackrange": 525.0, 
+        "movespeed": 325.0, 
+        "attackdamageperlevel": 2.8, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 6.92, 
+        "hpperlevel": 80.0
+    }, 
+    "name": "Azir", 
+    "title": "the Emperor of the Sands", 
+    "tags": [
+        "Mage", 
+        "Marksman"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Azir_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "Azir can summon the Disc of the Sun from the ruins of allied or enemy turrets.", 
+        "name": "Shurima's Legacy", 
+        "description": "Azir can summon the Disc of the Sun from the ruins of allied or enemy turrets."
+    }, 
+    "quotes": [
+        "Dais of Ascension", 
+        "Stairs of Ascension", 
+        "\"Xerath,\"", 
+        "Stairs of Ascension", 
+        "\"Xerath,\"", 
+        "Tomb of the Emperors", 
+        "Narrated by Nasus.", 
+        "Narrated by Nasus.", 
+        "\"I will open their eyes.\"", 
+        "\"See what I see.\"", 
+        "\"Fate is in our hands.\"", 
+        "\"They dare defy Shurima?\"", 
+        "\"With a word, I end you.\"", 
+        "\"Never cross an emperor.\"", 
+        "\"Behold the desert's wrath.\"", 
+        "\"Mine is the will of Shurima.\"", 
+        "\"They have overstepped.\"", 
+        "\"Give yourselves to Shurima.\"", 
+        "\"You dare oppose me?\"", 
+        "\"Soon, none will question us.\"", 
+        "\"I am Shurima's dawn.\"", 
+        "\"No sacrifice is too great.\"", 
+        "\"We are made by our choices.\"", 
+        "\"We walk a path of radiance.\"", 
+        "\"Shurima lives in me.\"", 
+        "\"Believe in our future.\"", 
+        "\"Loyalty will be rewarded.\"", 
+        "\"Join me, and be elevated.\"", 
+        "\"All eyes look to us.\"", 
+        "Azir chirps.", 
+        "\"Accept your destiny, Sivir.\"", 
+        "\"Kill.\"", 
+        "\"Conquer.\"", 
+        "\"Soldiers, onward.\"", 
+        "\"The order is given.\"", 
+        "\"Bury them.\"", 
+        "\"My decree is made.\"", 
+        "\"Trust in me.\"", 
+        "\"Shurima is eternal.\"", 
+        "\"Glory to Shurima.\"", 
+        "\"My soldiers march on.\"", 
+        "\"I am ascended.\"", 
+        "\"Return.\"", 
+        "\"Arise.\"", 
+        "\"Serve me.\"", 
+        "\"This now serves Shurima.\"", 
+        "\"Recognize your emperor.\"", 
+        "\"This is Shuriman land.\"", 
+        "\"I claim this for Shurima.\"", 
+        "\"Return!\"", 
+        "\"Return from the sands.\"", 
+        "\"Arise!\"", 
+        "\"Rise again!\"", 
+        "\"My city lives on.\"", 
+        "\"Shurima is never lost.\"", 
+        "\"No dragon can defeat us!\"", 
+        "\"I have no fear of dragons.\"", 
+        "\"No beast will stop us!\"", 
+        "\"I am Shurima's vision.\"", 
+        "\"I will shift as the sands.\"", 
+        "\"I will be reborn.\"", 
+        "\"Emperors never die.\"", 
+        "\"An idol of greatness.\"", 
+        "\"Time itself serves Shurima.\"", 
+        "\"The light of Shurima.\"", 
+        "\"Trust in my vision.\"", 
+        "\"Your emperor shall return.\"", 
+        "\"Shurima...\"", 
+        "\"How...?\"", 
+        "\"You cannot topple Shurima.\"", 
+        "\"Nothing is beyond my reach.\"", 
+        "\"I will guide us to glory.\"", 
+        "Happy minion-mancing!\"", 
+        "The slow is still reapplied."
+    ], 
+    "key": "Azir", 
+    "lore": "Once a mortal man blinded by his own hubris, Azir has recently returned as an Ascended being with unmatched dominion over the burning sands. He seeks to restore Shurima to its former glory, but some dispute his right to rule them. Azir's power, however, is undeniable.", 
+    "id": 268, 
+    "spells": [
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "AzirQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Azir sends all Sand Soldiers toward a target location. Sand Soldiers deal magic damage to all targets they pass through and apply a slow for 1 second.", 
+            "sanitizedDescription": "Azir sends all Sand Soldiers toward a target location. Sand Soldiers deal magic damage to all targets they pass through and apply a slow for 1 second.", 
+            "sanitizedTooltip": "Azir sends all Sand Soldiers toward a target location. Sand Soldiers deal {{ e1 }} (+{{ a1 }}) magic damage to all enemies they pass through and apply a {{ e2 }}% slow for 1 second. Enemies hit by multiple Sand Soldiers will have the slow duration refreshed, but will not take additional damage.", 
+            "effect": [
+                null, 
+                [
+                    65.0, 
+                    85.0, 
+                    105.0, 
+                    125.0, 
+                    145.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ]
+            ], 
+            "tooltip": "Azir sends all <span class=\"colorEED6AF\">Sand Soldiers</span> toward a target location. <span class=\"colorEED6AF\">Sand Soldiers</span> deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all enemies they pass through and apply a {{ e2 }}% slow for 1 second.<br><br>Enemies hit by multiple <span class=\"colorEED6AF\">Sand Soldiers</span> will have the slow duration refreshed, but will not take additional damage.", 
+            "maxrank": 5, 
+            "costBurn": "70", 
+            "rangeBurn": "875", 
+            "range": [
+                875, 
+                875, 
+                875, 
+                875, 
+                875
+            ], 
+            "cost": [
+                70, 
+                70, 
+                70, 
+                70, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "65/85/105/125/145", 
+                "25"
+            ], 
+            "image": {
+                "full": "AzirQ.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Conquering Sands"
+        }, 
+        {
+            "cooldownBurn": "0", 
+            "key": "AzirW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ f1 }} -> {{ f3 }}", 
+                    "{{ e3 }}% -> {{ e3NL }}%"
+                ], 
+                "label": [
+                    "Recharge", 
+                    "Attack Speed"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Azir summons a Sand Soldier to attack nearby targets for him, replacing his basic attack against targets within the soldier's range. Their attacks deal magic damage to enemies in a line. Arise! also passively grants attack speed to Azir and his Sand Soldiers.", 
+            "sanitizedDescription": "Azir summons a Sand Soldier to attack nearby targets for him, replacing his basic attack against targets within the soldier's range. Their attacks deal magic damage to enemies in a line. Arise! also passively grants attack speed to Azir and his Sand Soldiers.", 
+            "sanitizedTooltip": "Passive: Gains {{ e3 }}% attack speed. Active: Azir summons a Sand Soldier for {{ e1 }} seconds. When Azir attacks an enemy in a soldier's range, the soldier attacks instead of Azir, dealing {{ f2 }} (+{{ a1 }}) magic damage to enemies in a line. If multiple soldiers strike the same target, each soldier after the first deals 25% damage. Soldiers attack even if Azir himself isn't in basic attack range. Azir can store up to {{ maxammo }} Sand Soldiers at a time. A new soldier becomes available every {{ f1 }} seconds. Moving too far away from soldiers deactivates them. Sand Soldiers expire twice as fast when near an enemy turret. Azir can expend a soldier to damage an enemy turret by summoning it on top of the turret. This deals {{ f4 }} (+{{ a2 }}) magic damage to the turret.", 
+            "effect": [
+                null, 
+                [
+                    9.0, 
+                    9.0, 
+                    9.0, 
+                    9.0, 
+                    9.0
+                ], 
+                [
+                    12.0, 
+                    11.0, 
+                    10.0, 
+                    9.0, 
+                    8.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Gains {{ e3 }}% attack speed.<br><br><span class=\"colorFF9900\">Active:</span> Azir summons a <span class=\"colorEED6AF\">Sand Soldier</span> for {{ e1 }} seconds. When Azir attacks an enemy in a soldier's range, the soldier attacks instead of Azir, dealing {{ f2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in a line. If multiple soldiers strike the same target, each soldier after the first deals 25% damage. Soldiers attack even if Azir himself isn't in basic attack range.<br><br>Azir can store up to {{ maxammo }} <span class=\"colorEED6AF\">Sand Soldiers</span> at a time. A new soldier becomes available every <span class=\"colorFFFFFF\">{{ f1 }}</span> seconds. Moving too far away from soldiers deactivates them. <span class=\"colorEED6AF\">Sand Soldiers</span> expire twice as fast when near an enemy turret.<br><br>Azir can expend a soldier to damage an enemy turret by summoning it on top of the turret. This deals {{ f4 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage to the turret.", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "450", 
+            "range": [
+                450, 
+                450, 
+                450, 
+                450, 
+                450
+            ], 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "9", 
+                "12/11/10/9/8", 
+                "20/30/40/50/60", 
+                "40", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "AzirW.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Arise!"
+        }, 
+        {
+            "cooldownBurn": "19/18/17/16/15", 
+            "key": "AzirE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e4 }} -> {{ e4NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Shield"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Azir dashes to one of his Sand Soldiers, damaging enemies. If he hits an enemy champion, he gains a shield.", 
+            "sanitizedDescription": "Azir dashes to one of his Sand Soldiers, damaging enemies. If he hits an enemy champion, he gains a shield.", 
+            "sanitizedTooltip": "Azir dashes to one of his Sand Soldiers, damaging enemies hit for {{ e3 }} (+{{ a1 }}) magic damage. If Azir hits an enemy champion, he stops and gains a {{ e6 }} second shield that absorbs {{ e4 }} (+{{ f1 }}) [15% of bonus Health] damage.", 
+            "effect": [
+                null, 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    19.0, 
+                    18.0, 
+                    17.0, 
+                    16.0, 
+                    15.0
+                ], 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ], 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ], 
+                [
+                    -0.5, 
+                    -0.6, 
+                    -0.7, 
+                    -0.8, 
+                    -0.9
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    1100.0, 
+                    1100.0, 
+                    1100.0, 
+                    1100.0, 
+                    1100.0
+                ]
+            ], 
+            "tooltip": "Azir dashes to one of his <span class=\"colorEED6AF\">Sand Soldiers</span>, damaging enemies hit for {{ e3 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. If Azir hits an enemy champion, he stops and gains a {{ e6 }} second shield that absorbs {{ e4 }} <span class=\"colorFF3300\">(+{{ f1 }}) [15% of bonus Health]</span> damage.", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "1100", 
+            "range": [
+                1100, 
+                1100, 
+                1100, 
+                1100, 
+                1100
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "0.5", 
+                "19/18/17/16/15", 
+                "60/90/120/150/180", 
+                "80/120/160/200/240", 
+                "-0.5/-0.6/-0.7/-0.8/-0.9", 
+                "4", 
+                "1100"
+            ], 
+            "image": {
+                "full": "AzirE.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                19.0, 
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0
+            ], 
+            "name": "Shifting Sands"
+        }, 
+        {
+            "cooldownBurn": "140/120/100", 
+            "key": "AzirR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Number of Soldiers", 
+                    "Duration", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Azir summons a wall of soldiers which charge forward, knocking back and damaging enemies.", 
+            "sanitizedDescription": "Azir summons a wall of soldiers which charge forward, knocking back and damaging enemies.", 
+            "sanitizedTooltip": "Azir summons a wall of armored soldiers that charge forward, knocking back enemies and dealing {{ e1 }} (+{{ a1 }}) magic damage. The soldiers then remain as a wall for {{ e4 }} seconds. Enemies will be stopped by Emperor's Divide, even if they attempt to dash over the wall, but Azir and his allies can pass freely and gain {{ e5 }}% Movement Speed for 1 second when they pass through the wall. Emperor's Divide does not interact with Azir's basic attacks or spells.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    225.0, 
+                    300.0
+                ], 
+                null, 
+                [
+                    4.0, 
+                    5.0, 
+                    6.0
+                ], 
+                [
+                    5.0, 
+                    6.0, 
+                    7.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Azir summons a wall of armored soldiers that charge forward, knocking back enemies and dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. The soldiers then remain as a wall for {{ e4 }} seconds.<br><br>Enemies will be stopped by Emperor's Divide, even if they attempt to dash over the wall, but <span class=\"colorFFF673\">Azir and his allies can pass freely</span> and gain {{ e5 }}% Movement Speed for 1 second when they pass through the wall.<br><br>Emperor's Divide does not interact with Azir's basic attacks or spells.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "250", 
+            "range": [
+                250, 
+                250, 
+                250
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/225/300", 
+                "", 
+                "4/5/6", 
+                "5/6/7", 
+                "20"
+            ], 
+            "image": {
+                "full": "AzirR.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                140.0, 
+                120.0, 
+                100.0
+            ], 
+            "name": "Emperor's Divide"
+        }
+    ]
+}

@@ -1,0 +1,122 @@
+.summonerDetailPage{
+    width:800px;
+    margin: 0 auto;
+    
+}
+
+.summonerDetailPage,.summonerDetailPageTabs,.summonerProfileRow,
+.summonerDetailPageContentBottomContainer,
+.summonerDetailPageContentTopContainer{
+     background-color: rgba(105,105,116,0.3);
+}
+
+
+.summonerProfileRow,.summonerDetailPageTabs,.summonerDetailPageContentGeneral,.summoneDetailPageContentChampions{
+    position:relative;
+    float:left;
+    width:100%;
+     background-color: rgba(105,105,116,0.3);
+}
+
+.summonerProfileRow{
+    height:100px;//temp
+}
+
+.summonerDetailPageTabs{
+    background-color: rgba(13,54,93,0.2);
+}
+
+.summonerTabs{
+    position:relative;
+    float:left;
+    width:25%;
+    color:#C0C0CA;
+    text-align: center;
+    
+}
+
+.summonerTabs_Selected{
+    background-color:#0C385C
+}
+.summonerTabs:hover{
+    background-color:#0C385C
+}
+
+
+
+
+
+/*Home_General*/
+.last20GamesSummaryContainer,.last20GamesSummarySpiderChartContainer{
+    position:relative;
+    width:50%;
+    float: left;
+}
+.last20GamesSummaryTitle, .last20GamesSummaryContent{
+    position:relative;
+    float:left;
+    width: 100%;
+}
+.last20GamesSummaryTitle{
+    margin-top:10px;
+}
+.titleLeftDivRTitle{
+    position:relative;
+    float:left;
+     color:#448AAC;
+     margin-right:10px;
+}
+.displayHeroSmall{
+    position:relative;
+    float:left;
+    color:white;
+}
+.leftDivChampions,.leftDivRoleTimes{
+    position:relative;
+    float:left;
+}
+.leftDivTable{
+     position:relative;
+    float:left;
+    width:100%;
+}
+.last20GamesSummaryContent_champUseCount,.last20GamesSummaryContent_champtable,.last20GamesSummaryContent_champRow{
+    position:relative;
+    float:left;
+    width:100%;
+    height:50px;
+}
+.circleHeroDuty{
+    width:50px;
+    height:50px;
+    border-radius:50px;
+    font-size:14px;
+    color:white;
+    line-height:20px;
+    text-align:center;
+    border:1px solid #0E3357;//
+    margin: 0 auto;
+    padding: 16px 0 0;
+    float: left;
+}
+.circleHeroDuty firstl {
+    font-size: 14px;
+}
+.circleHeroDuty secondl {
+    font-size: 8px;
+}
+
+#last20gameSummaryTable{
+    width:100%;
+}
+
+#last20gameSummaryTable thead{
+    background-color:#263F55;
+        color:white;
+        text-align: center;
+}
+#last20gameSummaryTable tbody{
+    border:1px solid #0E3357;
+     color:white;
+        text-align: center;
+}

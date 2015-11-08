@@ -1,0 +1,517 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 8, 
+        "defense": 5, 
+        "magic": 1
+    }, 
+    "stats": {
+        "armorperlevel": 3.2, 
+        "attackdamage": 56.04, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 0.0, 
+        "armor": 24.376, 
+        "hp": 558.48, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 3.5, 
+        "attackrange": 125.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 3.34, 
+        "hpperlevel": 86.0
+    }, 
+    "name": "Riven", 
+    "title": "the Exile", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "None", 
+    "passive": {
+        "image": {
+            "full": "RivenRunicBlades.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 432
+        }, 
+        "sanitizedDescription": "Riven's abilities charge her blade, causing her basic attacks to deal bonus physical damage. Riven's blade may be charged up to three times and expends one charge per attack.", 
+        "name": "Runic Blade", 
+        "description": "Riven's abilities charge her blade, causing her basic attacks to deal bonus physical damage. Riven's blade may be charged up to three times and expends one charge per attack."
+    }, 
+    "quotes": [
+        "\"So much death.\"", 
+        "\"A necessary strike.\"", 
+        "\"It must come to pass.\"", 
+        "\"They've crossed the line.\"", 
+        "\"For those who were lost.\"", 
+        "\"Violence to end violence.\"", 
+        "\"To serve the greater good.\"", 
+        "\"I am awakened.\"", 
+        "\"There is no other way.\"", 
+        "\"They cannot go unpunished!\"", 
+        "\"The time for talk is over.\"", 
+        "\"Sacrifices must be made.\"", 
+        "\"So long I've wandered...\"", 
+        "\"How should I proceed?\"", 
+        "\"My spirit is not lost.\"", 
+        "\"Burdens of the past.\"", 
+        "\"What conflict awaits?\"", 
+        "\"Choose your own path.\"", 
+        "\"My hands are stained.\"", 
+        "\"Learn from your mistakes.\"", 
+        "\"A sword mirrors its owner.\"", 
+        "\"I know my purpose.\"", 
+        "\"A moment of clarity.\"", 
+        "\"Leave doubt behind.\"", 
+        "\"No more hesitation.\"", 
+        "\"No looking back.\"", 
+        "\"You are beyond redemption!\"", 
+        "Only the strong survive", 
+        "less than half", 
+        "would", 
+        "Only the strong survive", 
+        "couldnt", 
+        "Greetings Summoners!"
+    ], 
+    "key": "Riven", 
+    "lore": "In Noxus, any citizen may rise to power regardless of race, gender, or social standing - strength is all that matters. It was with committed faith in this ideal that Riven strove to greatness. She showed early potential as a soldier, forcing herself to master the weight of a long sword when she was barely its height. She was ruthless and efficient as a warrior, but her true strength lay in her conviction. She entered battles without any trace of doubt in her mind: no ethical pause, no fear of death. Riven became a leader amongst her peers, poster child of the Noxian spirit. So exceptional was her passion that the High Command recognized her with a black stone rune sword forged and enchanted with Noxian sorcery. The weapon was heavier than a kite shield and nearly as broad - perfectly suited to her tastes. Soon after, she was deployed to Ionia as part of the Noxian invasion.<br><br>What began as war quickly became extermination. Noxian soldiers followed the terrifying Zaunite war machines across fields of death. It wasn't the glorious combat for which Riven trained. She carried out the orders of her superiors, terminating the remnants of a beaten and fractured enemy with extreme prejudice. As the invasion continued, it became clear that the Ionian society would not be reformed, merely eliminated. During one bitter engagement, Riven's unit became surrounded by Ionian forces. They called for support as the enemy closed in around them. What they received instead was a barrage of biochemical terror launched by Singed. Riven watched as around her Ionian and Noxian alike fell victim to an unspeakably gruesome fate. She managed to escape the bombardment, though she could not erase the memory. Counted dead by Noxus, she saw an opportunity to start anew. She shattered her sword, severing ties with the past, and wandered in self-imposed exile - on a quest to seek atonement and a way to save the pure Noxian vision in which she believed.<br><br>''There is a place between war and murder in which our demons lurk.''", 
+    "id": 92, 
+    "spells": [
+        {
+            "cooldownBurn": "13", 
+            "key": "RivenTriCleave", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e5 }}% -> {{ e5NL }}%"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Attack Damage Scaling"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4, 
+                        0.45, 
+                        0.5, 
+                        0.55, 
+                        0.6
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Riven lashes out in a series of strikes. This ability can be reactivated three times in a short time frame with the third hit knocking back nearby enemies.", 
+            "sanitizedDescription": "Riven lashes out in a series of strikes. This ability can be reactivated three times in a short time frame with the third hit knocking back nearby enemies.", 
+            "sanitizedTooltip": "Riven strikes out in front of her in a short line. This ability may be reactivated {{ e4 }} additional times. 1st and 2nd Use: Slashes forward, dealing {{ e1 }} (+{{ f1 }}) physical damage to all units she comes in contact with. 3rd Use: Leaps forward and slams the ground dealing {{ e1 }} (+{{ f1 }}) physical damage and knocking nearby enemies up. This leap can cross unpathable terrain. Riven will target the unit your cursor is hovering over, or if no targets are present, Riven will simply strike the direction she is currently facing.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    30.0, 
+                    50.0, 
+                    70.0, 
+                    90.0
+                ], 
+                [
+                    30.0, 
+                    55.0, 
+                    80.0, 
+                    105.0, 
+                    130.0
+                ], 
+                [
+                    150.0, 
+                    225.0, 
+                    300.0, 
+                    375.0, 
+                    450.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "Riven strikes out in front of her in a short line. This ability may be reactivated {{ e4 }} additional times.<br><br><span class=\"colorDDDD77\">1st and 2nd Use:</span> Slashes forward, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage to all units she comes in contact with.<br><span class=\"colorDDDD77\">3rd Use:</span> Leaps forward and slams the ground dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and knocking nearby enemies up. This leap can cross unpathable terrain.<br><br><span class=\"colorDDDD77\">Riven will target the unit your cursor is hovering over, or if no targets are present, Riven will simply strike the direction she is currently facing.</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "275", 
+            "range": [
+                275, 
+                275, 
+                275, 
+                275, 
+                275
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "10/30/50/70/90", 
+                "30/55/80/105/130", 
+                "150/225/300/375/450", 
+                "2", 
+                "40/45/50/55/60"
+            ], 
+            "image": {
+                "full": "RivenTriCleave.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 240
+            }, 
+            "cooldown": [
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0, 
+                13.0
+            ], 
+            "name": "Broken Wings"
+        }, 
+        {
+            "cooldownBurn": "11/10/9/8/7", 
+            "key": "RivenMartyr", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Riven emits a Ki Burst, damaging and stunning nearby enemies.", 
+            "sanitizedDescription": "Riven emits a Ki Burst, damaging and stunning nearby enemies.", 
+            "sanitizedTooltip": "Riven's sword emits a burst of runic energy that shocks nearby enemies, dealing {{ e1 }} (+{{ f1 }}) physical damage and stunning them for {{ e5 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    80.0, 
+                    110.0, 
+                    140.0, 
+                    170.0
+                ], 
+                [
+                    40.0, 
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ]
+            ], 
+            "tooltip": "Riven's sword emits a burst of runic energy that shocks nearby enemies, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage and stunning them for {{ e5 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "260", 
+            "range": [
+                260, 
+                260, 
+                260, 
+                260, 
+                260
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "50/80/110/140/170", 
+                "40/70/100/130/160", 
+                "3", 
+                "0.75", 
+                "0.75"
+            ], 
+            "image": {
+                "full": "RivenMartyr.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 288
+            }, 
+            "cooldown": [
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0
+            ], 
+            "name": "Ki Burst"
+        }, 
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "RivenFeint", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage Blocked", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Riven steps forward a short distance and blocks incoming damage.", 
+            "sanitizedDescription": "Riven steps forward a short distance and blocks incoming damage.", 
+            "sanitizedTooltip": "Riven does a quick dash in the direction of your cursor and becomes shielded, blocking up to {{ e2 }} (+{{ f1 }}) incoming damage for 1.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0, 
+                    210.0
+                ], 
+                [
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0, 
+                    210.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    800.0, 
+                    800.0, 
+                    800.0, 
+                    800.0, 
+                    800.0
+                ]
+            ], 
+            "tooltip": "Riven does a quick dash in the direction of your cursor and becomes shielded, blocking up to {{ e2 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> incoming damage for 1.5 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "250", 
+            "range": [
+                250, 
+                250, 
+                250, 
+                250, 
+                250
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "90/120/150/180/210", 
+                "90/120/150/180/210", 
+                "4", 
+                "800"
+            ], 
+            "image": {
+                "full": "RivenFeint.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Valor"
+        }, 
+        {
+            "cooldownBurn": "110/85/50", 
+            "key": "RivenFengShuiEngine", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} / {{ e2 }} -> {{ e1NL }} / {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Shockwave Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f3"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.8
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Riven empowers her keepsake weapon with energy, and gains Attack Damage and Range. During this time, she also gains the ability to use Wind Slash, a powerful ranged attack, once. ", 
+            "sanitizedDescription": "Riven empowers her keepsake weapon with energy, and gains Attack Damage and Range. During this time, she also gains the ability to use Wind Slash, a powerful ranged attack, once.", 
+            "sanitizedTooltip": "Riven's weapon surges with spiritual energy for {{ e4 }} seconds, granting her {{ e5 }}% extra Attack Damage (+{{ f3 }}), increased Range on her damaging spells and attacks, and the ability to use Wind Slash once. Wind Slash: Riven fires a shockwave that deals from {{ e1 }} (+{{ f1 }}) to {{ e2 }} (+{{ f2 }}) physical damage to all enemies hit, increasing based on how much Health they are missing.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0
+                ], 
+                [
+                    240.0, 
+                    360.0, 
+                    480.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Riven's weapon surges with spiritual energy for {{ e4 }} seconds, granting her {{ e5 }}% extra Attack Damage (<span class=\"colorFF8C00\">+{{ f3 }}</span>), increased Range on her damaging spells and attacks, and the ability to use Wind Slash once.<br><br><span class=\"colorDDDD77\">Wind Slash:</span> Riven fires a shockwave that deals from {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> to {{ e2 }} <span class=\"colorFF8C00\">(+{{ f2 }})</span> physical damage to all enemies hit, increasing based on how much Health they are missing.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160", 
+                "240/360/480", 
+                "20", 
+                "15", 
+                "20"
+            ], 
+            "image": {
+                "full": "RivenFengShuiEngine.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                110.0, 
+                85.0, 
+                50.0
+            ], 
+            "name": "Blade of the Exile"
+        }
+    ]
+}

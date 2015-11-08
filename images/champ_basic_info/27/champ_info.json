@@ -1,0 +1,391 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 4, 
+        "defense": 8, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 62.32, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": 0.02, 
+        "mp": 290.6, 
+        "armor": 27.88, 
+        "hp": 542.76, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.81, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.375, 
+        "mpregenperlevel": 0.55, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.52, 
+        "spellblock": 32.1, 
+        "hpregen": 8.02, 
+        "hpperlevel": 82.0
+    }, 
+    "name": "Singed", 
+    "title": "the Mad Chemist", 
+    "tags": [
+        "Tank", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Singed_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 288
+        }, 
+        "sanitizedDescription": "Increases Singed's Health by 25 for every 100 Mana he has.", 
+        "name": "Empowered Bulwark", 
+        "description": "Increases Singed's Health by 25 for every 100 Mana he has."
+    }, 
+    "quotes": [
+        "\"How about a drink?\"", 
+        "\"This may hurt.\"", 
+        "\"Mix, mix, swirl, mix.\"", 
+        "\"It's nearly time.\"", 
+        "\"To shake, or not to shake.\"", 
+        "\"I hear you.\"", 
+        "\"On my way.\"", 
+        "\"How'd that taste?\"", 
+        "\"Shaken, not stirred.\""
+    ], 
+    "key": "Singed", 
+    "lore": "Singed descended from a long line of Zaun's revered chemists. Even in his youth, his talent for concocting potions far outstripped that of his peers, and he quickly distinguished himself from his less extraordinary chemist compatriots. It came as no surprise to anyone when he was selected for apprenticeship by the infamous Warwick, master apothecary on a lucrative retainer with the Noxian military during their campaign against Ionia. Within Warwick's laboratories, Singed toiled without end, rapidly absorbing every detail of his predecessor's deadly craft. Singed had little concern for the death and destruction that was the fruit of his labors. By the time the curse of lycanthropy descended to claim his master, Singed was poised and eager to make the transition from workhorse to innovator; he was ready to share his genius by bringing a new brand of suffering to the Ionian front. His zeal for progress was unquenchable, and when suitable test subjects proved to be in short supply, the eager chemist was often thought to turn his volatile mixtures on his own flesh.<br><br>When the uneasy peace created by the League of Legends settled on the world, Singed journeyed to the one place where he was still able to showcase his beloved craft: the Institute of War. By this time he was barely even a man, his body both ruined and sustained by his ingenious craft. A thousand burns - accidents of shadow and flame - mar his ravaged form, and exposure to such harsh conditions has deadened his nerves, hardened his body, and strengthened his physique, transforming him into a veritable juggernaut. This, combined with a formidable arsenal of deadly concoctions, makes Singed a force to be reckoned with on the Fields of Justice.<br><br>''My deadliest dose shall bear my patron's name!''<br>-- Singed, having just christened the Insanity Potion", 
+    "id": 27, 
+    "spells": [
+        {
+            "cooldownBurn": "0", 
+            "key": "PoisonTrail", 
+            "resource": "{{ cost }} Mana per Second", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "ManaperSecond", 
+            "description": "Leaves a trail of poison behind Singed, dealing damage to enemies caught in the path.", 
+            "sanitizedDescription": "Leaves a trail of poison behind Singed, dealing damage to enemies caught in the path.", 
+            "sanitizedTooltip": "Toggle: Singed lays a poisonous trail that deals {{ e1 }} (+{{ a1 }}) magic damage per second.", 
+            "effect": [
+                null, 
+                [
+                    22.0, 
+                    34.0, 
+                    46.0, 
+                    58.0, 
+                    70.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Toggle: </span>Singed lays a poisonous trail that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage per second.", 
+            "maxrank": 5, 
+            "costBurn": "13", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                13, 
+                13, 
+                13, 
+                13, 
+                13
+            ], 
+            "effectBurn": [
+                "", 
+                "22/34/46/58/70", 
+                "1"
+            ], 
+            "image": {
+                "full": "PoisonTrail.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 144
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Poison Trail"
+        }, 
+        {
+            "cooldownBurn": "14", 
+            "key": "MegaAdhesive", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Slow Amount", 
+                    "Mana Cost "
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Throws a vial of mega adhesive on the ground, slowing enemies who walk on it.", 
+            "sanitizedDescription": "Throws a vial of mega adhesive on the ground, slowing enemies who walk on it.", 
+            "sanitizedTooltip": "Singed leaves a sticky area on the ground for {{ e2 }} seconds, slowing enemies in the area by {{ e1 }}% (lasts {{ e3 }} second after leaving). If Singed flings a target into the zone, it will root them.", 
+            "effect": [
+                null, 
+                [
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0, 
+                    75.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ]
+            ], 
+            "tooltip": "Singed leaves a sticky area on the ground for {{ e2 }} seconds, slowing enemies in the area by {{ e1 }}% (lasts {{ e3 }} second after leaving).<br><br>If Singed flings a target into the zone, it will root them.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "35/45/55/65/75", 
+                "5", 
+                "1"
+            ], 
+            "image": {
+                "full": "MegaAdhesive.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 192
+            }, 
+            "cooldown": [
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0
+            ], 
+            "name": "Mega Adhesive"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "Fling", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Max Health Damage", 
+                    "Root Duration", 
+                    "Mana Cost "
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.75
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Damages target enemy unit and flings them into the air behind Singed. If the target Singed flings lands in his Mega Adhesive, they are also rooted.", 
+            "sanitizedDescription": "Damages target enemy unit and flings them into the air behind Singed. If the target Singed flings lands in his Mega Adhesive, they are also rooted.", 
+            "sanitizedTooltip": "Singed flings an enemy over his shoulder, dealing {{ e1 }} (+{{ a1 }}) plus {{ e3 }}% of the target's maximum Health as magic damage. Max 300 bonus damage against minions and monsters. If the target Singed flings lands in his Mega Adhesive, they are also rooted for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    65.0, 
+                    80.0, 
+                    95.0, 
+                    110.0
+                ], 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ], 
+                [
+                    6.0, 
+                    6.5, 
+                    7.0, 
+                    7.5, 
+                    8.0
+                ]
+            ], 
+            "tooltip": "Singed flings an enemy over his shoulder, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> plus {{ e3 }}% of the target's maximum Health as magic damage. Max 300 bonus damage against minions and monsters.<br><br>If the target Singed flings lands in his Mega Adhesive, they are also rooted for {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "100/110/120/130/140", 
+            "rangeBurn": "125", 
+            "range": [
+                125, 
+                125, 
+                125, 
+                125, 
+                125
+            ], 
+            "cost": [
+                100, 
+                110, 
+                120, 
+                130, 
+                140
+            ], 
+            "effectBurn": [
+                "", 
+                "50/65/80/95/110", 
+                "1/1.25/1.5/1.75/2", 
+                "6/6.5/7/7.5/8"
+            ], 
+            "image": {
+                "full": "Fling.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 240
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Fling"
+        }, 
+        {
+            "cooldownBurn": "100", 
+            "key": "InsanityPotion", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Bonus Stats"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Singed drinks a potent brew of chemicals, granting him increased combat stats.", 
+            "sanitizedDescription": "Singed drinks a potent brew of chemicals, granting him increased combat stats.", 
+            "sanitizedTooltip": "Singed drinks a potent brew of chemicals, granting him {{ e1 }} Ability Power, Armor, Magic Resist, Movement Speed, Health Regen, and Mana Regen for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    35.0, 
+                    50.0, 
+                    80.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Singed drinks a potent brew of chemicals, granting him {{ e1 }} Ability Power, Armor, Magic Resist, Movement Speed, Health Regen, and Mana Regen for {{ e2 }} seconds.", 
+            "maxrank": 3, 
+            "costBurn": "150", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                150, 
+                150, 
+                150
+            ], 
+            "effectBurn": [
+                "", 
+                "35/50/80", 
+                "25", 
+                "10/15/20"
+            ], 
+            "image": {
+                "full": "InsanityPotion.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 288
+            }, 
+            "cooldown": [
+                100.0, 
+                100.0, 
+                100.0
+            ], 
+            "name": "Insanity Potion"
+        }
+    ]
+}

@@ -1,0 +1,388 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 7, 
+        "defense": 4, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 3.75, 
+        "attackdamage": 61.544, 
+        "mpperlevel": 35.0, 
+        "attackspeedoffset": -0.06, 
+        "mp": 288.8, 
+        "armor": 25.3, 
+        "hp": 607.2, 
+        "hpregenperlevel": 0.65, 
+        "attackspeedperlevel": 3.2, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.3, 
+        "mpregenperlevel": 0.65, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 8.09, 
+        "spellblock": 32.1, 
+        "hpregen": 8.59, 
+        "hpperlevel": 90.0
+    }, 
+    "name": "Irelia", 
+    "title": "the Will of the Blades", 
+    "tags": [
+        "Fighter", 
+        "Assassin"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Irelia_IonianFervor.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Reduces the duration of all disables for each nearby enemy champion. 1 Champion: 10% 2 Champions: 25% 3 Champions: 40%", 
+        "name": "Ionian Fervor", 
+        "description": "Reduces the duration of all disables for each nearby enemy champion.<br><br>1 Champion: 10%<br>2 Champions: 25%<br>3 Champions: 40%"
+    }, 
+    "quotes": [
+        "\"My blade is at your service!\"", 
+        "\"There's no turning back.\"", 
+        "\"Cut them down.\"", 
+        "\"It ends here.\"", 
+        "\"This battle will be won.\"", 
+        "\"They will not prevail.\"", 
+        "\"This way.\"", 
+        "\"Justice guides us.\"", 
+        "\"I will not falter.\"", 
+        "\"With precision.\"", 
+        "\"Forge onward.\"", 
+        "\"Ionia shall not fall.\"", 
+        "\"I stand resolute.\"", 
+        "\"Stay sharp.\"", 
+        "\"Balance in all things.\"", 
+        "What did he always say after-", 
+        "Irelia was designed by Ezreal", 
+        "PC Gamer"
+    ], 
+    "key": "Irelia", 
+    "lore": "The Ionians have developed some of the most breathtaking and deadly martial arts on all of Runeterra - just one manifestation of their pursuit of enlightenment. The most remarkable blade style to emerge, however, was the unusual byproduct of foreign intervention. Master Lito was a swordsman whose teachings were sought by ruling classes from nearly every city-state. His art was a highly-guarded secret, but it was said that swords would breathe in his grasp. He withered unexpectedly from a mysterious disease which baffled the brightest of Runeterran physicians. When he died, he left behind Zelos and Irelia, his son and daughter, and a truly unique weapon. Zelos became a sergeant in the Ionian military and left to seek assistance from Demacia immediately prior to Noxus' invasion of Ionia. Irelia, charged with the protection of their home until Zelos returned, was alone when the Noxian forces struck.<br><br>The Ionians fought admirably, but soon Ionian blood stained the land beneath the prints of foreign boots. At the Great Stand of the Placidium, Ionians prepared for surrender, but were inspired to maintain their resistance when the young Irelia lifted her father's enormous blade and pledged to hold until her brother returned. In the chaos of the ensuing fight, Irelia was cursed with dark Noxian Necromancy. As her life ebbed, Soraka, the Starchild, made a final attempt to anchor her fading soul. Unwilling to relinquish her home, Irelia rose at the brink of death, and her father's sword lifted in the air alongside her. Irelia rushed back to the fore, unfazed by the blade's sudden animation. The weapon danced around her effortlessly, cutting down Noxians as they gaped in horror. The decimated invaders were forced to retreat from the Placidium. Irelia was appointed Ionia's Captain of the Guard, and when the defense of her homeland moved to the Fields of Justice, so did she.<br><br>'The sword flourishes, as though painting with blood.'<br>-- Taken from a Noxian Field Report", 
+    "id": 39, 
+    "spells": [
+        {
+            "cooldownBurn": "14/12/10/8/6", 
+            "key": "IreliaGatotsu", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Irelia dashes forward to strike her target. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana.", 
+            "sanitizedDescription": "Irelia dashes forward to strike her target. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana.", 
+            "sanitizedTooltip": "Irelia dashes forward to strike her target, dealing {{ e1 }} (+{{ a1 }}) physical damage and applying on-hit effects. If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    50.0, 
+                    80.0, 
+                    110.0, 
+                    140.0
+                ]
+            ], 
+            "tooltip": "Irelia dashes forward to strike her target, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage and applying on-hit effects.<br><br>If it kills the target, Bladesurge's cooldown refreshes and refunds 35 Mana.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "20/50/80/110/140"
+            ], 
+            "image": {
+                "full": "IreliaGatotsu.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0, 
+                6.0
+            ], 
+            "name": "Bladesurge"
+        }, 
+        {
+            "cooldownBurn": "15", 
+            "key": "IreliaHitenStyle", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Health Restoration", 
+                    "True Damage"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Irelia is skilled in the art of Hiten, passively giving her physical attacks Health restoration. Activating Hiten Style doubles her Health restoration and gives her basic attacks true damage.", 
+            "sanitizedDescription": "Irelia is skilled in the art of Hiten, passively giving her physical attacks Health restoration. Activating Hiten Style doubles her Health restoration and gives her basic attacks true damage.", 
+            "sanitizedTooltip": "Passive: Basic attacks restore {{ e1 }} Health. Active: Irelia's basic attacks deal {{ e2 }} true damage and doubles Health restored for 6 seconds.", 
+            "effect": [
+                null, 
+                [
+                    5.0, 
+                    7.0, 
+                    9.0, 
+                    11.0, 
+                    13.0
+                ], 
+                [
+                    15.0, 
+                    30.0, 
+                    45.0, 
+                    60.0, 
+                    75.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Basic attacks restore {{ e1 }} Health.<br><br><span class=\"colorFF9900\">Active:</span> Irelia's basic attacks deal {{ e2 }} true damage and doubles Health restored for 6 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "5/7/9/11/13", 
+                "15/30/45/60/75"
+            ], 
+            "image": {
+                "full": "IreliaHitenStyle.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0, 
+                15.0
+            ], 
+            "name": "Hiten Style"
+        }, 
+        {
+            "cooldownBurn": "8", 
+            "key": "IreliaEquilibriumStrike", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ e2 }} -> {{ e2NL }}", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Disable Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Irelia's attack balances the scales, dealing damage and slowing the target. However, if the target has a higher Health % than Irelia, then the blow stuns the target instead of slowing.", 
+            "sanitizedDescription": "Irelia's attack balances the scales, dealing damage and slowing the target. However, if the target has a higher Health % than Irelia, then the blow stuns the target instead of slowing.", 
+            "sanitizedTooltip": "Irelia pierces her target, dealing {{ e1 }} (+{{ a1 }}) magic damage and slowing the target by 60% for {{ e2 }} second(s). If the target has a higher Health % than Irelia, she stuns the target for the duration instead.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ], 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Irelia pierces her target, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and slowing the target by 60% for {{ e2 }} second(s).<br><br>If the target has a higher Health % than Irelia, she stuns the target for the duration instead.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "325", 
+            "range": [
+                325, 
+                325, 
+                325, 
+                325, 
+                325
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160/200/240", 
+                "1/1.25/1.5/1.75/2"
+            ], 
+            "image": {
+                "full": "IreliaEquilibriumStrike.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Equilibrium Strike"
+        }, 
+        {
+            "cooldownBurn": "70/60/50", 
+            "key": "IreliaTranscendentBlades", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Irelia summons 4 spirit blades that she can fling to deal physical damage and siphon life from enemies they pass through.", 
+            "sanitizedDescription": "Irelia summons 4 spirit blades that she can fling to deal physical damage and siphon life from enemies they pass through.", 
+            "sanitizedTooltip": "Irelia summons 4 spirit blades that she can fling to deal {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) physical damage to enemies they pass through. She heals for 25% of the damage dealt against champions and 10% against minions and monsters.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0
+                ]
+            ], 
+            "tooltip": "Irelia summons 4 spirit blades that she can fling to deal {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> physical damage to enemies they pass through. She heals for 25% of the damage dealt against champions and 10% against minions and monsters.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160"
+            ], 
+            "image": {
+                "full": "IreliaTranscendentBlades.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                70.0, 
+                60.0, 
+                50.0
+            ], 
+            "name": "Transcendent Blades"
+        }
+    ]
+}

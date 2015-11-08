@@ -1,0 +1,593 @@
+{
+    "info": {
+        "difficulty": 3, 
+        "attack": 8, 
+        "defense": 5, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 58.328, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.06, 
+        "mp": 100.0, 
+        "armor": 25.584, 
+        "hp": 572.16, 
+        "hpregenperlevel": 0.75, 
+        "attackspeedperlevel": 2.65, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.1, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 0.0, 
+        "spellblock": 32.1, 
+        "hpregen": 7.96, 
+        "hpperlevel": 87.0
+    }, 
+    "name": "Renekton", 
+    "title": "the Butcher of the Sands", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "Rage", 
+    "passive": {
+        "image": {
+            "full": "Renekton_Predator.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 336
+        }, 
+        "sanitizedDescription": "Renekton gains Fury for every autoattack he makes. This Fury can empower his abilities with bonus effects. Additionally, Renekton gains bonus Fury when he is low on life.", 
+        "name": "Reign of Anger", 
+        "description": "Renekton gains Fury for every autoattack he makes. This Fury can empower his abilities with bonus effects. Additionally, Renekton gains bonus Fury when he is low on life."
+    }, 
+    "quotes": [
+        "Tomb of the Emperors", 
+        "\"As I live, all will die!\"", 
+        "\"Cut them down!\"", 
+        "\"Embrace the jaws of death.\"", 
+        "\"I'll leave them in pieces.\"", 
+        "\"Carnage!\"", 
+        "\"Bask in their blood!\"", 
+        "\"There is no retreat.\"", 
+        "\"Welcome the havoc.\"", 
+        "\"Destruction approaches.\"", 
+        "\"Lavish brutality.\"", 
+        "\"Chaos will follow.\"", 
+        "\"Nothing will stop me!\"", 
+        "\"Make this hurt.\"", 
+        "\"No suffering is too great.\"", 
+        "\"All will suffer as I have!\"", 
+        "\"Now you will know agony!\"", 
+        "\"I will spare no-one!\"", 
+        "\"Massacre them!\"", 
+        "\"Shred their fragile bodies!\"", 
+        "\"I will gut you all!\"", 
+        "\"Oceans of blood!\"", 
+        "butcher's rage"
+    ], 
+    "key": "Renekton", 
+    "lore": "Renekton was once a staunch gatekeeper of ancient Shurima, but in the centuries since the fall of that once-glorious empire, he has been consumed by madness. Now, he is little more than a rage-fueled beast who seeks to kill his brother Nasus, who he believes is to blame for his current state of mind.", 
+    "id": 58, 
+    "spells": [
+        {
+            "cooldownBurn": "8", 
+            "key": "RenektonCleave", 
+            "resource": "No Cost or 50 Fury", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e4 }} / {{ e9 }} -> {{ e4NL }} / {{ e9NL }}", 
+                    "{{ e6 }} -> {{ e6NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Max Health Gain", 
+                    "Fury Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f2"
+                }, 
+                {
+                    "coeff": [
+                        1.2
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "NoCostor50Fury", 
+            "description": "Renekton swings his blade, dealing moderate physical damage to all targets around him, and heals for a small portion of the damage dealt. If he has more than 50 Fury, his damage and heal are increased.", 
+            "sanitizedDescription": "Renekton swings his blade, dealing moderate physical damage to all targets around him, and heals for a small portion of the damage dealt. If he has more than 50 Fury, his damage and heal are increased.", 
+            "sanitizedTooltip": "Renekton swings his blade, dealing {{ e1 }} (+{{ a1 }}) physical damage to nearby enemies and healing himself for {{ e2 }} (+{{ f1 }}) Health for each non-champion hit and {{ f2 }} (+{{ f3 }}) Health for each champion hit, up to {{ e4 }} Health. In addition, he generates 2.5 Fury for each non-champion hit and 10 Fury for each champion hit, up to a maximum of 30 Fury. 50 Fury Bonus: Damage increased to {{ e6 }} (+{{ a2 }}). Heal increased to {{ e7 }} (+{{ f4 }}) per non-champion and {{ f5 }} (+{{ f6 }}) per champion, up to {{ e9 }}. No longer generates Fury.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ], 
+                [
+                    3.0, 
+                    4.5, 
+                    6.0, 
+                    7.5, 
+                    9.0
+                ], 
+                [
+                    0.04, 
+                    0.04, 
+                    0.04, 
+                    0.04, 
+                    0.04
+                ], 
+                [
+                    50.0, 
+                    75.0, 
+                    100.0, 
+                    125.0, 
+                    150.0
+                ], 
+                [
+                    300.0, 
+                    300.0, 
+                    300.0, 
+                    300.0, 
+                    300.0
+                ], 
+                [
+                    90.0, 
+                    135.0, 
+                    180.0, 
+                    225.0, 
+                    270.0
+                ], 
+                [
+                    9.0, 
+                    13.5, 
+                    18.0, 
+                    22.5, 
+                    27.0
+                ], 
+                [
+                    0.12, 
+                    0.12, 
+                    0.12, 
+                    0.12, 
+                    0.12
+                ], 
+                [
+                    150.0, 
+                    225.0, 
+                    300.0, 
+                    375.0, 
+                    450.0
+                ]
+            ], 
+            "tooltip": "Renekton swings his blade, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage to nearby enemies and healing himself for {{ e2 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> Health for each non-champion hit and {{ f2 }} <span class=\"colorFF8C00\">(+{{ f3 }})</span> Health for each champion hit, up to {{ e4 }} Health.<br><br>In addition, he generates <span class=\"colorFF6633\">2.5 Fury</span> for each non-champion hit and <span class=\"colorFF6633\">10 Fury</span> for each champion hit, up to a maximum of <span class=\"colorFF6633\">30 Fury</span>.<br><br><span class=\"colorFF6633\">50 Fury Bonus:</span> Damage increased to {{ e6 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span>. Heal increased to {{ e7 }} <span class=\"colorFF8C00\">(+{{ f4 }})</span> per non-champion and {{ f5 }} <span class=\"colorFF8C00\">(+{{ f6 }})</span> per champion, up to {{ e9 }}. No longer generates <span class=\"colorFF6633\">Fury</span>.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "325", 
+            "range": [
+                325, 
+                325, 
+                325, 
+                325, 
+                325
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "60/90/120/150/180", 
+                "3/4.5/6/7.5/9", 
+                "0.04", 
+                "50/75/100/125/150", 
+                "300", 
+                "90/135/180/225/270", 
+                "9/13.5/18/22.5/27", 
+                "0.12", 
+                "150/225/300/375/450"
+            ], 
+            "image": {
+                "full": "RenektonCleave.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 288
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Cull the Meek"
+        }, 
+        {
+            "cooldownBurn": "13/12/11/10/9", 
+            "key": "RenektonPreExecute", 
+            "resource": "No Cost or 50 Fury", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} / {{ e6 }} -> {{ e5NL }} / {{ e6NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.5
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        2.25
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "NoCostor50Fury", 
+            "description": "Renekton slashes his target twice, dealing moderate physical damage and stuns them for 0.75 seconds. If Renekton has more than 50 Fury, he slashes his target three times, dealing high physical damage and stuns them for 1.5 seconds.", 
+            "sanitizedDescription": "Renekton slashes his target twice, dealing moderate physical damage and stuns them for 0.75 seconds. If Renekton has more than 50 Fury, he slashes his target three times, dealing high physical damage and stuns them for 1.5 seconds.", 
+            "sanitizedTooltip": "Renekton's next attack strikes twice, stunning his target for {{ e3 }} second and dealing {{ e1 }} (+{{ f1 }}) physical damage per hit ({{ e5 }} (+{{ f2 }}) total damage). Each hit applies on-hit effects and generates Fury. Renekton generates an additional {{ e7 }} Fury for hitting a champion. 50 Fury Bonus: Renekton attacks three times, stunning his target for {{ e4 }} seconds and dealing a total of {{ e6 }} (+{{ f3 }}) damage. No longer generates Fury.", 
+            "effect": [
+                null, 
+                [
+                    5.0, 
+                    15.0, 
+                    25.0, 
+                    35.0, 
+                    45.0
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    10.0, 
+                    30.0, 
+                    50.0, 
+                    70.0, 
+                    90.0
+                ], 
+                [
+                    15.0, 
+                    45.0, 
+                    75.0, 
+                    105.0, 
+                    135.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ]
+            ], 
+            "tooltip": "Renekton's next attack strikes twice, stunning his target for {{ e3 }} second and dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage per hit ({{ e5 }} <span class=\"colorFF8C00\">(+{{ f2 }})</span> total damage).<br><br>Each hit applies on-hit effects and generates <span class=\"colorFF6633\">Fury</span>. Renekton generates an additional <span class=\"colorFF6633\">{{ e7 }} Fury</span> for hitting a champion.<br><br><span class=\"colorFF6633\">50 Fury Bonus:</span> Renekton attacks three times, stunning his target for {{ e4 }} seconds and dealing a total of {{ e6 }} <span class=\"colorFF8C00\">(+{{ f3 }})</span> damage.  No longer generates <span class=\"colorFF6633\">Fury</span>.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "5/15/25/35/45", 
+                "0.75", 
+                "0.75", 
+                "1.5", 
+                "10/30/50/70/90", 
+                "15/45/75/105/135", 
+                "10"
+            ], 
+            "image": {
+                "full": "RenektonPreExecute.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 336
+            }, 
+            "cooldown": [
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0
+            ], 
+            "name": "Ruthless Predator"
+        }, 
+        {
+            "cooldownBurn": "18/17/16/15/14", 
+            "key": "RenektonSliceAndDice", 
+            "resource": "No Cost or 50 Fury", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Bonus Damage", 
+                    "Armor Reduction %", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.35
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "NoCostor50Fury", 
+            "description": "Renekton dashes, dealing damage to units along the way. Empowered, Renekton deals bonus damage and reduces the Armor of units hit.", 
+            "sanitizedDescription": "Renekton dashes, dealing damage to units along the way. Empowered, Renekton deals bonus damage and reduces the Armor of units hit.", 
+            "sanitizedTooltip": "Slice: Renekton dashes, dealing {{ e1 }} (+{{ f1 }}) physical damage. Hitting an enemy grants the ability to use Dice for 4 seconds. Dice: Renekton dashes, dealing {{ e1 }} (+{{ f1 }}) physical damage. In addition, he generates {{ e4 }} Fury for each non-champion hit and {{ e5 }} Fury for each champion hit, up to a maximum of 30 Fury. Dice - 50 Fury Bonus: Damage increased to {{ e3 }} (+{{ f2 }}). Enemies hit have {{ e2 }}% reduced Armor for 4 seconds. No longer generates Fury.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0
+                ], 
+                [
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0
+                ], 
+                [
+                    45.0, 
+                    90.0, 
+                    135.0, 
+                    180.0, 
+                    225.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    0.9, 
+                    0.9, 
+                    0.9, 
+                    0.9, 
+                    0.9
+                ], 
+                [
+                    1.35, 
+                    1.35, 
+                    1.35, 
+                    1.35, 
+                    1.35
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF6633\">Slice:</span> Renekton dashes, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage. Hitting an enemy grants the ability to use Dice for 4 seconds.<br><br><span class=\"colorFF6633\">Dice:</span> Renekton dashes, dealing {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> physical damage. In addition, he generates <span class=\"colorFF6633\">{{ e4 }} Fury</span> for each non-champion hit and <span class=\"colorFF6633\">{{ e5 }} Fury</span> for each champion hit, up to a maximum of <span class=\"colorFF6633\">30 Fury</span>.<br><br><span class=\"colorFF6633\">Dice - 50 Fury Bonus:</span> Damage increased to {{ e3 }} <span class=\"colorFF8C00\">(+{{ f2 }})</span>. Enemies hit have {{ e2 }}% reduced Armor for 4 seconds. No longer generates <span class=\"colorFF6633\">Fury</span>.", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "450", 
+            "range": [
+                450, 
+                450, 
+                450, 
+                450, 
+                450
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "altimages": [
+                {
+                    "full": "RenektonSliceAndDice0.png", 
+                    "group": "spell", 
+                    "sprite": "spell8.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 144, 
+                    "x": 432
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "30/60/90/120/150", 
+                "15/20/25/30/35", 
+                "45/90/135/180/225", 
+                "2.5", 
+                "10", 
+                "0.9", 
+                "1.35"
+            ], 
+            "image": {
+                "full": "RenektonSliceAndDice.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                18.0, 
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0
+            ], 
+            "name": "Slice and Dice"
+        }, 
+        {
+            "cooldownBurn": "120", 
+            "key": "RenektonReignOfTheTyrant", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Bonus Health", 
+                    "Periodic Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.1
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "NoCost", 
+            "description": "Renekton transforms into the Tyrant form, gaining bonus Health and dealing damage to enemies around him. While in this form, Renekton gains Fury periodically.", 
+            "sanitizedDescription": "Renekton transforms into the Tyrant form, gaining bonus Health and dealing damage to enemies around him. While in this form, Renekton gains Fury periodically.", 
+            "sanitizedTooltip": "Renekton surrounds himself with dark energies for 15 seconds, gaining {{ e1 }} Health. While active, he deals {{ e2 }} (+{{ a1 }}) magic damage to nearby enemies and gains 5 Fury per second.", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    400.0, 
+                    800.0
+                ], 
+                [
+                    30.0, 
+                    60.0, 
+                    120.0
+                ], 
+                [
+                    7.5, 
+                    7.5, 
+                    7.5
+                ]
+            ], 
+            "tooltip": "Renekton surrounds himself with dark energies for 15 seconds, gaining {{ e1 }} Health. While active, he deals {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to nearby enemies and gains <span class=\"colorFF6633\">5 Fury</span> per second.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "200/400/800", 
+                "30/60/120", 
+                "7.5"
+            ], 
+            "image": {
+                "full": "RenektonReignOfTheTyrant.png", 
+                "group": "spell", 
+                "sprite": "spell9.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 0
+            }, 
+            "cooldown": [
+                120.0, 
+                120.0, 
+                120.0
+            ], 
+            "name": "Dominus"
+        }
+    ]
+}

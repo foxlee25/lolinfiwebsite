@@ -1,0 +1,501 @@
+{
+    "info": {
+        "difficulty": 7, 
+        "attack": 5, 
+        "defense": 3, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 58.376, 
+        "mpperlevel": 0.0, 
+        "attackspeedoffset": -0.1, 
+        "mp": 200.0, 
+        "armor": 26.38, 
+        "hp": 587.8, 
+        "hpregenperlevel": 0.65, 
+        "attackspeedperlevel": 3.1, 
+        "attackrange": 125.0, 
+        "movespeed": 350.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.0, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 50.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.34, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Akali", 
+    "title": "the Fist of Shadow", 
+    "tags": [
+        "Assassin"
+    ], 
+    "partype": "Energy", 
+    "passive": {
+        "image": {
+            "full": "AkaliTwinDisciplines.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 96
+        }, 
+        "sanitizedDescription": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power. Discipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage.", 
+        "name": "Twin Disciplines", 
+        "description": "Discipline of Force: Akali's basic attacks deal an additional 6% bonus Magic Damage, increasing by 1% for every 6 Ability Power.<br><br>Discipline of Might: Akali gains 6% Spell Vamp, increasing by 1% for every 6 Bonus Attack Damage."
+    }, 
+    "quotes": [
+        "\"As balance dictates.\"", 
+        "\"Without question.\"", 
+        "\"Whatever's necessary.\"", 
+        "\"Mark acquired.\"", 
+        "\"Another unworthy opponent.\"", 
+        "\"A necessary sacrifice.\"", 
+        "\"Honor is the blade's edge.\"", 
+        "\"Deftly I travel.\"", 
+        "\"Understood.\"", 
+        "\"Through twilight's veil.\"", 
+        "\"Tread lightly.\"", 
+        "\"Agreed.\"", 
+        "\"Remain focused.\"", 
+        "\"Symmetry in all things.\"", 
+        "\"We travel the same path.\"", 
+        "Summoners!"
+    ], 
+    "key": "Akali", 
+    "lore": "There exists an ancient order originating in the Ionian Isles dedicated to the preservation of balance. Order, chaos, light, darkness -- all things must exist in perfect harmony for such is the way of the universe. This order is known as the Kinkou and it employs a triumvirate of shadow warriors to uphold its causes in the world. Akali is one of these shadow warriors, entrusted with the sacred duty of Pruning the Tree - eliminating those who threaten the equilibrium of Valoran. <br><br>A prodigal martial artist, Akali began training with her mother as soon as she could make a fist. Her mother's discipline was relentless and unforgiving, but predicated on the fundamental principle: ''We do that which must be done.'' When the Kinkou inducted her into the order at the age of fourteen, she could slice a dangling chain with a chop of her hand. There was no question - she would succeed her mother as the Fist of Shadow. She has had to do much in this role which others might find morally questionable, but to her it is in service of her mother's inviolable doctrine. She now works with her fellows Shen and Kennen to enforce the balance of Valoran. This hallowed pursuit has unsurprisingly led the triumvirate to the Fields of Justice.<br><br>''The Fist of Shadow strikes from the cover of death itself. Do not impede the balance.''", 
+    "id": 84, 
+    "spells": [
+        {
+            "cooldownBurn": "6/5.5/5/4.5/4", 
+            "key": "AkaliMota", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Initial Damage", 
+                    "Secondary Damage", 
+                    "Energy Return", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Energy", 
+            "description": "Akali spins her kama at a target enemy to deal Magic Damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy.", 
+            "sanitizedDescription": "Akali spins her kama at a target enemy to deal Magic Damage and mark the target for 6 seconds. Akali's melee attacks against a marked target will trigger and consume the mark to cause additional damage and restore Energy.", 
+            "sanitizedTooltip": "Akali throws her kama at a target enemy to deal {{ e5 }} (+{{ a1 }}) Magic Damage and mark the target for {{ e4 }} seconds. Akali's melee attacks against a marked target will consume the mark to cause {{ e1 }} (+{{ a2 }}) Magic Damage and restore {{ e2 }} Energy.", 
+            "effect": [
+                null, 
+                [
+                    45.0, 
+                    70.0, 
+                    95.0, 
+                    120.0, 
+                    145.0
+                ], 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    6.0, 
+                    5.5, 
+                    5.0, 
+                    4.5, 
+                    4.0
+                ], 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    35.0, 
+                    55.0, 
+                    75.0, 
+                    95.0, 
+                    115.0
+                ]
+            ], 
+            "tooltip": "Akali throws her kama at a target enemy to deal {{ e5 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and mark the target for {{ e4 }} seconds.<br><br>Akali's melee attacks against a marked target will consume the mark to cause {{ e1 }} <span class=\"color99FF99\">(+{{ a2 }})</span> Magic Damage and restore {{ e2 }} Energy.", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "45/70/95/120/145", 
+                "20/25/30/35/40", 
+                "6/5.5/5/4.5/4", 
+                "6", 
+                "35/55/75/95/115"
+            ], 
+            "image": {
+                "full": "AkaliMota.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 96
+            }, 
+            "cooldown": [
+                6.0, 
+                5.5, 
+                5.0, 
+                4.5, 
+                4.0
+            ], 
+            "name": "Mark of the Assassin"
+        }, 
+        {
+            "cooldownBurn": "20", 
+            "key": "AkaliSmokeBomb", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Movement Speed Bonus", 
+                    "Slow Amount", 
+                    "Energy Cost"
+                ]
+            }, 
+            "costType": "Energy", 
+            "description": "Akali throws down a cover of smoke. While inside the area, Akali becomes invisible and gains a short burst of Movement Speed. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced.", 
+            "sanitizedDescription": "Akali throws down a cover of smoke. While inside the area, Akali becomes invisible and gains a short burst of Movement Speed. Attacking or using abilities will briefly reveal her. Enemies inside the smoke have their Movement Speed reduced.", 
+            "sanitizedTooltip": "Akali throws down a cover of smoke that lasts for {{ e1 }} seconds. While inside the area, Akali becomes invisible and gains a {{ e2 }}% burst of Movement Speed which decays over 1 second. Attacking or using abilities will briefly reveal her. Enemies inside the smoke are slowed by {{ e3 }}%.", 
+            "effect": [
+                null, 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0
+                ], 
+                [
+                    20.0, 
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0
+                ], 
+                [
+                    14.0, 
+                    18.0, 
+                    22.0, 
+                    26.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "Akali throws down a cover of smoke that lasts for {{ e1 }} seconds. While inside the area, Akali becomes invisible and gains a {{ e2 }}% burst of Movement Speed which decays over 1 second. Attacking or using abilities will briefly reveal her.<br><br>Enemies inside the smoke are slowed by {{ e3 }}%.", 
+            "maxrank": 5, 
+            "costBurn": "80/75/70/65/60", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                80, 
+                75, 
+                70, 
+                65, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "8", 
+                "20/40/60/80/100", 
+                "14/18/22/26/30"
+            ], 
+            "image": {
+                "full": "AkaliSmokeBomb.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 144
+            }, 
+            "cooldown": [
+                20.0, 
+                20.0, 
+                20.0, 
+                20.0, 
+                20.0
+            ], 
+            "name": "Twilight Shroud"
+        }, 
+        {
+            "cooldownBurn": "5/4/3/2/1", 
+            "key": "AkaliShadowSwipe", 
+            "resource": "{{ cost }} Energy", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Base Damage", 
+                    "Cooldown", 
+                    "Energy Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.4
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Energy", 
+            "description": "Akali flourishes her kamas, dealing damage based on her Attack Damage and Ability Power.", 
+            "sanitizedDescription": "Akali flourishes her kamas, dealing damage based on her Attack Damage and Ability Power.", 
+            "sanitizedTooltip": "Akali flourishes her kamas, slicing nearby enemy units for {{ e1 }} (+{{ f1 }}) (+{{ a1 }}) physical damage.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    55.0, 
+                    80.0, 
+                    105.0, 
+                    130.0
+                ]
+            ], 
+            "tooltip": "Akali flourishes her kamas, slicing nearby enemy units for {{ e1 }} <span class=\"colorFF8C00\">(+{{ f1 }})</span> <span class=\"color99FF99\">(+{{ a1 }})</span> physical damage.", 
+            "maxrank": 5, 
+            "costBurn": "60/55/50/45/40", 
+            "rangeBurn": "325", 
+            "range": [
+                325, 
+                325, 
+                325, 
+                325, 
+                325
+            ], 
+            "cost": [
+                60, 
+                55, 
+                50, 
+                45, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "30/55/80/105/130"
+            ], 
+            "image": {
+                "full": "AkaliShadowSwipe.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 192
+            }, 
+            "cooldown": [
+                5.0, 
+                4.0, 
+                3.0, 
+                2.0, 
+                1.0
+            ], 
+            "name": "Crescent Slash"
+        }, 
+        {
+            "cooldownBurn": "2/1.5/1", 
+            "key": "AkaliShadowDance", 
+            "resource": "{{ e5 }} Essence of Shadow", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ f1 }} -> {{ f2 }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Essence Refresh Timer", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        30.0, 
+                        22.5, 
+                        15.0
+                    ], 
+                    "link": "@cooldownchampion", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        22.5, 
+                        15.0
+                    ], 
+                    "link": "@cooldownchampion", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "EssenceofShadow", 
+            "description": "Akali moves through shadows to quickly strike through her target, dealing damage and consuming an Essence of Shadow charge. Akali recharges Essence of Shadow charges both periodically and upon kills and assists, max 3 stacks.", 
+            "sanitizedDescription": "Akali moves through shadows to quickly strike through her target, dealing damage and consuming an Essence of Shadow charge. Akali recharges Essence of Shadow charges both periodically and upon kills and assists, max 3 stacks.", 
+            "sanitizedTooltip": "Akali moves through shadows to quickly strike through her target, dealing {{ e1 }} (+{{ a1 }}) Magic Damage. Akali stores an Essence of Shadow on kills and assists as well as every {{ f1 }} seconds up to {{ e4 }} total.", 
+            "effect": [
+                null, 
+                [
+                    100.0, 
+                    175.0, 
+                    250.0
+                ], 
+                [
+                    1600.0, 
+                    1600.0, 
+                    1600.0
+                ], 
+                [
+                    30.0, 
+                    22.5, 
+                    15.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    200.0, 
+                    200.0, 
+                    200.0
+                ], 
+                [
+                    600.0, 
+                    600.0, 
+                    600.0
+                ], 
+                [
+                    225.0, 
+                    225.0, 
+                    225.0
+                ]
+            ], 
+            "tooltip": "Akali moves through shadows to quickly strike through her target, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage.<br><br>Akali stores an Essence of Shadow on kills and assists as well as every <span class=\"colorFFFFFF\">{{ f1 }}</span> seconds up to {{ e4 }} total.", 
+            "maxrank": 3, 
+            "costBurn": "0", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "100/175/250", 
+                "1600", 
+                "30/22.5/15", 
+                "3", 
+                "1", 
+                "100", 
+                "200", 
+                "600", 
+                "225"
+            ], 
+            "image": {
+                "full": "AkaliShadowDance.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 240
+            }, 
+            "cooldown": [
+                2.0, 
+                1.5, 
+                1.0
+            ], 
+            "name": "Shadow Dance"
+        }
+    ]
+}

@@ -1,0 +1,560 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 7, 
+        "defense": 6, 
+        "magic": 5
+    }, 
+    "stats": {
+        "armorperlevel": 3.8, 
+        "attackdamage": 57.156, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 272.2, 
+        "armor": 29.384, 
+        "hp": 601.28, 
+        "hpregenperlevel": 0.85, 
+        "attackspeedperlevel": 2.1, 
+        "attackrange": 125.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 4.5, 
+        "mpregenperlevel": 0.45, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.205, 
+        "spellblock": 32.1, 
+        "hpregen": 8.925, 
+        "hpperlevel": 90.0
+    }, 
+    "name": "Skarner", 
+    "title": "the Crystal Vanguard", 
+    "tags": [
+        "Fighter", 
+        "Tank"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Skarner_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 432
+        }, 
+        "sanitizedDescription": "Skarner's presence causes crystals to spawn in set locations around the map. While near crystals his team owns, Skarner gains tremendous movement speed, attack speed, and mana regeneration.", 
+        "name": "Crystal Spires", 
+        "description": "Skarner's presence causes crystals to spawn in set locations around the map. While near crystals his team owns, Skarner gains tremendous movement speed, attack speed, and mana regeneration."
+    }, 
+    "quotes": [
+        "\"Time to fight!\"", 
+        "\"Limb from limb!\"", 
+        "\"I will tear them apart.\"", 
+        "\"In claw's reach.\"", 
+        "\"I'll show you monstrous.\"", 
+        "\"Fear my sting.\"", 
+        "\"On all legs.\"", 
+        "\"We think alike, summoner.\"", 
+        "\"I see the wisdom in that.\"", 
+        "\"I miss my kind.\"", 
+        "\"This world is so strange.\"", 
+        "\"We await our time.\"", 
+        "\"The battle approaches.\"", 
+        "\"The Crystal Scar is weeping.\"", 
+        "\"My stinger is ready.\"", 
+        "\"Eeaugh! Bugs are gross! Ugh!\"", 
+        "\"Now I've got you!\"", 
+        "\"Feel my sting!\"", 
+        "\"You'll never escape!\"", 
+        "\"Skar-skar-SKARNER!\"", 
+        "\"The Creator awaits.\"", 
+        "\"Emotion puppet.\"", 
+        "\"You will be incorporated.\"", 
+        "\"Die, passing obstructions!\"", 
+        "\"An unsuitable model.\"", 
+        "\"Survival is a delusion.\"", 
+        "\"Abandon your kind.\"", 
+        "\"Expediting incapacitation.\"", 
+        "\"Activating chain blades.\"", 
+        "\"Allowances will not be made.\"", 
+        "\"I will find them.\"", 
+        "\"Looping self-diagnostic.\"", 
+        "\"The resistance is a lie.\"", 
+        "\"I cannot be impeded.\"", 
+        "\"Squish. Plod. I'm a human.\"", 
+        "\"Boogie protocol engaged.\"", 
+        "\"Accelerating.\"", 
+        "\"Bolstering exoplating.\"", 
+        "\"Reinforcing hull.\"", 
+        "\"Boosters activated.\"", 
+        "\"You are coming with me.\"", 
+        "\"Cease your movement.\"", 
+        "\"You have been chosen.\"", 
+        "\"Prepare for disassembly.\"", 
+        "\"Multiple systems enhanced.\"", 
+        "\"Maximizing defensive output.\"", 
+        "\"Surveillance deployed.\"", 
+        "\"Area monitored.\"", 
+        "\"Remote sensor activated.\"", 
+        "\"Rearming in progress.\"", 
+        "\"Update required.\"", 
+        "\"Return imminent.\"", 
+        "\"Error...\"", 
+        "\"Skar-skar...\"", 
+        "Greetings Summoners!", 
+        "Crystallizing Sting", 
+        "5 Skarner's level", 
+        "Crystallizing Sting's", 
+        "Crystallizing Sting", 
+        "Crystallizing Sting's", 
+        "Crystallizing Sting", 
+        "Crystallizing Sting", 
+        "Crystal Slash", 
+        "Crystal Slash's", 
+        "Crystal Slash", 
+        "Crystalline Exoskeleton", 
+        "Impale", 
+        "Impale's", 
+        "Impale's", 
+        "Impale's", 
+        "6% Skarner's level", 
+        "Crystals", 
+        "Crystals", 
+        "Crystal", 
+        "Crystal", 
+        "Crystals", 
+        "Crystalized", 
+        "Skarner's level", 
+        "Crystal Spires", 
+        "Fracture"
+    ], 
+    "key": "Skarner", 
+    "lore": "Skarner, the crystalline guardian, defends the entrance to a realm deep beneath the Shuriman wastes. The few who survive trespassing his domain describe a creature of terrifying intelligence, anger, and precision. What this merciless creature protects, no one knows.", 
+    "id": 72, 
+    "spells": [
+        {
+            "cooldownBurn": "3.5/3.25/3/2.75/2.5", 
+            "key": "SkarnerVirulentSlash", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Total Attack Damage Ratio", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck. If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage.", 
+            "sanitizedDescription": "Skarner lashes out with his claws, dealing physical damage to all nearby enemies and charging himself with Crystal Energy for several seconds if a unit is struck. If he casts Crystal Slash again while powered by Crystal Energy, he deals bonus magic damage.", 
+            "sanitizedTooltip": "Skarner deals {{ f1 }} physical damage to all nearby enemies. If a unit is struck, he charges himself with Crystal Energy for {{ e2 }} seconds. While Skarner is charged, Crystal Slash deals {{ f1 }} (+{{ a1 }}) bonus magic damage. Basic attacks lower Crystal Slash's cooldown by 0.25 seconds (quadrupled against champions).", 
+            "effect": [
+                null, 
+                [
+                    33.0, 
+                    36.0, 
+                    39.0, 
+                    42.0, 
+                    45.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ]
+            ], 
+            "tooltip": "Skarner deals <span class=\"colorFF8C00\">{{ f1 }}</span> physical damage to all nearby enemies. If a unit is struck, he charges himself with Crystal Energy for {{ e2 }} seconds.<br><br>While Skarner is charged, Crystal Slash deals <span class=\"colorFF8C00\">{{ f1 }}</span> <span class=\"color99FF99\">(+{{ a1 }})</span> bonus magic damage.<br><br>Basic attacks lower Crystal Slash's cooldown by 0.25 seconds (quadrupled against champions).", 
+            "maxrank": 5, 
+            "costBurn": "10/11/12/13/14", 
+            "rangeBurn": "350", 
+            "range": [
+                350, 
+                350, 
+                350, 
+                350, 
+                350
+            ], 
+            "cost": [
+                10, 
+                11, 
+                12, 
+                13, 
+                14
+            ], 
+            "effectBurn": [
+                "", 
+                "33/36/39/42/45", 
+                "4"
+            ], 
+            "image": {
+                "full": "SkarnerVirulentSlash.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 240
+            }, 
+            "cooldown": [
+                3.5, 
+                3.25, 
+                3.0, 
+                2.75, 
+                2.5
+            ], 
+            "name": "Crystal Slash"
+        }, 
+        {
+            "cooldownBurn": "13/12.5/12/11.5/11", 
+            "key": "SkarnerExoskeleton", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e5 }}% -> {{ e5NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Max Health Damage Absorption", 
+                    "Movement Speed Bonus", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Skarner gains a shield and has increased Movement Speed while the shield persists.", 
+            "sanitizedDescription": "Skarner gains a shield and has increased Movement Speed while the shield persists.", 
+            "sanitizedTooltip": "Skarner is shielded for {{ f1 }} ({{ e1 }}% of his maximum health) (+{{ a1 }}) damage for {{ e4 }} seconds. While the shield persists, Skarner gains movement speed that ramps up to {{ e5 }}% over 3 seconds.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    11.0, 
+                    12.0, 
+                    13.0, 
+                    14.0
+                ], 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ], 
+                [
+                    8.0, 
+                    10.0, 
+                    12.0, 
+                    14.0, 
+                    16.0
+                ], 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    16.0, 
+                    20.0, 
+                    24.0, 
+                    28.0, 
+                    32.0
+                ]
+            ], 
+            "tooltip": "Skarner is shielded for <span class=\"colorCC3300\">{{ f1 }}</span> ({{ e1 }}% of his maximum health) <span class=\"color99FF99\">(+{{ a1 }})</span> damage for {{ e4 }} seconds. While the shield persists, Skarner gains movement speed that ramps up to {{ e5 }}% over 3 seconds.", 
+            "maxrank": 5, 
+            "costBurn": "60", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                60, 
+                60, 
+                60, 
+                60, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "10/11/12/13/14", 
+                "30/35/40/45/50", 
+                "8/10/12/14/16", 
+                "6", 
+                "16/20/24/28/32"
+            ], 
+            "image": {
+                "full": "SkarnerExoskeleton.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 288
+            }, 
+            "cooldown": [
+                13.0, 
+                12.5, 
+                12.0, 
+                11.5, 
+                11.0
+            ], 
+            "name": "Crystalline Exoskeleton"
+        }, 
+        {
+            "cooldownBurn": "14/13.5/13/12.5/12", 
+            "key": "SkarnerFracture", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} / {{ e2 }} -> {{ e1NL }} / {{ e2NL }}", 
+                    "{{ e8 }}% -> {{ e8NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Blast Damage / Attack Damage", 
+                    "Slow", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and slows them. Basic attacking these enemies within a short window will stun them.", 
+            "sanitizedDescription": "Skarner summons a blast of crystalline energy which deals damage to enemies struck and slows them. Basic attacking these enemies within a short window will stun them.", 
+            "sanitizedTooltip": "Passive: Crystallizing enemies with Fracture and Impale grants Crystal Charge for the disable duration and reduces the cooldown of Fracture by the same amount. Active: Skarner summons a blast of crystalline energy, dealing {{ e1 }} (+{{ a1 }}) magic damage, slowing targets hit by {{ e8 }}% for {{ e7 }} seconds and reducing the blast's speed. A maximum of 6 targets can be hit by Fracture before the blast dissipates entirely. Enemies hit by Fracture are afflicted with Crystal Venom for {{ e6 }} seconds, causing Skarner's next basic attack against them to deal {{ e2 }} additional physical damage and stun the target for {{ e3 }} second.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    65.0, 
+                    90.0, 
+                    115.0, 
+                    140.0
+                ], 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0, 
+                    50.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Crystallizing enemies with Fracture and Impale grants <span class=\"colorFFF673\">Crystal Charge</span> for the disable duration and reduces the cooldown of Fracture by the same amount.<br><br><span class=\"colorFF9900\">Active:</span> Skarner summons a blast of crystalline energy, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage, slowing targets hit by {{ e8 }}% for {{ e7 }} seconds and reducing the blast's speed. A maximum of 6 targets can be hit by Fracture before the blast dissipates entirely.<br><br>Enemies hit by Fracture are afflicted with Crystal Venom for {{ e6 }} seconds, causing Skarner's next basic attack against them to deal {{ e2 }} additional physical damage and stun the target for {{ e3 }} second.", 
+            "maxrank": 5, 
+            "costBurn": "55", 
+            "rangeBurn": "980", 
+            "range": [
+                980, 
+                980, 
+                980, 
+                980, 
+                980
+            ], 
+            "cost": [
+                55, 
+                55, 
+                55, 
+                55, 
+                55
+            ], 
+            "effectBurn": [
+                "", 
+                "40/65/90/115/140", 
+                "25/35/45/55/65", 
+                "1", 
+                "50", 
+                "6", 
+                "5", 
+                "2.5", 
+                "30/35/40/45/50"
+            ], 
+            "image": {
+                "full": "SkarnerFracture.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 336
+            }, 
+            "cooldown": [
+                14.0, 
+                13.5, 
+                13.0, 
+                12.5, 
+                12.0
+            ], 
+            "name": "Fracture"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "SkarnerImpale", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Skarner suppresses an enemy champion and deals damage to it. During this time, Skarner can move freely and will drag his helpless victim around with him. When the effect ends, the target will be dealt additional damage.", 
+            "sanitizedDescription": "Skarner suppresses an enemy champion and deals damage to it. During this time, Skarner can move freely and will drag his helpless victim around with him. When the effect ends, the target will be dealt additional damage.", 
+            "sanitizedTooltip": "Skarner suppresses an enemy champion for {{ e1 }} seconds, dealing {{ a2 }} physical damage plus {{ e2 }} (+{{ a1 }}) magic damage. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt the same damage again.", 
+            "effect": [
+                null, 
+                [
+                    1.75, 
+                    1.75, 
+                    1.75
+                ], 
+                [
+                    20.0, 
+                    60.0, 
+                    100.0
+                ], 
+                [
+                    50.0, 
+                    75.0, 
+                    100.0
+                ]
+            ], 
+            "tooltip": "Skarner suppresses an enemy champion for {{ e1 }} seconds, dealing <span class=\"colorFF8C00\">{{ a2 }}</span> physical damage plus {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Skarner can move freely during this time, and will drag his helpless victim around with him. When the effect ends, Skarner's target will be dealt the same damage again.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "350", 
+            "range": [
+                350, 
+                350, 
+                350
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "1.75", 
+                "20/60/100", 
+                "50/75/100"
+            ], 
+            "image": {
+                "full": "SkarnerImpale.png", 
+                "group": "spell", 
+                "sprite": "spell10.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 384
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "Impale"
+        }
+    ]
+}

@@ -1,0 +1,488 @@
+{
+    "info": {
+        "difficulty": 5, 
+        "attack": 9, 
+        "defense": 4, 
+        "magic": 2
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 51.04, 
+        "mpperlevel": 35.0, 
+        "attackspeedoffset": -0.065, 
+        "mp": 268.8, 
+        "armor": 23.38, 
+        "hp": 532.8, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 3.1, 
+        "attackrange": 525.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.4, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.97, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 85.0
+    }, 
+    "name": "Quinn", 
+    "title": "Demacia's Wings", 
+    "tags": [
+        "Marksman", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Quinn_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive2.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 192
+        }, 
+        "sanitizedDescription": "Valor periodically marks enemies as Vulnerable. Quinn's first basic attack against Vulnerable targets will deal bonus physical damage.", 
+        "name": "Harrier", 
+        "description": "Valor periodically marks enemies as Vulnerable. Quinn's first basic attack against Vulnerable targets will deal bonus physical damage."
+    }, 
+    "quotes": [
+        "\"Justice takes wing.\"", 
+        "\"You get the next one, Val.\"", 
+        "\"Still heart, steady aim.\"", 
+        "\"Fly swiftly... kill swiftly.\"", 
+        "\"Strike from the sky.\"", 
+        "\"Flush 'em out.\"", 
+        "\"Look Val, snacks.\"", 
+        "\"Stay on the target.\"", 
+        "\"Find me a path.\"", 
+        "\"We're in this together.\"", 
+        "\"Demacia is counting on us.\"", 
+        "\"We've got this covered.\"", 
+        "\"Stay alert.\"", 
+        "\"Buy me some time.\"", 
+        "\"There's always a trail.\"", 
+        "\"I live behind enemy lines.\"", 
+        "\"Stick to the plan, Val.\"", 
+        "\"Demacia needs heroes.\"", 
+        "\"Go for the eyes!\"", 
+        "\"Gouge 'em, Valor!\"", 
+        "\"What do you see up there?\"", 
+        "\"Need eyes on 'em!\"", 
+        "\"Eyes in the sky.\"", 
+        "\"Now!\"", 
+        "\"Valor, to me!\""
+    ], 
+    "key": "Quinn", 
+    "lore": "Quinn and Valor are an elite ranger team. With crossbow and claw, they undertake their nation's most dangerous missions deep within enemy territory, from swift reconnaissance to lethal strikes. The pair's unbreakable bond is deadly on the battlefield, leaving opponents blind and riddled with arrows long before they realize who they're fighting: not one, but two Demacian legends.<br><br>As a young girl, Quinn shared a hunger for adventure with her twin brother. They dreamed of becoming knights, but lived a quiet, humble life in the rural borderlands of Demacia. Together they imagined triumphant battles in faraway lands, seizing glory for their king and slaying foes in the name of Demacian justice. When daydreams alone could no longer satisfy their warriors souls, they embarked on daring wilderness adventures in search of true danger. One such quest turned to tragedy when a terrible accident claimed her brother's life. Overcome with grief, Quinn abandoned her dreams of knighthood. <br><br>On the anniversary of her loss, Quinn gathered the courage to return to the scene of the tragedy. To her surprise, she found a wounded Demacian eagle at the site of her brother's death - a rare and beautiful bird long believed extinct. Quinn nursed the fledgling back to health, and as they grew up together, a deep bond formed between the two. She saw the same quality in her newfound friend that had lived within her brother, and so she gave him the name ''Valor.'' The pair found strength in each other, and together they pursued the dream she had once abandoned. <br><br>The Demacian army had never seen heroes like Quinn and Valor. Their deadly skills quickly set them apart from their rank-and-file peers, but many still had their doubts. How could a common-born girl, even with such a powerful creature at her side, forego years of military training? Quinn and Valor proved themselves on one critical mission, tracking down a Noxian assassin who had evaded an entire Demacian battalion. When they brought him to justice, they finally earned the admiration and respect of their nation. The two now serve as living, fighting icons of Demacian strength and perseverance. Together, Quinn and Valor will stand against any threat to their beloved home.<br><br>''Most soldiers only rely on their weapons. Few truly rely on each other.''<br> -- Quinn", 
+    "id": 133, 
+    "spells": [
+        {
+            "cooldownBurn": "11/10/9/8/7", 
+            "key": "QuinnQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.65
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Quinn calls Valor to blind and damage targets in an area.", 
+            "sanitizedDescription": "Quinn calls Valor to blind and damage targets in an area.", 
+            "sanitizedTooltip": "Valor flies in a line and strikes the first enemy in his path. He then attacks all nearby enemies, dealing {{ e1 }} (+{{ a1 }}) (+{{ a2 }}) physical damage and blinding them for {{ e2 }} seconds. As Valor: Performs the same attack at the current location.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    110.0, 
+                    150.0, 
+                    190.0, 
+                    230.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Valor flies in a line and strikes the first enemy in his path. He then attacks all nearby enemies, dealing {{ e1 }} <span class=\"colorFF9900\">(+{{ a1 }})</span> <span class=\"color99FF99\">(+{{ a2 }})</span> physical damage and blinding them for {{ e2 }} seconds.<br><br><span class=\"colorFF9900\">As Valor: </span>Performs the same attack at the current location.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "1025", 
+            "range": [
+                1025, 
+                1025, 
+                1025, 
+                1025, 
+                1025
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "70/110/150/190/230", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "QuinnQ.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 48
+            }, 
+            "cooldown": [
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0
+            ], 
+            "name": "Blinding Assault"
+        }, 
+        {
+            "cooldownBurn": "50/45/40/35/30", 
+            "key": "QuinnW", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ e6 }} -> {{ e6NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Quinn Attack Speed Bonus", 
+                    "Valor Attack Speed Bonus", 
+                    "Movement Speed Bonus", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Passively grants Quinn Attack Speed and Movement Speed after she attacks a Vulnerable target. Valor's Attack Speed is permanently increased. Activate to have Valor reveal a large area nearby (does not reveal stealthed units).", 
+            "sanitizedDescription": "Passively grants Quinn Attack Speed and Movement Speed after she attacks a Vulnerable target. Valor's Attack Speed is permanently increased. Activate to have Valor reveal a large area nearby (does not reveal stealthed units).", 
+            "sanitizedTooltip": "Passive: Attacking a Vulnerable target will increase Quinn's Attack Speed by {{ e1 }}% and Movement Speed by {{ e6 }} for {{ e3 }} seconds. Passive as Valor: Gains {{ e2 }}% Attack Speed. Active: Valor reveals a large area nearby for {{ e5 }} seconds (does not reveal stealthed units).", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    25.0, 
+                    45.0, 
+                    65.0, 
+                    85.0, 
+                    105.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Attacking a Vulnerable target will increase Quinn's Attack Speed by {{ e1 }}% and Movement Speed by {{ e6 }} for {{ e3 }} seconds.<br><br><span class=\"colorFF9900\">Passive as Valor: </span>Gains {{ e2 }}% Attack Speed.<br><br><span class=\"colorFF9900\">Active: </span>Valor reveals a large area nearby for {{ e5 }} seconds (does not reveal stealthed units).", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "2100", 
+            "range": [
+                2100, 
+                2100, 
+                2100, 
+                2100, 
+                2100
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "20/25/30/35/40", 
+                "40/50/60/70/80", 
+                "3", 
+                "25/45/65/85/105", 
+                "2", 
+                "20/30/40/50/60"
+            ], 
+            "image": {
+                "full": "QuinnW.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 96
+            }, 
+            "cooldown": [
+                50.0, 
+                45.0, 
+                40.0, 
+                35.0, 
+                30.0
+            ], 
+            "name": "Heightened Senses"
+        }, 
+        {
+            "cooldownBurn": "12/11/10/9/8", 
+            "key": "QuinnE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Quinn dashes to an enemy, dealing physical damage and slowing the target's Movement Speed. Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range away from the target. Valor will immediately mark this enemy as Vulnerable.", 
+            "sanitizedDescription": "Quinn dashes to an enemy, dealing physical damage and slowing the target's Movement Speed. Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range away from the target. Valor will immediately mark this enemy as Vulnerable.", 
+            "sanitizedTooltip": "Quinn dashes to an enemy, dealing {{ e2 }} (+{{ a1 }}) physical damage and slowing the target's Movement Speed by {{ e1 }}% (this effect diminishes over {{ e3 }} seconds). Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range from the target. Valor will immediately mark this enemy as Vulnerable. As Valor: Performs the same attack but does not mark or leap off the target.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    40.0, 
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Quinn dashes to an enemy, dealing {{ e2 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> physical damage and slowing the target's Movement Speed by {{ e1 }}% (this effect diminishes over {{ e3 }} seconds).<br><br>Upon reaching the target, she leaps off the target, briefly interrupting it, and lands near her maximum Attack Range from the target. Valor will immediately mark this enemy as Vulnerable.<br><br><span class=\"colorFF9900\">As Valor: </span>Performs the same attack but does not mark or leap off the target.", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "50", 
+                "40/70/100/130/160", 
+                "2"
+            ], 
+            "image": {
+                "full": "QuinnE.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 144
+            }, 
+            "cooldown": [
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0, 
+                8.0
+            ], 
+            "name": "Vault"
+        }, 
+        {
+            "cooldownBurn": "140/110/80", 
+            "key": "QuinnR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e3 }}% -> {{ e3NL }}%", 
+                    "{{ e5 }}% -> {{ e5NL }}%", 
+                    "{{ e2 }} / {{ e6 }} -> {{ e2NL }} / {{ e6NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Maximum Movement Speed Bonus", 
+                    "Base Movement Speed Bonus", 
+                    "Skystrike Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "bonusattackdamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Valor replaces Quinn on the battlefield as a mobile melee attacker. When ready, Quinn returns in a hail of arrows, dealing physical damage to all nearby enemies.", 
+            "sanitizedDescription": "Valor replaces Quinn on the battlefield as a mobile melee attacker. When ready, Quinn returns in a hail of arrows, dealing physical damage to all nearby enemies.", 
+            "sanitizedTooltip": "First Cast: Valor replaces Quinn on the battlefield as a mobile melee attacker for {{ e4 }} seconds. Valor can move through units and gains +{{ e3 }}% Movement Speed, decreased gradually to +{{ e5 }}% when in combat. Second Cast: Quinn returns to perform Skystrike, dealing from {{ e2 }} (+{{ a1 }}) to {{ e6 }} (+{{ a2 }}) physical damage to all enemies in a large area, increasing based on how much health they are missing. If Skystrike has not been cast before this ability ends, it will be cast automatically.", 
+            "effect": [
+                null, 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    100.0, 
+                    150.0, 
+                    200.0
+                ], 
+                [
+                    80.0, 
+                    90.0, 
+                    100.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0
+                ], 
+                [
+                    200.0, 
+                    300.0, 
+                    400.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">First Cast: </span>Valor replaces Quinn on the battlefield as a mobile melee attacker for {{ e4 }} seconds. Valor can move through units and gains +{{ e3 }}% Movement Speed, decreased gradually to +{{ e5 }}% when in combat.<br><br><span class=\"colorFF9900\">Second Cast: </span>Quinn returns to perform Skystrike, dealing from {{ e2 }} <span class=\"colorFF8C00\">(+{{ a1 }})</span> to {{ e6 }} <span class=\"colorFF8C00\">(+{{ a2 }})</span> physical damage to all enemies in a large area, increasing based on how much health they are missing.<br><br>If Skystrike has not been cast before this ability ends, it will be cast automatically.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "25", 
+                "100/150/200", 
+                "80/90/100", 
+                "20", 
+                "20/30/40", 
+                "200/300/400"
+            ], 
+            "image": {
+                "full": "QuinnR.png", 
+                "group": "spell", 
+                "sprite": "spell8.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 192
+            }, 
+            "cooldown": [
+                140.0, 
+                110.0, 
+                80.0
+            ], 
+            "name": "Tag Team"
+        }
+    ]
+}

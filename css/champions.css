@@ -1,0 +1,112 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 12, 2015, 6:01:55 PM
+    Author     : Pokey
+*/
+#championsTableFilterContainer{
+    margin: 0 auto;
+    width: 800px;
+    /* height: 400px; */
+    background-color: rgba(105,105,116,0.3);
+    /* opacity: 0.4; */
+    padding: 20px;
+}
+.filterRow{
+    /* font-size: 18px; */
+    width: 100%;
+    color:#C0C0CA;
+    /* line-height: 8px; */
+    margin-bottom: 10px;
+}
+.filterRow:last-child{
+    margin-bottom: 0px;
+    
+}
+.filterTitle{
+    position:relative;
+    float:left;
+    width: 110px;
+    margin-right:10px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.filterButton {
+    /* margin: auto; */
+    padding:0px;
+    display:table;
+    /* width:1000px; */
+    border-collapse: collapse;
+}
+
+.filterButton{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    
+}
+
+.filterButton{
+    /* padding: 10px 20px 10px 20px; */
+    /* padding-right: 20px; */
+    padding: 0;
+    display:block;
+    /* text-decoration: none; */
+    /* color: #C0C0CA; */
+    text-align: center;
+    font-size: 18px;
+    /* margin: 0px 20px; */
+    cursor: pointer;
+    /* display: table-cell; */
+    /* position: relative; */
+    float: left;
+    z-index: 2;
+    letter-spacing: 1.25px;
+    height: 25px;
+    font-weight: 100;
+    border-radius: 6px;
+    margin-right:20px;
+    /* padding-right: 20px; */
+}
+.filterButton:first-child {
+    //border-left: none;
+}
+
+.filterButton:hover{
+  color:#0F84CB;
+}
+
+.timeFilterButtonsSelected{
+    background: #085998;
+    height: 25px;
+    color: white;
+}
+
+.leagueFilterButtonsSelected{
+    background: #085998;
+    height: 25px;
+    color: white;
+    padding: 0;
+}
+
+.queueFilterButtonsSelected{
+    background: #085998;   
+    height: 25px;
+      color: white;
+}
+.filterButtons{
+    color: #C0C0CA;
+    height: 25px;
+}
+
+#championsTableContainer{
+        margin: 0 auto;
+    width: 800px;
+    /* height: 400px; */
+    background-color: rgba(105,105,116,0.3);
+    /* opacity: 0.4; */
+    padding: 20px;
+}

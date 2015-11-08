@@ -1,0 +1,594 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 2, 
+        "defense": 2, 
+        "magic": 10
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 54.937875658, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 325.6, 
+        "armor": 21.88, 
+        "hp": 507.68, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.36, 
+        "attackrange": 525.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 3.14159265359, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 76.0
+    }, 
+    "name": "Vel'Koz", 
+    "title": "the Eye of the Void", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Velkoz_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 384
+        }, 
+        "sanitizedDescription": "Vel'Koz's spells build Organic Deconstruction stacks on enemies. The third spell hit consumes the stacks and deals bonus true damage.", 
+        "name": "Organic Deconstruction", 
+        "description": "Vel'Koz's spells build Organic Deconstruction stacks on enemies. The third spell hit consumes the stacks and deals bonus true damage."
+    }, 
+    "quotes": [
+        "\"What else can I discover?\"", 
+        "\"Such fascinating evolution.\"", 
+        "\"Hm... extraordinary.\"", 
+        "\"That's unexpected.\"", 
+        "\"The light here is harsh.\"", 
+        "\"The pattern is clear.\"", 
+        "\"Ah, another entity of value.\"", 
+        "\"Intriguing reaction to pain.\"", 
+        "\"I acknowledge your pain.\"", 
+        "\"Have they ceased to evolve?\"", 
+        "\"What secrets are you hiding?\"", 
+        "\"I must know more.\"", 
+        "\"I require a closer look.\"", 
+        "\"I find their elbows obscene.\"", 
+        "Vel'Koz hums.", 
+        "\"What else can I discover?\"", 
+        "\"Such fascinating evolution.\"", 
+        "\"Hm... extraordinary.\"", 
+        "\"That's unexpected.\"", 
+        "\"The light here is harsh.\"", 
+        "\"The pattern is clear.\"", 
+        "\"Ah, another entity of value.\"", 
+        "\"Intriguing reaction to pain.\"", 
+        "\"I acknowledge your pain.\"", 
+        "\"Have they ceased to evolve?\"", 
+        "\"What secrets are you hiding?\"", 
+        "\"I must know more.\"", 
+        "\"I require a closer look.\"", 
+        "\"I find their elbows obscene.\"", 
+        "Vel'Koz hums.", 
+        "\"My eyes are up here.\"", 
+        "\"Target is inefficient.\"", 
+        "\"99% fur, 1% glee.\"", 
+        "\"What else can I discover?\"", 
+        "\"Such fascinating evolution.\"", 
+        "\"Hm... extraordinary.\"", 
+        "\"That's unexpected.\"", 
+        "\"The pattern is clear.\"", 
+        "\"Ah, another entity of value.\"", 
+        "\"Intriguing reaction to pain.\"", 
+        "\"I acknowledge your pain.\"", 
+        "\"Have they ceased to evolve?\"", 
+        "\"What secrets are you hiding?\"", 
+        "\"I must know more.\"", 
+        "\"I require a closer look.\"", 
+        "Vel'Koz hums."
+    ], 
+    "key": "Velkoz", 
+    "lore": "I pass into the sudden glare. Blink. Blink, blink, blink. My eyes adjust and evaluate the landscape before me.<br><br>There's a scurrying. I look down to find a small, white creature standing on its hind legs, sniffing at my body. It intrigues me.<br><br>What use are you?<br><br>I analyze the creature. A flash of hot magenta light, a dust pile where it was quivering.<br><br>Mammalian... Nocturnal... Impeccable hearing. Incredibly weak. Yet they breed so prodigiously.<br><br>''Hm,'' I mutter to myself. Hopefully there will be more complex things to be found; those fascinate me.<br><br>Consume and learn: this is my purpose. The others who travel with me are primitive: kill and eat, kill and eat. I need to gather all available information - harvest any valuable resources.<br><br>Eventually, we come upon a destroyed city, save for one pristine tower. It appears to be protected - or intentionally left standing. I deconstruct the composition of the ruins. My analysis suggests this habitat was a place of great magic; I'm not surprised it was a target of such destruction. There is something compelling about the tower. While the others are off scavenging, I enter the citadel.<br><br>Cryptic instruments are strewn about. I examine one. Another flash of hot magenta light, another dust pile.<br><br>Fascinating: a tool to alter their concept of time.<br><br>Strange.<br><br>Unprecedented.<br><br>From the state of the tower, it seems the owner departed only recently. The artifacts left behind have existed in more than one time and place. Some are more complex than others; all are more impressive than anything I have seen on this plane. Clearly, the owner knows things I have not encountered in any of my travels.<br><br>I require such knowledge.<br><br>Leaving the tower, I find the others closing in on the entrance, ready to destroy it as they have destroyed everything else we have met. They will only get in the way of my goal. There are some things the Void should not consume indiscriminately.<br><br>Without warning, I lash out a tentacle, its tip glowing white hot. Lightning arcs through the first creature, knocking it back. Its screams fade as I extend all three limbs, energy crackling between them, scorching the air where the streams meet. The other two run; they know what's coming.<br><br>Must they always flee?<br><br>I open my eye wide and unleash a beam of energy, following the escaping creatures. They are instantly reduced to ash. ''Hmm. Void-native melting point is inconsistent,'' I note.<br><br>But that is of no consequence. The hunger inside me grows. I am ravenous. Insatiable, as never before.<br><br>I have glimpsed the ultimate knowledge.<br><br>And I will have it.", 
+    "id": 161, 
+    "spells": [
+        {
+            "cooldownBurn": "7", 
+            "key": "VelkozQ", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Vel'Koz shoots a bolt of plasma that splits in two on reactivation or upon hitting an enemy. The bolt slows and damages on hit.", 
+            "sanitizedDescription": "Vel'Koz shoots a bolt of plasma that splits in two on reactivation or upon hitting an enemy. The bolt slows and damages on hit.", 
+            "sanitizedTooltip": "Vel'Koz shoots a plasma bolt that deals {{ e1 }} (+{{ a1 }}) Magic Damage and applies a slow of {{ e5 }}% that decays over {{ e4 }} second(s). Upon reactivation or upon hitting an enemy, the bolt splits at a 90 degree angle.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    120.0, 
+                    160.0, 
+                    200.0, 
+                    240.0
+                ], 
+                [
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0
+                ], 
+                [
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25
+                ], 
+                [
+                    1.0, 
+                    1.25, 
+                    1.5, 
+                    1.75, 
+                    2.0
+                ], 
+                [
+                    70.0, 
+                    70.0, 
+                    70.0, 
+                    70.0, 
+                    70.0
+                ], 
+                null, 
+                null, 
+                null, 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ]
+            ], 
+            "tooltip": "Vel'Koz shoots a plasma bolt that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and applies a slow of {{ e5 }}% that decays over {{ e4 }} second(s).<br><br>Upon reactivation or upon hitting an enemy, the bolt splits at a 90 degree angle.", 
+            "maxrank": 5, 
+            "costBurn": "40/45/50/55/60", 
+            "rangeBurn": "1050", 
+            "range": [
+                1050, 
+                1050, 
+                1050, 
+                1050, 
+                1050
+            ], 
+            "cost": [
+                40, 
+                45, 
+                50, 
+                55, 
+                60
+            ], 
+            "effectBurn": [
+                "", 
+                "80/120/160/200/240", 
+                "30/40/50/60/70", 
+                "0.25", 
+                "1/1.25/1.5/1.75/2", 
+                "70", 
+                "", 
+                "", 
+                "", 
+                "6"
+            ], 
+            "image": {
+                "full": "VelkozQ.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0, 
+                7.0
+            ], 
+            "name": "Plasma Fission"
+        }, 
+        {
+            "cooldownBurn": "1.5", 
+            "key": "VelkozW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ ammorechargetime }} -> {{ ammorechargetimenNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Initial Damage", 
+                    "Secondary Damage", 
+                    "Ammo Recharge Time", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.25
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.375
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Vel'Koz opens a rift to the void that deals an initial burst of damage, then explodes for a second burst of damage after a delay.", 
+            "sanitizedDescription": "Vel'Koz opens a rift to the void that deals an initial burst of damage, then explodes for a second burst of damage after a delay.", 
+            "sanitizedTooltip": "Vel'Koz opens a rift to the void that deals {{ e1 }} (+{{ a1 }}) Magic Damage. After a delay, it deals an additional {{ e2 }} (+{{ a2 }}) Magic Damage. Both hits add a stack of Organic Deconstruction.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    50.0, 
+                    70.0, 
+                    90.0, 
+                    110.0
+                ], 
+                [
+                    45.0, 
+                    75.0, 
+                    105.0, 
+                    135.0, 
+                    165.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ]
+            ], 
+            "tooltip": "Vel'Koz opens a rift to the void that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage. After a delay, it deals an additional {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> Magic Damage. Both hits add a stack of Organic Deconstruction.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "1050", 
+            "range": [
+                1050, 
+                1050, 
+                1050, 
+                1050, 
+                1050
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "30/50/70/90/110", 
+                "45/75/105/135/165", 
+                "100", 
+                "25", 
+                "0.25", 
+                "0.5", 
+                "25", 
+                "25"
+            ], 
+            "image": {
+                "full": "VelkozW.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                1.5, 
+                1.5, 
+                1.5, 
+                1.5, 
+                1.5
+            ], 
+            "name": "Void Rift"
+        }, 
+        {
+            "cooldownBurn": "16/15/14/13/12", 
+            "key": "VelkozE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Vel'Koz causes an area to explode, knocking up enemies, and knocking close enemies slightly away.", 
+            "sanitizedDescription": "Vel'Koz causes an area to explode, knocking up enemies, and knocking close enemies slightly away.", 
+            "sanitizedTooltip": "Vel'Koz disrupts a nearby area which, after a delay, deals {{ e1 }} (+{{ a1 }}) Magic Damage and knocks up enemies hit for {{ e2 }} seconds. Any enemies hit that are close to Vel'Koz will be pushed slightly in the direction the ability was cast.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    100.0, 
+                    130.0, 
+                    160.0, 
+                    190.0
+                ], 
+                [
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75, 
+                    0.75
+                ], 
+                null, 
+                [
+                    225.0, 
+                    225.0, 
+                    225.0, 
+                    225.0, 
+                    225.0
+                ], 
+                null, 
+                null, 
+                null, 
+                null, 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Vel'Koz disrupts a nearby area which, after a delay, deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and knocks up enemies hit for {{ e2 }} seconds.<br><br>Any enemies hit that are close to Vel'Koz will be pushed slightly in the direction the ability was cast.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "70/100/130/160/190", 
+                "0.75", 
+                "", 
+                "225", 
+                "", 
+                "", 
+                "", 
+                "", 
+                "2"
+            ], 
+            "image": {
+                "full": "VelkozE.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                16.0, 
+                15.0, 
+                14.0, 
+                13.0, 
+                12.0
+            ], 
+            "name": "Tectonic Disruption"
+        }, 
+        {
+            "cooldownBurn": "130/110/90", 
+            "key": "VelkozR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Total Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Vel'Koz unleashes a channelled beam that follows the cursor for 2.5 seconds that deals damage and slows enemies.", 
+            "sanitizedDescription": "Vel'Koz unleashes a channelled beam that follows the cursor for 2.5 seconds that deals damage and slows enemies.", 
+            "sanitizedTooltip": "Vel'Koz channels a ray of energy that follows the cursor for 2.5 seconds, dealing Magic Damage up to a total of {{ e1 }} (+{{ a1 }}), and slows enemies hit by {{ e3 }}% for 1 second. Adds a stack of Organic Deconstruction every 0.5 seconds. Can be cancelled by recasting.", 
+            "effect": [
+                null, 
+                [
+                    500.0, 
+                    700.0, 
+                    900.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    500.0, 
+                    500.0, 
+                    500.0
+                ], 
+                null, 
+                [
+                    0.1, 
+                    0.1, 
+                    0.1
+                ], 
+                [
+                    4.0, 
+                    8.0, 
+                    12.0
+                ], 
+                null, 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Vel'Koz channels a ray of energy that follows the cursor for 2.5 seconds, dealing Magic Damage up to a total of {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span>, and slows enemies hit by {{ e3 }}% for 1 second. Adds a stack of Organic Deconstruction every 0.5 seconds.<br><br>Can be cancelled by recasting.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1575", 
+            "range": [
+                1575, 
+                1575, 
+                1575
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "500/700/900", 
+                "2", 
+                "20", 
+                "500", 
+                "", 
+                "0.1", 
+                "4/8/12", 
+                "", 
+                "2"
+            ], 
+            "image": {
+                "full": "VelkozR.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                130.0, 
+                110.0, 
+                90.0
+            ], 
+            "name": "Life Form Disintegration Ray"
+        }
+    ]
+}

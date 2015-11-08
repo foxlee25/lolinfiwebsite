@@ -1,0 +1,420 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 2, 
+        "defense": 2, 
+        "magic": 9
+    }, 
+    "stats": {
+        "armorperlevel": 3.5, 
+        "attackdamage": 54.7, 
+        "mpperlevel": 45.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 325.6, 
+        "armor": 21.88, 
+        "hp": 514.4, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.36, 
+        "attackrange": 550.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 80.0
+    }, 
+    "name": "Malzahar", 
+    "title": "the Prophet of the Void", 
+    "tags": [
+        "Mage", 
+        "Assassin"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "AlZahar_SummonVoidling.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 336
+        }, 
+        "sanitizedDescription": "After casting 4 spells, Malzahar summons an uncontrollable Voidling to engage enemy units for 21 seconds. Voidlings have 200 + 50 x lvl Health and 20 + 5 x lvl Attack Damage. Voidlings Grow after 7 seconds (+50% Attack Damage/Armor), and Frenzy after 14 seconds (+100% Attack Speed).", 
+        "name": "Summon Voidling", 
+        "description": "After casting 4 spells, Malzahar summons an uncontrollable Voidling to engage enemy units for 21 seconds. Voidlings have 200 + 50 x lvl Health and 20 + 5 x lvl Attack Damage.<br><br>Voidlings Grow after 7 seconds (+50% Attack Damage/Armor), and Frenzy after 14 seconds (+100% Attack Speed)."
+    }, 
+    "quotes": [
+        "\"Oblivion awaits!\"", 
+        "\"It is done.\"", 
+        "\"Mortality is weakness.\"", 
+        "\"We demand sacrifice.\"", 
+        "\"Inevitable.\"", 
+        "\"Their time is short.\"", 
+        "\"For the Void.\"", 
+        "\"Icathia beckons.\"", 
+        "\"As was foreseen.\"", 
+        "\"In due course.\"", 
+        "\"Second sight ordains it.\"", 
+        "\"It is in motion.\"", 
+        "\"At once.\"", 
+        "\"We are timeless.\"", 
+        "\"Without question.\"", 
+        "Summoners!"
+    ], 
+    "key": "Malzahar", 
+    "lore": "Many men have gone mad beneath the glare of the Shurima sun, but it was during the night's chilling embrace that Malzahar relinquished his sanity. Malzahar was born a seer, blessed with the gift of prophecy. His talent, though unrefined, promised to be one of Runeterra's greatest boons, but destiny plotted him another course; his sensitivity to the roiling tides of fate allowed other, unwelcome things to tug at his subconscious mind. In his dreams, where the veil of separation is thinnest, a sinister thing beckoned.  For some time, Malzahar was able to resist its prodding solicitation, but with each passing night the voice grew louder, or perhaps deeper, until he could withstand the call no more.<br><br>He ventured into the desert without supplies, drawn by the lure of a specious charm. His destination: a lost civilization to the east, known to ancient texts as Icathia. Few believed such a place ever existed, and those who did were certain that the sands had long since devoured whatever remained. When Malzahar's cracked feet finally failed him, he found himself kneeling at the base of a bizarre crumbling obelisk. Beyond it lay the alien geometry of a ruined city and the giant decaying idols of dark and horrific gods.  His eyes, seeing what others cannot, and what none should, were filled with the essence of the Void. His once shifting visions of the future were replaced with the immutable promise of Valoran beset by creatures of the Void. Standing alone, but not alone, amidst the echoing dunes, he noticed the familiar voice escape his own lips in a parched rasp, bearing three words whose weight trembled his knees: League of Legends. Now infused with the power of the Void itself, Malzahar set off to the north to seek his fate.<br><br>''The land may melt, the sea may swell, the sky may fall... but They will come.''<br>-- Malzahar", 
+    "id": 90, 
+    "spells": [
+        {
+            "cooldownBurn": "9", 
+            "key": "AlZaharCalloftheVoid", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Silence Duration", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions.", 
+            "sanitizedDescription": "Malzahar opens up two portals to the Void. After a short delay, they fire projectiles that deal Magic Damage and silence enemy champions.", 
+            "sanitizedTooltip": "Malzahar opens two portals to the Void. After a short delay, they fire projectiles that deal {{ e1 }} (+{{ a1 }}) Magic Damage and silence champions for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    135.0, 
+                    190.0, 
+                    245.0, 
+                    300.0
+                ], 
+                [
+                    1.4, 
+                    1.8, 
+                    2.2, 
+                    2.6, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Malzahar opens two portals to the Void. After a short delay, they fire projectiles that deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and silence champions for {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "80/85/90/95/100", 
+            "rangeBurn": "900", 
+            "range": [
+                900, 
+                900, 
+                900, 
+                900, 
+                900
+            ], 
+            "cost": [
+                80, 
+                85, 
+                90, 
+                95, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "80/135/190/245/300", 
+                "1.4/1.8/2.2/2.6/3"
+            ], 
+            "image": {
+                "full": "AlZaharCalloftheVoid.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 288
+            }, 
+            "cooldown": [
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0, 
+                9.0
+            ], 
+            "name": "Call of the Void"
+        }, 
+        {
+            "cooldownBurn": "14", 
+            "key": "AlZaharNullZone", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }}% -> {{ e1NL }}%", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage %", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.01
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Malzahar creates a zone of negative energy which damages enemies that stand in it.", 
+            "sanitizedDescription": "Malzahar creates a zone of negative energy which damages enemies that stand in it.", 
+            "sanitizedTooltip": "Malzahar creates a zone of negative energy for {{ e3 }} seconds. The zone damages nearby enemies for {{ e1 }}% (+{{ a1 }}%) of their max Health each second (damage to monsters is capped at {{ e4 }} damage per second).", 
+            "effect": [
+                null, 
+                [
+                    4.0, 
+                    5.0, 
+                    6.0, 
+                    7.0, 
+                    8.0
+                ], 
+                [
+                    25.0, 
+                    35.0, 
+                    45.0, 
+                    55.0, 
+                    65.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    120.0, 
+                    120.0, 
+                    120.0, 
+                    120.0, 
+                    120.0
+                ]
+            ], 
+            "tooltip": "Malzahar creates a zone of negative energy for {{ e3 }} seconds. The zone damages nearby enemies for {{ e1 }}% <span class=\"color99FF99\">(+{{ a1 }}%)</span> of their max Health each second (damage to monsters is capped at {{ e4 }} damage per second).", 
+            "maxrank": 5, 
+            "costBurn": "90/95/100/105/110", 
+            "rangeBurn": "800", 
+            "range": [
+                800, 
+                800, 
+                800, 
+                800, 
+                800
+            ], 
+            "cost": [
+                90, 
+                95, 
+                100, 
+                105, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "4/5/6/7/8", 
+                "25/35/45/55/65", 
+                "5", 
+                "120"
+            ], 
+            "image": {
+                "full": "AlZaharNullZone.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 336
+            }, 
+            "cooldown": [
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0, 
+                14.0
+            ], 
+            "name": "Null Zone"
+        }, 
+        {
+            "cooldownBurn": "15/13/11/9/7", 
+            "key": "AlZaharMaleficVisions", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Restore", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Malzahar infects his target's mind with cruel visions of their demise, dealing damage each second. If the target dies while afflicted by the visions, they pass on to a nearby enemy unit and Malzahar gains Mana. Malzahar's Voidlings are attracted to affected units.", 
+            "sanitizedDescription": "Malzahar infects his target's mind with cruel visions of their demise, dealing damage each second. If the target dies while afflicted by the visions, they pass on to a nearby enemy unit and Malzahar gains Mana. Malzahar's Voidlings are attracted to affected units.", 
+            "sanitizedTooltip": "Malzahar infects his target's mind, dealing {{ e1 }} (+{{ a1 }}) Magic Damage over 4 seconds. If the target dies during this time, the visions pass to a nearby enemy and Malzahar gains {{ e2 }} Mana. Malzahar's Voidlings are attracted to affected units.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    140.0, 
+                    200.0, 
+                    260.0, 
+                    320.0
+                ], 
+                [
+                    10.0, 
+                    14.0, 
+                    18.0, 
+                    22.0, 
+                    26.0
+                ]
+            ], 
+            "tooltip": "Malzahar infects his target's mind, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage over 4 seconds.<br><br>If the target dies during this time, the visions pass to a nearby enemy and Malzahar gains {{ e2 }} Mana.<br><br>Malzahar's Voidlings are attracted to affected units.", 
+            "maxrank": 5, 
+            "costBurn": "60/75/90/105/120", 
+            "rangeBurn": "650", 
+            "range": [
+                650, 
+                650, 
+                650, 
+                650, 
+                650
+            ], 
+            "cost": [
+                60, 
+                75, 
+                90, 
+                105, 
+                120
+            ], 
+            "effectBurn": [
+                "", 
+                "80/140/200/260/320", 
+                "10/14/18/22/26"
+            ], 
+            "image": {
+                "full": "AlZaharMaleficVisions.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 384
+            }, 
+            "cooldown": [
+                15.0, 
+                13.0, 
+                11.0, 
+                9.0, 
+                7.0
+            ], 
+            "name": "Malefic Visions"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "AlZaharNetherGrasp", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Malzahar channels the essence of the Void to suppress an enemy champion and deal damage each second.", 
+            "sanitizedDescription": "Malzahar channels the essence of the Void to suppress an enemy champion and deal damage each second.", 
+            "sanitizedTooltip": "Malzahar channels the essence of the Void to suppress target champion, dealing {{ e1 }} (+{{ a1 }}) Magic Damage over 2.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    250.0, 
+                    400.0, 
+                    550.0
+                ]
+            ], 
+            "tooltip": "Malzahar channels the essence of the Void to suppress target champion, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage over 2.5 seconds.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "250/400/550"
+            ], 
+            "image": {
+                "full": "AlZaharNetherGrasp.png", 
+                "group": "spell", 
+                "sprite": "spell6.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 432
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "Nether Grasp"
+        }
+    ]
+}

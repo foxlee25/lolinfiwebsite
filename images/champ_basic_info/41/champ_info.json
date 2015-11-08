@@ -1,0 +1,697 @@
+{
+    "info": {
+        "difficulty": 9, 
+        "attack": 7, 
+        "defense": 6, 
+        "magic": 4
+    }, 
+    "stats": {
+        "armorperlevel": 3.0, 
+        "attackdamage": 56.0, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 282.0, 
+        "armor": 26.0, 
+        "hp": 631.08, 
+        "hpregenperlevel": 0.6, 
+        "attackspeedperlevel": 3.2, 
+        "attackrange": 125.0, 
+        "movespeed": 345.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.7, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 7.5, 
+        "spellblock": 32.1, 
+        "hpregen": 6.0, 
+        "hpperlevel": 79.0
+    }, 
+    "name": "Gangplank", 
+    "title": "the Saltwater Scourge", 
+    "tags": [
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Gangplank_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive4.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "Every few seconds, Gangplank's melee strike will set his opponent on fire.", 
+        "name": "Trial by Fire", 
+        "description": "Every few seconds, Gangplank's melee strike will set his opponent on fire."
+    }, 
+    "quotes": [
+        "Leviathan", 
+        "\"My flesh will never burn.\"", 
+        "\"Hack their kidneys out.\"", 
+        "\"One slash, ear to ear.\"", 
+        "\"Crying won't do any good.\"", 
+        "\"Dead men tell my tale.\"", 
+        "\"Feed 'em their fingers.\"", 
+        "\"I'll take my time with 'em.\"", 
+        "\"This is mercy in Bilgewater!\"", 
+        "\"Toss 'em to the sharks.\"", 
+        "\"Bones'll splinter.\"", 
+        "\"You haven't seen blood yet.\"", 
+        "\"My heart is iron.\"", 
+        "\"I'll take back what's mine!\"", 
+        "\"I found my hate in the fire.\"", 
+        "\"Never trust a bilgerat!\"", 
+        "\"Hate is a child's word.\"", 
+        "\"My vengeance will be bloody.\"", 
+        "\"The seas and men betray.\"", 
+        "\"Mercy sank with my ship.\"", 
+        "\"A reckoning approaches.\"", 
+        "\"Death spit me out.\"", 
+        "\"Cruelty for all.\"", 
+        "\"I've got it this time!\"", 
+        "\"I'm back at the helm.\"", 
+        "\"The flames are calling.\"", 
+        "\"Everyone pays!\"", 
+        "\"Scum!\"", 
+        "\"Filth!\"", 
+        "\"That's better.\"", 
+        "\"Needed that.\"", 
+        "\"Hits the spot.\"", 
+        "\"Not today!\"", 
+        "\"How they try!\"", 
+        "\"No chance!\"", 
+        "\"Never!\"", 
+        "\"Barrel!\"", 
+        "\"Another!\"", 
+        "\"More powder!\"", 
+        "\"Burn!\"", 
+        "\"Line 'em up!\"", 
+        "\"Three in a row!\"", 
+        "\"Fish in a barrel!\"", 
+        "\"That's a chain!\"", 
+        "\"Combo!\"", 
+        "\"Bathe 'em in iron!\"", 
+        "\"Volley fire!\"", 
+        "\"Cannons!\"", 
+        "\"Broadside!\"", 
+        "\"Main cannon at the ready!\"", 
+        "\"Load up the hull buster!\"", 
+        "\"I'll rain fire upon 'em!\"", 
+        "\"All cannons!\"", 
+        "\"Powder'll get 'em moving!\"", 
+        "\"Charge beneath the barrage!\"", 
+        "\"They'll have reason to run!\"", 
+        "\"Forged in blood and bile.\"", 
+        "\"This blade's got bite!\"", 
+        "\"Sharp enough to etch bone.\"", 
+        "\"This is a flayin' tool.\"", 
+        "\"Watch 'em twitch.\"", 
+        "\"Blood begets blood.\"", 
+        "\"Got every angle covered.\"", 
+        "\"An all-purpose artefact.\"", 
+        "\"I'll come back stronger.\"", 
+        "\"I'm far from done killing.\"", 
+        "\"Keep a weather eye out.\"", 
+        "\"Always watch your back.\"", 
+        "\"Trust nothing to chance.\"", 
+        "\"The sharks are circling.\"", 
+        "\"Brutality brings loyalty.\"", 
+        "\"Cut 'em from stem to stern.\"", 
+        "\"Grind 'em to chum.\"", 
+        "\"Hoist the colours!\"", 
+        "\"I'm a fair and just man.\"", 
+        "\"Gut 'em like fish.\"", 
+        "\"Dash 'em against the rocks.\"", 
+        "\"The depths are calling.\"", 
+        "\"I'll grant their death wish.\"", 
+        "\"Heave to!\"", 
+        "\"Face me, swab!\"", 
+        "\"Out with the tide.\"", 
+        "\"To the hilt!\"", 
+        "\"Time for an example.\"", 
+        "\"A scared man is a loyal man.\"", 
+        "\"Into the wind!\"", 
+        "\"My ship is my soul.\"", 
+        "\"No-one steals from me.\"", 
+        "\"Sink or swim, lads.\"", 
+        "\"I judge a man by his scars.\"", 
+        "\"Cruelty with purpose, boys!\"", 
+        "\"Keep your eye on the ball.\"", 
+        "\"Prepare to be boarded.\"", 
+        "\"Sailor take warning!\"", 
+        "\"You're a losing bet, Fate.\"", 
+        "\"Everyone pays!\"", 
+        "\"Scurvy wretch!\"", 
+        "\"No quarter!\"", 
+        "\"Yo ho!\"", 
+        "\"Refreshing.\"", 
+        "\"Ah.\"", 
+        "\"Hits the spot.\"", 
+        "\"Not today!\"", 
+        "\"Try again!\"", 
+        "\"Free and clear!\"", 
+        "\"Never!\"", 
+        "\"Eat powder!\"", 
+        "\"Barrel!\"", 
+        "\"Have at ya'!\"", 
+        "\"Line 'em up!\"", 
+        "\"Three in a row!\"", 
+        "\"Fish in a barrel!\"", 
+        "\"That's a chain!\"", 
+        "\"Combo!\"", 
+        "\"Bring the rain!\"", 
+        "\"Mortars to the mast!\"", 
+        "\"Cannons!\"", 
+        "\"Broadside!\"", 
+        "\"Here be dragons!\"", 
+        "\"Ready the main cannon!\"", 
+        "\"Prepare the hull buster!\"", 
+        "\"More cannons!\"", 
+        "\"All cannons at the ready!\"", 
+        "\"Charge beneath the barrage!\"", 
+        "\"Forged in blood and bile.\"", 
+        "\"Now this blade's got bite!\"", 
+        "\"Sharp enough to etch bone.\"", 
+        "\"This is a flayin' tool.\"", 
+        "\"I love watching 'em twitch.\"", 
+        "\"Blood begets blood.\"", 
+        "\"Got every angle covered.\"", 
+        "\"An all-purpose artefact.\"", 
+        "\"Keep a weather eye out.\"", 
+        "\"Always watch your back.\"", 
+        "\"Trust nothing to chance.\"", 
+        "\"I'll be needing more grog.\"", 
+        "\"Set course for the docks.\"", 
+        "\"Prepare to be boarded!\"", 
+        "\"Yaarr!\"", 
+        "\"Swab the poop deck!\"", 
+        "\"C'mere, me beauty! Hehehe.\"", 
+        "\"Nothin' but a bilge rat!\"", 
+        "\"I'll be usin' ye for chum!\"", 
+        "\"Ya-ha-har!\"", 
+        "\"Avast, me hearties!\"", 
+        "\"Shiver me timbers!\"", 
+        "\"Ahoy!\"", 
+        "\"Well blow me down!\"", 
+        "Avast, summoners!", 
+        "Gangplank's level", 
+        "Grog Soaked Blade", 
+        "Parrrley", 
+        "Parrrley", 
+        "Parrrley", 
+        "Parrrley", 
+        "Parrrley", 
+        "Parrrley's", 
+        "Remove Scurvy", 
+        "Remove Scurvy", 
+        "Raise Morale", 
+        "Raise Morale's", 
+        "Cannon Barrage", 
+        "Undocumented:", 
+        "Silver Serpents", 
+        "Undocumented:", 
+        "plunder", 
+        "Silver Serpents"
+    ], 
+    "key": "Gangplank", 
+    "lore": "''I was cutting throats and sinking Noxian war galleys when you were still pissing your britches, boy. You don't want to take me on.'' As unpredictable as he is brutal, the dethroned reaver king known as Gangplank is feared far and wide. Where he goes, death and ruin follow, and such is his infamy and reputation that the merest sight of his black sails on the horizon causes panic among even the hardiest crew.", 
+    "id": 41, 
+    "spells": [
+        {
+            "cooldownBurn": "5", 
+            "key": "GangplankQWrapper", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Plunder Gold"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "attackdamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Shoots target, plundering Gold for each enemy unit killed.", 
+            "sanitizedDescription": "Shoots target, plundering Gold for each enemy unit killed.", 
+            "sanitizedTooltip": "Fires a bullet that deals {{ e1 }} (+{{ a1 }}) physical damage (can crit and applies on-hit effects). If Parrrley kills the target, Gangplank plunders {{ e2 }} bonus Gold and refunds {{ e3 }}% of the Mana cost. For each Gold plundered, Gangplank gains a Silver Serpent (trade Silver Serpents at the shop to upgrade Cannon Barrage).", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    45.0, 
+                    70.0, 
+                    95.0, 
+                    120.0
+                ], 
+                [
+                    4.0, 
+                    5.0, 
+                    6.0, 
+                    7.0, 
+                    8.0
+                ], 
+                [
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0, 
+                    50.0
+                ], 
+                [
+                    500.0, 
+                    500.0, 
+                    500.0, 
+                    500.0, 
+                    500.0
+                ]
+            ], 
+            "tooltip": "Fires a bullet that deals {{ e1 }} (<span class=\"colorFF8C00\">+{{ a1 }}</span>) physical damage (can crit and applies on-hit effects).<br><br>If Parrrley kills the target, Gangplank plunders <span class=\"colorFFDD00\">{{ e2 }}</span> bonus Gold and refunds {{ e3 }}% of the Mana cost.<br><br>For each Gold plundered, Gangplank gains a <span class=\"colorffd700\">Silver Serpent</span> (trade <span class=\"colorffd700\">Silver Serpents</span> at the shop to upgrade Cannon Barrage).<br><br>", 
+            "maxrank": 5, 
+            "costBurn": "50", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                50, 
+                50, 
+                50, 
+                50, 
+                50
+            ], 
+            "effectBurn": [
+                "", 
+                "20/45/70/95/120", 
+                "4/5/6/7/8", 
+                "50", 
+                "500"
+            ], 
+            "image": {
+                "full": "GangplankQWrapper.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                5.0, 
+                5.0, 
+                5.0, 
+                5.0, 
+                5.0
+            ], 
+            "name": "Parrrley"
+        }, 
+        {
+            "cooldownBurn": "22/20/18/16/14", 
+            "key": "GangplankW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Healing", 
+                    "Cooldown", 
+                    "Mana Cost<"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.9
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Eats citrus to cure crowd control effects and restore Health.", 
+            "sanitizedDescription": "Eats citrus to cure crowd control effects and restore Health.", 
+            "sanitizedTooltip": "Gangplank consumes a large quantity of citrus fruit, curing all disabling effects and healing him for {{ e1 }} (+{{ a1 }}) + {{ e2 }}% of his missing Health.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    75.0, 
+                    100.0, 
+                    125.0, 
+                    150.0
+                ], 
+                [
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0, 
+                    15.0
+                ], 
+                [
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25
+                ], 
+                [
+                    200.0, 
+                    200.0, 
+                    200.0, 
+                    200.0, 
+                    200.0
+                ], 
+                [
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0
+                ]
+            ], 
+            "tooltip": "Gangplank consumes a large quantity of citrus fruit, curing all disabling effects and healing him for {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> + <span class=\"colorCC3300\">{{ e2 }}% of his missing Health</span>.", 
+            "maxrank": 5, 
+            "costBurn": "60/70/80/90/100", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                60, 
+                70, 
+                80, 
+                90, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "50/75/100/125/150", 
+                "15", 
+                "0.25", 
+                "200", 
+                "30/40/50/60/70"
+            ], 
+            "image": {
+                "full": "GangplankW.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                22.0, 
+                20.0, 
+                18.0, 
+                16.0, 
+                14.0
+            ], 
+            "name": "Remove Scurvy"
+        }, 
+        {
+            "cooldownBurn": "0", 
+            "key": "GangplankE", 
+            "resource": "No Cost", 
+            "leveltip": {
+                "effect": [
+                    "{{ f2 }} -> {{ f3 }}", 
+                    "{{ e4 }}% -> {{ e4NL }}%", 
+                    "{{ e3 }} -> {{ e3NL }}"
+                ], 
+                "label": [
+                    "Barrel Ammo Charge", 
+                    "Slow", 
+                    "Bonus Damage Against Champions"
+                ]
+            }, 
+            "costType": "NoCost", 
+            "description": "Gangplank uncovers a powder keg at target location. If he attacks it, it explodes, spreading the attack's damage to enemies in the area, slowing them.", 
+            "sanitizedDescription": "Gangplank uncovers a powder keg at target location. If he attacks it, it explodes, spreading the attack's damage to enemies in the area, slowing them.", 
+            "sanitizedTooltip": "Place a powder keg that can be attacked by Gangplank or his enemies at target location for {{ e5 }} seconds. If Gangplank destroys a keg, it explodes dealing the attack's damage as physical damage (ignores {{ e10 }}% Armor) to enemies and slowing them by {{ e4 }}% for {{ e2 }} seconds. Champions take {{ e3 }} bonus physical damage from the explosion. When a keg explodes, other kegs with overlapping blast zones chain explode (damage does not stack). Kegs health decays every {{ f5 }} seconds. (Decay rate increases at level 7 and 13) Keg explosions apply Parrrley's plunder effect.", 
+            "effect": [
+                null, 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ], 
+                [
+                    40.0, 
+                    50.0, 
+                    60.0, 
+                    70.0, 
+                    80.0
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0, 
+                    60.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0, 
+                    10.0
+                ], 
+                [
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0, 
+                    100.0
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "Place a powder keg that can be attacked by Gangplank or his enemies at target location for {{ e5 }} seconds.<br><br>If Gangplank destroys a keg, it explodes dealing <span class=\"colorFF8C00\">the attack's damage</span> as physical damage (ignores {{ e10 }}% Armor) to enemies and slowing them by {{ e4 }}% for {{ e2 }} seconds. Champions take {{ e3 }} bonus physical damage from the explosion.<br><br>When a keg explodes, other kegs with overlapping blast zones chain explode (damage does not stack).<br><br>Kegs health decays every {{ f5 }} seconds. (Decay rate increases at level 7 and 13)<br><br><span class=\"colorffd700\">Keg explosions apply Parrrley's plunder effect.</span>", 
+            "maxrank": 5, 
+            "costBurn": "0", 
+            "rangeBurn": "1000", 
+            "range": [
+                1000, 
+                1000, 
+                1000, 
+                1000, 
+                1000
+            ], 
+            "cost": [
+                0, 
+                0, 
+                0, 
+                0, 
+                0
+            ], 
+            "effectBurn": [
+                "", 
+                "5", 
+                "2", 
+                "60/90/120/150/180", 
+                "40/50/60/70/80", 
+                "60", 
+                "2", 
+                "10", 
+                "100", 
+                "0.5", 
+                "40"
+            ], 
+            "image": {
+                "full": "GangplankE.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 240
+            }, 
+            "cooldown": [
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0, 
+                0.0
+            ], 
+            "name": "Powder Keg"
+        }, 
+        {
+            "cooldownBurn": "140/130/120", 
+            "key": "GangplankR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ f1 }} -> {{ f2 }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Maximum Kegs", 
+                    "Damage Per Wave", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.1
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Gangplank signals his ship to bombard an area, slowing and damaging enemies.", 
+            "sanitizedDescription": "Gangplank signals his ship to bombard an area, slowing and damaging enemies.", 
+            "sanitizedTooltip": "Passive: Gangplank can hold up to {{ f1 }} Powder Kegs. Active: Signals Gangplank's ship to fire {{ f3 }} waves of cannonballs at an area over {{ e3 }} seconds. Each wave deals {{ e1 }} (+{{ a1 }}) magic damage and slows enemies by {{ e2 }}% for {{ e6 }} seconds. Collect Silver Serpents with Parrrley to upgrade in the shop.", 
+            "effect": [
+                null, 
+                [
+                    50.0, 
+                    70.0, 
+                    90.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    1.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    300.0, 
+                    300.0, 
+                    300.0
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive:</span> Gangplank can hold up to {{ f1 }} Powder Kegs.<br><br><span class=\"colorFF9900\">Active:</span> Signals Gangplank's ship to fire {{ f3 }} waves of cannonballs at an area over {{ e3 }} seconds. Each wave deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and slows enemies by {{ e2 }}% for {{ e6 }} seconds.<br><br><span class=\"colorffd700\">Collect Silver Serpents with Parrrley to upgrade in the shop.</span>", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "30000", 
+            "range": [
+                30000, 
+                30000, 
+                30000
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "50/70/90", 
+                "30", 
+                "8", 
+                "2", 
+                "1.5/0.5/0.5", 
+                "0.5", 
+                "300", 
+                "60", 
+                "1", 
+                "30"
+            ], 
+            "image": {
+                "full": "GangplankR.png", 
+                "group": "spell", 
+                "sprite": "spell14.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 288
+            }, 
+            "cooldown": [
+                140.0, 
+                130.0, 
+                120.0
+            ], 
+            "name": "Cannon Barrage"
+        }
+    ]
+}

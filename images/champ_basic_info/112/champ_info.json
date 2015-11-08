@@ -1,0 +1,502 @@
+{
+    "info": {
+        "difficulty": 9, 
+        "attack": 2, 
+        "defense": 4, 
+        "magic": 10
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 52.04, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 324.0, 
+        "armor": 22.72, 
+        "hp": 516.04, 
+        "hpregenperlevel": 0.65, 
+        "attackspeedperlevel": 2.11, 
+        "attackrange": 525.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 7.84, 
+        "hpperlevel": 78.0
+    }, 
+    "name": "Viktor", 
+    "title": "the Machine Herald", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Viktor_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive3.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 0
+        }, 
+        "sanitizedDescription": "Viktor starts with the Prototype Hex Core that can be upgraded three times in the store to augment his abilities.", 
+        "name": "Glorious Evolution", 
+        "description": "Viktor starts with the Prototype Hex Core that can be upgraded three times in the store to augment his abilities."
+    }, 
+    "quotes": [
+        "College of Techmaturgy", 
+        "Professor Stanwick", 
+        "Valoran", 
+        "\"Join the glorious evolution.\"", 
+        "\"Inferior constructs.\"", 
+        "\"They are obsolete.\"", 
+        "\"Relinquish the flesh.\"", 
+        "\"Destroy... then improve!\"", 
+        "\"Their bodies are frail.\"", 
+        "\"Adapt or be removed.\"", 
+        "\"I am the first of many.\"", 
+        "\"Metal is perfection.\"", 
+        "\"With utmost efficiency.\"", 
+        "\"Analyzing approach.\"", 
+        "\"Embrace progress.\"", 
+        "\"Pave the way.\"", 
+        "\"Function over form.\"", 
+        "\"All will soon change.\"", 
+        "\"Submit to my designs.\"", 
+        "\"Consume!\"", 
+        "\"Obliterate!\"", 
+        "\"Behold!\"", 
+        "\"True power!\"", 
+        "Power Transfer", 
+        "*", 
+        "passive", 
+        "812.5 if upgraded", 
+        "Gravity Field", 
+        "Gravity Field", 
+        "Gravity Field's", 
+        "Gravity Field", 
+        "Gravity Field's", 
+        "*", 
+        "Death Ray", 
+        "*", 
+        "passive", 
+        "Chaos Storm", 
+        "default hotkeys", 
+        "Chaos Storm", 
+        "Chaos Storm", 
+        "Chaos Storm", 
+        "Chaos Storm"
+    ], 
+    "key": "Viktor", 
+    "lore": "Early in life, Viktor discovered his passion for science and invention, particularly in the field of mechanical automation. He attended Zaun's prestigious College of Techmaturgy and led the team that constructed Blitzcrank - a scientific breakthrough that he expected to vault him to the top of his profession. Unfortunately his triumph was usurped by Professor Stanwick, who stole credit for developing Blitzcrank's sentience and later used Viktor's research to revive Urgot. Viktor's appeals for justice fell on deaf ears, and he sank into a deep depression. He withdrew from the College and barricaded himself in his private laboratory, cutting all human ties.  There, in secret, he conceived a project for which nobody else could claim credit. Desiring both to revolutionize his field and to eliminate the jealous human emotions which festered inside him, he engineered parts to replace and improve his own body.<br><br>When Viktor re-emerged, almost no trace of the original man remained. Not only had he supplanted the majority of his anatomy, but his personality had changed. His previous hope to better society was replaced by an obsession with what he called ''the glorious evolution.'' He saw himself as the patron and pioneer of Valoran's future - a future in which man would renounce his flesh in favor of superior hextech augmentations. Though Viktor's initial appeals were met with heavy skepticism, scientists were confounded by the sophistication of his machinery. By integrating his mind with techmaturgical devices, he had been able to drastically accelerate the progress of his research.  His transformation had stripped him of what he perceived as his emotional weaknesses, but there was some lingering residue of resentment against the Professor. Viktor joined the League of Legends to pit his inventions against the greatest opponents Valoran could offer, and to correct any weaknesses or inefficiencies that remained.<br><br>''In one's hand, techmaturgy is a tool. As one's hand, it is liberation.''<br>-- Viktor", 
+    "id": 112, 
+    "spells": [
+        {
+            "cooldownBurn": "10/8.5/7/5.5/4", 
+            "key": "ViktorPowerTransfer", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Shield Amount", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Viktor blasts an enemy unit dealing magic damage, gaining a shield and empowering his next basic attack.<br><br>Augment: Viktor gains bonus Movement Speed after casting.", 
+            "sanitizedDescription": "Viktor blasts an enemy unit dealing magic damage, gaining a shield and empowering his next basic attack. Augment: Viktor gains bonus Movement Speed after casting.", 
+            "sanitizedTooltip": "Viktor blasts an enemy unit for {{ e1 }} (+{{ a1 }}) magic damage, granting Viktor a {{ e4 }} (+{{ f3 }}) damage shield for {{ e2 }} seconds. Viktor's next basic attack deals {{ f2 }} (+{{ a2 }}) bonus magic damage. (The bonus damage scales with Viktor's level). Augment - Turbocharge: Viktor gains {{ e3 }}% Movement Speed for {{ e2 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    100.0, 
+                    120.0
+                ], 
+                [
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5, 
+                    2.5
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    30.0, 
+                    50.0, 
+                    70.0, 
+                    90.0, 
+                    110.0
+                ]
+            ], 
+            "tooltip": "Viktor blasts an enemy unit for {{ e1 }}<span class=\"color99FF99\"> (+{{ a1 }})</span> magic damage, granting Viktor a {{ e4 }} <span class=\"color99FF99\">(+{{ f3 }})</span> damage shield for {{ e2 }} seconds. Viktor's next basic attack deals {{ f2 }}<span class=\"color99FF99\"> (+{{ a2 }})</span> bonus magic damage. (The bonus damage scales with Viktor's level).<br><br><span class=\"colorFFCC00\">Augment - Turbocharge:</span> Viktor gains {{ e3 }}% Movement Speed for {{ e2 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "45/50/55/60/65", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                45, 
+                50, 
+                55, 
+                60, 
+                65
+            ], 
+            "effectBurn": [
+                "", 
+                "40/60/80/100/120", 
+                "2.5", 
+                "30", 
+                "30/50/70/90/110"
+            ], 
+            "image": {
+                "full": "ViktorPowerTransfer.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 432
+            }, 
+            "cooldown": [
+                10.0, 
+                8.5, 
+                7.0, 
+                5.5, 
+                4.0
+            ], 
+            "name": "Siphon Power"
+        }, 
+        {
+            "cooldownBurn": "17/16/15/14/13", 
+            "key": "ViktorGravitonField", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e4 }}% -> {{ e4NL }}%", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Slow", 
+                    "Cooldown"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Viktor conjures a heavy gravitational field that slows enemies in its radius. Enemies who stay within the device for too long are stunned.<br><br>Augment: Enemies stunned by Gravity Field are dragged to the center.", 
+            "sanitizedDescription": "Viktor conjures a heavy gravitational field that slows enemies in its radius. Enemies who stay within the device for too long are stunned. Augment: Enemies stunned by Gravity Field are dragged to the center.", 
+            "sanitizedTooltip": "Viktor deploys a gravitational imprisonment device for 4 seconds, slowing enemy units by {{ e4 }}% and adding a stack every 0.5 seconds. At 3 stacks the target is stunned for 1.5 seconds. Augment - Implosion: Enemies stunned by Gravity Field are dragged to the center.", 
+            "effect": [
+                null, 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5, 
+                    0.5
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    28.0, 
+                    32.0, 
+                    36.0, 
+                    40.0, 
+                    44.0
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Viktor deploys a gravitational imprisonment device for 4 seconds, slowing enemy units by {{ e4 }}% and adding a stack every 0.5 seconds. At 3 stacks the target is stunned for 1.5 seconds.<br><br><span class=\"colorFFCC00\">Augment - Implosion:</span> Enemies stunned by Gravity Field are dragged to the center.", 
+            "maxrank": 5, 
+            "costBurn": "65", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                65, 
+                65, 
+                65, 
+                65, 
+                65
+            ], 
+            "effectBurn": [
+                "", 
+                "0.5", 
+                "1.5", 
+                "3", 
+                "28/32/36/40/44", 
+                "4", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "ViktorGravitonField.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 0
+            }, 
+            "cooldown": [
+                17.0, 
+                16.0, 
+                15.0, 
+                14.0, 
+                13.0
+            ], 
+            "name": "Gravity Field"
+        }, 
+        {
+            "cooldownBurn": "13/12/11/10/9", 
+            "key": "ViktorDeathRay", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Viktor uses his robotic arm to fire a chaos beam that cuts across the field in a line, dealing damage to all enemies in its path.<br><br>Augment: An explosion follows the Death Ray's wake, dealing magic damage.", 
+            "sanitizedDescription": "Viktor uses his robotic arm to fire a chaos beam that cuts across the field in a line, dealing damage to all enemies in its path. Augment: An explosion follows the Death Ray's wake, dealing magic damage.", 
+            "sanitizedTooltip": "Viktor uses his robotic arm to fire a chaos beam that cuts across the field in a line, dealing {{ e1 }} (+{{ a1 }}) magic damage to every enemy in its path. Augment - Aftershock: An explosion follows the Death Ray's wake, dealing {{ e1 }} (+{{ a1 }}) magic damage. Enemies already hit by the Death Ray will take {{ e2 }}% damage.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    115.0, 
+                    160.0, 
+                    205.0, 
+                    250.0
+                ], 
+                [
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0, 
+                    40.0
+                ]
+            ], 
+            "tooltip": "Viktor uses his robotic arm to fire a chaos beam that cuts across the field in a line, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to every enemy in its path.<br><br><span class=\"colorFFCC00\">Augment - Aftershock:</span> An explosion follows the Death Ray's wake, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Enemies already hit by the Death Ray will take {{ e2 }}% damage.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "525", 
+            "range": [
+                525, 
+                525, 
+                525, 
+                525, 
+                525
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "70/115/160/205/250", 
+                "40"
+            ], 
+            "image": {
+                "full": "ViktorDeathRay.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 48
+            }, 
+            "cooldown": [
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0, 
+                9.0
+            ], 
+            "name": "Death Ray"
+        }, 
+        {
+            "cooldownBurn": "120/110/100", 
+            "key": "ViktorChaosStorm", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Impact Damage", 
+                    "Damage Per Second", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.55
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Viktor conjures a singularity on the field which deals magic damage and interrupts enemy channels. The singularity then does magic damage to all nearby enemies every second. Viktor can redirect the singularity.<br><br>Augment: The Chaos Storm moves faster.", 
+            "sanitizedDescription": "Viktor conjures a singularity on the field which deals magic damage and interrupts enemy channels. The singularity then does magic damage to all nearby enemies every second. Viktor can redirect the singularity. Augment: The Chaos Storm moves faster.", 
+            "sanitizedTooltip": "Viktor conjures a singularity at target location, dealing {{ e2 }} (+{{ a1 }}) magic damage and interrupting enemy channels. Viktor can redirect the singularity for {{ e3 }} seconds, causing {{ e1 }} (+{{ a2 }}) magic damage every second to nearby enemies. The singularity will move slower as it attempts to move farther away from Viktor. Augment - Velocity: Chaos Storm moves 20% faster.", 
+            "effect": [
+                null, 
+                [
+                    30.0, 
+                    60.0, 
+                    90.0
+                ], 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    7.0, 
+                    7.0, 
+                    7.0
+                ], 
+                [
+                    0.5, 
+                    0.5, 
+                    0.5
+                ]
+            ], 
+            "tooltip": "Viktor conjures a singularity at target location, dealing {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and interrupting enemy channels.<br><br>Viktor can redirect the singularity for {{ e3 }} seconds, causing {{ e1 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage every second to nearby enemies. The singularity will move slower as it attempts to move farther away from Viktor.<br><br><span class=\"colorFFCC00\">Augment - Velocity:</span> Chaos Storm moves 20% faster.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "30/60/90", 
+                "150/250/350", 
+                "7", 
+                "0.5"
+            ], 
+            "image": {
+                "full": "ViktorChaosStorm.png", 
+                "group": "spell", 
+                "sprite": "spell12.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 48, 
+                "x": 96
+            }, 
+            "cooldown": [
+                120.0, 
+                110.0, 
+                100.0
+            ], 
+            "name": "Chaos Storm"
+        }
+    ]
+}

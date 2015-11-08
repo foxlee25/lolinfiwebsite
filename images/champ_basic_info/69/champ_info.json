@@ -1,0 +1,524 @@
+{
+    "info": {
+        "difficulty": 10, 
+        "attack": 2, 
+        "defense": 3, 
+        "magic": 9
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 52.376, 
+        "mpperlevel": 60.0, 
+        "attackspeedoffset": -0.034, 
+        "mp": 370.8, 
+        "armor": 22.22, 
+        "hp": 506.0, 
+        "hpregenperlevel": 0.5, 
+        "attackspeedperlevel": 1.68, 
+        "attackrange": 550.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.2, 
+        "mpregenperlevel": 0.75, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 8.36, 
+        "spellblock": 30.0, 
+        "hpregen": 5.69, 
+        "hpperlevel": 75.0
+    }, 
+    "name": "Cassiopeia", 
+    "title": "the Serpent's Embrace", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Cassiopeia_DeadlyCadence.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 48, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "Cassiopeia gains stacks of Aspect of the Serpent over time and by poisoning enemy champions.", 
+        "name": "Aspect of the Serpent", 
+        "description": "Cassiopeia gains stacks of Aspect of the Serpent over time and by poisoning enemy champions."
+    }, 
+    "quotes": [
+        "\"There is no antidote for me.\"", 
+        "\"Come, look me in the eyes.\"", 
+        "\"Do not turn your back on me.\"", 
+        "\"Just a taste.\"", 
+        "\"Such unrefined creatures.\"", 
+        "\"Die with grace.\"", 
+        "\"Let me in.\"", 
+        "\"Poison takes so many forms.\"", 
+        "\"One touch is all it takes.\"", 
+        "\"Soon it will all sink in.\"", 
+        "\"Don't be coy.\"", 
+        "\"You won't forget my embrace.\"", 
+        "\"Good to the last drop.\"", 
+        "\"My affection runs deep.\"", 
+        "\"You won't feel a thing.\"", 
+        "\"Careful, now. I bite.\"", 
+        "\"Violence is so messy.\"", 
+        "\"Patience, darling.\"", 
+        "\"Like what you see?\"", 
+        "\"Power requires precision.\"", 
+        "\"Think what I could offer.\"", 
+        "\"Do not tempt a viper.\"", 
+        "\"Watch your step.\"", 
+        "\"I know what everyone wants.\"", 
+        "\"Nothing escapes my coil.\"", 
+        "\"Sivir! Back to die so soon?\"", 
+        "\"Keep your eyes open.\"", 
+        "\"Watch and wait.\"", 
+        "\"Trust what you see.\"", 
+        "\"I'll be back soon. Miss me.\"", 
+        "\"Surrender to me.\"", 
+        "\"Feel my embrace.\"", 
+        "\"Succumb.\"", 
+        "\"I strike.\"", 
+        "\"No mercy.\"", 
+        "\"As you wish.\"", 
+        "\"Say 'please'.\"", 
+        "\"Don't make me beg.\"", 
+        "\"Of course.\"", 
+        "\"Don't be coy.\"", 
+        "\"Tell me everything.\"", 
+        "\"I'm listening.\"", 
+        "\"You're no fun.\"", 
+        "\"To the clever go the spoils.\"", 
+        "Deadly Cadence", 
+        "Aspect of the Serpent"
+    ], 
+    "key": "Cassiopeia", 
+    "lore": "Cassiopeia is a terrifying creature - half woman, half snake - whose slightest glance brings death. The youngest daughter of one of Noxus' most influential families, she was once a beautiful and cunning temptress capable of manipulating the hardest heart. Transformed by the venom of an ancient Shuriman tomb guardian, she continues to serve Noxian interests as she always has, just in a more... visceral way.", 
+    "id": 69, 
+    "spells": [
+        {
+            "cooldownBurn": "4", 
+            "key": "CassiopeiaNoxiousBlast", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}  ", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.45
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Cassiopeia blasts an area with Poison after a brief delay, granting her increased Movement Speed if she hits an enemy champion.", 
+            "sanitizedDescription": "Cassiopeia blasts an area with Poison after a brief delay, granting her increased Movement Speed if she hits an enemy champion.", 
+            "sanitizedTooltip": "Cassiopeia blasts an area after a brief delay. Enemies in the area are Poisoned, taking {{ e1 }} (+{{ a1 }}) magic damage over {{ e3 }} seconds. If Noxious Blast hits an enemy champion, Cassiopeia gains {{ e2 }}% Movement Speed for {{ e3 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    75.0, 
+                    115.0, 
+                    155.0, 
+                    195.0, 
+                    235.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ]
+            ], 
+            "tooltip": "Cassiopeia blasts an area after a brief delay. Enemies in the area are <span class=\"color6655CC\">Poisoned</span>, taking {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage over {{ e3 }} seconds. <br><br>If Noxious Blast hits an enemy champion, Cassiopeia gains {{ e2 }}% Movement Speed for {{ e3 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "40/50/60/70/80", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                40, 
+                50, 
+                60, 
+                70, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "75/115/155/195/235", 
+                "20", 
+                "3"
+            ], 
+            "image": {
+                "full": "CassiopeiaNoxiousBlast.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 336
+            }, 
+            "cooldown": [
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0
+            ], 
+            "name": "Noxious Blast"
+        }, 
+        {
+            "cooldownBurn": "14/13/12/11/10", 
+            "key": "CassiopeiaMiasma", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }} ", 
+                    "{{ e2 }}% -> {{ e2NL }}% ", 
+                    "{{ cost }} -> {{ costnNL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage per Second", 
+                    "Slow Amount", 
+                    "Mana Cost", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.1
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Cassiopeia releases a cloud of poison, lightly damaging and slowing any enemy that happens to pass through it.", 
+            "sanitizedDescription": "Cassiopeia releases a cloud of poison, lightly damaging and slowing any enemy that happens to pass through it.", 
+            "sanitizedTooltip": "Cassiopeia releases a toxic cloud that grows in size over {{ e4 }} seconds. Enemies in the cloud are Poisoned for {{ e3 }} seconds, causing them to take {{ e1 }} (+{{ a1 }}) magic damage each second and be slowed by {{ e2 }}%. The cloud continually reapplies this Poison to enemies within it.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    25.0, 
+                    30.0, 
+                    35.0, 
+                    40.0, 
+                    45.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    7.0, 
+                    7.0, 
+                    7.0, 
+                    7.0, 
+                    7.0
+                ], 
+                [
+                    -0.15, 
+                    -0.2, 
+                    -0.25, 
+                    -0.3, 
+                    -0.35
+                ]
+            ], 
+            "tooltip": "Cassiopeia releases a toxic cloud that grows in size over {{ e4 }} seconds. Enemies in the cloud are <span class=\"color6655CC\">Poisoned</span> for {{ e3 }} seconds, causing them to take {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage each second and be slowed by {{ e2 }}%. <br><br>The cloud continually reapplies this <span class=\"color6655CC\">Poison</span> to enemies within it.", 
+            "maxrank": 5, 
+            "costBurn": "40/50/60/70/80", 
+            "rangeBurn": "850", 
+            "range": [
+                850, 
+                850, 
+                850, 
+                850, 
+                850
+            ], 
+            "cost": [
+                40, 
+                50, 
+                60, 
+                70, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "10/15/20/25/30", 
+                "25/30/35/40/45", 
+                "2", 
+                "7", 
+                "-0.15/-0.2/-0.25/-0.3/-0.35"
+            ], 
+            "image": {
+                "full": "CassiopeiaMiasma.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 384
+            }, 
+            "cooldown": [
+                14.0, 
+                13.0, 
+                12.0, 
+                11.0, 
+                10.0
+            ], 
+            "name": "Miasma"
+        }, 
+        {
+            "cooldownBurn": "5", 
+            "key": "CassiopeiaTwinFang", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "costType": "Mana", 
+            "description": "Cassiopeia lets loose a damaging attack at her target, increasing further Poison damage dealt to the target. If the target dies, Cassiopeia regains Mana. If the target is poisoned, the cooldown of this spell is refreshed.", 
+            "sanitizedDescription": "Cassiopeia lets loose a damaging attack at her target, increasing further Poison damage dealt to the target. If the target dies, Cassiopeia regains Mana. If the target is poisoned, the cooldown of this spell is refreshed.", 
+            "sanitizedTooltip": "Cassiopeia deals {{ e1 }} (+{{ f2 }}) magic damage to her target. If Twin Fang kills the target, Cassiopeia refunds its cost and restores {{ e10 }}% of her maximum Mana ({{ f3 }}). If the target is Poisoned, then Twin Fang's cooldown is reduced to 0.5 seconds. Hitting an enemy with Twin Fang increases Cassiopeia's Poison damage dealt to the target by {{ e4 }}% for {{ e9 }} seconds. This effect stacks up to two times.", 
+            "effect": [
+                null, 
+                [
+                    55.0, 
+                    80.0, 
+                    105.0, 
+                    130.0, 
+                    155.0
+                ], 
+                [
+                    0.4, 
+                    0.45, 
+                    0.5, 
+                    0.55, 
+                    0.6
+                ], 
+                [
+                    30.0, 
+                    45.0, 
+                    60.0, 
+                    75.0, 
+                    90.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                null, 
+                [
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0, 
+                    1.0
+                ], 
+                [
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0, 
+                    8.0
+                ], 
+                [
+                    0.06, 
+                    0.06, 
+                    0.06, 
+                    0.06, 
+                    0.06
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Cassiopeia deals {{ e1 }} <span class=\"color99FF99\">(+{{ f2 }})</span> magic damage to her target. If Twin Fang kills the target, Cassiopeia refunds its cost and restores {{ e10 }}% of her maximum Mana <span class=\"color44DDFF\">({{ f3 }})</span>. If the target is <span class=\"color6655CC\">Poisoned,</span> then Twin Fang's cooldown is reduced to 0.5 seconds.<br><br>Hitting an enemy with Twin Fang increases Cassiopeia's <span class=\"color6655CC\">Poison</span> damage dealt to the target by {{ e4 }}% for {{ e9 }} seconds. This effect stacks up to two times.", 
+            "maxrank": 5, 
+            "costBurn": "50/60/70/80/90", 
+            "rangeBurn": "700", 
+            "range": [
+                700, 
+                700, 
+                700, 
+                700, 
+                700
+            ], 
+            "cost": [
+                50, 
+                60, 
+                70, 
+                80, 
+                90
+            ], 
+            "effectBurn": [
+                "", 
+                "55/80/105/130/155", 
+                "0.4/0.45/0.5/0.55/0.6", 
+                "30/45/60/75/90", 
+                "20", 
+                "", 
+                "1", 
+                "8", 
+                "0.06", 
+                "5", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "CassiopeiaTwinFang.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 96, 
+                "x": 432
+            }, 
+            "cooldown": [
+                5.0, 
+                5.0, 
+                5.0, 
+                5.0, 
+                5.0
+            ], 
+            "name": "Twin Fang"
+        }, 
+        {
+            "cooldownBurn": "120/110/100", 
+            "key": "CassiopeiaPetrifyingGaze", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.5
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Cassiopeia releases a swirl of magical energy from her eyes, stunning any enemies in front of her that are facing her and slowing any others with their back turned.", 
+            "sanitizedDescription": "Cassiopeia releases a swirl of magical energy from her eyes, stunning any enemies in front of her that are facing her and slowing any others with their back turned.", 
+            "sanitizedTooltip": "Cassiopeia deals {{ e1 }} (+{{ a1 }}) magic damage to all enemies in front of her. Enemies facing her are stunned for {{ e3 }} seconds while enemies facing away are slowed by {{ e2 }}%.", 
+            "effect": [
+                null, 
+                [
+                    150.0, 
+                    250.0, 
+                    350.0
+                ], 
+                [
+                    60.0, 
+                    60.0, 
+                    60.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0
+                ]
+            ], 
+            "tooltip": "Cassiopeia deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all enemies in front of her. Enemies facing her are stunned for {{ e3 }} seconds while enemies facing away are slowed by {{ e2 }}%.", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "825", 
+            "range": [
+                825, 
+                825, 
+                825
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "150/250/350", 
+                "60", 
+                "2"
+            ], 
+            "image": {
+                "full": "CassiopeiaPetrifyingGaze.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 0
+            }, 
+            "cooldown": [
+                120.0, 
+                110.0, 
+                100.0
+            ], 
+            "name": "Petrifying Gaze"
+        }
+    ]
+}

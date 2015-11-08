@@ -1,0 +1,508 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 6, 
+        "defense": 4, 
+        "magic": 7
+    }, 
+    "stats": {
+        "armorperlevel": 3.4, 
+        "attackdamage": 58.04, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": -0.05, 
+        "mp": 267.2, 
+        "armor": 22.412, 
+        "hp": 558.48, 
+        "hpregenperlevel": 0.7, 
+        "attackspeedperlevel": 3.1, 
+        "attackrange": 175.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 3.0, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 1.25, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 32.1, 
+        "hpregen": 8.175, 
+        "hpperlevel": 86.0
+    }, 
+    "name": "Fizz", 
+    "title": "the Tidal Trickster", 
+    "tags": [
+        "Assassin", 
+        "Fighter"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "FizzPassive.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 96, 
+            "x": 240
+        }, 
+        "sanitizedDescription": "Fizz's dexterity allows him to move through units and take less physical damage from basic attacks.", 
+        "name": "Nimble Fighter", 
+        "description": "Fizz's dexterity allows him to move through units and take less physical damage from basic attacks."
+    }, 
+    "quotes": [
+        "\"Let me at 'em!\"", 
+        "\"The tide turns.\"", 
+        "\"Now we strike.\"", 
+        "\"To the briny deep.\"", 
+        "\"I'm ready.\"'", 
+        "\"Swimmingly.\"", 
+        "\"C'mon, let's go!\"", 
+        "\"Wanna see a trick?\"", 
+        "\"No fear!\"", 
+        "\"One jump ahead of you.\"", 
+        "\"They won't catch me.\"", 
+        "\"In a splash.\"", 
+        "\"Land, ho!\"", 
+        "\"You're boring.\"", 
+        "\"Not interested.\"", 
+        "\"Hmm, something's fishy.\"", 
+        "\"Fish, fish fish!\"", 
+        "\"Shark!\"", 
+        "\"Lunch time!\"", 
+        "\"Feeding time!\"", 
+        "\"The tide turns.\"", 
+        "\"Now we strike.\"", 
+        "\"To the briny deep.\"", 
+        "\"I'm ready.\"'", 
+        "\"Swimmingly.\"", 
+        "\"C'mon, let's go!\"", 
+        "\"Wanna see a trick?\"", 
+        "\"No fear!\"", 
+        "\"One jump ahead of you.\"", 
+        "\"They won't catch me.\"", 
+        "\"In a splash.\"", 
+        "\"Land, ho!\"", 
+        "\"You're boring.\"", 
+        "\"Not interested.\"", 
+        "\"Hmm, something's fishy.\"", 
+        "\"Fish, fish fish!\"", 
+        "\"Shark!\"", 
+        "\"Lunch time!\"", 
+        "\"Feeding time!\"", 
+        "Chum the Waters", 
+        "not actually implemented"
+    ], 
+    "key": "Fizz", 
+    "lore": "Centuries ago, an ancient water-dwelling race built a hidden city beneath a mountain in the sea. Though these creatures had their enemies, the city was an impenetrable fortress, and, in the safety it provided, they grew complacent. Fizz, however, harbored a curious spirit that could not be satisfied living so cushioned a life. Unable to resist the allure of danger, Fizz had a habit of sneaking out of the city to look for trouble. In his many adventures he grew to be a powerful fighter with a keen resourcefulness that let him skirt danger with clever ease. One day, Fizz returned to find the city abandoned: his people had vanished, leaving Fizz without a clue to explain their disappearance. With nothing left in the city to keep him, Fizz salvaged an enchanted trident from the ruins and set out alone.<br><br>For years, Fizz wandered the ocean, using the skills he'd learned during his adventures as a young boy to survive. Finally, Fizz discovered the port of Bilgewater. He was fascinated with the existence of life above the water and could not resist exploring the island. In his endless curiosity, Fizz inadverently meddled in the affairs of the humans who lived there and his presence did not go unnoticed. His mischief angered many residents who eventually sought to capture or kill him. Fizz found himself cornered, and he prepared to return to the sea despite the fondness he'd come to hold for Bilgewater. As he stood at the docks, a massive dragon-shark attacked the port. Fizz defeated the beast, using his resourcefulness and knowledge of the creatures' weaknesses to his advantage. Having earned the gratitude and respect of the humans, Fizz decided to stay in Bilgewater. He joined the League of Legends to further serve his new home.<br><br>''Fizz makes even the saltiest sailors of Bilgewater look like drunken landlubbers in a fight. Good thing he's on our side.''<br>-- Miss Fortune, the Bounty Hunter", 
+    "id": 105, 
+    "spells": [
+        {
+            "cooldownBurn": "10/9/8/7/6", 
+            "key": "FizzPiercingStrike", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cost }} -> {{ costnNL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.35
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Fizz strikes his target and runs them through, dealing magic damage and applying on hit effects.", 
+            "sanitizedDescription": "Fizz strikes his target and runs them through, dealing magic damage and applying on hit effects.", 
+            "sanitizedTooltip": "Fizz dashes through his target, dealing normal attack damage plus {{ e1 }} (+{{ a1 }}) magic damage. This ability can trigger on-hit effects.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    25.0, 
+                    40.0, 
+                    55.0, 
+                    70.0
+                ], 
+                null, 
+                [
+                    650.0, 
+                    750.0, 
+                    850.0, 
+                    950.0, 
+                    1050.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5, 
+                    1.5
+                ]
+            ], 
+            "tooltip": "Fizz dashes through his target, dealing normal attack damage plus {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. This ability can trigger on-hit effects.", 
+            "maxrank": 5, 
+            "costBurn": "50/55/60/65/70", 
+            "rangeBurn": "550", 
+            "range": [
+                550, 
+                550, 
+                550, 
+                550, 
+                550
+            ], 
+            "cost": [
+                50, 
+                55, 
+                60, 
+                65, 
+                70
+            ], 
+            "effectBurn": [
+                "", 
+                "10/25/40/55/70", 
+                "", 
+                "650/750/850/950/1050", 
+                "1.5"
+            ], 
+            "image": {
+                "full": "FizzPiercingStrike.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 96
+            }, 
+            "cooldown": [
+                10.0, 
+                9.0, 
+                8.0, 
+                7.0, 
+                6.0
+            ], 
+            "name": "Urchin Strike"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "FizzSeastonePassive", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e2 }}% ->{{ e2NL }}%"
+                ], 
+                "label": [
+                    "Passive Base Damage", 
+                    "Active Base Damage", 
+                    "Missing Health Percent"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.45
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Fizz's attacks passively rend his enemies, dealing magic damage over several seconds based on the target's missing Health. When activated, for a short duration, Fizz's attacks deal additional magic damage.", 
+            "sanitizedDescription": "Fizz's attacks passively rend his enemies, dealing magic damage over several seconds based on the target's missing Health. When activated, for a short duration, Fizz's attacks deal additional magic damage.", 
+            "sanitizedTooltip": "Passive: Fizz's attacks rend his enemies, dealing {{ e1 }} (+{{ a1 }}) plus {{ e2 }}% of the target's missing Health as magic damage over {{ e4 }} seconds. Active: For {{ e6 }} seconds, Fizz's attacks deal an additional {{ e3 }} (+{{ a2 }}) magic damage on hit.", 
+            "effect": [
+                null, 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    4.0, 
+                    5.0, 
+                    6.0, 
+                    7.0, 
+                    8.0
+                ], 
+                [
+                    10.0, 
+                    15.0, 
+                    20.0, 
+                    25.0, 
+                    30.0
+                ], 
+                [
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0, 
+                    3.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0, 
+                    6.0
+                ], 
+                [
+                    300.0, 
+                    300.0, 
+                    300.0, 
+                    300.0, 
+                    300.0
+                ]
+            ], 
+            "tooltip": "<span class=\"colorFF9900\">Passive: </span>Fizz's attacks rend his enemies, dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> plus {{ e2 }}% of the target's missing Health as magic damage over {{ e4 }} seconds. <br><br><span class=\"colorFF9900\">Active: </span>For {{ e6 }} seconds, Fizz's attacks deal an additional {{ e3 }} <span class=\"color99FF99\">(+{{ a2 }})</span> magic damage on hit. ", 
+            "maxrank": 5, 
+            "costBurn": "40", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                40, 
+                40, 
+                40, 
+                40, 
+                40
+            ], 
+            "effectBurn": [
+                "", 
+                "20/30/40/50/60", 
+                "4/5/6/7/8", 
+                "10/15/20/25/30", 
+                "3", 
+                "2", 
+                "6", 
+                "300"
+            ], 
+            "image": {
+                "full": "FizzSeastonePassive.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 144
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Seastone Trident"
+        }, 
+        {
+            "cooldownBurn": "16/14/12/10/8", 
+            "key": "FizzJump", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} ->{{ cooldownnNL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Movement Reduction", 
+                    "Cooldown", 
+                    "Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.75
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Fizz hops into the air, landing gracefully upon his spear and becoming untargetable. From this position, Fizz can either slam the ground or choose to jump again before smashing back down.", 
+            "sanitizedDescription": "Fizz hops into the air, landing gracefully upon his spear and becoming untargetable. From this position, Fizz can either slam the ground or choose to jump again before smashing back down.", 
+            "sanitizedTooltip": "Fizz hops toward your cursor onto his spear, becoming untargetable, and then slams the ground dealing {{ e1 }} (+{{ a1 }}) magic damage to nearby enemies and slowing them by {{ e2 }}% for 2 seconds. Reactivating this ability while Fizz is on top of his spear causes Fizz to jump again towards your cursor and deal {{ e1 }} (+{{ a1 }}) magic damage in a smaller area to enemies nearby, instead of slamming the ground.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    120.0, 
+                    170.0, 
+                    220.0, 
+                    270.0
+                ], 
+                [
+                    40.0, 
+                    45.0, 
+                    50.0, 
+                    55.0, 
+                    60.0
+                ]
+            ], 
+            "tooltip": "Fizz hops toward your cursor onto his spear, becoming untargetable, and then slams the ground dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to nearby enemies and slowing them by {{ e2 }}% for 2 seconds.<br><br>Reactivating this ability while Fizz is on top of his spear causes Fizz to jump again towards your cursor and deal {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage in a smaller area to enemies nearby, instead of slamming the ground.", 
+            "maxrank": 5, 
+            "costBurn": "90/100/110/120/130", 
+            "rangeBurn": "400", 
+            "range": [
+                400, 
+                400, 
+                400, 
+                400, 
+                400
+            ], 
+            "cost": [
+                90, 
+                100, 
+                110, 
+                120, 
+                130
+            ], 
+            "effectBurn": [
+                "", 
+                "70/120/170/220/270", 
+                "40/45/50/55/60"
+            ], 
+            "image": {
+                "full": "FizzJump.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 192
+            }, 
+            "cooldown": [
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0, 
+                8.0
+            ], 
+            "name": "Playful / Trickster"
+        }, 
+        {
+            "cooldownBurn": "100/85/70", 
+            "key": "FizzMarinerDoom", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }}% -> {{ e2NL }}%", 
+                    "{{ cooldown }} ->{{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Slow Percent", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        1.0
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Fizz releases a magical fish toward a location that attaches to any champion that touches it, slowing the target  and amplifying all of Fizz's magic damage to them (except for Chum the Waters). After a short delay, a shark erupts from the ground, knocking up the target and knocking any nearby enemies aside. All enemies hit are dealt magic damage and slowed.", 
+            "sanitizedDescription": "Fizz releases a magical fish toward a location that attaches to any champion that touches it, slowing the target and amplifying all of Fizz's magic damage to them (except for Chum the Waters). After a short delay, a shark erupts from the ground, knocking up the target and knocking any nearby enemies aside. All enemies hit are dealt magic damage and slowed.", 
+            "sanitizedTooltip": "Fizz releases a magical fish toward a location attaching to any champion that walks over it, slowing their movement by {{ e2 }}% and amplifying magic damage by Fizz (except Chum the Waters) to the target by 20% for 6 seconds. After {{ e3 }} seconds, a shark erupts from the ground, knocking up the target and knocking other enemies aside dealing {{ e1 }} (+{{ a1 }}) magic damage and reducing their Movement Speed by {{ e2 }}% for 1.5 seconds.", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    325.0, 
+                    450.0
+                ], 
+                [
+                    50.0, 
+                    60.0, 
+                    70.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    4.0, 
+                    4.0, 
+                    4.0
+                ], 
+                [
+                    166.6666, 
+                    270.8333, 
+                    375.0
+                ]
+            ], 
+            "tooltip": "Fizz releases a magical fish toward a location attaching to any champion that walks over it, slowing their movement by {{ e2 }}% and amplifying magic damage by Fizz (except Chum the Waters) to the target by 20% for 6 seconds. <br><br>After {{ e3 }} seconds, a shark erupts from the ground, knocking up the target and knocking other enemies aside dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage and reducing their Movement Speed by {{ e2 }}% for 1.5 seconds. ", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1275", 
+            "range": [
+                1275, 
+                1275, 
+                1275
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "200/325/450", 
+                "50/60/70", 
+                "1.5", 
+                "4", 
+                "166.6666/270.8333/375"
+            ], 
+            "image": {
+                "full": "FizzMarinerDoom.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 240
+            }, 
+            "cooldown": [
+                100.0, 
+                85.0, 
+                70.0
+            ], 
+            "name": "Chum the Waters"
+        }
+    ]
+}

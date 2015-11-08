@@ -1,0 +1,703 @@
+{
+    "info": {
+        "difficulty": 8, 
+        "attack": 2, 
+        "defense": 6, 
+        "magic": 8
+    }, 
+    "stats": {
+        "armorperlevel": 3.0, 
+        "attackdamage": 55.536, 
+        "mpperlevel": 40.0, 
+        "attackspeedoffset": 0.0, 
+        "mp": 307.2, 
+        "armor": 19.04, 
+        "hp": 476.0, 
+        "hpregenperlevel": 1.75, 
+        "attackspeedperlevel": 1.36, 
+        "attackrange": 550.0, 
+        "movespeed": 340.0, 
+        "attackdamageperlevel": 2.7, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 11.005, 
+        "hpperlevel": 75.0
+    }, 
+    "name": "Heimerdinger", 
+    "title": "the Revered Inventor", 
+    "tags": [
+        "Mage", 
+        "Support"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Heimerdinger_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive1.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 144
+        }, 
+        "sanitizedDescription": "Heimerdinger gives nearby allied H-28G Turrets and Champions increased Health Regeneration.", 
+        "name": "Techmaturgical Repair Bots", 
+        "description": "Heimerdinger gives nearby allied H-28G Turrets and Champions increased Health Regeneration. "
+    }, 
+    "quotes": [
+        "\"Indeed, a wise choice.\"", 
+        "\"Eureka!\"", 
+        "\"Eureka!!\"", 
+        "\"For great science!\"", 
+        "\"I theorize... your defeat!\"", 
+        "\"Back, you dirty ape, back!\"", 
+        "\"What a reaction!\"", 
+        "\"Working as intended!\"", 
+        "\"Raise your what?\"", 
+        "\"Testing in progress!\"", 
+        "\"This calls for a prototype!\"", 
+        "\"Mind your vectors!\"", 
+        "\"Hmm... very interesting!\"", 
+        "\"I could do that better.\"", 
+        "\"I concur!\"", 
+        "\"Hmm... let me fix that.\"", 
+        "\"Wonderfully efficient!\"", 
+        "\"Goggles on!\"", 
+        "\"By my calculations...\"", 
+        "\"Just as I hypothesized!\"", 
+        "\"Aha!\"", 
+        "\"How befuddling!\"", 
+        "\"Back to the drawing board!\"", 
+        "\"I do love a good conundrum.\"", 
+        "\"Fascinating, isn't it?\"", 
+        "\"Brain over brawn!\"", 
+        "\"It's gone mad!\"", 
+        "\"Rise, my creation!\"", 
+        "\"No, not all the rockets!\"", 
+        "\"Come on... nngh...?! WAAAAA-\"", 
+        "\"Indeed, a wise choice.\"", 
+        "\"Eureka!\"", 
+        "\"Eureka!!\"", 
+        "\"For great science!\"", 
+        "\"I theorize... your defeat!\"", 
+        "\"Back, you dirty ape! Back!\"", 
+        "\"Hmm... very interesting.\"", 
+        "\"I concur!\""
+    ], 
+    "key": "Heimerdinger", 
+    "lore": "From the Journal of Professor Cecil B. Heimerdinger<br><br>10.14<br><br>09:15<br><br>Current meteorological conditions in Bandle City seem optimal. Atmospheric pressure is ideal for today's experiments!<br><br>Running a fifth trial for my Tridyminiumobulator this afternoon. Some fine tuning is required; singed my mustache. Need to adjust the energy throughput.<br><br>16:00<br><br>Tridyminiumobulator is still not maintaining intended proper energy efficiency! Necessary to run more numbers. In the meantime, I have found something else that's very intriguing.<br><br>While returning home after today's tests, I passed a gaggle of young yordles throwing a spherical projectile at each other. It's a simple enough concept: throw the object at someone, catch it, throw it at another yordle, repeat. But yordle miscalculations result in several errors! They throw with inconsistent accuracy and force, and the ''ball'' (as they refer to it) is frequently dropped... There are many ways for this process to be improved. According to my calculations, and after collecting data from the participants, if the pitching was consistent in both speed and arc there would be a 44.57% increase to fun! I need to ponder this for the evening.<br><br>10.15<br><br>05:20<br><br>Eureka! I've devised a solution.<br><br>I've invented an automated ball pitcher. Current name: H-28G. It employs a consistent speed and trajectory, ensuring that the recipient will always be able to catch the ball. It redirects itself to the nearest yordle (if there is more than one in the vicinity) ensuring everyone has a turn. I'll take it to the young yordles today and demonstrate my invention.<br><br>Also: spilled toxic acid on my shoes this morning. Bothersome.<br><br>10:30<br><br>Tested the automated pitcher today. It did not go as planned. The young ones were excited enough about my invention, but, when the machine was turned on, it was far too powerful! Even at its lowest setting it completely knocked a yordle off his feet. Clearly, I overestimated the velocity behind their throws... I'll return soon to make adjustments.<br><br>But my priority, for now, is the Tridyminiumobulator; I must fix its complications before lunch. Once it's in good shape, I'll need to test it somewhere else. Bandle City is proving insufficient for field research.<br><br>10.16<br><br>15:55<br><br>Apparently, there's a giant in town. A highly annoying anomaly. The noise outside is disturbing my research!<br><br>Must check fish tank today. They've been strangely quiet...<br><br>10.17<br><br>10:40<br><br>I have heard that many yordles have been injured due to the giant-related disturbance. If this doesn't stop soon, intervention will be necessary! I hope H-28G is still intact. I would lose a lot of time if it has to be rebuilt.<br><br>16:30<br><br>Everything is quiet again. It seems that the giant came to his senses and ran off. I need to gather H-28G tomorrow, once I've finished with more pressing matters. I've almost perfected the Tridyminiumobulator!<br><br>10.18<br><br>08:30<br><br>Today has been quite eventful already. I was surprised by a knock at my door. It seemed like the entire city was standing in front of my house. Normally, when a crowd has gathered, it's because they have some petty grievance about my work. But this time, they were celebrating!<br><br>Astonishingly, it seems one of the young yordles took advantage of the H-28G prototype I had left behind amidst the giant tomfoolery. He proved to be innovative, and repurposed the invention into a makeshift turret. It's powerful enough to scare off a giant - imagine that! What an ingenious little fellow.<br><br>I wish I could employ his like-minded encephalon in the near future - I have big plans and his assistance could be valuable - but he'd have to leave Bandle City. The scope of my plans necessitates a more expansive testing ground.<br><br>Runeterra should suffice!", 
+    "id": 74, 
+    "spells": [
+        {
+            "cooldownBurn": "1", 
+            "key": "HeimerdingerQ", 
+            "resource": "{{ cost }} Mana and  Turret Kit", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ f1 }} -> {{ f5 }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e9 }}% -> {{ e9NL }}%"
+                ], 
+                "label": [
+                    "<postScriptLeft>Cannon Damage", 
+                    "Beam Damage", 
+                    "Kit Generation Time", 
+                    "Maximum Kits Stored", 
+                    "Beam Charge Per Autoattack"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        24.0, 
+                        23.0, 
+                        22.0, 
+                        21.0, 
+                        20.0
+                    ], 
+                    "link": "@cooldownchampion", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        150.0, 
+                        175.0, 
+                        200.0, 
+                        225.0, 
+                        250.0, 
+                        275.0, 
+                        300.0, 
+                        325.0, 
+                        350.0, 
+                        375.0, 
+                        400.0, 
+                        425.0, 
+                        450.0, 
+                        475.0, 
+                        500.0, 
+                        525.0, 
+                        550.0, 
+                        575.0
+                    ], 
+                    "link": "@text", 
+                    "key": "f4"
+                }, 
+                {
+                    "coeff": [
+                        16.0, 
+                        16.0, 
+                        16.0, 
+                        16.0, 
+                        16.0
+                    ], 
+                    "link": "@cooldownchampion", 
+                    "key": "f2"
+                }, 
+                {
+                    "coeff": [
+                        0.15
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.55
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "ManaandTurretKit", 
+            "description": "Heimerdinger lays down a rapid-fire cannon turret equipped with a secondary pass-through beam attack (turrets deal half damage to towers).", 
+            "sanitizedDescription": "Heimerdinger lays down a rapid-fire cannon turret equipped with a secondary pass-through beam attack (turrets deal half damage to towers).", 
+            "sanitizedTooltip": "Places a Turret at target location. Turret attacks prioritize Heimerdinger's targets and enemies attacking Heimerdinger. Their Health increases with Heimerdinger's champion level and they shut down if he moves out of the area. Heimerdinger generates a Turret Kit every {{ f1 }} seconds and can hold {{ e3 }} Kit(s) at once. H-28G Evolution Turret Stats Health: {{ f4 }} (+{{ f2 }}) Attack - Cannon: {{ e1 }} (+{{ a1 }}) Magic Damage and +{{ e9 }}% beam charge each attack. Attack - Beam: {{ e2 }} (+{{ a2 }}) Magic Damage in a line every {{ e6 }} seconds. Maximum Turrets Placed: 3", 
+            "effect": [
+                null, 
+                [
+                    12.0, 
+                    18.0, 
+                    23.0, 
+                    29.0, 
+                    34.0
+                ], 
+                [
+                    40.0, 
+                    60.0, 
+                    80.0, 
+                    105.0, 
+                    130.0
+                ], 
+                [
+                    1.0, 
+                    1.0, 
+                    2.0, 
+                    2.0, 
+                    3.0
+                ], 
+                [
+                    26.0, 
+                    22.0, 
+                    18.0, 
+                    14.0, 
+                    10.0
+                ], 
+                [
+                    60.0, 
+                    70.0, 
+                    80.0, 
+                    90.0, 
+                    100.0
+                ], 
+                [
+                    16.0, 
+                    16.0, 
+                    16.0, 
+                    16.0, 
+                    16.0
+                ], 
+                [
+                    150.0, 
+                    205.0, 
+                    260.0, 
+                    315.0, 
+                    370.0
+                ], 
+                [
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25, 
+                    0.25
+                ], 
+                [
+                    1.0, 
+                    2.0, 
+                    3.0, 
+                    4.0, 
+                    5.0
+                ], 
+                [
+                    24.0, 
+                    23.0, 
+                    22.0, 
+                    21.0, 
+                    20.0
+                ]
+            ], 
+            "tooltip": "Places a Turret at target location. Turret attacks prioritize Heimerdinger's targets and enemies attacking Heimerdinger. Their Health increases with Heimerdinger's champion level and they shut down if he moves out of the area. Heimerdinger generates a Turret Kit every <span class=\"colorFFFFFF\">{{ f1 }}</span> seconds and can hold {{ e3 }} Kit(s) at once. <br><br><u><span class=\"colorFFFFFF\">H-28G Evolution Turret Stats</span></u><br><span class=\"colorFFDD77\">Health:</span> <span class=\"colorFFFFFF\">{{ f4 }}</span> <span class=\"color99FF99\">(+{{ f2 }})</span><br><span class=\"colorFFDD77\">Attack - Cannon:</span> {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage and +{{ e9 }}% beam charge each attack. <br><span class=\"colorFFDD77\">Attack - Beam:</span> {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> Magic Damage in a line every {{ e6 }} seconds.<br><span class=\"colorFFDD77\">Maximum Turrets Placed:</span> 3", 
+            "maxrank": 5, 
+            "costBurn": "20", 
+            "rangeBurn": "350", 
+            "range": [
+                350, 
+                350, 
+                350, 
+                350, 
+                350
+            ], 
+            "cost": [
+                20, 
+                20, 
+                20, 
+                20, 
+                20
+            ], 
+            "effectBurn": [
+                "", 
+                "12/18/23/29/34", 
+                "40/60/80/105/130", 
+                "1/1/2/2/3", 
+                "26/22/18/14/10", 
+                "60/70/80/90/100", 
+                "16", 
+                "150/205/260/315/370", 
+                "0.25", 
+                "1/2/3/4/5", 
+                "24/23/22/21/20"
+            ], 
+            "image": {
+                "full": "HeimerdingerQ.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 336
+            }, 
+            "cooldown": [
+                1.0, 
+                1.0, 
+                1.0, 
+                1.0, 
+                1.0
+            ], 
+            "name": "H-28G Evolution Turret"
+        }, 
+        {
+            "cooldownBurn": "11", 
+            "key": "HeimerdingerW", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e6 }} -> {{ e6NL }}", 
+                    "{{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Maximum Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.45
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.12
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.93
+                    ], 
+                    "link": "@dynamic.abilitypower", 
+                    "dyn": "+", 
+                    "key": "f2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Heimerdinger fires long-range rockets that converge on his cursor. ", 
+            "sanitizedDescription": "Heimerdinger fires long-range rockets that converge on his cursor.", 
+            "sanitizedTooltip": "Unleashes a barrage of 5 rockets that converge towards your cursor and fan out past it. Each rocket deals {{ e1 }} (+{{ a1 }}) Magic Damage. Units hit multiple times take reduced damage: Champions and Monsters: {{ e2 }} (+{{ a2 }}) Magic Damage, max {{ e6 }} {{ f2 }} total damage Minions: 60% of base damage Aiming between Heimerdinger and the target increases the rocket spread.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    90.0, 
+                    120.0, 
+                    150.0, 
+                    180.0
+                ], 
+                [
+                    12.0, 
+                    18.0, 
+                    24.0, 
+                    30.0, 
+                    36.0
+                ], 
+                [
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0, 
+                    25.0
+                ], 
+                [
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0, 
+                    20.0
+                ], 
+                [
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0, 
+                    30.0
+                ], 
+                [
+                    108.0, 
+                    162.0, 
+                    216.0, 
+                    270.0, 
+                    324.0
+                ]
+            ], 
+            "tooltip": "Unleashes a barrage of 5 rockets that converge towards your cursor and fan out past it. Each rocket deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage. Units hit multiple times take reduced damage:<br><br><span class=\"colorFFDD77\">Champions and Monsters:</span> {{ e2 }} <span class=\"color99FF99\">(+{{ a2 }})</span> Magic Damage, max {{ e6 }} <span class=\"color99FF99\">{{ f2 }}</span> total damage<br><span class=\"colorFFDD77\">Minions:</span> 60% of base damage<br><br><span class=\"color99FF99\">Aiming between Heimerdinger and the target increases the rocket spread.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "1325", 
+            "range": [
+                1325, 
+                1325, 
+                1325, 
+                1325, 
+                1325
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "60/90/120/150/180", 
+                "12/18/24/30/36", 
+                "25", 
+                "20", 
+                "30", 
+                "108/162/216/270/324"
+            ], 
+            "image": {
+                "full": "HeimerdingerW.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                11.0, 
+                11.0, 
+                11.0, 
+                11.0, 
+                11.0
+            ], 
+            "name": "Hextech Micro-Rockets"
+        }, 
+        {
+            "cooldownBurn": "18/16/14/12/10", 
+            "key": "HeimerdingerE", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units, as well as stunning anyone directly hit and slowing surrounding units.", 
+            "sanitizedDescription": "Heimerdinger lobs a grenade at a location, dealing damage to enemy units, as well as stunning anyone directly hit and slowing surrounding units.", 
+            "sanitizedTooltip": "Hurls a grenade that deals {{ e1 }} (+{{ a1 }}) Magic Damage to enemy units and slows their Movement Speed by {{ e3 }}% for {{ e2 }} seconds. Enemies in the center of the blast are also stunned for {{ e4 }} seconds.", 
+            "effect": [
+                null, 
+                [
+                    60.0, 
+                    100.0, 
+                    140.0, 
+                    180.0, 
+                    220.0
+                ], 
+                [
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0, 
+                    2.0
+                ], 
+                [
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0, 
+                    35.0
+                ], 
+                [
+                    1.25, 
+                    1.25, 
+                    1.25, 
+                    1.25, 
+                    1.25
+                ]
+            ], 
+            "tooltip": "Hurls a grenade that deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage to enemy units and slows their Movement Speed by {{ e3 }}% for {{ e2 }} seconds. Enemies in the center of the blast are also stunned for {{ e4 }} seconds.", 
+            "maxrank": 5, 
+            "costBurn": "85", 
+            "rangeBurn": "970", 
+            "range": [
+                970, 
+                970, 
+                970, 
+                970, 
+                970
+            ], 
+            "cost": [
+                85, 
+                85, 
+                85, 
+                85, 
+                85
+            ], 
+            "effectBurn": [
+                "", 
+                "60/100/140/180/220", 
+                "2", 
+                "35", 
+                "1.25"
+            ], 
+            "image": {
+                "full": "HeimerdingerE.png", 
+                "group": "spell", 
+                "sprite": "spell3.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 432
+            }, 
+            "cooldown": [
+                18.0, 
+                16.0, 
+                14.0, 
+                12.0, 
+                10.0
+            ], 
+            "name": "CH-2 Electron Storm Grenade"
+        }, 
+        {
+            "cooldownBurn": "100/85/70", 
+            "key": "HeimerdingerR", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ cooldown }} -> {{ cooldownnNL }}", 
+                    "{{ e7 }} -> {{ e7NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e8 }} -> {{ e8NL }}", 
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e10 }} -> {{ e10NL }}"
+                ], 
+                "label": [
+                    "Cooldown", 
+                    "Apex Turret Damage", 
+                    "Turret Beam Damage", 
+                    "Rocket Swarm Damage", 
+                    "Rocket Swarm Max Damage", 
+                    "Lightning Grenade Damage"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.3
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }, 
+                {
+                    "coeff": [
+                        0.7
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.45, 
+                        0.45, 
+                        0.45
+                    ], 
+                    "link": "@dynamic.abilitypower", 
+                    "dyn": "+", 
+                    "key": "f1"
+                }, 
+                {
+                    "coeff": [
+                        1.83
+                    ], 
+                    "link": "@dynamic.abilitypower", 
+                    "dyn": "+", 
+                    "key": "f2"
+                }, 
+                {
+                    "coeff": [
+                        0.6
+                    ], 
+                    "link": "@dynamic.abilitypower", 
+                    "dyn": "+", 
+                    "key": "f4"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Heimerdinger invents an upgrade, causing his next spell to have increased effects. ", 
+            "sanitizedDescription": "Heimerdinger invents an upgrade, causing his next spell to have increased effects.", 
+            "sanitizedTooltip": "Makes next basic ability free and gives it bonus effects. Reactivate to cancel. H-28Q Apex Turret: Places a Turret that deals {{ e7 }} (+{{ a2 }}) Magic Damage with its cannon and {{ e1 }} (+{{ a1 }}) Magic Damage with its beam for 8 seconds. It has splash damage, immunity to disables, its attacks slow targets by 25% for 2 seconds, it receives 20% of a beam charge per attack, and it doesn't count toward the Turret limit. Hextech Rocket Swarm: Fires 4 waves of rockets that deal {{ e8 }} {{ f1 }} Magic Damage each. Champions and Monsters hit by multiple rockets take reduced damage, max {{ e5 }} {{ f2 }}. CH-3X Lightning Grenade: Throws a bouncing grenade that discharges three times, dealing {{ e10 }} {{ f4 }} Magic Damage. Both the stun and slow areas are larger and the slow is improved to 80%.", 
+            "effect": [
+                null, 
+                [
+                    200.0, 
+                    270.0, 
+                    340.0
+                ], 
+                [
+                    80.0, 
+                    80.0, 
+                    80.0
+                ], 
+                [
+                    1.5, 
+                    1.5, 
+                    1.5
+                ], 
+                [
+                    0.12, 
+                    0.12, 
+                    0.12
+                ], 
+                [
+                    500.0, 
+                    690.0, 
+                    865.0
+                ], 
+                [
+                    0.45, 
+                    0.45, 
+                    0.45
+                ], 
+                [
+                    80.0, 
+                    100.0, 
+                    120.0
+                ], 
+                [
+                    135.0, 
+                    180.0, 
+                    225.0
+                ], 
+                [
+                    28.0, 
+                    39.0, 
+                    49.0
+                ], 
+                [
+                    150.0, 
+                    200.0, 
+                    250.0
+                ]
+            ], 
+            "tooltip": "Makes next basic ability free and gives it bonus effects. Reactivate to cancel. <br><br><span class=\"colorFFFF99\">H-28Q Apex Turret:</span> Places a Turret that deals {{ e7 }} <span class=\"color99FF99\">(+{{ a2 }})</span> Magic Damage with its cannon and {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> Magic Damage with its beam for 8 seconds. It has splash damage, immunity to disables, its attacks slow targets by 25% for 2 seconds, it receives 20% of a beam charge per attack, and it doesn't count toward the Turret limit. <br><br><span class=\"colorFFFF99\">Hextech Rocket Swarm:</span> Fires 4 waves of rockets that deal {{ e8 }} <span class=\"color99FF99\">{{ f1 }}</span> Magic Damage each. Champions and Monsters hit by multiple rockets take reduced damage, max {{ e5 }} <span class=\"color99FF99\">{{ f2 }}</span>. <br><br><span class=\"colorFFFF99\">CH-3X Lightning Grenade:</span> Throws a bouncing grenade that discharges three times, dealing {{ e10 }} <span class=\"color99FF99\">{{ f4 }}</span> Magic Damage. Both the stun and slow areas are larger and the slow is improved to 80%. ", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "1", 
+            "range": [
+                1, 
+                1, 
+                1
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "effectBurn": [
+                "", 
+                "200/270/340", 
+                "80", 
+                "1.5", 
+                "0.12", 
+                "500/690/865", 
+                "0.45", 
+                "80/100/120", 
+                "135/180/225", 
+                "28/39/49", 
+                "150/200/250"
+            ], 
+            "image": {
+                "full": "HeimerdingerR.png", 
+                "group": "spell", 
+                "sprite": "spell4.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 0
+            }, 
+            "cooldown": [
+                100.0, 
+                85.0, 
+                70.0
+            ], 
+            "name": "UPGRADE!!!"
+        }
+    ]
+}
