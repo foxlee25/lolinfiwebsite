@@ -1,0 +1,16 @@
+/**
+*champions
+*/
+app.directive('lolChampionsChampions',function(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/base/champions/champions.html',
+        transclude:true,
+        replace:true,
+        scope:false,
+        link:function(scope,element,attrs){
+        },
+        controller:function($scope){
+        }
+    }
+});

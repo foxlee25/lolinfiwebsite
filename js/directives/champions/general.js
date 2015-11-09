@@ -1,0 +1,16 @@
+/**
+*general
+*/
+app.directive('lolChampionsGeneral',function(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/base/champions/general.html',
+        transclude:true,
+        replace:true,
+        scope:false,
+        link:function(scope,element,attrs){
+        },
+        controller:function($scope){
+        }
+    }
+});

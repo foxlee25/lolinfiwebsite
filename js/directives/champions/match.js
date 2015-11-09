@@ -1,0 +1,16 @@
+/**
+*match
+*/
+app.directive('lolChampionsMatch',function(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/base/champions/match.html',
+        transclude:true,
+        replace:true,
+        scope:false,
+        link:function(scope,element,attrs){
+        },
+        controller:function($scope){
+        }
+    }
+});
