@@ -41,7 +41,9 @@ a{
 }
 
 .pageContentClass{
-    display:none;
+    position: fixed;
+    z-index: 2;
+    width: 100%;
 }
 
 .displaytext{
@@ -253,7 +255,7 @@ a{
 /* Styling the input */
 #searchBox .searchInput {
 	-webkit-appearance: none;
-	height: 40px;
+	height: 20px;
 	width: 400px;
 	position: absolute;
 	padding: 10px;
@@ -269,7 +271,7 @@ a{
 .searchInput{
     margin-left:5px;
     color: white;
-    font-weight: bold;
+    font-size: 1em;
 }
 .searchInput:focus {
     margin-left:5px;

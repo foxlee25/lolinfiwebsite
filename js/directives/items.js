@@ -1,0 +1,16 @@
+/**
+*items
+*/
+app.directive('lolItems',function(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/base/items.html',
+        transclude:true,
+        replace:true,
+        scope:false,
+        link:function(scope,element,attrs){
+        },
+        controller:function($scope){
+        }
+    }
+});

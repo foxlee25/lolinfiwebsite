@@ -9,14 +9,14 @@
             <div class="navTable">
                 <span class="glide_background" style="z-index: 2; left: 40px; width: 68px;"></span>
                 <ul>
-                    <li class="menuItem navTableSelected"  name="homePageContent">HOME</li>
-                    <li class="menuItem" name="championsPageContent">CHAMPIONS</li>
-                    <li class="menuItem" name="itemsPageContent">ITEMS</li>
-                    <li class="menuItem" name="gamesPageContent">GAMES</li>
-                    <li class="menuItem" name="rankPageContent">RANK</li>
-                    <li class="menuItem" name="livePageContent">LIVE</li>
+                    <li class="menuItem navTableSelected"  name="homePageContent"  ui-sref=".home">HOME</li>
+                    <li class="menuItem" name="championsPageContent" ui-sref=".champions">CHAMPIONS</li>
+                    <li class="menuItem" name="itemsPageContent" ui-sref=".items">ITEMS</li>
+                    <li class="menuItem" name="rankPageContent" ui-sref=".rank">RANK</li>
+                    <li class="menuItem" name="livePageContent" ui-sref=".live">LIVE</li>
                 </ul>
             </div>
         </div>
     </div>
+    <div ui-view></div>
 </div>

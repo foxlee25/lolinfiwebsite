@@ -1,0 +1,16 @@
+/**
+*live
+*/
+app.directive('lolLive',function(){
+    return{
+        restrict:'E',
+        templateUrl:'templates/base/live.html',
+        transclude:true,
+        replace:true,
+        scope:false,
+        link:function(scope,element,attrs){
+        },
+        controller:function($scope){
+        }
+    }
+});

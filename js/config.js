@@ -31,6 +31,6 @@ app.config(function($stateProvider, $urlRouterProvider) {
         template: '<lol-live></lol-live>'
     })
     ;
-    $urlRouterProvider.otherwise('/base');
+    $urlRouterProvider.otherwise('/base/baseHome');
     
 });
