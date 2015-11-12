@@ -1,0 +1,3502 @@
+{
+    "itemPurchased": [
+        {
+            "itemOrder": [
+                {
+                    "itemId": 2003, 
+                    "timestamp": 7073
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 7626
+                }, 
+                {
+                    "itemId": 1055, 
+                    "timestamp": 8406
+                }, 
+                {
+                    "itemId": 1037, 
+                    "timestamp": 343852
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 346408
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 347351
+                }, 
+                {
+                    "itemId": 1038, 
+                    "timestamp": 627739
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 631521
+                }, 
+                {
+                    "itemId": 3031, 
+                    "timestamp": 886714
+                }, 
+                {
+                    "itemId": 3006, 
+                    "timestamp": 1025488
+                }, 
+                {
+                    "itemId": 1042, 
+                    "timestamp": 1026759
+                }, 
+                {
+                    "itemId": 3086, 
+                    "timestamp": 1179032
+                }, 
+                {
+                    "itemId": 3093, 
+                    "timestamp": 1179463
+                }, 
+                {
+                    "itemId": 3087, 
+                    "timestamp": 1317726
+                }, 
+                {
+                    "itemId": 1037, 
+                    "timestamp": 1335855
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 1436037
+                }
+            ], 
+            "ID": 1
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 1039, 
+                    "timestamp": 4057
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 4638
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 4929
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 5979
+                }, 
+                {
+                    "itemId": 3715, 
+                    "timestamp": 222125
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 223687
+                }, 
+                {
+                    "itemId": 1043, 
+                    "timestamp": 480564
+                }, 
+                {
+                    "itemId": 3718, 
+                    "timestamp": 609973
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 612474
+                }, 
+                {
+                    "itemId": 1043, 
+                    "timestamp": 762431
+                }, 
+                {
+                    "itemId": 3085, 
+                    "timestamp": 997193
+                }, 
+                {
+                    "itemId": 3158, 
+                    "timestamp": 999813
+                }, 
+                {
+                    "itemId": 3153, 
+                    "timestamp": 1346308
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1359930
+                }
+            ], 
+            "ID": 2
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 3302, 
+                    "timestamp": 7498
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 9414
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 9576
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 9769
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 9881
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 10876
+                }, 
+                {
+                    "itemId": 2049, 
+                    "timestamp": 333571
+                }, 
+                {
+                    "itemId": 3341, 
+                    "timestamp": 336460
+                }, 
+                {
+                    "itemId": 3067, 
+                    "timestamp": 576708
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 579485
+                }, 
+                {
+                    "itemId": 3401, 
+                    "timestamp": 913018
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 917473
+                }, 
+                {
+                    "itemId": 3158, 
+                    "timestamp": 1206837
+                }, 
+                {
+                    "itemId": 3067, 
+                    "timestamp": 1210761
+                }, 
+                {
+                    "itemId": 1033, 
+                    "timestamp": 1211366
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1334945
+                }, 
+                {
+                    "itemId": 3364, 
+                    "timestamp": 1480000
+                }
+            ], 
+            "ID": 3
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 1056, 
+                    "timestamp": 10618
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 11823
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 12084
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 12762
+                }, 
+                {
+                    "itemId": 3028, 
+                    "timestamp": 288939
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 290423
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 290689
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 290983
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 295932
+                }, 
+                {
+                    "itemId": 3108, 
+                    "timestamp": 597863
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 599229
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 601704
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 607621
+                }, 
+                {
+                    "itemId": 3174, 
+                    "timestamp": 872772
+                }, 
+                {
+                    "itemId": 3361, 
+                    "timestamp": 875030
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 877024
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 877288
+                }, 
+                {
+                    "itemId": 1026, 
+                    "timestamp": 1010496
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 1011545
+                }, 
+                {
+                    "itemId": 1058, 
+                    "timestamp": 1209343
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 1342287
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 1342607
+                }, 
+                {
+                    "itemId": 3020, 
+                    "timestamp": 1347854
+                }, 
+                {
+                    "itemId": 2010, 
+                    "timestamp": 1352399
+                }, 
+                {
+                    "itemId": 3089, 
+                    "timestamp": 1448772
+                }
+            ], 
+            "ID": 4
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 1055, 
+                    "timestamp": 58924
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 59703
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 60160
+                }, 
+                {
+                    "itemId": 1029, 
+                    "timestamp": 195034
+                }, 
+                {
+                    "itemId": 1053, 
+                    "timestamp": 400828
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 401698
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 401861
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 402025
+                }, 
+                {
+                    "itemId": 3047, 
+                    "timestamp": 638226
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 639464
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 639732
+                }, 
+                {
+                    "itemId": 1037, 
+                    "timestamp": 805241
+                }, 
+                {
+                    "itemId": 3077, 
+                    "timestamp": 865497
+                }, 
+                {
+                    "itemId": 3074, 
+                    "timestamp": 1082485
+                }, 
+                {
+                    "itemId": 1011, 
+                    "timestamp": 1085396
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1190045
+                }, 
+                {
+                    "itemId": 3083, 
+                    "timestamp": 1457331
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1458572
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1458746
+                }
+            ], 
+            "ID": 5
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 3340, 
+                    "timestamp": 41525
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 41979
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 42333
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 42659
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 42921
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 43437
+                }, 
+                {
+                    "itemId": 3136, 
+                    "timestamp": 347722
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 349133
+                }, 
+                {
+                    "itemId": 3020, 
+                    "timestamp": 587176
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 587828
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 588147
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 593890
+                }, 
+                {
+                    "itemId": 1058, 
+                    "timestamp": 866518
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 867695
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 868022
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 868316
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 868623
+                }, 
+                {
+                    "itemId": 1029, 
+                    "timestamp": 948735
+                }, 
+                {
+                    "itemId": 1052, 
+                    "timestamp": 1201781
+                }, 
+                {
+                    "itemId": 3157, 
+                    "timestamp": 1332457
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1333138
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1333433
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1386144
+                }, 
+                {
+                    "itemId": 3361, 
+                    "timestamp": 1388664
+                }
+            ], 
+            "ID": 6
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 1039, 
+                    "timestamp": 6128
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 6780
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 7136
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 8086
+                }, 
+                {
+                    "itemId": 3706, 
+                    "timestamp": 202089
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 407136
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 407549
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 409559
+                }, 
+                {
+                    "itemId": 3707, 
+                    "timestamp": 683058
+                }, 
+                {
+                    "itemId": 3009, 
+                    "timestamp": 697825
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 698763
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 798726
+                }, 
+                {
+                    "itemId": 3077, 
+                    "timestamp": 1084510
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1088276
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 1089274
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1090718
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 1207993
+                }, 
+                {
+                    "itemId": 1011, 
+                    "timestamp": 1325683
+                }, 
+                {
+                    "itemId": 3074, 
+                    "timestamp": 1620859
+                }, 
+                {
+                    "itemId": 1029, 
+                    "timestamp": 1624591
+                }, 
+                {
+                    "itemId": 1029, 
+                    "timestamp": 1628428
+                }
+            ], 
+            "ID": 7
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 2041, 
+                    "timestamp": 14714
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 16907
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 17378
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 17682
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 17965
+                }, 
+                {
+                    "itemId": 1037, 
+                    "timestamp": 423369
+                }, 
+                {
+                    "itemId": 1055, 
+                    "timestamp": 425691
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 426827
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 427087
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 427323
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 427707
+                }, 
+                {
+                    "itemId": 3077, 
+                    "timestamp": 741279
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 742248
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 751626
+                }, 
+                {
+                    "itemId": 1053, 
+                    "timestamp": 869062
+                }, 
+                {
+                    "itemId": 3074, 
+                    "timestamp": 959928
+                }, 
+                {
+                    "itemId": 3067, 
+                    "timestamp": 1119979
+                }, 
+                {
+                    "itemId": 3009, 
+                    "timestamp": 1253988
+                }, 
+                {
+                    "itemId": 1033, 
+                    "timestamp": 1342156
+                }, 
+                {
+                    "itemId": 3211, 
+                    "timestamp": 1446982
+                }, 
+                {
+                    "itemId": 3065, 
+                    "timestamp": 1556364
+                }, 
+                {
+                    "itemId": 1029, 
+                    "timestamp": 1558126
+                }
+            ], 
+            "ID": 8
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 2003, 
+                    "timestamp": 4057
+                }, 
+                {
+                    "itemId": 1055, 
+                    "timestamp": 4380
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 5155
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 114086
+                }, 
+                {
+                    "itemId": 1036, 
+                    "timestamp": 286058
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 288124
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 288383
+                }, 
+                {
+                    "itemId": 1038, 
+                    "timestamp": 614044
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 615340
+                }, 
+                {
+                    "itemId": 1037, 
+                    "timestamp": 816303
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 829590
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 831413
+                }, 
+                {
+                    "itemId": 3031, 
+                    "timestamp": 1030237
+                }, 
+                {
+                    "itemId": 3086, 
+                    "timestamp": 1200107
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 1204304
+                }, 
+                {
+                    "itemId": 3006, 
+                    "timestamp": 1307863
+                }, 
+                {
+                    "itemId": 1018, 
+                    "timestamp": 1432927
+                }, 
+                {
+                    "itemId": 3361, 
+                    "timestamp": 1466152
+                }, 
+                {
+                    "itemId": 3046, 
+                    "timestamp": 1560123
+                }
+            ], 
+            "ID": 9
+        }, 
+        {
+            "itemOrder": [
+                {
+                    "itemId": 3303, 
+                    "timestamp": 73937
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 75436
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 75665
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 75922
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 77226
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 84980
+                }, 
+                {
+                    "itemId": 3340, 
+                    "timestamp": 85695
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 249721
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 255333
+                }, 
+                {
+                    "itemId": 2049, 
+                    "timestamp": 407807
+                }, 
+                {
+                    "itemId": 3341, 
+                    "timestamp": 410894
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 412847
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 413986
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 414241
+                }, 
+                {
+                    "itemId": 1001, 
+                    "timestamp": 557418
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 559568
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 560188
+                }, 
+                {
+                    "itemId": 3098, 
+                    "timestamp": 749345
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 750943
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 751171
+                }, 
+                {
+                    "itemId": 1004, 
+                    "timestamp": 751951
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 757692
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 760002
+                }, 
+                {
+                    "itemId": 2004, 
+                    "timestamp": 760555
+                }, 
+                {
+                    "itemId": 1052, 
+                    "timestamp": 868480
+                }, 
+                {
+                    "itemId": 3108, 
+                    "timestamp": 988313
+                }, 
+                {
+                    "itemId": 3092, 
+                    "timestamp": 1009415
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 1083428
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1084124
+                }, 
+                {
+                    "itemId": 1028, 
+                    "timestamp": 1323383
+                }, 
+                {
+                    "itemId": 1027, 
+                    "timestamp": 1323910
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1325323
+                }, 
+                {
+                    "itemId": 2003, 
+                    "timestamp": 1325651
+                }, 
+                {
+                    "itemId": 3010, 
+                    "timestamp": 1438753
+                }, 
+                {
+                    "itemId": 2043, 
+                    "timestamp": 1462762
+                }, 
+                {
+                    "itemId": 3364, 
+                    "timestamp": 1561824
+                }
+            ], 
+            "ID": 10
+        }
+    ], 
+    "participants": [
+        {
+            "Level": 13, 
+            "Items": [
+                3031, 
+                3087, 
+                3006, 
+                1037, 
+                1036, 
+                1055, 
+                3340
+            ], 
+            "Sumnomer": "xUndercorpse", 
+            "Damage": 15769, 
+            "Wards Placed": 3, 
+            "Contribution for Kills": 0.3870967741935484, 
+            "Role": "BOTTOM", 
+            "CS": 182, 
+            "ID": 1, 
+            "Summner's spells": [
+                7, 
+                4
+            ], 
+            "Champion": 22, 
+            "Kills": 4, 
+            "Deaths": 4, 
+            "KDA": 3.0, 
+            "Tier": "Platinum III", 
+            "Damage Taken": 12553, 
+            "Assists": 8, 
+            "Wards Killed": 0
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 8
+                }, 
+                {
+                    "runeId": 5251, 
+                    "rank": 1
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 6
+                }, 
+                {
+                    "runeId": 5301, 
+                    "rank": 3
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 15, 
+            "Items": [
+                3153, 
+                3158, 
+                3085, 
+                3718, 
+                1028, 
+                0, 
+                3340
+            ], 
+            "Sumnomer": "Annie Shirley", 
+            "Damage": 21765, 
+            "Wards Placed": 8, 
+            "Contribution for Kills": 0.7741935483870968, 
+            "Role": "JUNGLE", 
+            "CS": 151, 
+            "ID": 2, 
+            "Summner's spells": [
+                11, 
+                4
+            ], 
+            "Champion": 10, 
+            "Kills": 13, 
+            "Deaths": 0, 
+            "Masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 24.0, 
+            "Tier": "Diamond I", 
+            "Damage Taken": 20001, 
+            "Assists": 11, 
+            "Wards Killed": 4
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5247, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5296, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 2
+                }, 
+                {
+                    "runeId": 5356, 
+                    "rank": 1
+                }
+            ], 
+            "Level": 12, 
+            "Items": [
+                3401, 
+                2049, 
+                3158, 
+                3067, 
+                1033, 
+                1028, 
+                3364
+            ], 
+            "Sumnomer": "XKnightLancelotX", 
+            "Damage": 7973, 
+            "Wards Placed": 20, 
+            "Contribution for Kills": 0.6774193548387096, 
+            "Role": "BOTTOM", 
+            "CS": 27, 
+            "ID": 3, 
+            "Summner's spells": [
+                4, 
+                3
+            ], 
+            "Champion": 412, 
+            "Kills": 6, 
+            "Deaths": 4, 
+            "Masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4121, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4213, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4214, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4224, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 5.25, 
+            "Tier": "Bronze II", 
+            "Damage Taken": 16424, 
+            "Assists": 15, 
+            "Wards Killed": 7
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5290, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5316, 
+                    "rank": 4
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 5
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 14, 
+            "Items": [
+                1056, 
+                0, 
+                3174, 
+                3089, 
+                3020, 
+                0, 
+                3361
+            ], 
+            "Sumnomer": "Lulu Ackerman", 
+            "Damage": 10486, 
+            "Wards Placed": 14, 
+            "Contribution for Kills": 0.7419354838709677, 
+            "Role": "MIDDLE", 
+            "CS": 134, 
+            "ID": 4, 
+            "Summner's spells": [
+                4, 
+                14
+            ], 
+            "Champion": 117, 
+            "Kills": 3, 
+            "Deaths": 2, 
+            "Masteries": [
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4213, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4233, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4234, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4241, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4242, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4311, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4312, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4331, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4334, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4341, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4342, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 11.5, 
+            "Tier": "Gold I", 
+            "Damage Taken": 11115, 
+            "Assists": 20, 
+            "Wards Killed": 1
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5315, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5357, 
+                    "rank": 3
+                }, 
+                {
+                    "runeId": 5402, 
+                    "rank": 9
+                }
+            ], 
+            "Level": 14, 
+            "Items": [
+                1055, 
+                3047, 
+                3074, 
+                3083, 
+                1028, 
+                1028, 
+                3340
+            ], 
+            "Sumnomer": "TheSmigginsWrath", 
+            "Damage": 14717, 
+            "Wards Placed": 6, 
+            "Contribution for Kills": 0.3548387096774194, 
+            "Role": "TOP", 
+            "CS": 147, 
+            "ID": 5, 
+            "Summner's spells": [
+                12, 
+                4
+            ], 
+            "Champion": 64, 
+            "Kills": 5, 
+            "Deaths": 5, 
+            "Masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4123, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4133, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4143, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4154, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4311, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4313, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4323, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4334, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 2.2, 
+            "Tier": "Diamond I", 
+            "Damage Taken": 20668, 
+            "Assists": 6, 
+            "Wards Killed": 0
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 12, 
+            "Items": [
+                3020, 
+                3157, 
+                2003, 
+                3136, 
+                0, 
+                0, 
+                3361
+            ], 
+            "Sumnomer": "sOSoo", 
+            "Damage": 8460, 
+            "Wards Placed": 4, 
+            "Contribution for Kills": 0.4666666666666667, 
+            "Role": "MIDDLE", 
+            "CS": 109, 
+            "ID": 6, 
+            "Summner's spells": [
+                14, 
+                4
+            ], 
+            "Champion": 55, 
+            "Kills": 5, 
+            "Deaths": 4, 
+            "Masteries": [
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 1.75, 
+            "Tier": "Diamond I", 
+            "Damage Taken": 14310, 
+            "Assists": 2, 
+            "Wards Killed": 2
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5273, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5297, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5316, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 8022, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 13, 
+            "Items": [
+                3074, 
+                1011, 
+                3707, 
+                1029, 
+                3009, 
+                1029, 
+                3340
+            ], 
+            "Sumnomer": "FREEBOOTY", 
+            "Damage": 12507, 
+            "Wards Placed": 10, 
+            "Contribution for Kills": 0.6, 
+            "Role": "JUNGLE", 
+            "CS": 88, 
+            "ID": 7, 
+            "Summner's spells": [
+                11, 
+                4
+            ], 
+            "Champion": 421, 
+            "Kills": 4, 
+            "Deaths": 8, 
+            "Masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4121, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4123, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4133, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4143, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 1.125, 
+            "Tier": "Silver V", 
+            "Damage Taken": 27101, 
+            "Assists": 5, 
+            "Wards Killed": 1
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5253, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5277, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5305, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5343, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 14, 
+            "Items": [
+                2041, 
+                3065, 
+                1055, 
+                3009, 
+                1029, 
+                3074, 
+                3340
+            ], 
+            "Sumnomer": "IScrubScrubs", 
+            "Damage": 14175, 
+            "Wards Placed": 3, 
+            "Contribution for Kills": 0.5333333333333333, 
+            "Role": "TOP", 
+            "CS": 170, 
+            "ID": 8, 
+            "Summner's spells": [
+                4, 
+                14
+            ], 
+            "Champion": 62, 
+            "Kills": 1, 
+            "Deaths": 5, 
+            "Masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4312, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4314, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4332, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 1.6, 
+            "Tier": "Silver III", 
+            "Damage Taken": 18362, 
+            "Assists": 7, 
+            "Wards Killed": 1
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 13, 
+            "Items": [
+                1036, 
+                3031, 
+                3046, 
+                3006, 
+                0, 
+                1055, 
+                3361
+            ], 
+            "Sumnomer": "killup", 
+            "Damage": 15207, 
+            "Wards Placed": 9, 
+            "Contribution for Kills": 0.6666666666666666, 
+            "Role": "BOTTOM", 
+            "CS": 174, 
+            "ID": 9, 
+            "Summner's spells": [
+                7, 
+                4
+            ], 
+            "Champion": 15, 
+            "Kills": 4, 
+            "Deaths": 5, 
+            "Masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 2.0, 
+            "Tier": "Bronze V", 
+            "Damage Taken": 18611, 
+            "Assists": 6, 
+            "Wards Killed": 3
+        }, 
+        {
+            "Runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5290, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ], 
+            "Level": 11, 
+            "Items": [
+                1001, 
+                2049, 
+                3092, 
+                3010, 
+                2043, 
+                2003, 
+                3364
+            ], 
+            "Sumnomer": "UT Babe", 
+            "Damage": 8562, 
+            "Wards Placed": 20, 
+            "Contribution for Kills": 0.3333333333333333, 
+            "Role": "BOTTOM", 
+            "CS": 32, 
+            "ID": 10, 
+            "Summner's spells": [
+                14, 
+                4
+            ], 
+            "Champion": 76, 
+            "Kills": 1, 
+            "Deaths": 9, 
+            "Masteries": [
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "KDA": 0.5555555555555556, 
+            "Tier": "Diamond III", 
+            "Damage Taken": 16944, 
+            "Assists": 4, 
+            "Wards Killed": 4
+        }
+    ], 
+    "masteries": [
+        {
+            "masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 1
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4121, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4213, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4214, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4224, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 2
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4213, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4233, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4234, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4241, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4242, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4311, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4312, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4331, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4334, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4341, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4342, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 3
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4123, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4133, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4143, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4154, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4311, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4313, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4323, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4334, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 4
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 5
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4121, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4123, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4133, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4143, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 6
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4312, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4314, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4322, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4324, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4332, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 7
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4111, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4142, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 8
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4112, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4114, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4122, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4124, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4131, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4132, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4141, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4151, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4212, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 9
+        }, 
+        {
+            "masteries": [
+                {
+                    "masteryId": 4113, 
+                    "rank": 4
+                }, 
+                {
+                    "masteryId": 4121, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4123, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4133, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4134, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4143, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4144, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4152, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4154, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4162, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4211, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4214, 
+                    "rank": 2
+                }, 
+                {
+                    "masteryId": 4221, 
+                    "rank": 1
+                }, 
+                {
+                    "masteryId": 4222, 
+                    "rank": 3
+                }, 
+                {
+                    "masteryId": 4232, 
+                    "rank": 1
+                }
+            ], 
+            "ID": 10
+        }
+    ], 
+    "runes": [
+        {
+            "ID": 1, 
+            "runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 8
+                }, 
+                {
+                    "runeId": 5251, 
+                    "rank": 1
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 6
+                }, 
+                {
+                    "runeId": 5301, 
+                    "rank": 3
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 2, 
+            "runes": [
+                {
+                    "runeId": 5247, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5296, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 2
+                }, 
+                {
+                    "runeId": 5356, 
+                    "rank": 1
+                }
+            ]
+        }, 
+        {
+            "ID": 3, 
+            "runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5290, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5316, 
+                    "rank": 4
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 5
+                }, 
+                {
+                    "runeId": 5337, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 4, 
+            "runes": [
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5315, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5357, 
+                    "rank": 3
+                }, 
+                {
+                    "runeId": 5402, 
+                    "rank": 9
+                }
+            ]
+        }, 
+        {
+            "ID": 5, 
+            "runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 6, 
+            "runes": [
+                {
+                    "runeId": 5273, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5297, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5316, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 8022, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 7, 
+            "runes": [
+                {
+                    "runeId": 5253, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5277, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5305, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5343, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 8, 
+            "runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 9, 
+            "runes": [
+                {
+                    "runeId": 5245, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5290, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5335, 
+                    "rank": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 10, 
+            "runes": [
+                {
+                    "runeId": 5273, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5289, 
+                    "rank": 1
+                }, 
+                {
+                    "runeId": 5290, 
+                    "rank": 8
+                }, 
+                {
+                    "runeId": 5317, 
+                    "rank": 9
+                }, 
+                {
+                    "runeId": 5357, 
+                    "rank": 3
+                }
+            ]
+        }
+    ], 
+    "skillUpgraded": [
+        {
+            "ID": 1, 
+            "skillOrder": [
+                {
+                    "timestamp": 41911, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 161413, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 226662, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 286792, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 387883, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 492350, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 586192, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 789969, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 854938, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 960623, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1092765, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1245481, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1398277, 
+                    "skillSlot": 1
+                }
+            ]
+        }, 
+        {
+            "ID": 2, 
+            "skillOrder": [
+                {
+                    "timestamp": 2106, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 131234, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 183490, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 305280, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 363852, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 516106, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 667648, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 736390, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 904752, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 974704, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1092069, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1232337, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1428826, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1545739, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1613456, 
+                    "skillSlot": 1
+                }
+            ]
+        }, 
+        {
+            "ID": 3, 
+            "skillOrder": [
+                {
+                    "timestamp": 58404, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 161154, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 223711, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 283264, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 410176, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 540226, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 802271, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1065600, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1215216, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1338672, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1542691, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1613621, 
+                    "skillSlot": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 4, 
+            "skillOrder": [
+                {
+                    "timestamp": 64289, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 150775, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 189417, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 229126, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 377527, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 440163, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 557848, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 666710, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 830697, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 945495, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1102638, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1317134, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1571099, 
+                    "skillSlot": 2
+                }
+            ]
+        }, 
+        {
+            "ID": 5, 
+            "skillOrder": [
+                {
+                    "timestamp": 64154, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 160570, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 229676, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 262395, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 343269, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 443478, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 497860, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 693122, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 758642, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 906143, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1028518, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1267407, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1361112, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1645396, 
+                    "skillSlot": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 6, 
+            "skillOrder": [
+                {
+                    "timestamp": 39804, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 159922, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 199601, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 257350, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 288415, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 392841, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 494857, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 668754, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 781130, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 910300, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1287099, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1562578, 
+                    "skillSlot": 2
+                }
+            ]
+        }, 
+        {
+            "ID": 7, 
+            "skillOrder": [
+                {
+                    "timestamp": 3764, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 128931, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 250396, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 301973, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 392841, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 553999, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 615963, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 915380, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 971663, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1267911, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1371258, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1462631, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1555511, 
+                    "skillSlot": 3
+                }
+            ]
+        }, 
+        {
+            "ID": 8, 
+            "skillOrder": [
+                {
+                    "timestamp": 123556, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 159004, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 200634, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 230174, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 302291, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 376581, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 500350, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 557489, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 641486, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 940639, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1048267, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1215580, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1397637, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1544529, 
+                    "skillSlot": 2
+                }
+            ]
+        }, 
+        {
+            "ID": 9, 
+            "skillOrder": [
+                {
+                    "timestamp": 9025, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 205590, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 248749, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 333768, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 422463, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 510235, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 659862, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 750682, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 865835, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 953030, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1179758, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 1386242, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 1533793, 
+                    "skillSlot": 2
+                }
+            ]
+        }, 
+        {
+            "ID": 10, 
+            "skillOrder": [
+                {
+                    "timestamp": 112269, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 175385, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 226792, 
+                    "skillSlot": 2
+                }, 
+                {
+                    "timestamp": 340739, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 454974, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 689514, 
+                    "skillSlot": 4
+                }, 
+                {
+                    "timestamp": 851483, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1192737, 
+                    "skillSlot": 3
+                }, 
+                {
+                    "timestamp": 1358042, 
+                    "skillSlot": 1
+                }, 
+                {
+                    "timestamp": 1456867, 
+                    "skillSlot": 3
+                }
+            ]
+        }
+    ]
+}

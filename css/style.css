@@ -255,7 +255,7 @@ a{
 /* Styling the input */
 #searchBox .searchInput {
 	-webkit-appearance: none;
-	height: 20px;
+	height: 40px;
 	width: 400px;
 	position: absolute;
 	padding: 10px;
@@ -352,4 +352,19 @@ a{
 .rightItem{
     position:relative;
     float:right;
+}
+
+.btn-nav{
+    background:#0C2036;
+    color: white;
+    font-size: 1.2em; 
+}
+
+.btn-nav-selected{
+    background: #039be4;
+}
+
+.btn-group.btn-nav:hover{
+  color:#0F84CB;
+  transition: all .5s ease-in-out;
 }
