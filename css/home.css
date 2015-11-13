@@ -276,3 +276,34 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.filterTable{
+    margin-left: 30px;
+}
+
+.filterTable tr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filterTable tr td{
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1.2em;
+}
+
+.labelHighlight{
+    background-color: aqua;
+    border-radius: 10px;
+    display: inline-block;
+    line-height: 2em;
+}
+
+.matchTableFilterTitle p{
+    color:#448AAC;
+    font-size:1.2em;
+    vertical-align: middle;
+    text-align: left;
+}

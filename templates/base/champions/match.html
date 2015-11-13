@@ -1,5 +1,40 @@
 <div>
     <div id="matches">
+        <table class="filterTable" style="border:null">
+            <tr>
+                <td class="matchTableFilterTitle"><p> Game Type:</p></td>
+                <td ng-click="matchOptions.gameType='All'" ng-class="{'labelHighlight':matchOptions.gameType=='All'}">All</td>
+                <td ng-click="matchOptions.gameType='Ranked Solo'" ng-class="{'labelHighlight':matchOptions.gameType=='Ranked Solo'}">Ranked Solo</td>
+                <td ng-click="matchOptions.gameType='Ranked Team'" ng-class="{'labelHighlight':matchOptions.gameType=='Ranked Team'}">Ranked Team</td>
+                <td ng-click="matchOptions.gameType='Normal'" ng-class="{'labelHighlight':matchOptions.gameType=='Normal'}">Normal</td>
+            </tr>
+            <tr>
+                <td class="matchTableFilterTitle"><p>Champion:</p></td>
+                <td ng-class="{'labelHighlight':matchOptions.champion=='All'}">All</td>
+                <td>
+                    <div class="btn-group">
+                      <a class="btn-mini dropdown-toggle" data-toggle="dropdown">
+                        Action
+                        <span class="caret"></span>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <!-- dropdown menu links -->
+                          <li>1</li>
+                          <li>2</li>
+                      </ul>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td class="matchTableFilterTitle"><p>Role</p></td>
+                <td ng-click="matchOptions.role='All'" ng-class="{'labelHighlight':matchOptions.role=='All'}">All</td>
+                <td ng-click="matchOptions.role='TOP'" ng-class="{'labelHighlight':matchOptions.role=='TOP'}">TOP</td>
+                <td ng-click="matchOptions.role='JUN'" ng-class="{'labelHighlight':matchOptions.role=='JUN'}">JUN</td>
+                <td ng-click="matchOptions.role='MID'" ng-class="{'labelHighlight':matchOptions.role=='MID'}">MID</td>
+                <td ng-click="matchOptions.role='ADC'" ng-class="{'labelHighlight':matchOptions.role=='ADC'}">ADC</td>
+                <td ng-click="matchOptions.role='SUP'" ng-class="{'labelHighlight':matchOptions.role=='SUP'}">SUP</td>
+            </tr>
+        </table>
         <table class="table">
             <tr class="matchesTableHeader">
                 <th>Champion</th>
@@ -8,7 +43,7 @@
                 <th>Length</th>
                 <th>Time</th>
             </tr>
-            <tr ng-repeat="match in matches.matches" ng-class="{'tableStrip':$index%2==1}">
+            <tr ng-repeat="match in matches.matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
                 <td>{{match.queueType}}</td>
                 <td>{{match.kda}}</td>

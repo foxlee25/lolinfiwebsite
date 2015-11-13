@@ -9,6 +9,9 @@ app.directive('lolChampionsMatch',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            scope.matchOptions = {"gameType":"All"
+                                  ,"champion":"All"
+                                  ,"role":"All"};
         },
         controller:function($scope,getApi){
             getApi.getMatches().success(function(data){
