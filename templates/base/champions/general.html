@@ -1,9 +1,10 @@
 <div>
+    <div>
     <div class="last20GamesSummaryContainer">
-    <div class="last20GamesSummaryTitle titleBgColor">Last 20 Games</div>
+        <div class="last20GamesSummaryTitle titleBgColor"><b>Last 20 Games</b></div>
     <div class="last20GamesSummaryContent">
         <div class="last20GamesSummaryContent_champRow">
-            <div class="titleLeftDivRTitle">Champions</div>
+            <div class="titleLeftDivRTitle"><b>Champions</b></div>
             <div class='leftDivChampions'>
                 <div id='displayHero1' class='displayHeroSmall'></div>
                 <div id='displayHero2' class='displayHeroSmall'></div>
@@ -24,32 +25,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <th class='wRateData'></th>
-                            <th class='kdaData'></th>
-                            <th class='csData'></th>		
-                            <th class='timeData'></th>
+                            <th class='wRateData'>{{championGeneral.statsRecent20.WRate*100}}%</th>
+                            <th class='kdaData'>{{championGeneral.statsRecent20.KDA|number:2}}</th>
+                            <th class='csData'>{{championGeneral.statsRecent20.CS}}</th>		
+                            <th class='timeData'>{{championGeneral.statsRecent20['Average Game Length']/60|number:2}}mins</th>
                         </tr>
                     </tbody>
                 </table>
             </div>
         </div>
         <div class="last20GamesSummaryContent_champUseCount">
-            <div class="titleLeftDivRTitle">Role/times</div>
+            <div class="titleLeftDivRTitle"><b>Role/times</b></div>
             <div class='leftDivRoleTimes'>
-                <div class='circleHeroDuty'>
-                    <firstL>TOP</firstL>  <secondL class='circleTopData'></secondL>
-                </div>
-                <div class='circleHeroDuty'>
-                    <firstL>JUN</firstL>  <secondL class='circleJunData'></secondL>
-                </div>
-                <div class='circleHeroDuty'>
-                    <firstL>MID</firstL>  <secondL class='circleMidData'></secondL>
-                </div>
-                <div class='circleHeroDuty'>
-                    <firstL>ADC</firstL>  <secondL class='circleAdcData'></secondL>
-                </div>
-                <div class='circleHeroDuty'>
-                    <firstL>SUP</firstL>  <secondL class='circleSupData'></secondL>
+                <div class='circleHeroDuty' ng-repeat="role in championGeneral.rolesRecent20">
+                    <firstL>{{role.role|limitTo:3}}</firstL>  <secondL class='circleTopData'>{{role.times}}</secondL>
                 </div>
             </div>
         </div>
@@ -58,5 +47,50 @@
     <div class="last20GamesSummarySpiderChartContainer">
         <div class="last20GamesSummarySpiderChart">
         </div>
+    </div>
+        <br/>
+    <div class="championS5Header">
+        <b>Champion Season 5</b>
+    </div>
+    <div id="roleTable">
+        <table class="table">
+            <tr class="generalTableHeader">
+                <th>Role</th>
+                <th>W Rate</th>
+                <th>Games</th>
+                <th>KDA</th>
+                <th>CS</th>
+                <th>Last Played</th>
+            </tr>
+            <tr ng-repeat="role in championGeneral.roles">
+                <td style="padding-left:60px"><div class='circleHeroDuty'><firstL>{{role.role|limitTo:3}}</firstL></div></td>
+                <td>{{role.stats.winRate|number:2}}%</td>
+                <td>{{role.stats.games}}</td>
+                <td>{{role.stats.kda}}</td>
+                <td>{{role.stats.cs|number:2}}</td>
+                <td>{{role.stats.lastPlayed|number:2}}</td>
+            </tr>
+        </table>
+    </div>
+    <div id="championTable">
+        <table class="table">
+            <tr class="generalTableHeader">
+                <th>Champion</th>
+                <th>Rate</th>
+                <th>Games</th>
+                <th>KDA</th>
+                <th>CS</th>
+                <th>Last Played</th>
+            </tr>
+            <tr ng-repeat="champs in championGeneral.champs">
+                <td style="padding-left:60px"><div class='circleHeroDuty'><firstL>{{champs.id}}</firstL></div></td>
+                <td>{{champs.stats.winRate|number:2}}%</td>
+                <td>{{champs.stats.games}}</td>
+                <td>{{champs.stats.kda}}</td>
+                <td>{{champs.stats.cs|number:2}}</td>
+                <td>{{champs.stats.lastPlayed|number:2}}</td>
+            </tr>
+        </table>
+    </div>
     </div>
 </div>

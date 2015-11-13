@@ -32,6 +32,8 @@
     width:25%;
     color:#C0C0CA;
     text-align: center;
+    padding-top: 8px;
+    padding-bottom: 6px;
     
 }
 
@@ -48,10 +50,12 @@
 
 /*Home_General*/
 .last20GamesSummaryContainer,.last20GamesSummarySpiderChartContainer{
+    padding-top: 30px;
     position:relative;
     width:50%;
     float: left;
 }
+
 .last20GamesSummaryTitle, .last20GamesSummaryContent{
     position:relative;
     float:left;
@@ -62,9 +66,11 @@
 }
 .titleLeftDivRTitle{
     position:relative;
-    float:left;
+    display:table-cell;
      color:#448AAC;
      margin-right:10px;
+    margin-bottom: 10px;
+    vertical-align: middle;
 }
 .displayHeroSmall{
     position:relative;
@@ -73,7 +79,7 @@
 }
 .leftDivChampions,.leftDivRoleTimes{
     position:relative;
-    float:left;
+    display:table-cell;
 }
 .leftDivTable{
      position:relative;
@@ -87,17 +93,18 @@
     height:50px;
 }
 .circleHeroDuty{
-    width:50px;
-    height:50px;
+    width:45px;
+    height:45px;
     border-radius:50px;
-    font-size:14px;
+    font-size:1em;
     color:white;
     line-height:20px;
     text-align:center;
     border:1px solid #0E3357;//
     margin: 0 auto;
-    padding: 16px 0 0;
+    padding: 15px 0 0;
     float: left;
+    margin: 5px 7px 5px;7px;
 }
 .circleHeroDuty firstl {
     font-size: 14px;
@@ -120,3 +127,99 @@
      color:white;
         text-align: center;
 }
+
+#last20gameSummaryTable tbody th{
+    border: thin solid;
+    border-color: #0C385C;
+    text-align: center;
+    padding-top: 2px;
+    padding-bottom: 2px;
+ }
+
+.last20GamesSummaryContent_champUseCount{
+    margin-top: 2em;
+    display: table;
+}
+.theadStyle{
+    font-size: 1em;
+    padding-top:2px;
+    padding-bottom: 2px;
+    text-align:center;
+ }
+
+.titleLeftDivRTitle b{
+    font-size: 1.2em;
+ }
+
+.last20GamesSummaryContent{
+    margin-left: 1em;
+}
+ .last20GamesSummaryTitle{
+    margin-top:2em;
+    margin-left: 1.5em;
+    margin-bottom:2em; 
+    font-size: 1.2em;
+    padding-top:3px;
+    padding-bottom: 1px;
+ }
+
+.summerTabFont{
+    font-size: 1.2em;
+}
+
+.last20GamesSummarySpiderChart{
+    padding-left: 40px;
+}
+
+.championS5Header{
+    clear: both;
+    background-color: #263F55;
+    font-size: 1.2em;
+    text-align: center;
+    color:white;
+    font-size:1.2em;
+    margin-top:2em;
+    margin-left: 1.5em;
+    margin-bottom:2em; 
+    padding-top:3px;
+    padding-bottom: 1px;
+    
+}
+
+.generalTableHeader{
+    color:#448AAC;
+}
+
+.generalTableHeader th{
+    font-size:1.2em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#championsPage{
+    overflow: scroll;
+    padding-bottom: 50px;
+}
+
+.table th, .table td {
+    border-top: none !important;
+    border-left: none !important;
+}
+.fixed-table-container {
+    border:0px;
+}
+
+#roleTable table tr td{
+    font-size:1em;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#championTable table tr td{
+    font-size:1em;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+     

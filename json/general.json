@@ -1,138 +1,139 @@
 {
-    "roles": [
-        {
-            "stats": {
-                "cs": 35.56903765690377, 
-                "lastPlayed": 25.3134210685348, 
-                "games": 239, 
-                "kda": 4.470518867924528, 
-                "winRate": 0.5230125523012552
-            }, 
-            "role": "BOT"
-        }, 
-        {
-            "stats": {
-                "cs": 210.3862660944206, 
-                "lastPlayed": 84.58991321212022, 
-                "games": 233, 
-                "kda": 4.216056670602125, 
-                "winRate": 0.5536480686695279
-            }, 
-            "role": "TOP"
-        }, 
-        {
-            "stats": {
-                "cs": 111.77777777777777, 
-                "lastPlayed": 185.61432385998557, 
-                "games": 9, 
-                "kda": 3.6451612903225805, 
-                "winRate": 0.4444444444444444
-            }, 
-            "role": "JUN"
-        }, 
-        {
-            "stats": {
-                "cs": 189.64324324324323, 
-                "lastPlayed": 83.19630064866618, 
-                "games": 185, 
-                "kda": 4.391910739191074, 
-                "winRate": 0.5513513513513514
-            }, 
-            "role": "MID"
-        }
-    ], 
-    "champs": [
-        {
-            "stats": {
-                "cs": 19.0, 
-                "lastPlayed": 285.5724111012576, 
-                "games": 1, 
-                "kda": 2.8, 
-                "winRate": 1.0
-            }, 
-            "id": 1
-        }, 
-        {
-            "stats": {
-                "cs": 189.61111111111111, 
-                "lastPlayed": 122.07037210865171, 
-                "games": 18, 
-                "kda": 1.8807339449541285, 
-                "winRate": 0.3333333333333333
-            }, 
-            "id": 8
-        }, 
-        {
-            "stats": {
-                "cs": 72.5, 
-                "lastPlayed": 260.99735901259317, 
-                "games": 2, 
-                "kda": 1.1666666666666667, 
-                "winRate": 0.0
-            }, 
-            "id": 9
-        }, 
-        {
-            "stats": {
-                "cs": 189.8, 
-                "lastPlayed": 238.80323647633585, 
-                "games": 5, 
-                "kda": 1.96, 
-                "winRate": 0.4
-            }, 
-            "id": 13
-        }, 
-        {
-            "stats": {
-                "cs": 200.0, 
-                "lastPlayed": 249.7022021562298, 
-                "games": 4, 
-                "kda": 2.6818181818181817, 
-                "winRate": 0.25
-            }, 
-            "id": 15
-        }
-    ], 
-    "topBar": {
-        "Average KDA": 3.778719672610348, 
-        "Average Games per Champ": 30.25, 
-        "Average Games per Day": 0.06666666666666667, 
-        "Games Played": 847, 
-        "Rank": "PLATINUM IV", 
-        "Win Rate": 0.5088547815820543, 
-        "Average Game Length": 34.403498427672957
-    }, 
-    "statsRecent20": {
-        "Deaths": 3.75, 
-        "Wards": 20.6, 
-        "KDA": 3.466666666666667, 
-        "Damage": 10328.7, 
-        "Contribution for Kills": 0.6032482598607889, 
-        "Average Game Length": 1914, 
-        "CS": 97.0
-    }, 
-    "champsRecent20": [
-        {
-            "id": 117, 
-            "times": 19
-        }, 
-        {
-            "id": 222, 
-            "times": 1
-        }
-    ], 
-    "rolesRecent20": [
-        {
-            "role": "MIDDLE", 
-            "times": 6
-        }, 
-        {
-            "role": "TOP", 
-            "times": 2
-        }, 
-        {
-            "role": "BOTTOM", 
-            "times": 12
-        }
-    ]
+  "roles": [
+    {
+      "stats": {
+        "cs": 35.56903765690377,
+        "lastPlayed": 25.3134210685348,
+        "games": 239,
+        "kda": 4.470518867924528,
+        "winRate": 0.5230125523012552
+      },
+      "role": "BOT"
+    },
+    {
+      "stats": {
+        "cs": 210.3862660944206,
+        "lastPlayed": 84.58991321212022,
+        "games": 233,
+        "kda": 4.216056670602125,
+        "winRate": 0.5536480686695279
+      },
+      "role": "TOP"
+    },
+    {
+      "stats": {
+        "cs": 111.77777777777777,
+        "lastPlayed": 185.61432385998557,
+        "games": 9,
+        "kda": 3.6451612903225805,
+        "winRate": 0.4444444444444444
+      },
+      "role": "JUN"
+    },
+    {
+      "stats": {
+        "cs": 189.64324324324323,
+        "lastPlayed": 83.19630064866618,
+        "games": 185,
+        "kda": 4.391910739191074,
+        "winRate": 0.5513513513513514
+      },
+      "role": "MID"
+    }
+  ],
+  "champs": [
+    {
+      "stats": {
+        "cs": 19,
+        "lastPlayed": 285.5724111012576,
+        "games": 1,
+        "kda": 2.8,
+        "winRate": 1
+      },
+      "id": 1
+    },
+    {
+      "stats": {
+        "cs": 189.61111111111111,
+        "lastPlayed": 122.07037210865171,
+        "games": 18,
+        "kda": 1.8807339449541285,
+        "winRate": 0.3333333333333333
+      },
+      "id": 8
+    },
+    {
+      "stats": {
+        "cs": 72.5,
+        "lastPlayed": 260.99735901259317,
+        "games": 2,
+        "kda": 1.1666666666666667,
+        "winRate": 0
+      },
+      "id": 9
+    },
+    {
+      "stats": {
+        "cs": 189.8,
+        "lastPlayed": 238.80323647633585,
+        "games": 5,
+        "kda": 1.96,
+        "winRate": 0.4
+      },
+      "id": 13
+    },
+    {
+      "stats": {
+        "cs": 200,
+        "lastPlayed": 249.7022021562298,
+        "games": 4,
+        "kda": 2.6818181818181817,
+        "winRate": 0.25
+      },
+      "id": 15
+    }
+  ],
+  "topBar": {
+    "Average KDA": 3.778719672610348,
+    "Average Games per Champ": 30.25,
+    "Average Games per Day": 0.06666666666666667,
+    "Games Played": 847,
+    "Rank": "PLATINUM IV",
+    "Win Rate": 0.5088547815820543,
+    "Average Game Length": 34.40349842767296
+  },
+  "statsRecent20": {
+    "WRate": 0.45,
+    "Deaths": 3.75,
+    "Wards": 20.6,
+    "KDA": 3.466666666666667,
+    "Damage": 10328.7,
+    "Contribution for Kills": 0.6032482598607889,
+    "Average Game Length": 1914,
+    "CS": 97
+  },
+  "champsRecent20": [
+    {
+      "id": 117,
+      "times": 19
+    },
+    {
+      "id": 222,
+      "times": 1
+    }
+  ],
+  "rolesRecent20": [
+    {
+      "role": "MIDDLE",
+      "times": 6
+    },
+    {
+      "role": "TOP",
+      "times": 2
+    },
+    {
+      "role": "BOTTOM",
+      "times": 12
+    }
+  ]
 }
