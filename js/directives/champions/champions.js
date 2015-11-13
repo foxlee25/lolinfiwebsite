@@ -10,7 +10,10 @@ app.directive('lolChampionsChampions',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope){
+        controller:function($scope,getApi){
+            getApi.getChampion().success(function(data){
+                $scope.champions = data;
+            });
         }
     }
 });

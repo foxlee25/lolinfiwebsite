@@ -368,3 +368,9 @@ a{
   color:#0F84CB;
   transition: all .5s ease-in-out;
 }
+
+.progress {
+    border: 0 solid transaprent;
+    height: 10px;
+    background-color: rgba(15,13,28, 1);
+}
