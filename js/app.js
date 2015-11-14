@@ -18,5 +18,20 @@ app.controller('formController', function($scope,$location,$http) {
             duration: 4000
     });
     
+    /**
+    * initialize twitch api
+    */
+    Twitch.init({clientId: '3i5rtey5q5ipvmjmctz5s7lbf0m2h0g'}, function(error, status) {
+        console.log("!!!!!twtich init called");
+        console.log(error+"error");
+        console.log(JSON.stringify(status)+"status");
+      if (error) {
+        // error encountered while loading
+        console.log(error);
+        debugger;
+        console.log("twitch api load fail");
+      }
+      // the sdk is now loaded
+    });
     
 });

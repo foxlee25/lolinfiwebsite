@@ -1,3 +1,5 @@
-<div>
-    live
+<div class="col-sm-offset-2 col-sm-8">
+    <div ng-repeat="video in twitchPlayList.streams">
+        <img style="margin-top:10px" class="col-sm-4" ng-src="{{video.preview.large}}" ng-click="playVideo(video.channel.url)">
+    </div>
 </div>
