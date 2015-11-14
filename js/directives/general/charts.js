@@ -10,7 +10,97 @@ app.directive('lolChampionsCharts',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope){
+        controller:function($scope,getApi){
+//            getApi.getCharts().success(function(data){
+//                $scope.chartsData = data;
+//                $scope.loadMap($scope.chartsData);
+//            });
+            
+            $scope.loadMap = function(){
+                
+                var width = 900,
+                height = 500;
+                d3.json("json/charts.json", function(error, charts) {
+                    //assign the 2d array
+                  var heatmap = charts.heatMaps.soloKills[0];
+                  if (error) throw error;
+
+                  var dx = heatmap[0].length,
+                      dy = heatmap.length;
+
+                  // Fix the aspect ratio.
+                  // var ka = dy / dx, kb = height / width;
+                  // if (ka < kb) height = width * ka;
+                  // else width = height / ka;
+
+                  var x = d3.scale.linear()
+                      .domain([0, dx])
+                      .range([0, width]);
+
+                  var y = d3.scale.linear()
+                      .domain([0, dy])
+                      .range([height, 0]);
+
+                  var color = d3.scale.linear()
+                      .domain([0,200])
+                      .range(["#000", "#fff"]);
+
+                  var xAxis = d3.svg.axis()
+                      .scale(x)
+                      .orient("top")
+                      .ticks(20);
+
+                  var yAxis = d3.svg.axis()
+                      .scale(y)
+                      .orient("right");
+
+                  d3.select("#chartHeapmap").append("canvas")
+                      .attr("width", dx)
+                      .attr("height", dy)
+                      .style("width", width + "px")
+                      .style("height", height + "px")
+                      .call(drawImage);
+
+                  var svg = d3.select("#chartHeapmap").append("svg")
+                      .attr("width", width)
+                      .attr("height", height);
+
+                  svg.append("g")
+                      .attr("class", "x axis")
+                      .attr("transform", "translate(0," + height + ")")
+                      .call(xAxis)
+                      .call(removeZero);
+
+                  svg.append("g")
+                      .attr("class", "y axis")
+                      .call(yAxis)
+                      .call(removeZero);
+
+                  // Compute the pixel colors; scaled by CSS.
+                  function drawImage(canvas) {
+                    var context = canvas.node().getContext("2d"),
+                        image = context.createImageData(dx, dy);
+
+                    for (var y = 0, p = -1; y < dy; ++y) {
+                      for (var x = 0; x < dx; ++x) {
+                        var c = d3.rgb(color(heatmap[y][x]));
+                        image.data[++p] = c.r*50;
+                        image.data[++p] = c.g*50;
+                        image.data[++p] = c.b*50;
+                        image.data[++p] = 255;
+                      }
+                    }
+
+                    context.putImageData(image, 0, 0);
+                  }
+
+                  function removeZero(axis) {
+                    axis.selectAll("g").filter(function(d) { return !d; }).remove();
+                  }
+                });
+            }
+            
+            $scope.loadMap();
         }
     }
 });
