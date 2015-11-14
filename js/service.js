@@ -17,6 +17,9 @@ app.factory('getApi',function($http){
         },
         getMatches:function(){
             return $http.get('json/matches.json');
+        },
+        getChampInfo:function(){
+            return $http.get('json/champ_info.json');
         }
     }
 })

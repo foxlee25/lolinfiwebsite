@@ -307,3 +307,48 @@
     vertical-align: middle;
     text-align: left;
 }
+
+#championsTable table tr td{
+    color: white;
+}
+
+#championsTable table tr th{
+    font-size:1.2em;
+    vertical-align: middle;
+    color:#448AAC;
+}
+
+#championsFilterTableDiv{
+    background-color: rgba(15,13,28, 1);
+    width: 100%;
+}
+
+#championsFilterTable{
+    margin-bottom: 5px;
+}
+
+#championsFilterTable tr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#championsFilterTable tr td{
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em; 
+}
+
+#championsListTable{
+    border-collapse:separate; 
+    border-spacing: 0px 5px;
+}
+
+#championsListTable tr{
+    background-color: rgba(15,13,28, 0.7);
+}
+
+#championsListTable tr td{
+    background-color: rgba(15,13,28, 0.7);
+}

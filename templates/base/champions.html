@@ -1,12 +1,13 @@
 <div>
     <div class="col-sm-offset-2 col-sm-8">
-        <div>
-            <table class="filterTable" style="border:null">
+        <div id="championsTable">
+            <div id="championsFilterTableDiv">
+            <table id="championsFilterTable" style="border:null">
                 <tr>
                     <td class="matchTableFilterTitle"><p> League:</p></td>
                     <td ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze'}">Bronze</td>
                     <td ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver'}">Silver</td>
-                    <td ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
+                    <td ng-click="matchOptions.leagu    e='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
                     <td ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum'}">Platinum</td>
                     <td ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond'}">Diamond</td>
                     <td ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master'}">Master</td>
@@ -22,6 +23,41 @@
                     <td ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked'}">Solo Ranked</td>
                     <td ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank'}">Team Rank</td>
                     <td ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue'}">Normal Queue</td>
+                </tr>
+            </table>
+            </div>
+            <table id="championsListTable" class="table">
+                <tr>
+                    <th>Champions</th>
+                    <th>Win Rate</th>
+                    <th>Games Played</th>
+                    <th>KDA</th>
+                    <th>CS</th>
+                </tr>
+                <tr ng-repeat="champ in champInfo">
+                    <td style="padding-left:40px">{{champ.id}}&nbsp;<img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />&nbsp;{{champ.name}}</td>
+                    <td>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
+                          aria-valuemin="0" aria-valuemax="100" style="width:60%">
+                            <span class="sr-only">60% Complete</span>
+                          </div>
+                        </div>
+                    </td>
+                    <td>
+                        45231
+                    </td>
+                    <td>
+                        5/6/12
+                    </td>
+                    <td>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="70"
+                          aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                            <span class="sr-only">70% Complete</span>
+                          </div>
+                        </div>
+                    </td>
                 </tr>
             </table>
         </div>
