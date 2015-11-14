@@ -30,19 +30,19 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url:'/baseLive',
         template: '<lol-live></lol-live>'
     })
-    .state('base.champions.general',{
+    .state('base.home.general',{
         url:'/baseChampionGeneral',
         template: '<lol-champions-general></lol-champions-general>'
     })
-    .state('base.champions.champions',{
+    .state('base.home.champions',{
         url:'/baseChampionChampions',
         template: '<lol-champions-champions></lol-champions-champions>'
     })
-    .state('base.champions.charts',{
+    .state('base.home.charts',{
         url:'/baseChampionCharts',
         template: '<lol-champions-charts></lol-champions-charts>'
     })
-    .state('base.champions.match',{
+    .state('base.home.match',{
         url:'/baseChampionMatch',
         template: '<lol-champions-match></lol-champions-match>'
     })

@@ -4,7 +4,7 @@
 app.directive('lolChampionsCharts',function(){
     return{
         restrict:'E',
-        templateUrl:'templates/base/champions/charts.html',
+        templateUrl:'templates/base/general/charts.html',
         transclude:true,
         replace:true,
         scope:false,

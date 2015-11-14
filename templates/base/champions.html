@@ -1,21 +1,29 @@
 <div>
-    <div>
-        <div class="col-sm-offset-2 col-sm-8" id="subChampionPage">
-            <div class="btn-group btn-group-justified">
-                <div class="btn-group">
-                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==1}" ng-click="selectChampionPage(1)">General</button>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==2}" ng-click="selectChampionPage(2)">Champions</button>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==3}" ng-click="selectChampionPage(3)">Charts</button>
-                </div>
-                <div class="btn-group">
-                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==4}" ng-click="selectChampionPage(4)">Match</button>
-                </div>
-            </div>
-            <div ui-view></div>
+    <div class="col-sm-offset-2 col-sm-8">
+        <div>
+            <table class="filterTable" style="border:null">
+                <tr>
+                    <td class="matchTableFilterTitle"><p> League:</p></td>
+                    <td ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze'}">Bronze</td>
+                    <td ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver'}">Silver</td>
+                    <td ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
+                    <td ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum'}">Platinum</td>
+                    <td ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond'}">Diamond</td>
+                    <td ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master'}">Master</td>
+                    <td ng-click="matchOptions.league='Challenger'" ng-class="{'labelHighlight':matchOptions.league=='Challenger'}">Challenger</td>
+                </tr>
+                <tr>
+                    <td class="matchTableFilterTitle"><p> Time:</p></td>
+                    <td ng-click="matchOptions.time='Last Month'" ng-class="{'labelHighlight':matchOptions.time=='Last Month'}">Last Month</td>
+                    <td ng-click="matchOptions.time='Last Week'" ng-class="{'labelHighlight':matchOptions.time=='Last Week'}">Last Week</td>
+                </tr>
+                <tr>
+                    <td class="matchTableFilterTitle"><p> Queue Type:</p></td>
+                    <td ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked'}">Solo Ranked</td>
+                    <td ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank'}">Team Rank</td>
+                    <td ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue'}">Normal Queue</td>
+                </tr>
+            </table>
         </div>
     </div>
 </div>

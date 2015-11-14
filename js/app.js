@@ -6,6 +6,7 @@ var app=angular.module('lolInfi', ['ngAnimate', 'ui.router']);
 // =============================================================================
 app.controller('formController', function($scope,$location,$http) {
     var bgImages = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'];
+    $scope.config={"searchToggle":true};
     
     var backstretchArray =[]
      for(var i=0;i<bgImages.length;i++){

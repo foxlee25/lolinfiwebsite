@@ -1,11 +1,30 @@
 <div>
-    <div class="pageContentClass" id="homePageContent">
+    <div class="pageContentClass" id="homePageContent" ng-if="config.searchToggle">
         <div class="masterSearch">
             <div id="lolinfiBrandIcon"></div>
             <div id="searchBox">
-                <input class="searchInput" type="text" placeholder="Search for champion name,items ..." required>
-                <div class="submitSearch"></div>
+                <input class="searchInput" type="text" ng-model="searchInput" placeholder="Search for champion name,items ..." required>
+                <div ng-click="searchSummoner(searchInput)" class="submitSearch"></div>
             </div>      
+        </div>
+    </div>
+    <div ng-if="!config.searchToggle">
+        <div class="col-sm-offset-2 col-sm-8" id="subChampionPage">
+            <div class="btn-group btn-group-justified">
+                <div class="btn-group">
+                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==1}" ng-click="selectChampionPage(1)">General</button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==2}" ng-click="selectChampionPage(2)">Champions</button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==3}" ng-click="selectChampionPage(3)">Charts</button>
+                </div>
+                <div class="btn-group">
+                    <button class="btn btn-default btn-nav" ng-class="{'btn-nav-selected':championPage.id==4}" ng-click="selectChampionPage(4)">Match</button>
+                </div>
+            </div>
+            <div ui-view></div>
         </div>
     </div>
 </div>

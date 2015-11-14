@@ -291,11 +291,11 @@
     margin: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .labelHighlight{
-    background-color: aqua;
+    background-color: #448AAC;
     border-radius: 10px;
     display: inline-block;
     line-height: 2em;

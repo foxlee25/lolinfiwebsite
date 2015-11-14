@@ -4,7 +4,7 @@
 app.directive('lolChampionsChampions',function(){
     return{
         restrict:'E',
-        templateUrl:'templates/base/champions/champions.html',
+        templateUrl:'templates/base/general/champions.html',
         transclude:true,
         replace:true,
         scope:false,

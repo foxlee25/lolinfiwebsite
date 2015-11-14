@@ -9,29 +9,11 @@ app.directive('lolChampions',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-            scope.championPage = {};
+            scope.matchOptions = {"league":"Bronze"
+                      ,"Time":"Last Month"
+                      ,"queueType":"Solo Ranked"};
         },
         controller:function($scope,getApi,redirect){
-            $scope.selectChampionPage = function(id){
-                $scope.championPage.id = id;
-                switch($scope.championPage.id){
-                    case 1:
-                        redirect("/base/baseChampions/baseChampionGeneral");
-                        break;
-                    case 2:
-                        redirect("/base/baseChampions/baseChampionChampions");
-                        break;
-                    case 3:
-                        redirect("/base/baseChampions/baseChampionCharts");
-                        break;
-                    case 4:
-                        redirect("/base/baseChampions/baseChampionMatch");
-                        break;
-                    default:
-                        redirect("/base/baseChampions/baseChampionGeneral");
-                }
-                
-            }
         }
     }
 });
