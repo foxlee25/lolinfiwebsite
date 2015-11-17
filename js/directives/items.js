@@ -9,8 +9,12 @@ app.directive('lolItems',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            scope.itemOption = {"filter":"All"};
         },
-        controller:function($scope){
+        controller:function($scope,getApi){
+            getApi.getItemInfo().success(function(data){
+                $scope.itemInfo = data;
+            });
         }
     }
 });

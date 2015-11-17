@@ -352,3 +352,113 @@
 #championsListTable tr td{
     background-color: rgba(15,13,28, 0.7);
 }
+
+#card{
+    float: left;
+    width:33.3%;
+    padding-top: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.videoCard{
+    position: relative;
+}
+
+#liveView{
+    position: absolute;
+    top: 10px;
+    z-index: 100;
+}
+
+#playButton{
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    z-index: 100;
+    height: 30%;
+}
+
+#videoSubtitle{
+    background-color: rgba(15,13,28, 1);
+}
+
+#videoLogo{
+    border:2px solid;
+    border-color: #263F55;
+    height: 50px;
+    border-radius: 50%; 
+}
+
+#chartHeatmap{
+    margin-left: 120px;
+    margin-top: 50px;
+    width: 650px;
+    height: 650px;
+    background-image: url(../images/Layer%2015%20copy%2023.png);
+    background-size: 650px;
+}
+
+#items{
+    background-color: rgba(15,13,28, 0.7);
+    width: 100%;
+}
+
+#items table tr td{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em;
+}
+
+.itemCard{
+    position: relative;
+    width: 10%;
+    padding:10px;
+    float: left;
+}
+
+.itemCard div{
+    display: none;
+}
+
+.itemCard:hover div{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    left: 80px;
+    top: 50px;
+    background-color: black; 
+    width: 200px;
+    margin-top: 20px;
+}
+
+.itemCard:hover div b{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em; 
+}
+
+.itemCard:hover div p{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em; 
+}
+
+
+#itemBg{
+    width: 100%;
+    background-color: rgba(15,13,28, 0.7);
+    margin-top: 20px;
+    overflow: hidden;
+    padding-top: 30px;
+    padding-bottom: 60px;
+}

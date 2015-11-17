@@ -20,6 +20,9 @@ app.factory('getApi',function($http){
         },
         getChampInfo:function(){
             return $http.get('json/champ_info.json');
+        },
+        getItemInfo:function(){
+            return $http.get('json/item_info.json');
         }
     }
 })

@@ -1,5 +1,22 @@
-<div class="col-sm-offset-2 col-sm-8">
+<div class="col-sm-offset-1 col-sm-10">
     <div ng-repeat="video in twitchPlayList.streams">
-        <img style="margin-top:10px" class="col-sm-4" ng-src="{{video.preview.large}}" ng-click="playVideo(video.channel.url)">
+        <div id="card">
+            <div class="videoCard" ng-click="playVideo(video.channel.url)">
+                <img id="liveView" src="../../images/live/live_view_bk.png" >
+                <img id="playButton" src="../../images/live/live_play_icon.png" >
+                <img style="position:relative;top:0px;left:0px;width:100%;height:100%" id="videoPreview" ng-src="{{video.preview.large}}">
+            </div>
+            <div id="videoSubtitle">
+                <div style="float:left">
+                    <img id="videoLogo" ng-src="{{video.channel.logo}}">
+                </div>
+                <div style="float:left;padding-left:10px">
+                    <h4>{{video.channel.name}}</h4>
+                    <p>{{video.channel.status|limitTo:20}}</p>
+                </div>
+                <div style="float:right">
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</div> 

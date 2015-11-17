@@ -13,7 +13,7 @@ app.directive('lolChampionsCharts',function(){
         controller:function($scope,getApi){
             getApi.getCharts().success(function(data){
                 $scope.chartsData = data;
-                //$scope.loadMap($scope.chartsData.heatMaps);
+                $scope.loadMap($scope.chartsData.heatMaps);
             });
             
             $scope.loadMap = function(data){
@@ -102,21 +102,21 @@ app.directive('lolChampionsCharts',function(){
 
                 //height of each row in the heatmap
                 //width of each column in the heatmap
-                var gridSize = 4,
+                var gridSize = 6,
                     xAxis = 0,
                     yAxis = 0,
-                    h = 4,
-                    w = 4,
+                    h = 6,
+                    w = 6,
                     rectPadding = 60;
 
-                var colorLow = 'green', colorMed = 'yellow', colorHigh = 'red', colorExtremeHigh = 'purple';
+                var colorLow = '#cc99ff', colorMed = '#ff9966', colorHigh = '#ff3300', colorExtremeHigh = '#993300';
 
-                var margin = {top: 20, right: 80, bottom: 30, left: 50},
-                    width = 596 - margin.left - margin.right,
-                    height = 596 - margin.top - margin.bottom;
+                var margin = {top: 10, right: 80, bottom: 30, left: 20},
+                    width = 894 - margin.left - margin.right,
+                    height = 894 - margin.top - margin.bottom;
 
                 var colorScale = d3.scale.linear()
-                     .domain([0, 1, 2, 3])
+                     .domain([1, 2, 3, 4])
                      .range([colorLow, colorMed, colorHigh,colorExtremeHigh]);
 
                 var svg = d3.select("#chartHeatmap").append("svg")
@@ -125,17 +125,14 @@ app.directive('lolChampionsCharts',function(){
                   .append("g")
                     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
                 
-                for(var i=0; i< data.killContributions[0].length; i++){
-                    $scope.start = 0;
                     var heapMap = svg.selectAll("#chartHeatmap")
-                    .data(data.killContributions[0][i], function(d) {return d; })
+                    .data(data.deaths, function(d) {return d; })
                     .enter().append("svg:rect")
-                    .attr("x",function(d){return $scope.start+=4;})
-                    .attr("y", function(d) { return (i+1)*4; })
+                    .attr("x",function(d){return (d[0]+1)*6;})
+                    .attr("y", function(d) { return (d[1]+1)*6; })
                     .attr("width", function(d) { return w; })
                     .attr("height", function(d) { return h; })
-                    .style("fill", function(d) { return colorScale(d); });
-                }
+                    .style("fill", function(d) { return colorScale(parseInt(d[2])); });
             }
             
         }
