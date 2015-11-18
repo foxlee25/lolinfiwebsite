@@ -467,3 +467,22 @@
     width: 50%;
     margin: 0 auto;
 }
+
+.rankTableHeader{
+    color:#448AAC;  
+}
+
+.rankTableHeader th{
+    font-size:1.2em;
+    vertical-align: middle;
+	background-color: rgba(15,13,28, 1);
+}
+
+#rankTable tr td{
+	color:white;
+	vertical-align: middle;
+}
+
+#rankTable{
+	background-color: rgba(15,13,28, 0.7);
+}

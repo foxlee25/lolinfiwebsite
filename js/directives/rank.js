@@ -10,7 +10,11 @@ app.directive('lolRank',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope){
+        controller:function($scope,getApi){
+			$("body").css("background-image","url('../images/otherbg.jpg')");
+            getApi.getChallengerInfo().success(function(data){
+                $scope.challengerInfo = data;
+            });
         }
     }
 });

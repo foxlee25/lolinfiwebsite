@@ -11,6 +11,7 @@ app.directive('lolPlayer',function(){
         link:function(scope,element,attrs){
         },
         controller:function($scope,$sce,redirect,videoPlayer){
+			$("body").css("background-image","url('../images/otherbg.jpg')");
               $scope.trustSrc = function() {
                 $scope.video = videoPlayer.getVideo();
                 var index = $scope.video.channel.url.lastIndexOf("/")+1;

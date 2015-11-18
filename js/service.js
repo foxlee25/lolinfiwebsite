@@ -23,6 +23,9 @@ app.factory('getApi',function($http){
         },
         getItemInfo:function(){
             return $http.get('json/item_info.json');
+        },
+        getChallengerInfo:function(){
+            return $http.get('json/challenger_info.json');
         }
     }
 })

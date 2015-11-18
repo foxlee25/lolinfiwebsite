@@ -12,6 +12,7 @@ app.directive('lolItems',function(){
             scope.itemOption = {"filter":"All"};
         },
         controller:function($scope,getApi){
+			$("body").css("background-image","url('../images/otherbg.jpg')");
             getApi.getItemInfo().success(function(data){
                 $scope.itemInfo = data;
             });

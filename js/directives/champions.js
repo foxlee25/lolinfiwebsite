@@ -14,6 +14,7 @@ app.directive('lolChampions',function(){
                       ,"queueType":"Solo Ranked"};
         },
         controller:function($scope,getApi,redirect){
+			$("body").css("background-image","url('../../images/otherbg.jpg')");
             getApi.getChampInfo().success(function(data){
                 $scope.champInfo = data;
             });
