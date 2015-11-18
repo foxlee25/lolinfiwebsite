@@ -1,12 +1,12 @@
 // create our angular app and inject ngAnimate and ui-router 
 // =============================================================================
-var app=angular.module('lolInfi', ['ngAnimate', 'ui.router']);
+var app=angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router']);
 
 // our controller for the form
 // =============================================================================
 app.controller('formController', function($scope,$location,$http) {
     var bgImages = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'];
-    $scope.config={"searchToggle":true};
+    $scope.config={"searchToggle":true,"url":"HOME"};
     
     var backstretchArray =[]
      for(var i=0;i<bgImages.length;i++){

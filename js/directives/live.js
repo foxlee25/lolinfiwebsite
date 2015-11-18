@@ -10,7 +10,7 @@ app.directive('lolLive',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope){
+        controller:function($scope,redirect,videoPlayer){
             
             //get twitch lol game play list
             Twitch.api({method: 'streams', params: {game:'League of Legends', limit:20} }, function(error, list) {
@@ -20,8 +20,9 @@ app.directive('lolLive',function(){
               $scope.$apply();
             });
 
-            $scope.playVideo = function(url){
-                window.open(url, '_system');    
+            $scope.playVideo = function(info){
+                videoPlayer.setVideo(info);
+                redirect("/base/basePlayer");   
             }
         }
     }

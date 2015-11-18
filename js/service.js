@@ -27,6 +27,16 @@ app.factory('getApi',function($http){
     }
 })
 
+app.service('videoPlayer',function(){
+    this.video = null;
+    this.setVideo = function(input){
+        this.video = input;
+    }
+    this.getVideo = function(){
+        return this.video;
+    }
+})
+
 /**
 * Change window location
 */
@@ -35,3 +45,10 @@ app.factory('redirect',function($location,$rootScope){
         $location.path(path);
     }
 });
+
+/**
+*set video player url
+*/
+app.service('videoUrl',function(){
+    
+})
