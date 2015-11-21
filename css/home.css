@@ -228,6 +228,13 @@
     height: 50px;
     border-radius: 50%;
 }
+
+.champ-img-circle{
+	border:2px solid;
+    border-color: #263F55;
+    height: 80px;
+    border-radius: 50%;
+}
    
 .tableStrip{
     background-color: rgba(15,13,28, 1);
@@ -542,4 +549,41 @@
 .pagin{
 	padding-top: 10px;
 	padding-bottom: 80px;
+}
+
+#champLogo{
+	float: left;
+	padding-top: 30px;
+	width: 100px;
+}
+
+#champTitle{
+	padding-top: 20px;
+	float: left;
+}
+
+#champTitle h2{
+	color:#448AAC;
+}
+
+#champTitle b{
+	color: white;
+}
+
+#champDetailStats{
+	clear: both;
+	background-color: rgba(15,13,28, 1);
+	margin-top: 180px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+}
+
+#champDetailStats p{
+	color: white;
+	font-size: 1em;
+}
+
+#champDetailStats b{
+	color: white;
 }

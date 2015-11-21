@@ -1,3 +1,21 @@
 <div>
-	{{detail}}
+	<div class="col-sm-offset-2 col-sm-8">
+		<div id="champLogo">
+			<img class="champ-img-circle" ng-src="images/champ_basic_info/{{detail.id}}/square.png" />
+		</div>
+		<div id="champTitle">
+			<h2>{{detail.name}}</h2>
+			<b>{{detail.title}}</b>
+		</div>
+		<div id="champDetailStats">
+			<b>Statistics</b>
+			<div class="row">
+				<div style="padding-top:10px;padding-bottom:10px" ng-repeat = "(key,val) in detail.stats" class="col-sm-2">
+					<p>{{key}}</p><b>{{val}}</b>
+				</div>
+			</div>
+		</div>
+		<div id="champDetailAbility">
+		</div>
+	</div>
 </div>
