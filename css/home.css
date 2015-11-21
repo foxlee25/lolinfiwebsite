@@ -369,7 +369,6 @@
 
 #liveView{
     position: absolute;
-    top: 10px;
     z-index: 100;
 }
 
@@ -382,7 +381,16 @@
 }
 
 #videoSubtitle{
-    background-color: rgba(15,13,28, 1);
+	height: 65px;
+    background-color: rgba(17,28,48, 1);
+}
+
+#videoSubtitle h4{
+	color: white;
+}
+
+#videoSubtitle p{
+	color: white;
 }
 
 #videoLogo{
@@ -417,6 +425,8 @@
 .itemCard{
     position: relative;
     width: 10%;
+    border:2px solid;
+    border-color: #263F55;
     padding:10px;
     float: left;
 }
@@ -429,8 +439,8 @@
     display: block;
     position: absolute;
     z-index: 100;
-    left: 80px;
-    top: 50px;
+    left: 40px;
+    top: 0px;
     background-color: black; 
     width: 200px;
     margin-top: 20px;
@@ -510,4 +520,21 @@
 
 #chartLinemap{
 	margin-top: 30px;
+}
+
+.progress{
+	margin-top: 20px;
+}
+
+#championsListTable tr td{
+	vertical-align: middle;
+}
+
+#liveViewNumber{
+	position: absolute;
+	z-index: 101;
+	top:3px;
+	left:40px;
+	font-size: 1em;
+	color: white;
 }

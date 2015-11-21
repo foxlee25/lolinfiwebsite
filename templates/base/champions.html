@@ -7,7 +7,7 @@
                     <td class="matchTableFilterTitle"><p> League:</p></td>
                     <td ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze'}">Bronze</td>
                     <td ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver'}">Silver</td>
-                    <td ng-click="matchOptions.leagu    e='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
+                    <td ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
                     <td ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum'}">Platinum</td>
                     <td ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond'}">Diamond</td>
                     <td ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master'}">Master</td>
@@ -35,7 +35,7 @@
                     <th>CS</th>
                 </tr>
                 <tr ng-repeat="champ in champInfo">
-                    <td style="padding-left:40px">{{champ.id}}&nbsp;<img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />&nbsp;{{champ.name}}</td>
+					<td style="padding-left:40px"><p style="display:inline;padding-right:30px">{{champ.id}}</p><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px">{{champ.name}}</p></td>
                     <td>
                         <div class="progress">
                           <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="60"
