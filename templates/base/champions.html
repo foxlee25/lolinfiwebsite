@@ -34,7 +34,7 @@
                     <th>KDA</th>
                     <th>CS</th>
                 </tr>
-                <tr ng-repeat="champ in champInfo">
+                <tr ng-repeat="champ in champInfo" ng-click="setChampionDetail(champ)">
 					<td style="padding-left:40px"><p style="display:inline;padding-right:30px">{{champ.id}}</p><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px">{{champ.name}}</p></td>
                     <td>
                         <div class="progress">

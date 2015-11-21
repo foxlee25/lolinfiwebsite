@@ -14,10 +14,15 @@ app.directive('lolChampions',function(){
                       ,"queueType":"Solo Ranked"};
 			$("body").css("background-image","url('../../images/otherbg.jpg')");
         },
-        controller:function($scope,getApi,redirect){
+        controller:function($scope,getApi,redirect,championDetail){
             getApi.getChampInfo().success(function(data){
                 $scope.champInfo = data;
             });
+			
+			$scope.setChampionDetail = function(input){
+				championDetail.setChampDetail(input);
+				redirect("/base/baseChampDetail");
+			}
         }
     }
 });

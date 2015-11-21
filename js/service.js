@@ -40,6 +40,16 @@ app.service('videoPlayer',function(){
     }
 })
 
+app.service('championDetail',function(){
+	this.champDetail = null;
+	this.setChampDetail = function(input){
+		this.champDetail = input;
+	}
+	this.getChampDetail = function(){
+		return this.champDetail;
+	}
+})
+
 /**
 * Change window location
 */
