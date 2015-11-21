@@ -10,9 +10,9 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
             scope.championPage = {"id":1};
+			$("body").css("background-image","url('../../images/bg1.jpg')");
         },
         controller:function($scope,redirect){
-			$("body").css("background-image","url('../../images/bg1.jpg')");
             $scope.searchSummoner = function(input){
                 $scope.config.searchToggle = false;
                 redirect("/base/baseHome/baseChampionGeneral");

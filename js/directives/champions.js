@@ -12,9 +12,9 @@ app.directive('lolChampions',function(){
             scope.matchOptions = {"league":"Bronze"
                       ,"Time":"Last Month"
                       ,"queueType":"Solo Ranked"};
+			$("body").css("background-image","url('../../images/otherbg.jpg')");
         },
         controller:function($scope,getApi,redirect){
-			$("body").css("background-image","url('../../images/otherbg.jpg')");
             getApi.getChampInfo().success(function(data){
                 $scope.champInfo = data;
             });

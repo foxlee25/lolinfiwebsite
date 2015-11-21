@@ -10,9 +10,9 @@ app.directive('lolItems',function(){
         scope:false,
         link:function(scope,element,attrs){
             scope.itemOption = {"filter":"All"};
+			$("body").css("background-image","url('../images/otherbg.jpg')");
         },
         controller:function($scope,getApi){
-			$("body").css("background-image","url('../images/otherbg.jpg')");
             getApi.getItemInfo().success(function(data){
                 $scope.itemInfo = data;
             });

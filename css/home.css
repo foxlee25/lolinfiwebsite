@@ -272,13 +272,14 @@
 
 #matches table tr td{
     font-size:1em;
-    color: white;
     vertical-align: middle;
     text-align: center;
+	color: white;
 }
 
 .filterTable{
     margin-left: 30px;
+	margin-top: 50px;
 }
 
 .filterTable tr{
@@ -292,6 +293,7 @@
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
+	color: white;
 }
 
 .labelHighlight{
@@ -391,7 +393,6 @@
 }
 
 #chartHeatmap{
-    margin-left: 120px;
     margin-top: 50px;
     width: 650px;
     height: 650px;
@@ -485,4 +486,28 @@
 
 #rankTable{
 	background-color: rgba(15,13,28, 0.7);
+}
+
+.chartsWrapper{
+	width: 70%;
+	margin: 0 auto;
+}
+
+#heatmapHeader{
+	clear: both;
+    background-color: #263F55;
+    font-size: 1.2em;
+    text-align: center;
+    color:white;
+    font-size:1.2em;
+    margin-top:2em;
+    margin-left: 1.5em;
+    margin-bottom:2em; 
+    padding-top:3px;
+    padding-bottom: 1px;
+	width: 100%;
+}
+
+#chartLinemap{
+	margin-top: 30px;
 }

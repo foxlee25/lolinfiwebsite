@@ -9,9 +9,9 @@ app.directive('lolLive',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+			$("body").css("background-image","url('../images/otherbg.jpg')");
         },
         controller:function($scope,redirect,videoPlayer){
-            $("body").css("background-image","url('../images/otherbg.jpg')");
             //get twitch lol game play list
             Twitch.api({method: 'streams', params: {game:'League of Legends', limit:20} }, function(error, list) {
               console.debug(JSON.stringify(list));
