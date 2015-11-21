@@ -11,7 +11,7 @@
                 <div style="float:left;padding-top:10px;">
                     <img id="videoLogo" ng-src="{{video.channel.logo}}">
                 </div>
-                <div style="float:left;padding-left:10px">
+                <div class="subtitleCard" style="float:left;padding-left:10px">
                     <h4>{{video.channel.name}}</h4>
                     <p>{{video.channel.status|limitTo:20}}</p>
                 </div>
@@ -20,4 +20,16 @@
             </div>
         </div>
     </div>
+	<nav ng-show="twitchPlayList" class="pagin col-sm-offset-5 col-sm-3">
+	  <ul class="pagination">
+		  <li><a ng-click="index>=2?loadPage(index-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		<li ng-click="loadPage(1)" ng-class="{'active':index==1}"><a ng-click="loadPage(1)">1 </a></li>
+		  <li ng-click="loadPage(2)" ng-class="{'active':index==2}"><a ng-click="loadPage(2)">2 </a></li>
+		  <li ng-click="loadPage(3)" ng-class="{'active':index==3}"><a ng-click="loadPage(3)">3 </a></li>
+		  <li ng-click="loadPage(4)" ng-class="{'active':index==4}"><a ng-click="loadPage(4)">4 </a></li>
+		  <li ng-click="loadPage(5)" ng-class="{'active':index==5}"><a ng-click="loadPage(5)">5 </a></li>
+		<li><a ng-click="index<=4?loadPage(index+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+	  </ul>
+	</nav>
 </div> 
