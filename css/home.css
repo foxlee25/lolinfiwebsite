@@ -488,6 +488,7 @@
 	height: 500px;
     margin: 0 auto;
 	vertical-align: middle;
+	padding-top: 30px;
 }
 
 .rankTableHeader{
@@ -653,9 +654,6 @@
 }
 
 #playerScreen{
-	bottom: 0;
-	right:0;
-	position: absolute;
-	top: 0;
-	left: 0;
+	height: 100vh;
+	width: 100%;
 }
