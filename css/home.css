@@ -432,8 +432,10 @@
 .itemCard{
     position: relative;
     width: 10%;
+/*
     border:2px solid;
     border-color: #263F55;
+*/
     padding:10px;
     float: left;
 }
@@ -584,6 +586,66 @@
 	font-size: 1em;
 }
 
-#champDetailStats b{
+#champDetailStats h3{
+	font-size: 1.2em;
+	color:#448AAC;
+}
+
+#champDetailAbility{
+	background-color: rgba(15,13,28, 1);
+	margin-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;
+	
+}
+
+.abilityImg{
+	clear: left;
+	float: left;
+	width: 100px;
+}
+
+#champDetailAbilities{
+	background-color: rgba(15,13,28, 1);
+	margin-top: 10px;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 20px;	
+	margin-bottom: 100px;
+}
+
+#champDetailAbilities h3{
+	color:#448AAC;
+	font-size: 1.2em;
+}
+
+.champDetailAbility{
+	padding-top: 30px;
+	padding-bottom: 30px;
+ 	border-bottom-style: solid;
+    border-bottom-width: 1px;
+	border-bottom-color: white;
+}
+
+.champDetailAbility h3{
+	color:#448AAC;
+	font-size: 1.2em;
+}
+
+.champDetailAbility p{
 	color: white;
+	padding-top: 10px;
+}
+
+.champDetailAbility b{
+	color:#448AAC;;
+	font-size: 1.4em;
+}
+
+.itemImg{
+	border-style: solid;
+	border-color: blue;
+	border-width: 2px;
+	border-radius: 10px;
 }
