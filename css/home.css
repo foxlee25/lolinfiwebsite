@@ -485,7 +485,9 @@
 
 .flashPlayer{
     width: 50%;
+	height: 500px;
     margin: 0 auto;
+	vertical-align: middle;
 }
 
 .rankTableHeader{
@@ -543,7 +545,7 @@
 	position: absolute;
 	z-index: 101;
 	top:3px;
-	left:40px;
+	left:35px;
 	font-size: 1em;
 	color: white;
 }
@@ -648,4 +650,12 @@
 	border-color: rgb(0,76,225);
 	border-width: 2px;
 	border-radius: 10px;
+}
+
+#playerScreen{
+	bottom: 0;
+	right:0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
