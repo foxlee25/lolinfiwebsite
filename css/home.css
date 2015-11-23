@@ -195,7 +195,7 @@
 }
 
 #subChampionPage{
-    background-color: rgba(15,13,28, 0.7);
+    background-color: rgba(255,255,255, 0.05);
     clear: both;
     padding-bottom: 50px;
 }
@@ -237,7 +237,11 @@
 }
    
 .tableStrip{
-    background-color: rgba(15,13,28, 1);
+    background-color: rgba(255,255,255, 0.05);
+}
+
+#championsListTable{
+	background-color: rgba(255,255,255,0.05);
 }
 
 #champions{
@@ -253,7 +257,7 @@
 
 .championsTableHeader{
     color:#448AAC;
-    background-color: rgba(15,13,28, 1);
+    background-color: rgba(255,255,255, 0.07);
 }
 
 .championsTableHeader th{
@@ -264,7 +268,7 @@
 
 .matchesTableHeader{
     color:#448AAC;
-    background-color: rgba(15,13,28, 1);
+    background-color: rgba(255,255,255, 0.07);
 }
 
 .matchesTableHeader th{
@@ -328,7 +332,7 @@
 }
 
 #championsFilterTableDiv{
-    background-color: rgba(15,13,28, 1);
+    background-color: rgba(255,255,255, 0.1);
     width: 100%;
 }
 
@@ -349,18 +353,6 @@
     font-size: 1em; 
 }
 
-#championsListTable{
-    border-collapse:separate; 
-    border-spacing: 0px 5px;
-}
-
-#championsListTable tr{
-    background-color: rgba(15,13,28, 0.7);
-}
-
-#championsListTable tr td{
-    background-color: rgba(15,13,28, 0.7);
-}
 
 #card{
     float: left;
@@ -416,7 +408,7 @@
 }
 
 #items{
-    background-color: rgba(15,13,28, 0.7);
+    background-color: rgba(255,255,255, 0.05);
     width: 100%;
 }
 
@@ -498,7 +490,7 @@
 .rankTableHeader th{
     font-size:1.2em;
     vertical-align: middle;
-	background-color: rgba(15,13,28, 1);
+	background-color: rgba(255,255,255, 0.07);
 }
 
 #rankTable tr td{
@@ -507,7 +499,7 @@
 }
 
 #rankTable{
-	background-color: rgba(15,13,28, 0.7);
+	background-color: rgba(255,255,255, 0.05);
 }
 
 .chartsWrapper{
@@ -577,7 +569,7 @@
 
 #champDetailStats{
 	clear: both;
-	background-color: rgba(15,13,28, 1);
+	background-color: rgba(255,255,255, 0.07);
 	margin-top: 180px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -595,7 +587,7 @@
 }
 
 #champDetailAbility{
-	background-color: rgba(15,13,28, 1);
+	background-color: rgba(15,13,28, 0.07);
 	margin-top: 10px;
 	padding-left: 30px;
 	padding-right: 30px;
@@ -610,7 +602,7 @@
 }
 
 #champDetailAbilities{
-	background-color: rgba(15,13,28, 1);
+	background-color: rgba(255,255,255, 0.07);
 	margin-top: 10px;
 	padding-left: 30px;
 	padding-right: 30px;

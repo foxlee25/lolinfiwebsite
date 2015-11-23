@@ -27,14 +27,14 @@
             </table>
             </div>
             <table id="championsListTable" class="table">
-                <tr>
+                <tr class="tableStrip">
                     <th>Champions</th>
                     <th>Win Rate</th>
                     <th>Games Played</th>
                     <th>KDA</th>
                     <th>CS</th>
                 </tr>
-                <tr ng-repeat="champ in champInfo" ng-click="setChampionDetail(champ)">
+                <tr ng-repeat="champ in champInfo" ng-click="setChampionDetail(champ)" ng-class="{'tableStrip':$index%2==1}">
 					<td style="padding-left:40px"><p style="display:inline;padding-right:30px">{{champ.id}}</p><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px">{{champ.name}}</p></td>
                     <td>
                         <div class="progress">
