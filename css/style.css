@@ -396,3 +396,18 @@ canvas {
 .axis path {
   display: none;
 }
+
+.progress {
+  background-color: #263F55;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.btn-nav:hover,
+.btn-nav.active,
+.btn-nav:focus
+{
+	  color: #ffffff;
+	  background-color: #428bff;
+	  border-color: #357ebd;
+}
