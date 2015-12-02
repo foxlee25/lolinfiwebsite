@@ -50,6 +50,17 @@ app.service('championDetail',function(){
 	}
 })
 
+app.service('loadSummoner',function(){
+	this.summoner = null;
+	this.setSummoner = function(input){
+		this.summoner = input;
+	}
+	
+	this.getSummoner = function(){
+		return this.summoner;
+	}
+})
+
 /**
 * Change window location
 */
