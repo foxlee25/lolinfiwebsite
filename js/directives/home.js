@@ -17,6 +17,14 @@ app.directive('lolHome',function(){
                 $scope.config.searchToggle = false;
                 redirect("/base/baseHome/baseChampionGeneral");
             }
+			
+			$scope.$watch("config.searchToggle",function(data){
+				if(data){
+					$("body").css("background","url('../../images/bg1.jpg')")
+				}else{
+					$("body").css("background","url('../../images/otherbg.jpg')")
+				}
+			});
             
             $scope.selectChampionPage = function(id){
                 $scope.championPage.id = id;
