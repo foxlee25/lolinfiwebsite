@@ -11,6 +11,7 @@ app.directive('lolItems',function(){
         link:function(scope,element,attrs){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background-image","url('../images/otherbg.jpg')");
+			scope.animateOver = false;
         },
         controller:function($scope,getApi){
 			var camera, scene, renderer;
@@ -22,6 +23,13 @@ app.directive('lolItems',function(){
                 $scope.itemInfo = data;
 				init(data);
 				animate();
+				//setTimeout(replaceItems, 3000)
+				function replaceItems(){
+					
+					$('#itemAnimate').hide();
+					$scope.animateOver = true;
+					$scope.$digest();
+				}
             });
 			
 			function init(data){
@@ -35,8 +43,8 @@ app.directive('lolItems',function(){
 				$.each(data,function(key, value){
 					var element = document.createElement('div');
 					element.className = 'itemCard';
-					element.style.backgroundColor 
-						= 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
+					//element.style.backgroundColor 
+					//	= 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
 					var pic = document.createElement('img');
 					pic.className = 'itemImg';
 					pic.src = 'images/item_info/'+value.id+'.png';
@@ -50,8 +58,8 @@ app.directive('lolItems',function(){
 					objects.push( object );
 					
 					var object = new THREE.Object3D();
-					object.position.x = ( i%10 * 140 )-1600;
-					object.position.y = - ( Math.floor( i/10 ) * 180 ) + 990;
+					object.position.x = ( i%10 * 250 )-1000;
+					object.position.y = - ( Math.floor( i/10 ) * 200 ) + 990;
 					targets.table.push( object );
 					i++;
 				});
@@ -59,12 +67,15 @@ app.directive('lolItems',function(){
 					renderer = new THREE.CSS3DRenderer();
 					renderer.setSize( window.innerWidth, window.innerHeight );
 					renderer.domElement.style.position = 'absolute';
-					document.getElementById( 'itemBg' ).appendChild( renderer.domElement );
+					document.getElementById( 'itemAnimate' ).appendChild( renderer.domElement );
 					
 					controls = new THREE.TrackballControls( camera, renderer.domElement );
 					controls.rotateSpeed = 0.5;
 					controls.minDistance = 500;
 					controls.maxDistance = 6000;
+					controls .noZoom = true;
+					controls.noRotate = true;
+					controls.noPan = true;
 					controls.addEventListener( 'change', render );
 					
 					transform( targets.table, 2000 );
