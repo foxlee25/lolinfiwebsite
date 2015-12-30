@@ -23,7 +23,7 @@ app.directive('lolItems',function(){
                 $scope.itemInfo = data;
 				init(data);
 				animate();
-				setTimeout(replaceItems, 2000)
+				//setTimeout(replaceItems, 2000)
 				function replaceItems(){
 					
 					$('#itemAnimate').hide();
@@ -37,7 +37,6 @@ app.directive('lolItems',function(){
 				* https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html
 				*/
 				//var imageWidth = $(window).width()/5;
-				debugger;
 				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 				camera.position.z = 3000;
 				scene = new THREE.Scene();
