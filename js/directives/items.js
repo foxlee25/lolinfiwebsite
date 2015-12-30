@@ -23,7 +23,7 @@ app.directive('lolItems',function(){
                 $scope.itemInfo = data;
 				init(data);
 				animate();
-				//setTimeout(replaceItems, 3000)
+				setTimeout(replaceItems, 2000)
 				function replaceItems(){
 					
 					$('#itemAnimate').hide();
@@ -36,17 +36,20 @@ app.directive('lolItems',function(){
 				/**
 				* https://github.com/mrdoob/three.js/blob/master/examples/css3d_periodictable.html
 				*/
+				//var imageWidth = $(window).width()/5;
+				debugger;
 				camera = new THREE.PerspectiveCamera( 40, window.innerWidth / window.innerHeight, 1, 10000 );
 				camera.position.z = 3000;
 				scene = new THREE.Scene();
 				var i = 0;
 				$.each(data,function(key, value){
 					var element = document.createElement('div');
-					element.className = 'itemCard';
+					element.className = 'itemCardSize';
+					element.classList.add('col-sm-2');
 					//element.style.backgroundColor 
 					//	= 'rgba(0,127,127,' + ( Math.random() * 0.5 + 0.25 ) + ')';
 					var pic = document.createElement('img');
-					pic.className = 'itemImg';
+					pic.className = 'itemImgWithWidth';
 					pic.src = 'images/item_info/'+value.id+'.png';
 					element.appendChild( pic );
 					
@@ -58,11 +61,12 @@ app.directive('lolItems',function(){
 					objects.push( object );
 					
 					var object = new THREE.Object3D();
-					object.position.x = ( i%10 * 250 )-1000;
-					object.position.y = - ( Math.floor( i/10 ) * 200 ) + 990;
+					object.position.x = ( i%10 * 250 )-window.innerWidth*1.3;
+					object.position.y = - ( Math.floor( i/10 ) * 250 ) + 990;
 					targets.table.push( object );
 					i++;
 				});
+				console.log(1800/window.innerWidth);
 					
 					renderer = new THREE.CSS3DRenderer();
 					renderer.setSize( window.innerWidth, window.innerHeight );
