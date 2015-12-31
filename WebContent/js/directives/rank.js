@@ -9,7 +9,7 @@ app.directive('lolRank',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("body").css("background-image","url('../images/otherbg.jpg')");
+			$("body").css("background","url('images/otherbg.jpg')");
         },
         controller:function($scope,getApi,loadSummoner,redirect){
             getApi.getChallengerInfo().success(function(data){

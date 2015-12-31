@@ -10,7 +10,7 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
             scope.championPage = {"id":1};
-			$("body").css("background-image","url('../../images/bg1.jpg')");
+			$("body").css("background","url('images/bg1.jpg')");
         },
         controller:function($scope,redirect){
             $scope.searchSummoner = function(input){
@@ -20,9 +20,9 @@ app.directive('lolHome',function(){
 			
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
-					$("body").css("background","url('../../images/bg1.jpg')")
+					$("body").css("background","url('images/bg1.jpg')")
 				}else{
-					$("body").css("background","url('../../images/otherbg.jpg')")
+					$("body").css("background","url('images/otherbg.jpg')")
 				}
 			});
             
