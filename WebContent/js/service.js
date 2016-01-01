@@ -30,6 +30,21 @@ app.factory('getApi',function($http){
     }
 })
 
+/**
+* call rest summoner api
+*/
+app.factory('getSummoner',function($http){
+	return{
+		getChampion:function(id, genre){
+			return $http.get('http://localhost:8080/LolInfi/LolApi/SummonerApi'
+							 ,{headers:{
+							 'summoner': id,
+							 'genre': genre
+							 }});
+		}
+	}
+})
+
 app.service('videoPlayer',function(){
     this.video = null;
     this.setVideo = function(input){

@@ -12,9 +12,16 @@ app.directive('lolHome',function(){
             scope.championPage = {"id":1};
 			$("body").css("background","url('images/bg1.jpg')");
         },
-        controller:function($scope,redirect){
+        controller:function($scope, redirect, getSummoner){
             $scope.searchSummoner = function(input){
                 $scope.config.searchToggle = false;
+				getSummoner.getChampion(input, "champions").success(function(data){
+					console.log(data);
+				}).error(
+					function(){
+						console.log("error loading");
+					}
+				);
                 redirect("/base/baseHome/baseChampionGeneral");
             }
 			

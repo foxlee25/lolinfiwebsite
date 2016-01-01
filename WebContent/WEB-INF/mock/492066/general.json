@@ -1,0 +1,196 @@
+{
+    "roles": [
+        {
+            "stats": {
+                "cs": 189.74683544303798, 
+                "lastPlayed": 64.9815670926315, 
+                "games": 79, 
+                "kda": 2.4716553287981857, 
+                "winRate": 0.5569620253164557
+            }, 
+            "role": "TOP"
+        }, 
+        {
+            "stats": {
+                "cs": 114.38775510204081, 
+                "lastPlayed": 68.12524510086519, 
+                "games": 98, 
+                "kda": 3.169172932330827, 
+                "winRate": 0.6020408163265306
+            }, 
+            "role": "JUN"
+        }, 
+        {
+            "stats": {
+                "cs": 201.85507246376812, 
+                "lastPlayed": 71.49896237559031, 
+                "games": 69, 
+                "kda": 2.411633109619687, 
+                "winRate": 0.4927536231884058
+            }, 
+            "role": "MID"
+        }, 
+        {
+            "stats": {
+                "cs": 203.87301587301587, 
+                "lastPlayed": 67.01749641031495, 
+                "games": 63, 
+                "kda": 2.8483870967741933, 
+                "winRate": 0.5873015873015873
+            }, 
+            "role": "ADC"
+        }, 
+        {
+            "stats": {
+                "cs": 29.075, 
+                "lastPlayed": 71.53411944327242, 
+                "games": 80, 
+                "kda": 2.466666666666667, 
+                "winRate": 0.5
+            }, 
+            "role": "SUP"
+        }
+    ], 
+    "champs": [
+        {
+            "stats": {
+                "cs": 134.38682432432432, 
+                "winRate": 0.5743243243243243, 
+                "games": 592, 
+                "kda": 2.449679329057721
+            }, 
+            "id": 0
+        }, 
+        {
+            "stats": {
+                "cs": 30.0, 
+                "winRate": 0.75, 
+                "games": 8, 
+                "kda": 2.403225806451613
+            }, 
+            "id": 1
+        }, 
+        {
+            "stats": {
+                "cs": 82.5, 
+                "winRate": 0.5, 
+                "games": 2, 
+                "kda": 1.1111111111111112
+            }, 
+            "id": 2
+        }, 
+        {
+            "stats": {
+                "cs": 192.58333333333334, 
+                "winRate": 0.5833333333333334, 
+                "games": 24, 
+                "kda": 2.257309941520468
+            }, 
+            "id": 4
+        }, 
+        {
+            "stats": {
+                "cs": 155.125, 
+                "winRate": 0.75, 
+                "games": 8, 
+                "kda": 2.739130434782609
+            }, 
+            "id": 6
+        }
+    ], 
+    "topBar": {
+        "Average KDA": 1.8, 
+        "Average Games per Champ": 12.67741935483871, 
+        "Average Games per Day": 0.4, 
+        "Games Played": 5, 
+        "Rank": "CHALLENGER I", 
+        "Win Rate": 0.4, 
+        "Average Game Length": 30.839974293059125
+    }, 
+    "statsRecent20": {
+        "gold": 13223, 
+        "Deaths": 7.4, 
+        "Wards": 20.1, 
+        "KDA": 1.9594594594594594, 
+        "Damage": 15259.85, 
+        "Contribution for Kills": 0.5440900562851783, 
+        "Average Game Length": 1841, 
+        "CS": 111.45
+    }, 
+    "champsRecent20": [
+        {
+            "id": 64, 
+            "times": 1
+        }, 
+        {
+            "id": 1, 
+            "times": 2
+        }, 
+        {
+            "id": 98, 
+            "times": 1
+        }, 
+        {
+            "id": 67, 
+            "times": 1
+        }, 
+        {
+            "id": 7, 
+            "times": 1
+        }, 
+        {
+            "id": 236, 
+            "times": 3
+        }, 
+        {
+            "id": 12, 
+            "times": 2
+        }, 
+        {
+            "id": 112, 
+            "times": 1
+        }, 
+        {
+            "id": 76, 
+            "times": 1
+        }, 
+        {
+            "id": 41, 
+            "times": 1
+        }, 
+        {
+            "id": 25, 
+            "times": 1
+        }, 
+        {
+            "id": 60, 
+            "times": 1
+        }, 
+        {
+            "id": 223, 
+            "times": 4
+        }
+    ], 
+    "rolesRecent20": [
+        {
+            "role": "TOP", 
+            "times": 1
+        }, 
+        {
+            "role": "JUN", 
+            "times": 6
+        }, 
+        {
+            "role": "MID", 
+            "times": 2
+        }, 
+        {
+            "role": "ADC", 
+            "times": 4
+        }, 
+        {
+            "role": "SUP", 
+            "times": 7
+        }
+    ]
+}
