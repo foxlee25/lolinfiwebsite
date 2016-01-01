@@ -10,10 +10,20 @@ app.directive('lolChampionsChampions',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope,getApi){
-            getApi.getChampion().success(function(data){
-                $scope.champions = data;
-            });
+        controller:function($scope, getSummoner){
+//            getApi.getChampion().success(function(data){
+//                $scope.champions = data;
+//            });
+
+			getSummoner.getChampion($scope.summonerId, "champions").success(function(data){
+					$scope.champions = data; 
+				}).error(
+					function(){
+						console.log("error loading");
+					}
+				);
+			
+			console.log(JSON.stringify($scope.champions));
         }
     }
 });

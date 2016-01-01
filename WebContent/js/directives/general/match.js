@@ -13,10 +13,19 @@ app.directive('lolChampionsMatch',function(){
                                   ,"champion":"All"
                                   ,"role":"All"};
         },
-        controller:function($scope,getApi){
-            getApi.getMatches().success(function(data){
-                $scope.matches = data;
-            });
+        controller:function($scope, getApi, getSummoner){
+//            getApi.getMatches().success(function(data){
+//                $scope.matches = data;
+//            });
+			
+			getSummoner.getChampion($scope.summonerId, "matches").success(function(data){
+					$scope.matches = data; 
+				}).error(
+					function(){
+						console.log("error loading");
+					}
+				);
+            }
         }
     }
-});
+);

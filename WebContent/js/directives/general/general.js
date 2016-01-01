@@ -10,10 +10,11 @@ app.directive('lolChampionsGeneral',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope,getApi){
-            getApi.getGeneral().success(function(data){
-                $scope.championGeneral = data;
-            });
+        controller:function($scope, getApi){
+//            getApi.getGeneral().success(function(data){
+//                $scope.championGeneral = data;
+//            });
+		
             init_summonerGeneral_spiderChart();
              function init_summonerGeneral_spiderChart(){
                  $('.last20GamesSummarySpiderChart').highcharts({

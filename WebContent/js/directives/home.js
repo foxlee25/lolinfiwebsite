@@ -15,14 +15,15 @@ app.directive('lolHome',function(){
         controller:function($scope, redirect, getSummoner){
             $scope.searchSummoner = function(input){
                 $scope.config.searchToggle = false;
-				getSummoner.getChampion(input, "champions").success(function(data){
-					console.log(data);
+				$scope.summonerId = input;
+				getSummoner.getChampion(input, "general").success(function(data){
+					$scope.championGeneral = data;
+					redirect("/base/baseHome/baseChampionGeneral");
 				}).error(
 					function(){
 						console.log("error loading");
 					}
 				);
-                redirect("/base/baseHome/baseChampionGeneral");
             }
 			
 			$scope.$watch("config.searchToggle",function(data){
