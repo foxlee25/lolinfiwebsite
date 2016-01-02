@@ -3,9 +3,9 @@
         <div class="masterSearch">
             <div id="lolinfiBrandIcon"></div>
             <div id="searchBox">
-                <input class="searchInput" type="text" ng-model="searchInput" placeholder="Search for champion name,items ..." required>
-                <div ng-click="searchSummoner(searchInput)" class="submitSearch"></div>
-            </div>      
+                <input class="searchInput" type="text" ng-model="searchInput.value" placeholder="{{placeHolder}}" required>
+                <div ng-click="searchSummoner(searchInput.value)" class="submitSearch"></div>
+            </div> 
         </div>
     </div>
     <div ng-if="!config.searchToggle">

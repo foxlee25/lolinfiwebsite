@@ -10,20 +10,35 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
             scope.championPage = {"id":1};
+			scope.searchInput = {value:""};
+			scope.placeHolder = "Search for champion name,items ...";
 			$("body").css("background","url('images/bg1.jpg')");
         },
         controller:function($scope, redirect, getSummoner){
             $scope.searchSummoner = function(input){
-                $scope.config.searchToggle = false;
-				$scope.summonerId = input;
-				getSummoner.getChampion(input, "general").success(function(data){
-					$scope.championGeneral = data;
-					redirect("/base/baseHome/baseChampionGeneral");
-				}).error(
-					function(){
-						console.log("error loading");
-					}
-				);
+				if(input){
+					getSummoner.getChampion(input, "general")
+						.success(function(data){
+						if(data != "null"){
+							$scope.config.searchToggle = false;
+							$scope.summonerId = input;
+							$scope.championGeneral = data;
+							$scope.searchInput.value = "";
+							redirect("/base/baseHome/baseChampionGeneral");
+						}else{
+							$scope.searchInput.value = "";
+							$scope.placeHolder = "No Match Found";
+						}
+					}).error(
+						function(){
+							$scope.searchInput.value = "";
+							$scope.placeHolder = "No Match Found";
+							console.log("error loading");
+						}
+					);
+				}else{
+					$scope.placeHolder = "Search Can't be Empty!"
+				}
             }
 			
 			$scope.$watch("config.searchToggle",function(data){
