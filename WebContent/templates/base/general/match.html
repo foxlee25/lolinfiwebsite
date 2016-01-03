@@ -43,7 +43,7 @@
                 <th>Length</th>
                 <th>Time</th>
             </tr>
-            <tr ng-repeat="match in matches.matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
+            <tr ng-click="loadMatch()" ng-repeat="match in matches.matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
                 <td>{{match.queueType}}</td>
                 <td>{{match.kda}}</td>

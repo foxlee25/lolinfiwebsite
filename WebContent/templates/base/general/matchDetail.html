@@ -1,0 +1,52 @@
+<div>
+	<div id="victoryGroup">
+		<b>Victory</b>
+	</div>
+	<div id="champions">
+		<table class="table">
+			<tr class="championsTableHeader">
+				<th>Champion</th>
+				<th>Summoner</th>
+				<th>KDA</th>
+				<th>C/Kills</th>
+				<th>Wards</th>
+				<th>CS</th>
+				<th>Items</th>
+			</tr>
+			<tr ng-repeat="champs in match.participants | limitTo:5" ng-class="{'tableStrip':$index%2==1}">
+				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.Champion}}/square.png" /></td>
+				<td>{{champs.Sumnomer}}</td>
+				<td>{{champs.KDA}}</td>
+				<td>{{champs.Kills}}</td>
+				<td>{{champs["Wards Killed"]}}</td>
+				<td>{{champs.CS}}</td>
+				<td><span ng-repeat="item in champs.Items"><img style="width:15px;height:15px;" ng-src="images/item_info/{{item}}.png"></span></td>
+			</tr>
+		</table>
+	</div>
+	<div id="defeatGroup">
+		<b>Defeat</b>
+	</div>
+	<div id="champions">
+		<table class="table">
+			<tr class="championsTableHeader">
+				<th>Champion</th>
+				<th>Summoner</th>
+				<th>KDA</th>
+				<th>C/Kills</th>
+				<th>Wards</th>
+				<th>CS</th>
+				<th>Items</th>
+			</tr>
+			<tr ng-repeat="champs in match.participants | limitTo:5:5" ng-class="{'tableStrip':$index%2==1}">
+				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.Champion}}/square.png" /></td>
+				<td>{{champs.Sumnomer}}</td>
+				<td>{{champs.KDA}}</td>
+				<td>{{champs.Kills}}</td>
+				<td>{{champs["Wards Killed"]}}</td>
+				<td>{{champs.CS}}</td>
+				<td><span ng-repeat="item in champs.Items"><img style="width:15px;height:15px;" ng-src="images/item_info/{{item}}.png"></span></td>
+			</tr>
+		</table>
+	</div>
+</div>

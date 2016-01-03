@@ -17,6 +17,7 @@ app.directive('lolChampionsGeneral',function(){
 		
             init_summonerGeneral_spiderChart();
              function init_summonerGeneral_spiderChart(){
+
                  $('.last20GamesSummarySpiderChart').highcharts({
                       credits: {
                         enabled: false

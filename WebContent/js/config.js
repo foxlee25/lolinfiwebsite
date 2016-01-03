@@ -54,6 +54,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url:'/baseChampionMatch',
         template: '<lol-champions-match></lol-champions-match>'
     })
+     .state('base.home.matchDetail',{
+        url:'/baseChampionMatchDetail',
+        template: '<lol-champions-match-detail></lol-champions-match-detail>'
+    })
     ;
     $urlRouterProvider.otherwise('/base/baseHome');
     
