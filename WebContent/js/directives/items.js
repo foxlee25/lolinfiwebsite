@@ -11,7 +11,7 @@ app.directive('lolItems',function(){
         link:function(scope,element,attrs){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
-			scope.animateOver = false;
+			scope.animateOver = true;
         },
         controller:function($scope,getApi){
 			var camera, scene, renderer;
@@ -20,9 +20,17 @@ app.directive('lolItems',function(){
 			var targets = {table:[]};
 		
             getApi.getItemInfo().success(function(data){
+				$('#itemAnimate').hide();
                 $scope.itemInfo = data;
-				init(data);
-				animate();
+				/**
+				* hide the animation for items for now
+				* uncomment the init() and animate() and change the
+				* scope.animateOver = true to false
+				* and remove the hide() on top in order to
+				* revert the change
+				*/
+				//init(data);
+				//animate();
 				//setTimeout(replaceItems, 2000)
 				function replaceItems(){
 					
