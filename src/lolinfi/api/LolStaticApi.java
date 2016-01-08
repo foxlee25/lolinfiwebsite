@@ -7,17 +7,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import lolinfi.dao.RiotApiDao;
+
 /**
  * Servlet implementation class LolApi
  */
-@WebServlet("/LolApi")
-public class LolApi extends HttpServlet {
+@WebServlet("/LolStatic")
+public class LolStaticApi extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public LolApi() {
+    public LolStaticApi() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -27,7 +29,17 @@ public class LolApi extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String genre = request.getHeader("genre");
+		String responseString = null;
+		switch(genre){
+		case "champion":
+			responseString = RiotApiDao.getChampions();
+			break;
+		default:
+			responseString = "";
+		}
+		
+		response.getWriter().append(responseString);
 	}
 
 	/**

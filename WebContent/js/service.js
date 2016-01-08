@@ -18,8 +18,11 @@ app.factory('getApi',function($http){
         getMatches:function(){
             return $http.get('json/matches.json');
         },
-        getChampInfo:function(){
-            return $http.get('json/champ_info.json');
+        getChampInfo:function(genre){
+            return $http.get('http://localhost:8080/LolInfi/LolStatic'
+							 ,{headers:{
+							 'genre': genre
+							 }});
         },
         getItemInfo:function(){
             return $http.get('json/item_info.json');

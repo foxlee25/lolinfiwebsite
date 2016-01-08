@@ -9,13 +9,15 @@ app.directive('lolChampions',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-            scope.matchOptions = {"league":"Bronze"
-                      ,"Time":"Last Month"
-                      ,"queueType":"Solo Ranked"};
+//            scope.matchOptions = {"league":"Bronze"
+//                      ,"Time":"Last Month"
+//                      ,"queueType":"Solo Ranked"};
 			$("body").css("background","url('images/otherbg.jpg')");
         },
         controller:function($scope,getApi,redirect,championDetail){
-            getApi.getChampInfo().success(function(data){
+            getApi.getChampInfo("champion").success(function(data){
+				console.log(JSON.stringify(data));
+				debugger;
                 $scope.champInfo = data;
             });
 			
