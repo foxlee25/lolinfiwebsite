@@ -39,6 +39,9 @@ public class LolSummonerApi extends HttpServlet {
 		case "matchlist":
 			responseString = RiotApiDao.getMatchList(id);
 			break;
+		case "matchdetail":
+			responseString = RiotApiDao.getMatchDetail(id);
+			break;
 		default:
 			responseString = "";
 		}

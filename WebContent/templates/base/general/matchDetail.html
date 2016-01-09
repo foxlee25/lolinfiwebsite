@@ -13,14 +13,22 @@
 				<th>CS</th>
 				<th>Items</th>
 			</tr>
-			<tr ng-repeat="champs in match.participants | limitTo:5" ng-class="{'tableStrip':$index%2==1}">
-				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.Champion}}/square.png" /></td>
-				<td>{{champs.Sumnomer}}</td>
-				<td>{{champs.KDA}}</td>
-				<td>{{champs.Kills}}</td>
-				<td>{{champs["Wards Killed"]}}</td>
-				<td>{{champs.CS}}</td>
-				<td><span ng-repeat="item in champs.Items"><img style="width:15px;height:15px;" ng-src="images/item_info/{{item}}.png"></span></td>
+			<tr ng-repeat="champs in match.participants" ng-show="champs.stats.winner" ng-class="{'tableStrip':$index%2==1}">
+				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
+				<td>{{match.participantIdentities[champs.participantId].player.summonerName}}</td>
+				<td>{{(champs.stats.kills+champs.stats.assists)/champs.stats.deaths|number:2}}</td>
+				<td>{{champs.stats.kills}}</td>
+				<td>{{champs.stats.wardsKilled}}</td>
+				<td>{{champs.stats.minionsKilled}}</td>
+				<td><span>
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item0}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item1}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item2}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item3}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item4}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item5}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item6}}.png">
+				</span></td>
 			</tr>
 		</table>
 	</div>
@@ -38,14 +46,22 @@
 				<th>CS</th>
 				<th>Items</th>
 			</tr>
-			<tr ng-repeat="champs in match.participants | limitTo:5:5" ng-class="{'tableStrip':$index%2==1}">
-				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.Champion}}/square.png" /></td>
-				<td>{{champs.Sumnomer}}</td>
-				<td>{{champs.KDA}}</td>
-				<td>{{champs.Kills}}</td>
-				<td>{{champs["Wards Killed"]}}</td>
-				<td>{{champs.CS}}</td>
-				<td><span ng-repeat="item in champs.Items"><img style="width:15px;height:15px;" ng-src="images/item_info/{{item}}.png"></span></td>
+			<tr ng-repeat="champs in match.participants" ng-show="!champs.stats.winner" ng-class="{'tableStrip':$index%2==1}">
+				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
+				<td>{{match.participantIdentities[champs.participantId].player.summonerName}}</td>
+				<td>{{(champs.stats.kills+champs.stats.assists)/champs.stats.deaths|number:2}}</td>
+				<td>{{champs.stats.kills}}</td>
+				<td>{{champs.stats.wardsKilled}}</td>
+				<td>{{champs.stats.minionsKilled}}</td>
+				<td><span>
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item0}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item1}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item2}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item3}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item4}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item5}}.png">
+					<img style="width:15px;height:15px;" ng-src="images/item_info/{{champs.stats.item6}}.png">
+				</span></td>
 			</tr>
 		</table>
 	</div>

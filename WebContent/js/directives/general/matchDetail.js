@@ -10,19 +10,26 @@ app.directive('lolChampionsMatchDetail',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, getApi, getSummoner){
+        controller:function($scope, getSummoner, RiotSummonerApi){
 //            getApi.getMatches().success(function(data){
 //                $scope.matches = data;
 //            });
 			
-			getSummoner.getChampion($scope.summonerId, "match").success(function(data){
-					$scope.match = data; 
-				}).error(
-					function(){
-						console.log("error loading");
-					}
-				);
-            }
+			/**
+			* fake call to get match detail
+			*/
+//			getSummoner.getChampion($scope.summonerId, "match").success(function(data){
+//					$scope.match = data; 
+//				}).error(
+//					function(){
+//						console.log("error loading");
+//					}
+//				);
+			
+			RiotSummonerApi.getMatchDetail().success(function(data){
+				$scope.match = data;
+			});
+		}
         }
     }
 );

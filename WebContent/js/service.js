@@ -58,6 +58,12 @@ app.factory('getSummoner',function($http){
 */
 app.service('RiotSummonerApi',function($http){
 	this.summonerId = null;
+	this.matchId = null;
+	
+	this.setMatchId = function(input){
+		this.matchId = input;
+	}
+	
 	this.setSummonerId = function(input){
 		this.summonerId = input;
 	}
@@ -81,6 +87,17 @@ app.service('RiotSummonerApi',function($http){
 							 ,{headers:{
 							 'genre': "matchlist",
 							 'id': this.summonerId
+							 }});
+	}
+	
+	/**
+	* get match detail by match id
+	*/
+	this.getMatchDetail = function(){
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner'
+							 ,{headers:{
+							 'genre': "matchdetail",
+							 'id': this.matchId
 							 }});
 	}
 })

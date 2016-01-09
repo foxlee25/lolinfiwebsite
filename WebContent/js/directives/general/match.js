@@ -18,7 +18,8 @@ app.directive('lolChampionsMatch',function(){
 //                $scope.matches = data;
 //            });
         	
-        	$scope.loadMatch = function(){
+        	$scope.loadMatch = function(id){
+				RiotSummonerApi.setMatchId(id);
         		redirect("/base/baseHome/baseChampionMatchDetail");
         	}
 			

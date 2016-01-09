@@ -30,6 +30,7 @@ public class RiotApiDao {
 	private static String RIOT_URL_ITEM; 
 	private static String RIOT_URL_SUMMONER_CHAMPION;
 	private static String RIOT_URL_MATCHLIST;
+	private static String RIOT_URL_MATCHDETAIL;
 	
 	static{
 		riotClient = new DefaultHttpClient();
@@ -43,6 +44,7 @@ public class RiotApiDao {
 			RIOT_URL_ITEM = properties.getProperty("RIOT_URL_ITEM");
 			RIOT_URL_SUMMONER_CHAMPION = properties.getProperty("RIOT_URL_SUMMONER_CHAMPION");
 			RIOT_URL_MATCHLIST = properties.getProperty("RIOT_URL_MATCHLIST");
+			RIOT_URL_MATCHDETAIL = properties.getProperty("RIOT_URL_MATCHDETAIL");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -154,4 +156,22 @@ public class RiotApiDao {
 		}
 		return null;
 	}
+
+	public static String getMatchDetail(String id) {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_MATCHDETAIL+id+"?api_key="+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");	
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 }
