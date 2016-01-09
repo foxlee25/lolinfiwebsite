@@ -36,31 +36,19 @@
                     <th>Magic</th>
                     <th>Difficulty</th>
                 </tr>
-                <tr ng-repeat="champ in champInfo" ng-click="setChampionDetail(champ)" ng-class="{'tableStrip':$index%2==1}">
-					<td style="padding-left:40px"><p style="display:inline;padding-right:30px">{{champ.id}}</p><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px">{{champ.name}}</p></td>
+                <tr ng-repeat="champ in champInfo.data" ng-click="setChampionDetail(champ.id)" ng-class="{'tableStrip':$index%2==1}">
+					<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px;align-self:bottom">{{champ.name}}</p></td>
                     <td>
-                        <div class="progress">
-                          <div class="progress-bar" ng-style="{'width':champ.info.attack/10}">
-                          </div>
-                        </div>
+					  {{champ.info.attack}}/10
                     </td>
                     <td>
-                        <div class="progress">
-                          <div class="progress-bar" ng-style="{'width':champ.info.defense/10}">
-                          </div>
-                        </div>
+					  {{champ.info.defense}}/10
                     </td>
 					<td>
-                        <div class="progress">
-                          <div class="progress-bar" ng-style="{'width':champ.info.magic/10}">
-                          </div>
-                        </div>
+					  {{champ.info.magic}}/10
                     </td>
                     <td>
-                        <div class="progress">
-                          <div class="progress-bar" ng-style="{'width':champ.info.difficulty/10}">
-                          </div>
-                        </div>
+					  {{champ.info.difficulty}}/10
                     </td>
                 </tr>
             </table>

@@ -58,13 +58,17 @@ app.service('videoPlayer',function(){
     }
 })
 
-app.service('championDetail',function(){
-	this.champDetail = null;
-	this.setChampDetail = function(input){
-		this.champDetail = input;
+app.service('championDetail',function($http){
+	this.id = null;
+	this.setChampDetailId = function(input){
+		this.id = input;
 	}
-	this.getChampDetail = function(){
-		return this.champDetail;
+	this.getChampDetail = function(genre){
+		return $http.get('http://localhost:8080/LolInfi/LolStatic'
+						 ,{headers:{
+						 'genre': genre,
+						 'id':this.id
+						 }});
 	}
 })
 

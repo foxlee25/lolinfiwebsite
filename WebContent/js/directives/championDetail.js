@@ -11,7 +11,14 @@ app.directive('lolChampiondetail',function(){
         link:function(scope,element,attrs){
         },
         controller:function($scope,redirect,championDetail){
-			$scope.detail = championDetail.getChampDetail();
+			 championDetail.getChampDetail("champion_detail")
+				.success(function(data){
+				 	data.spells.map(function(value){
+						value.image.full = value.image.full.replace(/([A-Z])/g, ' $1').trim();
+						return value;
+					});
+					$scope.detail = data;
+			})
         }
     }
 });

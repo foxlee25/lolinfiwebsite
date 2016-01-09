@@ -35,10 +35,14 @@ public class LolStaticApi extends HttpServlet {
 		case "champion":
 			responseString = RiotApiDao.getChampions();
 			break;
+		case "champion_detail":
+			String id = request.getHeader("id");
+			responseString = RiotApiDao.getChampionDetail(id);
+			break;
 		default:
 			responseString = "";
 		}
-		
+		System.out.println(responseString);
 		response.getWriter().append(responseString);
 	}
 

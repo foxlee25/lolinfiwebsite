@@ -17,12 +17,11 @@ app.directive('lolChampions',function(){
         controller:function($scope,getApi,redirect,championDetail){
             getApi.getChampInfo("champion").success(function(data){
 				console.log(JSON.stringify(data));
-				debugger;
                 $scope.champInfo = data;
             });
 			
-			$scope.setChampionDetail = function(input){
-				championDetail.setChampDetail(input);
+			$scope.setChampionDetail = function(id){
+				championDetail.setChampDetailId(id);
 				redirect("/base/baseChampDetail");
 			}
         }
