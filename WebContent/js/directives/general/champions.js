@@ -10,20 +10,14 @@ app.directive('lolChampionsChampions',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, getSummoner){
+        controller:function($scope, RiotSummonerApi){
 //            getApi.getChampion().success(function(data){
 //                $scope.champions = data;
 //            });
 
-			getSummoner.getChampion($scope.summonerId, "champions").success(function(data){
-					$scope.champions = data; 
-				}).error(
-					function(){
-						console.log("error loading");
-					}
-				);
-			
-			console.log(JSON.stringify($scope.champions));
+			RiotSummonerApi.getChampionRank().success(function(data){
+				$scope.champions = data.champions;
+			});
         }
     }
 });

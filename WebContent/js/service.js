@@ -1,7 +1,7 @@
 /**
 * call mock data
 */
-app.factory('getApi',function($http){
+app.factory('RiotApi',function($http){
     return{
         getChampion:function(){
             return $http.get('json/champions.json');
@@ -18,6 +18,11 @@ app.factory('getApi',function($http){
         getMatches:function(){
             return $http.get('json/matches.json');
         },
+		/**
+		* general url to get static data
+		* by specifying the genre parameter to tell
+		* which query to run
+		*/
         getInfo:function(genre){
             return $http.get('http://localhost:8080/LolInfi/LolStatic'
 							 ,{headers:{
@@ -34,7 +39,7 @@ app.factory('getApi',function($http){
 })
 
 /**
-* call rest summoner api
+* mock call rest summoner api
 */
 app.factory('getSummoner',function($http){
 	return{
@@ -45,6 +50,38 @@ app.factory('getSummoner',function($http){
 							 'genre': genre
 							 }});
 		}
+	}
+})
+
+/**
+* call riot rest summoner api
+*/
+app.service('RiotSummonerApi',function($http){
+	this.summonerId = null;
+	this.setSummonerId = function(input){
+		this.summonerId = input;
+	}
+	
+	/**
+	* get summoner played chapmion list
+	*/
+	this.getChampionRank = function(){
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner'
+							 ,{headers:{
+							 'genre': "champion",
+							 'id': this.summonerId
+							 }});
+	}
+	
+	/**
+	* get summoner played matchlist
+	*/
+	this.getMatchList = function(){
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner'
+							 ,{headers:{
+							 'genre': "matchlist",
+							 'id': this.summonerId
+							 }});
 	}
 })
 

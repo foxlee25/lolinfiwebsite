@@ -39,16 +39,16 @@
             <tr class="matchesTableHeader">
                 <th>Champion</th>
                 <th>Type</th>
-                <th>KDA</th>
-                <th>Length</th>
-                <th>Time</th>
+                <th>Season</th>
+                <th>Lane</th>
+                <th>Role</th>
             </tr>
-            <tr ng-click="loadMatch()" ng-repeat="match in matches.matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
+            <tr ng-click="loadMatch()" ng-repeat="match in matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
-                <td>{{match.queueType}}</td>
-                <td>{{match.kda}}</td>
-                <td>{{match.matchDuration}}</td>
-                <td>{{match.matchTime}}</td>
+                <td>{{match.queue}}</td>
+                <td>{{match.season}}</td>
+                <td>{{match.lane}}</td>
+                <td>{{match.role}}</td>
             </tr>
         </table>
     </div>

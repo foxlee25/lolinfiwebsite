@@ -13,7 +13,7 @@ app.directive('lolChampionsMatch',function(){
                                   ,"champion":"All"
                                   ,"role":"All"};
         },
-        controller:function($scope, getApi, getSummoner, redirect){
+        controller:function($scope, getSummoner, redirect, RiotSummonerApi){
 //            getApi.getMatches().success(function(data){
 //                $scope.matches = data;
 //            });
@@ -22,13 +22,21 @@ app.directive('lolChampionsMatch',function(){
         		redirect("/base/baseHome/baseChampionMatchDetail");
         	}
 			
-			getSummoner.getChampion($scope.summonerId, "matches").success(function(data){
-					$scope.matches = data; 
-				}).error(
-					function(){
-						console.log("error loading");
-					}
-				);
+			// get mock data
+//			getSummoner.getChampion($scope.summonerId, "matches").success(function(data){
+//					$scope.matches = data; 
+//				}).error(
+//					function(){
+//						console.log("error loading");
+//					}
+//				);
+			
+			/**
+			* call to get summoner matchlist from riotAPI
+			*/
+			RiotSummonerApi.getMatchList().success(function(data){
+				$scope.matches = data.matches;
+			});
             }
         }
     }

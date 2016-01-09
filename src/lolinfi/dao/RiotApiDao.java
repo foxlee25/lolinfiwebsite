@@ -28,6 +28,8 @@ public class RiotApiDao {
 	private static String RIOT_URL_CHAMPION;
 	private static String RIOT_URL_CHAMPIONDETAIL;
 	private static String RIOT_URL_ITEM; 
+	private static String RIOT_URL_SUMMONER_CHAMPION;
+	private static String RIOT_URL_MATCHLIST;
 	
 	static{
 		riotClient = new DefaultHttpClient();
@@ -39,6 +41,8 @@ public class RiotApiDao {
 			RIOT_URL_CHAMPION = properties.getProperty("RIOT_URL_CHAMPION");
 			RIOT_URL_CHAMPIONDETAIL = properties.getProperty("RIOT_URL_CHAMPIONDETAIL");
 			RIOT_URL_ITEM = properties.getProperty("RIOT_URL_ITEM");
+			RIOT_URL_SUMMONER_CHAMPION = properties.getProperty("RIOT_URL_SUMMONER_CHAMPION");
+			RIOT_URL_MATCHLIST = properties.getProperty("RIOT_URL_MATCHLIST");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -48,6 +52,10 @@ public class RiotApiDao {
 		}
 	}
 	
+	/**
+	 * get champion list
+	 * @return
+	 */
 	public static String getChampions(){
 		httpGet = new HttpGet(RIOT_URL_CHAMPION+API_KEY);
         try {
@@ -64,6 +72,11 @@ public class RiotApiDao {
 		return null;
 	}
 
+	/**
+	 * get champion detail by id
+	 * @param id
+	 * @return
+	 */
 	public static String getChampionDetail(String id) {
 		// TODO Auto-generated method stub
 		String[] url = RIOT_URL_CHAMPIONDETAIL.split("\\?");
@@ -83,9 +96,51 @@ public class RiotApiDao {
 		return null;
 	}
 
+	/**
+	 * get item info
+	 * @return
+	 */
 	public static String getItems() {
 		// TODO Auto-generated method stub
 		httpGet = new HttpGet(RIOT_URL_ITEM+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
+	/**
+	 * get summoner champion list
+	 * @return
+	 */
+	public static String getSummonerChampion(String id) {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_SUMMONER_CHAMPION+id+"/ranked?api_key="+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
+			e.printStackTrace();
+		}		
+		return null;
+	}
+
+	public static String getMatchList(String id) {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_MATCHLIST+id+"?seasons=SEASON2015&api_key="+API_KEY);
         try {
 			httpResponse = riotClient.execute(httpGet);
 		    entity = httpResponse.getEntity();

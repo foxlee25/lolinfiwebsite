@@ -11,8 +11,8 @@ app.directive('lolRank',function(){
         link:function(scope,element,attrs){
 			$("body").css("background","url('images/otherbg.jpg')");
         },
-        controller:function($scope,getApi,loadSummoner,redirect){
-            getApi.getChallengerInfo().success(function(data){
+        controller:function($scope,RiotApi,loadSummoner,redirect){
+            RiotApi.getChallengerInfo().success(function(data){
                 $scope.challengerInfo = data;
             });
 			

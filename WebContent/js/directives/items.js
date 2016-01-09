@@ -13,13 +13,13 @@ app.directive('lolItems',function(){
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
         },
-        controller:function($scope,getApi){
+        controller:function($scope,RiotApi){
 			var camera, scene, renderer;
 			var controls;
 			var objects = [];
 			var targets = {table:[]};
 		
-            getApi.getInfo("item").success(function(data){
+            RiotApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();
                 $scope.itemInfo = data.data;
 				/**

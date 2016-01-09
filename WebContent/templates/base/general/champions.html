@@ -8,20 +8,19 @@
                 <th>KDA</th>
                 <th>CS</th>
             </tr>
-            <tr ng-repeat="champs in champions.champions" ng-class="{'tableStrip':$index%2==1}">
+            <tr ng-repeat="champs in champions" ng-class="{'tableStrip':$index%2==1}">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.id}}/square.png" /></td>
                 <td style="text-align:left">
-					{{champs.stats.winRate*100|number:2}}%
+					{{champs.stats.totalSessionsWon*100/champs.stats.totalSessionsPlayed|number:2}}%
                     <div class="progress">
-                      <div class="progress-bar" role="progressbar" aria-valuenow="{{champs.stats.winRate*100}}"
-                      aria-valuemin="0" aria-valuemax="100" style="width:{{champs.stats.winRate*100}}%">
-                        <span class="sr-only">70% Complete</span>
+                      <div class="progress-bar" role="progressbar" aria-valuenow="{{champs.stats.totalSessionsWon*100/champs.stats.totalSessionsPlayed}}"
+                      aria-valuemin="0" aria-valuemax="100" style="width:{{champs.stats.totalSessionsWon*100/champs.stats.totalSessionsPlayed}}%">
                       </div>
                     </div>
                 </td>
-                <td>{{champs.stats.games}}</td>
-                <td>{{champs.stats.kda|number:2}}</td>
-                <td>{{champs.stats.cs|number:2}}</td>
+                <td>{{champs.stats.totalSessionsPlayed}}</td>
+                <td>{{(champs.stats.totalChampionKills+champs.stats.totalAssists)/champs.stats.totalSessionsPlayed|number:2}}</td>
+                <td>{{champs.stats.totalMinionKills}}</td>
             </tr>
         </table>
     </div>

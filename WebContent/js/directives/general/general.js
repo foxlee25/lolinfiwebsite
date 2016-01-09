@@ -10,7 +10,7 @@ app.directive('lolChampionsGeneral',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, getApi){
+        controller:function($scope, RiotApi){
 //            getApi.getGeneral().success(function(data){
 //                $scope.championGeneral = data;
 //            });
