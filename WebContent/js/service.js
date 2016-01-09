@@ -18,7 +18,7 @@ app.factory('getApi',function($http){
         getMatches:function(){
             return $http.get('json/matches.json');
         },
-        getChampInfo:function(genre){
+        getInfo:function(genre){
             return $http.get('http://localhost:8080/LolInfi/LolStatic'
 							 ,{headers:{
 							 'genre': genre

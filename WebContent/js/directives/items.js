@@ -19,9 +19,9 @@ app.directive('lolItems',function(){
 			var objects = [];
 			var targets = {table:[]};
 		
-            getApi.getItemInfo().success(function(data){
+            getApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();
-                $scope.itemInfo = data;
+                $scope.itemInfo = data.data;
 				/**
 				* hide the animation for items for now
 				* uncomment the init() and animate() and change the

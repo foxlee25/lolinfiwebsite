@@ -15,7 +15,7 @@ app.directive('lolChampions',function(){
 			$("body").css("background","url('images/otherbg.jpg')");
         },
         controller:function($scope,getApi,redirect,championDetail){
-            getApi.getChampInfo("champion").success(function(data){
+            getApi.getInfo("champion").success(function(data){
 				console.log(JSON.stringify(data));
                 $scope.champInfo = data;
             });

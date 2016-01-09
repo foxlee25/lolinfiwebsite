@@ -27,6 +27,8 @@ public class RiotApiDao {
 	private static String API_KEY;
 	private static String RIOT_URL_CHAMPION;
 	private static String RIOT_URL_CHAMPIONDETAIL;
+	private static String RIOT_URL_ITEM; 
+	
 	static{
 		riotClient = new DefaultHttpClient();
 		try {
@@ -36,6 +38,7 @@ public class RiotApiDao {
 			API_KEY = properties.getProperty("API_KEY");
 			RIOT_URL_CHAMPION = properties.getProperty("RIOT_URL_CHAMPION");
 			RIOT_URL_CHAMPIONDETAIL = properties.getProperty("RIOT_URL_CHAMPIONDETAIL");
+			RIOT_URL_ITEM = properties.getProperty("RIOT_URL_ITEM");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -75,6 +78,23 @@ public class RiotApiDao {
 			e.printStackTrace();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static String getItems() {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_ITEM+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
 			e.printStackTrace();
 		}
 		return null;
