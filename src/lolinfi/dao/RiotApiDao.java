@@ -31,6 +31,8 @@ public class RiotApiDao {
 	private static String RIOT_URL_SUMMONER_CHAMPION;
 	private static String RIOT_URL_MATCHLIST;
 	private static String RIOT_URL_MATCHDETAIL;
+	private static String RIOT_URL_SUMMONERID;
+	private static String RIOT_URL_SUMMONER_GENERAL;
 	
 	static{
 		riotClient = new DefaultHttpClient();
@@ -45,6 +47,7 @@ public class RiotApiDao {
 			RIOT_URL_SUMMONER_CHAMPION = properties.getProperty("RIOT_URL_SUMMONER_CHAMPION");
 			RIOT_URL_MATCHLIST = properties.getProperty("RIOT_URL_MATCHLIST");
 			RIOT_URL_MATCHDETAIL = properties.getProperty("RIOT_URL_MATCHDETAIL");
+			RIOT_URL_SUMMONERID = properties.getProperty("RIOT_URL_SUMMONERID");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -140,6 +143,11 @@ public class RiotApiDao {
 		return null;
 	}
 
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
 	public static String getMatchList(String id) {
 		// TODO Auto-generated method stub
 		httpGet = new HttpGet(RIOT_URL_MATCHLIST+id+"?seasons=SEASON2015&api_key="+API_KEY);
@@ -173,5 +181,40 @@ public class RiotApiDao {
 		}
 		return null;
 	}
+
+	public static String getSummonerId(String id) {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_SUMMONERID+id+"?api_key="+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");	
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
+			e.printStackTrace();
+		}
+		return null;
+	}
+
+	public static String getSummonerGeneral(String id) {
+		// TODO Auto-generated method stub
+		httpGet = new HttpGet(RIOT_URL_SUMMONER_GENERAL+id+"/summary?api_key="+API_KEY);
+        try {
+			httpResponse = riotClient.execute(httpGet);
+		    entity = httpResponse.getEntity();
+		    return EntityUtils.toString(entity,"UTF-8");	
+		} catch (ClientProtocolException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch blocks
+			e.printStackTrace();
+		}
+		return null;
+	}
+	
 	
 }

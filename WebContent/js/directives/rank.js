@@ -11,14 +11,14 @@ app.directive('lolRank',function(){
         link:function(scope,element,attrs){
 			$("body").css("background","url('images/otherbg.jpg')");
         },
-        controller:function($scope,RiotApi,loadSummoner,redirect){
+        controller:function($scope,RiotApi,loadSummoner,redirect, RiotSummonerApi){
             RiotApi.getChallengerInfo().success(function(data){
                 $scope.challengerInfo = data;
             });
 			
 			$scope.loadSummoner = function(challenger){
 				$scope.config.searchToggle = false;
-				loadSummoner.setSummoner(challenger);
+				RiotSummonerApi.setSummonerId();
 				redirect("/base/baseHome/baseChampionGeneral");
 			}
         }

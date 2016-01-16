@@ -59,6 +59,7 @@ app.factory('getSummoner',function($http){
 app.service('RiotSummonerApi',function($http){
 	this.summonerId = null;
 	this.matchId = null;
+	this.summonerName = null;
 	
 	this.setMatchId = function(input){
 		this.matchId = input;
@@ -66,6 +67,32 @@ app.service('RiotSummonerApi',function($http){
 	
 	this.setSummonerId = function(input){
 		this.summonerId = input;
+	}
+	
+	this.setSummonerName = function(input){
+		this.summonerName = input;
+	}
+	
+	/**
+	* get summoner general info by summoner id
+	*/
+	this.getChampionGeneral = function(){
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner'
+							 ,{headers:{
+							 'genre': "general",
+							 'id': this.summonerId
+							 }});
+	}
+	
+	/**
+	* get summoner id from name
+	*/
+	this.getChampionGeneralByName = function(){
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner'
+							 ,{headers:{
+							 'genre': "getid",
+							 'id': this.summonerName
+							 }});
 	}
 	
 	/**

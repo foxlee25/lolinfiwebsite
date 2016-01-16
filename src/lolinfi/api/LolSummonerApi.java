@@ -33,6 +33,12 @@ public class LolSummonerApi extends HttpServlet {
 		String id = request.getHeader("id");
 		String responseString = null;
 		switch(genre){
+		case "getid":
+			responseString = RiotApiDao.getSummonerId(id);
+			break;
+		case "general":
+			responseString = RiotApiDao.getSummonerGeneral(id);
+			break;
 		case "champion":
 			responseString = RiotApiDao.getSummonerChampion(id);
 			break;
