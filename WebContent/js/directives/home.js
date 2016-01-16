@@ -17,30 +17,50 @@ app.directive('lolHome',function(){
         controller:function($scope, $q, redirect, getSummoner, RiotSummonerApi){
             $scope.searchSummoner = function(input){
 				if(input){
-					RiotSummonerApi.setSummonerId(input);
-					getSummoner.getChampion(input, "general")
-						.success(function(data){
-						if(data != "null"){
-							$scope.config.searchToggle = false;
-							$scope.summonerId = input;
-							$scope.championGeneral = data;
-							$scope.searchInput.value = "";
-							redirect("/base/baseHome/baseChampionGeneral");
-						}else{
-							$scope.searchInput.value = "";
-							$scope.placeHolder = "No Match Found";
-						}
-					}).error(
-						function(){
-							$scope.searchInput.value = "";
-							$scope.placeHolder = "No Match Found";
-							console.log("error loading");
-						}
-					);
+					//user search by name
+					if(isNaN(input)){
+						RiotSummonerApi.setSummonerName(input);
+						var promise = RiotSummonerApi.getChampionGeneralByName();
+						
+						promise.then(function(payload){
+							if(payload.status == 200){
+								var data = payload.data;
+								$scope.searchSummonerById(Object.keys(data)[0]);
+							}else{
+								$scope.searchInput.value = "";
+								$scope.placeHolder = "No Match Found";
+							}
+						});
+					}else{
+						$scope.searchSummonerById(input);
+					}
 				}else{
 					$scope.placeHolder = "Search Can't be Empty!"
 				}
             }
+			
+			$scope.searchSummonerById = function(input){
+				RiotSummonerApi.setSummonerId(input);
+				getSummoner.getChampion(input, "general")
+					.success(function(data){
+					if(data != "null"){
+						$scope.config.searchToggle = false;
+						$scope.summonerId = input;
+						$scope.championGeneral = data;
+						$scope.searchInput.value = "";
+						redirect("/base/baseHome/baseChampionGeneral");
+					}else{
+						$scope.searchInput.value = "";
+						$scope.placeHolder = "No Match Found";
+					}
+				}).error(
+					function(){
+						$scope.searchInput.value = "";
+						$scope.placeHolder = "No Match Found";
+						console.log("error loading");
+					}
+				);				
+			}
 			
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
