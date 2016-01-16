@@ -65,12 +65,24 @@ app.service('RiotSummonerApi',function($http){
 		this.matchId = input;
 	}
 	
+	this.getMatchId = function(){
+		return this.matchId;
+	}
+	
 	this.setSummonerId = function(input){
 		this.summonerId = input;
 	}
 	
+	this.getSummonerId = function(){
+		return this.summonerId;
+	}
+	
 	this.setSummonerName = function(input){
 		this.summonerName = input;
+	}
+	
+	this.getSummonerName = function(){
+		return this.summonerName;
 	}
 	
 	/**

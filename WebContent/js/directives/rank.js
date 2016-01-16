@@ -18,7 +18,7 @@ app.directive('lolRank',function(){
 			
 			$scope.loadSummoner = function(challenger){
 				$scope.config.searchToggle = false;
-				RiotSummonerApi.setSummonerId();
+				RiotSummonerApi.setSummonerId(challenger.playerOrTeamId);
 				redirect("/base/baseHome/baseChampionGeneral");
 			}
         }

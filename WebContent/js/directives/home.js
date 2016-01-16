@@ -15,29 +15,6 @@ app.directive('lolHome',function(){
 			$("body").css("background","url('images/bg1.jpg')");
         },
         controller:function($scope, $q, redirect, getSummoner, RiotSummonerApi){
-            $scope.searchSummoner = function(input){
-				if(input){
-					//user search by name
-					if(isNaN(input)){
-						RiotSummonerApi.setSummonerName(input);
-						var promise = RiotSummonerApi.getChampionGeneralByName();
-						
-						promise.then(function(payload){
-							if(payload.status == 200){
-								var data = payload.data;
-								$scope.searchSummonerById(Object.keys(data)[0]);
-							}else{
-								$scope.searchInput.value = "";
-								$scope.placeHolder = "No Match Found";
-							}
-						});
-					}else{
-						$scope.searchSummonerById(input);
-					}
-				}else{
-					$scope.placeHolder = "Search Can't be Empty!"
-				}
-            }
 			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
@@ -60,6 +37,40 @@ app.directive('lolHome',function(){
 						console.log("error loading");
 					}
 				);				
+			}
+			
+            $scope.searchSummoner = function(input){
+				if(input){
+					debugger;
+					//user search by name
+					if(isNaN(input)){
+						RiotSummonerApi.setSummonerName(encodeURI(input));
+						var promise = RiotSummonerApi.getChampionGeneralByName();
+						
+						promise.then(function(payload){
+							if(payload.status == 200){
+								var data = payload.data;
+								$scope.searchSummonerById(Object.keys(data)[0]);
+							}else{
+								$scope.searchInput.value = "";
+								$scope.placeHolder = "No Match Found";
+							}
+						});
+					}else{
+						$scope.searchSummonerById(input);
+					}
+					
+				}else{
+					$scope.placeHolder = "Search Can't be Empty!"
+				}
+            }
+			
+			//means this is called from the rank page
+			//bit of a hack around... but for now 
+			if(RiotSummonerApi.getSummonerId()!= "" 
+			   || typeof RiotSummonerApi.getSummonerId() != 'undefined'){
+				var id = RiotSummonerApi.getSummonerId();
+				$scope.searchSummoner(id);
 			}
 			
 			$scope.$watch("config.searchToggle",function(data){
