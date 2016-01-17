@@ -48,6 +48,7 @@ public class RiotApiDao {
 			RIOT_URL_MATCHLIST = properties.getProperty("RIOT_URL_MATCHLIST");
 			RIOT_URL_MATCHDETAIL = properties.getProperty("RIOT_URL_MATCHDETAIL");
 			RIOT_URL_SUMMONERID = properties.getProperty("RIOT_URL_SUMMONERID");
+			RIOT_URL_SUMMONER_GENERAL = properties.getProperty("RIOT_URL_SUMMONER_GENERAL");
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

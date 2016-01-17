@@ -18,7 +18,7 @@ app.directive('lolHome',function(){
 			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
-				getSummoner.getChampion(input, "general")
+				RiotSummonerApi.getChampionGeneral()
 					.success(function(data){
 					if(data != "null"){
 						$scope.config.searchToggle = false;
@@ -49,8 +49,10 @@ app.directive('lolHome',function(){
 						
 						promise.then(function(payload){
 							if(payload.status == 200){
+								debugger;
 								var data = payload.data;
-								$scope.searchSummonerById(Object.keys(data)[0]);
+								console.log(JSON.stringify(payload));
+								$scope.searchSummonerById(data[Object.keys(data)[0]].id);
 							}else{
 								$scope.searchInput.value = "";
 								$scope.placeHolder = "No Match Found";
