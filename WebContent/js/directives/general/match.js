@@ -12,6 +12,7 @@ app.directive('lolChampionsMatch',function(){
             scope.matchOptions = {"gameType":"All"
                                   ,"champion":"All"
                                   ,"role":"All"};
+			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope, getSummoner, redirect, RiotSummonerApi){
 //            getApi.getMatches().success(function(data){
@@ -32,11 +33,19 @@ app.directive('lolChampionsMatch',function(){
 //					}
 //				);
 			
+			$scope.loadPage = function(index){
+				$scope.loadingPagination.pageIndex = index;
+				window.scrollTo(0, 0);
+			}
+			
 			/**
 			* call to get summoner matchlist from riotAPI
 			*/
 			RiotSummonerApi.getMatchList().success(function(data){
 				$scope.matches = data.matches;
+				$scope.loadingPagination.show = true;
+				$scope.loadingPagination.pageIndex = 1;
+				$scope.loadingPagination.maxIndex = Math.round(data.matches.length/20);
 			});
             }
         }

@@ -43,7 +43,7 @@
                 <th>Lane</th>
                 <th>Role</th>
             </tr>
-            <tr ng-click="loadMatch(match.matchId)" ng-repeat="match in matches" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
+            <tr ng-click="loadMatch(match.matchId)" ng-repeat="match in matches | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
                 <td>{{match.queue}}</td>
                 <td>{{match.season}}</td>
@@ -52,4 +52,11 @@
             </tr>
         </table>
     </div>
+	<nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+	  <ul class="pagination">
+		  <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
+		<li><a ng-click="loadingPagination.pageIndex<=loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+	  </ul>
+	</nav>
 </div>
