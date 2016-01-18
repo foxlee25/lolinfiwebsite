@@ -9,6 +9,7 @@ app.directive('lolChampionsChampions',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope, RiotSummonerApi){
 //            getApi.getChampion().success(function(data){
@@ -17,7 +18,15 @@ app.directive('lolChampionsChampions',function(){
 
 			RiotSummonerApi.getChampionRank().success(function(data){
 				$scope.champions = data.champions;
+				$scope.loadingPagination.show = true;
+				$scope.loadingPagination.pageIndex = 1;
+				$scope.loadingPagination.maxIndex = Math.round(data.champions.length/20);
 			});
+			
+			$scope.loadPage = function(index){
+				$scope.loadingPagination.pageIndex = index;
+				window.scrollTo(0, 0);
+			}
         }
     }
 });

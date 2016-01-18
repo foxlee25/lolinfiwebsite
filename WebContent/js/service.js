@@ -191,3 +191,19 @@ app.factory('redirect',function($location,$rootScope){
 app.service('videoUrl',function(){
     
 })
+
+/**
+* utility 
+*/
+app.service('util',function(){
+	//get the length of associative array
+	this.size = function(obj){
+		var size = 0, key;
+		for(key in obj){
+			if(obj.hasOwnProperty(key)){
+				size++;
+			}
+		}
+		return size;
+	}
+})

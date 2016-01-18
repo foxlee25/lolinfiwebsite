@@ -8,7 +8,7 @@
                 <th>KDA</th>
                 <th>CS</th>
             </tr>
-            <tr ng-repeat="challenger in challengerInfo.entries" ng-class="{'tableStrip':$index%2==1}" ng-click="loadSummoner(challenger)">
+            <tr ng-repeat="challenger in challengerInfo.entries | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-class="{'tableStrip':$index%2==1}" ng-click="loadSummoner(challenger)">
                 <td style="padding-left:40px"><img class="img-circle" ng-src="images/rank_info/{{challenger.profileIconId}}.png" /><p style="text-align:bottom">{{challenger.playerOrTeamName}}</p></td>
                 <td style="text-align:left">
                     {{challenger.leaguePoints}}
@@ -24,4 +24,11 @@
             </tr>
         </table>
     </div>
+	<nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+	  <ul class="pagination">
+		  <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+		  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
+		<li><a ng-click="loadingPagination.pageIndex<=loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+	  </ul>
+	</nav>
 </div>

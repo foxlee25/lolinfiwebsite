@@ -2,9 +2,9 @@
     <div ng-repeat="video in twitchPlayList.streams">
         <div id="card">
             <div class="videoCard" ng-click="playVideo(video)">
-                <img id="liveView" src="../../images/live/live_view_bk.png" >
+                <img id="liveView" src="images/live/live_view_bk.png" >
 				<p id="liveViewNumber">{{video.channel.views}}</p>
-                <img id="playButton" src="../../images/live/live_play_icon.png" >
+                <img id="playButton" src="images/live/live_play_icon.png" >
                 <img style="position:relative;top:0px;left:0px;width:100%;height:100%" id="videoPreview" ng-src="{{video.preview.large}}">
             </div>
             <div id="videoSubtitle">
@@ -16,7 +16,7 @@
                     <p>{{video.channel.status|limitTo:20}}</p>
                 </div>
                 <div style="float:right">
-					<img class="twitchIcon" src="../../images/live/tv_new.png" >
+					<img class="twitchIcon" src="images/live/tv_new.png" >
                 </div>
             </div>
         </div>
