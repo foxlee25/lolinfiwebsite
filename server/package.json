@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "server for lolinfi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "xiaohui qi",
+  "license": "ISC",
+  "devDependencies": {
+    "body-parser": "^1.14.2",
+    "compression": "^1.6.1",
+    "cors": "^2.7.1",
+    "express": "^4.13.4",
+    "morgan": "^1.6.1",
+    "request": "^2.69.0"
+  }
+}

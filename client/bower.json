@@ -1,0 +1,31 @@
+{
+  "name": "lolinfi",
+  "authors": [
+    "xiaohui qi"
+  ],
+  "description": "a website for the game lol",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.4.9"
+  },
+  "devDependencies": {
+    "angular-animate": "^1.4.9",
+    "angular-resource": "^1.4.9",
+    "angular-sanitize": "^1.4.9",
+    "angular-ui-router": "^0.2.17",
+    "jquery": "^2.2.0",
+    "highcharts": "^4.2.1",
+    "jquery-backstretch": "^2.0.4",
+    "d3": "^3.5.14"
+  }
+}
