@@ -30,12 +30,12 @@ app.directive('lolChampions',function(){
 			$scope.setChampionDetail = function(id){
 				championDetail.setChampDetailId(id);
 				redirect("/base/baseChampDetail");
-			}
+			};
 			
 			$scope.loadPage = function(index){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
-			}
+			};
         }
-    }
+    };
 });
