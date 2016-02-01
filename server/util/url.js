@@ -11,4 +11,4 @@ exports.URL = {
 	},
 	api_key: "b42669e8-4856-4bc0-899e-f1a478a0818b"
 
-}
+};
