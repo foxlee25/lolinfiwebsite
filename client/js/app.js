@@ -4,7 +4,7 @@ var app=angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router']);
 
 // our controller for the form
 // =============================================================================
-app.controller('formController', function($scope,$location,$http) {
+app.controller('formController', function($scope) {
 	
 //	var bgImages = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'];
 //
@@ -30,7 +30,6 @@ app.controller('formController', function($scope,$location,$http) {
       if (error) {
         // error encountered while loading
         console.log(error);
-        debugger;
         console.log("twitch api load fail");
       }
       // the sdk is now loaded
