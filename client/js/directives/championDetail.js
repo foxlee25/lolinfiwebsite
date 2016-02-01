@@ -18,7 +18,7 @@ app.directive('lolChampiondetail',function(){
 						return value;
 					});
 					$scope.detail = data;
-			})
+			});
         }
-    }
+    };
 });
