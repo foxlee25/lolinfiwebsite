@@ -38,7 +38,7 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 			case "matchlist":
 				responseString = lolSummonerApi.getMatchList(id, res);
 				break;
-			case "matchDetail":
+			case "matchdetail":
 				responseString = lolSummonerApi.getMatchDetail(id, res);
 				break;
 			default:
