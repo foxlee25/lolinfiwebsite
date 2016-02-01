@@ -67,10 +67,10 @@ app.directive('lolItems',function(){
 					scene.add( object );
 					objects.push( object );
 					
-					var object = new THREE.Object3D();
-					object.position.x = ( i%10 * 250 )-window.innerWidth*1.3;
-					object.position.y = - ( Math.floor( i/10 ) * 250 ) + 990;
-					targets.table.push( object );
+					var object1 = new THREE.Object3D();
+					object1.position.x = ( i%10 * 250 )-window.innerWidth*1.3;
+					object1.position.y = - ( Math.floor( i/10 ) * 250 ) + 990;
+					targets.table.push( object1 );
 					i++;
 				});
 				console.log(1800/window.innerWidth);
@@ -132,5 +132,5 @@ app.directive('lolItems',function(){
 					.start();
 			}
         }
-    }
+    };
 });
