@@ -22,7 +22,7 @@ app.directive('lolChampionsMatch',function(){
         	$scope.loadMatch = function(id){
 				RiotSummonerApi.setMatchId(id);
         		redirect("/base/baseHome/baseChampionMatchDetail");
-        	}
+        	};
 			
 			// get mock data
 //			getSummoner.getChampion($scope.summonerId, "matches").success(function(data){
@@ -36,7 +36,7 @@ app.directive('lolChampionsMatch',function(){
 			$scope.loadPage = function(index){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
-			}
+			};
 			
 			/**
 			* call to get summoner matchlist from riotAPI
@@ -48,6 +48,6 @@ app.directive('lolChampionsMatch',function(){
 				$scope.loadingPagination.maxIndex = Math.round(data.matches.length/20);
 			});
             }
-        }
+        };
     }
 );
