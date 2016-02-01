@@ -2,9 +2,6 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 	var api = '/LolInfi/';
 	var responseString;
 
-	app.get(api + 'LolStatic', fetchLolStatic);
-	app.get(api + 'LolSummoner', fetchLolSummoner);
-
 	function fetchLolStatic(req, res, next){
 		switch(req.headers.genre){
 			case "champion":
@@ -46,4 +43,7 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 				res.send(responseString);
 		}
 	}
-}
+    
+    app.get(api + 'LolStatic', fetchLolStatic);
+	app.get(api + 'LolSummoner', fetchLolSummoner);
+};
