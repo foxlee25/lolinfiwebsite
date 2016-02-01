@@ -17,9 +17,9 @@ app.directive('lolPlayer',function(){
                 $scope.url = $scope.video.channel.url.substring(0,index)+"widgets/live_embed_player.swf?channel="+$scope.video.channel.url.substring(index+1); 
                 console.log($scope.url);
                 return $sce.trustAsResourceUrl($scope.url);
-              }
+              };
             
             
         }
-    }
+    };
 });
