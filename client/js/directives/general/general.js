@@ -15,8 +15,7 @@ app.directive('lolChampionsGeneral',function(){
 //                $scope.championGeneral = data;
 //            });
 		
-            init_summonerGeneral_spiderChart();
-             function init_summonerGeneral_spiderChart(){
+             (function init_summonerGeneral_spiderChart(){
 
                  $('.last20GamesSummarySpiderChart').highcharts({
                       credits: {
@@ -77,7 +76,7 @@ app.directive('lolChampionsGeneral',function(){
                     }]
 
                 });
-            }
+            }());
         }
-    }
+    };
 });
