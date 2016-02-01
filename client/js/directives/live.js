@@ -33,16 +33,16 @@ app.directive('lolLive',function(){
 				  $scope.twitchPlayList = list;
 				  window.scrollTo(0,0);
 				  //not inisde angular scope need to refresh
-				  scope.$apply();
+				  $scope.$apply();
 				});
-			}
+			};
 				
 						   
 
             $scope.playVideo = function(info){
                 videoPlayer.setVideo(info);
                 redirect("/base/basePlayer");   
-            }
+            };
         }
-    }
+    };
 });
