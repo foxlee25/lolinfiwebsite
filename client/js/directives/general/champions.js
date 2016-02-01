@@ -26,7 +26,7 @@ app.directive('lolChampionsChampions',function(){
 			$scope.loadPage = function(index){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
-			}
+			};
         }
-    }
+    };
 });
