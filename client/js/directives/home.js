@@ -37,19 +37,17 @@ app.directive('lolHome',function(){
 						console.log("error loading");
 					}
 				);				
-			}
+			};
 			
             $scope.searchSummoner = function(input){
 				if(input){
-					debugger;
 					//user search by name
 					if(isNaN(input)){
 						RiotSummonerApi.setSummonerName(encodeURI(input));
 						var promise = RiotSummonerApi.getChampionGeneralByName();
 						
 						promise.then(function(payload){
-							if(payload.status == 200){
-								debugger;
+							if(payload.status === 200){
 								var data = payload.data;
 								console.log(JSON.stringify(payload));
 								$scope.searchSummonerById(data[Object.keys(data)[0]].id);
@@ -63,23 +61,23 @@ app.directive('lolHome',function(){
 					}
 					
 				}else{
-					$scope.placeHolder = "Search Can't be Empty!"
+					$scope.placeHolder = "Search Can't be Empty!";
 				}
-            }
+            };
 			
 			//means this is called from the rank page
 			//bit of a hack around... but for now 
-			if(RiotSummonerApi.getSummonerId()!= "" 
-			   || typeof RiotSummonerApi.getSummonerId() != 'undefined'){
+			if(RiotSummonerApi.getSummonerId()!== "" ||
+               typeof RiotSummonerApi.getSummonerId() !== 'undefined'){
 				var id = RiotSummonerApi.getSummonerId();
 				$scope.searchSummoner(id);
 			}
 			
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
-					$("body").css("background","url('images/bg1.jpg')")
+					$("body").css("background","url('images/bg1.jpg')");
 				}else{
-					$("body").css("background","url('images/otherbg.jpg')")
+					$("body").css("background","url('images/otherbg.jpg')");
 				}
 			});
             
@@ -102,7 +100,7 @@ app.directive('lolHome',function(){
                         redirect("/base/baseHome/baseChampionGeneral");
                 }
                 
-            }
+            };
         }
-    }
+    };
 });
