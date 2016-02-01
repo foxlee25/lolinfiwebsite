@@ -30,6 +30,6 @@ app.directive('lolChampionsMatchDetail',function(){
 				$scope.match = data;
 			});
 		}
-        }
+        };
     }
 );
