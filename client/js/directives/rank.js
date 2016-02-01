@@ -24,12 +24,12 @@ app.directive('lolRank',function(){
 				$scope.config.searchToggle = false;
 				RiotSummonerApi.setSummonerId(challenger.playerOrTeamId);
 				redirect("/base/baseHome/baseChampionGeneral");
-			}
+			};
 			
 			$scope.loadPage = function(index){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
-			}
+			};
         }
-    }
+    };
 });
