@@ -85,6 +85,40 @@ module.exports = function(grunt) {
                 './server/util/*.js'],
         tasks: ['jshint']
       }
+    },
+    copy: {
+      main: {
+        files:[
+          {
+            expand: true,
+            src: ['./**', '!./client/images/**', '!./client/json/**'], 
+            dest: '../LolInfi_deploy/'
+        }
+        ]
+      }
+    },
+    clean: {
+      options:{
+        force: true
+      },
+      delete:{
+        src:["../LolInfi_deploy/"]
+      }
+    },
+    image:{
+      dynamic: {
+        files: [{
+          expand: true,
+          cwd: './client/',
+          src: ['**/*.{png, jpg, gif, svg}'],
+          dest: '../LolInfi_deploy/client/'
+        }]
+      }
+    },
+    'json-minify': {
+      build:{
+        files: '../LolInfi_deploy/client/json/**.json'
+      }
     }
   });
 
@@ -94,9 +128,13 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-clean');
+  grunt.loadNpmTasks('grunt-image');
+  grunt.loadNpmTasks('grunt-json-minify');
 
   // Deploy task.
-  grunt.registerTask('deploy', ['jshint']);
+  grunt.registerTask('deploy', ['jshint', 'clean:delete', 'copy', 'image', 'json-minify']);
   // Watch JShint
   grunt.registerTask('watch', ['jshint']);
 
