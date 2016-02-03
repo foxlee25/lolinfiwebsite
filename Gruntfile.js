@@ -22,12 +22,13 @@ module.exports = function(grunt) {
       }
     },
     uglify: {
-      options: {
-        banner: '<%= banner %>'
-      },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
+      all:{
+        files: [{
+          expand: true,
+          cwd: './client/js/',
+          src: ['*.js', '**/*.js'],
+          dest: '../LolInfi_deploy/client/js/'
+        }]
       }
     },
     jshint: {
@@ -91,7 +92,7 @@ module.exports = function(grunt) {
         files:[
           {
             expand: true,
-            src: ['./**', '!./client/images/**', '!./client/json/**'], 
+            src: ['./**', '!./client/images/**', '!./client/js/**'], 
             dest: '../LolInfi_deploy/'
         }
         ]
@@ -134,7 +135,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-json-minify');
 
   // Deploy task.
-  grunt.registerTask('deploy', ['jshint', 'clean:delete', 'copy', 'image', 'json-minify']);
+  grunt.registerTask('deploy', ['jshint', 'clean:delete', 'copy', 'image', 'json-minify', 'uglify']);
   // Watch JShint
   grunt.registerTask('watch', ['jshint']);
 
