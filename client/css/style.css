@@ -12,16 +12,21 @@ and open the template in the editor.
     font-family: "Helvetica Neue";
     src: url("../fonts/HelveticaNeue.ttf");
 }
-html{
- 
+
+html {
+  background: url(../images/bg1.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-body{
+
+body {
     font-family: 'Helvetica Neue';
     font-weight: normal;
     font-style: normal;
     display: block;
     margin: 0px;
-	background-image: url(../images/bg1.jpg);
 }
 
 a{
@@ -416,4 +421,18 @@ canvas {
 	padding-top: 20px;
 	padding-right: 20px;
 	
+}
+
+/* slider bar at championDetail */
+#sliderbar.slider {
+  display: inline-block; 
+  margin-bottom: 30px;
+}
+
+#sliderbar.output { 
+  color: white; 
+  font-size: 14px; 
+  padding-top: 1px; 
+  margin-left: 5px; 
+  vertical-align: top;
 }
