@@ -1,0 +1,16 @@
+/* championDetail page control */
+#champTitle b{color: #cccccc;}
+#champDetailStats{position: relative; bottom: 30px;}
+#champDetailStats h3{ position: relative;  bottom: 10px; font-size: 14px; color: #cccccc;}
+#champDetailAbilities h3{ position: relative;  bottom: 10px; font-size: 14px; color: #cccccc;}
+#champDetailAbilities{position: relative; bottom: 20px;}
+#sliderbar h3{ font-size: 13px; color: #cccccc; position: relative; left: 120px; bottom: 69px;}
+.row{ position: relative; bottom: 50px;}
+#abiContent{position: relative; bottom: 30px;}
+.abilityImg{float: left; width: 5%; overflow: hidden;}
+.abilityText{height: auto; overflow: hidden;}
+/*
+.img{ float: left; width: 52%; height: 400px; overflow: hidden; }
+.description{height: 400px; overflow: hidden; }
+
+*/
