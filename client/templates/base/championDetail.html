@@ -13,27 +13,29 @@
 		<div id="champDetailStats">
 			<h3>Statistics</h3>
 			<div id="sliderbar">
-				<h3 style="display: inline-block;">Level</h3>
+				<h3>Level</h3>
 				<input id="data-slider" type="text" data-slider="true" data-slider-range="1,18" data-slider-step="1" data-slider-snap="true">
 			</div>
 			<div class="row">
-				<div style="padding-bottom:10px" ng-repeat = "(key,val) in detail.stats" class="col-sm-2">
-                    <!-- statistics img here -->
-					<p style="font-size: 12px; color: #999999;">{{key}}</p>
-                    <p style="font-size: 12px; color: #cccccc;">{{val}}</p>
+				<div ng-repeat = "(key,val) in detail.stats" class="col-sm-2">
+                    <div id="statLogo">
+                        <img class="stat-img-circle" ng-src="images/statIcon_sample.jpg" />
+                    </div>
+					<p id="statTitle">{{key}}</p>
+                    <p id="statVal">{{val}}</p>
 				</div>
 			</div>
 		</div>
 		<div id="champDetailAbilities">
 			<h3>Abilities</h3>
-			<div id="abiContent" ng-repeat="ability in detail.spells">
-				<div class="champDetailAbility">
+			<div id="abiContent" >
+				<div class="champDetailAbility" ng-repeat="ability in detail.spells">
 					<div class="abilityImg">
 						<img class="img-square" ng-src="images/champ_basic_info/{{detail.id}}/{{ability.image.full}}" />
 					</div>
 					<div class="abilityText">
-						<b style="font-size: 14px; ">{{ability.name}}</b>
-						<p style="font-size: 12px; color: #cccccc;">{{ability.description}}{{ability.sanitizedTooltip}}</p>
+						<b>{{ability.name}}</b>
+						<p>{{ability.description}}{{ability.sanitizedTooltip}}</p>
 					</div>
 				</div>
 			</div>

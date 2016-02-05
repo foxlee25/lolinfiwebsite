@@ -110,3 +110,84 @@ and open the template in the editor.
     /* opacity: 0.4; */
     padding: 20px;
 }
+
+#championsListTable{
+	background-color: rgba(255,255,255,0.05);
+}
+
+#champions{
+    margin-top: 50px;
+}
+
+#champions table tr td{
+    font-size:1em;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.championsTableHeader{
+    color:#448AAC;
+    background-color: rgba(255,255,255, 0.07);
+}
+
+.championsTableHeader th{
+    font-size:1.2em;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#championsTable table tr td{
+    color: white;
+}
+
+#championsTable table tr th{
+    font-size:1.2em;
+    vertical-align: middle;
+    color:#448AAC;
+}
+
+#championsFilterTableDiv{
+    background-color: rgba(255,255,255, 0.1);
+    width: 100%;
+}
+
+#championsFilterTable{
+    margin-bottom: 5px;
+}
+
+#championsFilterTable tr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#championsFilterTable tr td{
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em; 
+}
+
+#championsListTable tr td{
+	vertical-align: middle;
+}
+
+#champLogo{
+	float: left;
+	padding-top: 30px;
+	width: 100px;
+}
+
+#champTitle{
+	padding-top: 20px;
+	float: left;
+}
+
+#champTitle h2{
+	color:#448AAC;
+}
+
+#champTitle b{
+	color: white;
+}
