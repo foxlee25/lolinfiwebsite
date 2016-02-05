@@ -4,3 +4,5 @@ The client side is using bower package management system, and server side is usi
 
 To install bower run npm install -g bower and all the bower components are located in client/bower_component, run bower insatll --save-dev <your package name> to add the project dependency, and npm components are located in server/npm_component, run npm install --save-dev <your package name> to add the project dependency.
 
+To auto refresh server files while developing, npm install -g nodemon , then start app.js by nodemon app.js
+
