@@ -240,32 +240,6 @@
     background-color: rgba(255,255,255, 0.05);
 }
 
-#championsListTable{
-	background-color: rgba(255,255,255,0.05);
-}
-
-#champions{
-    margin-top: 50px;
-}
-
-#champions table tr td{
-    font-size:1em;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.championsTableHeader{
-    color:#448AAC;
-    background-color: rgba(255,255,255, 0.07);
-}
-
-.championsTableHeader th{
-    font-size:1.2em;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .matchesTableHeader{
     color:#448AAC;
     background-color: rgba(255,255,255, 0.07);
@@ -320,39 +294,6 @@
     vertical-align: middle;
     text-align: left;
 }
-
-#championsTable table tr td{
-    color: white;
-}
-
-#championsTable table tr th{
-    font-size:1.2em;
-    vertical-align: middle;
-    color:#448AAC;
-}
-
-#championsFilterTableDiv{
-    background-color: rgba(255,255,255, 0.1);
-    width: 100%;
-}
-
-#championsFilterTable{
-    margin-bottom: 5px;
-}
-
-#championsFilterTable tr{
-    margin-top: 5px;
-    margin-bottom: 5px;
-}
-
-#championsFilterTable tr td{
-    vertical-align: middle;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1em; 
-}
-
 
 #card{
     float: left;
@@ -536,10 +477,6 @@
 	margin-top: 20px;
 }
 
-#championsListTable tr td{
-	vertical-align: middle;
-}
-
 #liveViewNumber{
 	position: absolute;
 	z-index: 101;
@@ -554,94 +491,10 @@
 	padding-bottom: 80px;
 }
 
-#champLogo{
-	float: left;
-	padding-top: 30px;
-	width: 100px;
-}
-
-#champTitle{
-	padding-top: 20px;
-	float: left;
-}
-
-#champTitle h2{
-	color:#448AAC;
-}
-
-#champTitle b{
-	color: white;
-}
-
-#champDetailStats{
-	clear: both;
-	background-color: rgba(255,255,255, 0.07);
-	margin-top: 180px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;
-}
-
-#champDetailStats p{
-	color: white;
-	font-size: 1em;
-}
-
-#champDetailStats h3{
-	font-size: 1.2em;
-	color:#448AAC;
-}
-
-#champDetailAbility{
-	background-color: rgba(15,13,28, 0.07);
-	margin-top: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;
-	
-}
-
 .abilityImg{
 	clear: left;
 	float: left;
 	width: 100px;
-}
-
-#champDetailAbilities{
-	background-color: rgba(255,255,255, 0.07);
-	margin-top: 10px;
-	padding-left: 30px;
-	padding-right: 30px;
-	padding-top: 20px;	
-	margin-bottom: 100px;
-}
-
-#champDetailAbilities h3{
-	color:#448AAC;
-	font-size: 1.2em;
-}
-
-.champDetailAbility{
-	padding-top: 30px;
-	padding-bottom: 30px;
- 	border-bottom-style: solid;
-    border-bottom-width: 1px;
-	border-bottom-color: white;
-}
-
-.champDetailAbility h3{
-	color:#448AAC;
-	font-size: 1.2em;
-}
-
-.champDetailAbility p{
-	color: white;
-	padding-top: 10px;
-}
-
-.champDetailAbility b{
-	color:#448AAC;;
-	font-size: 1.4em;
 }
 
 .itemImgWithWidth{
