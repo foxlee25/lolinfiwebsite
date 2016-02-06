@@ -67,3 +67,28 @@
 	border-width: 2px;
 	border-radius: 10px;
 }
+
+#popupImage{
+    margin: 20px;
+}
+
+#itempics{
+/*    opacity: 0.5;*/
+}
+
+#popupWindow{
+    width: 400px;
+}
+
+#popupItemName{
+    position: absolute;
+    top: 5px;
+    left: 70px;
+}
+
+#price{
+    width: 20%;
+    position: absolute;
+    top: 13px;
+    left: 310px;
+}
