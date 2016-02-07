@@ -24,10 +24,7 @@ app.factory('RiotApi',function($http){
 		* which query to run
 		*/
         getInfo:function(genre){
-            return $http.get('http://localhost:8080/LolInfi/LolStatic',
-                             {headers:{
-							 'genre': genre
-							 }});
+            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre);
         },
         getItemInfo:function(){
             return $http.get('json/item_info.json');

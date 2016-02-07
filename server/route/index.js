@@ -4,7 +4,8 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 	var responseString;
 
 	function fetchLolStatic(req, res, next){
-		switch(req.headers.genre){
+		req.apicacheGroup = req.params.genre;
+		switch(req.query.genre){
 			case "champion":
 				responseString = lolStaticApi.getChampions(res);
 				break;
@@ -45,6 +46,6 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 		}
 	}
     
-    app.get(api + 'LolStatic', apicache('10 hours'), fetchLolStatic);
-	app.get(api + 'LolSummoner', apicache('5 minutes'), fetchLolSummoner);
+    app.get(api + 'LolStatic/:genre?', apicache('10 hours'), fetchLolStatic);
+	app.get(api + 'LolSummoner', fetchLolSummoner);
 };
