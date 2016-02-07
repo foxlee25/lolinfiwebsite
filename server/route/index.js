@@ -1,4 +1,5 @@
 module.exports = function(app, lolStaticApi, lolSummonerApi){
+	var apicache = require('apicache').options({debug: true}).middleware;
 	var api = '/LolInfi/';
 	var responseString;
 
@@ -44,6 +45,6 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 		}
 	}
     
-    app.get(api + 'LolStatic', fetchLolStatic);
-	app.get(api + 'LolSummoner', fetchLolSummoner);
+    app.get(api + 'LolStatic', apicache('10 hours'), fetchLolStatic);
+	app.get(api + 'LolSummoner', apicache('5 minutes'), fetchLolSummoner);
 };
