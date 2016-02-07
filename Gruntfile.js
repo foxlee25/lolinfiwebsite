@@ -58,14 +58,16 @@ module.exports = function(grunt) {
             d3: true,
           module: true,
           TWEEN: true,
-          THREE: true
+          THREE: true,
+          process: true
         }
       },
       gruntfile: {
         src: 'Gruntfile.js'
       },
       lib_test: {
-        src: ['./client/js/*.js',
+        src: ['!./client/js/simple-slider.js',
+                './client/js/*.js',
                 './client/js/**/*.js', 
                 './server/*.js',
                 './server/dao/*.js',
