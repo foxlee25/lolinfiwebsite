@@ -23,8 +23,10 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 	}
 
 	function fetchLolSummoner(req ,res, next){
-		var id = req.headers.id;
-		switch(req.headers.genre){
+		console.log('**********');
+		var id = req.params.id;
+		console.log(id+req.params.genre);
+		switch(req.params.genre){
 			case "getid":
 				responseString = lolSummonerApi.getSummonerId(id, res);
 				break;
@@ -47,5 +49,5 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 	}
     
     app.get(api + 'LolStatic/:genre?', apicache('10 hours'), fetchLolStatic);
-	app.get(api + 'LolSummoner', fetchLolSummoner);
+	app.get(api + 'LolSummoner/:id/:genre', apicache('5 minutes'), fetchLolSummoner);
 };

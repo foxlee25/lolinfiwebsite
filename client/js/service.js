@@ -86,55 +86,35 @@ app.service('RiotSummonerApi',function($http){
 	* get summoner general info by summoner id
 	*/
 	this.getChampionGeneral = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "general",
-							 'id': this.summonerId
-							 }});
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonreId+'/general');
 	};
 	
 	/**
 	* get summoner id from name
 	*/
 	this.getChampionGeneralByName = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "getid",
-							 'id': this.summonerName
-							 }});
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerName+'/getid');
 	};
 	
 	/**
 	* get summoner played chapmion list
 	*/
 	this.getChampionRank = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "champion",
-							 'id': this.summonerId
-							 }});
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/champion');
 	};
 	
 	/**
 	* get summoner played matchlist
 	*/
 	this.getMatchList = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "matchlist",
-							 'id': this.summonerId
-							 }});
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/matchlist');
 	};
 	
 	/**
 	* get match detail by match id
 	*/
 	this.getMatchDetail = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "matchdetail",
-							 'id': this.matchId
-							 }});
+		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/matchdetail');
 	};
 });
 
