@@ -18,7 +18,6 @@ app.directive('lolChampiondetail',function(){
             load_script();
             $("#data-slider")
             .each(function () {
-                console.log("Hello");
                 var input = $(this);
                 $("<span>").addClass("output").insertAfter($(this));
             })
@@ -36,7 +35,10 @@ app.directive('lolChampiondetail',function(){
 						return value;
 					});
 					$scope.detail = data;
-			});
+			     })
+                .error(function(e){
+                    console.error(e + " can't get champion detail");
+                });
         }
     };
 });

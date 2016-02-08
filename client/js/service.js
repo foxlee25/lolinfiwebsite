@@ -136,9 +136,8 @@ app.service('championDetail',function($http){
 	};
     
 	this.getChampDetail = function(genre){
-		return $http.get('http://localhost:8080/LolInfi/LolStatic',
+		return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre,
                          {headers:{
-						 'genre': genre,
 						 'id':this.id
 						 }});
 	};

@@ -41,12 +41,16 @@ app.directive('lolChampionsMatch',function(){
 			/**
 			* call to get summoner matchlist from riotAPI
 			*/
-			RiotSummonerApi.getMatchList().success(function(data){
-				$scope.matches = data.matches;
-				$scope.loadingPagination.show = true;
-				$scope.loadingPagination.pageIndex = 1;
-				$scope.loadingPagination.maxIndex = Math.round(data.matches.length/20);
-			});
+			RiotSummonerApi.getMatchList()
+                .success(function(data){
+                    $scope.matches = data.matches;
+                    $scope.loadingPagination.show = true;
+                    $scope.loadingPagination.pageIndex = 1;
+                    $scope.loadingPagination.maxIndex = Math.round(data.matches.length/20);
+                })
+                .error(function(e){
+                    console.error(e + "can't get summoner match list");
+                });
             }
         };
     }

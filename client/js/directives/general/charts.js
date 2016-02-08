@@ -19,15 +19,15 @@ app.directive('lolChampionsCharts',function(){
                 $scope.loadMap($scope.chartsData.heatMaps);
             });
 			
-			getSummoner.getChampion($scope.summonerId, "charts").success(function(data){
-					$scope.chartsData = data;
-					$scope.loadChart();
-					$scope.loadMap($scope.chartsData.heatMaps);
-				}).error(
-					function(){
-						console.log("error loading");
-					}
-				);
+			getSummoner.getChampion($scope.summonerId, "charts")
+                .success(function(data){
+                        $scope.chartsData = data;
+                        $scope.loadChart();
+                        $scope.loadMap($scope.chartsData.heatMaps);
+                })
+                .error(function(e){
+                    console.log(e + "can't get summoner chart");
+                });
 			
 			$scope.loadChart = function(){
 				

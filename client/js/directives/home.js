@@ -20,23 +20,22 @@ app.directive('lolHome',function(){
 				RiotSummonerApi.setSummonerId(input);
 				RiotSummonerApi.getChampionGeneral()
 					.success(function(data){
-					if(data != "null"){
-						$scope.config.searchToggle = false;
-						$scope.summonerId = input;
-						$scope.championGeneral = data;
-						$scope.searchInput.value = "";
-						redirect("/base/baseHome/baseChampionGeneral");
-					}else{
-						$scope.searchInput.value = "";
-						$scope.placeHolder = "No Match Found";
-					}
-				}).error(
-					function(){
+                        if(data != "null"){
+                            $scope.config.searchToggle = false;
+                            $scope.summonerId = input;
+                            $scope.championGeneral = data;
+                            $scope.searchInput.value = "";
+                            redirect("/base/baseHome/baseChampionGeneral");
+                        }else{
+                            $scope.searchInput.value = "";
+                            $scope.placeHolder = "No Match Found";
+                        }
+				    })
+                    .error(function(){
 						$scope.searchInput.value = "";
 						$scope.placeHolder = "No Match Found";
 						console.log("error loading");
-					}
-				);				
+					});				
 			};
 			
             $scope.searchSummoner = function(input){

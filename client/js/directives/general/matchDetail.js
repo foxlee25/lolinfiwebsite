@@ -26,9 +26,12 @@ app.directive('lolChampionsMatchDetail',function(){
 //					}
 //				);
 			
-			RiotSummonerApi.getMatchDetail().success(function(data){
-				$scope.match = data;
-			});
+			RiotSummonerApi.getMatchDetail()
+                .success(function(data){
+				    $scope.match = data;
+                }).error(function(e){
+                    console.log(e + "can't get summoner match details");
+                });
 		}
         };
     }
