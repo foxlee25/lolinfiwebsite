@@ -44,16 +44,16 @@ app.controller('formController', function($scope, facebookService) {
             facebookService.getFaceBookInfo().then(function(response){
                 $scope.fbLogin = {"btn": false, 
                                   "image": true, 
-                                  "imageUrl": "http://graph.facebook.com/" 
-                                  + response.id 
-                                  + "/picture?type=normal", 
-                                  "name": response.name}
+                                  "imageUrl": "http://graph.facebook.com/" +
+                                  response.id +
+                                  "/picture?type=normal", 
+                                  "name": response.name};
             });
         } else if (response.status === 'not_authorized') {
 
         } else {
 
         }
-    }
+    };
     
 });

@@ -20,8 +20,7 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
                 lolStaticApi.getChallengerInfo(res);
                 break;
 			default:
-				responseString = "";
-				res.send(responseString);
+				res.send("");
 		}
 	}
 

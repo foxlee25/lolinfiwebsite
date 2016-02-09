@@ -21,7 +21,7 @@ app.directive('lolChampionsCharts',function(){
                 })
                 .error(function(e){
                     console.log(e + "can't get summoner chart");
-                });;
+                });
 			
 			$scope.loadChart = function(){
 				

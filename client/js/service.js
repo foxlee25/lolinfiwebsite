@@ -10,7 +10,7 @@ app.service('RiotApi',function($http){
     
     this.getChampDetailId = function(){
         return this.id;
-    }
+    };
     
     /**
     * general url to get static data
@@ -63,7 +63,7 @@ app.service('RiotSummonerApi',function($http){
     */
     this.getInfo = function(genre){
         return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonreId+'/'+genre);
-    }
+    };
 });
 
 /**
@@ -80,8 +80,8 @@ app.service('facebookService', function($q){
             }
         });
         return deferred.promise;
-    }
-})
+    };
+});
 
 app.service('videoPlayer',function(){
     this.video = null;

@@ -37,7 +37,7 @@ var getChallengerInfo = function(res){
             res.send(data);
         }
     });
-}
+};
 
 module.exports.getChampions = getChampions;
 module.exports.getChampionDetail = getChampionDetail;

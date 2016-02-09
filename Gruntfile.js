@@ -59,7 +59,8 @@ module.exports = function(grunt) {
           module: true,
           TWEEN: true,
           THREE: true,
-          process: true
+          process: true,
+          FB: true
         }
       },
       gruntfile: {

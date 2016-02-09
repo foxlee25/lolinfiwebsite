@@ -54,7 +54,7 @@ var getCharts = function(id, res){
             res.send(data);
         }
     });    
-}
+};
 
 module.exports.getSummonerId = getSummonerId;
 module.exports.getSummonerGeneral = getSummonerGeneral;
