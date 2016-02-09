@@ -9,7 +9,8 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 				lolStaticApi.getChampions(res);
 				break;
 			case "champion_detail":
-				var id = req.headers.id;
+                console.log("fdfsfsds");
+				var id = req.params.id;
 				lolStaticApi.getChampionDetail(id, res);
 				break;
 			case "item":
@@ -49,7 +50,8 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 				res.send("");
 		}
 	}
-    
+
+    app.get(api + 'LolStatic/:id/:genre?', apicache('10 hours'), fetchLolStatic);
     app.get(api + 'LolStatic/:genre?', apicache('10 hours'), fetchLolStatic);
 	app.get(api + 'LolSummoner/:id/:genre', apicache('5 minutes'), fetchLolSummoner);
 };

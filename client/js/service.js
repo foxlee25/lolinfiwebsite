@@ -21,10 +21,7 @@ app.service('RiotApi',function($http){
         if(id === undefined){
             return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre);
         }else{
-            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre,
-                             {headers:{
-                              'id': id
-                              }});
+            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre);
         }
     };
 });
@@ -60,50 +57,31 @@ app.service('RiotSummonerApi',function($http){
 	this.getSummonerName = function(){
 		return this.summonerName;
 	};
-	
-	/**
-	* get summoner general info by summoner id
-	*/
-	this.getChampionGeneral = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonreId+'/general');
-	};
-	
-	/**
-	* get summoner id from name
-	*/
-	this.getChampionGeneralByName = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerName+'/getid');
-	};
-	
-	/**
-	* get summoner played chapmion list
-	*/
-	this.getChampionRank = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/champion');
-	};
-	
-	/**
-	* get summoner played matchlist
-	*/
-	this.getMatchList = function(){
-		return $http
-            .get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/matchlist');
-	};
-	
-	/**
-	* get match detail by match id
-	*/
-	this.getMatchDetail = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/matchdetail');
-	};
     
     /**
-    * get match charts
+    * get summoner data
     */
-    this.getCharts = function(){
-        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/charts');
+    this.getInfo = function(genre){
+        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonreId+'/'+genre);
     }
 });
+
+/**
+* facebook service to get user facebook profile info
+*/
+app.service('facebookService', function($q){
+    this.getFaceBookInfo = function(){
+        var deferred = $q.defer();
+        FB.api('/me', function(response) {
+            if (!response || response.error) {
+                deferred.reject('Error occured');
+            } else {
+                deferred.resolve(response);
+            }
+        });
+        return deferred.promise;
+    }
+})
 
 app.service('videoPlayer',function(){
     this.video = null;

@@ -12,7 +12,7 @@ app.directive('lolChampionsMatchDetail',function(){
         },
         controller:function($scope, RiotSummonerApi){
 			
-			RiotSummonerApi.getMatchDetail()
+			RiotSummonerApi.getInfo('matchdetail')
                 .success(function(data){
 				    $scope.match = data;
                 }).error(function(e){

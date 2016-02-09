@@ -106,7 +106,6 @@ a{
 .headerMenuPositioner{
      padding: 25px;
      position: relative;
-     width: 660px;
      height: 100px;
      margin: auto;
 }    
@@ -435,4 +434,22 @@ canvas {
   padding-top: 1px; 
   margin-left: 5px; 
   vertical-align: top;
+}
+
+.fbLoginBtn{
+    float: right;
+    padding-top:40px;
+}
+
+.fbLoginAvator{
+    float: right;
+    padding-top:20px;
+}
+
+.fbLoginAvator p{
+    padding-top: 5px;
+    text-align: center;
+    color: white;
+    font: bold;
+    font-size: 0.8em;
 }

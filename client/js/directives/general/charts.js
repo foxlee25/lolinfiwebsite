@@ -13,7 +13,7 @@ app.directive('lolChampionsCharts',function(){
         },
         controller:function($scope, RiotSummonerApi){
 			// use the mock data from static json
-            RiotSummonerApi.getCharts()
+            RiotSummonerApi.getInfo('charts')
                 .success(function(data){
                     $scope.chartsData = data;
                     $scope.loadChart();

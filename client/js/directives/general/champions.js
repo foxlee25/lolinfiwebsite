@@ -16,7 +16,7 @@ app.directive('lolChampionsChampions',function(){
 //                $scope.champions = data;
 //            });
 
-			RiotSummonerApi.getChampionRank()
+			RiotSummonerApi.getInfo('champion')
                 .success(function(data){
                     $scope.champions = data.champions;
                     $scope.loadingPagination.show = true;

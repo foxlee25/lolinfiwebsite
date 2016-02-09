@@ -32,7 +32,7 @@ app.directive('lolChampionsMatch',function(){
 			/**
 			* call to get summoner matchlist from riotAPI
 			*/
-			RiotSummonerApi.getMatchList()
+			RiotSummonerApi.getInfo('matchlist')
                 .success(function(data){
                     $scope.matches = data.matches;
                     $scope.loadingPagination.show = true;
