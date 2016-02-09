@@ -62,7 +62,11 @@ app.service('RiotSummonerApi',function($http){
     * get summoner data
     */
     this.getInfo = function(genre){
-        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonreId+'/'+genre);
+        if(genre === 'matchdetail'){
+            return $http.
+            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre);
+        }
+        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre);
     };
 });
 
