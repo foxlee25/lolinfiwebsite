@@ -11,23 +11,17 @@ app.directive('lolChampionsCharts',function(){
         link:function(scope,element,attrs){
 			scope.chartOptions={"gameType":"Ranked Solo","role":"TOP","performance":"Game Length"};
         },
-        controller:function($scope, RiotApi, getSummoner){
+        controller:function($scope, RiotSummonerApi){
 			// use the mock data from static json
-            RiotApi.getCharts().success(function(data){
-                $scope.chartsData = data;
-				$scope.loadChart();
-                $scope.loadMap($scope.chartsData.heatMaps);
-            });
-			
-			getSummoner.getChampion($scope.summonerId, "charts")
+            RiotSummonerApi.getCharts()
                 .success(function(data){
-                        $scope.chartsData = data;
-                        $scope.loadChart();
-                        $scope.loadMap($scope.chartsData.heatMaps);
+                    $scope.chartsData = data;
+                    $scope.loadChart();
+                    $scope.loadMap($scope.chartsData.heatMaps);
                 })
                 .error(function(e){
                     console.log(e + "can't get summoner chart");
-                });
+                });;
 			
 			$scope.loadChart = function(){
 				

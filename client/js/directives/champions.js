@@ -15,7 +15,7 @@ app.directive('lolChampions',function(){
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
-        controller:function($scope,RiotApi,redirect,championDetail, util){
+        controller:function($scope, RiotApi, redirect, util){
             RiotApi.getInfo("champion")
                 .success(function(data){
                     $scope.champInfo = [];
@@ -31,7 +31,7 @@ app.directive('lolChampions',function(){
                 });
 			
 			$scope.setChampionDetail = function(id){
-				championDetail.setChampDetailId(id);
+				RiotApi.setChampDetailId(id);
 				redirect("/base/baseChampDetail");
 			};
 			

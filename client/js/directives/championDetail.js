@@ -27,8 +27,8 @@ app.directive('lolChampiondetail',function(){
                 .html(data.value.toFixed() + "-18");
             });
         },
-        controller:function($scope,redirect,championDetail){
-			 championDetail.getChampDetail("champion_detail")
+        controller:function($scope, redirect, RiotApi){
+			 RiotApi.getInfo("champion_detail", RiotApi.getChampDetailId())
 				.success(function(data){
 				 	data.spells.map(function(value){
 						value.image.full = value.image.full.replace(/([A-Z])/g, ' $1').trim();

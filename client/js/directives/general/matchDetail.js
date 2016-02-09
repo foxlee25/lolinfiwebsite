@@ -10,21 +10,7 @@ app.directive('lolChampionsMatchDetail',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, getSummoner, RiotSummonerApi){
-//            getApi.getMatches().success(function(data){
-//                $scope.matches = data;
-//            });
-			
-			/**
-			* fake call to get match detail
-			*/
-//			getSummoner.getChampion($scope.summonerId, "match").success(function(data){
-//					$scope.match = data; 
-//				}).error(
-//					function(){
-//						console.log("error loading");
-//					}
-//				);
+        controller:function($scope, RiotSummonerApi){
 			
 			RiotSummonerApi.getMatchDetail()
                 .success(function(data){

@@ -14,7 +14,7 @@ app.directive('lolChampionsMatch',function(){
                                   ,"role":"All"};
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
-        controller:function($scope, getSummoner, redirect, RiotSummonerApi){
+        controller:function($scope, redirect, RiotSummonerApi){
 //            getApi.getMatches().success(function(data){
 //                $scope.matches = data;
 //            });
@@ -23,15 +23,6 @@ app.directive('lolChampionsMatch',function(){
 				RiotSummonerApi.setMatchId(id);
         		redirect("/base/baseHome/baseChampionMatchDetail");
         	};
-			
-			// get mock data
-//			getSummoner.getChampion($scope.summonerId, "matches").success(function(data){
-//					$scope.matches = data; 
-//				}).error(
-//					function(){
-//						console.log("error loading");
-//					}
-//				);
 			
 			$scope.loadPage = function(index){
 				$scope.loadingPagination.pageIndex = index;

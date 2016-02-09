@@ -14,7 +14,7 @@ app.directive('lolHome',function(){
 			scope.placeHolder = "Search for champion name,items ...";
 			$("body").css("background","url('images/bg1.jpg')");
         },
-        controller:function($scope, $q, redirect, getSummoner, RiotSummonerApi){
+        controller:function($scope, $q, redirect, RiotSummonerApi){
 			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);

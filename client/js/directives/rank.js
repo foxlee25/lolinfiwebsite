@@ -13,7 +13,7 @@ app.directive('lolRank',function(){
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope,RiotApi,loadSummoner,redirect, RiotSummonerApi){
-            RiotApi.getChallengerInfo().success(function(data){
+            RiotApi.getInfo("challenger_info").success(function(data){
                 $scope.challengerInfo = data;
 				$scope.loadingPagination.show = true;
 				$scope.loadingPagination.pageIndex = 1;
