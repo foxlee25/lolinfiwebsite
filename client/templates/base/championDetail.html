@@ -22,7 +22,7 @@
                         <img class="stat-img-circle" ng-src="images/statIcon_sample.jpg" />
                     </div>
 					<p id="statTitle">{{key}}</p>
-                    <p id="statVal">{{val}}</p>
+                    <p id="statVal">{{val*champion.level | limitTo: 2}}</p>
 				</div>
 			</div>
 		</div>

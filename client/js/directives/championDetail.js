@@ -15,6 +15,8 @@ app.directive('lolChampiondetail',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            // champion detail level
+            scope.champion = {level: 1};
             load_script();
             $("#data-slider")
             .each(function () {
@@ -25,6 +27,8 @@ app.directive('lolChampiondetail',function(){
                 $(this)
                 .nextAll(".output:first")
                 .html(data.value.toFixed() + "-18");
+                scope.champion.level = data.value.toFixed();
+                scope.$digest();
             });
         },
         controller:function($scope, redirect, RiotApi){
