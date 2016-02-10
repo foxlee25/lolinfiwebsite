@@ -32,12 +32,14 @@ app.directive('lolItems',function(){
 				//init(data);
 				//animate();
 				//setTimeout(replaceItems, 2000)
-				function replaceItems(){
-					
-					$('#itemAnimate').hide();
-					$scope.animateOver = true;
-					$scope.$digest();
-				}
+                
+                
+//				function replaceItems(){
+//					
+//					$('#itemAnimate').hide();
+//					$scope.animateOver = true;
+//					$scope.$digest();
+//				}
             });
 			
 			function init(data){

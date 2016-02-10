@@ -14,6 +14,7 @@
             </table>
         </div>
 		<div id="itemAnimate">
+<!--            <p>asdasdasd</p>-->
 		</div>
         <div id="itemBg" ng-if="animateOver">
             <div id="itempics" class="itemCard" ng-repeat="item in itemInfo">
@@ -28,8 +29,7 @@
                         <br>
 <!--                        <p>{{item.id}}</p>-->
 <!--                        <br>-->
-                        
-                        <p>{{item.description}}</p>
+                        <p ng-bind-html="item.description"></p>
                     </div>
                 </div>
             </div>

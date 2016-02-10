@@ -74,10 +74,11 @@
 
 #itempics{
 /*    opacity: 0.5;*/
+    width: 10%;
 }
 
 #popupWindow{
-    width: 400px;
+    width: 380px;
 }
 
 #popupItemName{
@@ -90,5 +91,9 @@
     width: 20%;
     position: absolute;
     top: 13px;
-    left: 310px;
+    left: 300px;
+}
+
+#itemBg{
+    width: 100%;
 }
