@@ -56,8 +56,8 @@ app.directive('lolChampionsGeneral',function(){
                         max:5,
                         tickInterval:1,
                         labels: {
-                    enabled: false
-               },
+                            enabled: false
+                        },
                     },
 
                     tooltip: {
