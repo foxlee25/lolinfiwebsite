@@ -27,27 +27,50 @@
                 </tr>
             </table>
 -->
+            <table id="championsFilterTable" class="nav nav-pills">
+                <tr>
+                    <td class="matchTableFilterTitle"><p> League:</p></td>
+                    <td ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze'}">Bronze</td>
+                    <td ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver'}">Silver</td>
+                    <td ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold'}">Gold</td>
+                    <td ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum'}">Platinum</td>
+                    <td ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond'}">Diamond</td>
+                    <td ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master'}">Master</td>
+                    <td ng-click="matchOptions.league='Challenger'" ng-class="{'labelHighlight':matchOptions.league=='Challenger'}">Challenger</td>
+                </tr>
+                <tr>
+                    <td class="matchTableFilterTitle"><p> Time:</p></td>
+                    <td ng-click="matchOptions.time='Last Month'" ng-class="{'labelHighlight':matchOptions.time=='Last Month'}">Last Month</td>
+                    <td ng-click="matchOptions.time='Last Week'" ng-class="{'labelHighlight':matchOptions.time=='Last Week'}">Last Week</td>
+                </tr>
+                <tr>
+                    <td class="matchTableFilterTitle"><p> Queue Type:</p></td>
+                    <td ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked'}">Solo Ranked</td>
+                    <td ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank'}">Team Rank</td>
+                    <td ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue'}">Normal Queue</td>
+                </tr>
+            </table>                
             </div>
             <table id="championsListTable" class="table">
                 <tr class="tableStrip">
-                    <th style="padding-left:50px;">Champions</th>
-                    <th>Attack</th>
-                    <th>Defense</th>
-                    <th>Magic</th>
-                    <th>Difficulty</th>
-                </tr>
-                <tr ng-repeat="champ in champInfo | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-click="setChampionDetail(champ.id)" ng-class="{'tableStrip':$index%2==1}">
-					<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p style="display:inline;padding-left:20px;align-self:bottom">{{champ.name}}</p></td>
-                    <td>
+                    <th id="championsListTableTitleChamp">Champions</th>
+                    <th class="championsListTableTitleOthers">Win Rate</th>
+                    <th class="championsListTableTitleOthers">Games Played</th>
+                    <th class="championsListTableTitleOthers">KDA</th>
+                    <th class="championsListTableTitleOthers">CS</th>
+                </tr>                
+                <tr ng-repeat="champ in champInfo | limitTo:10:(loadingPagination.pageIndex-1)*10" ng-click="setChampionDetail(champ.id)" ng-class="{'tableStrip':$index%2==1}">
+                    <td style="padding-left:20px"><span id="tableIndex">{{$index+1}}</span> <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" /><p id="tableChampName">{{champ.name}}</p></td>
+                    <td class="championsListTableContent">
 					  {{champ.info.attack}}/10
                     </td>
-                    <td>
+                    <td class="championsListTableContent">
 					  {{champ.info.defense}}/10
                     </td>
-					<td>
+					<td class="championsListTableContent">
 					  {{champ.info.magic}}/10
                     </td>
-                    <td>
+                    <td class="championsListTableContent">
 					  {{champ.info.difficulty}}/10
                     </td>
                 </tr>

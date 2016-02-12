@@ -1,4 +1,5 @@
 var request = require('request');
+var fs = require('fs');
 var url = require('../util/url');
 
 var getSummonerId = function(id, res){
@@ -46,8 +47,18 @@ var getMatchDetail = function(id, res){
 	});		
 };
 
+var getCharts = function(id, res){
+    fs.readFile('json/charts.json', 'utf8', function(error, data){
+        if(!error){
+            console.log(data);
+            res.send(data);
+        }
+    });    
+};
+
 module.exports.getSummonerId = getSummonerId;
 module.exports.getSummonerGeneral = getSummonerGeneral;
 module.exports.getSummonerChampion = getSummonerChampion;
 module.exports.getMatchList = getMatchList;
 module.exports.getMatchDetail = getMatchDetail;
+module.exports.getCharts = getCharts;

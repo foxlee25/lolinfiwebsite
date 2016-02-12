@@ -14,29 +14,28 @@ app.directive('lolHome',function(){
 			scope.placeHolder = "Search for champion name,items ...";
 			$("body").css("background","url('images/bg1.jpg')");
         },
-        controller:function($scope, $q, redirect, getSummoner, RiotSummonerApi){
+        controller:function($scope, $q, redirect, RiotSummonerApi){
 			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
-				RiotSummonerApi.getChampionGeneral()
+				RiotSummonerApi.getInfo('general')
 					.success(function(data){
-					if(data != "null"){
-						$scope.config.searchToggle = false;
-						$scope.summonerId = input;
-						$scope.championGeneral = data;
-						$scope.searchInput.value = "";
-						redirect("/base/baseHome/baseChampionGeneral");
-					}else{
-						$scope.searchInput.value = "";
-						$scope.placeHolder = "No Match Found";
-					}
-				}).error(
-					function(){
+                        if(data != "null"){
+                            $scope.config.searchToggle = false;
+                            $scope.summonerId = input;
+                            $scope.championGeneral = data;
+                            $scope.searchInput.value = "";
+                            redirect("/base/baseHome/baseChampionGeneral");
+                        }else{
+                            $scope.searchInput.value = "";
+                            $scope.placeHolder = "No Match Found";
+                        }
+				    })
+                    .error(function(){
 						$scope.searchInput.value = "";
 						$scope.placeHolder = "No Match Found";
 						console.log("error loading");
-					}
-				);				
+					});				
 			};
 			
             $scope.searchSummoner = function(input){
@@ -44,7 +43,7 @@ app.directive('lolHome',function(){
 					//user search by name
 					if(isNaN(input)){
 						RiotSummonerApi.setSummonerName(encodeURI(input));
-						var promise = RiotSummonerApi.getChampionGeneralByName();
+						var promise = RiotSummonerApi.getInfo('getid');
 						
 						promise.then(function(payload){
 							if(payload.status === 200){

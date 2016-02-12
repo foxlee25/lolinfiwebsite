@@ -19,26 +19,30 @@ app.directive('lolItems',function(){
 			var objects = [];
 			var targets = {table:[]};
 		
-            RiotApi.getInfo("item").success(function(data){
-				$('#itemAnimate').hide();
-                $scope.itemInfo = data.data;
-				/**
-				* hide the animation for items for now
-				* uncomment the init() and animate() and change the
-				* scope.animateOver = true to false
-				* and remove the hide() on top in order to
-				* revert the change
-				*/
-				//init(data);
-				//animate();
-				//setTimeout(replaceItems, 2000)
-				function replaceItems(){
-					
-					$('#itemAnimate').hide();
-					$scope.animateOver = true;
-					$scope.$digest();
-				}
-            });
+            RiotApi.getInfo("item")
+                .success(function(data){
+                    $('#itemAnimate').hide();
+                    $scope.itemInfo = data.data;
+                    /**
+                    * hide the animation for items for now
+                    * uncomment the init() and animate() and change the
+                    * scope.animateOver = true to false
+                    * and remove the hide() on top in order to
+                    * revert the change
+                    */
+                    //init(data);
+                    //animate();
+                    //setTimeout(replaceItems, 2000)
+                    function replaceItems(){
+
+                        $('#itemAnimate').hide();
+                        $scope.animateOver = true;
+                        $scope.$digest();
+                    }
+                })
+                .error(function(e){
+                    console.error(e + "can't get items");  
+                });
 			
 			function init(data){
 				/**

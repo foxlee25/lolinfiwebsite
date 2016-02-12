@@ -4,7 +4,7 @@ var app=angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router']);
 
 // our controller for the form
 // =============================================================================
-app.controller('formController', function($scope) {
+app.controller('formController', function($scope, facebookService) {
 	
 //	var bgImages = ['bg1.jpg', 'bg2.jpg', 'bg3.jpg'];
 //
@@ -18,7 +18,8 @@ app.controller('formController', function($scope) {
 //			duration: 4000
 //	});
 
-    $scope.config={"searchToggle":true,"url":"HOME"};
+    $scope.config = {"searchToggle":true,"url":"HOME"};
+    $scope.fbLogin = {"btn": true, "image": false, "imageUrl": "", "name": ""};
     
     /**
     * initialize twitch api
@@ -34,5 +35,25 @@ app.controller('formController', function($scope) {
       }
       // the sdk is now loaded
     });
+      
+    /**
+    * get called from checkLoginState in index.html script
+    */
+    $scope.statusChangeCallback = function(response) {
+        if (response.status === 'connected') {
+            facebookService.getFaceBookInfo().then(function(response){
+                $scope.fbLogin = {"btn": false, 
+                                  "image": true, 
+                                  "imageUrl": "http://graph.facebook.com/" +
+                                  response.id +
+                                  "/picture?type=normal", 
+                                  "name": response.name};
+            });
+        } else if (response.status === 'not_authorized') {
+
+        } else {
+
+        }
+    };
     
 });

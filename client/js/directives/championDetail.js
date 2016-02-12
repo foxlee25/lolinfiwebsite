@@ -15,10 +15,11 @@ app.directive('lolChampiondetail',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            // champion detail level
+            scope.champion = {level: 1};
             load_script();
             $("#data-slider")
             .each(function () {
-                console.log("Hello");
                 var input = $(this);
                 $("<span>").addClass("output").insertAfter($(this));
             })
@@ -26,17 +27,22 @@ app.directive('lolChampiondetail',function(){
                 $(this)
                 .nextAll(".output:first")
                 .html(data.value.toFixed() + "-18");
+                scope.champion.level = data.value.toFixed();
+                scope.$digest();
             });
         },
-        controller:function($scope,redirect,championDetail){
-			 championDetail.getChampDetail("champion_detail")
+        controller:function($scope, redirect, RiotApi){
+			 RiotApi.getInfo("champion_detail", RiotApi.getChampDetailId())
 				.success(function(data){
 				 	data.spells.map(function(value){
 						value.image.full = value.image.full.replace(/([A-Z])/g, ' $1').trim();
 						return value;
 					});
 					$scope.detail = data;
-			});
+			     })
+                .error(function(e){
+                    console.error(e + " can't get champion detail");
+                });
         }
     };
 });

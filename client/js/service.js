@@ -1,56 +1,29 @@
 /**
-* call mock data
+* call express middleware
 */
-app.factory('RiotApi',function($http){
-    return{
-        getChampion:function(){
-            return $http.get('json/champions.json');
-        },
-        getCharts:function(){
-            return $http.get('json/charts.json');
-        },
-        getGeneral:function(){
-            return $http.get('json/general.json');
-        },
-        getMatch:function(){
-            return $http.get('json/match.json');
-        },
-        getMatches:function(){
-            return $http.get('json/matches.json');
-        },
-		/**
-		* general url to get static data
-		* by specifying the genre parameter to tell
-		* which query to run
-		*/
-        getInfo:function(genre){
-            return $http.get('http://localhost:8080/LolInfi/LolStatic',
-                             {headers:{
-							 'genre': genre
-							 }});
-        },
-        getItemInfo:function(){
-            return $http.get('json/item_info.json');
-        },
-        getChallengerInfo:function(){
-            return $http.get('json/challenger_info.json');
+app.service('RiotApi',function($http){
+    this.id = null;
+    
+	this.setChampDetailId = function(input){
+		this.id = input;
+	};
+    
+    this.getChampDetailId = function(){
+        return this.id;
+    };
+    
+    /**
+    * general url to get static data
+    * by specifying the genre parameter to tell
+    * which query to run
+    */
+    this.getInfo = function(genre, id){
+        if(id === undefined){
+            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre);
+        }else{
+            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre);
         }
     };
-});
-
-/**
-* mock call rest summoner api
-*/
-app.factory('getSummoner',function($http){
-	return{
-		getChampion:function(id, genre){
-			return $http.get('http://localhost:8080/LolInfi/LolApi/SummonerApi',
-                             {headers:{
-							 'summoner': id,
-							 'genre': genre
-							 }});
-		}
-	};
 });
 
 /**
@@ -84,61 +57,34 @@ app.service('RiotSummonerApi',function($http){
 	this.getSummonerName = function(){
 		return this.summonerName;
 	};
-	
-	/**
-	* get summoner general info by summoner id
-	*/
-	this.getChampionGeneral = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "general",
-							 'id': this.summonerId
-							 }});
-	};
-	
-	/**
-	* get summoner id from name
-	*/
-	this.getChampionGeneralByName = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "getid",
-							 'id': this.summonerName
-							 }});
-	};
-	
-	/**
-	* get summoner played chapmion list
-	*/
-	this.getChampionRank = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "champion",
-							 'id': this.summonerId
-							 }});
-	};
-	
-	/**
-	* get summoner played matchlist
-	*/
-	this.getMatchList = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "matchlist",
-							 'id': this.summonerId
-							 }});
-	};
-	
-	/**
-	* get match detail by match id
-	*/
-	this.getMatchDetail = function(){
-		return $http.get('http://localhost:8080/LolInfi/LolSummoner',
-                            {headers:{
-							 'genre': "matchdetail",
-							 'id': this.matchId
-							 }});
-	};
+    
+    /**
+    * get summoner data
+    */
+    this.getInfo = function(genre){
+        if(genre === 'matchdetail'){
+            return $http.
+            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre);
+        }
+        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre);
+    };
+});
+
+/**
+* facebook service to get user facebook profile info
+*/
+app.service('facebookService', function($q){
+    this.getFaceBookInfo = function(){
+        var deferred = $q.defer();
+        FB.api('/me', function(response) {
+            if (!response || response.error) {
+                deferred.reject('Error occured');
+            } else {
+                deferred.resolve(response);
+            }
+        });
+        return deferred.promise;
+    };
 });
 
 app.service('videoPlayer',function(){
@@ -150,21 +96,6 @@ app.service('videoPlayer',function(){
     this.getVideo = function(){
         return this.video;
     };
-});
-
-app.service('championDetail',function($http){
-	this.id = null;
-	this.setChampDetailId = function(input){
-		this.id = input;
-	};
-    
-	this.getChampDetail = function(genre){
-		return $http.get('http://localhost:8080/LolInfi/LolStatic',
-                         {headers:{
-						 'genre': genre,
-						 'id':this.id
-						 }});
-	};
 });
 
 app.service('loadSummoner',function(){
@@ -185,13 +116,6 @@ app.factory('redirect',function($location){
     return function(path){
         $location.path(path);
     };
-});
-
-/**
-*set video player url
-*/
-app.service('videoUrl',function(){
-    
 });
 
 /**

@@ -7,7 +7,7 @@
     var compress = require('compression');
     var cors = require('cors');
     var logger = require('morgan');
-    var port = 8080;
+    var port = process.env.PORT || 8080;
     var routes;
     var lolStaticApi;
     var lolSummonerApi;
@@ -19,7 +19,6 @@
     app.use(logger('dev'));
 
     lolStaticApi = require('./dao/lol_static_api');
-    console.log(lolStaticApi);
     lolSummonerApi = require('./dao/lol_summoner_api');
     routes = require('./route/index')(app, lolStaticApi, lolSummonerApi);
 
@@ -33,6 +32,7 @@
 
     app.use(express.static('../client/'));
     app.use('/*', express.static('../client/index.html'));
+    app.use(cors());
 
     app.listen(port,function(){
         console.log('express module listening on port'+port);

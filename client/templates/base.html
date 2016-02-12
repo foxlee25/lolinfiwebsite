@@ -1,20 +1,32 @@
 <div class="pageContainer" ng-controller = "formController">
     <div  class="header">
-        <div class="pageLogoContainer">
+        <div class="col-sm-3">
             <div class="pageLogoPositioner">
                 <div class="pageLogo"></div>
             </div>                
         </div>
-        <div class="headerMenuPositioner">
+        <div class="headerMenuPositioner col-sm-7">
             <div class="navTable">
 <!--                <span class="glide_background" style="z-index: 2; left: 40px; width: 68px;"></span>-->
-                <ul>
-                    <li ng-class="{'navTableSelected':config.url=='HOME'}" class="menuItem"  name="homePageContent"  ui-sref=".home" ng-click="config.searchToggle=true;config.url='Home'">HOME</li>
-                    <li ng-class="{'navTableSelected':config.url=='CHAMPIONS'}" class="menuItem" name="championsPageContent" ui-sref=".champions" ng-click="config.url='CHAMPIONS'">CHAMPIONS</li>
-                    <li ng-class="{'navTableSelected':config.url=='ITEMS'}" class="menuItem" name="itemsPageContent" ui-sref=".items" ng-click="config.url='ITEMS'">ITEMS</li>
-                    <li ng-class="{'navTableSelected':config.url=='RANK'}" class="menuItem" name="rankPageContent" ui-sref=".rank" ng-click="config.url='RANK'">RANK</li>
-                    <li ng-class="{'navTableSelected':config.url=='LIVE'}" class="menuItem" name="livePageContent" ui-sref=".live" ng-click="config.url='LIVE'">LIVE</li>
+                <ul class="nav nav-pills">
+                    <li role="presentation" ng-class="{'navTableSelected':config.url=='HOME'}" class="menuItem"  name="homePageContent"  ui-sref=".home" ng-click="config.searchToggle=true;config.url='Home'">HOME</li>
+                    <li role="presentation" ng-class="{'navTableSelected':config.url=='CHAMPIONS'}" class="menuItem" name="championsPageContent" ui-sref=".champions" ng-click="config.url='CHAMPIONS'">CHAMPIONS</li>
+                    <li role="presentation" ng-class="{'navTableSelected':config.url=='ITEMS'}" class="menuItem" name="itemsPageContent" ui-sref=".items" ng-click="config.url='ITEMS'">ITEMS</li>
+                    <li role="presentation" ng-class="{'navTableSelected':config.url=='RANK'}" class="menuItem" name="rankPageContent" ui-sref=".rank" ng-click="config.url='RANK'">RANK</li>
+                    <li role="presentation" ng-class="{'navTableSelected':config.url=='LIVE'}" class="menuItem" name="livePageContent" ui-sref=".live" ng-click="config.url='LIVE'">LIVE</li>
                 </ul>
+                <div id="status">
+                </div>
+            </div>
+        </div>
+        <div id="facebookLogin" class="col-sm-2">
+            <div ng-if="fbLogin.btn" class="fbLoginBtn">
+                <fb:login-button scope="public_profile,email" onlogin="checkLoginState()">
+                </fb:login-button>
+            </div>
+            <div ng-if="fbLogin.image" class="fbLoginAvator">
+                <img class="img-circle" ng-src="{{fbLogin.imageUrl}}" />
+                <p>Hello {{fbLogin.name}}!</p>
             </div>
         </div>
     </div>

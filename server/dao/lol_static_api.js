@@ -1,4 +1,5 @@
 var request = require('request');
+var fs  = require('fs');
 var url = require('../util/url');
 
 var getChampions = function (res){
@@ -29,6 +30,16 @@ var getItems = function(res){
 	});
 };
 
+var getChallengerInfo = function(res){
+    fs.readFile('json/challenger_info.json', 'utf8', function(error, data){
+        if(!error){
+            console.log(data);
+            res.send(data);
+        }
+    });
+};
+
 module.exports.getChampions = getChampions;
 module.exports.getChampionDetail = getChampionDetail;
 module.exports.getItems = getItems;
+module.exports.getChallengerInfo = getChallengerInfo;

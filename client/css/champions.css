@@ -144,7 +144,7 @@ and open the template in the editor.
 #championsTable table tr th{
     font-size:1.2em;
     vertical-align: middle;
-    color:#448AAC;
+    color:#3399cc;
 }
 
 #championsFilterTableDiv{
@@ -154,6 +154,7 @@ and open the template in the editor.
 
 #championsFilterTable{
     margin-bottom: 5px;
+    border:null;
 }
 
 #championsFilterTable tr{
@@ -166,7 +167,8 @@ and open the template in the editor.
     margin: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1em; 
+    font-size: 1em;
+    color: #cccccc !important;
 }
 
 #championsListTable tr td{
@@ -190,4 +192,49 @@ and open the template in the editor.
 
 #champTitle b{
 	color: white;
+}
+
+
+.matchTableFilterTitle p{
+    color: #cccccc;
+    font-size:1.2em;
+    vertical-align: middle;
+    text-align: left;
+}
+
+#championsListTableTitleChamp{
+    padding-left:20px;
+    width: 200px;
+    color: #cccccc !important;
+    font-size: 16px !important;
+
+}
+
+#championsListTable .championsListTableTitleOthers{
+    text-align: center;
+    font-size: 14px;
+}
+
+#championsListTable .img-circle{
+    height:35px;
+    width:35px;
+}
+
+#tableIndex{
+    margin-right: 15px;
+}
+
+.championsListTableContent{
+    text-align: center;
+}
+
+#tableChampName{
+    display:inline;
+    padding-left:20px;
+    align-self:bottom;
+    color: #cccccc;
+}
+
+.pagin{
+    left: 30px;
 }

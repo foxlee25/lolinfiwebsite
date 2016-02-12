@@ -58,14 +58,17 @@ module.exports = function(grunt) {
             d3: true,
           module: true,
           TWEEN: true,
-          THREE: true
+          THREE: true,
+          process: true,
+          FB: true
         }
       },
       gruntfile: {
         src: 'Gruntfile.js'
       },
       lib_test: {
-        src: ['./client/js/*.js',
+        src: ['!./client/js/simple-slider.js',
+                './client/js/*.js',
                 './client/js/**/*.js', 
                 './server/*.js',
                 './server/dao/*.js',
@@ -77,14 +80,11 @@ module.exports = function(grunt) {
       files: ['test/**/*.html']
     },
     watch: {
-      gruntfile: {
-        files: ['./client/js/*.js',
-                './client/js/**/*.js', 
-                './server/*.js',
-                './server/dao/*.js',
-                './server/route/*.js',
-                './server/util/*.js'],
-        tasks: ['jshint']
+      server: {
+        files: ['.rebooted'],
+        options: {
+          livereload: true
+        }
       }
     },
     copy: {
@@ -120,6 +120,40 @@ module.exports = function(grunt) {
       build:{
         files: '../LolInfi_deploy/client/json/**.json'
       }
+    },
+    concurrent: {
+      dev: {
+        tasks: ['nodemon', 'watch'],
+        options: {
+          logConcurrentOutput: true
+        }
+      }
+    },
+    nodemon: {
+      dev: {
+        script: 'server/app.js',
+        options: {
+          nodeArgs: ['--debug'],
+          env: {
+            PORT: '5455'
+          },
+          // omit this property if you aren't serving HTML files and 
+          // don't want to open a browser tab on start
+          callback: function (nodemon) {
+            nodemon.on('log', function (event) {
+              console.log(event.colour);
+            });
+          }
+        }
+      }
+    },
+    git_deploy: {
+      target: {
+        options: {
+          url: 'https://github.com/foxlee25/lolinfiwebsite_deploy.git'
+        },
+        src: '../LolInfi_deploy/'
+      }
     }
   });
 
@@ -133,10 +167,23 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-image');
   grunt.loadNpmTasks('grunt-json-minify');
+  grunt.loadNpmTasks('grunt-express-server');
+  grunt.loadNpmTasks('grunt-nodemon');
+  grunt.loadNpmTasks('grunt-concurrent');
+  grunt.loadNpmTasks('grunt-git-deploy');
 
   // Deploy task.
-  grunt.registerTask('deploy', ['jshint', 'clean:delete', 'copy', 'image', 'json-minify', 'uglify']);
-  // Watch JShint
-  grunt.registerTask('watch', ['jshint']);
+  grunt.registerTask('deploy', 
+    ['jshint', 
+    'clean:delete',
+     'copy', 
+     'image', 
+     'json-minify', 
+     'uglify', 
+     'git_deploy:target']);
+
+  
+  // Deploy server
+  grunt.registerTask('run', ['concurrent:dev']);
 
 };

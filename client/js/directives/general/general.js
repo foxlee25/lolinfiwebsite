@@ -32,7 +32,7 @@ app.directive('lolChampionsGeneral',function(){
                     },       
 
                     pane: {
-                        size: '70%'
+                        size: '65%'
                     },
 
                     xAxis: {
