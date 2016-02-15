@@ -17,7 +17,7 @@
 	color: white;
 }
 
-.itemCard{
+#itempics{
     position: relative;
 /*
     border:2px solid;
@@ -28,20 +28,30 @@
     float: left;
 }
 
-.itemCard div{
+#itempics div{
     display: none;
 }
 
-.itemCard:hover div{
+#itempics:hover div{
     display: block;
     position: absolute;
-    z-index: 100;
+    z-index: 1;
+/*
     left: 40px;
     top: 0px;
+*/
     background-color: black; 
+/*
     width: 200px;
     margin-top: 20px;
+*/
 }
+
+.pop{
+    position: relative;
+    left: 200px;
+}
+
 
 .itemCard:hover div b{
     color: white;
@@ -69,7 +79,7 @@
 }
 
 #popupImage{
-    margin: 20px;
+    margin: 10px;
 }
 
 #itempics{
@@ -78,22 +88,23 @@
 }
 
 #popupWindow{
-    width: 380px;
+    width: 350px;
 }
 
 #popupItemName{
     position: absolute;
-    top: 5px;
-    left: 70px;
+    left: 60px;
 }
 
 #price{
     width: 20%;
     position: absolute;
     top: 13px;
-    left: 300px;
+    left: 270px;
 }
 
 #itemBg{
     width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
 }

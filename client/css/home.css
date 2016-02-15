@@ -402,11 +402,13 @@
     font-size: 1em;
 }
 
+/*
 .itemCardSize{
 	position: relative;
 	padding: 10px;
 	float: left;
 }
+*/
 
 #itemBg{
     width: 100%;

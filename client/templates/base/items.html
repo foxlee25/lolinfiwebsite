@@ -1,3 +1,5 @@
+
+
 <div>
     <div class="col-sm-offset-2 col-sm-8" >
         <div id="items">
@@ -16,22 +18,21 @@
 		<div id="itemAnimate">
 <!--            <p>asdasdasd</p>-->
 		</div>
-        <div id="itemBg" ng-if="animateOver">
-            <div id="itempics" class="itemCard" ng-repeat="item in itemInfo">
+        <div id="itemBg">
+<!--            <div>-->
+            <div id="itempics" class ="itemCard" ng-repeat="item in itemInfo">
                 <img class="itemImg" ng-src="images/item_info/{{item.id}}.png" >
-                <div id="hoverPop">
-                    <div id="popupWindow">
+<!--                <div id="hoverPop">-->
+                    <div id="popupWindow" ng-class="{pop:popleft}">
                         <img id="popupImage" ng-src="images/item_info/{{item.id}}.png" >
                         <img id="price" src="images/price.png">
                         <b id="popupItemName">{{item.name}}</b>
                         <br>
                         <p>{{item.plaintext}}</p>
-                        <br>
-<!--                        <p>{{item.id}}</p>-->
-<!--                        <br>-->
                         <p ng-bind-html="item.description"></p>
                     </div>
-                </div>
+<!--                </div>-->
+<!--            </div>-->
             </div>
         </div>
 	</div>
