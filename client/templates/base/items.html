@@ -23,7 +23,7 @@
             <div id="itempics" class ="itemCard" ng-repeat="item in itemInfo">
                 <img class="itemImg" ng-src="images/item_info/{{item.id}}.png" >
 <!--                <div id="hoverPop">-->
-                    <div id="popupWindow" ng-class="{pop:popleft}">
+                    <div id="popupWindow" ng-show="popleft">
                         <img id="popupImage" ng-src="images/item_info/{{item.id}}.png" >
                         <img id="price" src="images/price.png">
                         <b id="popupItemName">{{item.name}}</b>

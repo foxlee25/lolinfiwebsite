@@ -13,15 +13,15 @@ app.directive('lolItems',function(){
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
             
-            
-//            var tooltipSpan, x, y;
-//                $("#itemBg").mousemove(function(e) {
-//                    x = e.clientX,
-//                    y = e.clientY;
-//                    document.getElementById('popupWindow').style.top = (y + 10) + 'px';
+            // new
+            var tooltipSpan, x, y;
+                $("#itemBg").mousemove(function(e) {
+                    x = e.clientX,
+                    y = e.clientY;
+                    document.getElementById('popupWindow').style.top = (y + 10) + 'px';
 //                    console.log(document.getElementById('popupWindow').style.top);
-//                    document.getElementById('popupWindow').style.left = (x + 20) + 'px';
-//                });
+                    document.getElementById('popupWindow').style.left = (x + 20) + 'px';
+                });
             
             
         },
@@ -30,7 +30,7 @@ app.directive('lolItems',function(){
 //			var controls;
 //			var objects = [];
 //			var targets = {table:[]};
-		    $scope.popleft = false;
+		    $scope.popleft = true;
             RiotApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();
                 $scope.itemInfo = data.data;
@@ -55,19 +55,19 @@ app.directive('lolItems',function(){
             });
             
 
-                $("#itemBg").mousemove(function(e) {
-                    x = e.clientX,
-                    y = e.clientY;
-//                    console.log(x);
-//                    document.getElementById('popupWindow').style.top = (y + 10) + 'px';
-//                    console.log(document.getElementById('popupWindow').style.top);
-//                    document.getElementById('popupWindow').style.left = (x + 20) + 'px';
-                var check = x > 700;   
-                    if(check){
-                    console.log(check);
-                    $scope.popleft = true;
-                }
-                });
+            //new code
+//                $("#itemBg").mousemove(function(e) {
+//                    x = e.clientX,
+//                    y = e.clientY;
+////                    console.log(x);
+////                    document.getElementById('popupWindow').style.top = (y + 10) + 'px';
+////                    console.log(document.getElementById('popupWindow').style.top);
+////                    document.getElementById('popupWindow').style.left = (x + 20) + 'px';
+//                    if(x < 700){
+//                    console.log(x < 700);
+//                    $scope.popleft = false;
+//                }
+//                });
             
             
             
