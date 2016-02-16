@@ -25,7 +25,11 @@ var getChampionDetail = function(id, res){
 var getItems = function(res){
 	request((url.URL.urls.RIOT_URL_ITEM + url.URL.api_key), function(error, response, body){
 		if(!error && response.statusCode === 200){
+//            console.log("=============");
+//            console.log(response);
+//            console.log("=============");
 			res.send(body);
+            
 		}
 	});
 };
