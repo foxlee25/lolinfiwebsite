@@ -18,8 +18,9 @@ app.directive('lolItems',function(){
                 $("#itemBg").mousemove(function(e) {
                     x = e.clientX,
                     y = e.clientY;
+//                    console.log(x);
                     document.getElementById('popupWindow').style.top = (y + 10) + 'px';
-//                    console.log(document.getElementById('popupWindow').style.top);
+                    console.log(document.getElementById('popupWindow').style.top);
                     document.getElementById('popupWindow').style.left = (x + 20) + 'px';
                 });
             
