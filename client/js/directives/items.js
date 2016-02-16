@@ -12,6 +12,7 @@ app.directive('lolItems',function(){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
+
         },
         controller:function($scope,RiotApi){
 			var camera, scene, renderer;
@@ -135,6 +136,7 @@ app.directive('lolItems',function(){
 					.onUpdate( render )
 					.start();
 			}
+
         }
     };
 });

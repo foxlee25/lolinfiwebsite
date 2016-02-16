@@ -1,12 +1,3 @@
-/*
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
-*/
-/* 
-    Created on : Oct 12, 2015, 6:01:55 PM
-    Author     : Pokey
-*/
 #championsTableFilterContainer{
     margin: 0 auto;
     width: 800px;
@@ -111,68 +102,52 @@ and open the template in the editor.
     padding: 20px;
 }
 
-#championsListTable{
-	background-color: rgba(255,255,255,0.05);
-}
-
 #champions{
     margin-top: 50px;
 }
 
-#champions table tr td{
-    font-size:1em;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-}
-
-.championsTableHeader{
-    color:#448AAC;
-    background-color: rgba(255,255,255, 0.07);
-}
-
-.championsTableHeader th{
-    font-size:1.2em;
-    vertical-align: middle;
-    text-align: center;
-}
-
-#championsTable table tr td{
-    color: white;
-}
-
-#championsTable table tr th{
-    font-size:1.2em;
-    vertical-align: middle;
-    color:#3399cc;
-}
-
 #championsFilterTableDiv{
-    background-color: rgba(255,255,255, 0.1);
+    background-color: rgba(255,255,255, 0);
     width: 100%;
 }
 
 #championsFilterTable{
+    background-color: rgba(255,255,255, 0.1);
     margin-bottom: 5px;
+    border-radius: 2px;
     border:null;
 }
 
-#championsFilterTable tr{
-    margin-top: 5px;
-    margin-bottom: 5px;
+#tbody{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-#championsFilterTable tr td{
-    vertical-align: middle;
-    margin: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 1em;
+#championsFilterTable .row{
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+#tbody div{
+    text-align: left !important;
+    font-size: 14px;
+    color: #999999;
+}
+
+.labelHighlight{
+    text-align:left !important;
+    background-color: #006699;
     color: #cccccc !important;
+    border-radius: 10px;
+    display: inline-block;
+    line-height: 20px;
 }
 
-#championsListTable tr td{
-	vertical-align: middle;
+.matchTableFilterTitle{
+    color: #cccccc !important;
+    font-size: 16px !important;
 }
 
 #champLogo{
@@ -194,25 +169,57 @@ and open the template in the editor.
 	color: white;
 }
 
+#championsListTable{
 
-.matchTableFilterTitle p{
-    color: #cccccc;
-    font-size:1.2em;
-    vertical-align: middle;
-    text-align: left;
+    margin-top: 10px;
+}
+
+#championsListTable .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.tableStrip{
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 3px;
+    height: 50px;
+}
+
+.tableStrip div{
+    color: #ffffff;
+}
+
+.tableStrip.row div{
+    position: relative;
+    top: 8px; 
+ 
 }
 
 #championsListTableTitleChamp{
     padding-left:20px;
-    width: 200px;
+    text-align: left;
     color: #cccccc !important;
-    font-size: 16px !important;
+    font-size: 18px !important;
+    position: relative;
+    top: 13px;  
 
+}
+
+#championsListTable .championsListTableTitleWin{
+    text-align: center;
+    font-size: 15px;
+    color:#99cccc;
+    position: relative;
+    top: 16px; 
 }
 
 #championsListTable .championsListTableTitleOthers{
     text-align: center;
-    font-size: 14px;
+    font-size: 15px;
+    color:#3399cc;
+    position: relative;
+    top: 16px; 
 }
 
 #championsListTable .img-circle{
@@ -221,16 +228,23 @@ and open the template in the editor.
 }
 
 #tableIndex{
-    margin-right: 15px;
+    margin-right: 12px;
+    color: #cccccc;
 }
 
-.championsListTableContent{
+.tableStrip .championsListTableTag{
+    text-align: left;
+}
+
+.tableStrip .championsListTableContent{
     text-align: center;
+    position: relative;
+    top: 16px !important; 
 }
 
 #tableChampName{
-    display:inline;
-    padding-left:20px;
+    display:inline-block;
+    padding-left:6px;
     align-self:bottom;
     color: #cccccc;
 }
@@ -238,3 +252,17 @@ and open the template in the editor.
 .pagin{
     left: 30px;
 }
+
+.topOne{
+    color: #cc9933 !important;
+}
+
+.topTwo{
+    color: #cc9933 !important;
+}
+
+.topThree{
+    color: #cc9933 !important;
+}
+
+
