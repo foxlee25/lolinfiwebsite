@@ -10,10 +10,17 @@ app.directive('lolChampionsGeneral',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, RiotApi){
+        controller:function($scope, RiotApi, redirect, RiotSummonerApi, Cache){
 //            getApi.getGeneral().success(function(data){
 //                $scope.championGeneral = data;
 //            });
+            if(RiotSummonerApi.getSummonerId() === null){
+                if(Cache.get("SummonerId")){
+                    RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
+                }else{
+                    redirect("/base/baseHome");
+                }
+            }
 		
              (function init_summonerGeneral_spiderChart(){
 

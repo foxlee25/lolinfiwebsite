@@ -11,7 +11,15 @@ app.directive('lolChampionsCharts',function(){
         link:function(scope,element,attrs){
 			scope.chartOptions={"gameType":"Ranked Solo","role":"TOP","performance":"Game Length"};
         },
-        controller:function($scope, RiotSummonerApi){
+        controller:function($scope, RiotSummonerApi, redirect, Cache){
+            if(RiotSummonerApi.getSummonerId() === null){
+                if(Cache.get("SummonerId")){
+                    RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
+                }else{
+                    redirect("/base/baseHome");
+                }
+            }
+            
 			// use the mock data from static json
             RiotSummonerApi.getInfo('charts')
                 .success(function(data){
