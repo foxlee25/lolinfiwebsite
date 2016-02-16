@@ -104,7 +104,10 @@ module.exports = function(grunt) {
       },
       delete:{
         src:["../LolInfi_deploy/"]
-      }
+      },
+	  git:{
+		src:["./tmp/"]
+	  }
     },
     image:{
       dynamic: {
@@ -180,6 +183,7 @@ module.exports = function(grunt) {
      'image', 
      'json-minify', 
      'uglify', 
+	 'clean:git',
      'git_deploy:target']);
 
   

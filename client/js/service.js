@@ -140,9 +140,9 @@ app.service('util',function(){
 app.service('Cache', function(){
     this.set = function (key, value){
         localStorage.setItem(key, value);
-    }
+    };
     
     this.get = function (key){
         return localStorage.getItem(key);
-    }
+    };
 });
