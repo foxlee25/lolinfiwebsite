@@ -15,14 +15,15 @@
                 </tr>
             </table>
         </div>
+<!--
 		<div id="itemAnimate">
-<!--            <p>asdasdasd</p>-->
+
 		</div>
+-->
+        
         <div id="itemBg">
-<!--            <div>-->
-            <div id="itempics" class ="itemCard" ng-repeat="item in itemInfo">
+            <div class="itemCard" ng-repeat="item in itemInfo">
                 <img class="itemImg" ng-src="images/item_info/{{item.id}}.png" >
-<!--                <div id="hoverPop">-->
                     <div id="popupWindow" ng-show="popleft">
                         <img id="popupImage" ng-src="images/item_info/{{item.id}}.png" >
                         <img id="price" src="images/price.png">
@@ -31,8 +32,6 @@
                         <p>{{item.plaintext}}</p>
                         <p ng-bind-html="item.description"></p>
                     </div>
-<!--                </div>-->
-<!--            </div>-->
             </div>
         </div>
 	</div>
