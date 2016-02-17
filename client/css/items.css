@@ -64,7 +64,7 @@
 }
 
 #popupImage{
-    margin: 13px;
+    margin: 15px;
 }
 
 #popupWindow{
@@ -74,7 +74,7 @@
     border-width: 1px;
 	border-radius: 8px;
     background-color: black;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 #popupItemName{
@@ -91,7 +91,15 @@
 
 #itemBg{
     width: 100%;
+    padding-top: 30px;
     padding-left: 30px;
     padding-right: 30px;
-/*    padding-bottom: 50px;*/
+    padding-bottom: 30px;
+    margin-bottom: 150px;
+}
+
+#descrip{
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 20px;
 }

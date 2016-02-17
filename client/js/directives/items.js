@@ -19,20 +19,32 @@ app.directive('lolItems',function(){
             $(document).mousemove(function(e) {
                 xCoordinate = e.pageX,
                 yCoordinate = e.pageY;
-                if(e.pageX > 2*screenWidth/3 && e.pageY > 3*screenHeight/5){
+//                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
+//                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
+//                }else if(e.pageX > screenWidth/2 && e.pageY <= 3*screenHeight/5){
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
+//                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
+//                }else if(e.pageX <= screenWidth/2 && e.pageY > 3*screenHeight/5){
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
+//                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                }else{
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
+//                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                }
+                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
                     $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
                     $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
-                }else if(e.pageX > 2*screenWidth/3 && e.pageY <= 3*screenHeight/5){
-                    $(".itemCard:hover div").css({top: (yCoordinate - 100) + 'px'});
+                }else if(e.pageX > screenWidth/2 && e.pageY <= 3*screenHeight/5){
+                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
                     $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
-                }else if(e.pageX <= 2*screenWidth/3 && e.pageY > 3*screenHeight/5){
+                }else if(e.pageX <= screenWidth/2 && e.pageY > 3*screenHeight/5){
                     $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
                     $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                 }else{
-                    $(".itemCard:hover div").css({top: (yCoordinate - 100) + 'px'});
+                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
                     $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                 }
-
             });
             
             
