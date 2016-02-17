@@ -15,13 +15,24 @@ app.directive('lolItems',function(){
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
 
-            var xCoordinate, yCoordinate;
+            var xCoordinate, yCoordinate, check;
             $(document).mousemove(function(e) {
-                xCoordinate = e.clientX,
-                yCoordinate = e.clientY;
-                $(".itemCard:hover div").css({top: (yCoordinate - 100) + 'px'});
-                $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                    
+                xCoordinate = e.pageX,
+                yCoordinate = e.pageY;
+                if(e.pageX > 2*screenWidth/3 && e.pageY > 3*screenHeight/5){
+                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
+                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
+                }else if(e.pageX > 2*screenWidth/3 && e.pageY <= 3*screenHeight/5){
+                    $(".itemCard:hover div").css({top: (yCoordinate - 100) + 'px'});
+                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
+                }else if(e.pageX <= 2*screenWidth/3 && e.pageY > 3*screenHeight/5){
+                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
+                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+                }else{
+                    $(".itemCard:hover div").css({top: (yCoordinate - 100) + 'px'});
+                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+                }
+
             });
             
             
