@@ -82,10 +82,17 @@
     left: 60px;
 }
 
-#price{
-    width: 20%;
+#icon{
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 10px;
+    left: 275px;
+}
+
+#price{
+    position: absolute;
+    top: 0px;
     left: 270px;
 }
 
