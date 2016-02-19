@@ -36,27 +36,32 @@ app.directive('lolItems',function(){
                 
                 var check_1 = screenHeight - e.clientY - $(".footer").height() - 30 >= $(".itemCard:hover div").height();
                 var check_2 = e.clientY > $(".itemCard:hover div").height() + 20;
+                var popupWidth = $(".itemCard:hover div").width();
                 if(check_1){
                     $(".itemCard:hover div").css({top: (yCoordinate - 80) + 'px'});
-                    if(e.clientX + $(".itemCard:hover div").width() >= screenWidth){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 570) + 'px'});
+                    if(e.clientX + 350 >= screenWidth - 135){
+                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                     }
                 }else if(check_2){
                     $(".itemCard:hover div").css({top: (yCoordinate - 120 - $(".itemCard:hover div").height()) + 'px'});
-                    if(e.clientX + $(".itemCard:hover div").width() >= screenWidth){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 570) + 'px'});
+                    if(e.clientX + 350 >= screenWidth - 135){
+                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                     }
                 }else{
-                    $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/3) + 'px'});
-                    if(e.clientX + $(".itemCard:hover div").width() >= screenWidth){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 570) + 'px'});
+                    $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/2) + 'px'});
+                    $(".itemCard:hover div").css({width: 420 + 'px'});
+                    $(".itemCard:hover #icon").css({left: 350 + 'px'});
+                    $(".itemCard:hover #price").css({left: 345 + 'px'});
+                    if(e.clientX + 350 >= screenWidth - 135){
+                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                     }
+                    
                 }
                 
                 
@@ -91,7 +96,7 @@ app.directive('lolItems',function(){
 //					$scope.$digest();
 //				}
             });
-
+            
 			
             //temporarily not used
 			function init(data){
