@@ -1,5 +1,6 @@
 var request = require('request');
 var fs = require('fs');
+var _ = require('underscore');
 var url = require('../util/url');
 
 var getSummonerId = function(id, res){
@@ -11,11 +12,21 @@ var getSummonerId = function(id, res){
 	});
 };
 
+/**
+* would be better if we use promise based http request since we are chaining two calls together
+* for now just nest another request in the previous one
+*/
 var getSummonerGeneral = function(id, res){
 	request((url.URL.urls.RIOT_URL_SUMMONER_GENERAL + id + "/summary?api_key=" + url.URL.api_key), function(error, response, body){
 		if(!error && response.statusCode === 200){
-			console.log(JSON.stringify(body));
-			res.send(body);
+			var data = body;
+			request((url.URL.urls.RIOT_URL_SUMMONER_GENERAL + id + "/ranked?api_key=" + url.URL.api_key), function(error, response, body){
+				if(!error && response.statusCode == 200){
+					var target = {};
+					_.extend(target, JSON.parse(body), JSON.parse(data));
+					res.send(target);
+				}
+			});
 		}
 	});
 };

@@ -21,6 +21,14 @@ app.directive('lolChampionsGeneral',function(){
                     redirect("/base/baseHome");
                 }
             }
+			
+			RiotSummonerApi.getInfo('general')
+                .success(function(data){
+					$scope.general = data;
+			     })
+                .error(function(e){
+                    console.error(e + " can't get summoner champion");
+                });
 		
              (function init_summonerGeneral_spiderChart(){
 
