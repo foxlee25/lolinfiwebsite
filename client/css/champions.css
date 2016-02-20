@@ -142,7 +142,7 @@
     color: #cccccc !important;
     border-radius: 10px;
     display: inline-block;
-    line-height: 20px;
+    line-height: 20px; 
 }
 
 .matchTableFilterTitle{
@@ -222,6 +222,10 @@
     top: 16px; 
 }
 
+#championsListTable .championsListTableTitleWin a:hover, #championsListTable .championsListTableTitleOthers a:hover{
+    color:#99cccc;
+}
+
 #championsListTable .img-circle{
     height:35px;
     width:35px;
@@ -265,4 +269,10 @@
     color: #cc9933 !important;
 }
 
+.row .col-sm-1{
+    text-align: left;
+}
 
+.active{
+    color: #99cccc !important;
+}
