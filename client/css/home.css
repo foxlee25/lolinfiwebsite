@@ -90,6 +90,7 @@
     position:relative;
     float:left;
     width:100%;
+    height:50px;
 }
 .circleHeroDuty{
     height:45px;
@@ -229,7 +230,7 @@
 }
 
 .champ-img-circle{
-	border:2px solid;
+    border:2px solid;
     border-color: #263F55;
     height: 80px;
     border-radius: 50%;
@@ -254,12 +255,12 @@
     font-size:1em;
     vertical-align: middle;
     text-align: center;
-	color: white;
+    color: white;
 }
 
 .filterTable{
     margin-left: 30px;
-	margin-top: 50px;
+    margin-top: 50px;
 }
 
 .filterTable tr{
@@ -273,7 +274,7 @@
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
-	color: white;
+    color: white;
 }
 
 .matchTableFilterTitle p{
@@ -291,6 +292,10 @@
     padding-right: 5px;
 }
 
+.videoCard{
+    position: relative;
+}
+
 #liveView{
     position: absolute;
     z-index: 100;
@@ -305,16 +310,16 @@
 }
 
 #videoSubtitle{
-	height: 65px;
+    height: 65px;
     background-color: rgba(17,28,48, 1);
 }
 
 #videoSubtitle h4{
-	color: white;
+    color: white;
 }
 
 #videoSubtitle p{
-	color: white;
+    color: white;
 }
 
 #videoLogo{
@@ -346,75 +351,29 @@
     font-size: 1em;
 }
 
-
+/*
 .itemCardSize{
-	position: relative;
-	padding: 10px;
-	float: left;
-}
-
-/*.itemCard {
     position: relative;
-	width: 10%;
-    padding:10px;
+    padding: 10px;
     float: left;
 }
+*/
 
-.popleft{
-    position: relative;
-	width: 10%;
-    padding:10px;
-    float: left;
-}*/
-
-/*.itemCard div{
-    display: none;
-}
-
-.itemCard:hover div{
-    display: block;
-    position: absolute;
-    z-index: 100;
-    top: 0px;
-    left: 40px;
-    background-color: black; 
-    width: 200px;
-    margin-top: 20px;
-
-}
-.itemCard:hover div b{
-    color: white;
-    vertical-align: middle;
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1em; 
-}
-
-.itemCard:hover div p{
-    color: white;
-    vertical-align: middle;
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1em; 
-}*/
-
-/*#itemBg{
+#itemBg{
     width: 100%;
     background-color: rgba(15,13,28, 0.7);
     margin-top: 20px;
     overflow: hidden;
     padding-top: 30px;
     padding-bottom: 60px;
-}*/
+}
 
 .flashPlayer{
     width: 50%;
-	height: 500px;
+    height: 500px;
     margin: 0 auto;
-	vertical-align: middle;
-	padding-top: 30px;
+    vertical-align: middle;
+    padding-top: 30px;
 }
 
 .rankTableHeader{
@@ -424,25 +383,25 @@
 .rankTableHeader th{
     font-size:1.2em;
     vertical-align: middle;
-	background-color: rgba(255,255,255, 0.07);
+    background-color: rgba(255,255,255, 0.07);
 }
 
 #rankTable tr td{
-	color:white;
-	vertical-align: middle;
+    color:white;
+    vertical-align: middle;
 }
 
 #rankTable{
-	background-color: rgba(255,255,255, 0.05);
+    background-color: rgba(255,255,255, 0.05);
 }
 
 .chartsWrapper{
-	width: 70%;
-	margin: 0 auto;
+    width: 70%;
+    margin: 0 auto;
 }
 
 #heatmapHeader{
-	clear: both;
+    clear: both;
     background-color: #263F55;
     font-size: 1.2em;
     text-align: center;
@@ -453,91 +412,93 @@
     margin-bottom:2em; 
     padding-top:3px;
     padding-bottom: 1px;
-	width: 100%;
+    width: 100%;
 }
 
 #chartLinemap{
-	margin-top: 30px;
+    margin-top: 30px;
 }
 
 .progress{
-	margin-top: 20px;
+    margin-top: 20px;
 }
 
 #liveViewNumber{
-	position: absolute;
-	z-index: 101;
-	top:3px;
-	left:35px;
-	font-size: 1em;
-	color: white;
+    position: absolute;
+    z-index: 101;
+    top:3px;
+    left:35px;
+    font-size: 1em;
+    color: white;
 }
 
 .pagin{
-	padding-top: 10px;
-	padding-bottom: 80px;
+    padding-top: 10px;
+    padding-bottom: 80px;
 }
 
 .abilityImg{
-	clear: left;
-	float: left;
-	width: 100px;
+    clear: left;
+    float: left;
+    width: 100px;
 }
 
 .itemImgWithWidth{
-	border-style: solid;
-	border-color: rgb(0,76,225);
-	border-width: 2px;
-	border-radius: 10px;
-	width: 200px;
+    border-style: solid;
+    border-color: rgb(0,76,225);
+    border-width: 2px;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.itemImg{
+    border-style: solid;
+    border-color: rgb(0,76,225);
+    border-width: 2px;
+    border-radius: 10px;
 }
 
 #playerScreen{
-    position: relative;
-    width: 125%;
-    left: -150px;
+    height: 100vh;
+    width: 100%;
 }
 
 .progressBg{
-	background-color: cyan!important;
+    background-color: cyan!important;
 }
 
 #itemAnimate{
-	padding-bottom: 850px;
+    padding-bottom: 850px;
 }
 
 #chartOptionButtons{
-	float: right;
-	margin-top: 40px;
-	background-color: #263F55;
+    float: right;
+    margin-top: 40px;
+    background-color: #263F55;
 }
 
 #chartOptionButtons p{
-	font-size: 1.2em;
-	color: white;
+    font-size: 1.2em;
+    color: white;
 }
 #victoryGroup{
-	background-color: rgba(255,255,255, 0.03);
-	padding-top: 20px;
-	padding-left: 20px;
+    background-color: rgba(255,255,255, 0.03);
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 #victoryGroup b{
-	font-size: 2em;
-	color: green;
+    font-size: 2em;
+    color: green;
 }
 
 #defeatGroup{
-	background-color: rgba(255,255,255, 0.03);
-	padding-top: 20px;
-	padding-left: 20px;
+    background-color: rgba(255,255,255, 0.03);
+    padding-top: 20px;
+    padding-left: 20px;
 }
 
 #defeatGroup b{
-	font-size: 2em;
-	color: red;
-}
-
-#header{
-    z-index: 50;
+    font-size: 2em;
+    color: red;
 }
