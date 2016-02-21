@@ -26,7 +26,7 @@ app.directive('lolChampionsGeneral',function(){
 			RiotSummonerApi.getInfo('general')
                 .success(function(data){
 					$scope.general = data;
-				debugger;
+				    // debugger;
 					if($scope.general.champions != null &&
 					   Array.isArray($scope.general.champions)){
 						var totalGamePlayed = 0;
@@ -49,7 +49,6 @@ app.directive('lolChampionsGeneral',function(){
 							totalDeath+=
 								champ.stats.totalDeathsPerSession*champ.stats.totalSessionsPlayed;
 						});
-
 						$scope.stats.wRate = parseInt(totalGameWon*100/totalGamePlayed);
 						$scope.stats.kda = parseInt((totalKill + totalAssist)/totalGamePlayed);
 						$scope.stats.cs = parseInt(totalCreepScore/totalGamePlayed);
@@ -59,27 +58,26 @@ app.directive('lolChampionsGeneral',function(){
                 .error(function(e){
                     console.error(e + " can't get summoner champion");
                 });
-		
-             (function init_summonerGeneral_spiderChart(){
+                
+            
 
-                 $('.last20GamesSummarySpiderChart').highcharts({
-                      credits: {
+            (function init_summonerGeneral_spiderChart(){
+                $('.last20GamesSummarySpiderChart').highcharts({
+                    credits: {
                         enabled: false
                     },
                     title:{
                       text: null
-                      },
+                    },
                     chart: {
                         polar: true,
                         type: 'line',
                         y:-100,
                         backgroundColor:'transparent'
                     },       
-
                     pane: {
                         size: '65%'
                     },
-
                     xAxis: {
                         categories: ['Damage', 'Gold', 'Team Fight', 'Vision Control',
                                 'Survival'],
@@ -93,7 +91,6 @@ app.directive('lolChampionsGeneral',function(){
                         },
                         lineWidth: 0
                     },
-
                     yAxis: {
                         gridLineInterpolation: 'polygon',
                         lineWidth: 0,
@@ -104,22 +101,18 @@ app.directive('lolChampionsGeneral',function(){
                             enabled: false
                         },
                     },
-
                     tooltip: {
                         shared: true,
                         pointFormat: '<span style="color:{series.color}">{series.name}: <b>{point.y:,.0f}</b><br/>'
                     },
-
                     legend: {
                          enabled: false
                     },
-
                     series: [{
                         name: 'Score',
                         data: [1.5, 2, 3, 4.5, 3.5],
                         pointPlacement: 'on'
                     }]
-
                 });
             }());
         }
