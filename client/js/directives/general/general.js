@@ -22,7 +22,15 @@ app.directive('lolChampionsGeneral',function(){
                     redirect("/base/baseHome");
                 }
             }
-			
+
+			RiotSummonerApi.getInfo('')
+                .success(function(data){
+                    
+                })
+                .error(function(e){
+                    
+                });
+
 			RiotSummonerApi.getInfo('general')
                 .success(function(data){
 					$scope.general = data;

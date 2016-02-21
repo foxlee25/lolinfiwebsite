@@ -70,49 +70,75 @@
         </div>
         <div id="roleTable">
             <table class="table">
-                <tbody>
-                <tr class="generalTableHeader">
-                    <th>Role</th>
-                    <th>W Rate</th>
-                    <th>Games</th>
-                    <th>KDA</th>
-                    <th>CS</th>
-                    <th>Last Played</th>
-                </tr>
-                <tr>
-                <tr ng-repeat="role in championGeneral.roles">
-                    <td style="padding-left:90px">
-                        <div class='circleHeroDuty'>
-                            <firstL>{{role.role|limitTo:3}}</firstL>
-                        </div>
-                    </td>
-                    <td>{{role.stats.winRate|number:2}}%</td>
-                    <td>{{role.stats.games}}</td>
-                    <td>{{role.stats.kda|number:2}}</td>
-                    <td>{{role.stats.cs|number:2}}</td>
-                    <td>{{role.stats.lastPlayed|number:2}}</td>
-                </tr>
+                    <tbody>
+                    <tr class="generalTableHeader">
+                        <th>Role</th>
+                        <th>W Rate</th>
+                        <th>Games</th>
+                        <th>KDA</th>
+                        <th>CS</th>
+                        <th>Last Played</th>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td style="padding-left:90px">
+                            <div class='circleHeroDuty'>
+                                <firstL>3</firstL>
+                            </div>
+                        </td>
+                        <td>3%</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+<!--                     <tr ng-repeat="role in championGeneral.roles">
+                        <td style="padding-left:90px">
+                            <div class='circleHeroDuty'>
+                                <firstL>{{role.role|limitTo:3}}</firstL>
+                            </div>
+                        </td>
+                        <td>{{role.stats.winRate|number:2}}%</td>
+                        <td>{{role.stats.games}}</td>
+                        <td>{{role.stats.kda|number:2}}</td>
+                        <td>{{role.stats.cs|number:2}}</td>
+                        <td>{{role.stats.lastPlayed|number:2}}</td>
+                    </tr> -->
                 </tbody>
             </table>
         </div>
         <div id="championTable">
             <table class="table">
-                <tr class="generalTableHeader">
-                    <th style="float:right">Champion</th>
-                    <th>Rate</th>
-                    <th>Games</th>
-                    <th>KDA</th>
-                    <th>CS</th>
-                    <th>Last Played</th>
-                </tr>
-                <tr ng-repeat="champs in championGeneral.champs">
-                    <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.id}}/square.png" /></td>
-                    <td>{{champs.stats.winRate|number:2}}%</td>
-                    <td>{{champs.stats.games}}</td>
-                    <td>{{champs.stats.kda|number:2}}</td>
-                    <td>{{champs.stats.cs|number:2}}</td>
-                    <td>{{champs.stats.lastPlayed|number:2}}</td>
-                </tr>
+                <tbody>
+                    <tr class="generalTableHeader">
+                        <th style="float:right">Champion</th>
+                        <th>Rate</th>
+                        <th>Games</th>
+                        <th>KDA</th>
+                        <th>CS</th>
+                        <th>Last Played</th>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:40px">
+                            <img class="img-circle" ng-src="images/champ_basic_info/49159160/square.png" />
+                        </td>
+                        <td>3%</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                        <td>3</td>
+                    </tr>
+                    <!-- <tr ng-repeat="champs in championGeneral.champs">
+                        <td style="padding-left:40px">
+                            <img class="img-circle" ng-src="images/champ_basic_info/{{champs.id}}/square.png" />
+                        </td>
+                        <td>{{champs.stats.winRate|number:2}}%</td>
+                        <td>{{champs.stats.games}}</td>
+                        <td>{{champs.stats.kda|number:2}}</td>
+                        <td>{{champs.stats.cs|number:2}}</td>
+                        <td>{{champs.stats.lastPlayed|number:2}}</td>
+                    </tr> -->
+                </tbody>
             </table>
         </div>
     </div>
