@@ -353,7 +353,7 @@
 	float: left;
 }
 
-.itemCard {
+/*.itemCard {
     position: relative;
 	width: 10%;
     padding:10px;
@@ -362,16 +362,12 @@
 
 .popleft{
     position: relative;
-/*
-    border:2px solid;
-    border-color: #263F55;
-*/
 	width: 10%;
     padding:10px;
     float: left;
-}
+}*/
 
-.itemCard div{
+/*.itemCard div{
     display: none;
 }
 
@@ -386,8 +382,6 @@
     margin-top: 20px;
 
 }
-
-
 .itemCard:hover div b{
     color: white;
     vertical-align: middle;
@@ -404,16 +398,16 @@
     padding-left: 20px;
     padding-right: 20px;
     font-size: 1em; 
-}
+}*/
 
-#itemBg{
+/*#itemBg{
     width: 100%;
     background-color: rgba(15,13,28, 0.7);
     margin-top: 20px;
     overflow: hidden;
     padding-top: 30px;
     padding-bottom: 60px;
-}
+}*/
 
 .flashPlayer{
     width: 50%;
