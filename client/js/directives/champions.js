@@ -247,7 +247,8 @@ app.directive('lolChampions',function(){
                      $scope.reverse = false;
                      $scope.order = id;
                 }
-                //$scope.$digest();
+                $scope.$index.$digest();
+                $scope.loadingPagination.pageIndex.$digest();
             };
             
             $scope.isSort = function(id){
