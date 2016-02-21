@@ -283,10 +283,6 @@
     padding-right: 5px;
 }
 
-.videoCard{
-    position: relative;
-}
-
 #liveView{
     position: absolute;
     z-index: 100;
@@ -342,11 +338,13 @@
     font-size: 1em;
 }
 
+/*
 .itemCardSize{
 	position: relative;
 	padding: 10px;
 	float: left;
 }
+*/
 
 #itemBg{
     width: 100%;
@@ -441,8 +439,9 @@
 }
 
 #playerScreen{
-	height: 100vh;
-	width: 100%;
+    position: relative;
+    width: 125%;
+    left: -150px;
 }
 
 .progressBg{
@@ -483,4 +482,8 @@
 #defeatGroup b{
 	font-size: 2em;
 	color: red;
+}
+
+#header{
+    z-index: 50;
 }
