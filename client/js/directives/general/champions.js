@@ -11,10 +11,17 @@ app.directive('lolChampionsChampions',function(){
         link:function(scope,element,attrs){
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
-        controller:function($scope, RiotSummonerApi){
+        controller:function($scope, RiotSummonerApi, Cache, redirect){
 //            getApi.getChampion().success(function(data){
 //                $scope.champions = data;
 //            });
+            if(RiotSummonerApi.getSummonerId() === null){
+                if(Cache.get("SummonerId")){
+                    RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
+                }else{
+                    redirect("/base/baseHome");
+                }
+            }
 
 			RiotSummonerApi.getInfo('champion')
                 .success(function(data){

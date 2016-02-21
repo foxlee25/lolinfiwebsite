@@ -133,3 +133,16 @@ app.service('util',function(){
 		return size;
 	};
 });
+
+/**
+* get the match id and summoner id from localstorage in case of refresh
+*/
+app.service('Cache', function(){
+    this.set = function (key, value){
+        localStorage.setItem(key, value);
+    };
+    
+    this.get = function (key){
+        return localStorage.getItem(key);
+    };
+});

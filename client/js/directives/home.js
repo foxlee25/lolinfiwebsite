@@ -9,23 +9,23 @@ app.directive('lolHome',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-            scope.championPage = {"id":1};
-			scope.searchInput = {value:""};
 			scope.placeHolder = "Search for champion name,items ...";
 			$("body").css("background","url('images/bg1.jpg')");
         },
-        controller:function($scope, $q, redirect, RiotSummonerApi){
+        controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
+            $scope.championPage = {"id":1};
+			$scope.searchInput = {value:""};
 			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
+                Cache.set("SummonerId", input);
 				RiotSummonerApi.getInfo('general')
 					.success(function(data){
                         if(data != "null"){
-                            $scope.config.searchToggle = false;
                             $scope.summonerId = input;
                             $scope.championGeneral = data;
                             $scope.searchInput.value = "";
-                            redirect("/base/baseHome/baseChampionGeneral");
+                            $scope.selectChampionPage(1);
                         }else{
                             $scope.searchInput.value = "";
                             $scope.placeHolder = "No Match Found";
@@ -82,6 +82,7 @@ app.directive('lolHome',function(){
             
             $scope.selectChampionPage = function(id){
                 $scope.championPage.id = id;
+                $scope.config.searchToggle = false;
                 switch($scope.championPage.id){
                     case 1:
                         redirect("/base/baseHome/baseChampionGeneral");
@@ -95,11 +96,19 @@ app.directive('lolHome',function(){
                     case 4:
                         redirect("/base/baseHome/baseChampionMatch");
                         break;
+                    case 5:
+                        redirect("/base/baseHome/baseChampionMatchDetail");
+                        break;
                     default:
                         redirect("/base/baseHome/baseChampionGeneral");
                 }
                 
             };
+            
+            //current page is sub page of base home
+            if(State[$location.url()] !== 0){
+                $scope.selectChampionPage(State[$location.url()]);
+            }
         }
     };
 });

@@ -14,13 +14,21 @@ app.directive('lolChampionsMatch',function(){
                                   ,"role":"All"};
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
-        controller:function($scope, redirect, RiotSummonerApi){
+        controller:function($scope, redirect, RiotSummonerApi, Cache){
 //            getApi.getMatches().success(function(data){
 //                $scope.matches = data;
 //            });
+            if(RiotSummonerApi.getSummonerId() === null){
+                if(Cache.get("SummonerId")){
+                    RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
+                }else{
+                    redirect("/base/baseHome");
+                }
+            }
         	
         	$scope.loadMatch = function(id){
 				RiotSummonerApi.setMatchId(id);
+                Cache.set("MatchId", id);
         		redirect("/base/baseHome/baseChampionMatchDetail");
         	};
 			

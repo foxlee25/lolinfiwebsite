@@ -10,7 +10,14 @@ app.directive('lolChampionsMatchDetail',function(){
         scope:false,
         link:function(scope,element,attrs){
         },
-        controller:function($scope, RiotSummonerApi){
+        controller:function($scope, RiotSummonerApi, Cache, redirect){
+            if(RiotSummonerApi.getMatchId() === null){
+                if(Cache.get("MatchId")){
+                    RiotSummonerApi.setMatchId(Cache.get("MatchId"));
+                }else{
+                    redirect("/base/baseHome");
+                }
+            }
 			
 			RiotSummonerApi.getInfo('matchdetail')
                 .success(function(data){
