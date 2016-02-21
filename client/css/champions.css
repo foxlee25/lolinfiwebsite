@@ -257,15 +257,7 @@
     left: 30px;
 }
 
-.topOne{
-    color: #cc9933 !important;
-}
-
-.topTwo{
-    color: #cc9933 !important;
-}
-
-.topThree{
+.topOne, .topTwo, .topThree{
     color: #cc9933 !important;
 }
 

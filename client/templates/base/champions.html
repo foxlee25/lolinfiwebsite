@@ -33,31 +33,31 @@
                     <div class="tableStrip row">
                         <div id="championsListTableTitleChamp" class="col-sm-3">Champions</div>
                         <div class="championsListTableTitleWin col-sm-2">
-                            <a href ng-click="setSort(1)" ng-class="{active:isSort(1)}">Win Rate</a>
-                            <img ng-show="isSort(1)&&!reverse" src="images/red_down_arrow.png" />
-                            <img ng-show="isSort(1)&&reverse" src="images/red_up_arrow.png" />                      
+                            <a href ng-click="setSort('-winRate')" ng-class="{active:isSort('-winRate')}">Win Rate</a>
+                            <img ng-show="isSort('-winRate')&&!reverse" src="images/red_down_arrow.png" />
+                            <img ng-show="isSort('-winRate')&&reverse" src="images/red_up_arrow.png" />                      
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort(2)" ng-class="{active:isSort(2)}">Games Played</a>
-                            <img ng-show="isSort(2)&&!reverse" src="images/red_down_arrow.png" />
-                            <img ng-show="isSort(2)&&reverse" src="images/red_up_arrow.png" />     
+                            <a href ng-click="setSort('-games')" ng-class="{active:isSort('-games')}">Games Played</a>
+                            <img ng-show="isSort('-games')&&!reverse" src="images/red_down_arrow.png" />
+                            <img ng-show="isSort('-games')&&reverse" src="images/red_up_arrow.png" />     
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort(3)" ng-class="{active:isSort(3)}">KDA</a>
-                            <img ng-show="isSort(3)&&!reverse" src="images/red_down_arrow.png" />
-                            <img ng-show="isSort(3)&&reverse" src="images/red_up_arrow.png" />  
+                            <a href ng-click="setSort('-kda')" ng-class="{active:isSort('-kda')}">KDA</a>
+                            <img ng-show="isSort('-kda')&&!reverse" src="images/red_down_arrow.png" />
+                            <img ng-show="isSort('-kda')&&reverse" src="images/red_up_arrow.png" />  
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort(4)" ng-class="{active:isSort(4)}">CS</a>
-                            <img ng-show="isSort(4)&&!reverse" src="images/red_down_arrow.png" />
-                            <img ng-show="isSort(4)&&reverse" src="images/red_up_arrow.png" />  
+                            <a href ng-click="setSort('-cs')" ng-class="{active:isSort('-cs')}">CS</a>
+                            <img ng-show="isSort('-cs')&&!reverse" src="images/red_down_arrow.png" />
+                            <img ng-show="isSort('-cs')&&reverse" src="images/red_up_arrow.png" />  
                         </div>
                     </div>
 <!-- Champion List Table Content -->
-                    <div ng-repeat="champ in champInfo | orderBy:orderBy():reverse | limitTo:10:(loadingPagination.pageIndex-1)*10" ng-click="setChampionDetail(champ.id)" class="tableStrip row">
+                    <div ng-repeat="champ in champInfo | orderBy:order:reverse | limitTo:10:(loadingPagination.pageIndex-1)*10" ng-click="setChampionDetail(champ.id)" class="tableStrip row">
                         <div class="championsListTableTag col-sm-3">
                             <!-- change Top3 champions index to Golden -->
-                            <span id="tableIndex" ng-class="{'topOne':{{$index}}==0, 'topTwo':{{$index}}==1, 'topThree':{{$index}}==2}">{{$index+1}}</span>
+                            <span id="tableIndex" ng-class="{'topOne':{{$index+1+(loadingPagination.pageIndex-1)*10}}==1, 'topTwo':{{$index+1+(loadingPagination.pageIndex-1)*10}}==2, 'topThree':{{$index+1+(loadingPagination.pageIndex-1)*10}}==3}">{{ $index+1+(loadingPagination.pageIndex-1)*10 }}</span>
                             <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
                             <p id="tableChampName">{{champ.name}}</p>
                         </div>
