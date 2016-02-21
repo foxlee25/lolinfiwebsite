@@ -15,21 +15,33 @@
                     <h4>{{video.channel.name}}</h4>
                     <p>{{video.channel.status|limitTo:20}}</p>
                 </div>
-                <div style="float:right">
-					<img class="twitchIcon" src="images/live/tv_new.png" >
-                </div>
+<!--                <div style="float:right">-->
+<!--					<img class="twitchIcon" src="images/live/tv_new.png" >-->
+<!--                </div>-->
             </div>
         </div>
     </div>
-	<nav ng-show="twitchPlayList" class="pagin col-sm-offset-5 col-sm-3">
-	  <ul class="pagination">
-		  <li><a ng-click="index>=2?loadPage(index-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-		<li ng-click="loadPage(1)" ng-class="{'active':index==1}"><a ng-click="loadPage(1)">1 </a></li>
+    
+    
+<!--    pagination-->
+	<nav ng-show="twitchPlayList" class="pagin col-sm-offset-4 col-sm-10">
+        <ul class="pagination">
+		  <li><a ng-click="index>=2?loadPage(1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+          <li><a ng-click="index>=2?loadPage(index-1):none" aria-label="Previous"><span aria-hidden="true">&lsaquo;</span></a></li>
+		  <li ng-click="loadPage(1)" ng-class="{'active':index==1}"><a ng-click="loadPage(1)">1 </a></li>
 		  <li ng-click="loadPage(2)" ng-class="{'active':index==2}"><a ng-click="loadPage(2)">2 </a></li>
 		  <li ng-click="loadPage(3)" ng-class="{'active':index==3}"><a ng-click="loadPage(3)">3 </a></li>
 		  <li ng-click="loadPage(4)" ng-class="{'active':index==4}"><a ng-click="loadPage(4)">4 </a></li>
 		  <li ng-click="loadPage(5)" ng-class="{'active':index==5}"><a ng-click="loadPage(5)">5 </a></li>
-		<li><a ng-click="index<=4?loadPage(index+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+          <li ng-click="loadPage(6)" ng-class="{'active':index==6}"><a ng-click="loadPage(6)">6 </a></li>
+<!--
+          <li ng-click="loadPage(7)" ng-class="{'active':index==7}"><a ng-click="loadPage(7)">7 </a></li>
+		  <li ng-click="loadPage(8)" ng-class="{'active':index==8}"><a ng-click="loadPage(8)">8 </a></li>
+		  <li ng-click="loadPage(9)" ng-class="{'active':index==9}"><a ng-click="loadPage(9)">9 </a></li>
+          <li ng-click="loadPage(10)" ng-class="{'active':index==10}"><a ng-click="loadPage(10)">10 </a></li>
+-->
+          <li><a ng-click="index<=5?loadPage(index+1):none" aria-label="Previous"><span aria-hidden="true">&rsaquo;</span></a></li>
+		  <li><a ng-click="index<=5?loadPage(6):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
     </li>
 	  </ul>
 	</nav>

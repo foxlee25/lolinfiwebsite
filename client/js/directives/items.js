@@ -39,14 +39,14 @@ app.directive('lolItems',function(){
                 var popupWidth = $(".itemCard:hover div").width();
                 if(check_1){
                     $(".itemCard:hover div").css({top: (yCoordinate - 80) + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 135){
+                    if(e.clientX + 350 >= screenWidth - 145){
                         $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
                     }
                 }else if(check_2){
                     $(".itemCard:hover div").css({top: (yCoordinate - 120 - $(".itemCard:hover div").height()) + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 135){
+                    if(e.clientX + 350 >= screenWidth - 145){
                         $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
@@ -56,7 +56,7 @@ app.directive('lolItems',function(){
                     $(".itemCard:hover div").css({width: 420 + 'px'});
                     $(".itemCard:hover #icon").css({left: 350 + 'px'});
                     $(".itemCard:hover #price").css({left: 345 + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 135){
+                    if(e.clientX + 350 >= screenWidth - 145){
                         $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
                     }else{
                         $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});

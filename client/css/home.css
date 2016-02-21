@@ -343,10 +343,6 @@
     padding-right: 5px;
 }
 
-.videoCard{
-    position: relative;
-}
-
 #liveView{
     position: absolute;
     z-index: 100;
@@ -591,8 +587,9 @@
 }
 
 #playerScreen{
-	height: 100vh;
-	width: 100%;
+    position: relative;
+    width: 125%;
+    left: -150px;
 }
 
 .progressBg{
