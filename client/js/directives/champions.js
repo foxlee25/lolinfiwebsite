@@ -247,14 +247,20 @@ app.directive('lolChampions',function(){
                      $scope.reverse = false;
                      $scope.order = id;
                 }
-                $scope.$index.$digest();
-                $scope.loadingPagination.pageIndex.$digest();
+
             };
             
             $scope.isSort = function(id){
                 return $scope.order === id; 
             };
-     
+
+            $scope.topThree = function(index){
+                var x = ($scope.loadingPagination.pageIndex-1)*10+index+1;
+                if( x < 4 ){
+                    return true;
+                }
+                return false;
+            }
             
         }
     };

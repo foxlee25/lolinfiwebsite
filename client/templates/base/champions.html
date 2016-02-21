@@ -57,7 +57,7 @@
                     <div ng-repeat="champ in champInfo | orderBy:order:reverse | limitTo:10:(loadingPagination.pageIndex-1)*10" ng-click="setChampionDetail(champ.id)" class="tableStrip row">
                         <div class="championsListTableTag col-sm-3">
                             <!-- change Top3 champions index to Golden -->
-                            <span id="tableIndex" ng-class="{'topOne':{{$index+1+(loadingPagination.pageIndex-1)*10}}==1, 'topTwo':{{$index+1+(loadingPagination.pageIndex-1)*10}}==2, 'topThree':{{$index+1+(loadingPagination.pageIndex-1)*10}}==3}">{{ $index+1+(loadingPagination.pageIndex-1)*10 }}</span>
+                            <span id="tableIndex" ng-class="{'topThree':topThree($index)}">{{ $index+1+(loadingPagination.pageIndex-1)*10 }}</span>
                             <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
                             <p id="tableChampName">{{champ.name}}</p>
                         </div>
