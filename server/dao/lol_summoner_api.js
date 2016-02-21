@@ -24,7 +24,17 @@ var getSummonerGeneral = function(id, res){
 				if(!error && response.statusCode == 200){
 					var target = {};
 					_.extend(target, JSON.parse(body), JSON.parse(data));
-					res.send(target);
+					fs.readFile('json/champion_dict_lol_wiki.json', 'utf8', function(error, data){
+						if(!error){
+							data = JSON.parse(data);
+							_.map(target.champions, function(obj){
+								if(data[obj.id]){
+									obj.name = data[obj.id];
+								}
+							});
+							res.send(target);
+						}
+					});
 				}
 			});
 		}

@@ -1,16 +1,31 @@
 <div>
     <div>
     <div class="last20GamesSummaryContainer">
-        <div class="last20GamesSummaryTitle titleBgColor"><b>Last 20 Games</b></div>
+        <div class="last20GamesSummaryTitle titleBgColor"><b>Total Games</b></div>
     <div class="last20GamesSummaryContent">
+<!--
         <div class="last20GamesSummaryContent_champRow">
             <div class="titleLeftDivRTitle"><b>Champions</b></div>
             <div class='leftDivChampions'>
-                <div id='displayHero1' class='displayHeroSmall'></div>
-                <div id='displayHero2' class='displayHeroSmall'></div>
-                <div id='displayHero3' class='displayHeroSmall'></div>
+                <div ng-if="general.champions.length>=5" ng-repeat="champ in general.champions | limitTo: 5" class='displayHeroSmall'>
+					<img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+				</div>
+                <div ng-if="general.champions.length<5" ng-repeat="champ in general.champions " class='displayHeroSmall'><img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+				</div>
             </div>
        </div>
+-->
+		<div class="last20GamesSummaryContent_champRow">
+			<div class="itemCard" ng-repeat="champ in general.champions">
+				<img style="width:30px;height:30px;" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+				<div id="hoverPop">
+					<b>Name: {{champ.name}}</b>
+					<p>W Rate: {{champ.stats.totalSessionsWon*100/champ.stats.totalSessionsPlayed | number:1}}%</p>
+					<p>KDA: {{(champ.stats.totalChampionKills+champ.stats.totalAssists)/(champ.stats.totalDeathsPerSession*champ.stats.totalSessionsPlayed) | number:1}}</p>
+					<p>CS: {{champ.stats.totalMinionKills/champ.stats.totalSessionsPlayed  | number:1}}</p>
+				</div>
+			</div>
+		</div>
         <div class="last20GamesSummaryContent_champtable">
             <div class="titleLeftDivRTitle leftDivTable"></div>
             <div class='leftDivTable'>
@@ -20,15 +35,15 @@
                             <th class='theadStyle'>W Rate</th>
                             <th class='theadStyle'>KDA</th>
                             <th class='theadStyle'>CS</th>		
-                            <th class='theadStyle'>Time</th>
+                            <th class='theadStyle'>Games</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th class='wRateData'>{{championGeneral.statsRecent20.WRate*100}}%</th>
-                            <th class='kdaData'>{{championGeneral.statsRecent20.KDA|number:2}}</th>
-                            <th class='csData'>{{championGeneral.statsRecent20.CS}}</th>		
-                            <th class='timeData'>{{championGeneral.statsRecent20['Average Game Length']/60|number:2}}mins</th>
+                            <th class='wRateData'>{{stats.wRate}}%</th>
+                            <th class='kdaData'>{{stats.kda}}</th>
+                            <th class='csData'>{{stats.cs}}</th>		
+                            <th class='timeData'>{{stats.games}}</th>
                         </tr>
                     </tbody>
                 </table>

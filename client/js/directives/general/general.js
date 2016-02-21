@@ -14,6 +14,7 @@ app.directive('lolChampionsGeneral',function(){
 //            getApi.getGeneral().success(function(data){
 //                $scope.championGeneral = data;
 //            });
+			$scope.stats = {wRate: null, kda: null, cs: null, games: "null"};
             if(RiotSummonerApi.getSummonerId() === null){
                 if(Cache.get("SummonerId")){
                     RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
@@ -25,6 +26,35 @@ app.directive('lolChampionsGeneral',function(){
 			RiotSummonerApi.getInfo('general')
                 .success(function(data){
 					$scope.general = data;
+				debugger;
+					if($scope.general.champions != null &&
+					   Array.isArray($scope.general.champions)){
+						var totalGamePlayed = 0;
+						var totalGameWon = 0;
+						var totalCreepScore = 0;
+						var totalKill = 0;
+						var totalAssist = 0;
+						var totalDeath = 0;
+						$scope.general.champions.map(function(champ){
+							totalGamePlayed+=
+								champ.stats.totalSessionsPlayed;
+							totalGameWon+=
+								champ.stats.totalSessionsWon;
+							totalCreepScore+=
+								champ.stats.totalMinionKills;
+							totalKill+=
+								champ.stats.totalChampionKills;
+							totalAssist+=
+								champ.stats.totalAssists;
+							totalDeath+=
+								champ.stats.totalDeathsPerSession*champ.stats.totalSessionsPlayed;
+						});
+
+						$scope.stats.wRate = parseInt(totalGameWon*100/totalGamePlayed);
+						$scope.stats.kda = parseInt((totalKill + totalAssist)/totalGamePlayed);
+						$scope.stats.cs = parseInt(totalCreepScore/totalGamePlayed);
+						$scope.stats.games = totalGamePlayed;
+					}
 			     })
                 .error(function(e){
                     console.error(e + " can't get summoner champion");
