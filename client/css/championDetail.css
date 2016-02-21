@@ -60,9 +60,11 @@
 .champDetailAbility{
 	padding-top: 20px;
 	padding-bottom: 20px;
+/*
  	border-top-style: solid;
     border-top-width: 1px;
 	border-top-color: #333333;
+*/
 }
 
 
@@ -74,7 +76,7 @@
 
 .champDetailAbility b{
 	color:#448AAC;;
-	font-size: 16px;
+	font-size: 15px;
 }
 
 #champTitle b{ 
@@ -110,16 +112,22 @@
 
 .abilityImg{
     float: left; 
-    width: 10%; 
+    width: 8%; 
     overflow: hidden;
 }
 
 .img-square{
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .abilityText{
     height: auto; 
     overflow: hidden;
+    position: relative;
+    bottom: 5px;
+}
+
+.champDetailAbility hr{
+    border-color: #333333;
 }

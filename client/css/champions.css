@@ -254,7 +254,7 @@
 }
 
 .pagin{
-    left: 30px;
+    right: 30px;
 }
 
 .topThree{
@@ -265,6 +265,6 @@
     text-align: left;
 }
 
-.active{
+.selected{
     color: #99cccc !important;
 }

@@ -33,22 +33,22 @@
                     <div class="tableStrip row">
                         <div id="championsListTableTitleChamp" class="col-sm-3">Champions</div>
                         <div class="championsListTableTitleWin col-sm-2">
-                            <a href ng-click="setSort('-winRate')" ng-class="{active:isSort('-winRate')}">Win Rate</a>
+                            <a href ng-click="setSort('-winRate')" ng-class="{selected:isSort('-winRate')}">Win Rate</a>
                             <img ng-show="isSort('-winRate')&&!reverse" src="images/red_down_arrow.png" />
                             <img ng-show="isSort('-winRate')&&reverse" src="images/red_up_arrow.png" />                      
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort('-games')" ng-class="{active:isSort('-games')}">Games Played</a>
+                            <a href ng-click="setSort('-games')" ng-class="{selected:isSort('-games')}">Games Played</a>
                             <img ng-show="isSort('-games')&&!reverse" src="images/red_down_arrow.png" />
                             <img ng-show="isSort('-games')&&reverse" src="images/red_up_arrow.png" />     
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort('-kda')" ng-class="{active:isSort('-kda')}">KDA</a>
+                            <a href ng-click="setSort('-kda')" ng-class="{selected:isSort('-kda')}">KDA</a>
                             <img ng-show="isSort('-kda')&&!reverse" src="images/red_down_arrow.png" />
                             <img ng-show="isSort('-kda')&&reverse" src="images/red_up_arrow.png" />  
                         </div>
                         <div class="championsListTableTitleOthers col-sm-2">
-                            <a href ng-click="setSort('-cs')" ng-class="{active:isSort('-cs')}">CS</a>
+                            <a href ng-click="setSort('-cs')" ng-class="{selected:isSort('-cs')}">CS</a>
                             <img ng-show="isSort('-cs')&&!reverse" src="images/red_down_arrow.png" />
                             <img ng-show="isSort('-cs')&&reverse" src="images/red_up_arrow.png" />  
                         </div>
@@ -76,11 +76,11 @@
                     </div>
                 </div>        
             </div>
-            <nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+            <nav ng-show="loadingPagination.show" class="pagin col-sm-offset-5 col-sm-6">
               <ul class="pagination">
                   <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-                  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
-                <li><a ng-click="loadingPagination.pageIndex<=loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+                  <li ng-show="index-loadingPagination.pageIndex<=3&&index>0" ng-repeat="index in [] | range:loadingPagination.maxIndex+1" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
+                  <li><a ng-click="loadingPagination.pageIndex<=loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>
               </ul>
             </nav>
         </div>

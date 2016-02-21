@@ -219,7 +219,7 @@ app.directive('lolChampions',function(){
 //                    }                  
                     $scope.loadingPagination.show = true;
                     $scope.loadingPagination.pageIndex = 1;
-                    $scope.loadingPagination.maxIndex = Math.round($scope.champInfo.length/10);
+                    $scope.loadingPagination.maxIndex = Math.ceil($scope.champInfo.length/10);
                 })
                 .error(function(e){
                     console.error(e + " can't get champions");
