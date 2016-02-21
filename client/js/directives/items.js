@@ -9,9 +9,17 @@ app.directive('lolItems',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            var screenWidth = $(document).width();
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
+            $(document).mousemove(function(event){
+                if(parseInt(screenWidth/2)<event.pageX){
+                    $(".itemCard:hover div").css({left: "-190px"});
+                }else{
+                    $(".itemCard:hover div").css({left: "40px"});
+                }
+            });
         },
         controller:function($scope,RiotApi){
 			var camera, scene, renderer;
