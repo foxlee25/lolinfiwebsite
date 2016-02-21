@@ -183,10 +183,8 @@ module.exports = function(grunt) {
      'image', 
      'json-minify', 
      'uglify', 
-	 'clean:git',
+	   'clean:git',
      'git_deploy:target']);
-
-  
   // Deploy server
   grunt.registerTask('run', ['concurrent:dev']);
 

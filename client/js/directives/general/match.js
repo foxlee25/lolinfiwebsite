@@ -25,7 +25,6 @@ app.directive('lolChampionsMatch',function(){
                     redirect("/base/baseHome");
                 }
             }
-        	
         	$scope.loadMatch = function(id){
 				RiotSummonerApi.setMatchId(id);
                 Cache.set("MatchId", id);
@@ -36,7 +35,6 @@ app.directive('lolChampionsMatch',function(){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
 			};
-			
 			/**
 			* call to get summoner matchlist from riotAPI
 			*/

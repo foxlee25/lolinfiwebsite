@@ -71,7 +71,6 @@ app.directive('lolHome',function(){
 				var id = RiotSummonerApi.getSummonerId();
 				$scope.searchSummoner(id);
 			}
-			
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
 					$("body").css("background","url('images/bg1.jpg')");
@@ -79,7 +78,6 @@ app.directive('lolHome',function(){
 					$("body").css("background","url('images/otherbg.jpg')");
 				}
 			});
-            
             $scope.selectChampionPage = function(id){
                 $scope.championPage.id = id;
                 $scope.config.searchToggle = false;
@@ -104,7 +102,6 @@ app.directive('lolHome',function(){
                 }
                 
             };
-            
             //current page is sub page of base home
             if(State[$location.url()] !== 0){
                 $scope.selectChampionPage(State[$location.url()]);

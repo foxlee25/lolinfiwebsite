@@ -16,15 +16,75 @@
 				<h3>Level</h3>
 				<input id="data-slider" type="text" data-slider="true" data-slider-range="1,18" data-slider-step="1" data-slider-snap="true">
 			</div>
+            <!--  stats line 1 -->
 			<div class="row">
-				<div ng-repeat = "(key,val) in detail.stats" class="col-sm-2">
-                    <div id="statLogo">
-                        <img class="stat-img-circle" ng-src="images/statIcon_sample.jpg" />
+                <div class="col-sm-2">
+                    <div class="statIcon">
+                          <img class="stat-img-circle" ng-src="images/stats_icon/hp.png" />
+                       </div>
+                    <div id="statTitle">Health</div>
+                    <div id="statVal">{{detail.stats.hp+(detail.stats.hpperlevel*(champion.level-1)) | number:2 }}</div>
+                </div>
+                <div class="col-sm-2">
+                    <div class="statIcon">
+                        <img class="stat-img-circle" ng-src="images/stats_icon/mana.png" />
                     </div>
-					<p id="statTitle">{{key}}</p>
-                    <p id="statVal">{{(val + 1) *champion.level | limitTo: 4}}</p>
-				</div>
-			</div>
+                    <div id="statTitle">Mana</div>
+                    <div id="statVal">{{detail.stats.mp+(detail.stats.mpperlevel*(champion.level-1))  | number:2 }}</div>
+                </div>  
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/attackdamage.png" />
+                        </div>
+                        <div id="statTitle">Attack Damage</div>
+                        <div id="statVal">{{detail.stats.attackdamage+(detail.stats.attackdamageperlevel*(champion.level-1))  | number:2 }}</div>                    
+                </div>
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/armor.png" />
+                        </div>
+                        <div id="statTitle">Armor</div>
+                        <div id="statVal">{{detail.stats.armor+(detail.stats.armorperlevel*(champion.level-1))  | number:2 }}</div>                    
+                </div>
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/speed.png" />
+                        </div>
+                        <div id="statTitle">Movement Speed</div>
+                        <div id="statVal">{{detail.stats.movespeed}}</div>                    
+                </div>
+			</div> 
+            <!-- Stats line 2 -->
+            <div class="row">
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/hpregen.png" />
+                        </div>
+                        <div id="statTitle">Health Regen</div>
+                        <div id="statVal">{{detail.stats.hpregen+(detail.stats.hpregenperlevel*(champion.level-1))  | number:2 }}</div>                    
+                </div>
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/manaregen.png" />
+                        </div>
+                        <div id="statTitle">Mana Regen</div>
+                        <div id="statVal">{{detail.stats.mpregen+(detail.stats.mpregenperlevel*(champion.level-1))  | number:2 }}</div>      
+                </div>
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/attackspeed.png" />
+                        </div>
+                        <div id="statTitle">Attack Speed</div>
+                        <div id="statVal">{{detail.stats.attackspeedoffset+(detail.stats.attackspeedperlevel*(champion.level-1))  | number:2 }}</div>
+                </div>                
+                <div class="col-sm-2">
+                        <div class="statIcon">
+                            <img class="stat-img-circle" ng-src="images/stats_icon/magicresist.png" />
+                        </div>
+                        <div id="statTitle">Magic Resist</div>
+                        <div id="statVal">{{detail.stats.spellblock+(detail.stats.spellblockperlevel*(champion.level-1))  | number:2 }}</div>
+                </div>
+            </div>
 		</div>
 		<div id="champDetailAbilities">
 			<h3>Abilities</h3>
@@ -37,6 +97,7 @@
 						<b>{{ability.name}}</b>
 						<p>{{ability.description}}{{ability.sanitizedTooltip}}</p>
 					</div>
+                    <hr ng-show="!$last" />
 				</div>
 			</div>
 		</div>

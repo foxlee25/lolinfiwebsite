@@ -14,7 +14,6 @@ app.directive('lolItems',function(){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
-
             var xCoordinate, yCoordinate, check;
             $(document).mousemove(function(e) {
                 xCoordinate = e.pageX,
@@ -178,7 +177,7 @@ app.directive('lolItems',function(){
 					.onUpdate( render )
 					.start();
 			}
+
         }
     };
 });
-

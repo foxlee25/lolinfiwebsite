@@ -234,10 +234,6 @@
     height: 80px;
     border-radius: 50%;
 }
-   
-.tableStrip{
-    background-color: rgba(255,255,255, 0.05);
-}
 
 .matchesTableHeader{
     color:#448AAC;
@@ -261,11 +257,23 @@
 	color: white;
 }
 
-.labelHighlight{
-    background-color: #448AAC;
-    border-radius: 10px;
-    display: inline-block;
-    line-height: 2em;
+.filterTable{
+    margin-left: 30px;
+	margin-top: 50px;
+}
+
+.filterTable tr{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.filterTable tr td{
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1em;
+	color: white;
 }
 
 .matchTableFilterTitle p{
@@ -338,13 +346,65 @@
     font-size: 1em;
 }
 
-/*
+
 .itemCardSize{
 	position: relative;
 	padding: 10px;
 	float: left;
 }
+
+.itemCard {
+    position: relative;
+	width: 10%;
+    padding:10px;
+    float: left;
+}
+
+.popleft{
+    position: relative;
+/*
+    border:2px solid;
+    border-color: #263F55;
 */
+	width: 10%;
+    padding:10px;
+    float: left;
+}
+
+.itemCard div{
+    display: none;
+}
+
+.itemCard:hover div{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    top: 0px;
+    left: 40px;
+    background-color: black; 
+    width: 200px;
+    margin-top: 20px;
+
+}
+
+
+.itemCard:hover div b{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em; 
+}
+
+.itemCard:hover div p{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em; 
+}
 
 #itemBg{
     width: 100%;

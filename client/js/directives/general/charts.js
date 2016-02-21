@@ -19,7 +19,6 @@ app.directive('lolChampionsCharts',function(){
                     redirect("/base/baseHome");
                 }
             }
-            
 			// use the mock data from static json
             RiotSummonerApi.getInfo('charts')
                 .success(function(data){

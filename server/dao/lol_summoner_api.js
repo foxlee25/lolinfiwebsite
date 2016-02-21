@@ -83,3 +83,4 @@ module.exports.getSummonerChampion = getSummonerChampion;
 module.exports.getMatchList = getMatchList;
 module.exports.getMatchDetail = getMatchDetail;
 module.exports.getCharts = getCharts;
+

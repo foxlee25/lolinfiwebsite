@@ -18,14 +18,13 @@ app.directive('lolChampionsMatchDetail',function(){
                     redirect("/base/baseHome");
                 }
             }
-			
 			RiotSummonerApi.getInfo('matchdetail')
                 .success(function(data){
 				    $scope.match = data;
                 }).error(function(e){
                     console.log(e + "can't get summoner match details");
                 });
-		}
+            }
         };
     }
 );
