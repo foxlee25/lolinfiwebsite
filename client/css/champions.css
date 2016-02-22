@@ -200,23 +200,15 @@
     padding-left:20px;
     text-align: left;
     color: #cccccc !important;
-    font-size: 18px !important;
+    font-size: 16px !important;
     position: relative;
     top: 13px;  
 
 }
 
-#championsListTable .championsListTableTitleWin{
-    text-align: center;
-    font-size: 15px;
-    color:#99cccc;
-    position: relative;
-    top: 16px; 
-}
-
 #championsListTable .championsListTableTitleOthers{
     text-align: center;
-    font-size: 15px;
+    font-size: 14px;
     color:#3399cc;
     position: relative;
     top: 16px; 

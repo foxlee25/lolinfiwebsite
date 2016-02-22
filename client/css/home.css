@@ -437,12 +437,6 @@
     padding-bottom: 80px;
 }
 
-.abilityImg{
-    clear: left;
-    float: left;
-    width: 100px;
-}
-
 .itemImgWithWidth{
     border-style: solid;
     border-color: rgb(0,76,225);
