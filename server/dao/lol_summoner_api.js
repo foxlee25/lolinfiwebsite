@@ -1,5 +1,6 @@
 var request = require('request');
 var fs = require('fs');
+var async = require('async');
 var _ = require('underscore');
 var url = require('../util/url');
 
@@ -77,10 +78,43 @@ var getCharts = function(id, res){
     });    
 };
 
+// in order to make 20+ api calls and send the response back when the call is done
+// use async parallel module https://github.com/caolan/async
+var getRecentGames = function(id, res){
+    var collection = [];
+    var funcStack = [];
+	request((url.URL.urls.RIOT_URL_MATCHLIST + id + "?api_key=" + url.URL.api_key + "&beginIndex=0&endIndex=9"), function(error, response, body){
+		if(!error && response.statusCode === 200){
+            
+            var callBack = function(err, results){
+                res.send(JSON.stringify(collection));
+            };
+            
+			JSON.parse(body).matches.map(function(obj){
+                var func = function(callBack){
+                    request((url.URL.urls.RIOT_URL_MATCHDETAIL +
+                             obj.matchId +
+                             "?api_key=" +
+                             url.URL.api_key), function(error, response, body){
+                        if(!error && response.statusCode === 200){
+                            collection.push(JSON.parse(body));
+                            callBack(null,  obj.matchId);
+                        }
+                    });	
+                };
+                funcStack.push(func);
+            });
+            
+            async.parallel(funcStack, callBack);
+		}
+	});		
+};
+
 module.exports.getSummonerId = getSummonerId;
 module.exports.getSummonerGeneral = getSummonerGeneral;
 module.exports.getSummonerChampion = getSummonerChampion;
 module.exports.getMatchList = getMatchList;
 module.exports.getMatchDetail = getMatchDetail;
 module.exports.getCharts = getCharts;
+module.exports.getRecentGames = getRecentGames;
 

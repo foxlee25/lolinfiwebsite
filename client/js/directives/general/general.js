@@ -23,7 +23,7 @@ app.directive('lolChampionsGeneral',function(){
                 }
             }
 
-			RiotSummonerApi.getInfo('')
+			RiotSummonerApi.getInfo('recentGames')
                 .success(function(data){
                     
                 })
