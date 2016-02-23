@@ -75,6 +75,8 @@
 	border-radius: 8px;
     background-color: black;
     opacity: 0.9;
+    position: absolute;
+/*    left: 500px;*/
 }
 
 #popupItemName{

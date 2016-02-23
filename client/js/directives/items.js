@@ -14,10 +14,29 @@ app.directive('lolItems',function(){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
-            var xCoordinate, yCoordinate, check;
+            var xCoordinate, yCoordinate, popupWidth, popupHeight;
             $(document).mousemove(function(e) {
-                xCoordinate = e.pageX,
-                yCoordinate = e.pageY;
+                xCoordinate = e.clientX,
+                yCoordinate = e.clientY;
+                popupWidth = $(".itemCard:hover div").width();
+                popupHeight = $(".itemCard:hover div").height();
+                var check_1 = screenHeight - e.clientY - $("#contactInfo").height() >= popupHeight;
+                var check_2 = e.clientY > popupHeight;
+                if(check_1){
+                    $(".itemCard:hover div").css({top: yCoordinate + 'px'});
+                    console.log(yCoordinate);
+//                    if(e.clientX + popupWidth >= screenWidth){
+//                        $(".itemCard:hover div").css({left: (xCoordinate - popupWidth) + 'px'});
+//                    }else{
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                    }
+                }else if(check_2){
+                    
+                }else{
+                    
+                }
+                
+                
 //                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
 //                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
 //                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
@@ -31,35 +50,37 @@ app.directive('lolItems',function(){
 //                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
 //                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
 //                }
-                var check_1 = screenHeight - e.clientY - $(".footer").height() - 30 >= $(".itemCard:hover div").height();
-                var check_2 = e.clientY > $(".itemCard:hover div").height() + 20;
-                var popupWidth = $(".itemCard:hover div").width();
-                if(check_1){
-                    $(".itemCard:hover div").css({top: (yCoordinate - 80) + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 145){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                    }else{
-                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                    }
-                }else if(check_2){
-                    $(".itemCard:hover div").css({top: (yCoordinate - 120 - $(".itemCard:hover div").height()) + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 145){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                    }else{
-                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                    }
-                }else{
-                    $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/2) + 'px'});
-                    $(".itemCard:hover div").css({width: 420 + 'px'});
-                    $(".itemCard:hover #icon").css({left: 350 + 'px'});
-                    $(".itemCard:hover #price").css({left: 345 + 'px'});
-                    if(e.clientX + 350 >= screenWidth - 145){
-                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                    }else{
-                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                    }
-                    
-                }
+                
+                
+//                var check_1 = screenHeight - e.clientY - $("#contactInfo").height() >= $(".itemCard:hover div").height();
+//                var check_2 = e.clientY > $(".itemCard:hover div").height();
+//                var popupWidth = $(".itemCard:hover div").width();
+//                if(check_1){
+//                    $(".itemCard:hover div").css({top: (yCoordinate) + 'px'});
+//                    if(e.clientX + popupWidth >= screenWidth){
+//                        $(".itemCard:hover div").css({left: (xCoordinate - popupWidth) + 'px'});
+//                    }else{
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                    }
+//                }else if(check_2){
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 120 - $(".itemCard:hover div").height()) + 'px'});
+//                    if(e.clientX + 350 >= screenWidth - 145){
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
+//                    }else{
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                    }
+//                }else{
+//                    $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/2) + 'px'});
+//                    $(".itemCard:hover div").css({width: 420 + 'px'});
+//                    $(".itemCard:hover #icon").css({left: 350 + 'px'});
+//                    $(".itemCard:hover #price").css({left: 345 + 'px'});
+//                    if(e.clientX + 350 >= screenWidth - 145){
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
+//                    }else{
+//                        $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
+//                    }
+//                    
+//                }
                 
                 
             });
