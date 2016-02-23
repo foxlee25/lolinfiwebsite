@@ -103,11 +103,17 @@ module.exports = function(grunt) {
         force: true
       },
       delete:{
-        src:["../LolInfi_deploy/"]
+        src:["../LolInfi_deploy/*"]
       },
 	  git:{
-		src:["./tmp/"]
-	  }
+		src:["./tmp/*"]
+	  },
+      css:{
+        src:["../LolInfi_deploy/client/css/*.css"]
+      },
+      template:{
+        src:["../LolInfi_deploy/client/templates/*/", "../LolInfi_deploy/client/templates/*"]
+      }
     },
     image:{
       dynamic: {
@@ -157,6 +163,35 @@ module.exports = function(grunt) {
         },
         src: '../LolInfi_deploy/'
       }
+    },
+    uncss: {
+      dist: {
+        files: {
+          '../LolInfi_deploy/client/css/tidy.css': ['client/index.html', 'client/templates/**/*.html']
+        }
+      }
+    },
+    processhtml: {
+      dist: {
+        files: {
+          '../LolInfi_deploy/client/index.html': ['client/index.html']
+        }
+      }
+    },
+    htmlmin: {                                     
+        dist: {                                      
+          options: {                                 
+            removeComments: true,
+            collapseWhitespace: true
+          },
+          files: [{
+              expand: true,
+              cwd: 'client/templates',
+              src: '{,*/}*.html',
+              dest: '../LolInfi_deploy/client/templates'  ,
+              filter: 'isFile'
+          }]
+        }
     }
   });
 
@@ -174,6 +209,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-nodemon');
   grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-git-deploy');
+  grunt.loadNpmTasks('grunt-uncss');
+  grunt.loadNpmTasks('grunt-processhtml');
+  grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
   // Deploy task.
   grunt.registerTask('deploy', 
@@ -183,7 +221,12 @@ module.exports = function(grunt) {
      'image', 
      'json-minify', 
      'uglify', 
-	   'clean:git',
+     'clean:css',
+     'uncss',
+     'processhtml',
+     'clean:template',
+     'htmlmin',
+     'clean:git',
      'git_deploy:target']);
   // Deploy server
   grunt.registerTask('run', ['concurrent:dev']);

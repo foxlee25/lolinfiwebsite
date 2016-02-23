@@ -16,7 +16,7 @@ app.directive('lolItems',function(){
 			scope.animateOver = true;
             var xCoordinate, yCoordinate, check;
             $(document).mousemove(function(e) {
-                xCoordinate = e.pageX,
+                xCoordinate = e.pageX;
                 yCoordinate = e.pageY;
 //                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
 //                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
@@ -65,10 +65,10 @@ app.directive('lolItems',function(){
             });
         },
         controller:function($scope,RiotApi){
-//			var camera, scene, renderer;
-//			var controls;
-//			var objects = [];
-//			var targets = {table:[]};
+			var camera, scene, renderer;
+			var controls;
+			var objects = [];
+			var targets = {table:[]};
 		    $scope.popleft = true;
             RiotApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();

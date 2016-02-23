@@ -22,7 +22,7 @@ var getSummonerGeneral = function(id, res){
 		if(!error && response.statusCode === 200){
 			var data = body;
 			request((url.URL.urls.RIOT_URL_SUMMONER_GENERAL + id + "/ranked?api_key=" + url.URL.api_key), function(error, response, body){
-				if(!error && response.statusCode == 200){
+				if(!error && response.statusCode === 200){
 					var target = {};
 					_.extend(target, JSON.parse(body), JSON.parse(data));
 					fs.readFile('json/champion_dict_lol_wiki.json', 'utf8', function(error, data){
@@ -83,7 +83,7 @@ var getCharts = function(id, res){
 var getRecentGames = function(id, res){
     var collection = [];
     var funcStack = [];
-	request((url.URL.urls.RIOT_URL_MATCHLIST + id + "?api_key=" + url.URL.api_key + "&beginIndex=0&endIndex=9"), function(error, response, body){
+	request((url.URL.urls.RIOT_URL_MATCHLIST + id + "?api_key=" + url.URL.api_key + "&beginIndex=0&endIndex=6"), function(error, response, body){
 		if(!error && response.statusCode === 200){
             
             var callBack = function(err, results){

@@ -257,7 +257,7 @@ app.directive('lolChampions',function(){
                     return true;
                 }
                 return false;
-            }
+            };
         }
     };
 });
