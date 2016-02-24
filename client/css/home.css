@@ -339,7 +339,7 @@
 
 #items{
     background-color: rgba(255,255,255, 0.05);
-    width: 100%;
+    width: 810px;
 }
 
 #items table tr td{
@@ -453,8 +453,11 @@
 }
 
 #playerScreen{
-    height: 100vh;
-    width: 100%;
+    position:absolute;
+    top: 80px;
+    left: -150px;
+    height: 150%;
+    width: 120%;
 }
 
 .progressBg{
@@ -495,4 +498,9 @@
 #defeatGroup b{
     font-size: 2em;
     color: red;
+}
+
+.col-sm-offset-2.col-sm-8{
+    padding-left: 0px;
+    padding-right: 0px;
 }
