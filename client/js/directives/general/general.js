@@ -23,12 +23,11 @@ app.directive('lolChampionsGeneral',function(){
                 }
             }
 
-			RiotSummonerApi.getInfo('')
+			RiotSummonerApi.getInfo('recentGames')
                 .success(function(data){
-                    
                 })
                 .error(function(e){
-                    
+                    console.error(e + " can't get match detail");
                 });
 
 			RiotSummonerApi.getInfo('general')

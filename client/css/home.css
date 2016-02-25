@@ -19,7 +19,7 @@
 }
 
 .summonerProfileRow{
-    height:100px;//temp
+    height:100px;
 }
 
 .summonerDetailPageTabs{
@@ -114,7 +114,7 @@
     font-size:1em;
     color:white;
     text-align:center;
-    border:1px solid #0E3357;//
+    border:1px solid #0E3357;
     vertical-align: middle;
     padding-top: 5px;
     float: left;

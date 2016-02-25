@@ -44,7 +44,10 @@ module.exports = function(app, lolStaticApi, lolSummonerApi){
 				break;
             case "charts":
 				lolSummonerApi.getCharts(id, res);
-				break;                
+				break;   
+            case "recentGames":
+                lolSummonerApi.getRecentGames(id, res);
+                break;
 			default:
 				res.send("");
 		}
