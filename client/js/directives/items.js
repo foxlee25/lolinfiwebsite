@@ -14,10 +14,12 @@ app.directive('lolItems',function(){
             scope.itemOption = {"filter":"All"};
 			$("body").css("background","url('images/otherbg.jpg')");
 			scope.animateOver = true;
+
             var xCoordinate, yCoordinate, check;
             $(document).mousemove(function(e) {
                 xCoordinate = e.pageX;
                 yCoordinate = e.pageY;
+                
 //                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
 //                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
 //                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
@@ -31,6 +33,7 @@ app.directive('lolItems',function(){
 //                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
 //                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
 //                }
+                
                 var check_1 = screenHeight - e.clientY - $(".footer").height() - 30 >= $(".itemCard:hover div").height();
                 var check_2 = e.clientY > $(".itemCard:hover div").height() + 20;
                 var popupWidth = $(".itemCard:hover div").width();
@@ -63,6 +66,8 @@ app.directive('lolItems',function(){
                 
                 
             });
+            
+            
         },
         controller:function($scope,RiotApi){
 			var camera, scene, renderer;
@@ -83,6 +88,7 @@ app.directive('lolItems',function(){
 				//init(data);
 				//animate();
 				//setTimeout(replaceItems, 2000)
+
 //				function replaceItems(){
 //					
 //					$('#itemAnimate').hide();
@@ -90,6 +96,8 @@ app.directive('lolItems',function(){
 //					$scope.$digest();
 //				}
             });
+            
+			
             //temporarily not used
 			function init(data){
 				/**
@@ -125,10 +133,12 @@ app.directive('lolItems',function(){
 					i++;
 				});
 				console.log(1800/window.innerWidth);
+					
 					renderer = new THREE.CSS3DRenderer();
 					renderer.setSize( window.innerWidth, window.innerHeight );
 					renderer.domElement.style.position = 'absolute';
 					document.getElementById( 'itemAnimate' ).appendChild( renderer.domElement );
+					
 					controls = new THREE.TrackballControls( camera, renderer.domElement );
 					controls.rotateSpeed = 0.5;
 					controls.minDistance = 500;
@@ -137,9 +147,12 @@ app.directive('lolItems',function(){
 					controls.noRotate = true;
 					controls.noPan = true;
 					controls.addEventListener( 'change', render );
+					
 					transform( targets.table, 2000 );
+					
 					window.addEventListener( 'resize', onWindowResize, false );
 			}
+	
             //temporarily not used
 			function onWindowResize() {
 				camera.aspect = window.innerWidth / window.innerHeight;
@@ -147,16 +160,19 @@ app.directive('lolItems',function(){
 				renderer.setSize( window.innerWidth, window.innerHeight );
 				render();
 			}
+	
             //temporarily not used
 			function render() {
 				renderer.render( scene, camera );
 			}
+	
             //temporarily not used
 			function animate() {
 				requestAnimationFrame( animate );
 				TWEEN.update();
 				controls.update();
 			}
+
             //temporarily not used
 			function transform( targets, duration ) {
 				TWEEN.removeAll();
@@ -177,7 +193,9 @@ app.directive('lolItems',function(){
 					.onUpdate( render )
 					.start();
 			}
-
+            
+            
         }
     };
 });
+

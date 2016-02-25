@@ -7,24 +7,24 @@
                     <div id="tbody">
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">League:</div>
-                            <div ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze', 'col-sm-1':true}">Bronze</div>
-                            <div ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver', 'col-sm-1':true}">Silver</div>
-                            <div ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold', 'col-sm-1':true}">Gold</div>
-                            <div ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum', 'col-sm-1':true}">Platinum</div>
-                            <div ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond', 'col-sm-1':true}">Diamond</div>
-                            <div ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master', 'col-sm-1':true}">Master</div>
-                            <div ng-click="matchOptions.league='Challenger'" ng-class="{'labelHighlight':matchOptions.league=='Challenger', 'col-sm-2':true}">Challenger</div>
+                            <div ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze', 'col-sm-1':true}"><span>Bronze</span></div>
+                            <div ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver', 'col-sm-1':true}"><span>Silver</span></div>
+                            <div ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold', 'col-sm-1':true}"><span>Gold</span></div>
+                            <div ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum', 'col-sm-1':true}"><span>Platinum</span></div>
+                            <div ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond', 'col-sm-1':true}"><span>Diamond</span></div>
+                            <div ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master', 'col-sm-1':true}"><span>Master</span></div>
+                            <div ng-click="matchOptions.league='Challenger'" ng-class="{'labelHighlight':matchOptions.league=='Challenger', 'col-sm-2':true}"><span>Challenger</span></div>
                         </div>
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">Time:</div>
-                            <div ng-click="matchOptions.time='Last Month'" ng-class="{'labelHighlight':matchOptions.time=='Last Month', 'col-sm-2':true}">Last Month</div>
-                            <div ng-click="matchOptions.time='Last Week'" ng-class="{'labelHighlight':matchOptions.time=='Last Week', 'col-sm-2':true}">Last Week</div>
+                            <div ng-click="matchOptions.time='Last Month'" ng-class="{'labelHighlight':matchOptions.time=='Last Month', 'col-sm-2':true}"><span>Last Month</span></div>
+                            <div ng-click="matchOptions.time='Last Week'" ng-class="{'labelHighlight':matchOptions.time=='Last Week', 'col-sm-2':true}"><span>Last Week</span></div>
                         </div>
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">Queue Type:</div>
-                            <div ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked', 'col-sm-2':true}">Solo Ranked</div>
-                            <div ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank', 'col-sm-2':true}">Team Rank</div>
-                            <div ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue', 'col-sm-2':true}">Normal Queue</div>
+                            <div ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked', 'col-sm-2':true}"><span>Solo Ranked</span></div>
+                            <div ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank', 'col-sm-2':true}"><span>Team Rank</span></div>
+                            <div ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue', 'col-sm-2':true}"><span>Normal Queue</span></div>
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@
                 <div id="championsListTable">
                     <div class="tableStrip row">
                         <div id="championsListTableTitleChamp" class="col-sm-3">Champions</div>
-                        <div class="championsListTableTitleWin col-sm-2">
+                        <div class="championsListTableTitleOthers col-sm-2">
                             <a href ng-click="setSort('-winRate')" ng-class="{selected:isSort('-winRate')}">Win Rate</a>
                             <img ng-show="isSort('-winRate')&&!reverse" src="images/red_down_arrow.png" />
                             <img ng-show="isSort('-winRate')&&reverse" src="images/red_up_arrow.png" />                      

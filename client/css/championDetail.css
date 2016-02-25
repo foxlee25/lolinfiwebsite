@@ -58,15 +58,8 @@
 }
 
 .champDetailAbility{
-	padding-top: 20px;
 	padding-bottom: 20px;
-/*
- 	border-top-style: solid;
-    border-top-width: 1px;
-	border-top-color: #333333;
-*/
 }
-
 
 .champDetailAbility p{
     font-size: 14px;
@@ -107,7 +100,7 @@
 #abiContent{
     margin-top: 30px;
     position: relative; 
-    bottom: 30px;
+    bottom: 10px;
 }
 
 .abilityImg{
