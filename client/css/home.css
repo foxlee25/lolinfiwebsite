@@ -337,20 +337,6 @@
     background-size: 650px;
 }
 
-#items{
-    background-color: rgba(255,255,255, 0.05);
-    width: 810px;
-}
-
-#items table tr td{
-    color: white;
-    vertical-align: middle;
-    margin: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-size: 1em;
-}
-
 /*
 .itemCardSize{
     position: relative;
@@ -358,15 +344,6 @@
     float: left;
 }
 */
-
-#itemBg{
-    width: 100%;
-    background-color: rgba(15,13,28, 0.7);
-    margin-top: 20px;
-    overflow: hidden;
-    padding-top: 30px;
-    padding-bottom: 60px;
-}
 
 .flashPlayer{
     width: 50%;
@@ -443,13 +420,6 @@
     border-width: 2px;
     border-radius: 10px;
     width: 200px;
-}
-
-.itemImg{
-    border-style: solid;
-    border-color: rgb(0,76,225);
-    border-width: 2px;
-    border-radius: 10px;
 }
 
 #playerScreen{
