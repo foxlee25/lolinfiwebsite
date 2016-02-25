@@ -1,7 +1,7 @@
 <div>
     <div>
         <div class="last20GamesSummaryContainer">
-            <div class="last20GamesSummaryTitle titleBgColor"><b>Total Games</b></div>
+            <div class="last20GamesSummaryTitle titleBgColor"><b>Last 20 Games</b></div>
             <div class="last20GamesSummaryContent">
 <!--
         <div class="last20GamesSummaryContent_champRow">
@@ -16,14 +16,17 @@
        </div>
 -->
                 <div class="last20GamesSummaryContent_champRow">
-                    <div class="itemCard" ng-repeat="champ in general.champions">
-                    <img style="width:30px;height:30px;" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
-                    <div id="hoverPop">
-                       <b>Name: {{champ.name}}</b>
-                       <p>W Rate: {{champ.stats.totalSessionsWon*100/champ.stats.totalSessionsPlayed | number:1}}%</p>
-                       <p>KDA: {{(champ.stats.totalChampionKills+champ.stats.totalAssists)/(champ.stats.totalDeathsPerSession*champ.stats.totalSessionsPlayed) | number:1}}</p>
-                       <p>CS: {{champ.stats.totalMinionKills/champ.stats.totalSessionsPlayed  | number:1}}</p>
-                    </div>
+                    <div class="row">
+                        <div class="col-sm-2">Champions</div>
+                        <div class="itemCard col-sm-4" ng-repeat="champ in general.champions | orderBy:id | limitTo: 3">
+                        <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+                            <div id="hoverPop">
+                               <b>Name: {{champ.name}}</b>
+                               <p>W Rate: {{champ.stats.totalSessionsWon*100/champ.stats.totalSessionsPlayed | number:1}}%</p>
+                               <p>KDA: {{(champ.stats.totalChampionKills+champ.stats.totalAssists)/(champ.stats.totalDeathsPerSession*champ.stats.totalSessionsPlayed) | number:1}}</p>
+                               <p>CS: {{champ.stats.totalMinionKills/champ.stats.totalSessionsPlayed  | number:1}}</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="last20GamesSummaryContent_champtable">
