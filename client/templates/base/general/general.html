@@ -17,9 +17,10 @@
 -->
                 <div class="last20GamesSummaryContent_champRow">
                     <div class="row">
-                        <div class="col-sm-2">Champions</div>
-                        <div class="itemCard col-sm-4" ng-repeat="champ in general.champions | orderBy:id | limitTo: 3">
-                        <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+                        <div class="col-sm-2" id="last20GameTitle">Champions</div>
+                        <div class="Last20GamesChampions col-sm-4" ng-repeat="champ in general.champions | orderBy:id | limitTo: 3">
+                            <img class="img-circle" ng-src="images/champ_basic_info/{{champ.id}}/square.png" />
+                            <span class="circleMarker">3</span>
                             <div id="hoverPop">
                                <b>Name: {{champ.name}}</b>
                                <p>W Rate: {{champ.stats.totalSessionsWon*100/champ.stats.totalSessionsPlayed | number:1}}%</p>
@@ -53,11 +54,33 @@
                     </div>
                 </div>
                 <div class="last20GamesSummaryContent_champUseCount">
-                    <div class="titleLeftDivRTitle"><b>Role/times</b></div>
-                    <div class='leftDivRoleTimes'>
+                    <div class="titleLeftDivRTitle"><b>Roles</b></div>
+                    <div class='leftDivRoleTimes row'>
+<!--
                         <div class='circleHeroDuty' ng-repeat="role in championGeneral.rolesRecent20">
-                            <firstL>{{role.role|limitTo:3}}</firstL>
-                            <secondL class='circleTopData'>{{role.times}}</secondL>
+                            <span>{{role.role | limitTo:3}}</span>
+                            <span>{{role.times}}</span>
+                        </div>
+-->
+                        <div class="rolesInGame col-sm-1">
+                            <span class="rolesTitle">TOP</span>
+                            <span class="rolesValue">3</span>
+                        </div>
+                        <div class="rolesInGame col-sm-1">
+                            <span class="rolesTitle">JUN</span>
+                            <span class="rolesValue">3</span>
+                        </div>
+                        <div class="rolesInGame col-sm-1">
+                            <span class="rolesTitle">MID</span>
+                            <span class="rolesValue">3</span>
+                        </div>
+                        <div class="rolesInGame col-sm-1">
+                            <span class="rolesTitle">ADC</span>
+                            <span class="rolesValue">3</span>
+                        </div>
+                        <div class="rolesInGame col-sm-1">
+                            <span class="rolesTitle">SUP</span>
+                            <span class="rolesValue">3</span>
                         </div>
                     </div>
                 </div>
