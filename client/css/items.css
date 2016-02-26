@@ -76,7 +76,7 @@
     background-color: black;
     opacity: 0.9;
     position: absolute;
-/*    left: 500px;*/
+/*    left: 200px;*/
 }
 
 #popupItemName{
@@ -105,6 +105,9 @@
     padding-right: 30px;
     padding-bottom: 30px;
     margin-bottom: 150px;
+    background-color: rgba(15,13,28, 0.7);
+    margin-top: 20px;
+    overflow: hidden;
 }
 
 #descrip{
@@ -112,3 +115,58 @@
     margin-right: 5px;
     margin-bottom: 20px;
 }
+
+#items{
+    background-color: rgba(255,255,255, 0.05);
+    width: 810px;
+}
+
+#items table tr td{
+    color: white;
+    vertical-align: middle;
+    margin: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1em;
+}
+
+@media only screen and (min-width: 1600px) {
+    /* For tablets: */
+    #itemBg{
+        position: absolute;
+        left: 10%;
+    }
+    #items{
+        position: relative;
+        left: 10%;
+    }
+    #nav{
+        position: absolute;
+        left: 30%;
+    }
+    #facebookLogin{
+        position: absolute;
+        left: 82%;
+    }
+}
+
+@media only screen and (min-width: 1800px) {
+    /* For tablets: */
+    #itemBg{
+        position: absolute;
+        left: 20%;
+    }
+    #items{
+        position: relative;
+        left: 20%;
+    }
+    #nav{
+        position: absolute;
+        left: 35%;
+    }
+    #facebookLogin{
+        position: absolute;
+        left: 82%;
+    }
+}
+
