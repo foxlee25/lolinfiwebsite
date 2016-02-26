@@ -1,6 +1,7 @@
 var request = require('request');
 var fs  = require('fs');
 var url = require('../util/url');
+var mongo = require('./lol_mongo_api');
 
 var getChampions = function (res){
 	console.log(url.URL.urls.RIOT_URL_CHAMPION + url.api_key);
@@ -31,12 +32,7 @@ var getItems = function(res){
 };
 
 var getChallengerInfo = function(res){
-    fs.readFile('json/challenger_info.json', 'utf8', function(error, data){
-        if(!error){
-            console.log(data);
-            res.send(data);
-        }
-    });
+    mongo.fetch("Challenger_Info", res);
 };
 
 module.exports.getChampions = getChampions;

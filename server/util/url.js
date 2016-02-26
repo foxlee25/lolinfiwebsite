@@ -9,6 +9,6 @@ exports.URL = {
 		RIOT_URL_SUMMONERID: "https://na.api.pvp.net/api/lol/na/v1.4/summoner/by-name/",
 		RIOT_URL_SUMMONER_GENERAL: "https://na.api.pvp.net/api/lol/na/v1.3/stats/by-summoner/"
 	},
-	api_key: "b42669e8-4856-4bc0-899e-f1a478a0818b"
-
+	api_key: "b42669e8-4856-4bc0-899e-f1a478a0818b",
+    mongo_base: "mongodb://localhost:27017/LolInfi"
 };
