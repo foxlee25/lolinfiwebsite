@@ -2,6 +2,8 @@ This project require to have mongodb installed, to install mongodb, on mac use b
 
 *Note, since our database will grow over time so in order to sync up all the data across different repo, everytime before you commit the code do a sudo mongodump --out backup/ in the server directory, that will package our database data into bson files, same goes for pull the data, so everytime new changes comming in might have updated version of the database, so do mongorestore backup/ this will restore all the bson files into the database.
 
+Also use gitignore to ignore the mongo directory, or just skip the directory when doing git add, the mongo directory contains single file larger than 100MB, if you try to commit git will return an error.
+
 You can access the mongodb shell by open another terminal and type in: /usr/local/Cellar/mongodb/3.2.3/bin/mongo 
 show dbs will show the database table, swtich <db name> change to particular db, show collections will show the collections inside the db
 
