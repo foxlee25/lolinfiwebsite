@@ -78,6 +78,7 @@ app.directive('lolItems',function(){
             RiotApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();
                 $scope.itemInfo = data.data;
+                console.log(JSON.stringify($scope.itemInfo));
 				/**
 				* hide the animation for items for now
 				* uncomment the init() and animate() and change the
