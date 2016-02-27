@@ -25,7 +25,9 @@ app.directive('lolChampionsGeneral',function(){
 
 			RiotSummonerApi.getInfo('recentGames')
                 .success(function(data){
-                console.log(JSON.stringify(data));
+//                console.log(JSON.stringify(data));
+                $scope.roles = ['TOP', 'JUN', 'MID', 'ADC', 'SUP'];
+                
                 })
                 .error(function(e){
                     console.error(e + " can't get match detail");
@@ -33,6 +35,7 @@ app.directive('lolChampionsGeneral',function(){
 
 			RiotSummonerApi.getInfo('general')
                 .success(function(data){
+//                    console.log(JSON.stringify(data));
 					$scope.general = data;
 				    // debugger;
 					if($scope.general.champions != null &&

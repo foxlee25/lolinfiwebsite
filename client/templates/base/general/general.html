@@ -62,24 +62,8 @@
                             <span>{{role.times}}</span>
                         </div>
 -->
-                        <div class="rolesInGame col-sm-1">
-                            <span class="rolesTitle">TOP</span>
-                            <span class="rolesValue">3</span>
-                        </div>
-                        <div class="rolesInGame col-sm-1">
-                            <span class="rolesTitle">JUN</span>
-                            <span class="rolesValue">3</span>
-                        </div>
-                        <div class="rolesInGame col-sm-1">
-                            <span class="rolesTitle">MID</span>
-                            <span class="rolesValue">3</span>
-                        </div>
-                        <div class="rolesInGame col-sm-1">
-                            <span class="rolesTitle">ADC</span>
-                            <span class="rolesValue">3</span>
-                        </div>
-                        <div class="rolesInGame col-sm-1">
-                            <span class="rolesTitle">SUP</span>
+                        <div class="rolesInGame col-sm-1" ng-repeat="role in roles">
+                            <span class="rolesTitle">{{role}}</span>
                             <span class="rolesValue">3</span>
                         </div>
                     </div>
@@ -90,13 +74,54 @@
             <div class="last20GamesSummarySpiderChart">
             </div>
         </div>
-        <br/>
+
         <div class="championS5Header">
-            <b>Champion Season 5</b>
+            <span>Champion Season 5</span>
         </div>
         <div id="roleTable">
+            <div class="generalTableHeader row">
+                <div class="col-sm-2">Role</div>
+                <div class="col-sm-2">W Rate</div>
+                <div class="col-sm-2">Games</div>
+                <div class="col-sm-2">KDA</div>
+                <div class="col-sm-2">CS</div>
+                <div class="col-sm-2">Last Played</div>
+            </div>
+            <div class="generalTableValue row" ng-repeat="role in roles">
+                <div class="col-sm-2">
+                    <div class="circleHeroDuty"><span id="rolesChampionTitle">{{role}}</span></div>
+                </div>
+                <div class="col-sm-2"><span>{{role.stats.winRate|number:2}}30%</span></div>
+                <div class="col-sm-2"><span>{{role.stats.games}}3</span></div>
+                <div class="col-sm-2"><span>{{role.stats.kda|number:2}}3</span></div>
+                <div class="col-sm-2"><span>{{role.stats.cs|number:2}}3</span></div>
+                <div class="col-sm-2"><span>{{role.stats.lastPlayed|number:2}}3</span></div>
+            </div>
+        </div>
+        <div id="championTable">
+            <div class="generalTableHeader row">
+                <div class="col-sm-2">Champion</div>
+                <div class="col-sm-2">Rate</div>
+                <div class="col-sm-2">Games</div>
+                <div class="col-sm-2">KDA</div>
+                <div class="col-sm-2">CS</div>
+                <div class="col-sm-2">Last Played</div>
+            </div>
+            <div class="generalTableValue row" ng-repeat="champs in general.champions | limitTo: 5">
+                <div class="col-sm-2">
+                    <img class="img-circle championTableImg" ng-src="images/champ_basic_info/{{champs.id}}/square.png" />
+                </div>
+                <div class="col-sm-2"><span>{{stats.wRate}}%</span></div>
+                <div class="col-sm-2"><span>{{stats.games}}</span></div>
+                <div class="col-sm-2"><span>{{stats.kda}}</span></div>
+                <div class="col-sm-2"><span>{{stats.cs}}</span></div>
+                <div class="col-sm-2"><span>Today</span></div>
+            </div>
+        </div>        
+<!--
+        <div id="roleTable">
             <table class="table">
-                    <tbody>
+                <tbody>
                     <tr class="generalTableHeader">
                         <th>Role</th>
                         <th>W Rate</th>
@@ -109,7 +134,7 @@
                     <tr ng-repeat="role in championGeneral.roles">
                         <td style="padding-left:90px">
                             <div class='circleHeroDuty'>
-                                <firstL>{{role.role|limitTo:3}}</firstL>
+                                <div>{{role.role|limitTo:3}}</div>
                             </div>
                         </td>
                         <td>{{role.stats.winRate|number:2}}%</td>
@@ -145,5 +170,6 @@
                 </tbody>
             </table>
         </div>
+-->
     </div>
 </div>
