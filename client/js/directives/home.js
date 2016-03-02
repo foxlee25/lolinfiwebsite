@@ -64,11 +64,15 @@ app.directive('lolHome',function(){
 				}
             };
 			
+
 			//means this is called from the rank page
 			//bit of a hack around... but for now 
 			if(RiotSummonerApi.getSummonerId()!== "" ||
                typeof RiotSummonerApi.getSummonerId() !== 'undefined'){
 				var id = RiotSummonerApi.getSummonerId();
+                $scope.summonerName = RiotSummonerApi.getSummonerName();
+                $scope.division = RiotSummonerApi.getDivision();
+                $scope.profileIconId = RiotSummonerApi.getProfileIconId();
 				$scope.searchSummoner(id);
 			}
 			$scope.$watch("config.searchToggle",function(data){

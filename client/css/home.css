@@ -94,8 +94,8 @@
 .titleLeftDivRTitle{
     position:relative;
     display:table-cell;
-     color:#448AAC;
-     margin-right:10px;
+    color:#448AAC;
+    margin-right: 10px;
     margin-bottom: 10px;
     vertical-align: middle;
 }
@@ -467,6 +467,167 @@
     background-color: #0c385f;
     color: #cccccc;
 }
+
+#summaryBar{
+    background-color: rgba(255,255,255, 0.1); 
+    padding-top: 5px;
+/*    padding-bottom: 10px;*/
+    margin-bottom: 7px;
+}
+
+#summaryBar .row{
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+
+.summaryBarSmall{
+    display: block !important;
+    margin-right: 1.6%;
+    margin-left: 1.6%;
+    width: 53px;
+	height: 53px;
+	background-color: #1d324d;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    text-align: center;
+    position: relative;
+    left: 0px;
+    margin-bottom: 10px;    
+}
+
+.summaryBarSmall span{
+    color: #eff3f4;
+    text-align: center;
+    position: relative;
+    top: 18px;
+    right: 0px;
+    font-size: 12px;
+}
+
+.summaryBarSmall div{
+    color: #afb8c1;
+    text-align: center;
+}
+
+.underTitle{
+    position: absolute;
+    top: 52px;
+    font-size: 14px;
+    left: 36px;    
+    color: #eff3f4;
+}
+
+.underTitleRank, .underTitleRate, .underTitleRate{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 16px;
+}
+.underTitleGames{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 12px; 
+}
+
+.underTitleKDA{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 18px;  
+}
+
+.underTitleLength{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 10px;     
+}
+
+.underTitleMastery{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 7px;    
+}
+
+.underTitleRoutine{
+    position: absolute;
+    top: 55px;
+    font-size: 8px;
+    left: 9px;    
+}
+
+#summaryBar .row{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    padding-left: 0px;
+    padding-right: 0px;    
+}
+.col-sm-2{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.col-sm-1.summaryBarSmall{
+    padding-left: 0px;
+    padding-right: 0px;
+    text-align: center !important;
+}
+
+.summaryBarMain{
+    position: relative;
+
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.img-circle.summaryBarMainImg{
+    border: 1px solid #2188d3;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    margin-left: 25%;
+    position: relative;
+    bottom: 10px;
+}
+
+#rankLevelImg{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 11px;
+}
+
+#rankLevelValue{
+    position: absolute;
+    top: 33px;
+    right: 11px;
+    font-size: 9px;
+
+}
+
+#summaryBarMainCircle{
+    display: block !important;
+    position: relative;
+    left: 65%;
+    bottom: 21px;
+    width: 15px;
+	height: 15px;
+	background-color: #4b7c9c;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    color: #cccccc;
+    font-size: 8px;
+    text-align: center;
+    padding-top: 2px;
+}
+
 /*   New CSS with home.html by Dee  end  */
 
 
@@ -484,7 +645,9 @@
 #last20GameTitle{
     margin-right: 20px;
     top: 10px;
-    color: #6699cc;
+    color: #448AAC;
+    padding-left: 0px;
+    font-size: 16px;
 }
 
 .row{
@@ -495,7 +658,7 @@
 .circleMarker{
     display: block !important;
     position: relative;
-    left: 30px;
+    left: 31px;
     bottom: 10px;
     width: 15px;
 	height: 15px;
@@ -579,6 +742,10 @@
     text-align: center;
 }
 
+.leftDivRoleTimes{
+    left: 15px;
+}
+
 .rolesTitle{
     font-size: 16px;
     position: relative;
@@ -621,8 +788,7 @@
 }
 
 .circleHeroDuty{
-    display: block !important;
-    margin-right: 15px;
+    display: inline-block !important;
     width: 50px;
 	height: 50px;
 	background-color: #0d0d17;
@@ -643,11 +809,26 @@
 #roleTable div, #championTable div{
     text-align: center;
 }
+
+#rolesChampionTitle{
+    font-size: 18px;
+    position: relative;
+    top: 10px;
+}
+
+#roleTable div, #championTable div{
+    text-align: center;
+}
+
 .img-circle.championTableImg{
     margin-bottom: 10px;
 }
 
 #championTable{
     padding-bottom: 20px;
+}
+
+#rateLevelValue{
+    color: #cc9933;
 }
 /*   New CSS with summoner_general by Dee  end  */

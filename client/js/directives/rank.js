@@ -23,6 +23,10 @@ app.directive('lolRank',function(){
 			$scope.loadSummoner = function(challenger){
 				$scope.config.searchToggle = false;
 				RiotSummonerApi.setSummonerId(challenger.playerOrTeamId);
+				RiotSummonerApi.setSummonerName(challenger.playerOrTeamName);               
+				RiotSummonerApi.setDivision(challenger.division);
+				RiotSummonerApi.setProfileIconId(challenger.profileIconId);                
+                RiotSummonerApi.setSummonerId
 				redirect("/base/baseHome/baseChampionGeneral");
 			};
 			
