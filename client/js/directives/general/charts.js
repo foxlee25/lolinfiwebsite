@@ -11,7 +11,7 @@ app.directive('lolChampionsCharts',function(){
         link:function(scope,element,attrs){
 			scope.chartOptions={"gameType":"Ranked Solo","role":"TOP","performance":"Game Length"};
         },
-        controller:function($scope, RiotSummonerApi, redirect, Cache){
+        controller:function($scope, $http, RiotSummonerApi, redirect, Cache){
             if(RiotSummonerApi.getSummonerId() === null){
                 if(Cache.get("SummonerId")){
                     RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
@@ -30,9 +30,19 @@ app.directive('lolChampionsCharts',function(){
                     console.log(e + "can't get summoner chart");
                 });
 			
+            $http.get('./data.json')
+                .success(function(res){
+                    $scope.chartData = res;
+                console.log($scope.chartData);
+            })
+            
 			$scope.loadChart = function(){
 				
 				$('#chartLinemap').highcharts({
+                    title: {
+                        text: '',
+                        x: 20 //center
+                    },
 				  	credits: {
                         enabled: false
                     },
@@ -40,21 +50,59 @@ app.directive('lolChampionsCharts',function(){
 						backgroundColor:'rgba(255, 255, 255, 0)'
 					},
 					xAxis: {
-						categories: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-							'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+//						categories: ['0-10', '10-20', '20-30', '30-40', '40-50', '50-60', '60+'],
+                        
 					},
 					yAxis: {
+                        title:'',
 						plotLines: [{
 							value: 0,
 							width: 1,
 							color: '#808080'
-						}]
+						}],
+                        gridLineWidth: 0.1
 					},
+                    plotOptions: {
+                        area: {
+                            fillColor: {
+                                linearGradient: {
+                                    x1: 0,
+                                    y1: 0,
+                                    x2: 0,
+                                    y2: 1
+                                },
+                                stops: [
+                                    [0, Highcharts.getOptions().colors[0]], [1,Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
+                                ]
+                            },
+                            marker: {
+                                radius: 2
+                            },
+                            lineWidth: 1,
+                            states: {
+                                hover: {
+                                    lineWidth: 1
+                                }
+                            },
+                            threshold: null
+                        }
+                    },
 					series: [{
-						data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]
+                        type: 'area',
+                        showInLegend: false,
+						data: [1,2,3.2,2.1,4.3,5,6.1,5.3,4.6,3.2,2,4,1.1,5,6,7,8,2,3,4,1.2,3,4,4,5,6,5,4,3,4,5,4,3,2]
 					}]
+                    
+                    
+                    
 				});
 			};
+            
+            $scope.tab = 1;
+            
+            $scope.selectTab = function(setTab){
+                $scope.tab = setTab;
+            };
             
             $scope.loadMap = function(data){
                 

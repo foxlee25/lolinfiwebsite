@@ -25,18 +25,19 @@
         
         
 		<div class="chartsWrapper">
-			<div id="chartLinemap" style="min-width: 310px; height: 400px;">
-				<div id="chartOptionButtons">
-					<div>
-						<div>
-							<p>Gold Min</p>
-						</div>
-						<div>
-							<p>Gold</p>
-						</div>
-					</div>
-				</div>
+			<div id="chartLinemap">
 			</div>
+            <div id="tabWrapper">
+                <div class="tabs" ng-click="selectTab(1)" ng-class="{active:tab==1}"><center>Gold</center></div>
+                <div class="tabs" ng-click="selectTab(2)" ng-class="{active:tab==2}"><center>Gold/Min</center></div>
+                <div class="tabs" ng-click="selectTab(3)" ng-class="{active:tab==3}"><center>Kills</center></div>
+                <div class="tabs" ng-click="selectTab(4)" ng-class="{active:tab==4}"><center>Solo Kills</center></div>
+                <div class="tabs" ng-click="selectTab(5)" ng-class="{active:tab==5}"><center>Death</center></div>
+            </div>
+            <div id="tabWrapper_2">
+                <div id="byGameLength" ng-click="selectTab(6)" ng-class="{active:tab==6}"><center>Performance by Game Length</center></div>
+                <div id="byGamePlayed"  ng-click="selectTab(7)" ng-class="{active:tab==7}"><center>Performance by Game Played</center></div>
+            </div>
 		</div>
         
         

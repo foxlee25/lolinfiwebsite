@@ -19,7 +19,7 @@
 }
 
 .summonerProfileRow{
-    height:100px;//temp
+    height:100px;
 }
 
 .summonerDetailPageTabs{
@@ -49,11 +49,30 @@
 
 
 /*Home_General*/
-.last20GamesSummaryContainer,.last20GamesSummarySpiderChartContainer{
-    padding-top: 30px;
+.last20GamesSummaryContainer{
+    padding-top: 20px;
     position:relative;
     width:50%;
     float: left;
+}
+
+.last20GamesSummarySpiderChartContainer{
+    padding-top: 0px;
+    position:relative;
+    width:50%;
+    float: left;
+}
+
+.highcharts-container{
+    height: 350px !important;
+}
+
+.highcharts-container svg{
+    height: 350px !important;
+}
+
+.last20GamesSummarySpiderChart{
+    padding-left: 20px;
 }
 
 .last20GamesSummaryTitle, .last20GamesSummaryContent{
@@ -61,9 +80,17 @@
     float:left;
     width: 100%;
 }
+
 .last20GamesSummaryTitle{
-    margin-top:10px;
-}
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+ }
+
 .titleLeftDivRTitle{
     position:relative;
     display:table-cell;
@@ -92,46 +119,30 @@
     width:100%;
     /*height:50px;*/
 }
-.circleHeroDuty{
-    height:45px;
-    width: 45px;
-    border-radius:50%;
-    font-size:1em;
-    color:white;
-    text-align:center;
-    border:1px solid #0E3357;//
-    vertical-align: middle;
-    padding-top: 5px;
-    float: left;
-}
-.circleHeroDuty firstl {
-    font-size: 14px;
-}
-.circleHeroDuty secondl {
-    font-size: 8px;
-}
 
 #last20gameSummaryTable{
-    width:100%;
+    width: 320px;
 }
 
 #last20gameSummaryTable thead{
-    background-color:#263F55;
-        color:white;
-        text-align: center;
+    border: 1px solid #1f3042;
+    background-color:#1f3042;
+    color: #999999;
+    text-align: center;
+    position: relative;
 }
 #last20gameSummaryTable tbody{
-    border:1px solid #0E3357;
-     color:white;
-        text-align: center;
+
+    color: #cccccc;
+    text-align: center;
+    font-size: 12px;
 }
 
 #last20gameSummaryTable tbody th{
-    border: thin solid;
-    border-color: #0C385C;
+    border: 1px solid #0b4471;
     text-align: center;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
  }
 
 .last20GamesSummaryContent_champUseCount{
@@ -152,36 +163,9 @@
 .last20GamesSummaryContent{
     margin-left: 1em;
 }
- .last20GamesSummaryTitle{
-    margin-top:2em;
-    margin-left: 1.5em;
-    margin-bottom:2em; 
-    font-size: 1.2em;
-    padding-top:3px;
-    padding-bottom: 1px;
- }
 
 .summerTabFont{
-    font-size: #263F551.2em;
-}
-
-.last20GamesSummarySpiderChart{
-    padding-left: 40px;
-}
-
-.championS5Header{
-    clear: both;
-    background-color: #263F55;
-    font-size: 1.2em;
-    text-align: center;
-    color:white;
-    font-size:1.2em;
-    margin-top:2em;
-    margin-left: 1.5em;
-    margin-bottom:2em; 
-    padding-top:3px;
-    padding-bottom: 1px;
-    
+    font-size: #263F55;
 }
 
 .generalTableHeader{
@@ -208,25 +192,12 @@
     border:0px;
 }
 
-#roleTable table tr td{
-    font-size:1em;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-}
-
-#championTable table tr td{
-    font-size:1em;
-    color: white;
-    vertical-align: middle;
-    text-align: center;
-}
-
 .img-circle {
-    border:2px solid;
+    border: none;
     border-color: #263F55;
     height: 50px;
     border-radius: 50%;
+
 }
 
 .champ-img-circle{
@@ -390,6 +361,8 @@
     padding-top:3px;
     padding-bottom: 1px;
     width: 100%;
+    position: relative;
+    left: -25px;
 }
 
 #chartLinemap{
@@ -438,6 +411,7 @@
     padding-bottom: 850px;
 }
 
+/*
 #chartOptionButtons{
     float: right;
     margin-top: 40px;
@@ -448,6 +422,7 @@
     font-size: 1.2em;
     color: white;
 }
+*/
 #victoryGroup{
     background-color: rgba(255,255,255, 0.03);
     padding-top: 20px;
@@ -474,3 +449,205 @@
     padding-left: 0px;
     padding-right: 0px;
 }
+
+/*   New CSS with home.html by Dee  start  */
+.btn-group button{
+    background-color: #10192a;
+
+    border: none !important;
+    color: #999999;
+}
+
+.btn-group button:hover{
+    background-color: #0c385f;
+    color: #cccccc;
+}
+
+.btn.btn-nav-selected{
+    background-color: #0c385f;
+    color: #cccccc;
+}
+/*   New CSS with home.html by Dee  end  */
+
+
+/*   New CSS with summoner_general by Dee  start  */
+.last20GamesSummaryContent_champRow .img-circle{
+    width: 40px;
+    height: 40px;
+}
+
+.last20GamesSummaryTitle.titleBgColor{
+    background-color: #0b1b32;
+    color: #999999;
+}
+
+#last20GameTitle{
+    margin-right: 20px;
+    top: 10px;
+    color: #6699cc;
+}
+
+.row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.circleMarker{
+    display: block !important;
+    position: relative;
+    left: 30px;
+    bottom: 10px;
+    width: 15px;
+	height: 15px;
+	background-color: #4b7c9c;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    color: #cccccc;
+    font-size: 8px;
+    text-align: center;
+    padding-top: 2px;
+}
+
+.Last20GamesChampions{
+	width: 65px;
+    float: left;
+    margin: 5px;
+}
+
+.Last20GamesChampions div{
+    display: none;
+}
+
+
+.Last20GamesChampions:hover div{
+    display: block;
+    position: absolute;
+    z-index: 100;
+    background-color: black; 
+    width: 150px;
+}
+
+.Last20GamesChampions:hover div b{
+    color: #cccccc;
+    vertical-align: middle;
+    margin: 10px;
+    font-size: 14px; 
+}
+
+.Last20GamesChampions:hover div p{
+    color: #cccccc;
+    vertical-align: middle;
+    margin: 10px;
+    font-size: 12px; 
+}
+
+#hoverPop{
+
+    border-style: solid;
+    border-color: dimgray;
+    border-width: 1px;
+	border-radius: 8px;
+    background-color: black;
+    opacity: 0.9;
+    position: absolute;
+
+}
+
+.championS5Header{
+    clear: both;
+    background-color: #0b1b32;
+    text-align: center;
+    color: #999999;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+
+.rolesInGame{
+    display: block !important;
+    margin-right: 15px;
+    width: 40px;
+	height: 40px;
+	background-color: #0d0d17;
+    border: 1px solid #2487cb;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    text-align: center;
+}
+
+.rolesTitle{
+    font-size: 16px;
+    position: relative;
+    top: 6px;
+    right: 12px;
+    color: #cccccc;
+}
+
+.rolesValue{
+    font-size: 10px;
+    position: relative;
+    left: 1px;
+    bottom: 2px;
+    color: #999999;
+}
+
+.generalTableHeader.row, .generalTableValue.row{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.generalTableHeader.row div{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 20px;    
+}
+
+.generalTableValue.row div{
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.generalTableValue.row span{  
+    font-size: 14px;
+    color: #d8d8d8;
+    text-align: center;
+    position: relative;
+    top: 10px;
+}
+
+.circleHeroDuty{
+    display: block !important;
+    margin-right: 15px;
+    width: 50px;
+	height: 50px;
+	background-color: #0d0d17;
+    border: 1px solid #2487cb;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+    text-align: center;
+    position: relative;
+    left: 30px;
+    margin-bottom: 10px;
+}
+.circleHeroDuty #rolesChampionTitle{
+    font-size: 20px;
+    position: relative;
+    top: 10px;
+}
+#roleTable div, #championTable div{
+    text-align: center;
+}
+.img-circle.championTableImg{
+    margin-bottom: 10px;
+}
+
+#championTable{
+    padding-bottom: 20px;
+}
+/*   New CSS with summoner_general by Dee  end  */

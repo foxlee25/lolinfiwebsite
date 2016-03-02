@@ -19,9 +19,9 @@ app.service('RiotApi',function($http){
     */
     this.getInfo = function(genre, id){
         if(id === undefined){
-            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre);
+            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre, {timeout: 1500});
         }else{
-            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre);
+            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre, {timeout: 1500});
         }
     };
 });
@@ -64,9 +64,9 @@ app.service('RiotSummonerApi',function($http){
     this.getInfo = function(genre){
         if(genre === 'matchdetail'){
             return $http.
-            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre);
+            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre, {timeout: 1500});
         }
-        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre);
+        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre, {timeout: 1500});
     };
 });
 

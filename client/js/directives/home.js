@@ -10,7 +10,7 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
 			scope.placeHolder = "Search for champion name,items ...";
-			$("body").css("background","url('images/bg1.jpg')");
+			$("body").css("background","url('images/otherPageBase.jpg')");
         },
         controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
             $scope.championPage = {"id":1};

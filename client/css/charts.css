@@ -1,0 +1,61 @@
+#chartLinemap{
+    width: 600px; 
+    height: 350px;
+    position: relative;
+    top: 20px;
+    left: -50px;
+    margin-bottom: 200px;
+}
+
+#tabWrapper{
+    background-color: #10192a;
+    opacity: 0.8;
+    width: 120px;
+    height: 310px;
+    position: absolute;
+    top: 262px;
+    left: 685px;
+}
+
+#tabWrapper_2{
+    background-color: #10192a;
+    opacity: 0.8;
+    width: 540px;
+    height: 30px;
+    position: absolute;
+    top: 600px;
+    left: 125px;
+}
+
+.tabs{
+    font-size: 15px;
+    color: aliceblue;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    position: relative;
+    top: 10px;
+}
+
+#byGameLength{
+    font-size: 15px;
+    color: aliceblue;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+    float: left;
+}
+
+#byGamePlayed{
+    font-size: 15px;
+    color: aliceblue;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+    float: right;
+}
+
+.active{
+    background-color: #039be4;
+}

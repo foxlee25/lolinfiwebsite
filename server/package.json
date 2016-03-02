@@ -9,6 +9,7 @@
   "author": "xiaohui qi",
   "license": "ISC",
   "devDependencies": {
+    "async": "^1.5.2",
     "body-parser": "^1.14.2",
     "compression": "^1.6.1",
     "cors": "^2.7.1",
