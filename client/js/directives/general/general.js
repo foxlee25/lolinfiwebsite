@@ -124,7 +124,8 @@ app.directive('lolChampionsGeneral',function(){
                         type: 'area',
                         color: '#77b0ce',
                         data: [1.5, 1.9, 2.1, 2.7, 2.3],
-                        pointPlacement: 'on'
+                        pointPlacement: 'on',
+//                        path: 'rgba(119,176,206,0.1)',
                     }]
                 });
             }());

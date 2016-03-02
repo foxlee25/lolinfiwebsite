@@ -9,6 +9,50 @@
         </div>
     </div>
     <div ng-if="!config.searchToggle">
+        <div class="col-sm-offset-2 col-sm-8" id="summaryBar">
+            <div class="row">
+                <div class="col-sm-1 summaryBarSmall">
+                    <img id="rankLevelImg" ng-src="images/gold.png" />
+                    <span id="rankLevelValue">GOLD {{ division }}</span>                    
+                    <div class="underTitleRank">RANK</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>1743</span>
+                    <div class="underTitleGames">GAMES</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>49.23%</span>
+                    <div class="underTitleRate">RATE</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>3.3 : 1</span>
+                    <div class="underTitleKDA">KDA</div>
+                </div>
+                <div class="col-sm-2" id="summaryBarMain">
+                    <img class="img-circle summaryBarMainImg" ng-src="images/rank_info/{{ profileIconId }}.png" />
+                    <div class="underTitle">{{ summonerName }}</div>
+                    <div id="summaryBarMainCircle">30</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>23</span>
+                    <div class="underTitleLength">LENGTH</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>35</span>
+                    <div class="underTitleMastery">MASTERY</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span>3.5</span>
+                    <div class="underTitleRoutine">ROUTINE</div>
+                </div>
+                <div class="col-sm-1 summaryBarSmall">
+                    <span id="rateLevelValue">B-</span>
+                    <div class="underTitleRate">RATE</div>
+                </div>
+            </div>
+        </div>
+    </div>    
+    <div ng-if="!config.searchToggle">
         <div class="col-sm-offset-2 col-sm-8" id="subChampionPage">
             <div class="btn-group btn-group-justified" role="group">
                 <div class="btn-group" role="group">

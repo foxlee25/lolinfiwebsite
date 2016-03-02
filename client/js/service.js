@@ -58,6 +58,21 @@ app.service('RiotSummonerApi',function($http){
 		return this.summonerName;
 	};
     
+    this.setDivision = function(input){
+		this.division = input;      
+    }
+    
+    this.getDivision = function(){
+		return this.division;    
+    }
+    
+    this.setProfileIconId = function(input){
+		this.profileIconId = input;          
+    }
+    
+    this.getProfileIconId = function(){
+		return this.profileIconId;          
+    }
     /**
     * get summoner data
     */
