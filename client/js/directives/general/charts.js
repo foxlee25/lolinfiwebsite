@@ -30,15 +30,14 @@ app.directive('lolChampionsCharts',function(){
                     console.log(e + "can't get summoner chart");
                 });
 			
-            $http.get('./data.json')
+            $http.get('json/data.json')
                 .success(function(res){
                     $scope.chartData = res;
-                console.log($scope.chartData);
+                console.log(res);
             })
             
 			$scope.loadChart = function(){
-				
-				$('#chartLinemap').highcharts({
+				var chartdata = {
                     title: {
                         text: '',
                         x: 20 //center
@@ -60,7 +59,7 @@ app.directive('lolChampionsCharts',function(){
 							width: 1,
 							color: '#808080'
 						}],
-                        gridLineWidth: 0.1
+                        gridLineWidth: 0.3
 					},
                     plotOptions: {
                         area: {
@@ -89,21 +88,24 @@ app.directive('lolChampionsCharts',function(){
                     },
 					series: [{
                         type: 'area',
-                        showInLegend: false,
-						data: [1,2,3.2,2.1,4.3,5,6.1,5.3,4.6,3.2,2,4,1.1,5,6,7,8,2,3,4,1.2,3,4,4,5,6,5,4,3,4,5,4,3,2]
-					}]
-                    
-                    
-                    
-				});
+                        data: $scope.chartData,
+                    }]
+				}
+//                chartdata.series.data = $scope.chartData;
+                
+				$('#chartLinemap').highcharts(chartdata);
 			};
             
-            $scope.tab = 1;
-            
+            $scope.verticalTab = 1;
+            $scope.horizentalTab = 1;
             $scope.selectTab = function(setTab){
-                $scope.tab = setTab;
+                $scope.verticalTab = setTab;
             };
-            
+            $scope.selectTab_2 = function(setTab){
+                $scope.horizentalTab = setTab;
+                
+                
+            };
             $scope.loadMap = function(data){
                 
 //                var width = 900,
