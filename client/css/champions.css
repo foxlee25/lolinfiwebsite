@@ -1,6 +1,6 @@
 #championsTableFilterContainer{
     margin: 0 auto;
-    width: 800px;
+/*    width: 800px;*/
     /* height: 400px; */
     background-color: rgba(105,105,116,0.3);
     /* opacity: 0.4; */
@@ -95,7 +95,7 @@
 
 #championsTableContainer{
         margin: 0 auto;
-    width: 800px;
+/*    width: 800px;*/
     /* height: 400px; */
     background-color: rgba(105,105,116,0.3);
     /* opacity: 0.4; */

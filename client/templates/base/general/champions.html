@@ -1,6 +1,10 @@
 <div>
     <div id="champions">
-        <table class="table">
+        <div id="summonerChampionFilter" class="row">
+            <div ng-click="matchOptions.league='ALL'" ng-class="{'labelHighlight':matchOptions.league=='ALL', 'col-sm-1':true, 'filterBarOption':true}"><span>ALL</span></div>
+            <div ng-click="matchOptions.league='Last20Games'" ng-class="{'labelHighlight':matchOptions.league=='Last20Games', 'col-sm-2':true, 'filterBarOption':true}"><span>Last 20 Games</span></div>
+        </div>
+        <table id="summonerChampionTable" class="table">
             <tr class="championsTableHeader">
                 <th>Champion</th>
                 <th>Rate</th>
@@ -9,8 +13,8 @@
                 <th>CS</th>
             </tr>
             <tr ng-repeat="champs in champions | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-class="{'tableStrip':$index%2==1}">
-                <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.id}}/square.png" /></td>
-                <td style="text-align:left">
+                <td><img class="img-circle" ng-src="images/champ_basic_info/{{champs.id}}/square.png" /></td>
+                <td>
 					{{champs.stats.totalSessionsWon*100/champs.stats.totalSessionsPlayed|number:2}}%
                     <div class="progress">
                       <div class="progress-bar" role="progressbar" aria-valuenow="{{champs.stats.totalSessionsWon*100/champs.stats.totalSessionsPlayed}}"
@@ -24,11 +28,11 @@
             </tr>
         </table>
     </div>
-	<nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+	<nav ng-show="loadingPagination.show" class="pagin col-sm-4">
 	  <ul class="pagination">
 		  <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
-		  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
-		<li><a ng-click="loadingPagination.pageIndex<=loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
-	  </ul>
+		  <li ng-show="index-loadingPagination.pageIndex<=3&&index>0" ng-repeat="index in [] | range:loadingPagination.maxIndex+1" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>
+		<li><a ng-click="loadingPagination.pageIndex<loadingPagination.maxIndex?loadPage(loadingPagination.pageIndex+1):none" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+      </ul>        
 	</nav>
 </div>

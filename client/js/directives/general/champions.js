@@ -28,7 +28,7 @@ app.directive('lolChampionsChampions',function(){
                     $scope.champions = data.champions;
                     $scope.loadingPagination.show = true;
                     $scope.loadingPagination.pageIndex = 1;
-                    $scope.loadingPagination.maxIndex = Math.round(data.champions.length/20);
+                    $scope.loadingPagination.maxIndex = Math.ceil(data.champions.length/20);
 			     })
                 .error(function(e){
                     console.error(e + " can't get summoner champion");

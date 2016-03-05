@@ -193,8 +193,7 @@
 }
 
 .img-circle {
-    border: none;
-    border-color: #263F55;
+    border: 1px solid silver;
     height: 50px;
     border-radius: 50%;
 
@@ -329,17 +328,19 @@
 }
 
 .rankTableHeader th{
+    text-align: center;
     font-size:1.2em;
     vertical-align: middle;
     background-color: rgba(255,255,255, 0.07);
 }
 
 #rankTable tr td{
-    color:white;
+    color: #cccccc;
     vertical-align: middle;
 }
 
 #rankTable{
+    text-align: center;
     background-color: rgba(255,255,255, 0.05);
 }
 
@@ -368,7 +369,8 @@
 }
 
 .progress{
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 #liveViewNumber{
@@ -383,6 +385,7 @@
 .pagin{
     padding-top: 10px;
     padding-bottom: 80px;
+    margin-left: 43%;
 }
 
 .itemImgWithWidth{
@@ -815,3 +818,63 @@
     color: #cc9933;
 }
 /*   New CSS with summoner_general by Dee  end  */
+
+/*   New CSS with Rank by Dee  start  */
+#chanllengerName{
+    margin: 0 0 0px;
+}
+/*   New CSS with Rank by Dee  end  */
+
+/*   New CSS with summoner_champion by Dee  end  */
+.championsTableHeader{
+    color:#448AAC;  
+}
+
+.championsTableHeader th{
+    text-align: center;
+    font-size:1.2em;
+    vertical-align: middle;
+    background-color: rgba(255,255,255, 0.07);
+}
+
+#summonerChampionTable{
+    text-align: center;
+    background-color: rgba(255,255,255, 0.05);
+}
+
+#summonerChampionTable tr td{
+    color: #cccccc;
+    text-align: center;
+}
+
+.labelHighlight{
+    text-align:left !important;
+    background-color: #006699;
+    color: #cccccc !important;
+    border-radius: 10px;
+    display: inline-block;
+    line-height: 20px; 
+}
+
+.row .filterBarOption{
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.filterBarOption span{
+    position: relative;
+    left: 10px;    
+}
+
+#champions{
+    margin-top: 10px !important;
+}
+
+#summonerChampionFilter{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    color: #767f88;
+}
+/*   New CSS with summoner_champion by Dee  end  */
