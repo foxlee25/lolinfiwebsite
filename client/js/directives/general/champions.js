@@ -38,6 +38,16 @@ app.directive('lolChampionsChampions',function(){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
 			};
+            
+            $scope.matchOptionsLeague = 'ALL';
+
+            $scope.setFilter = function(newValue){
+              $scope.matchOptionsLeague = newValue;
+            };
+            
+            $scope.isSetFilter = function(tabName){
+              return $scope.matchOptionsLeague === tabName;
+            };
         }
     };
 });

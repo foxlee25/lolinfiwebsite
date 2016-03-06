@@ -384,8 +384,13 @@
 
 .pagin{
     padding-top: 10px;
-    padding-bottom: 80px;
+    padding-bottom: 70px;
     margin-left: 43%;
+}
+
+.paginOther{
+    padding-bottom: 20px;
+    margin-left: 40%;    
 }
 
 .itemImgWithWidth{
@@ -876,5 +881,9 @@
     margin-bottom: 20px;
     margin-left: 50px;
     color: #767f88;
+}
+
+#summonerChampionFilter span{
+    margin-left: 2px;
 }
 /*   New CSS with summoner_champion by Dee  end  */

@@ -122,10 +122,10 @@ app.directive('lolChampionsGeneral',function(){
                     series: [{
                         name: 'Score',
                         type: 'area',
-                        color: '#77b0ce',
+                        color: 'rgba(119,176,206,1)',
                         data: [1.5, 1.9, 2.1, 2.7, 2.3],
-                        pointPlacement: 'on',
-//                        path: 'rgba(119,176,206,0.1)',
+                        pointPlacement: 'on', 
+                        fillColor: 'rgba(119,176,206,0.15)'
                     }]
                 });
             }());

@@ -234,6 +234,8 @@ app.directive('lolChampions',function(){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
 			};
+
+            /*  Champions table sort */
             $scope.order = '-winRate';
             $scope.reverse = false;
             $scope.setSort = function(id){
@@ -251,6 +253,8 @@ app.directive('lolChampions',function(){
             $scope.isSort = function(id){
                 return $scope.order === id; 
             };
+
+            /* Champion table Top 3 champions color control */
             $scope.topThree = function(index){
                 var x = ($scope.loadingPagination.pageIndex-1)*10+index+1;
                 if( x < 4 ){
@@ -258,6 +262,30 @@ app.directive('lolChampions',function(){
                 }
                 return false;
             };
+
+            /* Champions Filter control */            
+            $scope.matchOptionsLeague = 'Bronze';
+            $scope.matchOptionsTime = 'LastMonth';            
+            $scope.matchOptionsQueue = 'SoloRanked';            
+
+            $scope.setFilterLeague = function(newValue){
+              $scope.matchOptionsLeague = newValue;
+            };
+            $scope.isSetFilterLeague = function(tabName){
+              return $scope.matchOptionsLeague === tabName;
+            };
+            $scope.setFilterTime = function(newValue){
+              $scope.matchOptionsTime = newValue;
+            };
+            $scope.isSetFilterTime = function(tabName){
+              return $scope.matchOptionsTime === tabName;
+            };  
+            $scope.setFilterQueue = function(newValue){
+              $scope.matchOptionsQueue = newValue;
+            };
+            $scope.isSetFilterQueue = function(tabName){
+              return $scope.matchOptionsQueue === tabName;
+            };              
         }
     };
 });

@@ -52,7 +52,7 @@
             </tr>
         </table>
     </div>
-	<nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+	<nav ng-show="loadingPagination.show" class="paginOther col-sm-offset-4 col-sm-4">
 	  <ul class="pagination">
 		  <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
 		  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>

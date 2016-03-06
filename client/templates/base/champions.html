@@ -7,24 +7,24 @@
                     <div id="tbody">
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">League:</div>
-                            <div ng-click="matchOptions.league='Bronze'" ng-class="{'labelHighlight':matchOptions.league=='Bronze', 'col-sm-1':true, 'filterBarOption':true}"><span>Bronze</span></div>
-                            <div ng-click="matchOptions.league='Silver'" ng-class="{'labelHighlight':matchOptions.league=='Silver', 'col-sm-1':true, 'filterBarOption':true}"><span>Silver</span></div>
-                            <div ng-click="matchOptions.league='Gold'" ng-class="{'labelHighlight':matchOptions.league=='Gold', 'col-sm-1':true, 'filterBarOption':true}"><span>Gold</span></div>
-                            <div ng-click="matchOptions.league='Platinum'" ng-class="{'labelHighlight':matchOptions.league=='Platinum', 'col-sm-1':true, 'filterBarOption':true}"><span>Platinum</span></div>
-                            <div ng-click="matchOptions.league='Diamond'" ng-class="{'labelHighlight':matchOptions.league=='Diamond', 'col-sm-1':true, 'filterBarOption':true}"><span>Diamond</span></div>
-                            <div ng-click="matchOptions.league='Master'" ng-class="{'labelHighlight':matchOptions.league=='Master', 'col-sm-1':true, 'filterBarOption':true}"><span>Master</span></div>
-                            <div ng-click="matchOptions.league='Challenger'" ng-class="{'labelHighlight':matchOptions.league=='Challenger', 'col-sm-2':true, 'filterBarOption':true}"><span>Challenger</span></div>
+                            <div ng-click="setFilterLeague('Bronze')" ng-class="{'labelHighlight':isSetFilterLeague('Bronze'), 'col-sm-1':true, 'filterBarOption':true}"><span>Bronze</span></div>
+                            <div ng-click="setFilterLeague('Silver')" ng-class="{'labelHighlight':isSetFilterLeague('Silver'), 'col-sm-1':true, 'filterBarOption':true}"><span>Silver</span></div>
+                            <div ng-click="setFilterLeague('Gold')" ng-class="{'labelHighlight':isSetFilterLeague('Gold'), 'col-sm-1':true, 'filterBarOption':true}"><span>Gold</span></div>
+                            <div ng-click="setFilterLeague('Platinum')" ng-class="{'labelHighlight':isSetFilterLeague('Platinum'), 'col-sm-1':true, 'filterBarOption':true}"><span>Platinum</span></div>
+                            <div ng-click="setFilterLeague('Diamond')" ng-class="{'labelHighlight':isSetFilterLeague('Diamond'), 'col-sm-1':true, 'filterBarOption':true}"><span>Diamond</span></div>
+                            <div ng-click="setFilterLeague('Master')" ng-class="{'labelHighlight':isSetFilterLeague('Master'), 'col-sm-1':true, 'filterBarOption':true}"><span>Master</span></div>
+                            <div ng-click="setFilterLeague('Challenger')" ng-class="{'labelHighlight':isSetFilterLeague('Challenger'), 'col-sm-2':true, 'filterBarOption':true}"><span>Challenger</span></div>
                         </div>
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">Time:</div>
-                            <div ng-click="matchOptions.time='Last Month'" ng-class="{'labelHighlight':matchOptions.time=='Last Month', 'col-sm-2':true, 'filterBarOption':true}"><span>Last Month</span></div>
-                            <div ng-click="matchOptions.time='Last Week'" ng-class="{'labelHighlight':matchOptions.time=='Last Week', 'col-sm-2':true, 'filterBarOption':true}"><span>Last Week</span></div>
+                            <div ng-click="setFilterTime('LastMonth')" ng-class="{'labelHighlight':isSetFilterTime('LastMonth'), 'col-sm-2':true, 'filterBarOption':true}"><span>Last Month</span></div>
+                            <div ng-click="setFilterTime('LastWeek')" ng-class="{'labelHighlight':isSetFilterTime('LastWeek'), 'col-sm-2':true, 'filterBarOption':true}"><span>Last Week</span></div>
                         </div>
                         <div class="row">
                             <div class="matchTableFilterTitle col-sm-2">Queue Type:</div>
-                            <div ng-click="matchOptions.queueType='Solo Ranked'" ng-class="{'labelHighlight':matchOptions.queueType=='Solo Ranked', 'col-sm-2':true, 'filterBarOption':true}"><span>Solo Ranked</span></div>
-                            <div ng-click="matchOptions.queueType='Team Rank'" ng-class="{'labelHighlight':matchOptions.queueType=='Team Rank', 'col-sm-2':true, 'filterBarOption':true}"><span>Team Rank</span></div>
-                            <div ng-click="matchOptions.queueType='Normal Queue'" ng-class="{'labelHighlight':matchOptions.queueType=='Normal Queue', 'col-sm-2':true, 'filterBarOption':true}"><span>Normal Queue</span></div>
+                            <div ng-click="setFilterQueue('SoloRanked')" ng-class="{'labelHighlight':isSetFilterQueue('SoloRanked'), 'col-sm-2':true, 'filterBarOption':true}"><span>Solo Ranked</span></div>
+                            <div ng-click="setFilterQueue('TeamRank')" ng-class="{'labelHighlight':isSetFilterQueue('TeamRank'), 'col-sm-2':true, 'filterBarOption':true}"><span>Team Rank</span></div>
+                            <div ng-click="setFilterQueue('NormalQueue')" ng-class="{'labelHighlight':isSetFilterQueue('NormalQueue'), 'col-sm-2':true, 'filterBarOption':true}"><span>Normal Queue</span></div>
                         </div>
                     </div>
                 </div>
