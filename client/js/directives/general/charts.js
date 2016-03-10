@@ -33,11 +33,12 @@ app.directive('lolChampionsCharts',function(){
             $http.get('json/data.json')
                 .success(function(res){
                     $scope.chartData = res;
-                console.log(res);
             })
-            
-			$scope.loadChart = function(){
-				var chartdata = {
+            $http.get('json/data_2.json')
+                .success(function(res){
+                    $scope.chartData_2 = res;
+            })
+            $scope.chartdata = {
                     title: {
                         text: '',
                         x: 20 //center
@@ -88,18 +89,27 @@ app.directive('lolChampionsCharts',function(){
                     },
 					series: [{
                         type: 'area',
-                        data: $scope.chartData,
+                        showInLegend: false,      
+//                        data: $scope.chartData,
                     }]
 				}
-//                chartdata.series.data = $scope.chartData;
-                
-				$('#chartLinemap').highcharts(chartdata);
+			$scope.loadChart = function(){
+                $scope.chartdata.series[0].data = $scope.chartData;
+				$('#chartLinemap').highcharts($scope.chartdata);
 			};
             
             $scope.verticalTab = 1;
             $scope.horizentalTab = 1;
             $scope.selectTab = function(setTab){
                 $scope.verticalTab = setTab;
+                if($scope.verticalTab == 1){
+                    $scope.chartdata.series[0].data = $scope.chartData;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }else if($scope.verticalTab == 2){
+                    $scope.chartdata.series[0].data = $scope.chartData_2;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }
+                
             };
             $scope.selectTab_2 = function(setTab){
                 $scope.horizentalTab = setTab;

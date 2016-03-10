@@ -106,6 +106,13 @@ app.directive('lolHome',function(){
                 }
                 
             };
+            
+            //new
+            $scope.goHome = function(){
+                config.searchToggle=true;
+//                config.url='Home';
+            }
+            
             //current page is sub page of base home
             if(State[$location.url()] !== 0){
                 $scope.selectChampionPage(State[$location.url()]);

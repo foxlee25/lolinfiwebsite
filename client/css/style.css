@@ -225,7 +225,7 @@ a{
 }
 
 /* Now, we'll create a search (magnifying glass) icon using pseudo elements */
-#searchBox .icon:after, #searchBox .submitSearch:after  {
+#searchBox .submitSearch:after  {
 	content: '';
 	position: absolute;
 	width: 10px;
@@ -236,7 +236,7 @@ a{
 	top: 12px;
 }
 
-#searchBox .icon:before, #searchBox .submitSearch:before {
+#searchBox .submitSearch:before {
 	content: '';
 	position: absolute;
 	height: 11px;
