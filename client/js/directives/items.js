@@ -38,7 +38,7 @@ app.directive('lolItems',function(){
                 var check_2 = e.clientY > $(".itemCard:hover div").height() + 20;
                 var popupWidth = $(".itemCard:hover div").width();
                 
-                console.log($(document).width());
+//                console.log($(document).width());
                 if($(document).width() < 1500){
                     if(check_1){
                         $(".itemCard:hover div").css({top: (yCoordinate - 80) + 'px'});

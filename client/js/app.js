@@ -56,4 +56,13 @@ app.controller('formController', function($scope, facebookService) {
         }
     };
     
+     $scope.setHome = function(){
+         $scope.config.searchToggle=true;
+         $scope.config.url='HOME';
+     }
+//     $scope.setChamp = function(){
+//         $scope.config.url='CHAMPIONS';
+//     }
+     
+    
 });

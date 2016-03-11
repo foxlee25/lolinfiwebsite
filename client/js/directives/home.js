@@ -84,7 +84,7 @@ app.directive('lolHome',function(){
 			});
             $scope.selectChampionPage = function(id){
                 $scope.championPage.id = id;
-                $scope.config.searchToggle = false;
+//                $scope.config.searchToggle = false;
                 switch($scope.championPage.id){
                     case 1:
                         redirect("/base/baseHome/baseChampionGeneral");
@@ -106,12 +106,6 @@ app.directive('lolHome',function(){
                 }
                 
             };
-            
-            //new
-            $scope.goHome = function(){
-                config.searchToggle=true;
-//                config.url='Home';
-            }
             
             //current page is sub page of base home
             if(State[$location.url()] !== 0){
