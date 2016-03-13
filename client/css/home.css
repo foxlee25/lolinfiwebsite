@@ -45,8 +45,12 @@
 }
 
 
-
-
+.tableStrip{
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 5px;
+    margin-bottom: 3px;
+    height: 50px;
+}
 
 /*Home_General*/
 .last20GamesSummaryContainer{
@@ -249,7 +253,7 @@
 
 .matchTableFilterTitle p{
     color:#448AAC;
-    font-size:1.2em;
+    font-size: 16px;
     vertical-align: middle;
     text-align: left;
 }
@@ -429,30 +433,34 @@
 }
 #victoryGroup{
     background-color: rgba(255,255,255, 0.03);
-    padding-top: 20px;
-    padding-left: 20px;
+    margin-top: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #victoryGroup b{
+    margin-left: 30px;
     font-size: 2em;
-    color: green;
+    color: #38a94f;
 }
 
 #defeatGroup{
     background-color: rgba(255,255,255, 0.03);
-    padding-top: 20px;
-    padding-left: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 #defeatGroup b{
+    margin-left: 30px;
     font-size: 2em;
-    color: red;
+    color: #cf213c;
 }
 
 .col-sm-offset-2.col-sm-8{
     padding-left: 0px;
     padding-right: 0px;
 }
+
 
 /*   New CSS with home.html by Dee  start  */
 .btn-group button{
@@ -854,7 +862,7 @@
 
 .labelHighlight{
     text-align:left !important;
-    background-color: #006699;
+    background-color: #0c3d66;
     color: #cccccc !important;
     border-radius: 10px;
     display: inline-block;
@@ -872,10 +880,6 @@
     left: 10px;    
 }
 
-#champions{
-    margin-top: 10px !important;
-}
-
 #summonerChampionFilter{
     margin-top: 20px;
     margin-bottom: 20px;
@@ -887,3 +891,96 @@
     margin-left: 2px;
 }
 /*   New CSS with summoner_champion by Dee  end  */
+
+/*   New CSS with summoner_match by Dee  start  */
+#matchFilterTable{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #767f88;
+}
+
+#matchFilterOptions{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.championsTableHeader{
+    color:#448AAC;  
+}
+
+.row .filterBarOption{
+    text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+    font-size: 13px;
+    position: relative;
+    top: 2px;
+}
+
+.filterBarOption span{
+    position: relative;
+    left: 10px;    
+}
+
+.matchTableChampion{
+    width: 100%;
+}
+
+.matchTableChampion .matchesTableHeader{    
+    height: 40px;
+}
+
+.matchTableChampion .matchesTableContent{
+    height: 70px;
+}
+
+.matchTableChampion tr td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn.btn-primary{
+    height: 20px;
+    padding: 0 6px; 
+    font-size: 13px;
+    background-color: rgba(255,255,255, 0);
+    border-color: rgba(255,255,255, 0);
+    color: #767f88;
+    border-radius: 10px;
+    margin-left: 3px;
+}
+
+.labelHighlight .btn.btn-primary{
+    color: #cccccc !important;    
+}
+
+.col-sm-2.championSelector{
+    margin-top: 1px;
+}
+/*   New CSS with summoner_match by Dee  end  */
+
+/*   New CSS with summoner_match_details by Dee  start  */
+.matchDetailChampions table tr td{
+    text-align: center;
+    vertical-align: middle; 
+    color: #cccccc;
+}
+
+.matchGold{
+    position: relative;
+    left: 80px;
+    color: #cccccc;    
+}
+
+.matchKills{
+    position: relative;
+    left: 110px;
+    color: #cccccc;
+}
+
+.matchGold .matchGoldTitle, .matchKills .matchKillsTitle{
+    font-size: 10px !important;
+}
+
+
+/*   New CSS with summoner_match_details by Dee  end  */

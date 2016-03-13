@@ -15,7 +15,6 @@ app.directive('lolHome',function(){
         controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
             $scope.championPage = {"id":1};
 			$scope.searchInput = {value:""};
-			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
                 Cache.set("SummonerId", input);
@@ -110,6 +109,8 @@ app.directive('lolHome',function(){
             if(State[$location.url()] !== 0){
                 $scope.selectChampionPage(State[$location.url()]);
             }
+    
         }
     };
+
 });

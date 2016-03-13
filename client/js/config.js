@@ -14,6 +14,10 @@ app.config(function($stateProvider, $urlRouterProvider) {
         url: '/baseHome',
         template: '<lol-home></lol-home>'
     })
+    .state('base.dthree', {
+        url: '/basedthree',
+        template:'<lol-dthree></lol-dthree>'
+    })    
     .state('base.champions', {
         url: '/baseChampions',
         template:'<lol-champions></lol-champions>'

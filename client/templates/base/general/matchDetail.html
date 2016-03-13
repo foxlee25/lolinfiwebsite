@@ -1,8 +1,11 @@
 <div>
 	<div id="victoryGroup">
 		<b>Victory</b>
+        <span class="matchBandChampions"></span>
+        <span class="matchGold"><span class="matchGoldTitle">Gold</span> 68.5K</span>
+        <span class="matchKills"><span class="matchKillsTitle">Kills</span> 36</span>
 	</div>
-	<div id="champions">
+	<div class="matchDetailChampions">
 		<table class="table">
 			<tr class="championsTableHeader">
 				<th>Champion</th>
@@ -14,7 +17,7 @@
 				<th>Items</th>
 			</tr>
 			<tr ng-repeat="champs in match.participants" ng-show="champs.stats.winner" ng-class="{'tableStrip':$index%2==1}">
-				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
+				<td><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
 				<td>{{match.participantIdentities[champs.participantId].player.summonerName}}</td>
 				<td>{{(champs.stats.kills+champs.stats.assists)/champs.stats.deaths|number:2}}</td>
 				<td>{{champs.stats.kills}}</td>
@@ -34,8 +37,11 @@
 	</div>
 	<div id="defeatGroup">
 		<b>Defeat</b>
+        <span class="matchBandChampions"></span>
+        <span class="matchGold"><span class="matchGoldTitle">Gold</span> 68.5K</span>
+        <span class="matchKills"><span class="matchKillsTitle">Kills</span> 36</span>        
 	</div>
-	<div id="champions">
+	<div class="matchDetailChampions">
 		<table class="table">
 			<tr class="championsTableHeader">
 				<th>Champion</th>
@@ -47,7 +53,7 @@
 				<th>Items</th>
 			</tr>
 			<tr ng-repeat="champs in match.participants" ng-show="!champs.stats.winner" ng-class="{'tableStrip':$index%2==1}">
-				<td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
+				<td><img class="img-circle" ng-src="images/champ_basic_info/{{champs.championId}}/square.png" /></td>
 				<td>{{match.participantIdentities[champs.participantId].player.summonerName}}</td>
 				<td>{{(champs.stats.kills+champs.stats.assists)/champs.stats.deaths|number:2}}</td>
 				<td>{{champs.stats.kills}}</td>
