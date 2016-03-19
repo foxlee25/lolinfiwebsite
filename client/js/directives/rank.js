@@ -9,7 +9,7 @@ app.directive('lolRank',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("body").css("background","url('images/otherbg.jpg')");
+			$("html").css("background","url('images/otherPageBase.jpg')");
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope,RiotApi,loadSummoner,redirect, RiotSummonerApi){

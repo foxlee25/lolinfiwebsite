@@ -10,9 +10,13 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
 			scope.placeHolder = "Search for champion name,items ...";
-			$("body").css("background","url('images/bg1.jpg')");
+			$("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
+            $("html").css("-webkit-background-size","cover");
+            $("html").css("-moz-background-size","cover");
+            $("html").css("-o-background-size","cover");
+            $("html").css("background-size","cover");
         },
-        controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
+        controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache, bgService){
             $scope.championPage = {"id":1};
 			$scope.searchInput = {value:""};
 			$scope.searchSummonerById = function(input){

@@ -12,7 +12,7 @@ app.directive('lolChampions',function(){
 //            scope.matchOptions = {"league":"Bronze"
 //                      ,"Time":"Last Month"
 //                      ,"queueType":"Solo Ranked"};
-			$("body").css("background","url('images/otherbg.jpg')");
+			$("html").css("background","url('images/otherPageBase.jpg')");
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope, RiotApi, redirect, util){

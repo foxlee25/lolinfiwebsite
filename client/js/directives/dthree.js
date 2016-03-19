@@ -1,77 +1,101 @@
-app.directive('lolDthree', function(){
+app.directive('lolDthree', ['d3Service', 
+  function($window, $timeout, d3Service) {
     return {
-      restrict: 'E',
-      templateUrl:'templates/base/dthree.html',
-      transclude:true,
-      replace:true,
-      scope:false,
-      link: function (scope, element) {
-        var margin = {top: 20, right: 20, bottom: 30, left: 40},
-            width = 960 - margin.left - margin.right,
-            height = 500 - margin.top - margin.bottom;
+      restrict: 'A',
+      scope: {
+        data: '=',
+        onClick: '&'
+      },
+      link: function(scope, ele, attrs) {
+        d3Service.d3().then(function(d3) {
 
-        var randomX = d3.random.normal(width / 2, 80),
-            randomY = d3.random.normal(height / 2, 80),
-            points = d3.range(2000).map(function() { return [randomX(), randomY()]; });
+          var renderTimeout;
+          var margin = parseInt(attrs.margin) || 20,
+              barHeight = parseInt(attrs.barHeight) || 20,
+              barPadding = parseInt(attrs.barPadding) || 5;
 
-        var color = d3.scale.linear()
-            .domain([0, 20])
-            .range(["white", "steelblue"])
-            .interpolate(d3.interpolateLab);
+          var svg = d3.select(ele[0])
+            .append('svg')
+            .style('width', '100%');
 
-        var hexbin = d3.hexbin()
-            .size([width, height])
-            .radius(20);
+          $window.onresize = function() {
+            scope.$apply();
+          };
 
-        var x = d3.scale.identity()
-            .domain([0, width]);
+          scope.$watch(function() {
+            return angular.element($window)[0].innerWidth;
+          }, function() {
+            scope.render(scope.data);
+          });
 
-        var y = d3.scale.linear()
-            .domain([0, height])
-            .range([height, 0]);
+          scope.$watch('data', function(newData) {
+            scope.render(newData);
+          }, true);
 
-        var xAxis = d3.svg.axis()
-            .scale(x)
-            .orient("bottom")
-            .tickSize(6, -height);
+          scope.render = function(data) {
+            svg.selectAll('*').remove();
 
-        var yAxis = d3.svg.axis()
-            .scale(y)
-            .orient("left")
-            .tickSize(6, -width);
+            if (!data) return;
+            if (renderTimeout) clearTimeout(renderTimeout);
 
-        var svg = d3.select("#homePageContent").append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-          .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+            renderTimeout = $timeout(function() {
+              var width = d3.select(ele[0]).node().offsetWidth - margin,
+                  height = scope.data.length * (barHeight + barPadding),
+                  color = d3.scale.category20(),
+                  xScale = d3.scale.linear()
+                    .domain([0, d3.max(data, function(d) {
+                      return d.score;
+                    })])
+                    .range([0, width]);
 
-        svg.append("clipPath")
-            .attr("id", "clip")
-          .append("rect")
-            .attr("class", "mesh")
-            .attr("width", width)
-            .attr("height", height);
+              svg.attr('height', height);
 
-        svg.append("g")
-            .attr("clip-path", "url(#clip)")
-          .selectAll(".hexagon")
-            .data(hexbin(points))
-          .enter().append("path")
-            .attr("class", "hexagon")
-            .attr("d", hexbin.hexagon())
-            .attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; })
-            .style("fill", function(d) { return color(d.length); });
-
-        svg.append("g")
-            .attr("class", "y axis")
-            .call(yAxis);
-
-        svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
-            .call(xAxis);  
-      }
-    };
-
-});
+              svg.selectAll('rect')
+                .data(data)
+                .enter()
+                  .append('rect')
+                  .on('click', function(d,i) {
+                    return scope.onClick({item: d});
+                  })
+                  .attr('height', barHeight)
+                  .attr('width', 140)
+                  .attr('x', Math.round(margin/2))
+                  .attr('y', function(d,i) {
+                    return i * (barHeight + barPadding);
+                  })
+                  .attr('fill', function(d) {
+                    return color(d.score);
+                  })
+                  .on('click', function(d, i) {
+                    return scope.onClick({item: d});
+                  })
+                  .transition()
+                    .duration(1000)
+                    .attr('width', function(d) {
+                      return xScale(d.score);
+                    });
+              svg.selectAll('text')
+                .data(data)
+                .enter()
+                  .append('text')
+                  .attr('fill', '#fff')
+                  .attr('y', function(d,i) {
+                    return i * (barHeight + barPadding) + 15;
+                  })
+                  .attr('x', 15)
+                  .text(function(d) {
+                    return d.name + " (" + d.score + ")";
+                  });
+            }, 100);
+          };
+        });
+      }}
+}])
+.controller('dthreeCtrl', ['$scope', function($scope) {
+  $scope.data = [
+    {name: "Greg", score: 98},
+    {name: "Ari", score: 96},
+    {name: 'Q', score: 75},
+    {name: "Loser", score: 48}
+  ];
+}])

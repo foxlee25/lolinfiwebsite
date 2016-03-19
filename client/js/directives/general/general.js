@@ -9,6 +9,7 @@ app.directive('lolChampionsGeneral',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            $("html").css("background","url('images/otherPageBase.jpg')");
         },
         controller:function($scope, RiotApi, redirect, RiotSummonerApi, Cache){
 //            getApi.getGeneral().success(function(data){

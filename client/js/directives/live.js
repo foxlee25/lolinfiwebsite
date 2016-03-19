@@ -9,11 +9,12 @@ app.directive('lolLive',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+			$("html").css("background","url('images/otherPageBase.jpg')");            
 			scope.index = 1;
 			$("body").css("background","url('images/otherbg.jpg')");
             //get twitch lol game play list
             Twitch.api({method: 'streams', params: {game:'League of Legends', limit:21} }, function(error, list) {
-              console.debug(JSON.stringify(list));
+              //console.debug(JSON.stringify(list));
               scope.twitchPlayList = list;
               //not inisde angular scope need to refresh
               scope.$apply();

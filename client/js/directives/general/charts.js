@@ -9,6 +9,7 @@ app.directive('lolChampionsCharts',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+			$("html").css("background","url('images/otherPageBase.jpg')");            
 			scope.chartOptions={"gameType":"Ranked Solo","role":"TOP","performance":"Game Length"};
         },
         controller:function($scope, RiotSummonerApi, redirect, Cache){

@@ -9,6 +9,7 @@ app.directive('lolItems',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+			$("html").css("background","url('images/otherPageBase.jpg')");            
             var screenWidth = $(document).width();
             var screenHeight = $(document).height();
             scope.itemOption = {"filter":"All"};

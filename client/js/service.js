@@ -161,3 +161,9 @@ app.service('Cache', function(){
         return localStorage.getItem(key);
     };
 });
+
+app.service('bgService', function(){
+    this.bgChange = function(){
+         $("html").css("background","url(../images/indexbg.jpg) no-repeat center center fixed !important");
+    };
+});
