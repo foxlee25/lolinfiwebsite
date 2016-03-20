@@ -16,7 +16,7 @@ app.directive('lolHome',function(){
             $("html").css("-o-background-size","cover");
             $("html").css("background-size","cover");
         },
-        controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache, bgService){
+        controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
             $scope.championPage = {"id":1};
 			$scope.searchInput = {value:""};
 			$scope.searchSummonerById = function(input){
