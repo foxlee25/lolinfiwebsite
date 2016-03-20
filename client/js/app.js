@@ -1,6 +1,6 @@
 // create our angular app and inject ngAnimate and ui-router 
 // =============================================================================
-var app=angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router']);
+var app = angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router']);
 
 // our controller for the form
 // =============================================================================
@@ -60,9 +60,5 @@ app.controller('formController', function($scope, facebookService) {
          $scope.config.searchToggle=true;
          $scope.config.url='HOME';
      }
-//     $scope.setChamp = function(){
-//         $scope.config.url='CHAMPIONS';
-//     }
-     
     
 });
