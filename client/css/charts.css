@@ -59,3 +59,54 @@
 .active{
     background-color: #039be4;
 }
+
+#tabWrapper_3{
+    background-color: #10192a;
+    opacity: 0.8;
+    width: 650px;
+    height: 30px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#kills{
+    font-size: 15px;
+    color: aliceblue;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+#solokills{
+    font-size: 15px;
+    color: aliceblue;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+#death{
+    font-size: 15px;
+    color: aliceblue;
+    padding-top: 4px;
+    padding-bottom: 5px;
+    padding-left: 33px;
+    padding-right: 33px;
+}
+
+#sliderbar{
+    position: relative;
+    left: 0px;
+    top: 20px;
+    width: 900px;
+}
+
+.output{
+    position: relative;
+    top: 10px;
+/*    left: 200px;*/
+    float: left;
+}

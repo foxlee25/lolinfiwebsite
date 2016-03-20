@@ -2,6 +2,12 @@
 *charts
 */
 app.directive('lolChampionsCharts',function(){
+    function load_script() {
+        var s = document.createElement('script');
+        s.src = "js/simple-slider.js";
+        document.head.appendChild(s);
+    }
+    
     return{
         restrict:'E',
         templateUrl:'templates/base/general/charts.html',
@@ -10,6 +16,22 @@ app.directive('lolChampionsCharts',function(){
         scope:false,
         link:function(scope,element,attrs){
 			scope.chartOptions={"gameType":"Ranked Solo","role":"TOP","performance":"Game Length"};
+            
+            scope.champion = {level: 1};
+            load_script();
+            $("#data-slider2")
+            .each(function () {
+                var input = $(this);
+                $("<span>").addClass("output").insertAfter($(this));
+            })
+            .bind("slider:ready slider:changed", function (event, data) {
+                $(this)
+                .nextAll(".output:first")
+                .html(data.value.toFixed() + "-18");
+                scope.champion.level = data.value.toFixed();
+                scope.$digest();
+            });
+            
         },
         controller:function($scope, $http, RiotSummonerApi, redirect, Cache){
             if(RiotSummonerApi.getSummonerId() === null){
@@ -38,6 +60,27 @@ app.directive('lolChampionsCharts',function(){
                 .success(function(res){
                     $scope.chartData_2 = res;
             })
+            $http.get('json/data_3.json')
+                .success(function(res){
+                    $scope.chartData_3 = res;
+            })
+            $http.get('json/data_4.json')
+                .success(function(res){
+                    $scope.chartData_4 = res;
+            })
+            $http.get('json/data_5.json')
+                .success(function(res){
+                    $scope.chartData_5 = res;
+            })
+            $http.get('json/data_6.json')
+                .success(function(res){
+                    $scope.chartData_6 = res;
+            })
+            $http.get('json/data_7.json')
+                .success(function(res){
+                    $scope.chartData_7 = res;
+            })
+            
             $scope.chartdata = {
                     title: {
                         text: '',
@@ -100,6 +143,7 @@ app.directive('lolChampionsCharts',function(){
             
             $scope.verticalTab = 1;
             $scope.horizentalTab = 1;
+            $scope.heatTab = 1;
             $scope.selectTab = function(setTab){
                 $scope.verticalTab = setTab;
                 if($scope.verticalTab == 1){
@@ -108,11 +152,34 @@ app.directive('lolChampionsCharts',function(){
                 }else if($scope.verticalTab == 2){
                     $scope.chartdata.series[0].data = $scope.chartData_2;
                     $('#chartLinemap').highcharts($scope.chartdata);
+                }else if($scope.verticalTab == 3){
+                    $scope.chartdata.series[0].data = $scope.chartData_3;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }else if($scope.verticalTab == 4){
+                    $scope.chartdata.series[0].data = $scope.chartData_4;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }else if($scope.verticalTab == 5){
+                    $scope.chartdata.series[0].data = $scope.chartData_5;
+                    $('#chartLinemap').highcharts($scope.chartdata);
                 }
                 
             };
             $scope.selectTab_2 = function(setTab){
                 $scope.horizentalTab = setTab;
+                if($scope.horizentalTab == 2){
+                    $scope.chartdata.series[0].data = $scope.chartData_6;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }
+                if($scope.horizentalTab == 1){
+                    $scope.chartdata.series[0].data = $scope.chartData_7;
+                    $('#chartLinemap').highcharts($scope.chartdata);
+                }
+                
+            };
+            
+            
+            $scope.selectTab_3 = function(setTab){
+                $scope.heatTab = setTab;
                 
                 
             };

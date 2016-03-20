@@ -107,37 +107,32 @@ a{
     border-bottom: 2px solid #039be4;
     top: 60px;
 }
- .navTable {
-    /* margin: auto; */
+/*
+.navTable {
     padding:0px;
     display:table;
-    /* width:1000px; */
     border-collapse: collapse;
 }
+*/
 
+/*
 .navTable ul{
     margin:0px;
     padding:0px;
     list-style:none;
     
 }
+*/
 
 .navTable li{
     padding: 10px 20px 10px 20px;
     display:block;
-    text-decoration: none;
-    /* color: #C0C0CA; */
+    text-decoration: none; 
     text-align: center;
     font-size:18px;
     font-weight:bold;
 }
-.navTable li:first-child {
-    //border-left: none;
-}
 
-.navTable li {
-    //border-left: 1px solid #ebebeb;
-}
 .navTable li:hover{
   color:#0F84CB;
   transition: all .5s ease-in-out;

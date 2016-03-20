@@ -47,7 +47,17 @@
 			<b>Heat Map</b>
 		</div>
 		<div class="chartsWrapper">
-			<div id="chartHeatmap">  
+			<div id="chartHeatmap"></div>
+            
+            <div id="tabWrapper_3">
+                <div id="kills" class="col-sm-4" ng-click="selectTab_3(1)" ng-class="{active:heatTab==1}"><center>Kills</center></div>
+                <div id="solokills" class="col-sm-4" ng-click="selectTab_3(2)" ng-class="{active:heatTab==2}"><center>Solo Kills</center></div>
+                <div id="death" class="col-sm-4" ng-click="selectTab_3(3)" ng-class="{active:heatTab==3}"><center>Death</center></div>
+            </div>
+            
+            <div id="sliderbar">
+<!--				<h3>Level</h3>-->
+				<input id="data-slider2" type="text" data-slider="true" data-slider-range="1,18" data-slider-step="1" data-slider-snap="true">
 			</div>
 		</div>
 	</div>
