@@ -237,18 +237,17 @@
     margin-top: 50px;
 }
 
-.filterTable tr{
+.filterTable .row{
     margin-top: 5px;
-    margin-bottom: 5px;
+    padding: 10px;
 }
 
-.filterTable tr td{
+.filterTable .row div{
     vertical-align: middle;
-    margin: 10px;
     padding-left: 10px;
     padding-right: 10px;
-    font-size: 1em;
-    color: white;
+    font-size: 14px;
+    color: #999999;
 }
 
 .matchTableFilterTitle p{
@@ -814,7 +813,6 @@
 	border-radius: 50px;
     text-align: center;
     position: relative;
-    left: 30px;
     margin-bottom: 10px;
 }
 .circleHeroDuty #rolesChampionTitle{
