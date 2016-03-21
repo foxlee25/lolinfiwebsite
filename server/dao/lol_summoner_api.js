@@ -9,7 +9,9 @@ var getSummonerId = function(id, res){
 		if(!error && response.statusCode === 200){
 			console.log(JSON.stringify(body));
 			res.send(body);
-		}
+		}else if(error){
+            console.log("call Riot API error");
+        }
 	});
 };
 
