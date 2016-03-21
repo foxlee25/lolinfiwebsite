@@ -16,9 +16,8 @@ app.directive('lolChampions',function(){
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope, RiotApi, redirect, util){
-            RiotApi.getInfo("champion")
-                .success(function(data){
-                    $scope.champInfo = [
+            
+            $scope.champInfo = [
                     {
                         "id": 1,
                         "name": "Annie",            
@@ -212,7 +211,11 @@ app.directive('lolChampions',function(){
                         "kda": 1.2352941176470589, 
                         "winRate": 0.0
                     }                         
-                ];
+                ];            
+            
+            RiotApi.getInfo("champion")
+                .success(function(data){
+                    
 //                    for(var i in data.data){
 //
 //                        $scope.champInfo.push(data.data[i]);                 
