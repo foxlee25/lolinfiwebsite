@@ -19,9 +19,9 @@ app.service('RiotApi',function($http){
     */
     this.getInfo = function(genre, id){
         if(id === undefined){
-            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre, {timeout: 1500});
+            return $http.get('http://52.33.51.44:8080/LolInfi/LolStatic?genre='+genre, {timeout: 1500});
         }else{
-            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre, {timeout: 1500});
+            return $http.get('http://52.33.51.44:8080/LolInfi/LolStatic/'+id+'?genre='+genre, {timeout: 1500});
         }
     };
 });
