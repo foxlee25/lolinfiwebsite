@@ -79,9 +79,9 @@ app.service('RiotSummonerApi',function($http){
     this.getInfo = function(genre){
         if(genre === 'matchdetail'){
             return $http.
-            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre, {timeout: 1500});
+            get('http://52.33.51.44:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre, {timeout: 1500});
         }
-        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre, {timeout: 1500});
+        return $http.get('http://52.33.51.44:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre, {timeout: 1500});
     };
 });
 
