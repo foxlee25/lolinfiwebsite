@@ -78,3 +78,39 @@ body{
     top: 380px;
 }
 
+@media screen and (max-width: 1024px) {
+    #homePageContent{
+        position: relative;
+        top: 400px;
+        right: 100px;
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #homePageContent{
+        position: relative;
+        top: 430px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #homePageContent{
+        position: relative;
+        top: 520px;
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    #homePageContent{
+        position: relative;
+        top: 650px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #homePageContent{
+        position: relative;
+        top: 680px;
+    }
+}
+

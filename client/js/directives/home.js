@@ -10,11 +10,11 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
 			scope.placeHolder = "Search for champion name,items ...";
-			$("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
-            $("html").css("-webkit-background-size","cover");
-            $("html").css("-moz-background-size","cover");
-            $("html").css("-o-background-size","cover");
-            $("html").css("background-size","cover");
+//			$("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
+//            $("html").css("-webkit-background-size","cover");
+//            $("html").css("-moz-background-size","cover");
+//            $("html").css("-o-background-size","cover");
+//            $("html").css("background-size","cover");
         },
         controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
             $scope.championPage = {"id":1};
@@ -80,9 +80,13 @@ app.directive('lolHome',function(){
 			}
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
-					$("body").css("background","url('images/bg1.jpg')");
+                    $("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
+                    $("html").css("-webkit-background-size","cover");
+                    $("html").css("-moz-background-size","cover");
+                    $("html").css("-o-background-size","cover");
+                    $("html").css("background-size","cover");
 				}else{
-					$("body").css("background","url('images/otherbg.jpg')");
+					$("html").css("background","url('images/otherPageBase.jpg')");
 				}
 			});
             $scope.selectChampionPage = function(id){
