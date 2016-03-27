@@ -1,42 +1,40 @@
 <div>
 	<div>
-        <table class="filterTable" style="border:null">
-            <tr>
-                <td class="matchTableFilterTitle"><p> Game Type:</p></td>
-                <td ng-click="chartOptions.gameType='Ranked Solo'" ng-class="{'labelHighlight':chartOptions.gameType=='Ranked Solo'}">Ranked Solo</td>
-                <td ng-click="chartOptions.gameType='Ranked Team'" ng-class="{'labelHighlight':chartOptions.gameType=='Ranked Team'}">Ranked Team</td>
-            </tr>
-            <tr>
-                <td class="matchTableFilterTitle"><p>Role</p></td>
-                <td ng-click="chartOptions.role='TOP'" ng-class="{'labelHighlight':chartOptions.role=='TOP'}">TOP</td>
-                <td ng-click="chartOptions.role='JUN'" ng-class="{'labelHighlight':chartOptions.role=='JUN'}">JUN</td>
-                <td ng-click="chartOptions.role='MID'" ng-class="{'labelHighlight':chartOptions.role=='MID'}">MID</td>
-                <td ng-click="chartOptions.role='ADC'" ng-class="{'labelHighlight':chartOptions.role=='ADC'}">ADC</td>
-                <td ng-click="chartOptions.role='SUP'" ng-class="{'labelHighlight':chartOptions.role=='SUP'}">SUP</td>
-            </tr>
-			<tr>
-				<td class="matchTableFilterTitle"><p>Performance</p></td>
-				<td ng-click="chartOptions.performance='Game Length'" ng-class="{'labelHighlight':chartOptions.performance=='Game Length'}">Game Length</td>
-				<td ng-click="chartOptions.performance='Games Played'" ng-class="{'labelHighlight':chartOptions.performance=='Games Played'}">Games Played</td>
-			</tr>
-        </table>
-        
-        
-        
+        <div class="filterTable">
+            <div class="row">
+                <div class="matchTableFilterTitle col-sm-2">Game Type:</div>
+                <div class="col-sm-2" ng-click="chartOptions.gameType='Ranked Solo'" ng-class="{'labelHighlight':chartOptions.gameType=='Ranked Solo'}">Ranked Solo</div>
+                <div class="col-sm-2" ng-click="chartOptions.gameType='Ranked Team'" ng-class="{'labelHighlight':chartOptions.gameType=='Ranked Team'}">Ranked Team</div>
+            </div>
+            <div class="row">
+                <div class="matchTableFilterTitle col-sm-2">Role:</div>
+                <div class="col-sm-1" ng-click="chartOptions.role='TOP'" ng-class="{'labelHighlight':chartOptions.role=='TOP'}">TOP</div>
+                <div class="col-sm-1" ng-click="chartOptions.role='JUN'" ng-class="{'labelHighlight':chartOptions.role=='JUN'}">JUN</div>
+                <div class="col-sm-1" ng-click="chartOptions.role='MID'" ng-class="{'labelHighlight':chartOptions.role=='MID'}">MID</div>
+                <div class="col-sm-1" ng-click="chartOptions.role='ADC'" ng-class="{'labelHighlight':chartOptions.role=='ADC'}">ADC</div>
+                <div class="col-sm-1" ng-click="chartOptions.role='SUP'" ng-class="{'labelHighlight':chartOptions.role=='SUP'}">SUP</div>
+            </div>
+			<div class="row">
+				<div class="matchTableFilterTitle col-sm-2">Performance:</div>
+				<div class="col-sm-2" ng-click="chartOptions.performance='Game Length'" ng-class="{'labelHighlight':chartOptions.performance=='Game Length'}">Game Length</div>
+				<div class="col-sm-2" ng-click="chartOptions.performance='Games Played'" ng-class="{'labelHighlight':chartOptions.performance=='Games Played'}">Games Played</div>
+			</div>
+         </div>       
         
 		<div class="chartsWrapper">
-			<div id="chartLinemap" style="min-width: 310px; height: 400px;">
-				<div id="chartOptionButtons">
-					<div>
-						<div>
-							<p>Gold Min</p>
-						</div>
-						<div>
-							<p>Gold</p>
-						</div>
-					</div>
-				</div>
+			<div id="chartLinemap">
 			</div>
+            <div id="tabWrapper">
+                <div class="tabs" ng-click="selectTab(1)" ng-class="{active:verticalTab==1}"><center>Gold</center></div>
+                <div class="tabs" ng-click="selectTab(2)" ng-class="{active:verticalTab==2}"><center>Gold/Min</center></div>
+                <div class="tabs" ng-click="selectTab(3)" ng-class="{active:verticalTab==3}"><center>Kills</center></div>
+                <div class="tabs" ng-click="selectTab(4)" ng-class="{active:verticalTab==4}"><center>Solo Kills</center></div>
+                <div class="tabs" ng-click="selectTab(5)" ng-class="{active:verticalTab==5}"><center>Death</center></div>
+            </div>
+            <div id="tabWrapper_2">
+                <div id="byGameLength" ng-click="selectTab_2(1)" ng-class="{active:horizentalTab==1}"><center>Performance by Game Length</center></div>
+                <div id="byGamePlayed" ng-click="selectTab_2(2)" ng-class="{active:horizentalTab==2}"><center>Performance by Game Played</center></div>
+            </div>
 		</div>
         
         
@@ -46,7 +44,17 @@
 			<b>Heat Map</b>
 		</div>
 		<div class="chartsWrapper">
-			<div id="chartHeatmap">  
+			<div id="chartHeatmap"></div>
+            
+            <div id="tabWrapper_3">
+                <div id="kills" class="col-sm-4" ng-click="selectTab_3(1)" ng-class="{active:heatTab==1}"><center>Kills</center></div>
+                <div id="solokills" class="col-sm-4" ng-click="selectTab_3(2)" ng-class="{active:heatTab==2}"><center>Solo Kills</center></div>
+                <div id="death" class="col-sm-4" ng-click="selectTab_3(3)" ng-class="{active:heatTab==3}"><center>Death</center></div>
+            </div>
+            
+            <div id="sliderbar">
+<!--				<h3>Level</h3>-->
+				<input id="data-slider2" type="text" data-slider="true" data-slider-range="1,18" data-slider-step="1" data-slider-snap="true">
 			</div>
 		</div>
 	</div>

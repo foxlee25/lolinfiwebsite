@@ -16431,7 +16431,7 @@
                         zIndex: 0 // #1069
                     };
                     if (!prop[2]) {
-                        attr['fill-opacity'] = options.fillOpacity || 0.75;
+                        attr['fill-opacity'] = options.fillOpacity || 0.25;
                     }
                     series[areaKey] = series.chart.renderer.path(areaPath)
                         .attr(attr)

@@ -4,11 +4,12 @@
 }
 
 html {
-  background: url(../images/bg1.jpg) no-repeat center center fixed;
+  background: url(../images/otherPageBase.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    background-color: black;
 }
 
 body {
@@ -107,37 +108,32 @@ a{
     border-bottom: 2px solid #039be4;
     top: 60px;
 }
- .navTable {
-    /* margin: auto; */
+/*
+.navTable {
     padding:0px;
     display:table;
-    /* width:1000px; */
     border-collapse: collapse;
 }
+*/
 
+/*
 .navTable ul{
     margin:0px;
     padding:0px;
     list-style:none;
     
 }
+*/
 
 .navTable li{
     padding: 10px 20px 10px 20px;
     display:block;
-    text-decoration: none;
-    /* color: #C0C0CA; */
+    text-decoration: none; 
     text-align: center;
     font-size:18px;
     font-weight:bold;
 }
-.navTable li:first-child {
-    //border-left: none;
-}
 
-.navTable li {
-    //border-left: 1px solid #ebebeb;
-}
 .navTable li:hover{
   color:#0F84CB;
   transition: all .5s ease-in-out;
@@ -225,7 +221,7 @@ a{
 }
 
 /* Now, we'll create a search (magnifying glass) icon using pseudo elements */
-#searchBox .icon:after, #searchBox .submitSearch:after  {
+#searchBox .submitSearch:after  {
 	content: '';
 	position: absolute;
 	width: 10px;
@@ -236,7 +232,7 @@ a{
 	top: 12px;
 }
 
-#searchBox .icon:before, #searchBox .submitSearch:before {
+#searchBox .submitSearch:before {
 	content: '';
 	position: absolute;
 	height: 11px;

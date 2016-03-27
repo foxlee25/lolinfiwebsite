@@ -9,15 +9,13 @@ app.directive('lolChampionsMatch',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-            scope.matchOptions = {"gameType":"All"
-                                  ,"champion":"All"
-                                  ,"role":"All"};
+			$("html").css("background","url('images/otherPageBase.jpg')");            
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
+//            scope.toggleDropdown = function(){
+//                $("#dropdownMenu").toggle();
+//            };
         },
-        controller:function($scope, redirect, RiotSummonerApi, Cache){
-//            getApi.getMatches().success(function(data){
-//                $scope.matches = data;
-//            });
+        controller:function($scope, redirect, RiotSummonerApi, Cache){           
             if(RiotSummonerApi.getSummonerId() === null){
                 if(Cache.get("SummonerId")){
                     RiotSummonerApi.setSummonerId(Cache.get("SummonerId"));
@@ -25,6 +23,30 @@ app.directive('lolChampionsMatch',function(){
                     redirect("/base/baseHome");
                 }
             }
+            /* Match Filter control */            
+            $scope.matchOptionsGame = 'ALL';
+            $scope.matchOptionsChampion = 'ALL';            
+            $scope.matchOptionsRole = 'ALL';            
+
+            $scope.setFilterGame = function(newValue){
+                $scope.matchOptionsGame = newValue;
+            };
+            $scope.setFilterChampion = function(newValue){              
+                $scope.matchOptionsChampion = newValue;
+            }; 
+            $scope.setFilterRole = function(newValue){
+                $scope.matchOptionsRole = newValue;
+            };            
+            $scope.isSetFilterGame = function(tabName){
+                return $scope.matchOptionsGame === tabName;
+            };
+            $scope.isSetFilterChampion = function(tabName){
+                return $scope.matchOptionsChampion === tabName;
+            };  
+            $scope.isSetFilterRole = function(tabName){
+                return $scope.matchOptionsRole === tabName;
+            };             
+            
         	$scope.loadMatch = function(id){
 				RiotSummonerApi.setMatchId(id);
                 Cache.set("MatchId", id);
@@ -35,6 +57,7 @@ app.directive('lolChampionsMatch',function(){
 				$scope.loadingPagination.pageIndex = index;
 				window.scrollTo(0, 0);
 			};
+            
 			/**
 			* call to get summoner matchlist from riotAPI
 			*/
@@ -47,8 +70,7 @@ app.directive('lolChampionsMatch',function(){
                 })
                 .error(function(e){
                     console.error(e + "can't get summoner match list");
-                });
-            }
-        };
-    }
-);
+                });   
+        }
+    };
+});

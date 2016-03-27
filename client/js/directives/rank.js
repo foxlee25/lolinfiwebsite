@@ -9,7 +9,7 @@ app.directive('lolRank',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("body").css("background","url('images/otherbg.jpg')");
+			$("html").css("background","url('images/otherPageBase.jpg')");
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope,RiotApi,loadSummoner,redirect, RiotSummonerApi){
@@ -22,7 +22,14 @@ app.directive('lolRank',function(){
 			
 			$scope.loadSummoner = function(challenger){
 				$scope.config.searchToggle = false;
+//                console.log($scope.config.searchToggle);
+//                console.log($scope.config.url);
+//                console.log($scope.aaa);
 				RiotSummonerApi.setSummonerId(challenger.playerOrTeamId);
+				RiotSummonerApi.setSummonerName(challenger.playerOrTeamName);               
+				RiotSummonerApi.setDivision(challenger.division);
+				RiotSummonerApi.setProfileIconId(challenger.profileIconId);                
+//                RiotSummonerApi.setSummonerId;
 				redirect("/base/baseHome/baseChampionGeneral");
 			};
 			

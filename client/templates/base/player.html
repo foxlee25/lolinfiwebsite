@@ -2,6 +2,44 @@
     <div>
         <div id="playerScreen">
             <div class="flashPlayer">
+                
+                    <svg viewBox="200 70 800 600">
+                      <symbol id="s-text">
+                        <text text-anchor="middle"
+                              x="50%"
+                              y="30%"
+                              class="text--line"
+                              >
+                          Coming
+                        </text>
+                        <text text-anchor="middle"
+                              x="50%"
+                              y="45%"
+                              class="text--line2"
+                              >
+                          Soon
+                        </text>
+
+                      </symbol>
+
+                      <g class="g-ants">
+                        <use xlink:href="#s-text"
+                          class="text-copy"></use>     
+                        <use xlink:href="#s-text"
+                          class="text-copy"></use>     
+                        <use xlink:href="#s-text"
+                          class="text-copy"></use>     
+                        <use xlink:href="#s-text"
+                          class="text-copy"></use>     
+                        <use xlink:href="#s-text"
+                          class="text-copy"></use>     
+                      </g>
+
+
+                    </svg>
+                
+                
+<!-- old
             <object width="100%" height="100%" bgcolor="#000000" data="{{trustSrc()}}" id="live_embed_player_flash" type="application/x-shockwave-flash">
                 <param value="true" name="allowFullScreen">
                 <param value="always" name="allowScriptAccess">
@@ -9,7 +47,22 @@
                 <param value="http://www.twitch.tv/widgets/live_embed_player.swf" name="movie">
                 <param value="hostname=www.twitch.tv&amp;channel={{video.channel.name}}&amp;auto_play=true&amp;start_volume=25" name="flashvars">
             </object>
+-->
+                
+<!-- new
+                <video controls>
+
+                    <source src=video.channel.url>
+                    <param value="true" name="allowFullScreen">
+                    <param value="always" name="allowScriptAccess">
+                    <param value="all" name="allowNetworking">
+                    <param value="http://www.twitch.tv/widgets/live_embed_player.swf" name="movie">
+                    <param value="hostname=www.twitch.tv&amp;channel={{video.channel.name}}&amp;auto_play=true&amp;start_volume=25" name="flashvars">
+                </video>
+-->
+
             </div>
         </div>
     </div>
 </div>
+

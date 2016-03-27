@@ -1,41 +1,47 @@
 <div>
-    <div id="matches">
-        <table class="filterTable" style="border:null">
-            <tr>
-                <td class="matchTableFilterTitle"><p> Game Type:</p></td>
-                <td ng-click="matchOptions.gameType='All'" ng-class="{'labelHighlight':matchOptions.gameType=='All'}">All</td>
-                <td ng-click="matchOptions.gameType='Ranked Solo'" ng-class="{'labelHighlight':matchOptions.gameType=='Ranked Solo'}">Ranked Solo</td>
-                <td ng-click="matchOptions.gameType='Ranked Team'" ng-class="{'labelHighlight':matchOptions.gameType=='Ranked Team'}">Ranked Team</td>
-                <td ng-click="matchOptions.gameType='Normal'" ng-class="{'labelHighlight':matchOptions.gameType=='Normal'}">Normal</td>
-            </tr>
-            <tr>
-                <td class="matchTableFilterTitle"><p>Champion:</p></td>
-                <td ng-class="{'labelHighlight':matchOptions.champion=='All'}">All</td>
-                <td>
-                    <div class="btn-group">
-                      <a class="btn-mini dropdown-toggle" data-toggle="dropdown">
-                        Action
-                        <span class="caret"></span>
-                      </a>
-                      <ul class="dropdown-menu">
-                        <!-- dropdown menu links -->
-                          <li>1</li>
-                          <li>2</li>
-                      </ul>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td class="matchTableFilterTitle"><p>Role</p></td>
-                <td ng-click="matchOptions.role='All'" ng-class="{'labelHighlight':matchOptions.role=='All'}">All</td>
-                <td ng-click="matchOptions.role='TOP'" ng-class="{'labelHighlight':matchOptions.role=='TOP'}">TOP</td>
-                <td ng-click="matchOptions.role='JUN'" ng-class="{'labelHighlight':matchOptions.role=='JUN'}">JUN</td>
-                <td ng-click="matchOptions.role='MID'" ng-class="{'labelHighlight':matchOptions.role=='MID'}">MID</td>
-                <td ng-click="matchOptions.role='ADC'" ng-class="{'labelHighlight':matchOptions.role=='ADC'}">ADC</td>
-                <td ng-click="matchOptions.role='SUP'" ng-class="{'labelHighlight':matchOptions.role=='SUP'}">SUP</td>
-            </tr>
-        </table>
-        <table class="table">
+    <div id="matchFilterTable">
+
+        <div id="matchFilterOptions">
+            <div class="row">
+                <div class="matchTableFilterTitle col-sm-2"><p>Game Type:</p></div>
+                
+                <div class="col-sm-1 filterBarOption" ng-class="{'labelHighlight':isSetFilterGame('ALL')}" ng-click="setFilterGame('ALL')"><span>ALL</span></div>
+                
+                <div class="col-sm-2 filterBarOption" ng-class="{'labelHighlight':isSetFilterGame('RankedSolo')}" ng-click="setFilterGame('RankedSolo')"><span>Ranked Solo</span></div>
+                
+                <div class="col-sm-2 filterBarOption" ng-class="{'labelHighlight':isSetFilterGame('RankedTeam')}" ng-click="setFilterGame('RankedTeam')"><span>Ranked Team</span></div>
+                
+                <div class="col-sm-2 filterBarOption" ng-class="{'labelHighlight':isSetFilterGame('Normal')}" ng-click="setFilterGame('Normal')"><span>Normal</span></div>
+            </div>
+            <div class="row">
+                <div class="matchTableFilterTitle col-sm-2"><p>Champion:</p></div>
+                <div ng-click="setFilterChampion('ALL')" ng-class="{'labelHighlight':isSetFilterChampion('ALL')}" class="col-sm-1 filterBarOption"><span>ALL</span>
+                </div>
+                <div class="col-sm-2 championSelector" ng-class="{'labelHighlight':isSetFilterChampion('Selector')}" ng-click="setFilterChampion('Selector')">             
+                  <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Select Champion
+                    <span class="caret"></span></button>
+                    <ul id="dropdownMenu" class="dropdown-menu">
+                      <li><a href="#">hero1</a></li>
+                      <li><a href="#">hero2</a></li>
+                      <li><a href="#">hero3</a></li>
+                    </ul>
+                  </div>                                        
+                </div>
+            </div>
+            <div class="row">
+                <div class="matchTableFilterTitle col-sm-2"><p>Role:</p></div>
+                <div ng-click="setFilterRole('ALL')" ng-class="{'labelHighlight':isSetFilterRole('ALL')}" class="col-sm-1 filterBarOption"><span>ALL</span></div>
+                <div ng-click="setFilterRole('TOP')" ng-class="{'labelHighlight':isSetFilterRole('TOP')} " class="col-sm-1 filterBarOption"><span>TOP</span></div>
+                <div ng-click="setFilterRole('JUN')" ng-class="{'labelHighlight':isSetFilterRole('JUN')}" class="col-sm-1 filterBarOption"><span>JUN</span></div>
+                <div ng-click="setFilterRole('MID')" ng-class="{'labelHighlight':isSetFilterRole('MID')}" class="col-sm-1 filterBarOption"><span>MID</span></div>
+                <div ng-click="setFilterRole('ADC')" ng-class="{'labelHighlight':isSetFilterRole('ADC')}" class="col-sm-1 filterBarOption"><span>ADC</span></div>
+                <div ng-click="setFilterRole('SUP')" ng-class="{'labelHighlight':isSetFilterRole('SUP')}" class="col-sm-1 filterBarOption"><span>SUP</span></div>                    
+            </div>
+        </div>
+
+
+        <table class="matchTableChampion">
             <tr class="matchesTableHeader">
                 <th>Champion</th>
                 <th>Type</th>
@@ -43,8 +49,8 @@
                 <th>Lane</th>
                 <th>Role</th>
             </tr>
-            <tr ng-click="loadMatch(match.matchId)" ng-repeat="match in matches | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptions.gameType!='All'&&matchOptions.gameType!=match.queueType)||(matchOptions.champion!='All'&&matchOptions.champion!=match.champion)">
-                <td style="padding-left:40px"><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
+            <tr class="matchesTableContent" ng-click="loadMatch(match.matchId)" ng-repeat="match in matches | limitTo:20:(loadingPagination.pageIndex-1)*20" ng-class="{'tableStrip':$index%2==1}" ng-hide="(matchOptionsGame!=='ALL' && matchOptionsGame!==match.queueType)||(matchOptionsChampion!=='ALL' && matchOptionsChampion!==match.champion)">
+                <td><img class="img-circle" ng-src="images/champ_basic_info/{{match.champion}}/square.png" /></td>
                 <td>{{match.queue}}</td>
                 <td>{{match.season}}</td>
                 <td>{{match.lane}}</td>
@@ -52,7 +58,7 @@
             </tr>
         </table>
     </div>
-	<nav ng-show="loadingPagination.show" class="pagin col-sm-offset-4 col-sm-4">
+	<nav ng-show="loadingPagination.show" class="paginOther col-sm-offset-4 col-sm-4">
 	  <ul class="pagination">
 		  <li><a ng-click="loadingPagination.pageIndex>=2?loadPage(loadingPagination.pageIndex-1):none" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
 		  <li ng-show="index-loadingPagination.pageIndex<=3&&index-loadingPagination.pageIndex>=0" ng-repeat="index in [] | range:loadingPagination.maxIndex" ng-class="{'active':index==loadingPagination.pageIndex}"><a ng-click="loadPage(index)">{{index}} </a></li>

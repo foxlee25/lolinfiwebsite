@@ -1,6 +1,6 @@
 #championsTableFilterContainer{
     margin: 0 auto;
-    width: 800px;
+/*    width: 800px;*/
     /* height: 400px; */
     background-color: rgba(105,105,116,0.3);
     /* opacity: 0.4; */
@@ -95,7 +95,7 @@
 
 #championsTableContainer{
         margin: 0 auto;
-    width: 800px;
+/*    width: 800px;*/
     /* height: 400px; */
     background-color: rgba(105,105,116,0.3);
     /* opacity: 0.4; */
@@ -121,6 +121,8 @@
 #tbody{
     margin-top: 20px;
     margin-bottom: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 #championsFilterTable .row{
@@ -128,6 +130,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 5px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 #tbody div{
@@ -139,7 +143,7 @@
 
 .labelHighlight{
     text-align:left !important;
-    background-color: #006699;
+    background-color: #0c3d66;
     color: #cccccc !important;
     border-radius: 10px;
     display: inline-block;
@@ -181,7 +185,7 @@
 }
 
 .tableStrip{
-    background-color: rgba(255,255,255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 5px;
     margin-bottom: 3px;
     height: 50px;
@@ -254,8 +258,15 @@
     color: #cc9933 !important;
 }
 
-.row .col-sm-1{
+.row .filterBarOption{
     text-align: left;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.filterBarOption span{
+    position: relative;
+    left: 10px;    
 }
 
 .selected{

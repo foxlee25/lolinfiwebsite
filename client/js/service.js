@@ -19,9 +19,9 @@ app.service('RiotApi',function($http){
     */
     this.getInfo = function(genre, id){
         if(id === undefined){
-            return $http.get('http://localhost:8080/LolInfi/LolStatic?genre='+genre, {timeout: 1500});
+            return $http.get('http://52.33.51.44:8080/LolInfi/LolStatic?genre='+genre, {timeout: 1500});
         }else{
-            return $http.get('http://localhost:8080/LolInfi/LolStatic/'+id+'?genre='+genre, {timeout: 1500});
+            return $http.get('http://52.33.51.44:8080/LolInfi/LolStatic/'+id+'?genre='+genre, {timeout: 1500});
         }
     };
 });
@@ -58,15 +58,30 @@ app.service('RiotSummonerApi',function($http){
 		return this.summonerName;
 	};
     
+    this.setDivision = function(input){
+		this.division = input;      
+    }
+    
+    this.getDivision = function(){
+		return this.division;    
+    }
+    
+    this.setProfileIconId = function(input){
+		this.profileIconId = input;          
+    }
+    
+    this.getProfileIconId = function(){
+		return this.profileIconId;          
+    }
     /**
     * get summoner data
     */
     this.getInfo = function(genre){
         if(genre === 'matchdetail'){
             return $http.
-            get('http://localhost:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre, {timeout: 1500});
+            get('http://52.33.51.44:8080/LolInfi/LolSummoner/'+this.matchId+'/'+genre, {timeout: 1500});
         }
-        return $http.get('http://localhost:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre, {timeout: 1500});
+        return $http.get('http://52.33.51.44:8080/LolInfi/LolSummoner/'+this.summonerId+'/'+genre, {timeout: 1500});
     };
 });
 

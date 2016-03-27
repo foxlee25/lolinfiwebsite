@@ -9,6 +9,7 @@ app.directive('lolChampionsGeneral',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
+            $("html").css("background","url('images/otherPageBase.jpg')");
         },
         controller:function($scope, RiotApi, redirect, RiotSummonerApi, Cache){
 //            getApi.getGeneral().success(function(data){
@@ -25,6 +26,9 @@ app.directive('lolChampionsGeneral',function(){
 
 			RiotSummonerApi.getInfo('recentGames')
                 .success(function(data){
+//                console.log(JSON.stringify(data));
+                $scope.roles = ['TOP', 'JUN', 'MID', 'ADC', 'SUP'];
+                
                 })
                 .error(function(e){
                     console.error(e + " can't get match detail");
@@ -32,6 +36,7 @@ app.directive('lolChampionsGeneral',function(){
 
 			RiotSummonerApi.getInfo('general')
                 .success(function(data){
+//                    console.log(JSON.stringify(data));
 					$scope.general = data;
 				    // debugger;
 					if($scope.general.champions != null &&
@@ -83,7 +88,7 @@ app.directive('lolChampionsGeneral',function(){
                         backgroundColor:'transparent'
                     },       
                     pane: {
-                        size: '65%'
+                        size: '65%',
                     },
                     xAxis: {
                         categories: ['Damage', 'Gold', 'Team Fight', 'Vision Control',
@@ -91,9 +96,9 @@ app.directive('lolChampionsGeneral',function(){
                         tickmarkPlacement: 'on',
                         labels: {
                             style: {
-                                color: 'white',
+                                color: '#cccccc',
                                 fontWeight: 'bold',
-                                fontSize:'15px'
+                                fontSize:'12px'
                             }
                         },
                         lineWidth: 0
@@ -102,7 +107,7 @@ app.directive('lolChampionsGeneral',function(){
                         gridLineInterpolation: 'polygon',
                         lineWidth: 0,
                         min: 0,
-                        max:5,
+                        max: 3,
                         tickInterval:1,
                         labels: {
                             enabled: false
@@ -117,8 +122,11 @@ app.directive('lolChampionsGeneral',function(){
                     },
                     series: [{
                         name: 'Score',
-                        data: [1.5, 2, 3, 4.5, 3.5],
-                        pointPlacement: 'on'
+                        type: 'area',
+                        color: 'rgba(119,176,206,1)',
+                        data: [1.5, 1.9, 2.1, 2.7, 2.3],
+                        pointPlacement: 'on', 
+                        fillColor: 'rgba(119,176,206,0.15)'
                     }]
                 });
             }());

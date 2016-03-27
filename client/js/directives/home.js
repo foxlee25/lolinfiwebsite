@@ -10,12 +10,15 @@ app.directive('lolHome',function(){
         scope:false,
         link:function(scope,element,attrs){
 			scope.placeHolder = "Search for champion name,items ...";
-			$("body").css("background","url('images/bg1.jpg')");
+//			$("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
+//            $("html").css("-webkit-background-size","cover");
+//            $("html").css("-moz-background-size","cover");
+//            $("html").css("-o-background-size","cover");
+//            $("html").css("background-size","cover");
         },
         controller:function($scope, $q, $location, redirect, RiotSummonerApi, State, Cache){
             $scope.championPage = {"id":1};
 			$scope.searchInput = {value:""};
-			
 			$scope.searchSummonerById = function(input){
 				RiotSummonerApi.setSummonerId(input);
                 Cache.set("SummonerId", input);
@@ -64,23 +67,31 @@ app.directive('lolHome',function(){
 				}
             };
 			
+
 			//means this is called from the rank page
 			//bit of a hack around... but for now 
 			if(RiotSummonerApi.getSummonerId()!== "" ||
                typeof RiotSummonerApi.getSummonerId() !== 'undefined'){
 				var id = RiotSummonerApi.getSummonerId();
+                $scope.summonerName = RiotSummonerApi.getSummonerName();
+                $scope.division = RiotSummonerApi.getDivision();
+                $scope.profileIconId = RiotSummonerApi.getProfileIconId();
 				$scope.searchSummoner(id);
 			}
 			$scope.$watch("config.searchToggle",function(data){
 				if(data){
-					$("body").css("background","url('images/bg1.jpg')");
+                    $("html").css("background","url('../images/indexbg.jpg') no-repeat center center fixed");
+                    $("html").css("-webkit-background-size","cover");
+                    $("html").css("-moz-background-size","cover");
+                    $("html").css("-o-background-size","cover");
+                    $("html").css("background-size","cover");
 				}else{
-					$("body").css("background","url('images/otherbg.jpg')");
+					$("html").css("background","url('images/otherPageBase.jpg')");
 				}
 			});
             $scope.selectChampionPage = function(id){
                 $scope.championPage.id = id;
-                $scope.config.searchToggle = false;
+//                $scope.config.searchToggle = false;
                 switch($scope.championPage.id){
                     case 1:
                         redirect("/base/baseHome/baseChampionGeneral");
@@ -102,10 +113,13 @@ app.directive('lolHome',function(){
                 }
                 
             };
+            
             //current page is sub page of base home
             if(State[$location.url()] !== 0){
                 $scope.selectChampionPage(State[$location.url()]);
             }
+    
         }
     };
+
 });
