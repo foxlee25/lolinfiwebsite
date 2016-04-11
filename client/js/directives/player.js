@@ -9,10 +9,13 @@ app.directive('lolPlayer',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("html").css("background","url('images/otherPageBase.jpg')");            
+			$("html").css("background","url('images/otherPageBase.jpg')");
+
         },
+        
         controller:function($scope,$sce,redirect,videoPlayer){
               $scope.trustSrc = function() {
+                  console.log(123123);
                 $scope.video = videoPlayer.getVideo();
                 var index = $scope.video.channel.url.lastIndexOf("/")+1;
                 $scope.url = $scope.video.channel.url.substring(0,index)+"widgets/live_embed_player.swf?channel="+$scope.video.channel.url.substring(index+1); 
@@ -22,6 +25,7 @@ app.directive('lolPlayer',function(){
 //                      
 //                  }
                   
+//                  console.log($sce.trustAsResourceUrl($scope.url));
                 return $sce.trustAsResourceUrl($scope.url);
               };
             

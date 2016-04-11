@@ -3,7 +3,7 @@
     height: 350px;
     position: relative;
     top: 20px;
-    left: -50px;
+    left: -80px;
     margin-bottom: 200px;
 }
 
@@ -14,7 +14,7 @@
     height: 310px;
     position: absolute;
     top: 262px;
-    left: 685px;
+    left: 680px;
 }
 
 #tabWrapper_2{
@@ -23,8 +23,8 @@
     width: 540px;
     height: 30px;
     position: absolute;
-    top: 600px;
-    left: 125px;
+    top: 620px;
+    left: 130px;
 }
 
 .tabs{
