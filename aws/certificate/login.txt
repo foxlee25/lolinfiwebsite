@@ -24,27 +24,19 @@ Press ctrl+A and then d. Done. Your session keep going on in background.
 You can list all sessions by screen -ls, and attach to some by screen -r 20673.pts-0.srvcommand, where 0673.pts-0.srv is an entry list.
 
 
-
 (4) API of Riot:
 
 https://developer.riotgames.com
 
 
-
 (5) GitHub Password
-
-
 
 
 (6) Godaddy Password
 
 
-
-
 (7) Forward port 80 to 8080
 
 sudo iptables -t nat -L ( check)
-
-
 
 sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 800
