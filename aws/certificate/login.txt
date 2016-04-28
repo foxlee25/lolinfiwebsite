@@ -1,0 +1,50 @@
+(1) LOGIN of AWS
+
+http://lolinfi.signin.aws.amazon.com/console
+account: lolinfi
+username: fox
+password : lolinfi
+
+(2) DNS of AWS
+
+ns-568.awsdns-07.net. 
+ns-346.awsdns-43.com. 
+ns-1118.awsdns-11.org. 
+ns-1955.awsdns-52.co.uk.
+
+(3) Start Server in AWS
+Start your screen session at first:
+
+user@host:~$ screen
+Run anything you want:
+
+wget http://mirror.yandex.ru/centos/4.6/isos/i386/CentOS-4.6-i386-binDVD.iso
+Press ctrl+A and then d. Done. Your session keep going on in background.
+
+You can list all sessions by screen -ls, and attach to some by screen -r 20673.pts-0.srvcommand, where 0673.pts-0.srv is an entry list.
+
+
+
+(4) API of Riot:
+
+https://developer.riotgames.com
+
+
+
+(5) GitHub Password
+
+
+
+
+(6) Godaddy Password
+
+
+
+
+(7) Forward port 80 to 8080
+
+sudo iptables -t nat -L ( check)
+
+
+
+sudo iptables -t nat -A PREROUTING -p tcp --dport 80 -j REDIRECT --to-ports 800
