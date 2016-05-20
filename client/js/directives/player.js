@@ -9,22 +9,27 @@ app.directive('lolPlayer',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("html").css("background","url('images/otherPageBase.jpg')");            
+			$("html").css("background","url('images/otherPageBase.jpg')");           
         },
         controller:function($scope,$sce,redirect,videoPlayer){
+
               $scope.trustSrc = function() {
-                $scope.video = videoPlayer.getVideo();
+                //detect if browser is chrome
+                $scope.browser = {chrome: false};
+                if(navigator.userAgent.toLowerCase().indexOf('chrome') > -1){
+                    $scope.browser.chrome = true;
+                } 
+
+                var src = '';
+              $scope.video = videoPlayer.getVideo();
+              if($scope.browser.chrome){
+                src = 'http://player.twitch.tv/?channel='+$scope.video.channel.name+"&html5"; 
+              }else{
                 var index = $scope.video.channel.url.lastIndexOf("/")+1;
-                $scope.url = $scope.video.channel.url.substring(0,index)+"widgets/live_embed_player.swf?channel="+$scope.video.channel.url.substring(index+1); 
-//                  var isChrome = !!window.chrome && !!window.chrome.webstore;
-//                  console.log(isChrome);
-//                  if(isChrome){
-//                      
-//                  }
-                  
-                return $sce.trustAsResourceUrl($scope.url);
+                src = $scope.video.channel.url.substring(0,index)+"widgets/live_embed_player.swf?channel="+$scope.video.channel.url.substring(index+1);
+              }
+                return $sce.trustAsResourceUrl(src);
               };
-            
             
         }
     };

@@ -326,6 +326,14 @@
     padding-top: 30px;
 }
 
+.html5Player{
+   width: 50%;
+    height: 500px;
+    margin: 0 auto;
+    vertical-align: middle;
+    padding-top: 30px; 
+}
+
 .rankTableHeader{
     color:#448AAC;  
 }

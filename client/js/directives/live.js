@@ -18,6 +18,7 @@ app.directive('lolLive',function(){
               //not inisde angular scope need to refresh
               scope.$apply();
             });
+
         },
         controller:function($scope,redirect,videoPlayer){
 
