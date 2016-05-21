@@ -28,7 +28,7 @@ app.directive('lolChampionsCharts',function(){
             .bind("slider:ready slider:changed", function (event, data) {
                 $(this)
                 .nextAll(".output:first")
-                .html(data.value.toFixed() + "-18");
+                .html(data.value.toFixed() + "-60");
                 scope.champion.level = data.value.toFixed();
                 scope.$digest();
             });

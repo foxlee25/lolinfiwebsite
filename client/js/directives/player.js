@@ -11,6 +11,7 @@ app.directive('lolPlayer',function(){
         link:function(scope,element,attrs){
 			$("html").css("background","url('images/otherPageBase.jpg')");           
         },
+        
         controller:function($scope,$sce,redirect,videoPlayer){
 
               $scope.trustSrc = function() {
