@@ -26,6 +26,8 @@
     "jquery": "^2.2.0",
     "highcharts": "^4.2.1",
     "jquery-backstretch": "^2.0.4",
-    "d3": "^3.5.14"
+    "d3": "^3.5.14",
+    "react": "^15.0.2",
+    "ngReact": "^0.3.0"
   }
 }

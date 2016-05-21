@@ -23,6 +23,7 @@
     "grunt-processhtml": "^0.3.13",
     "grunt-run": "^0.5.2",
     "grunt-uncss": "^0.4.4",
-    "open": "0.0.5"
+    "open": "0.0.5",
+    "underscore": "^1.8.3"
   }
 }

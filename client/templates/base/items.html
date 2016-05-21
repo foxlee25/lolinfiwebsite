@@ -1,31 +1,7 @@
 <div>
     <div class="col-sm-offset-2 col-sm-8" >
-        <div id="items">
-            <div class="filterTable">
-                <div class="row">
-                    <div class="col-sm-1" ng-click="itemOption.filter='All'" ng-class="{'labelHighlight':itemOption.filter=='All'}">All</div>
-                    <div class="col-sm-2" ng-click="itemOption.filter='Starting Items'" ng-class="{'labelHighlight':itemOption.filter=='Starting Items'}">Starting Items</div>
-                    <div class="col-sm-1" ng-click="itemOption.filter='Tools'" ng-class="{'labelHighlight':itemOption.filter=='Tools'}">Tools</div>
-                    <div class="col-sm-1" ng-click="itemOption.filter='Attack'" ng-class="{'labelHighlight':itemOption.filter=='Attack'}">Attack</div>
-                    <div class="col-sm-1" ng-click="itemOption.filter='Magic'" ng-class="{'labelHighlight':itemOption.filter=='Magic'}">Magic</div>
-                    <div class="col-sm-2" ng-click="itemOption.filter='Defense'" ng-class="{'labelHighlight':itemOption.filter=='Defense'}">Defense</div>                    
-                    <div class="col-sm-2" ng-click="itemOption.filter='Movement'" ng-class="{'labelHighlight':itemOption.filter=='Movement'}">Movement</div>
-                </div>
-            </div>
-        </div>        
-        <div id="itemBg" class="small">
-            <div class="itemCard" ng-repeat="item in itemInfo">
-                <img class="itemImg" src="images/item_info/{{item.id}}.png" >
-                    <div id="popupWindow" ng-show="popleft">
-                        <img id="popupImage" ng-src="images/item_info/{{item.id}}.png" >
-                        <img id="icon" src="images/money_icon.png">
-                        <b id="popupItemName">{{item.name}}</b>
-                        <p id="price">3000</p>
-                        <br>
-                        <p>{{item.plaintext}}</p>
-                        <p id="descrip" ng-bind-html="item.description"></p>
-                    </div>
-            </div>
+        <div ng-if="itemProps.initReact">
+            <react-component name="Item" props="itemProps" watch-depth="value"></react-component>
         </div>
 	</div>
 </div>

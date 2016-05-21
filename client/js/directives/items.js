@@ -9,97 +9,6 @@ app.directive('lolItems',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-			$("html").css("background","url('images/otherPageBase.jpg')");            
-            var screenWidth = $(document).width();
-            var screenHeight = $(document).height();
-            scope.itemOption = {"filter":"All"};
-			$("body").css("background","url('images/otherbg.jpg')");
-			scope.animateOver = true;
-
-            var xCoordinate, yCoordinate, check;
-            $(document).mousemove(function(e) {
-                xCoordinate = e.pageX;
-                yCoordinate = e.pageY;
-                
-//                if(e.pageX > screenWidth/2 && e.pageY > 3*screenHeight/5){
-//                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
-//                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
-//                }else if(e.pageX > screenWidth/2 && e.pageY <= 3*screenHeight/5){
-//                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
-//                    $(".itemCard:hover div").css({left: (xCoordinate - 500) + 'px'});
-//                }else if(e.pageX <= screenWidth/2 && e.pageY > 3*screenHeight/5){
-//                    $(".itemCard:hover div").css({top: (yCoordinate - 300) + 'px'});
-//                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-//                }else{
-//                    $(".itemCard:hover div").css({top: (yCoordinate - 75) + 'px'});
-//                    $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-//                }
-                
-                var check_1 = screenHeight - e.clientY - $(".footer").height() - 30 >= $(".itemCard:hover div").height();
-                var check_2 = e.clientY > $(".itemCard:hover div").height() + 20;
-                var popupWidth = $(".itemCard:hover div").width();
-                
-//                console.log($(document).width());
-                if($(document).width() < 1500){
-                    if(check_1){
-                        $(".itemCard:hover div").css({top: (yCoordinate - 80) + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 145){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                        }
-                    }else if(check_2){
-                        $(".itemCard:hover div").css({top: (yCoordinate - 120 - $(".itemCard:hover div").height()) + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 145){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                        }
-                    }else{
-                        $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/2) + 'px'});
-                        $(".itemCard:hover div").css({width: 420 + 'px'});
-                        $(".itemCard:hover #icon").css({left: 350 + 'px'});
-                        $(".itemCard:hover #price").css({left: 345 + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 145){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                        }
-                    }
-                }else{
-//                    $("#itemBg").css({width: 1000 + 'px'});
-                    if(check_1){
-                        $(".itemCard:hover div").css({top: (yCoordinate - 180) + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 540){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 380 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 360) + 'px'});
-                        }
-                    }else if(check_2){
-                        $(".itemCard:hover div").css({top: (yCoordinate - 220 - $(".itemCard:hover div").height()) + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 520){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 380 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 360) + 'px'});
-                        }
-                    }else{
-                        $(".itemCard:hover div").css({top: (yCoordinate - 80 - $(".itemCard:hover div").height()/2) + 'px'});
-                        $(".itemCard:hover div").css({width: 420 + 'px'});
-                        $(".itemCard:hover #icon").css({left: 350 + 'px'});
-                        $(".itemCard:hover #price").css({left: 345 + 'px'});
-                        if(e.clientX + 350 >= screenWidth - 145){
-                            $(".itemCard:hover div").css({left: (xCoordinate - 220 - popupWidth) + 'px'});
-                        }else{
-                            $(".itemCard:hover div").css({left: (xCoordinate - 200) + 'px'});
-                        }
-                    }
-                }
-                
-                
-                
-                
-            });
-            
             
         },
         controller:function($scope,RiotApi){
@@ -107,11 +16,11 @@ app.directive('lolItems',function(){
 			var controls;
 			var objects = [];
 			var targets = {table:[]};
-		    $scope.popleft = true;
+			$scope.itemProps = {initReact: false, itemInfo: null};
             RiotApi.getInfo("item").success(function(data){
 				$('#itemAnimate').hide();
-                $scope.itemInfo = data.data;
-                console.log(JSON.stringify($scope.itemInfo));
+                $scope.itemProps.itemInfo = data.data;
+                $scope.itemProps.initReact = true;
 				/**
 				* hide the animation for items for now
 				* uncomment the init() and animate() and change the
