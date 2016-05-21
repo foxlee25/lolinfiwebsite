@@ -22,6 +22,7 @@
     "grunt-open": "^0.2.3",
     "grunt-processhtml": "^0.3.13",
     "grunt-run": "^0.5.2",
+    "grunt-text-replace": "^0.4.0",
     "grunt-uncss": "^0.4.4",
 <<<<<<< Updated upstream
     "open": "0.0.5",
