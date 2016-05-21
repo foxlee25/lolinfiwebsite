@@ -192,6 +192,24 @@ module.exports = function(grunt) {
               filter: 'isFile'
           }]
         }
+    },
+    replace: {
+      dev: {
+        overwrite: true,
+        src: ['./client/js/service.js'],
+        replacements: [{
+          from: '52.33.51.44',                   // string replacement 
+          to: 'localhost'
+        }]
+      },
+      deploy: {
+        overwrite: true,
+        src: ['./client/js/service.js'],
+        replacements: [{
+          to: 'localhost',                   // string replacement 
+          from: '52.33.51.44'
+        }]
+      },
     }
   });
 
@@ -212,6 +230,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-uncss');
   grunt.loadNpmTasks('grunt-processhtml');
   grunt.loadNpmTasks('grunt-contrib-htmlmin');
+  grunt.loadNpmTasks('grunt-text-replace');
 
   // Deploy task.
   grunt.registerTask('deploy', 
@@ -230,5 +249,11 @@ module.exports = function(grunt) {
      'git_deploy:target']);
   // Deploy server
   grunt.registerTask('run', ['concurrent:dev']);
+
+  //Switch to dev
+  grunt.registerTask('dev', ['replace:dev']);
+
+  //switch to deploy
+  grunt.registerTask('deploy', ['replace:deploy']);
 
 };
