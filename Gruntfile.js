@@ -198,8 +198,8 @@ module.exports = function(grunt) {
         overwrite: true,
         src: ['./client/js/service.js', './server/util/url.js'],
         replacements: [{
-          from: '52.33.51.44',                   // string replacement 
-          to: 'localhost'
+          from: '52.33.51.44:8080',                   // string replacement 
+          to: 'localhost:8080'
         },
         {
           from: 'mongodb://ec2-52-36-229-82.us-west-2.compute.amazonaws.com:27017/LolInfi',
@@ -210,8 +210,8 @@ module.exports = function(grunt) {
         overwrite: true,
         src: ['./client/js/service.js', './server/util/url.js'],
         replacements: [{
-          from: 'localhost',                   // string replacement 
-          to: '52.33.51.44'
+          from: 'localhost:8080',                   // string replacement 
+          to: '52.33.51.44:8080'
         },
         {
           from: 'mongodb://localhost:27017/LolInfi',
