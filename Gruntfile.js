@@ -210,8 +210,8 @@ module.exports = function(grunt) {
         overwrite: true,
         src: ['./client/js/service.js', './server/util/url.js'],
         replacements: [{
-          to: 'localhost',                   // string replacement 
-          from: '52.33.51.44'
+          from: 'localhost',                   // string replacement 
+          to: '52.33.51.44'
         },
         {
           from: 'mongodb://localhost:27017/LolInfi',
