@@ -1,0 +1,452 @@
+{
+    "info": {
+        "difficulty": 6, 
+        "attack": 2, 
+        "defense": 3, 
+        "magic": 10
+    }, 
+    "stats": {
+        "armorperlevel": 4.0, 
+        "attackdamage": 50.41, 
+        "mpperlevel": 50.0, 
+        "attackspeedoffset": 0.08, 
+        "mp": 334.0, 
+        "armor": 19.22, 
+        "hp": 511.68, 
+        "hpregenperlevel": 0.55, 
+        "attackspeedperlevel": 1.36, 
+        "attackrange": 575.0, 
+        "movespeed": 335.0, 
+        "attackdamageperlevel": 2.625, 
+        "mpregenperlevel": 0.8, 
+        "critperlevel": 0.0, 
+        "spellblockperlevel": 0.0, 
+        "crit": 0.0, 
+        "mpregen": 6.0, 
+        "spellblock": 30.0, 
+        "hpregen": 5.42, 
+        "hpperlevel": 76.0
+    }, 
+    "name": "Annie", 
+    "title": "the Dark Child", 
+    "tags": [
+        "Mage"
+    ], 
+    "partype": "Mana", 
+    "passive": {
+        "image": {
+            "full": "Annie_Passive.png", 
+            "group": "passive", 
+            "sprite": "passive0.png", 
+            "h": 48, 
+            "w": 48, 
+            "y": 0, 
+            "x": 288
+        }, 
+        "sanitizedDescription": "After casting 4 spells, Annie's next offensive spell will stun the target for a short duration.", 
+        "name": "Pyromania", 
+        "description": "After casting 4 spells, Annie's next offensive spell will stun the target for a short duration."
+    }, 
+    "quotes": [
+        "\"Take that!\"", 
+        "\"Don't make me hurt you!\"", 
+        "\"Eeny, meeny, miny, burn!\"", 
+        "\"Let's count to five!\"", 
+        "\"I want a turn!\"", 
+        "\"Play time!\"", 
+        "\"Can they do this?\"", 
+        "\"This is fun!\"", 
+        "\"This way!\"", 
+        "\"Try to keep up!\"", 
+        "\"Are we there yet?\"", 
+        "\"I never play with matches.\"", 
+        "\"Don't be a scaredy cat!\"", 
+        "\"Hop, skip, jump!\"", 
+        "\"You smell like burning!\"", 
+        "\"Get 'em, Tibbers!\"", 
+        "\"Bear hug!\"", 
+        "\"Tibbers!\"", 
+        "\"Yay, Tibbers!\"", 
+        "\"Found him!\"", 
+        "\"Uh... *cough* Tibbers.\""
+    ], 
+    "key": "Annie", 
+    "lore": "In the time shortly before the League, there were those within the sinister city-state of Noxus who did not agree with the evils perpetrated by the Noxian High Command. The High Command had just put down a coup attempt from the self-proclaimed Crown Prince Raschallion, and a crack down on any form of dissent against the new government was underway. These political and social outcasts, known as the Gray Order, sought to leave their neighbors in peace as they pursued dark arcane knowledge. The leaders of this outcast society were a married couple: Gregori Hastur, the Gray Warlock, and his wife Amoline, the Shadow Witch. Together they led an exodus of magicians and other intelligentsia from Noxus, resettling their followers beyond the Great Barrier to the northern reaches of the unforgiving Voodoo Lands. Though survival was a challenge at times, the Gray Order's colony managed to thrive in a land where so many others would have failed.<br><br>Years after the exodus, Gregori and Amoline had a child: Annie. Early on, Annie's parents knew there was something special about their daughter. At the age of two, Annie miraculously ensorcelled a shadow bear - a ferocious denizen of the petrified forests outside the colony - turning it into her pet. To this day she keeps her bear ''Tibbers'' by her side, often keeping him spellbound as a stuffed doll to be carried like a child's toy. The combination of Annie's lineage and the dark magic of her birthplace have given this little girl tremendous arcane power. It is this same girl who now finds herself as one of the most sought-after champions within the League of Legends - even by the city-state that would have exiled her parents had they not fled beforehand.<br><br>''Annie may be one of the most powerful champions ever to have fought in a Field of Justice. I shudder to think of her capabilities when she becomes an adult.''<br>-- High Councilor Kiersta Mandrake", 
+    "id": 1, 
+    "spells": [
+        {
+            "cooldownBurn": "4", 
+            "key": "Disintegrate", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.", 
+            "sanitizedDescription": "Annie hurls a Mana infused fireball, dealing damage and refunding the Mana cost if it destroys the target.", 
+            "sanitizedTooltip": "Deals {{ e1 }} (+{{ a1 }}) magic damage. Mana cost and half the cooldown are refunded if Disintegrate kills the target.", 
+            "effect": [
+                null, 
+                [
+                    80.0, 
+                    115.0, 
+                    150.0, 
+                    185.0, 
+                    220.0
+                ]
+            ], 
+            "tooltip": "Deals {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage. Mana cost and half the cooldown are refunded if Disintegrate kills the target.", 
+            "maxrank": 5, 
+            "costBurn": "60/65/70/75/80", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                60, 
+                65, 
+                70, 
+                75, 
+                80
+            ], 
+            "effectBurn": [
+                "", 
+                "80/115/150/185/220"
+            ], 
+            "image": {
+                "full": "Disintegrate.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 384
+            }, 
+            "cooldown": [
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0, 
+                4.0
+            ], 
+            "name": "Disintegrate"
+        }, 
+        {
+            "cooldownBurn": "8", 
+            "key": "Incinerate", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    " {{ cost }} -> {{ costnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Mana Cost"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.85
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area.", 
+            "sanitizedDescription": "Annie casts a blazing cone of fire, dealing damage to all enemies in the area.", 
+            "sanitizedTooltip": "Casts a cone of fire dealing {{ e1 }} (+{{ a1 }}) magic damage to all enemies in the area.", 
+            "effect": [
+                null, 
+                [
+                    70.0, 
+                    115.0, 
+                    160.0, 
+                    205.0, 
+                    250.0
+                ]
+            ], 
+            "tooltip": "Casts a cone of fire dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to all enemies in the area.", 
+            "maxrank": 5, 
+            "costBurn": "70/80/90/100/110", 
+            "rangeBurn": "625", 
+            "range": [
+                625, 
+                625, 
+                625, 
+                625, 
+                625
+            ], 
+            "cost": [
+                70, 
+                80, 
+                90, 
+                100, 
+                110
+            ], 
+            "effectBurn": [
+                "", 
+                "70/115/160/205/250"
+            ], 
+            "image": {
+                "full": "Incinerate.png", 
+                "group": "spell", 
+                "sprite": "spell0.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 144, 
+                "x": 432
+            }, 
+            "cooldown": [
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0, 
+                8.0
+            ], 
+            "name": "Incinerate"
+        }, 
+        {
+            "cooldownBurn": "10", 
+            "key": "MoltenShield", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e1 }} -> {{ e1NL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Armor Bonus", 
+                    "Magic Resist Bonus"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Increases Annie's Armor and Magic Resist and damages enemies who hit Annie with basic attacks.", 
+            "sanitizedDescription": "Increases Annie's Armor and Magic Resist and damages enemies who hit Annie with basic attacks.", 
+            "sanitizedTooltip": "Increases Armor and Magic Resist by {{ e1 }} for {{ e3 }} seconds. Deals {{ e2 }} (+{{ a1 }}) magic damage to enemies who attack Annie with basic attacks.", 
+            "effect": [
+                null, 
+                [
+                    10.0, 
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0, 
+                    50.0, 
+                    60.0
+                ], 
+                [
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0, 
+                    5.0
+                ]
+            ], 
+            "tooltip": "Increases Armor and Magic Resist by {{ e1 }} for {{ e3 }} seconds. Deals {{ e2 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies who attack Annie with basic attacks.", 
+            "maxrank": 5, 
+            "costBurn": "20", 
+            "rangeBurn": "self", 
+            "range": "self", 
+            "cost": [
+                20, 
+                20, 
+                20, 
+                20, 
+                20
+            ], 
+            "effectBurn": [
+                "", 
+                "10/20/30/40/50", 
+                "20/30/40/50/60", 
+                "5"
+            ], 
+            "image": {
+                "full": "MoltenShield.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 0
+            }, 
+            "cooldown": [
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0, 
+                10.0
+            ], 
+            "name": "Molten Shield"
+        }, 
+        {
+            "cooldownBurn": "120/100/80", 
+            "key": "InfernalGuardian", 
+            "resource": "{{ cost }} Mana", 
+            "leveltip": {
+                "effect": [
+                    "{{ e1 }} -> {{ e1NL }}", 
+                    "{{ e2 }} -> {{ e2NL }}", 
+                    "{{ e5 }} -> {{ e5NL }}", 
+                    "{{ e3 }} -> {{ e3NL }}", 
+                    "{{ e4 }} -> {{ e4NL }}", 
+                    "{{ cooldown }} -> {{ cooldownnNL }}"
+                ], 
+                "label": [
+                    "Damage", 
+                    "Tibbers Health", 
+                    "Tibbers Armor and Magic Resist", 
+                    "Tibbers Attack Damage", 
+                    "Tibbers Burn Damage", 
+                    "Cooldown"
+                ]
+            }, 
+            "vars": [
+                {
+                    "coeff": [
+                        0.8
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a1"
+                }, 
+                {
+                    "coeff": [
+                        0.2
+                    ], 
+                    "link": "spelldamage", 
+                    "key": "a2"
+                }
+            ], 
+            "costType": "Mana", 
+            "description": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.", 
+            "sanitizedDescription": "Annie wills her bear Tibbers to life, dealing damage to units in the area. Tibbers can attack and also burns enemies that stand near him.", 
+            "sanitizedTooltip": "Tibbers appears in a burst of flame dealing {{ e1 }} (+{{ a1 }}) magic damage to enemies in the target area. For the next {{ e6 }} seconds, Tibbers chases down enemies and deals {{ e4 }} (+{{ a2 }}) magic damage each second to nearby foes. If Annie casts Molten Shield while Tibbers is active he will receive the shield and a short decaying speed boost. Tibbers can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.", 
+            "effect": [
+                null, 
+                [
+                    175.0, 
+                    300.0, 
+                    425.0
+                ], 
+                [
+                    1200.0, 
+                    2100.0, 
+                    3000.0
+                ], 
+                [
+                    80.0, 
+                    105.0, 
+                    130.0
+                ], 
+                [
+                    20.0, 
+                    30.0, 
+                    40.0
+                ], 
+                [
+                    30.0, 
+                    50.0, 
+                    70.0
+                ], 
+                [
+                    45.0, 
+                    45.0, 
+                    45.0
+                ], 
+                [
+                    300.0, 
+                    300.0, 
+                    300.0
+                ]
+            ], 
+            "tooltip": "Tibbers appears in a burst of flame dealing {{ e1 }} <span class=\"color99FF99\">(+{{ a1 }})</span> magic damage to enemies in the target area.<br><br>For the next {{ e6 }} seconds, Tibbers chases down enemies and deals {{ e4 }}<span class=\"color99FF99\"> (+{{ a2 }})</span> magic damage each second to nearby foes. If Annie casts Molten Shield while Tibbers is active he will receive the shield and a short decaying speed boost.<br><br><span class=\"color99FF99\">Tibbers can be controlled by holding the alt key and using the right mouse button or by reactivating this ability.</span>", 
+            "maxrank": 3, 
+            "costBurn": "100", 
+            "rangeBurn": "600", 
+            "range": [
+                600, 
+                600, 
+                600
+            ], 
+            "cost": [
+                100, 
+                100, 
+                100
+            ], 
+            "altimages": [
+                {
+                    "full": "InfernalGuardian0.png", 
+                    "group": "spell", 
+                    "sprite": "spell1.png", 
+                    "h": 48, 
+                    "w": 48, 
+                    "y": 0, 
+                    "x": 96
+                }
+            ], 
+            "effectBurn": [
+                "", 
+                "175/300/425", 
+                "1200/2100/3000", 
+                "80/105/130", 
+                "20/30/40", 
+                "30/50/70", 
+                "45", 
+                "300"
+            ], 
+            "image": {
+                "full": "InfernalGuardian.png", 
+                "group": "spell", 
+                "sprite": "spell1.png", 
+                "h": 48, 
+                "w": 48, 
+                "y": 0, 
+                "x": 48
+            }, 
+            "cooldown": [
+                120.0, 
+                100.0, 
+                80.0
+            ], 
+            "name": "Summon: Tibbers"
+        }
+    ]
+}

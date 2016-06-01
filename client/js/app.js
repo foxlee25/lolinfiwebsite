@@ -1,6 +1,6 @@
 // create our angular app and inject ngAnimate and ui-router 
 // =============================================================================
-var app = angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router', 'react']);
+var app = angular.module('lolInfi', ['ngAnimate','ngSanitize', 'ui.router', 'react', 'angularVideoBg']);
 
 // our controller for the form
 // =============================================================================

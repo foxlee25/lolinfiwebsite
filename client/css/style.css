@@ -9,7 +9,6 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: black;
 }
 
 body {
@@ -164,7 +163,8 @@ a{
     color: #C0C0CA;
 }
 #homePageContent{
-    //margin-top: 13%;
+    width: 100%;
+    height: 700px;
 }
 #lolinfiBrandIcon{
     background: url("../images/lolinfi_v2.png");
@@ -438,4 +438,43 @@ canvas {
     color: white;
     font: bold;
     font-size: 0.8em;
+}
+
+.homeText {
+    width: 100%;
+    text-align: center;
+    padding-top: 170px;
+    color: #fff;
+    font-family: 'museo-sans',Helvetica,Arial,sans-serif;
+}
+
+.homeText > a {
+    top: 30px;
+    font-size: 48px;
+    text-decoration: none;
+    color: #2ecc71;
+    cursor: pointer;
+    position: relative;
+
+}
+
+.homeText > h1 {
+    font-size: 3.125em;
+    line-height: 110%;
+    font-weight: 100;
+}
+
+.homeText > h1 > img{
+width: 50%;
+    z-index: 501;
+}
+
+.homeText > h1 > span {
+    font-weight: bold;
+}
+
+.homeText > h4 {
+    font-size: 1.375em;
+    font-weight: 100;
+    line-height: 120%
 }

@@ -1,10 +1,8 @@
 #chartLinemap{
     width: 600px; 
     height: 350px;
-    position: relative;
-    top: 20px;
-    left: -80px;
-    margin-bottom: 200px;
+    margin-left: 30px;
+    margin-bottom: 20px;
 }
 
 #tabWrapper{
@@ -20,11 +18,9 @@
 #tabWrapper_2{
     background-color: #10192a;
     opacity: 0.8;
-    width: 540px;
+    width: 600px;
     height: 30px;
-    position: absolute;
-    top: 620px;
-    left: 130px;
+    margin-left: 40px;
 }
 
 .tabs{

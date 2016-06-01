@@ -68,7 +68,7 @@ body{
   height: 100px;
   display: block;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
   margin: 0 auto;
   background: rgba(255,255,255,0);
 }
