@@ -45,7 +45,7 @@
             link: function(scope, element) {
 
                 var computedStyles,
-                    ytScript = document.querySelector('script[src="//www.youtube.com/iframe_api"]'),
+                    ytScript = document.querySelector('script[src="https://www.youtube.com/player_api"]'),
                     $player = element.children().eq(0),
                     playerId,
                     player,
@@ -480,7 +480,7 @@
                      */
                     if (!ytScript) {
                         var tag = document.createElement('script');
-                        tag.src = "//www.youtube.com/iframe_api";
+                        tag.src = "https://www.youtube.com/player_api";
                         var firstScriptTag = document.getElementsByTagName('script')[0];
                         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
                     }
