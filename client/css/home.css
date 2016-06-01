@@ -234,7 +234,7 @@
 
 .filterTable{
     margin-left: 30px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 
 .filterTable .row{
@@ -1008,3 +1008,6 @@
 
 /*   New CSS with summoner_match_details by Dee  end  */
 
+#rankDiv{
+    margin-top: 20px;
+}

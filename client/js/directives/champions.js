@@ -9,10 +9,9 @@ app.directive('lolChampions',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-//            scope.matchOptions = {"league":"Bronze"
-//                      ,"Time":"Last Month"
-//                      ,"queueType":"Solo Ranked"};
-			$("html").css("background","url('images/otherPageBase.jpg')");
+           scope.matchOptions = {"league":"Bronze"
+                     ,"Time":"Last Month"
+                     ,"queueType":"Solo Ranked"};
 			scope.loadingPagination = {maxIndex:0,pageIndex:1,show:false};
         },
         controller:function($scope, RiotApi, redirect, util){

@@ -15,7 +15,6 @@ app.directive('lolChampiondetail',function(){
         replace:true,
         scope:false,
         link:function(scope,element,attrs){
-            $("html").css("background","url('images/otherPageBase.jpg')");
             // champion detail level
             scope.champion = {level: 1};
             load_script();

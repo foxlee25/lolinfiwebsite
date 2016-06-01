@@ -21,17 +21,17 @@
 			</div>
          </div>       
         
-		<div class="chartsWrapper">
-			<div id="chartLinemap">
+		<div class="chartsWrapper row">
+			<div id="chartLinemap" class="col-sm-9">
 			</div>
-            <div id="tabWrapper">
+            <div id="tabWrapper" class="col-sm-3">
                 <div class="tabs" ng-click="selectTab(1)" ng-class="{active:verticalTab==1}"><center>Gold</center></div>
                 <div class="tabs" ng-click="selectTab(2)" ng-class="{active:verticalTab==2}"><center>Gold/Min</center></div>
                 <div class="tabs" ng-click="selectTab(3)" ng-class="{active:verticalTab==3}"><center>Kills</center></div>
                 <div class="tabs" ng-click="selectTab(4)" ng-class="{active:verticalTab==4}"><center>Solo Kills</center></div>
                 <div class="tabs" ng-click="selectTab(5)" ng-class="{active:verticalTab==5}"><center>Death</center></div>
             </div>
-            <div id="tabWrapper_2">
+            <div id="tabWrapper_2" class="col-sm-10">
                 <div id="byGameLength" ng-click="selectTab_2(1)" ng-class="{active:horizentalTab==1}"><center>Performance by Game Length</center></div>
                 <div id="byGamePlayed" ng-click="selectTab_2(2)" ng-class="{active:horizentalTab==2}"><center>Performance by Game Played</center></div>
             </div>
